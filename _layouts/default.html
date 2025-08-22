@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+      <nav class="nav">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/seasons/' | relative_url }}">Seasons</a>
+        <a href="{{ '/drafts/' | relative_url }}">Drafts</a>
+        <a href="{{ '/cup/' | relative_url }}">Brew Crew Cup</a>
+        <a href="{{ '/rules/' | relative_url }}">Rules</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer"><div class="wrap">
+    Road to Glory FFL • Powered by GitHub Pages
+  </div></footer>
+
+  <script src="{{ '/assets/js/countdown.js' | relative_url }}"></script>
+</body>
+</html>
