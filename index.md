@@ -7,6 +7,21 @@ title: Home
   <h1>Road to Glory FFL</h1>
   <p>Live league hub. Data updates automatically from Yahoo.</p>
 </section>
+## League News
+<div class="card ticker-wrap">
+  {% if site.data.news and site.data.news.items and site.data.news.items.size > 0 %}
+    <div class="ticker">
+      {% for item in site.data.news.items %}
+        <span><span class="src">{{ item.source }}</span><a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a></span>
+      {% endfor %}
+      {% for item in site.data.news.items %}
+        <span><span class="src">{{ item.source }}</span><a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a></span>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div style="padding:10px;">Waiting for _data/news.json…</div>
+  {% endif %}
+</div>
 
 <div class="grid">
 
