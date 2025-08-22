@@ -21,6 +21,8 @@ jobs:
           YAHOO_REFRESH_TOKEN: ${{ secrets.YAHOO_REFRESH_TOKEN }}
           LEAGUE_KEY: ${{ secrets.LEAGUE_KEY }}
         run: python scripts/pull_yahoo.py
+      - name: Pull News feeds
+        run: python scripts/pull_news.py
       - name: Commit and push if changed
         run: |
           if [[ -n "$(git status --porcelain)" ]]; then
