@@ -12,3 +12,12 @@ pre{ white-space:pre-wrap; word-wrap:break-word; }
 .table{ width:100%; border-collapse:collapse; }
 .table th,.table td{ padding:8px; border-bottom:1px solid #eee; text-align:left; }
 .countdown{ font-weight:700; }
+.ticker-wrap{ overflow:hidden; background:#fff; border:1px solid #eee; border-radius:12px; }
+.ticker{ display:flex; gap:24px; padding:10px 12px; white-space:nowrap; animation:ticker 45s linear infinite; }
+.ticker:hover{ animation-play-state:paused; }
+.ticker a{ text-decoration:none; color:#0a4fff; }
+.ticker .src{ background:#ffd200; color:#222; padding:2px 6px; border-radius:8px; font-weight:700; margin-right:6px; }
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
