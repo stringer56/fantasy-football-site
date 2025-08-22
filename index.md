@@ -7,6 +7,7 @@ title: Home
   <h1>Road to Glory FFL</h1>
   <p>Live league hub. Data updates automatically from Yahoo.</p>
 </section>
+
 ## League News
 <div class="card ticker-wrap">
   {% if site.data.news and site.data.news.items and site.data.news.items.size > 0 %}
@@ -25,14 +26,11 @@ title: Home
 
 <div class="grid">
 
-  <!-- STANDINGS -->
   <div class="card">
     <h2>Standings</h2>
     {% if site.data.standings_simple %}
     <table class="table">
-      <thead>
-        <tr><th>#</th><th>Team</th><th>W</th><th>L</th><th>T</th><th>PF</th><th>PA</th></tr>
-      </thead>
+      <thead><tr><th>#</th><th>Team</th><th>W</th><th>L</th><th>T</th><th>PF</th><th>PA</th></tr></thead>
       <tbody>
         {% for t in site.data.standings_simple %}
         <tr>
@@ -52,7 +50,6 @@ title: Home
     {% endif %}
   </div>
 
-  <!-- MATCHUPS + EXPANDABLE ROSTERS -->
   <div class="card">
     <h2>This Week’s Matchups</h2>
     {% assign sb = site.data.scoreboard_simple %}
@@ -66,15 +63,8 @@ title: Home
           &nbsp;vs&nbsp;
           <strong>{{ m.team_b }}</strong> ({{ m.points_b | default: 0 }})
 
-          <!-- Team A roster -->
           {% assign teamA = m.team_a %}
-          {% assign rosterA = nil %}
-          {% for t in ro.teams %}
-            {% if t.team == teamA %}
-              {% assign rosterA = t %}
-              {% break %}
-            {% endif %}
-          {% endfor %}
+          {% assign rosterA = ro.teams | where: 'team', teamA | first %}
           {% if rosterA %}
           <details style="margin-top:6px;">
             <summary>Show {{ teamA }} roster</summary>
@@ -86,15 +76,8 @@ title: Home
           </details>
           {% endif %}
 
-          <!-- Team B roster -->
           {% assign teamB = m.team_b %}
-          {% assign rosterB = nil %}
-          {% for t in ro.teams %}
-            {% if t.team == teamB %}
-              {% assign rosterB = t %}
-              {% break %}
-            {% endif %}
-          {% endfor %}
+          {% assign rosterB = ro.teams | where: 'team', teamB | first %}
           {% if rosterB %}
           <details style="margin-top:6px;">
             <summary>Show {{ teamB }} roster</summary>
@@ -113,7 +96,6 @@ title: Home
     {% endif %}
   </div>
 
-  <!-- DEBUG / META (optional; remove later) -->
   <div class="card">
     <h2>League Meta</h2>
     <pre>{{ site.data.league_meta | jsonify | escape }}</pre>
