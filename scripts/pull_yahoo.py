@@ -21,18 +21,8 @@ def write_json(path, data):
     path.write_text(json.dumps(data, indent=2), encoding="utf-8")
     print("wrote", path)
 
-# ---- Helpers to safely pull values from Yahoo's nested JSON ----
-def rget(d, *keys):
-    cur = d
-    for k in keys:
-        if isinstance(cur, dict) and k in cur:
-            cur = cur[k]
-        else:
-            return None
-    return cur
-
+# ---- small JSON helpers (tolerant to Yahoo nesting) ----
 def walk(obj):
-    """Yield every dict you can find (depth-first)."""
     if isinstance(obj, dict):
         yield obj
         for v in obj.values(): yield from walk(v)
@@ -43,55 +33,49 @@ def find_all(obj, key):
     for d in walk(obj):
         if key in d: yield d[key]
 
-# ---- Normalizers (tolerant of Yahoo's arrays/lists) ----
+def flatten_team(node):
+    """Yahoo returns team as a list of dicts; flatten to one dict with name, team_key, etc."""
+    if isinstance(node, dict):
+        return node
+    if isinstance(node, list):
+        out = {}
+        for part in node:
+            if isinstance(part, dict): out.update(part)
+        return out
+    return {}
+
 def normalize_standings(data):
     teams = []
     for node in find_all(data, "team"):
-        # node is usually a list with one dict containing 'name', 'team_standings', etc.
-        if isinstance(node, list):
-            base = {}
-            for part in node:
-                if isinstance(part, dict):
-                    base.update(part)
-            name = base.get("name") or base.get("nickname")
-            ts = base.get("team_standings") or {}
-            outcomes = rget(ts, "outcome_totals") or {}
-            pf = ts.get("points_for") or ts.get("points_for_total") or base.get("points_for")
-            pa = ts.get("points_against") or ts.get("points_against_total") or base.get("points_against")
-            try_pf = float(pf) if pf is not None else None
-            try_pa = float(pa) if pa is not None else None
-            wins = outcomes.get("wins") or outcomes.get("wins_total")
-            losses = outcomes.get("losses") or outcomes.get("losses_total")
-            ties = outcomes.get("ties") or "0"
-            if name:
-                teams.append({
-                    "team": name,
-                    "wins": int(wins) if wins is not None else None,
-                    "losses": int(losses) if losses is not None else None,
-                    "ties": int(ties) if ties is not None else 0,
-                    "points_for": try_pf,
-                    "points_against": try_pa
-                })
-    # sort by wins desc, then PF desc
-    teams = [t for t in teams if t.get("wins") is not None]
-    teams.sort(key=lambda x: (x["wins"], x.get("points_for") or 0), reverse=True)
+        base = flatten_team(node)
+        name = base.get("name") or base.get("nickname")
+        ts = base.get("team_standings") or {}
+        outcomes = ts.get("outcome_totals") or {}
+        pf = ts.get("points_for") or ts.get("points_for_total") or base.get("points_for")
+        pa = ts.get("points_against") or ts.get("points_against_total") or base.get("points_against")
+        if name:
+            teams.append({
+                "team": name,
+                "wins": int(outcomes.get("wins") or 0),
+                "losses": int(outcomes.get("losses") or 0),
+                "ties": int(outcomes.get("ties") or 0),
+                "points_for": float(pf) if pf is not None else None,
+                "points_against": float(pa) if pa is not None else None
+            })
+    teams.sort(key=lambda x: (x["wins"], x.get("points_for") or 0.0), reverse=True)
     return teams
 
 def normalize_scoreboard(data):
-    """Return a flat list of matchups with team names and points."""
     matchups = []
-    # Yahoo wraps matchups under 'matchups'-> {count, 0:{matchup:{...}}, 1:{matchup:{...}}}
-    for mnode in find_all(data, "matchup"):
-        if isinstance(mnode, list):
-            base = {}
-            for part in mnode:
-                if isinstance(part, dict): base.update(part)
-        elif isinstance(mnode, dict):
-            base = mnode
-        else:
-            continue
+    # try to capture current scoring week
+    current_week = None
+    for d in walk(data):
+        if isinstance(d, dict) and "week" in d and isinstance(d["week"], str):
+            current_week = d["week"]
+            break
 
-        # teams are usually under 'teams' keyed numerically
+    for mnode in find_all(data, "matchup"):
+        base = mnode if isinstance(mnode, dict) else flatten_team(mnode)  # not really a team, just reuse
         teams_block = base.get("teams") or {}
         titems = []
         if isinstance(teams_block, dict):
@@ -99,28 +83,60 @@ def normalize_scoreboard(data):
                 if k == "count": continue
                 if isinstance(v, dict) and "team" in v:
                     titems.append(v["team"])
-        # each team entry is a list; pull 'name' and 'team_points'
-        row = {"status": base.get("status") or base.get("is_playoffs") or ""}
+        def extract(t):
+            info = flatten_team(t)
+            name = info.get("name")
+            pts = None
+            if "team_points" in info and isinstance(info["team_points"], dict):
+                val = info["team_points"].get("total") or info["team_points"].get("value")
+                try: pts = float(val)
+                except: pts = None
+            return name, pts
         if len(titems) == 2:
-            def extract(t):
-                info = {}
-                if isinstance(t, list):
-                    for part in t:
-                        if isinstance(part, dict): info.update(part)
-                name = info.get("name")
-                pts = None
-                if "team_points" in info and isinstance(info["team_points"], dict):
-                    val = info["team_points"].get("total") or info["team_points"].get("value")
-                    try:
-                        pts = float(val)
-                    except:
-                        pts = None
-                return name, pts
             a_name, a_pts = extract(titems[0])
             b_name, b_pts = extract(titems[1])
-            row.update({"team_a": a_name, "points_a": a_pts, "team_b": b_name, "points_b": b_pts})
-            matchups.append(row)
-    return matchups
+            matchups.append({
+                "team_a": a_name, "points_a": a_pts,
+                "team_b": b_name, "points_b": b_pts
+            })
+    return {"week": current_week, "matchups": matchups}
+
+def build_teamkey_map(teams_json):
+    """Return {team_name: team_key} using the /teams endpoint."""
+    mapping = {}
+    for tnode in find_all(teams_json, "team"):
+        base = flatten_team(tnode)
+        name = base.get("name") or base.get("nickname")
+        tkey = base.get("team_key")
+        if name and tkey:
+            mapping[name] = tkey
+    return mapping
+
+def fetch_roster_simple(team_key, token, week=None):
+    url = f"{API}/team/{team_key}/roster?format=json"
+    if week: url += f"&week={week}"
+    js = get_json(url, token)
+    players = []
+    for pnode in find_all(js, "player"):
+        # flatten
+        base = {}
+        if isinstance(pnode, list):
+            for part in pnode:
+                if isinstance(part, dict): base.update(part)
+        elif isinstance(pnode, dict):
+            base = pnode
+        # name
+        pname = None
+        for nm in find_all(base, "full"):
+            pname = nm; break
+        # position (selected_position > position)
+        pos = None
+        if "selected_position" in base and isinstance(base["selected_position"], dict):
+            pos = base["selected_position"].get("position")
+        if not pos and "primary_position" in base:
+            pos = base.get("primary_position")
+        players.append({"name": pname, "position": pos})
+    return players
 
 def main():
     cid = os.environ["YAHOO_CLIENT_ID"]
@@ -137,14 +153,32 @@ def main():
     scoreboard  = get_json(f"{API}/league/{league}/scoreboard?format=json", token)
     teams       = get_json(f"{API}/league/{league}/teams?format=json", token)
 
+    # write raw
     write_json(outdir/"league_meta.json", league_meta)
     write_json(outdir/"standings.json", standings)
     write_json(outdir/"scoreboard.json", scoreboard)
     write_json(outdir/"teams.json", teams)
 
-    # NEW: simplified files
-    write_json(outdir/"standings_simple.json", normalize_standings(standings))
-    write_json(outdir/"scoreboard_simple.json", normalize_scoreboard(scoreboard))
+    # simplified
+    standings_simple  = normalize_standings(standings)
+    scoreboard_simpl  = normalize_scoreboard(scoreboard)
+    write_json(outdir/"standings_simple.json", standings_simple)
+    write_json(outdir/"scoreboard_simple.json", scoreboard_simpl)
+
+    # rosters for current week matchups
+    teamkey_by_name = build_teamkey_map(teams)
+    week = scoreboard_simpl.get("week")
+    rosters_simple = {"week": week, "teams": []}
+    seen = set()
+    for m in scoreboard_simpl.get("matchups", []):
+        for name in (m.get("team_a"), m.get("team_b")):
+            if not name or name in seen: continue
+            tkey = teamkey_by_name.get(name)
+            if not tkey: continue
+            players = fetch_roster_simple(tkey, token, week=week)
+            rosters_simple["teams"].append({"team": name, "players": players})
+            seen.add(name)
+    write_json(outdir/"rosters_simple.json", rosters_simple)
 
 if __name__ == "__main__":
     main()
