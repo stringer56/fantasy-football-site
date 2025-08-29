@@ -48,7 +48,7 @@
                   "status": "preevent",
                   "is_playoffs": "0",
                   "is_consolation": "0",
-                  "is_matchup_of_the_week": "0",
+                  "is_matchup_of_the_week": "1",
                   "is_matchup_recap_available": 0,
                   "0": {
                     "teams": {
@@ -1266,7 +1266,7 @@
         }
       }
     ],
-    "time": "91.722965240479ms",
+    "time": "100.62789916992ms",
     "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
     "refresh_rate": "60"
   }
