@@ -45,7 +45,7 @@
                   "week": "1",
                   "week_start": "2025-09-04",
                   "week_end": "2025-09-08",
-                  "status": "preevent",
+                  "status": "midevent",
                   "is_playoffs": "0",
                   "is_consolation": "0",
                   "is_matchup_of_the_week": "1",
@@ -144,7 +144,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "1",
-                              "total": "110.65"
+                              "total": "110.64"
                             }
                           }
                         ]
@@ -237,7 +237,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "1",
-                              "total": "116.86"
+                              "total": "116.80"
                             }
                           }
                         ]
@@ -252,7 +252,7 @@
                   "week": "1",
                   "week_start": "2025-09-04",
                   "week_end": "2025-09-08",
-                  "status": "preevent",
+                  "status": "midevent",
                   "is_playoffs": "0",
                   "is_consolation": "0",
                   "is_matchup_of_the_week": "0",
@@ -347,7 +347,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "1",
-                              "total": "113.44"
+                              "total": "113.32"
                             }
                           }
                         ]
@@ -440,7 +440,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "1",
-                              "total": "115.21"
+                              "total": "115.19"
                             }
                           }
                         ]
@@ -455,7 +455,7 @@
                   "week": "1",
                   "week_start": "2025-09-04",
                   "week_end": "2025-09-08",
-                  "status": "preevent",
+                  "status": "midevent",
                   "is_playoffs": "0",
                   "is_consolation": "0",
                   "is_matchup_of_the_week": "0",
@@ -550,7 +550,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "1",
-                              "total": "111.78"
+                              "total": "111.80"
                             }
                           }
                         ]
@@ -643,7 +643,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "1",
-                              "total": "117.57"
+                              "total": "117.27"
                             }
                           }
                         ]
@@ -658,7 +658,7 @@
                   "week": "1",
                   "week_start": "2025-09-04",
                   "week_end": "2025-09-08",
-                  "status": "preevent",
+                  "status": "midevent",
                   "is_playoffs": "0",
                   "is_consolation": "0",
                   "is_matchup_of_the_week": "0",
@@ -744,7 +744,7 @@
                             }
                           ],
                           {
-                            "win_probability": 0.48,
+                            "win_probability": 0.47,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "1",
@@ -753,7 +753,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "1",
-                              "total": "112.03"
+                              "total": "110.65"
                             }
                           }
                         ]
@@ -835,7 +835,7 @@
                             }
                           ],
                           {
-                            "win_probability": 0.52,
+                            "win_probability": 0.53,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "1",
@@ -844,7 +844,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "1",
-                              "total": "114.46"
+                              "total": "114.37"
                             }
                           }
                         ]
@@ -859,7 +859,7 @@
                   "week": "1",
                   "week_start": "2025-09-04",
                   "week_end": "2025-09-08",
-                  "status": "preevent",
+                  "status": "midevent",
                   "is_playoffs": "0",
                   "is_consolation": "0",
                   "is_matchup_of_the_week": "0",
@@ -954,7 +954,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "1",
-                              "total": "116.13"
+                              "total": "116.14"
                             }
                           }
                         ]
@@ -1047,7 +1047,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "1",
-                              "total": "124.02"
+                              "total": "123.99"
                             }
                           }
                         ]
@@ -1062,7 +1062,7 @@
                   "week": "1",
                   "week_start": "2025-09-04",
                   "week_end": "2025-09-08",
-                  "status": "preevent",
+                  "status": "midevent",
                   "is_playoffs": "0",
                   "is_consolation": "0",
                   "is_matchup_of_the_week": "0",
@@ -1157,7 +1157,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "1",
-                              "total": "118.98"
+                              "total": "118.96"
                             }
                           }
                         ]
@@ -1250,7 +1250,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "1",
-                              "total": "123.03"
+                              "total": "123.07"
                             }
                           }
                         ]
@@ -1266,7 +1266,7 @@
         }
       }
     ],
-    "time": "92.846155166626ms",
+    "time": "114.16411399841ms",
     "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
     "refresh_rate": "60"
   }
