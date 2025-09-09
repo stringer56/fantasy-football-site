@@ -12,7 +12,7 @@
         "password": "",
         "draft_status": "postdraft",
         "num_teams": 12,
-        "edit_key": "1",
+        "edit_key": "2",
         "weekly_deadline": "",
         "league_update_timestamp": "1757398229",
         "scoring_type": "head",
@@ -26,7 +26,7 @@
         "allow_add_to_dl_extra_pos": 1,
         "is_pro_league": "0",
         "is_cash_league": "0",
-        "current_week": 1,
+        "current_week": 2,
         "start_week": "1",
         "start_date": "2025-09-04",
         "end_week": "16",
@@ -82,8 +82,8 @@
                     {
                       "roster_adds": {
                         "coverage_type": "week",
-                        "coverage_value": 1,
-                        "value": "1"
+                        "coverage_value": 2,
+                        "value": "0"
                       }
                     },
                     [],
@@ -187,8 +187,8 @@
                     {
                       "roster_adds": {
                         "coverage_type": "week",
-                        "coverage_value": 1,
-                        "value": "1"
+                        "coverage_value": 2,
+                        "value": "0"
                       }
                     },
                     [],
@@ -292,8 +292,8 @@
                     {
                       "roster_adds": {
                         "coverage_type": "week",
-                        "coverage_value": 1,
-                        "value": "1"
+                        "coverage_value": 2,
+                        "value": "0"
                       }
                     },
                     [],
@@ -397,7 +397,7 @@
                     {
                       "roster_adds": {
                         "coverage_type": "week",
-                        "coverage_value": 1,
+                        "coverage_value": 2,
                         "value": "0"
                       }
                     },
@@ -502,8 +502,8 @@
                     {
                       "roster_adds": {
                         "coverage_type": "week",
-                        "coverage_value": 1,
-                        "value": "1"
+                        "coverage_value": 2,
+                        "value": "0"
                       }
                     },
                     [],
@@ -607,7 +607,7 @@
                     {
                       "roster_adds": {
                         "coverage_type": "week",
-                        "coverage_value": 1,
+                        "coverage_value": 2,
                         "value": "0"
                       }
                     },
@@ -712,7 +712,7 @@
                     {
                       "roster_adds": {
                         "coverage_type": "week",
-                        "coverage_value": 1,
+                        "coverage_value": 2,
                         "value": "0"
                       }
                     },
@@ -817,7 +817,7 @@
                     {
                       "roster_adds": {
                         "coverage_type": "week",
-                        "coverage_value": 1,
+                        "coverage_value": 2,
                         "value": "0"
                       }
                     },
@@ -922,7 +922,7 @@
                     {
                       "roster_adds": {
                         "coverage_type": "week",
-                        "coverage_value": 1,
+                        "coverage_value": 2,
                         "value": "0"
                       }
                     },
@@ -1029,7 +1029,7 @@
                     {
                       "roster_adds": {
                         "coverage_type": "week",
-                        "coverage_value": 1,
+                        "coverage_value": 2,
                         "value": "0"
                       }
                     },
@@ -1136,7 +1136,7 @@
                     {
                       "roster_adds": {
                         "coverage_type": "week",
-                        "coverage_value": 1,
+                        "coverage_value": 2,
                         "value": "0"
                       }
                     },
@@ -1239,7 +1239,7 @@
                     {
                       "roster_adds": {
                         "coverage_type": "week",
-                        "coverage_value": 1,
+                        "coverage_value": 2,
                         "value": "0"
                       }
                     },
@@ -1307,7 +1307,7 @@
         ]
       }
     ],
-    "time": "60.991048812866ms",
+    "time": "74.161052703857ms",
     "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
     "refresh_rate": "60"
   }
