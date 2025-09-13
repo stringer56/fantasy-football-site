@@ -15,7 +15,7 @@
         "edit_key": "2",
         "weekly_deadline": "",
         "roster_type": "",
-        "league_update_timestamp": "1757659551",
+        "league_update_timestamp": "1757746095",
         "scoring_type": "head",
         "league_type": "private",
         "renew": "449_761310",
@@ -87,7 +87,7 @@
                             },
                             [],
                             {
-                              "waiver_priority": 8
+                              "waiver_priority": 7
                             },
                             [],
                             {
@@ -146,7 +146,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "2",
-                              "total": "114.38"
+                              "total": "114.42"
                             }
                           }
                         ]
@@ -237,7 +237,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "2",
-                              "total": "117.23"
+                              "total": "117.20"
                             }
                           }
                         ]
@@ -290,11 +290,11 @@
                             },
                             [],
                             {
-                              "waiver_priority": 9
+                              "waiver_priority": 12
                             },
                             [],
                             {
-                              "number_of_moves": 2
+                              "number_of_moves": 3
                             },
                             {
                               "number_of_trades": 0
@@ -303,7 +303,7 @@
                               "roster_adds": {
                                 "coverage_type": "week",
                                 "coverage_value": 2,
-                                "value": "0"
+                                "value": "1"
                               }
                             },
                             [],
@@ -347,7 +347,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "2",
-                              "total": "116.02"
+                              "total": "116.09"
                             }
                           }
                         ]
@@ -440,7 +440,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "2",
-                              "total": "101.40"
+                              "total": "100.97"
                             }
                           }
                         ]
@@ -493,11 +493,11 @@
                             },
                             [],
                             {
-                              "waiver_priority": 6
+                              "waiver_priority": 11
                             },
                             [],
                             {
-                              "number_of_moves": 0
+                              "number_of_moves": 1
                             },
                             {
                               "number_of_trades": 0
@@ -506,7 +506,7 @@
                               "roster_adds": {
                                 "coverage_type": "week",
                                 "coverage_value": 2,
-                                "value": "0"
+                                "value": "1"
                               }
                             },
                             [],
@@ -550,7 +550,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "2",
-                              "total": "104.89"
+                              "total": "104.92"
                             }
                           }
                         ]
@@ -643,7 +643,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "2",
-                              "total": "117.20"
+                              "total": "117.13"
                             }
                           }
                         ]
@@ -696,7 +696,7 @@
                             },
                             [],
                             {
-                              "waiver_priority": 10
+                              "waiver_priority": 8
                             },
                             [],
                             {
@@ -753,7 +753,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "2",
-                              "total": "116.98"
+                              "total": "116.88"
                             }
                           }
                         ]
@@ -789,7 +789,7 @@
                             },
                             [],
                             {
-                              "waiver_priority": 11
+                              "waiver_priority": 9
                             },
                             [],
                             {
@@ -846,7 +846,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "2",
-                              "total": "127.84"
+                              "total": "127.98"
                             }
                           }
                         ]
@@ -956,7 +956,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "2",
-                              "total": "115.35"
+                              "total": "115.29"
                             }
                           }
                         ]
@@ -1049,7 +1049,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "2",
-                              "total": "117.31"
+                              "total": "117.33"
                             }
                           }
                         ]
@@ -1102,7 +1102,7 @@
                             },
                             [],
                             {
-                              "waiver_priority": 7
+                              "waiver_priority": 6
                             },
                             [],
                             {
@@ -1159,7 +1159,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "2",
-                              "total": "122.08"
+                              "total": "122.02"
                             }
                           }
                         ]
@@ -1195,7 +1195,7 @@
                             },
                             [],
                             {
-                              "waiver_priority": 12
+                              "waiver_priority": 10
                             },
                             [],
                             {
@@ -1252,7 +1252,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "2",
-                              "total": "122.87"
+                              "total": "123.05"
                             }
                           }
                         ]
@@ -1268,7 +1268,7 @@
         }
       }
     ],
-    "time": "122.18189239502ms",
+    "time": "89.103221893311ms",
     "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
     "refresh_rate": "60"
   }
