@@ -14,7 +14,7 @@
         "num_teams": 12,
         "edit_key": "3",
         "weekly_deadline": "",
-        "roster_type": "",
+        "roster_type": "week",
         "league_update_timestamp": "1758091748",
         "scoring_type": "head",
         "league_type": "private",
@@ -286,7 +286,7 @@
                     },
                     [],
                     {
-                      "number_of_moves": 3
+                      "number_of_moves": 4
                     },
                     {
                       "number_of_trades": 0
@@ -295,7 +295,7 @@
                       "roster_adds": {
                         "coverage_type": "week",
                         "coverage_value": 3,
-                        "value": "0"
+                        "value": "1"
                       }
                     },
                     [],
@@ -496,7 +496,7 @@
                     },
                     [],
                     {
-                      "number_of_moves": 1
+                      "number_of_moves": 2
                     },
                     {
                       "number_of_trades": 0
@@ -505,7 +505,7 @@
                       "roster_adds": {
                         "coverage_type": "week",
                         "coverage_value": 3,
-                        "value": "0"
+                        "value": "1"
                       }
                     },
                     [],
@@ -914,7 +914,7 @@
                     },
                     [],
                     {
-                      "number_of_moves": 3
+                      "number_of_moves": 5
                     },
                     {
                       "number_of_trades": 0
@@ -923,7 +923,7 @@
                       "roster_adds": {
                         "coverage_type": "week",
                         "coverage_value": 3,
-                        "value": "2"
+                        "value": "4"
                       }
                     },
                     [],
@@ -1309,7 +1309,7 @@
         ]
       }
     ],
-    "time": "85.880041122437ms",
+    "time": "77.329874038696ms",
     "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
     "refresh_rate": "60"
   }
