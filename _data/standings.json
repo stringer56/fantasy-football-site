@@ -15,7 +15,7 @@
         "edit_key": "4",
         "weekly_deadline": "",
         "roster_type": "week",
-        "league_update_timestamp": "1758607725",
+        "league_update_timestamp": "1758694757",
         "scoring_type": "head",
         "league_type": "private",
         "renew": "449_761310",
@@ -333,7 +333,7 @@
                     "team_points": {
                       "coverage_type": "season",
                       "season": "2025",
-                      "total": "398.24"
+                      "total": "397.24"
                     }
                   },
                   {
@@ -350,7 +350,7 @@
                         "type": "win",
                         "value": "2"
                       },
-                      "points_for": "398.24",
+                      "points_for": "397.24",
                       "points_against": 339.71999999999997
                     }
                   }
@@ -1088,7 +1088,7 @@
                         "value": "1"
                       },
                       "points_for": "289.60",
-                      "points_against": 366.91999999999996
+                      "points_against": 365.91999999999996
                     }
                   }
                 ]
@@ -1309,7 +1309,7 @@
         ]
       }
     ],
-    "time": "75.505018234253ms",
+    "time": "91.017961502075ms",
     "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
     "refresh_rate": "60"
   }
