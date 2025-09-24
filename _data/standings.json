@@ -391,7 +391,7 @@
                     },
                     [],
                     {
-                      "number_of_moves": 9
+                      "number_of_moves": 10
                     },
                     {
                       "number_of_trades": 0
@@ -400,7 +400,7 @@
                       "roster_adds": {
                         "coverage_type": "week",
                         "coverage_value": 4,
-                        "value": "1"
+                        "value": "2"
                       }
                     },
                     [],
@@ -532,7 +532,7 @@
                             "nickname": "Finn",
                             "guid": "VH5SCD2VLMWZE2GGB2ICWJKEHY",
                             "image_url": "https://s.yimg.com/ag/images/default_user_profile_pic_64sq.jpg",
-                            "felo_score": "610",
+                            "felo_score": "611",
                             "felo_tier": "silver"
                           }
                         }
@@ -1233,7 +1233,7 @@
                     },
                     [],
                     {
-                      "number_of_moves": 3
+                      "number_of_moves": 5
                     },
                     {
                       "number_of_trades": 0
@@ -1242,7 +1242,7 @@
                       "roster_adds": {
                         "coverage_type": "week",
                         "coverage_value": 4,
-                        "value": "0"
+                        "value": "2"
                       }
                     },
                     [],
@@ -1309,7 +1309,7 @@
         ]
       }
     ],
-    "time": "88.193893432617ms",
+    "time": "82.978010177612ms",
     "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
     "refresh_rate": "60"
   }
