@@ -15,7 +15,7 @@
         "edit_key": "4",
         "weekly_deadline": "",
         "roster_type": "week",
-        "league_update_timestamp": "1758694757",
+        "league_update_timestamp": "1758783113",
         "scoring_type": "head",
         "league_type": "private",
         "renew": "449_761310",
@@ -706,7 +706,7 @@
                     },
                     [],
                     {
-                      "number_of_moves": 3
+                      "number_of_moves": 4
                     },
                     {
                       "number_of_trades": 0
@@ -715,7 +715,7 @@
                       "roster_adds": {
                         "coverage_type": "week",
                         "coverage_value": 4,
-                        "value": "0"
+                        "value": "1"
                       }
                     },
                     [],
@@ -1309,7 +1309,7 @@
         ]
       }
     ],
-    "time": "85.494041442871ms",
+    "time": "96.820116043091ms",
     "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
     "refresh_rate": "60"
   }
