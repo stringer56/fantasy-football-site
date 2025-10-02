@@ -137,7 +137,7 @@
                             }
                           ],
                           {
-                            "win_probability": 0.51,
+                            "win_probability": 0.5,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "5",
@@ -146,7 +146,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "5",
-                              "total": "97.03"
+                              "total": "97.54"
                             }
                           }
                         ]
@@ -230,7 +230,7 @@
                             }
                           ],
                           {
-                            "win_probability": 0.49,
+                            "win_probability": 0.5,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "5",
@@ -239,7 +239,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "5",
-                              "total": "96.33"
+                              "total": "97.34"
                             }
                           }
                         ]
@@ -349,7 +349,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "5",
-                              "total": "111.95"
+                              "total": "111.93"
                             }
                           }
                         ]
@@ -389,7 +389,7 @@
                             },
                             [],
                             {
-                              "number_of_moves": 6
+                              "number_of_moves": 7
                             },
                             {
                               "number_of_trades": 0
@@ -398,7 +398,7 @@
                               "roster_adds": {
                                 "coverage_type": "week",
                                 "coverage_value": 5,
-                                "value": "2"
+                                "value": "3"
                               }
                             },
                             [],
@@ -442,7 +442,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "5",
-                              "total": "124.61"
+                              "total": "125.17"
                             }
                           }
                         ]
@@ -552,7 +552,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "5",
-                              "total": "90.51"
+                              "total": "90.50"
                             }
                           }
                         ]
@@ -645,7 +645,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "5",
-                              "total": "103.74"
+                              "total": "104.10"
                             }
                           }
                         ]
@@ -746,7 +746,7 @@
                             }
                           ],
                           {
-                            "win_probability": 0.45999999999999996,
+                            "win_probability": 0.47,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "5",
@@ -755,7 +755,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "5",
-                              "total": "109.38"
+                              "total": "110.53"
                             }
                           }
                         ]
@@ -839,7 +839,7 @@
                             }
                           ],
                           {
-                            "win_probability": 0.54,
+                            "win_probability": 0.53,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "5",
@@ -848,7 +848,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "5",
-                              "total": "114.07"
+                              "total": "114.28"
                             }
                           }
                         ]
@@ -958,7 +958,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "5",
-                              "total": "91.51"
+                              "total": "91.39"
                             }
                           }
                         ]
@@ -1051,7 +1051,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "5",
-                              "total": "75.98"
+                              "total": "76.18"
                             }
                           }
                         ]
@@ -1108,7 +1108,7 @@
                             },
                             [],
                             {
-                              "number_of_moves": 4
+                              "number_of_moves": 6
                             },
                             {
                               "number_of_trades": 0
@@ -1117,7 +1117,7 @@
                               "roster_adds": {
                                 "coverage_type": "week",
                                 "coverage_value": 5,
-                                "value": "1"
+                                "value": "3"
                               }
                             },
                             [],
@@ -1152,7 +1152,7 @@
                             }
                           ],
                           {
-                            "win_probability": 0.63,
+                            "win_probability": 0.62,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "5",
@@ -1161,7 +1161,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "5",
-                              "total": "114.52"
+                              "total": "114.34"
                             }
                           }
                         ]
@@ -1243,7 +1243,7 @@
                             }
                           ],
                           {
-                            "win_probability": 0.37,
+                            "win_probability": 0.38,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "5",
@@ -1252,7 +1252,7 @@
                             "team_projected_points": {
                               "coverage_type": "week",
                               "week": "5",
-                              "total": "99.65"
+                              "total": "100.83"
                             }
                           }
                         ]
@@ -1268,7 +1268,7 @@
         }
       }
     ],
-    "time": "98.601102828979ms",
+    "time": "110.75282096863ms",
     "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
     "refresh_rate": "60"
   }
