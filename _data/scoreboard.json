@@ -15,7 +15,7 @@
         "edit_key": "5",
         "weekly_deadline": "",
         "roster_type": "week",
-        "league_update_timestamp": "1759560369",
+        "league_update_timestamp": "1759731452",
         "scoring_type": "head",
         "league_type": "private",
         "renew": "449_761310",
@@ -340,11 +340,11 @@
                             }
                           ],
                           {
-                            "win_probability": 0.08000000000000007,
+                            "win_probability": 0.010000000000000009,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "5",
-                              "total": "122.02"
+                              "total": "123.72"
                             },
                             "team_projected_points": {
                               "coverage_type": "week",
@@ -433,7 +433,7 @@
                             }
                           ],
                           {
-                            "win_probability": 0.9199999999999999,
+                            "win_probability": 0.99,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "5",
@@ -543,11 +543,11 @@
                             }
                           ],
                           {
-                            "win_probability": 0.9199999999999999,
+                            "win_probability": 0.8400000000000001,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "5",
-                              "total": "103.46"
+                              "total": "110.82"
                             },
                             "team_projected_points": {
                               "coverage_type": "week",
@@ -636,11 +636,11 @@
                             }
                           ],
                           {
-                            "win_probability": 0.08000000000000007,
+                            "win_probability": 0.15999999999999992,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "5",
-                              "total": "61.60"
+                              "total": "78.70"
                             },
                             "team_projected_points": {
                               "coverage_type": "week",
@@ -746,11 +746,11 @@
                             }
                           ],
                           {
-                            "win_probability": 0.13,
+                            "win_probability": 0,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "5",
-                              "total": "97.40"
+                              "total": "118.42"
                             },
                             "team_projected_points": {
                               "coverage_type": "week",
@@ -839,7 +839,7 @@
                             }
                           ],
                           {
-                            "win_probability": 0.87,
+                            "win_probability": 1,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "5",
@@ -1247,7 +1247,7 @@
                             "team_points": {
                               "coverage_type": "week",
                               "week": "5",
-                              "total": "85.38"
+                              "total": "86.28"
                             },
                             "team_projected_points": {
                               "coverage_type": "week",
@@ -1268,7 +1268,7 @@
         }
       }
     ],
-    "time": "141.63780212402ms",
+    "time": "106.04214668274ms",
     "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
     "refresh_rate": "60"
   }
