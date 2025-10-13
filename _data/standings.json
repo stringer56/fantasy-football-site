@@ -393,7 +393,7 @@
                     },
                     [],
                     {
-                      "number_of_moves": 7
+                      "number_of_moves": 8
                     },
                     {
                       "number_of_trades": 0
@@ -402,7 +402,7 @@
                       "roster_adds": {
                         "coverage_type": "week",
                         "coverage_value": 6,
-                        "value": "2"
+                        "value": "3"
                       }
                     },
                     [],
@@ -1309,7 +1309,7 @@
         ]
       }
     ],
-    "time": "105.61990737915ms",
+    "time": "123.38805198669ms",
     "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
     "refresh_rate": "60"
   }
