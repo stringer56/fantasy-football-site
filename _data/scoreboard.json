@@ -15,7 +15,7 @@
         "edit_key": "6",
         "weekly_deadline": "",
         "roster_type": "week",
-        "league_update_timestamp": "1760335833",
+        "league_update_timestamp": "1760422764",
         "scoring_type": "head",
         "league_type": "private",
         "renew": "449_761310",
@@ -47,11 +47,13 @@
                   "week": "6",
                   "week_start": "2025-10-07",
                   "week_end": "2025-10-13",
-                  "status": "midevent",
+                  "status": "postevent",
                   "is_playoffs": "0",
                   "is_consolation": "0",
                   "is_matchup_of_the_week": "1",
                   "is_matchup_recap_available": 0,
+                  "is_tied": 0,
+                  "winner_team_key": "461.l.103926.t.1",
                   "0": {
                     "teams": {
                       "0": {
@@ -137,11 +139,11 @@
                             }
                           ],
                           {
-                            "win_probability": 0.99,
+                            "win_probability": 1,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "6",
-                              "total": "129.14"
+                              "total": "134.54"
                             },
                             "team_projected_points": {
                               "coverage_type": "week",
@@ -230,7 +232,7 @@
                             }
                           ],
                           {
-                            "win_probability": 0.010000000000000009,
+                            "win_probability": 0,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "6",
@@ -254,11 +256,13 @@
                   "week": "6",
                   "week_start": "2025-10-07",
                   "week_end": "2025-10-13",
-                  "status": "midevent",
+                  "status": "postevent",
                   "is_playoffs": "0",
                   "is_consolation": "0",
                   "is_matchup_of_the_week": "0",
                   "is_matchup_recap_available": 0,
+                  "is_tied": 0,
+                  "winner_team_key": "461.l.103926.t.2",
                   "0": {
                     "teams": {
                       "0": {
@@ -340,7 +344,7 @@
                             }
                           ],
                           {
-                            "win_probability": 0.99,
+                            "win_probability": 1,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "6",
@@ -433,7 +437,7 @@
                             }
                           ],
                           {
-                            "win_probability": 0.010000000000000009,
+                            "win_probability": 0,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "6",
@@ -457,11 +461,13 @@
                   "week": "6",
                   "week_start": "2025-10-07",
                   "week_end": "2025-10-13",
-                  "status": "midevent",
+                  "status": "postevent",
                   "is_playoffs": "0",
                   "is_consolation": "0",
                   "is_matchup_of_the_week": "0",
                   "is_matchup_recap_available": 0,
+                  "is_tied": 0,
+                  "winner_team_key": "461.l.103926.t.4",
                   "0": {
                     "teams": {
                       "0": {
@@ -543,11 +549,11 @@
                             }
                           ],
                           {
-                            "win_probability": 0.95,
+                            "win_probability": 1,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "6",
-                              "total": "97.60"
+                              "total": "102.20"
                             },
                             "team_projected_points": {
                               "coverage_type": "week",
@@ -636,11 +642,11 @@
                             }
                           ],
                           {
-                            "win_probability": 0.050000000000000044,
+                            "win_probability": 0,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "6",
-                              "total": "89.02"
+                              "total": "89.52"
                             },
                             "team_projected_points": {
                               "coverage_type": "week",
@@ -660,11 +666,13 @@
                   "week": "6",
                   "week_start": "2025-10-07",
                   "week_end": "2025-10-13",
-                  "status": "midevent",
+                  "status": "postevent",
                   "is_playoffs": "0",
                   "is_consolation": "0",
                   "is_matchup_of_the_week": "0",
                   "is_matchup_recap_available": 0,
+                  "is_tied": 0,
+                  "winner_team_key": "461.l.103926.t.5",
                   "0": {
                     "teams": {
                       "0": {
@@ -746,11 +754,11 @@
                             }
                           ],
                           {
-                            "win_probability": 0.96,
+                            "win_probability": 1,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "6",
-                              "total": "81.08"
+                              "total": "90.28"
                             },
                             "team_projected_points": {
                               "coverage_type": "week",
@@ -837,11 +845,11 @@
                             }
                           ],
                           {
-                            "win_probability": 0.040000000000000036,
+                            "win_probability": 0,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "6",
-                              "total": "64.56"
+                              "total": "67.66"
                             },
                             "team_projected_points": {
                               "coverage_type": "week",
@@ -861,11 +869,13 @@
                   "week": "6",
                   "week_start": "2025-10-07",
                   "week_end": "2025-10-13",
-                  "status": "midevent",
+                  "status": "postevent",
                   "is_playoffs": "0",
                   "is_consolation": "0",
                   "is_matchup_of_the_week": "0",
                   "is_matchup_recap_available": 0,
+                  "is_tied": 0,
+                  "winner_team_key": "461.l.103926.t.9",
                   "0": {
                     "teams": {
                       "0": {
@@ -947,7 +957,7 @@
                             }
                           ],
                           {
-                            "win_probability": 0.01,
+                            "win_probability": 0,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "6",
@@ -1040,11 +1050,11 @@
                             }
                           ],
                           {
-                            "win_probability": 0.99,
+                            "win_probability": 1,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "6",
-                              "total": "144.40"
+                              "total": "153.10"
                             },
                             "team_projected_points": {
                               "coverage_type": "week",
@@ -1064,11 +1074,13 @@
                   "week": "6",
                   "week_start": "2025-10-07",
                   "week_end": "2025-10-13",
-                  "status": "midevent",
+                  "status": "postevent",
                   "is_playoffs": "0",
                   "is_consolation": "0",
                   "is_matchup_of_the_week": "0",
                   "is_matchup_recap_available": 0,
+                  "is_tied": 0,
+                  "winner_team_key": "461.l.103926.t.7",
                   "0": {
                     "teams": {
                       "0": {
@@ -1150,11 +1162,11 @@
                             }
                           ],
                           {
-                            "win_probability": 0.99,
+                            "win_probability": 1,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "6",
-                              "total": "147.02"
+                              "total": "148.62"
                             },
                             "team_projected_points": {
                               "coverage_type": "week",
@@ -1243,11 +1255,11 @@
                             }
                           ],
                           {
-                            "win_probability": 0.010000000000000009,
+                            "win_probability": 0,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "6",
-                              "total": "62.52"
+                              "total": "78.34"
                             },
                             "team_projected_points": {
                               "coverage_type": "week",
@@ -1268,7 +1280,7 @@
         }
       }
     ],
-    "time": "147.81308174133ms",
+    "time": "135.85090637207ms",
     "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
     "refresh_rate": "60"
   }
