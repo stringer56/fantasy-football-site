@@ -15,7 +15,7 @@
         "edit_key": "8",
         "weekly_deadline": "",
         "roster_type": "week",
-        "league_update_timestamp": "1761288478",
+        "league_update_timestamp": "1761374849",
         "scoring_type": "head",
         "league_type": "private",
         "renew": "449_761310",
@@ -158,7 +158,7 @@
                 },
                 [],
                 {
-                  "number_of_moves": 19
+                  "number_of_moves": 20
                 },
                 {
                   "number_of_trades": 0
@@ -167,7 +167,7 @@
                   "roster_adds": {
                     "coverage_type": "week",
                     "coverage_value": 8,
-                    "value": "3"
+                    "value": "4"
                   }
                 },
                 [],
@@ -314,7 +314,7 @@
                 },
                 [],
                 {
-                  "waiver_priority": 10
+                  "waiver_priority": 9
                 },
                 [],
                 {
@@ -478,7 +478,7 @@
                 },
                 [],
                 {
-                  "number_of_moves": 16
+                  "number_of_moves": 17
                 },
                 {
                   "number_of_trades": 0
@@ -487,7 +487,7 @@
                   "roster_adds": {
                     "coverage_type": "week",
                     "coverage_value": 8,
-                    "value": "5"
+                    "value": "6"
                   }
                 },
                 [],
@@ -794,11 +794,11 @@
                 },
                 [],
                 {
-                  "waiver_priority": 9
+                  "waiver_priority": 11
                 },
                 [],
                 {
-                  "number_of_moves": 9
+                  "number_of_moves": 10
                 },
                 {
                   "number_of_trades": 0
@@ -807,7 +807,7 @@
                   "roster_adds": {
                     "coverage_type": "week",
                     "coverage_value": 8,
-                    "value": "1"
+                    "value": "2"
                   }
                 },
                 [],
@@ -952,7 +952,7 @@
                 [],
                 [],
                 {
-                  "waiver_priority": 11
+                  "waiver_priority": 10
                 },
                 [],
                 {
@@ -1005,7 +1005,7 @@
         }
       }
     ],
-    "time": "102.79512405396ms",
+    "time": "120.31888961792ms",
     "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
     "refresh_rate": "60"
   }
