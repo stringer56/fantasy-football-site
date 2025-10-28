@@ -12,10 +12,10 @@
         "password": "",
         "draft_status": "postdraft",
         "num_teams": 12,
-        "edit_key": "8",
+        "edit_key": "9",
         "weekly_deadline": "",
         "roster_type": "week",
-        "league_update_timestamp": "1761547774",
+        "league_update_timestamp": "1761634182",
         "scoring_type": "head",
         "league_type": "private",
         "renew": "449_761310",
@@ -28,7 +28,7 @@
         "allow_add_to_dl_extra_pos": 1,
         "is_pro_league": "0",
         "is_cash_league": "0",
-        "current_week": 8,
+        "current_week": 9,
         "start_week": "1",
         "start_date": "2025-09-04",
         "end_week": "16",
@@ -42,6 +42,426 @@
           {
             "teams": {
               "0": {
+                "team": [
+                  [
+                    {
+                      "team_key": "461.l.103926.t.7"
+                    },
+                    {
+                      "team_id": "7"
+                    },
+                    {
+                      "name": "Maine Moose"
+                    },
+                    [],
+                    {
+                      "url": "https://football.fantasysports.yahoo.com/f1/103926/7"
+                    },
+                    {
+                      "team_logos": [
+                        {
+                          "team_logo": {
+                            "size": "large",
+                            "url": "https://yahoofantasysports-res.cloudinary.com/image/upload/t_s192sq/fantasy-logos/b65c835e0ac2b838aa4d78cd442acc8b3e995cdd325f8c6de9319e1d08cad458.jpg"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "previous_season_team_rank": 3
+                    },
+                    [],
+                    {
+                      "waiver_priority": 1
+                    },
+                    [],
+                    {
+                      "number_of_moves": 9
+                    },
+                    {
+                      "number_of_trades": 0
+                    },
+                    {
+                      "roster_adds": {
+                        "coverage_type": "week",
+                        "coverage_value": 9,
+                        "value": "0"
+                      }
+                    },
+                    [],
+                    {
+                      "league_scoring_type": "head"
+                    },
+                    [],
+                    [],
+                    {
+                      "has_draft_grade": 1,
+                      "draft_grade": "B",
+                      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/103926/7/draftrecap"
+                    },
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    {
+                      "managers": [
+                        {
+                          "manager": {
+                            "manager_id": "7",
+                            "nickname": "Finn",
+                            "guid": "VH5SCD2VLMWZE2GGB2ICWJKEHY",
+                            "image_url": "https://s.yimg.com/ag/images/default_user_profile_pic_64sq.jpg",
+                            "felo_score": "618",
+                            "felo_tier": "silver"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  {
+                    "team_points": {
+                      "coverage_type": "season",
+                      "season": "2025",
+                      "total": "930.42"
+                    }
+                  },
+                  {
+                    "team_standings": {
+                      "rank": "1",
+                      "playoff_seed": "1",
+                      "outcome_totals": {
+                        "wins": "6",
+                        "losses": "2",
+                        "ties": 0,
+                        "percentage": ".750"
+                      },
+                      "streak": {
+                        "type": "win",
+                        "value": "3"
+                      },
+                      "points_for": "930.42",
+                      "points_against": 887.12
+                    }
+                  }
+                ]
+              },
+              "1": {
+                "team": [
+                  [
+                    {
+                      "team_key": "461.l.103926.t.6"
+                    },
+                    {
+                      "team_id": "6"
+                    },
+                    {
+                      "name": "Greendale Human Beings"
+                    },
+                    [],
+                    {
+                      "url": "https://football.fantasysports.yahoo.com/f1/103926/6"
+                    },
+                    {
+                      "team_logos": [
+                        {
+                          "team_logo": {
+                            "size": "large",
+                            "url": "https://yahoofantasysports-res.cloudinary.com/image/upload/t_s192sq/fantasy-logos/a6aae605494dcfd61d6f01e3c55b64765dfdb41b3172a34ff8a29b5ea33b97fe.jpg"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "previous_season_team_rank": 6
+                    },
+                    [],
+                    {
+                      "waiver_priority": 2
+                    },
+                    [],
+                    {
+                      "number_of_moves": 17
+                    },
+                    {
+                      "number_of_trades": 0
+                    },
+                    {
+                      "roster_adds": {
+                        "coverage_type": "week",
+                        "coverage_value": 9,
+                        "value": "0"
+                      }
+                    },
+                    [],
+                    {
+                      "league_scoring_type": "head"
+                    },
+                    [],
+                    [],
+                    {
+                      "has_draft_grade": 1,
+                      "draft_grade": "A+",
+                      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/103926/6/draftrecap"
+                    },
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    {
+                      "managers": [
+                        {
+                          "manager": {
+                            "manager_id": "6",
+                            "nickname": "Ryan",
+                            "guid": "KRE6EDVK3HTK2QP5TLTHPVIHUE",
+                            "image_url": "https://s.yimg.com/ag/images/aeabdf9a-089d-488e-b3f9-b2b2a4a08c83_64sq.jpg",
+                            "felo_score": "876",
+                            "felo_tier": "platinum"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  {
+                    "team_points": {
+                      "coverage_type": "season",
+                      "season": "2025",
+                      "total": "1029.96"
+                    }
+                  },
+                  {
+                    "team_standings": {
+                      "rank": "2",
+                      "playoff_seed": "2",
+                      "outcome_totals": {
+                        "wins": "5",
+                        "losses": "3",
+                        "ties": 0,
+                        "percentage": ".625"
+                      },
+                      "streak": {
+                        "type": "win",
+                        "value": "1"
+                      },
+                      "points_for": "1029.96",
+                      "points_against": 947.96
+                    }
+                  }
+                ]
+              },
+              "2": {
+                "team": [
+                  [
+                    {
+                      "team_key": "461.l.103926.t.8"
+                    },
+                    {
+                      "team_id": "8"
+                    },
+                    {
+                      "name": "North town Ninnyhammers"
+                    },
+                    [],
+                    {
+                      "url": "https://football.fantasysports.yahoo.com/f1/103926/8"
+                    },
+                    {
+                      "team_logos": [
+                        {
+                          "team_logo": {
+                            "size": "large",
+                            "url": "https://yahoofantasysports-res.cloudinary.com/image/upload/t_s192sq/fantasy-logos/ec138b5796319c00c7f458fe79fef1ec85c16de871ff5df149b49980f71c860d.jpg"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "previous_season_team_rank": 9
+                    },
+                    [],
+                    {
+                      "waiver_priority": 3
+                    },
+                    [],
+                    {
+                      "number_of_moves": 3
+                    },
+                    {
+                      "number_of_trades": 0
+                    },
+                    {
+                      "roster_adds": {
+                        "coverage_type": "week",
+                        "coverage_value": 9,
+                        "value": "0"
+                      }
+                    },
+                    [],
+                    {
+                      "league_scoring_type": "head"
+                    },
+                    [],
+                    [],
+                    {
+                      "has_draft_grade": 1,
+                      "draft_grade": "C",
+                      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/103926/8/draftrecap"
+                    },
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    {
+                      "managers": [
+                        {
+                          "manager": {
+                            "manager_id": "8",
+                            "nickname": "Tj",
+                            "guid": "Z7QGPQIKQ4VZZS3IUDEQJCSB2U",
+                            "image_url": "https://s.yimg.com/ag/images/default_user_profile_pic_64sq.jpg",
+                            "felo_score": "590",
+                            "felo_tier": "bronze"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  {
+                    "team_points": {
+                      "coverage_type": "season",
+                      "season": "2025",
+                      "total": "978.54"
+                    }
+                  },
+                  {
+                    "team_standings": {
+                      "rank": "3",
+                      "playoff_seed": "3",
+                      "outcome_totals": {
+                        "wins": "5",
+                        "losses": "3",
+                        "ties": 0,
+                        "percentage": ".625"
+                      },
+                      "streak": {
+                        "type": "win",
+                        "value": "2"
+                      },
+                      "points_for": "978.54",
+                      "points_against": 870.64
+                    }
+                  }
+                ]
+              },
+              "3": {
+                "team": [
+                  [
+                    {
+                      "team_key": "461.l.103926.t.2"
+                    },
+                    {
+                      "team_id": "2"
+                    },
+                    {
+                      "name": "Albany Kneelers"
+                    },
+                    [],
+                    {
+                      "url": "https://football.fantasysports.yahoo.com/f1/103926/2"
+                    },
+                    {
+                      "team_logos": [
+                        {
+                          "team_logo": {
+                            "size": "large",
+                            "url": "https://yahoofantasysports-res.cloudinary.com/image/upload/t_s192sq/fantasy-logos/d640491690a852ed2af75ede3e060492cdc6c8e9e08458743af55e879420418f.jpg"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "previous_season_team_rank": 5
+                    },
+                    [],
+                    {
+                      "waiver_priority": 12
+                    },
+                    [],
+                    {
+                      "number_of_moves": 21
+                    },
+                    {
+                      "number_of_trades": 0
+                    },
+                    {
+                      "roster_adds": {
+                        "coverage_type": "week",
+                        "coverage_value": 9,
+                        "value": "0"
+                      }
+                    },
+                    [],
+                    {
+                      "league_scoring_type": "head"
+                    },
+                    [],
+                    [],
+                    {
+                      "has_draft_grade": 1,
+                      "draft_grade": "D",
+                      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/103926/2/draftrecap"
+                    },
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    {
+                      "managers": [
+                        {
+                          "manager": {
+                            "manager_id": "2",
+                            "nickname": "James",
+                            "guid": "GRUG7ZPORRYMU5XOQKFAPXUQBI",
+                            "image_url": "https://s.yimg.com/ag/images/default_user_profile_pic_64sq.jpg",
+                            "felo_score": "791",
+                            "felo_tier": "gold"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  {
+                    "team_points": {
+                      "coverage_type": "season",
+                      "season": "2025",
+                      "total": "956.42"
+                    }
+                  },
+                  {
+                    "team_standings": {
+                      "rank": "4",
+                      "playoff_seed": "4",
+                      "outcome_totals": {
+                        "wins": "5",
+                        "losses": "3",
+                        "ties": 0,
+                        "percentage": ".625"
+                      },
+                      "streak": {
+                        "type": "win",
+                        "value": "3"
+                      },
+                      "points_for": "956.42",
+                      "points_against": 940.1199999999999
+                    }
+                  }
+                ]
+              },
+              "4": {
                 "team": [
                   [
                     {
@@ -86,8 +506,8 @@
                     {
                       "roster_adds": {
                         "coverage_type": "week",
-                        "coverage_value": 8,
-                        "value": "1"
+                        "coverage_value": 9,
+                        "value": "0"
                       }
                     },
                     [],
@@ -127,345 +547,30 @@
                     "team_points": {
                       "coverage_type": "season",
                       "season": "2025",
-                      "total": "825.94"
+                      "total": "940.06"
                     }
                   },
                   {
                     "team_standings": {
-                      "rank": "1",
-                      "playoff_seed": "1",
+                      "rank": "5",
+                      "playoff_seed": "5",
                       "outcome_totals": {
                         "wins": "5",
-                        "losses": "2",
-                        "ties": 0,
-                        "percentage": ".714"
-                      },
-                      "streak": {
-                        "type": "win",
-                        "value": "5"
-                      },
-                      "points_for": "825.94",
-                      "points_against": 717.0199999999999
-                    }
-                  }
-                ]
-              },
-              "1": {
-                "team": [
-                  [
-                    {
-                      "team_key": "461.l.103926.t.7"
-                    },
-                    {
-                      "team_id": "7"
-                    },
-                    {
-                      "name": "Maine Moose"
-                    },
-                    [],
-                    {
-                      "url": "https://football.fantasysports.yahoo.com/f1/103926/7"
-                    },
-                    {
-                      "team_logos": [
-                        {
-                          "team_logo": {
-                            "size": "large",
-                            "url": "https://yahoofantasysports-res.cloudinary.com/image/upload/t_s192sq/fantasy-logos/b65c835e0ac2b838aa4d78cd442acc8b3e995cdd325f8c6de9319e1d08cad458.jpg"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "previous_season_team_rank": 3
-                    },
-                    [],
-                    {
-                      "waiver_priority": 1
-                    },
-                    [],
-                    {
-                      "number_of_moves": 9
-                    },
-                    {
-                      "number_of_trades": 0
-                    },
-                    {
-                      "roster_adds": {
-                        "coverage_type": "week",
-                        "coverage_value": 8,
-                        "value": "4"
-                      }
-                    },
-                    [],
-                    {
-                      "league_scoring_type": "head"
-                    },
-                    [],
-                    [],
-                    {
-                      "has_draft_grade": 1,
-                      "draft_grade": "B",
-                      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/103926/7/draftrecap"
-                    },
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    {
-                      "managers": [
-                        {
-                          "manager": {
-                            "manager_id": "7",
-                            "nickname": "Finn",
-                            "guid": "VH5SCD2VLMWZE2GGB2ICWJKEHY",
-                            "image_url": "https://s.yimg.com/ag/images/default_user_profile_pic_64sq.jpg",
-                            "felo_score": "618",
-                            "felo_tier": "silver"
-                          }
-                        }
-                      ]
-                    }
-                  ],
-                  {
-                    "team_points": {
-                      "coverage_type": "season",
-                      "season": "2025",
-                      "total": "797.80"
-                    }
-                  },
-                  {
-                    "team_standings": {
-                      "rank": "2",
-                      "playoff_seed": "2",
-                      "outcome_totals": {
-                        "wins": "5",
-                        "losses": "2",
-                        "ties": 0,
-                        "percentage": ".714"
-                      },
-                      "streak": {
-                        "type": "win",
-                        "value": "2"
-                      },
-                      "points_for": "797.80",
-                      "points_against": 783.7
-                    }
-                  }
-                ]
-              },
-              "2": {
-                "team": [
-                  [
-                    {
-                      "team_key": "461.l.103926.t.6"
-                    },
-                    {
-                      "team_id": "6"
-                    },
-                    {
-                      "name": "Greendale Human Beings"
-                    },
-                    [],
-                    {
-                      "url": "https://football.fantasysports.yahoo.com/f1/103926/6"
-                    },
-                    {
-                      "team_logos": [
-                        {
-                          "team_logo": {
-                            "size": "large",
-                            "url": "https://yahoofantasysports-res.cloudinary.com/image/upload/t_s192sq/fantasy-logos/a6aae605494dcfd61d6f01e3c55b64765dfdb41b3172a34ff8a29b5ea33b97fe.jpg"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "previous_season_team_rank": 6
-                    },
-                    [],
-                    {
-                      "waiver_priority": 2
-                    },
-                    [],
-                    {
-                      "number_of_moves": 17
-                    },
-                    {
-                      "number_of_trades": 0
-                    },
-                    {
-                      "roster_adds": {
-                        "coverage_type": "week",
-                        "coverage_value": 8,
-                        "value": "6"
-                      }
-                    },
-                    [],
-                    {
-                      "league_scoring_type": "head"
-                    },
-                    [],
-                    [],
-                    {
-                      "has_draft_grade": 1,
-                      "draft_grade": "A+",
-                      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/103926/6/draftrecap"
-                    },
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    {
-                      "managers": [
-                        {
-                          "manager": {
-                            "manager_id": "6",
-                            "nickname": "Ryan",
-                            "guid": "KRE6EDVK3HTK2QP5TLTHPVIHUE",
-                            "image_url": "https://s.yimg.com/ag/images/aeabdf9a-089d-488e-b3f9-b2b2a4a08c83_64sq.jpg",
-                            "felo_score": "876",
-                            "felo_tier": "platinum"
-                          }
-                        }
-                      ]
-                    }
-                  ],
-                  {
-                    "team_points": {
-                      "coverage_type": "season",
-                      "season": "2025",
-                      "total": "887.64"
-                    }
-                  },
-                  {
-                    "team_standings": {
-                      "rank": "3",
-                      "playoff_seed": "3",
-                      "outcome_totals": {
-                        "wins": "4",
                         "losses": "3",
                         "ties": 0,
-                        "percentage": ".571"
+                        "percentage": ".625"
                       },
                       "streak": {
                         "type": "loss",
-                        "value": "2"
-                      },
-                      "points_for": "887.64",
-                      "points_against": 833.84
-                    }
-                  }
-                ]
-              },
-              "3": {
-                "team": [
-                  [
-                    {
-                      "team_key": "461.l.103926.t.8"
-                    },
-                    {
-                      "team_id": "8"
-                    },
-                    {
-                      "name": "North town Ninnyhammers"
-                    },
-                    [],
-                    {
-                      "url": "https://football.fantasysports.yahoo.com/f1/103926/8"
-                    },
-                    {
-                      "team_logos": [
-                        {
-                          "team_logo": {
-                            "size": "large",
-                            "url": "https://yahoofantasysports-res.cloudinary.com/image/upload/t_s192sq/fantasy-logos/ec138b5796319c00c7f458fe79fef1ec85c16de871ff5df149b49980f71c860d.jpg"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "previous_season_team_rank": 9
-                    },
-                    [],
-                    {
-                      "waiver_priority": 3
-                    },
-                    [],
-                    {
-                      "number_of_moves": 3
-                    },
-                    {
-                      "number_of_trades": 0
-                    },
-                    {
-                      "roster_adds": {
-                        "coverage_type": "week",
-                        "coverage_value": 8,
-                        "value": "0"
-                      }
-                    },
-                    [],
-                    {
-                      "league_scoring_type": "head"
-                    },
-                    [],
-                    [],
-                    {
-                      "has_draft_grade": 1,
-                      "draft_grade": "C",
-                      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/103926/8/draftrecap"
-                    },
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    {
-                      "managers": [
-                        {
-                          "manager": {
-                            "manager_id": "8",
-                            "nickname": "Tj",
-                            "guid": "Z7QGPQIKQ4VZZS3IUDEQJCSB2U",
-                            "image_url": "https://s.yimg.com/ag/images/default_user_profile_pic_64sq.jpg",
-                            "felo_score": "590",
-                            "felo_tier": "bronze"
-                          }
-                        }
-                      ]
-                    }
-                  ],
-                  {
-                    "team_points": {
-                      "coverage_type": "season",
-                      "season": "2025",
-                      "total": "869.66"
-                    }
-                  },
-                  {
-                    "team_standings": {
-                      "rank": "4",
-                      "playoff_seed": "4",
-                      "outcome_totals": {
-                        "wins": "4",
-                        "losses": "3",
-                        "ties": 0,
-                        "percentage": ".571"
-                      },
-                      "streak": {
-                        "type": "win",
                         "value": "1"
                       },
-                      "points_for": "869.66",
-                      "points_against": 816.06
+                      "points_for": "940.06",
+                      "points_against": 859.3399999999999
                     }
                   }
                 ]
               },
-              "4": {
+              "5": {
                 "team": [
                   [
                     {
@@ -508,8 +613,8 @@
                     {
                       "roster_adds": {
                         "coverage_type": "week",
-                        "coverage_value": 8,
-                        "value": "1"
+                        "coverage_value": 9,
+                        "value": "0"
                       }
                     },
                     [],
@@ -547,112 +652,7 @@
                     "team_points": {
                       "coverage_type": "season",
                       "season": "2025",
-                      "total": "817.12"
-                    }
-                  },
-                  {
-                    "team_standings": {
-                      "rank": "5",
-                      "playoff_seed": "5",
-                      "outcome_totals": {
-                        "wins": "4",
-                        "losses": "3",
-                        "ties": 0,
-                        "percentage": ".571"
-                      },
-                      "streak": {
-                        "type": "loss",
-                        "value": "1"
-                      },
-                      "points_for": "817.12",
-                      "points_against": 830.1199999999999
-                    }
-                  }
-                ]
-              },
-              "5": {
-                "team": [
-                  [
-                    {
-                      "team_key": "461.l.103926.t.2"
-                    },
-                    {
-                      "team_id": "2"
-                    },
-                    {
-                      "name": "Albany Kneelers"
-                    },
-                    [],
-                    {
-                      "url": "https://football.fantasysports.yahoo.com/f1/103926/2"
-                    },
-                    {
-                      "team_logos": [
-                        {
-                          "team_logo": {
-                            "size": "large",
-                            "url": "https://yahoofantasysports-res.cloudinary.com/image/upload/t_s192sq/fantasy-logos/d640491690a852ed2af75ede3e060492cdc6c8e9e08458743af55e879420418f.jpg"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "previous_season_team_rank": 5
-                    },
-                    [],
-                    {
-                      "waiver_priority": 12
-                    },
-                    [],
-                    {
-                      "number_of_moves": 21
-                    },
-                    {
-                      "number_of_trades": 0
-                    },
-                    {
-                      "roster_adds": {
-                        "coverage_type": "week",
-                        "coverage_value": 8,
-                        "value": "5"
-                      }
-                    },
-                    [],
-                    {
-                      "league_scoring_type": "head"
-                    },
-                    [],
-                    [],
-                    {
-                      "has_draft_grade": 1,
-                      "draft_grade": "D",
-                      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/103926/2/draftrecap"
-                    },
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    {
-                      "managers": [
-                        {
-                          "manager": {
-                            "manager_id": "2",
-                            "nickname": "James",
-                            "guid": "GRUG7ZPORRYMU5XOQKFAPXUQBI",
-                            "image_url": "https://s.yimg.com/ag/images/default_user_profile_pic_64sq.jpg",
-                            "felo_score": "791",
-                            "felo_tier": "gold"
-                          }
-                        }
-                      ]
-                    }
-                  ],
-                  {
-                    "team_points": {
-                      "coverage_type": "season",
-                      "season": "2025",
-                      "total": "800.00"
+                      "total": "925.98"
                     }
                   },
                   {
@@ -661,16 +661,16 @@
                       "playoff_seed": "6",
                       "outcome_totals": {
                         "wins": "4",
-                        "losses": "3",
+                        "losses": "4",
                         "ties": 0,
-                        "percentage": ".571"
+                        "percentage": ".500"
                       },
                       "streak": {
-                        "type": "win",
+                        "type": "loss",
                         "value": "2"
                       },
-                      "points_for": "800.00",
-                      "points_against": 805.6999999999999
+                      "points_for": "925.98",
+                      "points_against": 940.1799999999998
                     }
                   }
                 ]
@@ -718,8 +718,8 @@
                     {
                       "roster_adds": {
                         "coverage_type": "week",
-                        "coverage_value": 8,
-                        "value": "2"
+                        "coverage_value": 9,
+                        "value": "0"
                       }
                     },
                     [],
@@ -757,7 +757,7 @@
                     "team_points": {
                       "coverage_type": "season",
                       "season": "2025",
-                      "total": "744.84"
+                      "total": "848.26"
                     }
                   },
                   {
@@ -766,16 +766,16 @@
                       "playoff_seed": "7",
                       "outcome_totals": {
                         "wins": "4",
-                        "losses": "3",
+                        "losses": "4",
                         "ties": 0,
-                        "percentage": ".571"
+                        "percentage": ".500"
                       },
                       "streak": {
                         "type": "loss",
-                        "value": "2"
+                        "value": "3"
                       },
-                      "points_for": "744.84",
-                      "points_against": 774.48
+                      "points_for": "848.26",
+                      "points_against": 907.1
                     }
                   }
                 ]
@@ -823,7 +823,7 @@
                     {
                       "roster_adds": {
                         "coverage_type": "week",
-                        "coverage_value": 8,
+                        "coverage_value": 9,
                         "value": "0"
                       }
                     },
@@ -862,7 +862,7 @@
                     "team_points": {
                       "coverage_type": "season",
                       "season": "2025",
-                      "total": "801.00"
+                      "total": "935.42"
                     }
                   },
                   {
@@ -871,16 +871,16 @@
                       "playoff_seed": "8",
                       "outcome_totals": {
                         "wins": "3",
-                        "losses": "4",
+                        "losses": "5",
                         "ties": 0,
-                        "percentage": ".429"
+                        "percentage": ".375"
                       },
                       "streak": {
                         "type": "loss",
-                        "value": "1"
+                        "value": "2"
                       },
-                      "points_for": "801.00",
-                      "points_against": 734.0799999999999
+                      "points_for": "935.42",
+                      "points_against": 890.4999999999999
                     }
                   }
                 ]
@@ -928,7 +928,7 @@
                     {
                       "roster_adds": {
                         "coverage_type": "week",
-                        "coverage_value": 8,
+                        "coverage_value": 9,
                         "value": "0"
                       }
                     },
@@ -967,7 +967,7 @@
                     "team_points": {
                       "coverage_type": "season",
                       "season": "2025",
-                      "total": "766.84"
+                      "total": "877.32"
                     }
                   },
                   {
@@ -976,21 +976,124 @@
                       "playoff_seed": "9",
                       "outcome_totals": {
                         "wins": "3",
-                        "losses": "4",
+                        "losses": "5",
                         "ties": 0,
-                        "percentage": ".429"
+                        "percentage": ".375"
                       },
                       "streak": {
-                        "type": "win",
+                        "type": "loss",
                         "value": "1"
                       },
-                      "points_for": "766.84",
-                      "points_against": 806.6
+                      "points_for": "877.32",
+                      "points_against": 927.28
                     }
                   }
                 ]
               },
               "9": {
+                "team": [
+                  [
+                    {
+                      "team_key": "461.l.103926.t.12"
+                    },
+                    {
+                      "team_id": "12"
+                    },
+                    {
+                      "name": "New Jersey Giants"
+                    },
+                    [],
+                    {
+                      "url": "https://football.fantasysports.yahoo.com/f1/103926/12"
+                    },
+                    {
+                      "team_logos": [
+                        {
+                          "team_logo": {
+                            "size": "large",
+                            "url": "https://yahoofantasysports-res.cloudinary.com/image/upload/t_s192sq/fantasy-logos/6bf8c745f3ef1a5ee03fe7a08c2189e28174e6e6b8c29e3dbeb17f395a20adf2.jpg"
+                          }
+                        }
+                      ]
+                    },
+                    [],
+                    [],
+                    {
+                      "waiver_priority": 10
+                    },
+                    [],
+                    {
+                      "number_of_moves": 16
+                    },
+                    {
+                      "number_of_trades": 0
+                    },
+                    {
+                      "roster_adds": {
+                        "coverage_type": "week",
+                        "coverage_value": 9,
+                        "value": "0"
+                      }
+                    },
+                    [],
+                    {
+                      "league_scoring_type": "head"
+                    },
+                    [],
+                    [],
+                    {
+                      "has_draft_grade": 1,
+                      "draft_grade": "C",
+                      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/103926/12/draftrecap"
+                    },
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    {
+                      "managers": [
+                        {
+                          "manager": {
+                            "manager_id": "12",
+                            "nickname": "Jack Donoghue",
+                            "guid": "PFZHJ2JGZQB4EYA3SOVRAVVSSU",
+                            "image_url": "https://s.yimg.com/ag/images/default_user_profile_pic_64sq.jpg",
+                            "felo_score": "591",
+                            "felo_tier": "bronze"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  {
+                    "team_points": {
+                      "coverage_type": "season",
+                      "season": "2025",
+                      "total": "851.52"
+                    }
+                  },
+                  {
+                    "team_standings": {
+                      "rank": "10",
+                      "playoff_seed": "10",
+                      "outcome_totals": {
+                        "wins": "3",
+                        "losses": "5",
+                        "ties": 0,
+                        "percentage": ".375"
+                      },
+                      "streak": {
+                        "type": "win",
+                        "value": "2"
+                      },
+                      "points_for": "851.52",
+                      "points_against": 928.3399999999999
+                    }
+                  }
+                ]
+              },
+              "10": {
                 "team": [
                   [
                     {
@@ -1033,7 +1136,7 @@
                     {
                       "roster_adds": {
                         "coverage_type": "week",
-                        "coverage_value": 8,
+                        "coverage_value": 9,
                         "value": "0"
                       }
                     },
@@ -1072,110 +1175,7 @@
                     "team_points": {
                       "coverage_type": "season",
                       "season": "2025",
-                      "total": "690.94"
-                    }
-                  },
-                  {
-                    "team_standings": {
-                      "rank": "10",
-                      "playoff_seed": "10",
-                      "outcome_totals": {
-                        "wins": "3",
-                        "losses": "4",
-                        "ties": 0,
-                        "percentage": ".429"
-                      },
-                      "streak": {
-                        "type": "loss",
-                        "value": "1"
-                      },
-                      "points_for": "690.94",
-                      "points_against": 738.3199999999999
-                    }
-                  }
-                ]
-              },
-              "10": {
-                "team": [
-                  [
-                    {
-                      "team_key": "461.l.103926.t.12"
-                    },
-                    {
-                      "team_id": "12"
-                    },
-                    {
-                      "name": "New Jersey Giants"
-                    },
-                    [],
-                    {
-                      "url": "https://football.fantasysports.yahoo.com/f1/103926/12"
-                    },
-                    {
-                      "team_logos": [
-                        {
-                          "team_logo": {
-                            "size": "large",
-                            "url": "https://yahoofantasysports-res.cloudinary.com/image/upload/t_s192sq/fantasy-logos/6bf8c745f3ef1a5ee03fe7a08c2189e28174e6e6b8c29e3dbeb17f395a20adf2.jpg"
-                          }
-                        }
-                      ]
-                    },
-                    [],
-                    [],
-                    {
-                      "waiver_priority": 10
-                    },
-                    [],
-                    {
-                      "number_of_moves": 16
-                    },
-                    {
-                      "number_of_trades": 0
-                    },
-                    {
-                      "roster_adds": {
-                        "coverage_type": "week",
-                        "coverage_value": 8,
-                        "value": "4"
-                      }
-                    },
-                    [],
-                    {
-                      "league_scoring_type": "head"
-                    },
-                    [],
-                    [],
-                    {
-                      "has_draft_grade": 1,
-                      "draft_grade": "C",
-                      "draft_recap_url": "https://football.fantasysports.yahoo.com/f1/103926/12/draftrecap"
-                    },
-                    [],
-                    [],
-                    [],
-                    [],
-                    [],
-                    {
-                      "managers": [
-                        {
-                          "manager": {
-                            "manager_id": "12",
-                            "nickname": "Jack Donoghue",
-                            "guid": "PFZHJ2JGZQB4EYA3SOVRAVVSSU",
-                            "image_url": "https://s.yimg.com/ag/images/default_user_profile_pic_64sq.jpg",
-                            "felo_score": "591",
-                            "felo_tier": "bronze"
-                          }
-                        }
-                      ]
-                    }
-                  ],
-                  {
-                    "team_points": {
-                      "coverage_type": "season",
-                      "season": "2025",
-                      "total": "730.84"
+                      "total": "745.52"
                     }
                   },
                   {
@@ -1183,17 +1183,17 @@
                       "rank": "11",
                       "playoff_seed": "11",
                       "outcome_totals": {
-                        "wins": "2",
+                        "wins": "3",
                         "losses": "5",
                         "ties": 0,
-                        "percentage": ".286"
+                        "percentage": ".375"
                       },
                       "streak": {
-                        "type": "win",
-                        "value": "1"
+                        "type": "loss",
+                        "value": "2"
                       },
-                      "points_for": "730.84",
-                      "points_against": 817.8599999999999
+                      "points_for": "745.52",
+                      "points_against": 847.1999999999999
                     }
                   }
                 ]
@@ -1241,8 +1241,8 @@
                     {
                       "roster_adds": {
                         "coverage_type": "week",
-                        "coverage_value": 8,
-                        "value": "2"
+                        "coverage_value": 9,
+                        "value": "0"
                       }
                     },
                     [],
@@ -1280,7 +1280,7 @@
                     "team_points": {
                       "coverage_type": "season",
                       "season": "2025",
-                      "total": "706.32"
+                      "total": "816.38"
                     }
                   },
                   {
@@ -1288,17 +1288,17 @@
                       "rank": "12",
                       "playoff_seed": "12",
                       "outcome_totals": {
-                        "wins": "1",
+                        "wins": "2",
                         "losses": "6",
                         "ties": 0,
-                        "percentage": ".143"
+                        "percentage": ".250"
                       },
                       "streak": {
-                        "type": "loss",
-                        "value": "3"
+                        "type": "win",
+                        "value": "1"
                       },
-                      "points_for": "706.32",
-                      "points_against": 781.16
+                      "points_for": "816.38",
+                      "points_against": 890.02
                     }
                   }
                 ]
@@ -1309,7 +1309,7 @@
         ]
       }
     ],
-    "time": "148.80895614624ms",
+    "time": "136.11602783203ms",
     "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
     "refresh_rate": "60"
   }
