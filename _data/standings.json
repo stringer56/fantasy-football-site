@@ -15,7 +15,7 @@
         "edit_key": "9",
         "weekly_deadline": "",
         "roster_type": "week",
-        "league_update_timestamp": "1761894037",
+        "league_update_timestamp": "1761979747",
         "scoring_type": "head",
         "league_type": "private",
         "renew": "449_761310",
@@ -706,7 +706,7 @@
                     },
                     [],
                     {
-                      "waiver_priority": 12
+                      "waiver_priority": 11
                     },
                     [],
                     {
@@ -811,7 +811,7 @@
                     },
                     [],
                     {
-                      "waiver_priority": 11
+                      "waiver_priority": 10
                     },
                     [],
                     {
@@ -1229,11 +1229,11 @@
                     },
                     [],
                     {
-                      "waiver_priority": 10
+                      "waiver_priority": 12
                     },
                     [],
                     {
-                      "number_of_moves": 11
+                      "number_of_moves": 12
                     },
                     {
                       "number_of_trades": 0
@@ -1242,7 +1242,7 @@
                       "roster_adds": {
                         "coverage_type": "week",
                         "coverage_value": 9,
-                        "value": "1"
+                        "value": "2"
                       }
                     },
                     [],
@@ -1309,7 +1309,7 @@
         ]
       }
     ],
-    "time": "162.72497177124ms",
+    "time": "149.60193634033ms",
     "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
     "refresh_rate": "60"
   }
