@@ -15,14 +15,14 @@
         "edit_key": "11",
         "weekly_deadline": "",
         "roster_type": "week",
-        "league_update_timestamp": "1762847429",
+        "league_update_timestamp": "1762933867",
         "scoring_type": "head",
         "league_type": "private",
         "renew": "449_761310",
         "renewed": "",
         "felo_tier": "silver",
         "is_highscore": false,
-        "matchup_week": 10,
+        "matchup_week": 11,
         "iris_group_chat_id": "",
         "short_invitation_url": "https://football.fantasysports.yahoo.com/f1/103926/invitation?key=3248553a944acf57&ikey=04a5f4c26a2a8f72",
         "allow_add_to_dl_extra_pos": 1,
@@ -154,7 +154,7 @@
                 },
                 [],
                 {
-                  "waiver_priority": 10
+                  "waiver_priority": 8
                 },
                 [],
                 {
@@ -314,11 +314,11 @@
                 },
                 [],
                 {
-                  "waiver_priority": 11
+                  "waiver_priority": 12
                 },
                 [],
                 {
-                  "number_of_moves": 14
+                  "number_of_moves": 15
                 },
                 {
                   "number_of_trades": 0
@@ -327,7 +327,7 @@
                   "roster_adds": {
                     "coverage_type": "week",
                     "coverage_value": 11,
-                    "value": "0"
+                    "value": "1"
                   }
                 },
                 [],
@@ -634,11 +634,11 @@
                 },
                 [],
                 {
-                  "waiver_priority": 8
+                  "waiver_priority": 10
                 },
                 [],
                 {
-                  "number_of_moves": 5
+                  "number_of_moves": 6
                 },
                 {
                   "number_of_trades": 0
@@ -647,7 +647,7 @@
                   "roster_adds": {
                     "coverage_type": "week",
                     "coverage_value": 11,
-                    "value": "0"
+                    "value": "1"
                   }
                 },
                 [],
@@ -794,7 +794,7 @@
                 },
                 [],
                 {
-                  "waiver_priority": 12
+                  "waiver_priority": 9
                 },
                 [],
                 {
@@ -874,11 +874,11 @@
                 },
                 [],
                 {
-                  "waiver_priority": 9
+                  "waiver_priority": 11
                 },
                 [],
                 {
-                  "number_of_moves": 13
+                  "number_of_moves": 14
                 },
                 {
                   "number_of_trades": 0
@@ -887,7 +887,7 @@
                   "roster_adds": {
                     "coverage_type": "week",
                     "coverage_value": 11,
-                    "value": "0"
+                    "value": "1"
                   }
                 },
                 [],
@@ -1005,7 +1005,7 @@
         }
       }
     ],
-    "time": "111.42301559448ms",
+    "time": "76.74503326416ms",
     "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
     "refresh_rate": "60"
   }
