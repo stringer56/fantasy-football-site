@@ -158,7 +158,7 @@
                 },
                 [],
                 {
-                  "number_of_moves": 26
+                  "number_of_moves": 27
                 },
                 {
                   "number_of_trades": 0
@@ -167,7 +167,7 @@
                   "roster_adds": {
                     "coverage_type": "week",
                     "coverage_value": 11,
-                    "value": "0"
+                    "value": "1"
                   }
                 },
                 [],
@@ -638,7 +638,7 @@
                 },
                 [],
                 {
-                  "number_of_moves": 6
+                  "number_of_moves": 7
                 },
                 {
                   "number_of_trades": 0
@@ -647,7 +647,7 @@
                   "roster_adds": {
                     "coverage_type": "week",
                     "coverage_value": 11,
-                    "value": "1"
+                    "value": "2"
                   }
                 },
                 [],
@@ -1005,7 +1005,7 @@
         }
       }
     ],
-    "time": "79.595804214478ms",
+    "time": "105.21483421326ms",
     "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
     "refresh_rate": "60"
   }
