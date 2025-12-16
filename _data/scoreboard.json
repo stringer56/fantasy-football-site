@@ -346,11 +346,11 @@
                             }
                           ],
                           {
-                            "win_probability": 0.99,
+                            "win_probability": 1,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "15",
-                              "total": "155.92"
+                              "total": "159.92"
                             },
                             "team_projected_points": {
                               "coverage_type": "week",
@@ -441,11 +441,11 @@
                             }
                           ],
                           {
-                            "win_probability": 0.010000000000000009,
+                            "win_probability": 0,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "15",
-                              "total": "82.94"
+                              "total": "86.84"
                             },
                             "team_projected_points": {
                               "coverage_type": "week",
@@ -754,11 +754,11 @@
                             }
                           ],
                           {
-                            "win_probability": 0.37,
+                            "win_probability": 1,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "15",
-                              "total": "72.90"
+                              "total": "83.20"
                             },
                             "team_projected_points": {
                               "coverage_type": "week",
@@ -847,7 +847,7 @@
                             }
                           ],
                           {
-                            "win_probability": 0.63,
+                            "win_probability": 0,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "15",
@@ -1162,11 +1162,11 @@
                             }
                           ],
                           {
-                            "win_probability": 0.5700000000000001,
+                            "win_probability": 1,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "15",
-                              "total": "85.56"
+                              "total": "90.66"
                             },
                             "team_projected_points": {
                               "coverage_type": "week",
@@ -1255,11 +1255,11 @@
                             }
                           ],
                           {
-                            "win_probability": 0.42999999999999994,
+                            "win_probability": 0,
                             "team_points": {
                               "coverage_type": "week",
                               "week": "15",
-                              "total": "80.50"
+                              "total": "88.70"
                             },
                             "team_projected_points": {
                               "coverage_type": "week",
@@ -1280,7 +1280,7 @@
         }
       }
     ],
-    "time": "186.19394302368ms",
+    "time": "218.64199638367ms",
     "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
     "refresh_rate": "60"
   }
