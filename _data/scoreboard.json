@@ -15,7 +15,7 @@
         "edit_key": "16",
         "weekly_deadline": "",
         "roster_type": "week",
-        "league_update_timestamp": "1766389667",
+        "league_update_timestamp": "1766476122",
         "scoring_type": "head",
         "league_type": "private",
         "renew": "449_761310",
@@ -28,18 +28,19 @@
         "allow_add_to_dl_extra_pos": 1,
         "is_pro_league": "0",
         "is_cash_league": "0",
-        "current_week": 16,
+        "current_week": "16",
         "start_week": "1",
         "start_date": "2025-09-04",
         "end_week": "16",
         "end_date": "2025-12-22",
+        "is_finished": 1,
         "is_plus_league": "0",
         "game_code": "nfl",
         "season": "2025"
       },
       {
         "scoreboard": {
-          "week": 16,
+          "week": "16",
           "0": {
             "matchups": {
               "0": {
@@ -47,11 +48,29 @@
                   "week": "16",
                   "week_start": "2025-12-16",
                   "week_end": "2025-12-22",
-                  "status": "midevent",
+                  "status": "postevent",
                   "is_playoffs": "1",
                   "is_consolation": "0",
                   "is_matchup_of_the_week": "0",
-                  "is_matchup_recap_available": 0,
+                  "is_matchup_recap_available": 1,
+                  "matchup_recap_url": "https://football.fantasysports.yahoo.com/f1/103926/recap?week=16&mid1=2&mid2=6",
+                  "matchup_recap_title": "Greendale Human Beings Steals the Show, Albany Kneelers Gets a D+ for Drama!",
+                  "matchup_grades": [
+                    {
+                      "matchup_grade": {
+                        "team_key": "461.l.103926.t.2",
+                        "grade": "D+"
+                      }
+                    },
+                    {
+                      "matchup_grade": {
+                        "team_key": "461.l.103926.t.6",
+                        "grade": "C+"
+                      }
+                    }
+                  ],
+                  "is_tied": 0,
+                  "winner_team_key": "461.l.103926.t.6",
                   "0": {
                     "teams": {
                       "0": {
@@ -97,8 +116,8 @@
                             {
                               "roster_adds": {
                                 "coverage_type": "week",
-                                "coverage_value": 16,
-                                "value": "1"
+                                "coverage_value": 17,
+                                "value": "0"
                               }
                             },
                             {
@@ -192,8 +211,8 @@
                             {
                               "roster_adds": {
                                 "coverage_type": "week",
-                                "coverage_value": 16,
-                                "value": "1"
+                                "coverage_value": 17,
+                                "value": "0"
                               }
                             },
                             {
@@ -254,11 +273,29 @@
                   "week": "16",
                   "week_start": "2025-12-16",
                   "week_end": "2025-12-22",
-                  "status": "midevent",
+                  "status": "postevent",
                   "is_playoffs": "1",
                   "is_consolation": "0",
                   "is_matchup_of_the_week": "0",
-                  "is_matchup_recap_available": 0,
+                  "is_matchup_recap_available": 1,
+                  "matchup_recap_url": "https://football.fantasysports.yahoo.com/f1/103926/recap?week=16&mid1=3&mid2=12",
+                  "matchup_recap_title": "Ayahuasca Rush Soars to Victory While New Jersey Giants Crashes and Burns!",
+                  "matchup_grades": [
+                    {
+                      "matchup_grade": {
+                        "team_key": "461.l.103926.t.3",
+                        "grade": "A+"
+                      }
+                    },
+                    {
+                      "matchup_grade": {
+                        "team_key": "461.l.103926.t.12",
+                        "grade": "D+"
+                      }
+                    }
+                  ],
+                  "is_tied": 0,
+                  "winner_team_key": "461.l.103926.t.3",
                   "0": {
                     "teams": {
                       "0": {
@@ -304,7 +341,7 @@
                             {
                               "roster_adds": {
                                 "coverage_type": "week",
-                                "coverage_value": 16,
+                                "coverage_value": 17,
                                 "value": "0"
                               }
                             },
@@ -397,7 +434,7 @@
                             {
                               "roster_adds": {
                                 "coverage_type": "week",
-                                "coverage_value": 16,
+                                "coverage_value": 17,
                                 "value": "0"
                               }
                             },
@@ -459,11 +496,29 @@
                   "week": "16",
                   "week_start": "2025-12-16",
                   "week_end": "2025-12-22",
-                  "status": "midevent",
+                  "status": "postevent",
                   "is_playoffs": "1",
                   "is_consolation": "1",
                   "is_matchup_of_the_week": "0",
-                  "is_matchup_recap_available": 0,
+                  "is_matchup_recap_available": 1,
+                  "matchup_recap_url": "https://football.fantasysports.yahoo.com/f1/103926/recap?week=16&mid1=4&mid2=11",
+                  "matchup_recap_title": "Buffalo Bravados Gives Vegas Vandals a Lesson in Fantasy Football 101!",
+                  "matchup_grades": [
+                    {
+                      "matchup_grade": {
+                        "team_key": "461.l.103926.t.4",
+                        "grade": "A-"
+                      }
+                    },
+                    {
+                      "matchup_grade": {
+                        "team_key": "461.l.103926.t.11",
+                        "grade": "D"
+                      }
+                    }
+                  ],
+                  "is_tied": 0,
+                  "winner_team_key": "461.l.103926.t.4",
                   "0": {
                     "teams": {
                       "0": {
@@ -509,7 +564,7 @@
                             {
                               "roster_adds": {
                                 "coverage_type": "week",
-                                "coverage_value": 16,
+                                "coverage_value": 17,
                                 "value": "0"
                               }
                             },
@@ -602,7 +657,7 @@
                             {
                               "roster_adds": {
                                 "coverage_type": "week",
-                                "coverage_value": 16,
+                                "coverage_value": 17,
                                 "value": "0"
                               }
                             },
@@ -662,11 +717,29 @@
                   "week": "16",
                   "week_start": "2025-12-16",
                   "week_end": "2025-12-22",
-                  "status": "midevent",
+                  "status": "postevent",
                   "is_playoffs": "1",
                   "is_consolation": "1",
                   "is_matchup_of_the_week": "0",
-                  "is_matchup_recap_available": 0,
+                  "is_matchup_recap_available": 1,
+                  "matchup_recap_url": "https://football.fantasysports.yahoo.com/f1/103926/recap?week=16&mid1=8&mid2=9",
+                  "matchup_recap_title": "North town Ninnyhammers Dances on The Baseball Furies's Grave: A 110-52 Beatdown!",
+                  "matchup_grades": [
+                    {
+                      "matchup_grade": {
+                        "team_key": "461.l.103926.t.8",
+                        "grade": "A-"
+                      }
+                    },
+                    {
+                      "matchup_grade": {
+                        "team_key": "461.l.103926.t.9",
+                        "grade": "D"
+                      }
+                    }
+                  ],
+                  "is_tied": 0,
+                  "winner_team_key": "461.l.103926.t.8",
                   "0": {
                     "teams": {
                       "0": {
@@ -712,7 +785,7 @@
                             {
                               "roster_adds": {
                                 "coverage_type": "week",
-                                "coverage_value": 16,
+                                "coverage_value": 17,
                                 "value": "0"
                               }
                             },
@@ -805,7 +878,7 @@
                             {
                               "roster_adds": {
                                 "coverage_type": "week",
-                                "coverage_value": 16,
+                                "coverage_value": 17,
                                 "value": "0"
                               }
                             },
@@ -866,7 +939,7 @@
         }
       }
     ],
-    "time": "194.60606575012ms",
+    "time": "155.31516075134ms",
     "copyright": "Certain Data by Sportradar, Stats Perform and Rotowire",
     "refresh_rate": "60"
   }
