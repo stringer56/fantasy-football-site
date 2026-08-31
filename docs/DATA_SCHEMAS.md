@@ -28,7 +28,7 @@ intentional `2026 Draft Date TBA` state.
 
 ### `owners.yml`
 
-Each future `owners` entry uses:
+Each `owners` entry uses:
 
 - `owner_id`: stable lowercase ID.
 - `display_name`: approved public name.
@@ -37,20 +37,28 @@ Each future `owners` entry uses:
 
 ### `franchises.yml`
 
-Each future `franchises` entry uses:
+Each `franchises` entry uses:
 
 - `franchise_id` and `slug`: stable lowercase identifiers.
 - `name`, `short_name`, `status`, and `aliases`.
 - `owner_ids`: references to `owners.yml`.
 - `founded_season` and optional `retired_season`.
-- `yahoo`: season-to-team ID/key mappings.
-- `branding`, `profile`, and `rival_franchise_ids`.
+- `yahoo.team_keys`, `yahoo.team_ids`, and `yahoo.team_names`: maps keyed by season.
+- `branding`: local identity/venue/honors paths and accessible alt text.
+- `profile`: approved public summary, venue facts, honors, rivals, slogan, and fight-song title.
+- `rival_franchise_ids`: canonical internal relationship references.
+- `source`: public source URL and verification date.
 
 Team names and Yahoo team keys are mutable and must never replace
 `franchise_id` as the historical join key.
 
 `retired_franchises.yml` contains only canonical `franchise_id` references. It
 does not duplicate franchise facts.
+
+The `_franchises` collection contains route documents that reference one
+`franchise_id`; the reusable layout resolves all public content from canonical
+data. See [Franchise Migration](FRANCHISE_MIGRATION.md) for mapping provenance,
+editorial decisions, and unresolved fields.
 
 ### Historical data
 

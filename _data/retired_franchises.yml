@@ -1,3 +1,5 @@
 schema_version: 1
 # Entries reference canonical franchise_id values from franchises.yml.
-retired_franchise_ids: []
+retired_franchise_ids:
+  - quahog-stripes
+  - savage-huns

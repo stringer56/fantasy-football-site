@@ -69,7 +69,12 @@ def main() -> None:
 
     errors: list[str] = []
     pages = sorted(SITE_DIR.rglob("*.html"))
-    for route in EXPECTED_ROUTES:
+    franchise_data = yaml.safe_load((ROOT / "_data" / "franchises.yml").read_text(encoding="utf-8"))
+    franchise_routes = tuple(
+        f"/{'retired' if franchise['status'] == 'retired' else 'teams'}/{franchise['slug']}/"
+        for franchise in franchise_data["franchises"]
+    )
+    for route in EXPECTED_ROUTES + franchise_routes:
         if not route_target(route).is_file():
             errors.append(f"missing expected route: {route}")
 
@@ -91,6 +96,18 @@ def main() -> None:
                 )
 
     home = (SITE_DIR / "index.html").read_text(encoding="utf-8")
+    teams_page = route_target("/teams/").read_text(encoding="utf-8")
+    retired_page = route_target("/retired/").read_text(encoding="utf-8")
+    if teams_page.count('class="franchise-card"') != 12:
+        errors.append("teams directory must render exactly 12 active franchise cards")
+    if retired_page.count('class="retired-card"') != 2:
+        errors.append("retired directory must render exactly 2 retired franchise cards")
+    for franchise in franchise_data["franchises"]:
+        route = f"/{'retired' if franchise['status'] == 'retired' else 'teams'}/{franchise['slug']}/"
+        profile = route_target(route).read_text(encoding="utf-8")
+        for expected in (franchise["name"], "Team information", "Home turf", "Migration record"):
+            if expected not in profile:
+                errors.append(f"franchise profile {route} is missing: {expected}")
     site_data = yaml.safe_load((ROOT / "_data" / "site.yml").read_text(encoding="utf-8"))
     manifest = json.loads((ROOT / "_data" / "generated" / "manifest.json").read_text(encoding="utf-8"))
     data_is_current = manifest.get("status") == "ready" and manifest.get("season") == site_data.get("current_season")
@@ -104,7 +121,7 @@ def main() -> None:
 
     if errors:
         raise SystemExit("Built site validation failed:\n- " + "\n- ".join(errors))
-    print(f"Validated {len(pages)} rendered pages, expected routes, links, landmarks, and homepage state")
+    print(f"Validated {len(pages)} rendered pages, franchise routes, links, landmarks, and homepage state")
 
 
 if __name__ == "__main__":
