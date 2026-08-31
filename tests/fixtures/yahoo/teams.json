@@ -1,0 +1,24 @@
+{
+  "fantasy_content": {
+    "league": [
+      {"league_key": "999.l.26455", "league_id": "26455", "season": "2026"},
+      {
+        "teams": {
+          "0": {"team": [[{"team_key": "999.l.26455.t.1"}, {"team_id": "1"}, {"name": "Fixture Team 01"}, {"team_logos": [{"team_logo": {"size": "large", "url": "https://example.invalid/team-01.png"}}]}, {"waiver_priority": 1}, {"number_of_moves": 2}, {"number_of_trades": 0}, {"managers": [{"manager": {"nickname": "Manager 01"}}]}]]},
+          "1": {"team": [[{"team_key": "999.l.26455.t.2"}, {"team_id": "2"}, {"name": "Fixture Team 02"}, {"waiver_priority": 2}, {"number_of_moves": 4}, {"number_of_trades": 1}, {"managers": [{"manager": {"nickname": "Manager 02"}}]}]]},
+          "2": {"team": [[{"team_key": "999.l.26455.t.3"}, {"team_id": "3"}, {"name": "Fixture Team 03"}]]},
+          "3": {"team": [[{"team_key": "999.l.26455.t.4"}, {"team_id": "4"}, {"name": "Fixture Team 04"}]]},
+          "4": {"team": [[{"team_key": "999.l.26455.t.5"}, {"team_id": "5"}, {"name": "Fixture Team 05"}]]},
+          "5": {"team": [[{"team_key": "999.l.26455.t.6"}, {"team_id": "6"}, {"name": "Fixture Team 06"}]]},
+          "6": {"team": [[{"team_key": "999.l.26455.t.7"}, {"team_id": "7"}, {"name": "Fixture Team 07"}]]},
+          "7": {"team": [[{"team_key": "999.l.26455.t.8"}, {"team_id": "8"}, {"name": "Fixture Team 08"}]]},
+          "8": {"team": [[{"team_key": "999.l.26455.t.9"}, {"team_id": "9"}, {"name": "Fixture Team 09"}]]},
+          "9": {"team": [[{"team_key": "999.l.26455.t.10"}, {"team_id": "10"}, {"name": "Fixture Team 10"}]]},
+          "10": {"team": [[{"team_key": "999.l.26455.t.11"}, {"team_id": "11"}, {"name": "Fixture Team 11"}]]},
+          "11": {"team": [[{"team_key": "999.l.26455.t.12"}, {"team_id": "12"}, {"name": "Fixture Team 12"}]]},
+          "count": 12
+        }
+      }
+    ]
+  }
+}

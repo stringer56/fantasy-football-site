@@ -1,0 +1,9 @@
+_site/
+.bundle/
+vendor/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example

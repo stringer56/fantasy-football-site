@@ -1,0 +1,44 @@
+{
+  "fantasy_content": {
+    "league": [
+      {"league_key": "999.l.26455", "league_id": "26455", "season": "2026", "matchup_week": 1},
+      {
+        "scoreboard": {
+          "week": "1",
+          "0": {
+            "matchups": {
+              "0": {
+                "matchup": {
+                  "week": "1",
+                  "status": "postevent",
+                  "is_playoffs": "0",
+                  "is_consolation": 0,
+                  "is_tied": 0,
+                  "winner_team_key": "999.l.26455.t.1",
+                  "0": {
+                    "teams": {
+                      "0": {
+                        "team": [
+                          [{"team_key": "999.l.26455.t.1"}, {"team_id": "1"}, {"name": "Fixture Team 01"}],
+                          {"team_points": {"total": "125.50"}, "team_projected_points": {"total": "121.25"}}
+                        ]
+                      },
+                      "1": {
+                        "team": [
+                          [{"team_key": "999.l.26455.t.2"}, {"team_id": "2"}, {"name": "Fixture Team 02"}],
+                          {"team_points": {"total": 118.75}, "team_projected_points": {"total": "119.00"}}
+                        ]
+                      },
+                      "count": 2
+                    }
+                  }
+                }
+              },
+              "count": 1
+            }
+          }
+        }
+      }
+    ]
+  }
+}

@@ -20,85 +20,89 @@ title: Home
       {% endfor %}
     </div>
   {% else %}
-    <div style="padding:10px;">Waiting for _data/news.json…</div>
+    <div style="padding:10px;">League news is being updated.</div>
   {% endif %}
 </div>
 
-<div class="grid">
+{% assign generated = site.data.generated %}
+{% assign current_season = site.data.site.current_season %}
+{% assign generated_season = generated.manifest.season %}
+{% assign data_is_current = false %}
+{% if generated_season == current_season %}
+  {% assign data_is_current = true %}
+{% endif %}
+{% assign standings_data = generated.standings %}
+{% assign matchups_data = generated.matchups %}
+{% assign rosters_data = generated.rosters %}
 
+<div class="grid">
   <div class="card">
     <h2>Standings</h2>
-    {% if site.data.standings_simple %}
+    {% if data_is_current and standings_data and standings_data.standings and standings_data.standings.size > 0 %}
     <table class="table">
       <thead><tr><th>#</th><th>Team</th><th>W</th><th>L</th><th>T</th><th>PF</th><th>PA</th></tr></thead>
       <tbody>
-        {% for t in site.data.standings_simple %}
+        {% for team in standings_data.standings %}
         <tr>
-          <td>{{ forloop.index }}</td>
-          <td>{{ t.team }}</td>
-          <td>{{ t.wins }}</td>
-          <td>{{ t.losses }}</td>
-          <td>{{ t.ties }}</td>
-          <td>{{ t.points_for }}</td>
-          <td>{{ t.points_against }}</td>
+          <td>{{ team.rank | default: forloop.index }}</td>
+          <td>{{ team.team_name }}</td>
+          <td>{{ team.wins }}</td>
+          <td>{{ team.losses }}</td>
+          <td>{{ team.ties }}</td>
+          <td>{{ team.points_for | round: 2 }}</td>
+          <td>{{ team.points_against | round: 2 }}</td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
     {% else %}
-      <p><em>Waiting for _data/standings_simple.json…</em></p>
+      <p><em>League data is being updated.</em></p>
     {% endif %}
   </div>
 
   <div class="card">
     <h2>This Week’s Matchups</h2>
-    {% assign sb = site.data.scoreboard_simple %}
-    {% assign ro = site.data.rosters_simple %}
-    {% if sb and sb.matchups and sb.matchups.size > 0 %}
-      <p>Week {{ sb.week | default: '?' }}</p>
+    {% if data_is_current and matchups_data and matchups_data.matchups and matchups_data.matchups.size > 0 %}
+      <p>Week {{ matchups_data.week | default: '?' }}</p>
       <ul>
-      {% for m in sb.matchups %}
+      {% for matchup in matchups_data.matchups %}
+        {% assign team_a = matchup.teams[0] %}
+        {% assign team_b = matchup.teams[1] %}
         <li style="margin-bottom:10px;">
-          <strong>{{ m.team_a }}</strong> ({{ m.points_a | default: 0 }})
+          <strong>{{ team_a.team_name }}</strong> ({{ team_a.score | default: '—' }})
           &nbsp;vs&nbsp;
-          <strong>{{ m.team_b }}</strong> ({{ m.points_b | default: 0 }})
+          <strong>{{ team_b.team_name }}</strong> ({{ team_b.score | default: '—' }})
 
-          {% assign teamA = m.team_a %}
-          {% assign rosterA = ro.teams | where: 'team', teamA | first %}
-          {% if rosterA %}
-          <details style="margin-top:6px;">
-            <summary>Show {{ teamA }} roster</summary>
-            <ul>
-              {% for p in rosterA.players %}
-                <li>{{ p.position | default: "—" }} — {{ p.name }}</li>
-              {% endfor %}
-            </ul>
-          </details>
-          {% endif %}
+          {% if rosters_data and rosters_data.teams %}
+            {% assign roster_a = rosters_data.teams | where: 'team_key', team_a.team_key | first %}
+            {% if roster_a and roster_a.players and roster_a.players.size > 0 %}
+            <details style="margin-top:6px;">
+              <summary>Show {{ team_a.team_name }} roster</summary>
+              <ul>
+                {% for player in roster_a.players %}
+                  <li>{{ player.selected_position | default: player.primary_position | default: "—" }} — {{ player.player_name }}</li>
+                {% endfor %}
+              </ul>
+            </details>
+            {% endif %}
 
-          {% assign teamB = m.team_b %}
-          {% assign rosterB = ro.teams | where: 'team', teamB | first %}
-          {% if rosterB %}
-          <details style="margin-top:6px;">
-            <summary>Show {{ teamB }} roster</summary>
-            <ul>
-              {% for p in rosterB.players %}
-                <li>{{ p.position | default: "—" }} — {{ p.name }}</li>
-              {% endfor %}
-            </ul>
-          </details>
+            {% assign roster_b = rosters_data.teams | where: 'team_key', team_b.team_key | first %}
+            {% if roster_b and roster_b.players and roster_b.players.size > 0 %}
+            <details style="margin-top:6px;">
+              <summary>Show {{ team_b.team_name }} roster</summary>
+              <ul>
+                {% for player in roster_b.players %}
+                  <li>{{ player.selected_position | default: player.primary_position | default: "—" }} — {{ player.player_name }}</li>
+                {% endfor %}
+              </ul>
+            </details>
+            {% endif %}
           {% endif %}
         </li>
       {% endfor %}
       </ul>
     {% else %}
-      <p><em>Waiting for _data/scoreboard_simple.json and _data/rosters_simple.json…</em></p>
+      <p><em>League data is being updated.</em></p>
     {% endif %}
   </div>
-
-  <div class="card">
-    <h2>League Meta</h2>
-    <pre>{{ site.data.league_meta | jsonify | escape }}</pre>
-  </div>
-
 </div>

@@ -1,0 +1,44 @@
+{
+  "fantasy_content": {
+    "league": [
+      {"league_key": "999.l.26455", "league_id": "26455", "season": "2026"},
+      {
+        "standings": [
+          {
+            "teams": {
+              "0": {
+                "team": [
+                  [{"team_key": "999.l.26455.t.1"}, {"team_id": "1"}, {"name": "Fixture Team 01"}],
+                  {
+                    "team_standings": {
+                      "rank": 1,
+                      "playoff_seed": "1",
+                      "outcome_totals": {"wins": "2", "losses": "0", "ties": 0, "percentage": "1.000"},
+                      "streak": {"type": "win", "value": "2"},
+                      "points_for": "250.75",
+                      "points_against": 180.5
+                    }
+                  }
+                ]
+              },
+              "1": {
+                "team": [
+                  [{"team_key": "999.l.26455.t.2"}, {"team_id": "2"}, {"name": "Fixture Team 02"}],
+                  {
+                    "team_standings": {
+                      "rank": "2",
+                      "outcome_totals": {"wins": 1, "losses": 1, "ties": "0", "percentage": ".500"},
+                      "points_for": 199.25,
+                      "points_against": "201.00"
+                    }
+                  }
+                ]
+              },
+              "count": 2
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

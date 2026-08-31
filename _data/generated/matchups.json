@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "week": 16,
+  "matchups": [
+    {
+      "week": 16,
+      "status": "postevent",
+      "is_playoffs": true,
+      "is_consolation": false,
+      "is_tied": false,
+      "winner_team_key": "461.l.103926.t.6",
+      "teams": [
+        {
+          "team_key": "461.l.103926.t.2",
+          "team_id": 2,
+          "team_name": "Albany Kneelers",
+          "score": 106.72,
+          "projected_score": 126.96
+        },
+        {
+          "team_key": "461.l.103926.t.6",
+          "team_id": 6,
+          "team_name": "Greendale Human Beings",
+          "score": 107.12,
+          "projected_score": 136.27
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "status": "postevent",
+      "is_playoffs": true,
+      "is_consolation": false,
+      "is_tied": false,
+      "winner_team_key": "461.l.103926.t.3",
+      "teams": [
+        {
+          "team_key": "461.l.103926.t.3",
+          "team_id": 3,
+          "team_name": "Ayahuasca Rush",
+          "score": 144.58,
+          "projected_score": 97.87
+        },
+        {
+          "team_key": "461.l.103926.t.12",
+          "team_id": 12,
+          "team_name": "New Jersey Giants",
+          "score": 103.26,
+          "projected_score": 105.2
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "status": "postevent",
+      "is_playoffs": true,
+      "is_consolation": true,
+      "is_tied": false,
+      "winner_team_key": "461.l.103926.t.4",
+      "teams": [
+        {
+          "team_key": "461.l.103926.t.4",
+          "team_id": 4,
+          "team_name": "Buffalo Bravados",
+          "score": 114.0,
+          "projected_score": 119.49
+        },
+        {
+          "team_key": "461.l.103926.t.11",
+          "team_id": 11,
+          "team_name": "Vegas Vandals",
+          "score": 86.3,
+          "projected_score": 112.75
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "status": "postevent",
+      "is_playoffs": true,
+      "is_consolation": true,
+      "is_tied": false,
+      "winner_team_key": "461.l.103926.t.8",
+      "teams": [
+        {
+          "team_key": "461.l.103926.t.8",
+          "team_id": 8,
+          "team_name": "North town Ninnyhammers",
+          "score": 110.3,
+          "projected_score": 108.79
+        },
+        {
+          "team_key": "461.l.103926.t.9",
+          "team_id": 9,
+          "team_name": "The Baseball Furies",
+          "score": 52.7,
+          "projected_score": 69.04
+        }
+      ]
+    }
+  ]
+}
