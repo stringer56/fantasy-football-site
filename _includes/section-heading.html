@@ -1,0 +1,10 @@
+<div class="section-heading">
+  <div>
+    {% if include.eyebrow %}<p class="eyebrow eyebrow--dark">{{ include.eyebrow }}</p>{% endif %}
+    <h2{% if include.id %} id="{{ include.id }}"{% endif %}>{{ include.title }}</h2>
+    {% if include.description %}<p>{{ include.description }}</p>{% endif %}
+  </div>
+  {% if include.href and include.link_text %}
+    <a class="text-link" href="{{ include.href | relative_url }}">{{ include.link_text }} <span aria-hidden="true">→</span></a>
+  {% endif %}
+</div>

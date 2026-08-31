@@ -21,6 +21,15 @@ offline normalization/news tests, hardens the scheduled workflow, adds a
 pull-request validation workflow, and introduces empty human-maintained schema
 scaffolds. No credential values or invented historical records were added.
 
+## Milestone 3 implementation update
+
+Milestone 3 establishes the custom navy-and-gold visual system, accessible
+global navigation, responsive layout rules, reusable page components, a
+data-driven homepage, and polished shells for the final site map. It moves the
+visual foundation ahead of content migration so franchise, season, and archive
+work can reuse stable presentation patterns. Historical facts and official
+league artwork remain intentionally deferred until verified.
+
 ## Audit method and scope limitation
 
 The local working directory contained only `.git` and `AGENTS.md`; it did not contain a checked-out copy of the website. The repository audit was therefore performed against the public `main` branch through GitHub's read-only repository interface. The public Google Site, live GitHub Pages site, public Yahoo league page, and recent public GitHub Actions metadata were also inspected read-only.
@@ -654,35 +663,36 @@ Milestone 2 exit criteria:
 - A preview or branch build confirms the GitHub Pages base URL still works.
 - Any live 2026 Action run is performed only after the repository administrator separately confirms the correct `LEAGUE_KEY` secret; code must not reveal or replace it.
 
-### Milestone 3 — Franchise content and asset migration
+### Milestone 3 — Visual design system and homepage overhaul
+
+- Establish the navy-and-gold sports-publication design system.
+- Add the accessible global shell, responsive navigation, footer, and reusable components.
+- Build the data-driven homepage, current-season empty states, and all primary page shells.
+- Validate desktop, tablet, and mobile rendering before content migration.
+
+### Milestone 4 — Franchise content and asset migration
 
 - Import owners/franchises, stable IDs, aliases, 12 active franchises, and 2 retired franchises.
 - Export and optimize approved logos, helmets, stadium images, and title media.
 - Add franchise collection/layout and active/retired indexes.
 - Complete editorial and accessibility review.
 
-### Milestone 4 — Seasons, playoffs, drafts, and Cup history
+### Milestone 5 — Seasons, playoffs, drafts, and Cup history
 
 - Transcribe and verify 2021–2024 standings, champions, brackets, title games, and draft history.
 - Import recaps and Cup origin material.
 - Add reusable season, bracket, championship, and draft templates.
 
-### Milestone 5 — Records and derived statistics
+### Milestone 6 — Records and derived statistics
 
 - Build deterministic aggregation scripts from normalized season data.
 - Add career, season, game, playoff, margin, streak, and bench-miss records.
 - Record provenance and verification state for legacy facts.
 
-### Milestone 6 — Community features
+### Milestone 7 — Community features
 
 - Add static poll presentation, power rankings, matchup picks, and picks leaderboard.
 - Select a free external/manual collection workflow and document moderation and result-import procedures.
-
-### Milestone 7 — Full visual system and responsive overhaul
-
-- Implement the navy/gold sports-media design system.
-- Upgrade navigation, cards, tables, brackets, team branding, responsive behavior, and accessibility.
-- Keep content/data templates stable while presentation changes.
 
 ### Milestone 8 — Launch validation and migration closure
 

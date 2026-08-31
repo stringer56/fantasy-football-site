@@ -1,0 +1,8 @@
+<div class="empty-state">
+  <span class="empty-state__mark" aria-hidden="true">RTG</span>
+  <div>
+    <h3>{{ include.title }}</h3>
+    <p>{{ include.description }}</p>
+    {% if include.href and include.link_text %}<a class="text-link" href="{{ include.href | relative_url }}">{{ include.link_text }} <span aria-hidden="true">→</span></a>{% endif %}
+  </div>
+</div>

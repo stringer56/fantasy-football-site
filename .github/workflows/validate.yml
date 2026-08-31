@@ -50,3 +50,13 @@ jobs:
 
       - name: Build Jekyll site
         run: bundle exec jekyll build
+
+      - name: Validate rendered site
+        run: python scripts/validate_built_site.py
+
+      - name: Upload rendered site preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: rendered-site
+          path: _site
+          retention-days: 3
