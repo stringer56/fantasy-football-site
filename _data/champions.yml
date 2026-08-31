@@ -1,2 +1,46 @@
 schema_version: 1
-champions: []
+champions:
+  - year: 2024
+    champion_franchise_id: turnbull-acs
+    champion_display_name: Turnbull AC's
+    runner_up_franchise_id: crazy-wazs-team
+    runner_up_display_name: Chris's Crazy Team
+    champion_score: 148.18
+    runner_up_score: 140.98
+    bracket_path: /assets/img/history/2024/playoff-bracket.jpg
+    season_path: /history/2024/
+    source_url: https://sites.google.com/view/road-to-glory-ffl/league-history/championship-game-matchups/2024-championship-game-recap
+    verified_on: 2026-08-31
+  - year: 2023
+    champion_franchise_id: greendale-human-beings
+    champion_display_name: Greendale Human Beings
+    runner_up_franchise_id: albany-kneelers
+    runner_up_display_name: Albany Kneelers
+    champion_score: 132.82
+    runner_up_score: 132.74
+    bracket_path: /assets/img/history/2023/playoff-bracket.jpg
+    season_path: /history/2023/
+    source_url: https://sites.google.com/view/road-to-glory-ffl/league-history/championship-game-matchups/2023-championship-game-recap
+    verified_on: 2026-08-31
+  - year: 2022
+    champion_franchise_id: ayahuasca-rush
+    champion_display_name: Ayahuasca Rush
+    runner_up_franchise_id: turnbull-acs
+    runner_up_display_name: Turnbull AC's
+    champion_score: 115.20
+    runner_up_score: 69.16
+    bracket_path: /assets/img/history/2022/playoff-bracket.jpg
+    season_path: /history/2022/
+    source_url: https://sites.google.com/view/road-to-glory-ffl/league-history/championship-game-matchups/2022-championship-game-recap
+    verified_on: 2026-08-31
+  - year: 2021
+    champion_franchise_id: albany-kneelers
+    champion_display_name: Albany Kneelers
+    runner_up_franchise_id: savage-huns
+    runner_up_display_name: Savage Huns
+    champion_score: 121.50
+    runner_up_score: 118.70
+    bracket_path: /assets/img/history/2021/playoff-bracket.jpg
+    season_path: /history/2021/
+    source_url: https://sites.google.com/view/road-to-glory-ffl/league-history/championship-game-matchups/2021-championship-game-recap
+    verified_on: 2026-08-31

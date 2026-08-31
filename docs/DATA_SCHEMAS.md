@@ -62,16 +62,24 @@ editorial decisions, and unresolved fields.
 
 ### Historical data
 
-- `champions.yml`: season, champion/runner-up franchise IDs, verified record,
-  championship score, and recap path.
-- `seasons.yml`: season metadata and source verification state.
-- `playoffs.yml`: season, rounds, matchups, scores, winners, and source state.
+- `champions.yml`: one verified title result per season with champion and
+  runner-up franchise IDs/display names, final score, bracket path, season route,
+  public source URL, and verification date.
+- `seasons.yml`: completed-season metadata, source URLs, local source assets,
+  champion references, and ordered final standings. Each standings row keeps the
+  source-season display name plus a stable `franchise_id` when verified; unresolved
+  identities use `null`, never `0` or a guessed join.
+- `playoffs.yml`: one record per season with a local bracket and structured games.
+  Games include a stable game ID, actual source round, order, seeds, display names,
+  optional franchise IDs, nullable scores, winner, and a source note. Unpublished
+  scores remain `null`; a third-place or consolation game is absent unless sourced.
 - `drafts.yml`: season, order, picks, recap metadata, and source state.
 - `records.yml`: typed record definitions and ranked entries with provenance.
 - `votes.yml`: poll metadata, options, static result snapshots, and timestamps.
 
-Empty arrays are intentional. Historical values will be added only after they
-are transcribed and verified during later migration milestones.
+Unmigrated domains retain empty arrays. Season, champion, and playoff values are
+published only after transcription and source verification; see
+[History Migration](HISTORY_MIGRATION.md) for provenance and unresolved joins.
 
 ## Generated public JSON
 

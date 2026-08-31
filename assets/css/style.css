@@ -381,6 +381,87 @@ a:hover { color: var(--navy-900); }
 .franchise-source-card p:not(.eyebrow) { color: var(--slate-600); }
 .profile-back-nav { padding-block: var(--space-6); border-top: 1px solid var(--slate-200); background: var(--white); }
 
+/* League history */
+.history-intro { display: flex; align-items: end; justify-content: space-between; gap: var(--space-6); margin-bottom: var(--space-7); }
+.history-intro h2 { max-width: 42rem; margin: 0; color: var(--navy-900); font-family: var(--font-display); font-size: clamp(2.8rem, 5vw, 5rem); line-height: .93; text-transform: uppercase; }
+.history-intro p:not(.eyebrow) { max-width: 46rem; color: var(--slate-600); }
+.season-archive-grid { display: grid; gap: var(--space-6); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.season-archive-card { display: grid; min-width: 0; overflow: hidden; border: 1px solid var(--slate-200); background: var(--white); grid-template-columns: minmax(11rem, .75fr) minmax(0, 1.25fr); box-shadow: var(--shadow-sm); }
+.season-archive-card__image { display: block; min-height: 22rem; background: var(--slate-100); }
+.season-archive-card__image img { width: 100%; height: 100%; object-fit: cover; }
+.season-archive-card__body { display: flex; min-width: 0; flex-direction: column; justify-content: center; padding: clamp(1.4rem, 3vw, 2.5rem); }
+.season-archive-card h2 { margin: 0; font-family: var(--font-display); font-size: clamp(2rem, 3vw, 3rem); line-height: .96; text-transform: uppercase; }
+.season-archive-card h2 a { color: var(--navy-900); text-decoration: none; }
+.season-archive-card__body > p:not(.eyebrow) { color: var(--slate-600); }
+.season-archive-card__body > div { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); margin-top: auto; padding-top: var(--space-5); border-top: 1px solid var(--slate-200); }
+.season-archive-card__body > div > span { color: var(--slate-600); font-size: .68rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.champion-roll { display: grid; gap: var(--space-3); }
+.champion-roll article { display: grid; align-items: center; gap: var(--space-5); padding: var(--space-5); border-left: 4px solid var(--gold-500); background: var(--white); grid-template-columns: 5rem minmax(0, 1fr) auto; box-shadow: var(--shadow-sm); }
+.champion-roll article > span { color: var(--navy-900); font-family: var(--font-display); font-size: 2rem; }
+.champion-roll h3, .champion-roll p { margin: 0; }
+.champion-roll h3 { color: var(--navy-900); font-size: 1.05rem; }
+.champion-roll p { margin-top: var(--space-1); color: var(--slate-600); font-size: .82rem; }
+.season-hero { position: relative; isolation: isolate; overflow: hidden; background: radial-gradient(circle at 82% 20%, rgba(235, 196, 95, .15), transparent 25rem), linear-gradient(115deg, var(--navy-950), var(--navy-800)); color: var(--white); }
+.season-hero::before { position: absolute; z-index: -1; top: 50%; left: -4vw; color: rgba(255, 255, 255, .025); content: attr(data-year); font-family: var(--font-display); font-size: 30vw; line-height: 0; }
+.season-hero__grid { display: grid; min-height: 42rem; align-items: center; gap: clamp(2rem, 7vw, 7rem); grid-template-columns: minmax(0, 1.15fr) minmax(18rem, .65fr); padding-block: clamp(4rem, 8vw, 7rem); }
+.season-hero__year { margin: 0 0 var(--space-3); color: var(--gold-300); font-family: var(--font-display); font-size: clamp(3rem, 7vw, 6rem); line-height: .8; }
+.season-hero h1 { max-width: 52rem; margin: 0; font-family: var(--font-display); font-size: clamp(3.5rem, 8vw, 7.5rem); line-height: .86; text-transform: uppercase; }
+.season-hero__lede { max-width: 42rem; margin: var(--space-5) 0 0; color: var(--slate-200); font-size: clamp(1rem, 1.6vw, 1.2rem); }
+.season-hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
+.season-hero__identity { position: relative; overflow: hidden; width: min(100%, 32rem); aspect-ratio: 1; justify-self: end; margin: 0; border: 1px solid rgba(235, 196, 95, .55); background: var(--white); box-shadow: var(--shadow-dark); }
+.season-hero__identity img { width: 100%; height: 100%; object-fit: cover; }
+.season-hero__identity figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: var(--space-4); background: rgba(5, 13, 24, .9); color: var(--gold-300); font-size: .65rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+.season-subnav { position: sticky; z-index: 5; top: 0; border-bottom: 1px solid var(--slate-200); background: rgba(255, 255, 255, .96); box-shadow: var(--shadow-sm); }
+.season-subnav .wrap { display: flex; overflow-x: auto; gap: var(--space-5); }
+.season-subnav a { display: inline-flex; min-height: 3.4rem; align-items: center; border-bottom: 3px solid transparent; color: var(--navy-800); font-size: .7rem; font-weight: 900; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; white-space: nowrap; }
+.season-subnav a:hover { border-color: var(--gold-500); }
+.season-section { scroll-margin-top: 4rem; }
+.season-section--tint { padding-block: clamp(3.5rem, 7vw, 6rem); background: var(--slate-100); }
+.season-section--dark { padding-block: clamp(3.5rem, 7vw, 6rem); background: var(--navy-900); color: var(--white); }
+.season-story { max-width: 58rem; }
+.season-story > p, .season-section__intro { max-width: 52rem; color: var(--slate-600); font-size: 1.05rem; }
+.section-heading--light h2 { color: var(--white); }
+.section-note { color: var(--slate-600); font-size: .74rem; font-weight: 800; }
+.history-table-scroll { overflow-x: auto; border: 1px solid var(--slate-300); background: var(--white); box-shadow: var(--shadow-sm); }
+.table-scroll-note { display: none; margin: 0 0 var(--space-3); color: var(--slate-600); font-size: .72rem; font-weight: 750; }
+.history-table { width: 100%; border-collapse: collapse; color: var(--navy-900); font-variant-numeric: tabular-nums; }
+.history-table th, .history-table td { padding: .9rem 1rem; border-bottom: 1px solid var(--slate-200); text-align: right; white-space: nowrap; }
+.history-table th:nth-child(2), .history-table td:nth-child(2) { text-align: left; }
+.history-table thead { background: var(--navy-900); color: var(--white); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
+.history-table tbody tr:last-child th, .history-table tbody tr:last-child td { border-bottom: 0; }
+.history-table tbody tr.is-champion { background: rgba(235, 196, 95, .18); }
+.history-table tbody a { color: var(--navy-800); font-weight: 850; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+.unresolved-label { display: inline-block; margin-left: var(--space-2); padding: .15rem .35rem; background: var(--slate-200); color: var(--slate-600); font-size: .55rem; letter-spacing: .08em; text-transform: uppercase; }
+.source-capture { margin-top: var(--space-4); border: 1px solid var(--slate-300); background: var(--white); }
+.source-capture summary { padding: var(--space-4); color: var(--navy-800); cursor: pointer; font-size: .75rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+.source-capture a, .source-capture img { display: block; }
+.source-capture img { width: min(100%, 60rem); margin: 0 auto; }
+.bracket-frame { display: block; overflow: hidden; border: 1px solid var(--slate-300); background: var(--white); box-shadow: var(--shadow-md); }
+.bracket-frame img { display: block; width: 100%; height: auto; transition: transform .25s ease; }
+.bracket-frame:hover img { transform: scale(1.01); }
+.playoff-results { display: grid; gap: var(--space-4); grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.playoff-result { padding: var(--space-4); border: 1px solid rgba(255, 255, 255, .15); background: var(--navy-850); }
+.playoff-result--final { border-color: var(--gold-500); background: linear-gradient(140deg, rgba(235, 196, 95, .12), var(--navy-850)); }
+.playoff-result__top { display: flex; justify-content: space-between; margin-bottom: var(--space-3); color: var(--gold-300); font-size: .6rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.playoff-result__team { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding: .75rem 0; border-top: 1px solid rgba(255, 255, 255, .1); color: var(--slate-300); }
+.playoff-result__team span { display: flex; align-items: center; gap: var(--space-2); }
+.playoff-result__team small { color: var(--slate-500); font-weight: 900; }
+.playoff-result__team.is-winner { color: var(--white); font-weight: 850; }
+.playoff-result__team.is-winner strong { color: var(--gold-300); }
+.playoff-result > p { margin: var(--space-3) 0 0; color: var(--slate-500); font-size: .68rem; }
+.championship-feature { display: grid; align-items: center; gap: clamp(2rem, 6vw, 6rem); grid-template-columns: minmax(18rem, .75fr) minmax(0, 1.25fr); }
+.championship-feature__copy h2 { margin: 0; color: var(--navy-900); font-family: var(--font-display); font-size: clamp(2.6rem, 5vw, 4.8rem); line-height: .95; text-transform: uppercase; }
+.championship-feature__copy p:not(.eyebrow) { color: var(--slate-600); }
+.championship-feature__media { display: grid; align-items: stretch; gap: var(--space-4); grid-template-columns: minmax(11rem, .65fr) minmax(0, 1.35fr); }
+.championship-feature__media a { display: block; overflow: hidden; min-height: 28rem; border: 1px solid var(--slate-300); background: var(--slate-100); box-shadow: var(--shadow-sm); }
+.championship-feature__media img { width: 100%; height: 100%; object-fit: cover; }
+.championship-feature__media a:last-child img { object-fit: contain; background: var(--white); }
+.team-recap-grid { display: grid; gap: var(--space-3); grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.team-recap-grid article { min-width: 0; padding: var(--space-4); border-top: 3px solid var(--gold-500); background: var(--white); box-shadow: var(--shadow-sm); }
+.team-recap-grid span { color: var(--slate-600); font-size: .62rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.team-recap-grid h3 { margin: var(--space-2) 0; color: var(--navy-900); font-size: .95rem; }
+.team-recap-grid p { margin: 0; color: var(--slate-600); font-size: .78rem; }
+
 /* Footer */
 .site-footer { border-top: 3px solid var(--gold-500); background: var(--navy-950); color: var(--slate-300); }
 .site-footer__grid { display: grid; min-height: 14rem; align-items: center; gap: var(--space-6); grid-template-columns: minmax(0, 1.2fr) auto auto; padding-block: var(--space-6); }
@@ -402,6 +483,9 @@ a:hover { color: var(--navy-900); }
   .retired-grid { grid-template-columns: 1fr; }
   .franchise-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .franchise-source-card { min-height: auto; grid-column: 1 / -1; }
+  .season-archive-grid { grid-template-columns: 1fr; }
+  .playoff-results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .championship-feature { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 900px) {
@@ -427,6 +511,9 @@ a:hover { color: var(--navy-900); }
   .franchise-hero__grid { min-height: auto; grid-template-columns: 1fr; }
   .franchise-identity { width: min(78vw, 28rem); justify-self: start; }
   .franchise-story-grid { grid-template-columns: 1fr; }
+  .season-hero__grid { min-height: auto; grid-template-columns: 1fr; }
+  .season-hero__identity { width: min(75vw, 28rem); justify-self: start; }
+  .team-recap-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 768px) {
@@ -444,6 +531,8 @@ a:hover { color: var(--navy-900); }
   .team-directory-intro { align-items: start; flex-direction: column; }
   .retired-card { grid-template-columns: minmax(11rem, .65fr) minmax(0, 1fr); }
   .retired-card__image { min-height: 22rem; }
+  .history-intro { align-items: start; flex-direction: column; }
+  .championship-feature__media { grid-template-columns: 1fr 1.6fr; }
 }
 
 @media (max-width: 560px) {
@@ -475,6 +564,17 @@ a:hover { color: var(--navy-900); }
   .franchise-facts dl div { gap: var(--space-3); grid-template-columns: 7.25rem minmax(0, 1fr); }
   .venue-feature, .honors-feature { min-height: 20rem; }
   .franchise-source-card { grid-column: auto; }
+  .season-archive-card { grid-template-columns: 1fr; }
+  .season-archive-card__image { min-height: auto; aspect-ratio: 1.25; }
+  .playoff-results, .team-recap-grid { grid-template-columns: 1fr; }
+  .championship-feature__media { grid-template-columns: 1fr; }
+  .championship-feature__media a { min-height: auto; }
+  .championship-feature__media img { height: auto; }
+  .champion-roll article { align-items: start; grid-template-columns: 4rem minmax(0, 1fr); }
+  .champion-roll .text-link { grid-column: 2; }
+  .season-hero h1 { font-size: clamp(3rem, 16vw, 5.2rem); }
+  .season-hero__identity { width: 100%; }
+  .table-scroll-note { display: block; }
 }
 
 @media (prefers-reduced-motion: reduce) {

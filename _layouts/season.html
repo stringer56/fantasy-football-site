@@ -1,0 +1,107 @@
+---
+layout: default
+---
+{% assign season = site.data.seasons.seasons | where: "year", page.year | first %}
+{% assign championship = site.data.champions.champions | where: "year", page.year | first %}
+{% assign playoff = site.data.playoffs.playoffs | where: "season", page.year | first %}
+{% assign champion = site.data.franchises.franchises | where: "franchise_id", season.champion_franchise_id | first %}
+
+<article class="season-page">
+  <header class="season-hero" data-year="{{ season.year }}">
+    <div class="wrap season-hero__grid">
+      <div>
+        <p class="eyebrow">Road to Glory archive</p>
+        <p class="season-hero__year">{{ season.year }}</p>
+        <h1>{{ season.champion_display_name }}</h1>
+        <p class="season-hero__lede">League champions after a {{ championship.champion_score }}–{{ championship.runner_up_score }} title-game victory over {{ championship.runner_up_display_name }}.</p>
+        <div class="season-hero__actions">
+          <a class="button button--gold" href="#standings">Final standings</a>
+          <a class="button button--outline-light" href="#playoffs">Playoff run</a>
+        </div>
+      </div>
+      <figure class="season-hero__identity">
+        <img src="{{ champion.branding.identity_image | relative_url }}" alt="{{ champion.branding.identity_alt }}">
+        <figcaption>{{ season.year }} Brew Crew Cup champion</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <nav class="season-subnav" aria-label="Season page sections">
+    <div class="wrap">
+      <a href="#standings">Standings</a><a href="#bracket">Bracket</a><a href="#playoffs">Results</a><a href="#championship">Championship</a><a href="#teams">Teams</a>
+    </div>
+  </nav>
+
+  <section class="shell-content season-section season-story" aria-labelledby="story-heading">
+    <div class="section-heading">
+      <div><p class="eyebrow">Season story</p><h2 id="story-heading">A verified record, without invented color</h2></div>
+    </div>
+    <p>The public archive verifies the final standings, playoff field, advancing teams, champion, runner-up, and championship score. It does not include a written season narrative, so this page keeps the record factual until commissioner-approved recap copy is available.</p>
+  </section>
+
+  <section class="season-section season-section--tint" id="standings" aria-labelledby="standings-heading">
+    <div class="shell-content">
+      <div class="section-heading">
+        <div><p class="eyebrow">Final table</p><h2 id="standings-heading">{{ season.year }} Standings</h2></div>
+        <a class="text-link" href="{{ season.standings_asset | relative_url }}">View source capture <span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="table-scroll-note" id="standings-scroll-note">Swipe the table to see the complete record and point totals.</p>
+      <div class="history-table-scroll" role="region" aria-label="{{ season.year }} final standings" aria-describedby="standings-scroll-note" tabindex="0">
+        <table class="history-table">
+          <thead><tr><th scope="col">Rank</th><th scope="col">Team</th><th scope="col">W–L–T</th>{% if season.year == 2021 %}<th scope="col">Division</th>{% endif %}<th scope="col">PF</th><th scope="col">PA</th></tr></thead>
+          <tbody>
+            {% for row in season.standings %}
+              {% assign franchise = site.data.franchises.franchises | where: "franchise_id", row.franchise_id | first %}
+              <tr{% if row.franchise_id == season.champion_franchise_id %} class="is-champion"{% endif %}>
+                <td data-label="Rank"><strong>{{ row.rank }}</strong></td>
+                <th scope="row" data-label="Team">{% if franchise %}{% if franchise.status == 'retired' %}<a href="{{ '/retired/' | append: franchise.slug | append: '/' | relative_url }}">{% else %}<a href="{{ '/teams/' | append: franchise.slug | append: '/' | relative_url }}">{% endif %}{{ row.team_name }}</a>{% else %}{{ row.team_name }} <span class="unresolved-label">Unmapped</span>{% endif %}</th>
+                <td data-label="W–L–T">{{ row.wins }}–{{ row.losses }}–{{ row.ties }}</td>
+                {% if season.year == 2021 %}<td data-label="Division">{{ row.division_wins }}–{{ row.division_losses }}–{{ row.division_ties }}</td>{% endif %}
+                <td data-label="PF">{{ row.points_for }}</td><td data-label="PA">{{ row.points_against }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <details class="source-capture"><summary>Compare the original standings capture</summary><a href="{{ season.standings_asset | relative_url }}"><img src="{{ season.standings_asset | relative_url }}" alt="Original {{ season.year }} final standings capture"></a></details>
+    </div>
+  </section>
+
+  <section class="shell-content season-section" id="bracket" aria-labelledby="bracket-heading">
+    <div class="section-heading"><div><p class="eyebrow">The road to the Cup</p><h2 id="bracket-heading">Playoff Bracket</h2></div><span class="section-note">Select to view full size</span></div>
+    <a class="bracket-frame" href="{{ season.bracket_asset | relative_url }}"><img src="{{ season.bracket_asset | relative_url }}" alt="{{ season.year }} Road to Glory FFL playoff bracket"></a>
+  </section>
+
+  <section class="season-section season-section--dark" id="playoffs" aria-labelledby="playoffs-heading">
+    <div class="shell-content">
+      <div class="section-heading section-heading--light"><div><p class="eyebrow">Game by game</p><h2 id="playoffs-heading">Playoff Results</h2></div></div>
+      <div class="playoff-results">
+        {% for game in playoff.games %}
+          <article class="playoff-result{% if game.round == 'Championship' %} playoff-result--final{% endif %}">
+            <div class="playoff-result__top"><span>{{ game.round }}</span><span>Game {{ game.order }}</span></div>
+            <div class="playoff-result__team{% if game.winner_display_name == game.team_one_display_name %} is-winner{% endif %}"><span><small>#{{ game.team_one_seed }}</small>{{ game.team_one_display_name }}</span><strong>{% if game.team_one_score != nil %}{{ game.team_one_score }}{% else %}—{% endif %}</strong></div>
+            <div class="playoff-result__team{% if game.winner_display_name == game.team_two_display_name %} is-winner{% endif %}"><span><small>#{{ game.team_two_seed }}</small>{{ game.team_two_display_name }}</span><strong>{% if game.team_two_score != nil %}{{ game.team_two_score }}{% else %}—{% endif %}</strong></div>
+            {% if game.team_one_score == nil %}<p>Winner verified from bracket; score not published.</p>{% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="shell-content season-section" id="championship" aria-labelledby="championship-heading">
+    <div class="championship-feature">
+      <div class="championship-feature__copy"><p class="eyebrow">Championship recap</p><h2 id="championship-heading">{{ championship.champion_display_name }} {{ championship.champion_score }}, {{ championship.runner_up_display_name }} {{ championship.runner_up_score }}</h2><p>{{ championship.champion_display_name }} captured the {{ season.year }} Brew Crew Cup. The public archive supplies the matchup result and source images, but no written game recap; the verified final is preserved here without added play-by-play.</p><a class="text-link" href="{{ championship.source_url }}" target="_blank" rel="noopener">Open original recap page <span aria-hidden="true">↗</span></a></div>
+      <div class="championship-feature__media"><a href="{{ season.championship_portrait_asset | relative_url }}"><img src="{{ season.championship_portrait_asset | relative_url }}" alt="{{ championship.champion_display_name }} championship artwork"></a><a href="{{ season.championship_matchup_asset | relative_url }}"><img src="{{ season.championship_matchup_asset | relative_url }}" alt="Original {{ season.year }} championship matchup capture"></a></div>
+    </div>
+  </section>
+
+  <section class="season-section season-section--tint" id="teams" aria-labelledby="teams-heading">
+    <div class="shell-content">
+      <div class="section-heading"><div><p class="eyebrow">Team by team</p><h2 id="teams-heading">Season Recap Index</h2></div></div>
+      <p class="season-section__intro">The public source does not contain individual team recap copy. These verified finish cards establish the structure for commissioner-approved recaps without fabricating summaries.</p>
+      <div class="team-recap-grid">{% for row in season.standings %}<article><span>Finished {{ row.rank }}</span><h3>{{ row.team_name }}</h3><p>{{ row.wins }}–{{ row.losses }}–{{ row.ties }} · {{ row.points_for }} PF</p></article>{% endfor %}</div>
+    </div>
+  </section>
+
+  <nav class="profile-back-nav"><div class="wrap"><a class="text-link" href="{{ '/history/' | relative_url }}"><span aria-hidden="true">←</span> Back to League History</a></div></nav>
+</article>

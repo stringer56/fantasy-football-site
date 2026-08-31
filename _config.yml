@@ -9,9 +9,17 @@ collections:
   franchises:
     output: true
     permalink: /teams/:slug/
+  seasons:
+    output: true
+    permalink: /history/:name/
 defaults:
   - scope:
       path: ""
       type: franchises
     values:
       layout: franchise
+  - scope:
+      path: ""
+      type: seasons
+    values:
+      layout: season
