@@ -1,2 +1,80 @@
 schema_version: 1
-owners: []
+owners:
+  - owner_id: james-beast
+    display_name: James "Beast"
+    aliases: [James]
+    active: true
+    joined_season:
+    departed_season:
+  - owner_id: mccall
+    display_name: McCall
+    aliases: []
+    active: true
+    joined_season:
+    departed_season:
+  - owner_id: forrest-f
+    display_name: Forrest F.
+    aliases: []
+    active: true
+    joined_season:
+    departed_season:
+  - owner_id: nate
+    display_name: Nate "Dogg"
+    aliases: [Nate]
+    active: true
+    joined_season:
+    departed_season:
+  - owner_id: waz
+    display_name: Waz
+    aliases: []
+    active: true
+    joined_season:
+    departed_season:
+  - owner_id: ryan-d
+    display_name: Ryan D.
+    aliases: [Ryan]
+    active: true
+    joined_season:
+    departed_season:
+  - owner_id: finn-d
+    display_name: Finn D.
+    aliases: [Finn]
+    active: true
+    joined_season:
+    departed_season:
+  - owner_id: jack-d
+    display_name: Jack D.
+    aliases: [Jack Donoghue]
+    active: true
+    joined_season:
+    departed_season:
+  - owner_id: tj
+    display_name: TJ
+    aliases: [Tj]
+    active: true
+    joined_season:
+    departed_season:
+  - owner_id: terry
+    display_name: Terry
+    aliases: [Connor Terry]
+    active: true
+    joined_season:
+    departed_season:
+  - owner_id: joe
+    display_name: Joe
+    aliases: [Joseph C]
+    active: true
+    joined_season:
+    departed_season:
+  - owner_id: coles
+    display_name: Coles
+    aliases: []
+    active: true
+    joined_season:
+    departed_season:
+  - owner_id: teal-f
+    display_name: Teal F.
+    aliases: [Teal Flanagin]
+    active: false
+    joined_season:
+    departed_season:

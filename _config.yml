@@ -5,3 +5,13 @@ url: "https://stringer56.github.io"
 baseurl: "/fantasy-football-site"
 lang: en
 timezone: America/New_York
+collections:
+  franchises:
+    output: true
+    permalink: /teams/:slug/
+defaults:
+  - scope:
+      path: ""
+      type: franchises
+    values:
+      layout: franchise

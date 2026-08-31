@@ -1,2 +1,499 @@
 schema_version: 1
-franchises: []
+franchises:
+  - franchise_id: albany-kneelers
+    slug: albany-kneelers
+    name: Albany Kneelers
+    short_name: Kneelers
+    status: active
+    aliases: []
+    owner_ids: [james-beast]
+    founded_season:
+    retired_season:
+    yahoo:
+      team_keys: {"2025": 461.l.103926.t.2}
+      team_ids: {"2025": 2}
+      team_names: {"2025": Albany Kneelers}
+    branding:
+      identity_image: /assets/img/franchises/albany-kneelers/identity.jpg
+      identity_alt: Black Albany Kneelers football helmet with the team seal
+      venue_image: /assets/img/franchises/albany-kneelers/venue.jpg
+      venue_alt: James R. Dick Green Field, home of the Albany Kneelers
+      honors_image: /assets/img/franchises/albany-kneelers/honors.jpg
+      honors_alt: Albany Kneelers 2021 championship artwork
+    profile:
+      summary: >-
+        Albany's “Never Stand | Always Kneel” motto sets the tone for a team led
+        by James “Beast.” The league profile casts him as a progressive coach
+        who prizes diversity training and always finds a way to come out on top.
+      location: Albany, New York
+      home_field: James R. Dick Green Field
+      capacity: "500"
+      championship_seasons: [2021]
+      rivals: [Philadelphia Eagles, Ithaca Bombers, Vegas Vandals]
+      slogan: "We Beat Big Pharma!"
+      fight_song: Corn Pop
+    rival_franchise_ids: [vegas-vandals]
+    source:
+      google_site_url: https://sites.google.com/view/road-to-glory-ffl/teams/albany-kneelers
+      verified_on: 2026-08-31
+
+  - franchise_id: ayahuasca-rush
+    slug: ayahuasca-rush
+    name: Ayahuasca Rush
+    short_name: Rush
+    status: active
+    aliases: []
+    owner_ids: [mccall]
+    founded_season:
+    retired_season:
+    yahoo:
+      team_keys: {"2025": 461.l.103926.t.3}
+      team_ids: {"2025": 3}
+      team_names: {"2025": Ayahuasca Rush}
+    branding:
+      identity_image: /assets/img/franchises/ayahuasca-rush/identity.jpg
+      identity_alt: White Ayahuasca Rush football helmet with a green leaf emblem
+      venue_image: /assets/img/franchises/ayahuasca-rush/venue.jpg
+      venue_alt: Lambo Field, home of the Ayahuasca Rush
+      honors_image: /assets/img/franchises/ayahuasca-rush/honors.jpg
+      honors_alt: Ayahuasca Rush 2022 championship artwork
+    profile:
+      summary: >-
+        The Rush smoke doinks and score points. All kidding aside, they are one
+        of the league's most historic franchises: an old-school, hard-swinging
+        team backed by fans every bit as rowdy as the players on the field.
+      location: Green Bay, Wisconsin
+      home_field: Lambo Field
+      capacity: "75,000"
+      championship_seasons: [2022]
+      rivals: [Maine Moose]
+      slogan: "Winning isn't everything, it's the only thing."
+      fight_song: Ayahuasca Rush
+    rival_franchise_ids: [maine-moose]
+    source:
+      google_site_url: https://sites.google.com/view/road-to-glory-ffl/teams/ayahuasca-rush
+      verified_on: 2026-08-31
+
+  - franchise_id: baseball-furies
+    slug: baseball-furies
+    name: The Baseball Furies
+    short_name: Furies
+    status: active
+    aliases: [Baseball Furies]
+    owner_ids: [forrest-f]
+    founded_season:
+    retired_season:
+    yahoo:
+      team_keys: {"2025": 461.l.103926.t.9}
+      team_ids: {"2025": 9}
+      team_names: {"2025": The Baseball Furies}
+    branding:
+      identity_image: /assets/img/franchises/baseball-furies/identity.jpg
+      identity_alt: Blue Baseball Furies football helmet
+      venue_image: /assets/img/franchises/baseball-furies/venue.jpg
+      venue_alt: Fury Field, home of the Baseball Furies
+    profile:
+      summary: >-
+        The Furies play with exactly the intensity their name promises. Coach
+        Forrest builds around an old-school run game and a stellar defense,
+        leaning on the experience of one of the league's most senior teams.
+      location: Manhattan, New York
+      home_field: Fury Field
+      capacity: "89,000"
+      championship_seasons: []
+      rivals: [Van Cortlant Rangers, Turnbull AC's]
+      slogan: "It is hard to fail, but it is worse never to have tried to succeed."
+      fight_song: Predator and Prey
+    rival_franchise_ids: [van-cortlant-rangers, turnbull-acs]
+    source:
+      google_site_url: https://sites.google.com/view/road-to-glory-ffl/teams/baseball-furies
+      verified_on: 2026-08-31
+
+  - franchise_id: buffalo-bravado
+    slug: buffalo-bravado
+    name: Buffalo Bravado
+    short_name: Bravado
+    status: active
+    aliases: [Buffalo Bravados]
+    owner_ids: [nate]
+    founded_season:
+    retired_season:
+    yahoo:
+      team_keys: {"2025": 461.l.103926.t.4}
+      team_ids: {"2025": 4}
+      team_names: {"2025": Buffalo Bravados}
+    branding:
+      identity_image: /assets/img/franchises/buffalo-bravado/identity.jpg
+      identity_alt: Light blue Buffalo Bravado football helmet with a heraldic crest
+      venue_image: /assets/img/franchises/buffalo-bravado/venue.jpg
+      venue_alt: The Warehouse, home of Buffalo Bravado
+    profile:
+      summary: >-
+        Buffalo Bravado are known for strong, deep rosters and the winning
+        experience Coach Nate “Dogg” brings to the sideline. Trick plays fill
+        the playbook, so opponents should always expect the unexpected.
+      location: Buffalo, New York
+      home_field: Buffalo Industrial Park (The Warehouse)
+      capacity: "45,000"
+      championship_seasons: []
+      rivals: [Democrats]
+      slogan: "In football, the worst things are excuses. Excuses mean you cannot grow or move forward."
+      fight_song: God Bless the USA!
+    rival_franchise_ids: []
+    source:
+      google_site_url: https://sites.google.com/view/road-to-glory-ffl/teams/buffalo-bravado
+      verified_on: 2026-08-31
+
+  - franchise_id: crazy-wazs-team
+    slug: crazy-wazs-team
+    name: Crazy Waz's Team
+    short_name: Crazy Waz
+    status: active
+    aliases: [Crazy Waz Squad, Crazy Waz's Crazy Team, Chris's Crazy Team]
+    owner_ids: [waz]
+    founded_season:
+    retired_season:
+    yahoo:
+      team_keys: {"2025": 461.l.103926.t.5}
+      team_ids: {"2025": 5}
+      team_names: {"2025": Chris's Crazy Team}
+    branding:
+      identity_image: /assets/img/franchises/crazy-wazs-team/identity.jpg
+      identity_alt: Green Crazy Waz football helmet with a collegiate crest
+      venue_image: /assets/img/franchises/crazy-wazs-team/venue.jpg
+      venue_alt: Waz Wonder Dome, home of Crazy Waz's Team
+    profile:
+      summary: >-
+        A bit of an enigma, Waz runs the squad with the precision of a military
+        unit. One of the league's sharpest minds, he built a revolutionary
+        playbook that makes a visit to the Waz Dome anything but easy.
+      location: West Coast
+      home_field: Waz Wonder Dome
+      capacity: "115,000"
+      championship_seasons: []
+      rivals: []
+      slogan: "The most beautiful thing you can wear is confidence."
+      fight_song: We Will Win! Win!
+    rival_franchise_ids: []
+    source:
+      google_site_url: https://sites.google.com/view/road-to-glory-ffl/teams/crazy-wazs-team
+      verified_on: 2026-08-31
+
+  - franchise_id: greendale-human-beings
+    slug: greendale-human-beings
+    name: Greendale Human Beings
+    short_name: Human Beings
+    status: active
+    aliases: []
+    owner_ids: [ryan-d]
+    founded_season:
+    retired_season:
+    yahoo:
+      team_keys: {"2025": 461.l.103926.t.6}
+      team_ids: {"2025": 6}
+      team_names: {"2025": Greendale Human Beings}
+    branding:
+      identity_image: /assets/img/franchises/greendale-human-beings/identity.jpg
+      identity_alt: Blue Greendale Human Beings football helmet
+      venue_image: /assets/img/franchises/greendale-human-beings/venue.jpg
+      venue_alt: Greendale Community College Football Field
+      honors_image: /assets/img/franchises/greendale-human-beings/honors.png
+      honors_alt: Greendale Human Beings 2023 championship artwork
+    profile:
+      summary: >-
+        Coach Ryan is a man of few words who lets the work do the talking. The
+        Human Beings pair tactical preparation with a lead-by-example culture,
+        keeping the team ready for game day without the loud speeches.
+      location: Greendale, Colorado
+      home_field: Greendale Community College Football Field
+      capacity: "2,000"
+      championship_seasons: [2023]
+      rivals: [Maine Moose, New Jersey Giants]
+      slogan: "The only place success comes before work is in the dictionary."
+      fight_song: Lay Down the Law!
+    rival_franchise_ids: [maine-moose, new-jersey-giants]
+    source:
+      google_site_url: https://sites.google.com/view/road-to-glory-ffl/teams/greendale-human-beings
+      verified_on: 2026-08-31
+
+  - franchise_id: maine-moose
+    slug: maine-moose
+    name: Maine Moose
+    short_name: Moose
+    status: active
+    aliases: []
+    owner_ids: [finn-d]
+    founded_season:
+    retired_season:
+    yahoo:
+      team_keys: {"2025": 461.l.103926.t.7}
+      team_ids: {"2025": 7}
+      team_names: {"2025": Maine Moose}
+    branding:
+      identity_image: /assets/img/franchises/maine-moose/identity.jpg
+      identity_alt: Black Maine Moose football helmet with a gold moose
+      venue_image: /assets/img/franchises/maine-moose/venue.jpg
+      venue_alt: Skowhegan High School Field, home of the Maine Moose
+    profile:
+      summary: >-
+        Many know them and some fear them. The Maine Moose are a rugged group
+        of Northmen led by young phenom Finn, whose confidence and modernized
+        approach aim to unseat the league's more established powers.
+      location: Skowhegan, Maine
+      home_field: Skowhegan High School Field
+      capacity: "1,000"
+      championship_seasons: []
+      rivals: [Ayahuasca Rush]
+      slogan: "When you're the underdog, you just lay low and work."
+      fight_song: Industry Baby
+    rival_franchise_ids: [ayahuasca-rush]
+    source:
+      google_site_url: https://sites.google.com/view/road-to-glory-ffl/teams/maine-moose
+      verified_on: 2026-08-31
+
+  - franchise_id: new-jersey-giants
+    slug: new-jersey-giants
+    name: New Jersey Giants
+    short_name: Giants
+    status: active
+    aliases: []
+    owner_ids: [jack-d]
+    founded_season:
+    retired_season:
+    yahoo:
+      team_keys: {"2025": 461.l.103926.t.12}
+      team_ids: {"2025": 12}
+      team_names: {"2025": New Jersey Giants}
+    branding:
+      identity_image: /assets/img/franchises/new-jersey-giants/identity.jpg
+      identity_alt: Blue New Jersey Giants football helmet
+      venue_image: /assets/img/franchises/new-jersey-giants/venue.jpg
+      venue_alt: Old Giants Stadium, home of the New Jersey Giants
+    profile:
+      summary: >-
+        The New Jersey Giants arrived with big expectations and a data-driven
+        strategist in Coach Jack. Every lineup decision is rooted in analytics
+        and matchup efficiency as the Giants test whether science beats
+        superstition on the road to a title.
+      location: The Meadowlands, New Jersey
+      home_field: Old Giants Stadium
+      capacity: "80,242"
+      championship_seasons: []
+      rivals: [Greendale Human Beings, Maine Moose]
+      slogan: "Football isn't just a game. It's the calculation behind every heartbeat and the war behind every yard."
+      fight_song: Head Coach Jack's Theme Song
+    rival_franchise_ids: [greendale-human-beings, maine-moose]
+    source:
+      google_site_url: https://sites.google.com/view/road-to-glory-ffl/teams/new-jersey-giants
+      verified_on: 2026-08-31
+
+  - franchise_id: north-town-ninnyhammers
+    slug: north-town-ninnyhammers
+    name: North Town Ninnyhammers
+    short_name: Ninnyhammers
+    status: active
+    aliases: [North town Ninnyhammers]
+    owner_ids: [tj]
+    founded_season:
+    retired_season:
+    yahoo:
+      team_keys: {"2025": 461.l.103926.t.8}
+      team_ids: {"2025": 8}
+      team_names: {"2025": North town Ninnyhammers}
+    branding:
+      identity_image: /assets/img/franchises/north-town-ninnyhammers/identity.jpg
+      identity_alt: White North Town Ninnyhammers football helmet with a red buffalo
+      venue_image: /assets/img/franchises/north-town-ninnyhammers/venue.jpg
+      venue_alt: The Junk Yard, home of the North Town Ninnyhammers
+    profile:
+      summary: >-
+        The Ninnyhammers blend cunning strategy with unbridled passion. Coach TJ
+        has built a reputation for audacious plays, surprising victories, and
+        quick adjustments that turn every matchup into theater.
+      location: North Town, Parts Unknown
+      home_field: Junk Yard
+      capacity: "15,000"
+      championship_seasons: []
+      rivals: [Waz, Carl, Partner]
+      slogan: "Going to Philly."
+      fight_song: Philly Time!
+    rival_franchise_ids: []
+    source:
+      google_site_url: https://sites.google.com/view/road-to-glory-ffl/teams/north-town-ninnyhammers
+      verified_on: 2026-08-31
+
+  - franchise_id: turnbull-acs
+    slug: turnbull-acs
+    name: Turnbull AC's
+    short_name: Turnbull
+    status: active
+    aliases: [Turnbull AC’s]
+    owner_ids: [terry]
+    founded_season:
+    retired_season:
+    yahoo:
+      team_keys: {"2025": 461.l.103926.t.10}
+      team_ids: {"2025": 10}
+      team_names: {"2025": Turnbull AC’s}
+    branding:
+      identity_image: /assets/img/franchises/turnbull-acs/identity.jpg
+      identity_alt: Silver Turnbull AC's football helmet with a purple bull
+      venue_image: /assets/img/franchises/turnbull-acs/venue.jpg
+      venue_alt: Guy Broman Memorial Stadium, home of Turnbull AC's
+    profile:
+      summary: >-
+        Turnbull AC's are antiheroes: tough, crass anarchists looking to rock or
+        rumble whenever they can. Veteran Coach Terry sets that tone through
+        aggressive play calling and ferocious defensive schemes.
+      location: New York City, New York
+      home_field: Guy Broman Memorial Stadium (The Steel Yard)
+      capacity: "100,000"
+      championship_seasons: [2024]
+      rivals: [Van Cortlant Rangers]
+      slogan: "It's hard to play against us. It's harder to play for us."
+      fight_song: The Rogue Gravel Walk
+    rival_franchise_ids: [van-cortlant-rangers]
+    source:
+      google_site_url: https://sites.google.com/view/road-to-glory-ffl/teams/turnbull-acs
+      verified_on: 2026-08-31
+
+  - franchise_id: van-cortlant-rangers
+    slug: van-cortlant-rangers
+    name: Van Cortlant Rangers
+    short_name: Rangers
+    status: active
+    aliases: [Van Cortlandt Rangers]
+    owner_ids: [joe]
+    founded_season:
+    retired_season:
+    yahoo:
+      team_keys: {"2025": 461.l.103926.t.1}
+      team_ids: {"2025": 1}
+      team_names: {"2025": Van Cortlant Rangers}
+    branding:
+      identity_image: /assets/img/franchises/van-cortlant-rangers/identity.jpg
+      identity_alt: Blue Van Cortlant Rangers football helmet with a masked cowboy
+      venue_image: /assets/img/franchises/van-cortlant-rangers/venue.jpg
+      venue_alt: Star Goblin Field, home of the Van Cortlant Rangers
+    profile:
+      summary: >-
+        Playing out of the city that never sleeps, the Rangers bring fast-paced,
+        hard-hitting, old-fashioned gridiron football. Coach Joe's waiver-wire
+        expertise and late-round drafting keep this team dangerous down the stretch.
+      location: Bronx, New York
+      home_field: Star Goblin Field (The Gun Range)
+      capacity: "100,000"
+      championship_seasons: []
+      rivals: [Turnbull AC's, The Baseball Furies]
+      slogan: "Respect All; Fear None."
+      fight_song: Locked and Loaded
+    rival_franchise_ids: [turnbull-acs, baseball-furies]
+    source:
+      google_site_url: https://sites.google.com/view/road-to-glory-ffl/teams/van-cortlant-rangers
+      verified_on: 2026-08-31
+
+  - franchise_id: vegas-vandals
+    slug: vegas-vandals
+    name: Vegas Vandals
+    short_name: Vandals
+    status: active
+    aliases: []
+    owner_ids: [coles]
+    founded_season:
+    retired_season:
+    yahoo:
+      team_keys: {"2025": 461.l.103926.t.11}
+      team_ids: {"2025": 11}
+      team_names: {"2025": Vegas Vandals}
+    branding:
+      identity_image: /assets/img/franchises/vegas-vandals/identity.jpg
+      identity_alt: Black Vegas Vandals football helmet with flaming playing cards
+      venue_image: /assets/img/franchises/vegas-vandals/venue.jpg
+      venue_alt: Allegiant Stadium, home of the Vegas Vandals
+    profile:
+      summary: >-
+        The Vegas Vandals pair a high-octane offense with a tenacious defense,
+        embodying the city's appetite for risk and reward. Coach Coles wants to
+        outscore everyone through an explosive passing scheme known around the
+        league as “Bombs over Baghdad.”
+      location: Las Vegas, Nevada
+      home_field: Allegiant Stadium
+      capacity: "65,000"
+      championship_seasons: []
+      rivals: [Albany Kneelers]
+      slogan: "Shout like hell and fight like devils!"
+      fight_song: Boomer Sooner
+    rival_franchise_ids: [albany-kneelers]
+    source:
+      google_site_url: https://sites.google.com/view/road-to-glory-ffl/teams/vegas-vandals
+      verified_on: 2026-08-31
+
+  - franchise_id: quahog-stripes
+    slug: quahog-stripes
+    name: Quahog Stripes
+    short_name: Stripes
+    status: retired
+    aliases: []
+    owner_ids: [jack-d]
+    founded_season:
+    retired_season:
+    yahoo:
+      team_keys: {}
+      team_ids: {}
+      team_names: {}
+    branding:
+      identity_image: /assets/img/franchises/quahog-stripes/identity.jpg
+      identity_alt: White Quahog Stripes football helmet with an orange animal emblem
+      venue_image: /assets/img/franchises/quahog-stripes/venue.jpg
+      venue_alt: Quahog Dome, former home of the Quahog Stripes
+    profile:
+      summary: >-
+        The Quahog Stripes brought a new-age, analytics-heavy approach to the
+        league. Coach Jack leaned on statistics, waiver-wire work, and careful
+        roster management in the belief that math and science could produce a title.
+      location: Quahog, Rhode Island
+      home_field: Quahog Dome
+      capacity: "65,000"
+      championship_seasons: []
+      rivals: [Greendale Human Beings, Maine Moose]
+      slogan: "Some people think football is a matter of life and death. I assure you, it's much more serious than that."
+      fight_song: Head Coach Jack's Theme Song
+    rival_franchise_ids: [greendale-human-beings, maine-moose]
+    source:
+      google_site_url: https://sites.google.com/view/road-to-glory-ffl/retired-teams/quahog-stripes
+      verified_on: 2026-08-31
+
+  - franchise_id: savage-huns
+    slug: the-savage-huns
+    name: The Savage Huns
+    short_name: Savage Huns
+    status: retired
+    aliases: [Savage Huns]
+    owner_ids: [teal-f]
+    founded_season:
+    retired_season:
+    yahoo:
+      team_keys: {}
+      team_ids: {}
+      team_names: {}
+    branding:
+      identity_image: /assets/img/franchises/the-savage-huns/identity.jpg
+      identity_alt: Red Savage Huns football helmet
+      venue_image: /assets/img/franchises/the-savage-huns/venue.jpg
+      venue_alt: New Age Field, former home of the Savage Huns
+    profile:
+      summary: >-
+        The Huns put the S in savage on the field. An unrelenting defense and a
+        strong run game made their dojo a matchup nightmare, while Coach Teal's
+        waiver-wire aggression and strong draft classes kept the roster dangerous.
+      location: Chinatown, New York
+      home_field: New Age Field
+      capacity: "110,000"
+      championship_seasons: []
+      rivals: [The Baseball Furies, Van Cortlandt Rangers]
+      slogan: "Hustle, hit and never quit!"
+      fight_song: Roll Boys Roll!
+    rival_franchise_ids: [baseball-furies, van-cortlant-rangers]
+    source:
+      google_site_url: https://sites.google.com/view/road-to-glory-ffl/retired-teams/the-savage-huns
+      verified_on: 2026-08-31

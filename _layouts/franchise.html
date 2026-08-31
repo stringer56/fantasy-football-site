@@ -1,0 +1,117 @@
+---
+layout: default
+---
+{% assign franchise = site.data.franchises.franchises | where: "franchise_id", page.franchise_id | first %}
+{% if franchise %}
+  {% assign is_retired = false %}
+  {% if franchise.status == "retired" %}{% assign is_retired = true %}{% endif %}
+  {% assign profile = franchise.profile %}
+  {% assign branding = franchise.branding %}
+
+  <article class="franchise-profile{% if is_retired %} franchise-profile--retired{% endif %}">
+    <header class="franchise-hero">
+      <div class="wrap franchise-hero__grid">
+        <div class="franchise-hero__copy">
+          <p class="eyebrow">{% if is_retired %}Retired franchise{% else %}Active franchise{% endif %}</p>
+          <h1>{{ franchise.name }}</h1>
+          <p class="franchise-hero__lede">{{ profile.summary }}</p>
+          <div class="franchise-hero__owners" aria-label="Franchise ownership">
+            <span>Coach</span>
+            {% for owner_id in franchise.owner_ids %}
+              {% assign owner = site.data.owners.owners | where: "owner_id", owner_id | first %}
+              {% if owner %}<strong>{{ owner.display_name }}</strong>{% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        <figure class="franchise-identity">
+          <img src="{{ branding.identity_image | relative_url }}" alt="{{ branding.identity_alt | escape }}" width="680" height="630">
+        </figure>
+      </div>
+    </header>
+
+    <section class="content-section content-section--tight">
+      <div class="wrap franchise-story-grid">
+        <div>
+          <p class="eyebrow eyebrow--dark">Team story</p>
+          <h2 class="franchise-section-title">Built for the road</h2>
+          <p class="franchise-story">{{ profile.summary }}</p>
+
+          {% if franchise.aliases and franchise.aliases.size > 0 %}
+            <div class="alias-block">
+              <h3>Names in the record book</h3>
+              <ul class="tag-list" aria-label="Franchise aliases">
+                {% for alias in franchise.aliases %}<li>{{ alias }}</li>{% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+
+          {% if franchise.rival_franchise_ids and franchise.rival_franchise_ids.size > 0 %}
+            <div class="alias-block">
+              <h3>League rivals</h3>
+              <ul class="rival-links">
+                {% for rival_id in franchise.rival_franchise_ids %}
+                  {% assign rival = site.data.franchises.franchises | where: "franchise_id", rival_id | first %}
+                  {% if rival %}
+                    <li>
+                      {% if rival.status == "retired" %}
+                        <a href="{{ '/retired/' | append: rival.slug | append: '/' | relative_url }}">{{ rival.name }}</a>
+                      {% else %}
+                        <a href="{{ '/teams/' | append: rival.slug | append: '/' | relative_url }}">{{ rival.name }}</a>
+                      {% endif %}
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        </div>
+
+        <aside class="franchise-facts" aria-labelledby="team-facts-title">
+          <h2 id="team-facts-title">Team information</h2>
+          <dl>
+            <div><dt>Coach</dt><dd>{% for owner_id in franchise.owner_ids %}{% assign owner = site.data.owners.owners | where: "owner_id", owner_id | first %}{% if owner %}{{ owner.display_name }}{% unless forloop.last %}, {% endunless %}{% endif %}{% endfor %}</dd></div>
+            <div><dt>Location</dt><dd>{{ profile.location }}</dd></div>
+            <div><dt>Home field</dt><dd>{{ profile.home_field }}</dd></div>
+            <div><dt>Capacity</dt><dd>{{ profile.capacity }}</dd></div>
+            <div><dt>Championships</dt><dd>{% if profile.championship_seasons.size > 0 %}{{ profile.championship_seasons | join: ', ' }}{% else %}Still chasing glory{% endif %}</dd></div>
+            <div><dt>Fight song</dt><dd>{{ profile.fight_song }}</dd></div>
+          </dl>
+          <blockquote>“{{ profile.slogan }}”</blockquote>
+        </aside>
+      </div>
+    </section>
+
+    <section class="content-section content-section--neutral content-section--bordered">
+      <div class="wrap franchise-gallery{% unless branding.honors_image %} franchise-gallery--two{% endunless %}">
+        <figure class="venue-feature">
+          <img src="{{ branding.venue_image | relative_url }}" alt="{{ branding.venue_alt | escape }}" loading="lazy">
+          <figcaption><span>Home turf</span><strong>{{ profile.home_field }}</strong></figcaption>
+        </figure>
+        {% if branding.honors_image %}
+          <figure class="honors-feature">
+            <img src="{{ branding.honors_image | relative_url }}" alt="{{ branding.honors_alt | escape }}" loading="lazy">
+            <figcaption><span>League honors</span><strong>{{ profile.championship_seasons | join: ', ' }} Champion{% if profile.championship_seasons.size > 1 %}s{% endif %}</strong></figcaption>
+          </figure>
+        {% endif %}
+        <div class="franchise-source-card">
+          <p class="eyebrow">Migration record</p>
+          <h2>Preserved from the league archive</h2>
+          <p>This profile uses the public story and artwork reviewed from the original Road to Glory Google Site.</p>
+          <a class="text-link" href="{{ franchise.source.google_site_url }}" target="_blank" rel="noopener">View source page <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <nav class="profile-back-nav" aria-label="Franchise profiles">
+      <div class="wrap">
+        {% if is_retired %}
+          <a class="button button--gold" href="{{ '/retired/' | relative_url }}">All retired franchises</a>
+        {% else %}
+          <a class="button button--gold" href="{{ '/teams/' | relative_url }}">All teams &amp; owners</a>
+        {% endif %}
+      </div>
+    </nav>
+  </article>
+{% else %}
+  {% include page-hero.html eyebrow="Data issue" title="Franchise unavailable" description="This profile is missing its canonical franchise record." compact=true %}
+{% endif %}

@@ -37,4 +37,6 @@ as a short-retention artifact for browser testing before merge.
 See [Yahoo Data Pipeline](docs/YAHOO_DATA_PIPELINE.md),
 [Data Schemas](docs/DATA_SCHEMAS.md), and
 [Site Overhaul Plan](docs/SITE_OVERHAUL_PLAN.md). Presentation conventions and
-component usage are documented in [Design System](docs/DESIGN_SYSTEM.md).
+component usage are documented in [Design System](docs/DESIGN_SYSTEM.md). The
+Google Site team inventory, editorial decisions, asset provenance, and Yahoo
+identity joins are recorded in [Franchise Migration](docs/FRANCHISE_MIGRATION.md).
