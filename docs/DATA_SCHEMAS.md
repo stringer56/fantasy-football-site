@@ -17,6 +17,15 @@ Every data file uses `schema_version: 1` or `"schema_version": 1`.
 The 2026 alias is `nfl.l.26455`. Yahoo may resolve it to a season-specific game
 key; do not copy that resolved key into configuration.
 
+### `league.yml`
+
+- `draft_datetime`: commissioner-confirmed ISO-8601 draft date and time.
+
+The timestamp must include an explicit UTC offset, for example
+`2026-08-30T19:30:00-04:00`, so the static JavaScript countdown represents the
+same instant in every visitor's timezone. Leave it empty to render the
+intentional `2026 Draft Date TBA` state.
+
 ### `owners.yml`
 
 Each future `owners` entry uses:

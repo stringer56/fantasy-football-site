@@ -1,0 +1,28 @@
+{% assign roster = site.data.generated.rosters.teams | where: 'team_key', include.team.team_key | first %}
+<details class="roster-disclosure">
+  <summary>
+    <span>View {{ include.team.team_name }} roster</span>
+    <span class="roster-disclosure__toggle" aria-hidden="true"></span>
+  </summary>
+  {% if roster and roster.players and roster.players.size > 0 %}
+    <div class="roster-table-wrap">
+      <table class="roster-table">
+        <thead>
+          <tr><th scope="col">Pos</th><th scope="col">Player</th><th scope="col">NFL</th><th scope="col">Status</th></tr>
+        </thead>
+        <tbody>
+          {% for player in roster.players %}
+            <tr>
+              <td><span class="position-badge">{{ player.selected_position | default: player.primary_position | default: '—' }}</span></td>
+              <td>{{ player.player_name }}</td>
+              <td>{{ player.nfl_team | default: '—' }}</td>
+              <td>{% if player.status %}<span class="status-badge">{{ player.status }}</span>{% else %}<span class="muted">—</span>{% endif %}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <p class="roster-empty">Roster data is being updated.</p>
+  {% endif %}
+</details>
