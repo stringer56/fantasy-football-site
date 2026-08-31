@@ -85,12 +85,14 @@ fields, capacities, rivals, slogans, fight-song titles, and source-listed titles
 Light editing corrects obvious spelling, punctuation, and readability problems
 without inventing facts.
 
-Two source fragments were not republished:
+Three source fragments were not republished verbatim:
 
 - The Quahog page's medical diagnosis/reference was omitted as unnecessary
   personal health information.
 - The Savage Huns page's personal jab about why the team left was omitted; the
   football identity and competitive story remain intact.
+- Albany's pronoun/protest punchlines were condensed into the broader public
+  team-character description without retaining identity-directed phrasing.
 
 The Las Vegas stadium street address was normalized to the public city/state
 location because the street number adds no franchise value. Fight-song audio was
