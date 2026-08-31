@@ -1,19 +1,37 @@
 name: Update Yahoo Data
+
 on:
   schedule:
-    - cron: "0 */6 * * *"   # every 6 hours
+    - cron: "0 */6 * * *"
   workflow_dispatch:
+
 permissions:
-  contents: write  
+  contents: write
+
+concurrency:
+  group: yahoo-data-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install requests
+          cache: pip
+
+      - name: Install pinned dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements.txt
+
+      - name: Validate normalizers
+        run: python -m unittest discover -s tests -v
+
       - name: Pull Yahoo data
         env:
           YAHOO_CLIENT_ID: ${{ secrets.YAHOO_CLIENT_ID }}
@@ -21,17 +39,22 @@ jobs:
           YAHOO_REFRESH_TOKEN: ${{ secrets.YAHOO_REFRESH_TOKEN }}
           LEAGUE_KEY: ${{ secrets.LEAGUE_KEY }}
         run: python scripts/pull_yahoo.py
-      - name: Pull News feeds
-        run: python scripts/pull_news.py
-      - name: Commit and push if changed
-        run: |
-          if [[ -n "$(git status --porcelain)" ]]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add _data/*.json
-            git commit -m "Auto-update Yahoo data"
-            git push
-          else
-            echo "No data changes."
-          fi
 
+      - name: Pull news feeds
+        run: python scripts/pull_news.py
+
+      - name: Validate public generated data
+        run: python scripts/validate_public_data.py
+
+      - name: Commit and push changed public data
+        shell: bash
+        run: |
+          git add _data/generated/*.json _data/news.json
+          if git diff --cached --quiet; then
+            echo "No public data changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "Auto-update Yahoo data"
+          git push

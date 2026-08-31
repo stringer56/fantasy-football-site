@@ -1,0 +1,45 @@
+{
+  "fantasy_content": {
+    "team": [
+      [
+        {"team_key": "999.l.26455.t.1"},
+        {"team_id": "1"},
+        {"name": "Fixture Team 01"}
+      ],
+      {
+        "roster": {
+          "coverage_type": "week",
+          "week": "1",
+          "0": {
+            "players": {
+              "0": {
+                "player": [
+                  [
+                    {"player_key": "999.p.1001"},
+                    {"name": {"full": "Fixture Player One"}},
+                    {"editorial_team_abbr": "BUF"},
+                    {"primary_position": "QB"},
+                    {"status": "Q"}
+                  ],
+                  {"selected_position": {"coverage_type": "week", "week": "1", "position": "QB"}}
+                ]
+              },
+              "1": {
+                "player": [
+                  [
+                    {"player_key": "999.p.1002"},
+                    {"name": {"full": "Fixture Player Two"}},
+                    {"editorial_team_abbr": "NYJ"},
+                    {"display_position": "WR"}
+                  ],
+                  {"selected_position": {"position": "BN"}}
+                ]
+              },
+              "count": 2
+            }
+          }
+        }
+      }
+    ]
+  }
+}
