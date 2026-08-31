@@ -76,7 +76,9 @@ def main() -> None:
     )
     season_data = yaml.safe_load((ROOT / "_data" / "seasons.yml").read_text(encoding="utf-8"))
     season_routes = tuple(f"/history/{season['year']}/" for season in season_data["seasons"])
-    for route in EXPECTED_ROUTES + franchise_routes + season_routes:
+    draft_data = yaml.safe_load((ROOT / "_data" / "drafts.yml").read_text(encoding="utf-8"))
+    draft_routes = tuple(f"/drafts/{draft['year']}/" for draft in draft_data["drafts"])
+    for route in EXPECTED_ROUTES + franchise_routes + season_routes + draft_routes:
         if not route_target(route).is_file():
             errors.append(f"missing expected route: {route}")
 
@@ -101,6 +103,7 @@ def main() -> None:
     teams_page = route_target("/teams/").read_text(encoding="utf-8")
     retired_page = route_target("/retired/").read_text(encoding="utf-8")
     history_page = route_target("/history/").read_text(encoding="utf-8")
+    drafts_page = route_target("/drafts/").read_text(encoding="utf-8")
     cup_page = route_target("/cup/").read_text(encoding="utf-8")
     if teams_page.count('class="franchise-card"') != 12:
         errors.append("teams directory must render exactly 12 active franchise cards")
@@ -108,6 +111,8 @@ def main() -> None:
         errors.append("retired directory must render exactly 2 retired franchise cards")
     if history_page.count('class="season-archive-card"') != 4:
         errors.append("history archive must render exactly 4 season cards")
+    if drafts_page.count('class="draft-season-card"') != 4:
+        errors.append("draft archive must render exactly 4 draft cards")
     if cup_page.count("<article>") != 4:
         errors.append("Brew Crew Cup page must render exactly 4 champion entries")
     for season in season_data["seasons"]:
@@ -118,6 +123,18 @@ def main() -> None:
                 errors.append(f"season page {route} is missing: {expected}")
         if rendered.count('class="playoff-result') < 3:
             errors.append(f"season page {route} did not render playoff result cards")
+        if f"/drafts/{season['year']}/" not in rendered:
+            errors.append(f"season page {route} does not link to its draft")
+    for draft in draft_data["drafts"]:
+        route = f"/drafts/{draft['year']}/"
+        rendered = route_target(route).read_text(encoding="utf-8")
+        for expected in ("Draft Order", "Draft Board &amp; Results", "Draft recap", "Verified Notes", "Future Draft Analysis"):
+            if expected not in rendered:
+                errors.append(f"draft page {route} is missing: {expected}")
+        if rendered.count('class="draft-order-entry"') != draft["team_count"]:
+            errors.append(f"draft page {route} did not render every order entry")
+        if rendered.count("Open full size") != len(draft["results_assets"]):
+            errors.append(f"draft page {route} did not render every result asset")
     for franchise in franchise_data["franchises"]:
         route = f"/{'retired' if franchise['status'] == 'retired' else 'teams'}/{franchise['slug']}/"
         profile = route_target(route).read_text(encoding="utf-8")

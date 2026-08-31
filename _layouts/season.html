@@ -5,6 +5,7 @@ layout: default
 {% assign championship = site.data.champions.champions | where: "year", page.year | first %}
 {% assign playoff = site.data.playoffs.playoffs | where: "season", page.year | first %}
 {% assign champion = site.data.franchises.franchises | where: "franchise_id", season.champion_franchise_id | first %}
+{% assign draft = site.data.drafts.drafts | where: "year", page.year | first %}
 
 <article class="season-page">
   <header class="season-hero" data-year="{{ season.year }}">
@@ -17,6 +18,7 @@ layout: default
         <div class="season-hero__actions">
           <a class="button button--gold" href="#standings">Final standings</a>
           <a class="button button--outline-light" href="#playoffs">Playoff run</a>
+          {% if draft %}<a class="button button--outline-light" href="{{ '/drafts/' | append: season.year | append: '/' | relative_url }}">Draft archive</a>{% endif %}
         </div>
       </div>
       <figure class="season-hero__identity">
