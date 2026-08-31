@@ -1,33 +1,74 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071526">
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <title>{% if page.title and page.title != 'Home' %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
+  <div class="top-strip">
+    <div class="shell top-strip-inner">
+      <span>ROAD TO GLORY FFL</span>
+      <a href="https://football.fantasysports.yahoo.com/f1/26455" target="_blank" rel="noopener">Open Yahoo League ↗</a>
+    </div>
+  </div>
+
   <header class="site-header">
-    <div class="wrap">
-      <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-      <nav class="nav">
+    <div class="shell header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="Road to Glory FFL home">
+        <span class="brand-mark">RTG</span>
+        <span class="brand-copy">
+          <strong>Road to Glory</strong>
+          <small>Fantasy Football League</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav">
         <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/seasons/' | relative_url }}">Seasons</a>
-        <a href="{{ '/drafts/' | relative_url }}">Drafts</a>
+        <a href="{{ '/teams/' | relative_url }}">Teams</a>
+        <a href="{{ '/seasons/' | relative_url }}">History</a>
+        <a href="{{ '/drafts/' | relative_url }}">Draft</a>
         <a href="{{ '/cup/' | relative_url }}">Brew Crew Cup</a>
+        <a href="{{ '/records/' | relative_url }}">Records</a>
+        <a href="{{ '/votes/' | relative_url }}">League Votes</a>
         <a href="{{ '/rules/' | relative_url }}">Rules</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap">
+  <main>
     {{ content }}
   </main>
 
-  <footer class="site-footer"><div class="wrap">
-    Road to Glory FFL • Powered by GitHub Pages
-  </div></footer>
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <strong>Road to Glory FFL</strong>
+        <p>League history, live Yahoo data, drafts, records and the race for the Brew Crew Cup.</p>
+      </div>
+      <div class="footer-links">
+        <a href="{{ '/seasons/' | relative_url }}">League History</a>
+        <a href="{{ '/retired/' | relative_url }}">Retired Franchises</a>
+        <a href="https://football.fantasysports.yahoo.com/f1/26455" target="_blank" rel="noopener">Yahoo Fantasy</a>
+      </div>
+    </div>
+  </footer>
 
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('#site-nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        nav.classList.toggle('is-open');
+      });
+    }
+  </script>
   <script src="{{ '/assets/js/countdown.js' | relative_url }}"></script>
 </body>
 </html>
