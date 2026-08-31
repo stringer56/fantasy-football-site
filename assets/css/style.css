@@ -472,7 +472,7 @@ a:hover { color: var(--navy-900); }
   .retired-card__image { min-height: auto; aspect-ratio: 1.15; }
   .franchise-hero h1 { font-size: clamp(3.2rem, 17vw, 5.25rem); }
   .franchise-identity { width: 100%; transform: none; }
-  .franchise-facts dl div { grid-template-columns: 5.5rem minmax(0, 1fr); }
+  .franchise-facts dl div { gap: var(--space-3); grid-template-columns: 7.25rem minmax(0, 1fr); }
   .venue-feature, .honors-feature { min-height: 20rem; }
   .franchise-source-card { grid-column: auto; }
 }
