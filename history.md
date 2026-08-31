@@ -8,12 +8,17 @@ description: Road to Glory FFL seasons, standings, playoffs, championships, and 
 {% include page-hero.html eyebrow="The complete story" title="League History" description="Season standings, playoff brackets, championship stories, and defining moments from across Road to Glory history." compact=true %}
 
 <section class="shell-content">
-  <div class="shell-intro-grid">
-    <div class="prose">
-      <h2>Every Season Matters</h2>
-      <p>The history hub will organize each year around verified standings, a structured playoff bracket, individual game recaps, the championship, team mini-recaps, and a by-the-numbers review.</p>
-      <p>Historical facts will be published only after they are checked against league records or approved source material.</p>
-    </div>
-    <aside class="migration-card"><h2>History Status</h2><p>Season and playoff source material is scheduled for a dedicated historical migration milestone.</p></aside>
+  <div class="history-intro"><div><p class="eyebrow">Four seasons. Four champions.</p><h2>Every Road Leaves a Record</h2><p>The archive preserves verified final standings, playoff paths, title-game scores, and original league artwork from 2021 through 2024.</p></div><a class="button button--gold" href="{{ '/cup/' | relative_url }}">See the Cup roll of honor</a></div>
+
+  {% assign seasons = site.data.seasons.seasons | sort: "year" | reverse %}
+  <div class="season-archive-grid">
+    {% for season in seasons %}
+      {% assign champion = site.data.franchises.franchises | where: "franchise_id", season.champion_franchise_id | first %}
+      {% assign final = site.data.champions.champions | where: "year", season.year | first %}
+      <article class="season-archive-card">
+        <a class="season-archive-card__image" href="{{ '/history/' | append: season.year | append: '/' | relative_url }}"><img src="{{ champion.branding.identity_image | relative_url }}" alt="{{ champion.branding.identity_alt }}"></a>
+        <div class="season-archive-card__body"><p class="eyebrow">{{ season.year }} champion</p><h2><a href="{{ '/history/' | append: season.year | append: '/' | relative_url }}">{{ season.champion_display_name }}</a></h2><p>{{ final.champion_score }}–{{ final.runner_up_score }} over {{ final.runner_up_display_name }}</p><div><span>{{ season.team_count }} teams</span><a class="text-link" href="{{ '/history/' | append: season.year | append: '/' | relative_url }}">Open season <span aria-hidden="true">→</span></a></div></div>
+      </article>
+    {% endfor %}
   </div>
 </section>

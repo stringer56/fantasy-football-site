@@ -10,7 +10,7 @@ description: Road to Glory FFL season archive.
 <section class="shell-content">
   <div class="prose">
     <h2>The Road Through Every Season</h2>
-    <p>This established archive route remains available while the complete league history is organized at the new League History hub.</p>
+    <p>This established route remains available as a doorway to the complete, verified League History archive.</p>
     <p><a class="button button--gold" href="{{ '/history/' | relative_url }}">Open League History</a></p>
   </div>
 </section>

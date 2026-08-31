@@ -74,7 +74,9 @@ def main() -> None:
         f"/{'retired' if franchise['status'] == 'retired' else 'teams'}/{franchise['slug']}/"
         for franchise in franchise_data["franchises"]
     )
-    for route in EXPECTED_ROUTES + franchise_routes:
+    season_data = yaml.safe_load((ROOT / "_data" / "seasons.yml").read_text(encoding="utf-8"))
+    season_routes = tuple(f"/history/{season['year']}/" for season in season_data["seasons"])
+    for route in EXPECTED_ROUTES + franchise_routes + season_routes:
         if not route_target(route).is_file():
             errors.append(f"missing expected route: {route}")
 
@@ -98,10 +100,24 @@ def main() -> None:
     home = (SITE_DIR / "index.html").read_text(encoding="utf-8")
     teams_page = route_target("/teams/").read_text(encoding="utf-8")
     retired_page = route_target("/retired/").read_text(encoding="utf-8")
+    history_page = route_target("/history/").read_text(encoding="utf-8")
+    cup_page = route_target("/cup/").read_text(encoding="utf-8")
     if teams_page.count('class="franchise-card"') != 12:
         errors.append("teams directory must render exactly 12 active franchise cards")
     if retired_page.count('class="retired-card"') != 2:
         errors.append("retired directory must render exactly 2 retired franchise cards")
+    if history_page.count('class="season-archive-card"') != 4:
+        errors.append("history archive must render exactly 4 season cards")
+    if cup_page.count("<article>") != 4:
+        errors.append("Brew Crew Cup page must render exactly 4 champion entries")
+    for season in season_data["seasons"]:
+        route = f"/history/{season['year']}/"
+        rendered = route_target(route).read_text(encoding="utf-8")
+        for expected in ("Final standings", "Playoff Bracket", "Playoff Results", "Championship recap", "Season Recap Index"):
+            if expected not in rendered:
+                errors.append(f"season page {route} is missing: {expected}")
+        if rendered.count('class="playoff-result') < 3:
+            errors.append(f"season page {route} did not render playoff result cards")
     for franchise in franchise_data["franchises"]:
         route = f"/{'retired' if franchise['status'] == 'retired' else 'teams'}/{franchise['slug']}/"
         profile = route_target(route).read_text(encoding="utf-8")
