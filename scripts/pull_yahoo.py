@@ -18,6 +18,15 @@ API = "https://fantasysports.yahooapis.com/fantasy/v2"
 OUTPUT_DIRECTORY = pathlib.Path("_data/generated")
 
 
+class YahooApiError(RuntimeError):
+    """Sanitized Yahoo HTTP failure that never includes URLs or response bodies."""
+
+    def __init__(self, operation: str, status_code: int) -> None:
+        self.operation = operation
+        self.status_code = status_code
+        super().__init__(f"{operation} failed with HTTP {status_code}")
+
+
 def refresh_access_token(client_id: str, client_secret: str, refresh_token: str) -> str:
     auth = base64.b64encode(f"{client_id}:{client_secret}".encode()).decode()
     response = requests.post(
@@ -29,7 +38,10 @@ def refresh_access_token(client_id: str, client_secret: str, refresh_token: str)
         data={"grant_type": "refresh_token", "refresh_token": refresh_token},
         timeout=30,
     )
-    response.raise_for_status()
+    try:
+        response.raise_for_status()
+    except requests.HTTPError:
+        raise YahooApiError("Yahoo OAuth token refresh", response.status_code) from None
     return response.json()["access_token"]
 
 
@@ -39,7 +51,10 @@ def get_json(url: str, token: str) -> dict[str, Any]:
         headers={"Authorization": f"Bearer {token}", "Accept": "application/json"},
         timeout=30,
     )
-    response.raise_for_status()
+    try:
+        response.raise_for_status()
+    except requests.HTTPError:
+        raise YahooApiError("Yahoo Fantasy API request", response.status_code) from None
     if "application/json" not in response.headers.get("Content-Type", ""):
         raise ValueError("Yahoo returned a non-JSON response")
     return response.json()

@@ -4,6 +4,7 @@ import json
 import pathlib
 import sys
 import unittest
+from unittest.mock import Mock, patch
 
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -11,7 +12,12 @@ SCRIPTS = ROOT / "scripts"
 if str(SCRIPTS) not in sys.path:
     sys.path.insert(0, str(SCRIPTS))
 
-from discover_yahoo_history import build_committed_baseline, local_archive_coverage  # noqa: E402
+from discover_yahoo_history import (  # noqa: E402
+    build_committed_baseline,
+    local_archive_coverage,
+    sanitized_failure_status,
+)
+from pull_yahoo import YahooApiError, get_json, refresh_access_token  # noqa: E402
 from yahoo_history_discovery import (  # noqa: E402
     extract_games,
     extract_leagues,
@@ -128,6 +134,24 @@ class YahooHistoryDiscoveryTests(unittest.TestCase):
         mappings = first["seasons"][1]["team_mappings"]
         self.assertEqual(len(mappings), 12)
         self.assertTrue(all(row["status"] == "verified" for row in mappings))
+
+    def test_api_http_failures_are_sanitized(self):
+        response = Mock(status_code=403, headers={"Content-Type": "application/json"})
+        response.raise_for_status.side_effect = __import__("requests").HTTPError("unsafe URL")
+        with patch("pull_yahoo.requests.get", return_value=response):
+            with self.assertRaises(YahooApiError) as raised:
+                get_json("https://example.invalid/private-league-key", "private-token")
+        self.assertEqual(str(raised.exception), "Yahoo Fantasy API request failed with HTTP 403")
+        self.assertNotIn("private", str(raised.exception))
+        self.assertEqual(sanitized_failure_status(raised.exception), "http_403")
+
+    def test_oauth_http_failures_are_sanitized(self):
+        response = Mock(status_code=400)
+        response.raise_for_status.side_effect = __import__("requests").HTTPError("unsafe body")
+        with patch("pull_yahoo.requests.post", return_value=response):
+            with self.assertRaises(YahooApiError) as raised:
+                refresh_access_token("client", "secret", "refresh")
+        self.assertEqual(str(raised.exception), "Yahoo OAuth token refresh failed with HTTP 400")
 
     def test_commissioner_confirmed_2025_playoffs_are_complete_and_safe(self):
         path = ROOT / "_data" / "generated" / "history" / "2025" / "playoffs.json"

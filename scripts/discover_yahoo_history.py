@@ -14,7 +14,7 @@ from typing import Any, Callable
 import requests
 import yaml
 
-from pull_yahoo import API, get_json, refresh_access_token, write_json_if_changed
+from pull_yahoo import API, YahooApiError, get_json, refresh_access_token, write_json_if_changed
 from yahoo_history_discovery import (
     CAPABILITY_NAMES,
     EXPECTED_LEAGUE_NAME,
@@ -22,6 +22,7 @@ from yahoo_history_discovery import (
     extract_games,
     extract_leagues,
     normalized_name,
+    parse_league_key,
     renewal_chain,
     safe_league,
     safe_team_mapping,
@@ -63,8 +64,12 @@ class YahooDiscoveryClient:
                 if self.request_delay:
                     self.sleep(self.request_delay)
                 return payload
-            except requests.RequestException as error:
-                status = error.response.status_code if error.response is not None else None
+            except (requests.RequestException, YahooApiError) as error:
+                status = (
+                    error.status_code
+                    if isinstance(error, YahooApiError)
+                    else error.response.status_code if error.response is not None else None
+                )
                 retryable = status is None or status == 429 or (status is not None and status >= 500)
                 if not retryable or attempt >= self.max_retries:
                     raise
@@ -108,6 +113,16 @@ def entity_count(payload: Any, entity: str) -> int:
     return sum(1 for _ in walk_named(payload, entity))
 
 
+def sanitized_failure_status(error: Exception) -> str:
+    """Describe a failure without URLs, response bodies, or credential values."""
+
+    if isinstance(error, YahooApiError):
+        return f"http_{error.status_code}"
+    if isinstance(error, requests.RequestException) and error.response is not None:
+        return f"http_{error.response.status_code}"
+    return f"error_{type(error).__name__.casefold()}"
+
+
 def probe(
     client: YahooDiscoveryClient,
     resource: str,
@@ -115,8 +130,8 @@ def probe(
 ) -> tuple[str, dict[str, Any] | None]:
     try:
         payload = client.get(resource)
-    except (requests.RequestException, ValueError, KeyError):
-        return "unavailable", None
+    except (requests.RequestException, YahooApiError, ValueError, KeyError) as error:
+        return sanitized_failure_status(error), None
     return ("available" if entity_count(payload, entity) else "empty"), payload
 
 
@@ -189,7 +204,7 @@ def follow_renewals(
         attempted.add(key)
         try:
             payload = client.get(f"league/{key}")
-        except (requests.RequestException, ValueError, KeyError):
+        except (requests.RequestException, YahooApiError, ValueError, KeyError):
             continue
         rows = extract_leagues(payload)
         for row in rows:
@@ -210,28 +225,94 @@ def discover_live(request_delay: float) -> dict[str, Any]:
     print("Yahoo authentication succeeded; beginning sanitized league discovery")
     client = YahooDiscoveryClient(token, request_delay=request_delay)
     franchises = load_franchises()
-    discovered = fetch_account_leagues(client)
+    access_status: dict[str, str] = {"oauth_refresh": "succeeded"}
+    try:
+        discovered = fetch_account_leagues(client)
+        access_status["user_game_league_enumeration"] = "succeeded"
+    except (requests.RequestException, YahooApiError, ValueError, KeyError) as error:
+        discovered = {}
+        access_status["user_game_league_enumeration"] = sanitized_failure_status(error)
 
-    anchor_payload = client.get(f"league/{environment['LEAGUE_KEY']}")
-    anchors = extract_leagues(anchor_payload)
-    if len(anchors) != 1:
-        raise RuntimeError("Configured league alias did not resolve to exactly one league")
-    anchor = anchors[0]
-    if normalized_name(anchor.get("league_name")) != normalized_name(EXPECTED_LEAGUE_NAME):
-        raise RuntimeError("Configured league alias does not match the expected public league name")
-    discovered[anchor["league_key"]] = anchor
-    linked_keys, missing_links = follow_renewals(client, discovered, anchor["league_key"])
+    anchor: dict[str, Any] | None = None
+    try:
+        anchor_payload = client.get(f"league/{environment['LEAGUE_KEY']}")
+        anchors = extract_leagues(anchor_payload)
+        if len(anchors) == 1 and normalized_name(anchors[0].get("league_name")) == normalized_name(EXPECTED_LEAGUE_NAME):
+            anchor = anchors[0]
+            discovered[anchor["league_key"]] = anchor
+            access_status["configured_alias_resolution"] = "succeeded"
+        else:
+            access_status["configured_alias_resolution"] = "unexpected_response"
+    except (requests.RequestException, YahooApiError, ValueError, KeyError) as error:
+        access_status["configured_alias_resolution"] = sanitized_failure_status(error)
+
+    configured = parse_league_key(environment["LEAGUE_KEY"])
+    configured_league_id = configured[1] if configured else None
+    if anchor is None and configured_league_id:
+        matching = [
+            row for row in discovered.values()
+            if row.get("league_id") == configured_league_id
+            and normalized_name(row.get("league_name")) == normalized_name(EXPECTED_LEAGUE_NAME)
+        ]
+        if len(matching) == 1:
+            anchor = matching[0]
+            access_status["configured_alias_resolution"] = "resolved_via_user_league_enumeration"
+
+    baseline = build_committed_baseline()
+    known_access: dict[str, str] = {}
+    for known in baseline["seasons"]:
+        key = known["league_key"]
+        if key in discovered:
+            known_access[key] = "available_via_user_enumeration"
+            continue
+        try:
+            rows = extract_leagues(client.get(f"league/{key}"))
+            if len(rows) == 1:
+                discovered[key] = rows[0]
+                known_access[key] = "succeeded"
+            else:
+                known_access[key] = "unexpected_response"
+        except (requests.RequestException, YahooApiError, ValueError, KeyError) as error:
+            known_access[key] = sanitized_failure_status(error)
+            discovered[key] = {
+                field: known.get(field)
+                for field in (
+                    "season", "game_key", "league_key", "league_id", "league_name",
+                    "number_of_teams", "draft_status", "current_week", "start_date",
+                    "end_date", "start_week", "end_week", "finished",
+                    "previous_league_key", "next_league_key",
+                )
+            }
+
+    chain_anchor = anchor["league_key"] if anchor else "461.l.103926"
+    linked_keys, missing_links = follow_renewals(client, discovered, chain_anchor)
+    baseline_keys = {row["league_key"] for row in baseline["seasons"]}
+    linked_keys = sorted(
+        set(linked_keys) | baseline_keys,
+        key=lambda key: ((discovered.get(key) or {}).get("season") or 0, key),
+    )
 
     verified = []
     for key in linked_keys:
         league = discovered[key]
         if normalized_name(league.get("league_name")) != normalized_name(EXPECTED_LEAGUE_NAME):
             continue
-        capabilities, mappings = probe_capabilities(client, league, franchises)
+        metadata_access = known_access.get(key)
+        if metadata_access and metadata_access.startswith(("http_", "error_")):
+            capabilities = {name: metadata_access for name in CAPABILITY_NAMES}
+            mappings = list(
+                next(
+                    (row.get("team_mappings") or [] for row in baseline["seasons"] if row["league_key"] == key),
+                    [],
+                )
+            )
+        else:
+            capabilities, mappings = probe_capabilities(client, league, franchises)
         league["capabilities"] = capabilities
         league["team_mappings"] = mappings
         league["archive_coverage"] = local_archive_coverage(league.get("season"))
-        verified.append(safe_league(league, verification_status="verified_renewal_chain"))
+        verification = "verified_renewal_chain" if key not in baseline_keys else "verified_repository_and_live_probe"
+        verified.append(safe_league(league, verification_status=verification))
 
     candidates = []
     for row in discovered.values():
@@ -243,7 +324,14 @@ def discover_live(request_delay: float) -> dict[str, Any]:
     payload = {
         "schema_version": SCHEMA_VERSION,
         "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
-        "discovery_status": "complete" if not missing_links else "partial",
+        "discovery_status": (
+            "complete"
+            if anchor is not None and not missing_links
+            else "partial_access_denied"
+            if any(value == "http_403" for value in access_status.values())
+            else "partial"
+        ),
+        "access_status": access_status,
         "expected_league_name": EXPECTED_LEAGUE_NAME,
         "seasons": sorted(verified, key=lambda row: (row.get("season") or 0, row["league_key"])),
         "renew_chain": linked_keys,
@@ -253,6 +341,7 @@ def discover_live(request_delay: float) -> dict[str, Any]:
             "Only the configured authenticated league and explicit renewal links are verified.",
             "Same-name leagues outside that chain remain unresolved candidates.",
             "Capability values report endpoint availability, not complete historical coverage.",
+            "HTTP status labels are sanitized and contain no response body or request URL.",
         ],
     }
     errors = validate_safe_output(payload)
