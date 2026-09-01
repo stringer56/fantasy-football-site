@@ -117,6 +117,9 @@ guessed modern ID, or inferred alias would incorrectly create historical joins.
    generated passages as migrated source prose.
 6. The committed generated Yahoo fallback is from 2025 and is not used as proof
    for any 2021–2024 historical result.
+7. Milestone 10 verifies the Yahoo league key for 2024 through the 2025 renewal
+   metadata, but no weekly 2024 Yahoo archive has been recovered. The curated
+   standings, bracket, and championship sources therefore remain authoritative.
 
 ## Editorial and privacy decisions
 

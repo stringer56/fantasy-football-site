@@ -20,6 +20,11 @@ The source of truth is limited to:
 Rendered HTML, source screenshots, the old Google Site, current Yahoo output,
 and unstructured franchise profile copy are not narrative inputs.
 
+Future reviewed Yahoo backfills may expose publication-gated weekly facts in
+`_data/generated/history/{season}/facts.json`. Milestone 10 does not add those
+files to the narrative input list because no season has complete weekly coverage.
+Milestone 11 may opt in only after coverage and provenance validation pass.
+
 ## Supported and unsupported claims
 
 The generator may state a final standing, record, PF/PA total, complete-season

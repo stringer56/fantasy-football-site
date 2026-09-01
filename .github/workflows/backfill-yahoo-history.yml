@@ -1,0 +1,99 @@
+name: Backfill Yahoo History
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_season:
+        description: First verified Yahoo season to request
+        required: true
+        default: "2024"
+      end_season:
+        description: Last verified Yahoo season to request
+        required: true
+        default: "2025"
+      include_rosters:
+        description: Fetch each historical weekly roster
+        required: true
+        type: boolean
+        default: false
+      include_player_stats:
+        description: Request weekly fantasy points with rosters
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: yahoo-history-backfill-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install pinned dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements.txt
+
+      - name: Validate offline history code
+        run: |
+          python -m unittest discover -s tests -v
+          python scripts/discover_yahoo_history.py --dry-run --check
+          python scripts/validate_yahoo_history.py
+
+      - name: Create sanitized backfill workspace
+        run: mkdir -p _backfill-output
+
+      - name: Discover Yahoo renewal candidates
+        env:
+          YAHOO_CLIENT_ID: ${{ secrets.YAHOO_CLIENT_ID }}
+          YAHOO_CLIENT_SECRET: ${{ secrets.YAHOO_CLIENT_SECRET }}
+          YAHOO_REFRESH_TOKEN: ${{ secrets.YAHOO_REFRESH_TOKEN }}
+          LEAGUE_KEY: ${{ secrets.LEAGUE_KEY }}
+        run: >-
+          python scripts/discover_yahoo_history.py
+          --start-season "${{ inputs.start_season }}"
+          --end-season "${{ inputs.end_season }}"
+          --output _backfill-output/yahoo_history_manifest.json
+
+      - name: Backfill sanitized weekly history
+        env:
+          YAHOO_CLIENT_ID: ${{ secrets.YAHOO_CLIENT_ID }}
+          YAHOO_CLIENT_SECRET: ${{ secrets.YAHOO_CLIENT_SECRET }}
+          YAHOO_REFRESH_TOKEN: ${{ secrets.YAHOO_REFRESH_TOKEN }}
+        run: >-
+          python scripts/backfill_yahoo_history.py
+          --start-season "${{ inputs.start_season }}"
+          --end-season "${{ inputs.end_season }}"
+          --output-root _backfill-output/history
+          --head-to-head-output _backfill-output/head_to_head.json
+          --resume
+          ${{ inputs.include_rosters && '--include-rosters' || '' }}
+          ${{ inputs.include_player_stats && '--include-player-stats' || '' }}
+
+      - name: Validate sanitized backfill artifact
+        run: >-
+          python scripts/validate_yahoo_history.py
+          --manifest _backfill-output/yahoo_history_manifest.json
+          --history-root _backfill-output/history
+          --head-to-head _backfill-output/head_to_head.json
+
+      - name: Upload review-only sanitized archive
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: yahoo-history-backfill-${{ inputs.start_season }}-${{ inputs.end_season }}
+          path: _backfill-output
+          if-no-files-found: ignore
+          retention-days: 7

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-31T00:00:00Z",
+  "status": "partial",
+  "verified_leagues": [
+    {
+      "season": 2024,
+      "game_key": "449",
+      "league_key": "449.l.761310",
+      "league_id": "761310",
+      "previous_league_key": null,
+      "next_league_key": "461.l.103926",
+      "source_type": "yahoo_renewal_metadata"
+    },
+    {
+      "season": 2025,
+      "game_key": "461",
+      "league_key": "461.l.103926",
+      "league_id": "103926",
+      "previous_league_key": "449.l.761310",
+      "next_league_key": null,
+      "source_type": "sanitized_yahoo_snapshot"
+    }
+  ],
+  "unverified_candidates": [
+    {
+      "season": 2026,
+      "configured_alias": "nfl.l.26455",
+      "league_id": "26455",
+      "status": "authentication_required",
+      "source": "_data/site.yml"
+    }
+  ],
+  "ambiguous_candidates": [],
+  "archive_coverage": {
+    "matchup_seasons": [],
+    "roster_seasons": [],
+    "player_point_seasons": [],
+    "complete_weekly_matchups": 0
+  },
+  "notes": [
+    "Verified league identity does not imply that weekly Yahoo archives have been recovered.",
+    "The configured 2026 alias is not a resolved season-specific league key.",
+    "No ambiguous candidate is promoted into the verified renewal chain."
+  ]
+}

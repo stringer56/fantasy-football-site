@@ -76,3 +76,12 @@ weekly active/bench roster scoring, franchise tenure dates, and mappings for the
 four unresolved historical identities. Each new source should be normalized to
 stable franchise IDs, retain year/week provenance, and pass the records validator
 before any coverage label is upgraded.
+
+## Milestone 10 Yahoo audit
+
+Yahoo league keys are now verified for 2024 and 2025, but no complete weekly
+scoreboard archive was recovered because the live OAuth refresh failed before a
+Fantasy API request. League-key coverage alone does not unlock a record. Weekly
+scores, margins, regular-season streaks, head-to-head totals, and bench scoring
+remain unavailable, and `records.json` is unchanged. See
+[Yahoo Historical Data Coverage](YAHOO_HISTORY_COVERAGE.md).

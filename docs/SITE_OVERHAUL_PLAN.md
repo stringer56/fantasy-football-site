@@ -30,6 +30,15 @@ visual foundation ahead of content migration so franchise, season, and archive
 work can reuse stable presentation patterns. Historical facts and official
 league artwork remain intentionally deferred until verified.
 
+## Milestone 10 implementation update
+
+Milestone 10 separates manual Yahoo historical discovery/backfill from the
+scheduled current-season refresh, preserves the verified 2024→2025 renewal
+link, adds per-season sanitized archive schemas, retry/checkpoint/resume logic,
+and completeness gates for head-to-head, weekly records, streaks, margins, and
+bench scores. No weekly category is published merely because a league key is
+known. Live 2026 verification remains blocked at OAuth token refresh.
+
 ## Audit method and scope limitation
 
 The local working directory contained only `.git` and `AGENTS.md`; it did not contain a checked-out copy of the website. The repository audit was therefore performed against the public `main` branch through GitHub's read-only repository interface. The public Google Site, live GitHub Pages site, public Yahoo league page, and recent public GitHub Actions metadata were also inspected read-only.

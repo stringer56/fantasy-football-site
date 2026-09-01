@@ -1,0 +1,38 @@
+{
+  "fantasy_content": {
+    "team": [
+      [{"team_key": "461.l.103926.t.2"}, {"team_id": "2"}, {"name": "Albany Kneelers"}],
+      {
+        "roster": {
+          "coverage_type": "week",
+          "week": "2",
+          "0": {
+            "players": {
+              "0": {
+                "player": [
+                  [{"player_key": "461.p.1001"}, {"name": {"full": "Starting Player"}}, {"editorial_team_abbr": "BUF"}, {"primary_position": "QB"}],
+                  {"selected_position": {"position": "QB"}},
+                  {"player_points": {"coverage_type": "week", "week": "2", "total": "20.50"}}
+                ]
+              },
+              "1": {
+                "player": [
+                  [{"player_key": "461.p.1002"}, {"name": {"full": "Bench Player"}}, {"editorial_team_abbr": "NYJ"}, {"primary_position": "WR"}],
+                  {"selected_position": {"position": "BN"}},
+                  {"player_points": {"coverage_type": "week", "week": "2", "total": "32.75"}}
+                ]
+              },
+              "2": {
+                "player": [
+                  [{"player_key": "461.p.1003"}, {"name": {"full": "Unscored Bench Player"}}, {"editorial_team_abbr": "MIA"}, {"primary_position": "RB"}],
+                  {"selected_position": {"position": "BN"}}
+                ]
+              },
+              "count": 3
+            }
+          }
+        }
+      }
+    ]
+  }
+}

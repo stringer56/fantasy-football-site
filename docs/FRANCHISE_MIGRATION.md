@@ -130,6 +130,10 @@ After the current Yahoo refresh succeeds, compare the 12 returned team names and
 public manager display names against aliases, then add a `"2026"` entry to each
 confirmed franchise's `team_keys`, `team_ids`, and `team_names` maps.
 
+Milestone 10 attempted that refresh on 2026-09-01. Yahoo returned HTTP 400 while
+refreshing the stored token, before any league or team request. Consequently all
+2026 mappings remain unverified and unchanged.
+
 ## Remaining migration gaps
 
 The source pages do not reliably establish the following, so they remain blank

@@ -1,0 +1,24 @@
+{
+  "fantasy_content": {
+    "users": {
+      "0": {
+        "user": {
+          "games": {
+            "0": {
+              "game": [
+                {"game_key": "461", "season": "2025"},
+                {
+                  "leagues": {
+                    "0": {"league": [{"league_key": "461.l.103926"}, {"league_id": "103926"}, {"name": "Road To Glory FFL"}, {"season": "2025"}, {"renew": "449_761310"}]},
+                    "1": {"league": [{"league_key": "461.l.777777"}, {"league_id": "777777"}, {"name": "Road To Glory FFL"}, {"season": "2025"}]},
+                    "count": 2
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

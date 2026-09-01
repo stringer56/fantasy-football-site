@@ -43,6 +43,9 @@ jobs:
       - name: Check generated recaps
         run: python scripts/build_recaps.py --check
 
+      - name: Check Yahoo history manifest
+        run: python scripts/discover_yahoo_history.py --dry-run --check
+
       - name: Validate repository data
         run: |
           python scripts/validate_public_data.py
@@ -53,6 +56,7 @@ jobs:
           python scripts/validate_records_data.py
           python scripts/validate_votes_data.py
           python scripts/validate_recaps.py
+          python scripts/validate_yahoo_history.py
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
