@@ -27,7 +27,8 @@
         "draft_results": "not_probed",
         "transactions": "not_probed"
       },
-      "team_mappings": []
+      "team_mappings": [],
+      "archive_coverage": null
     },
     {
       "season": 2025,
@@ -149,7 +150,19 @@
           "status": "verified",
           "basis": "season_team_key"
         }
-      ]
+      ],
+      "archive_coverage": {
+        "standings": "complete_snapshot",
+        "playoffs": "complete_championship_bracket",
+        "playoff_weeks": [
+          14,
+          15,
+          16
+        ],
+        "scored_playoff_games": 7,
+        "playoff_byes": 2,
+        "source_file": "_data/generated/history/2025/playoffs.json"
+      }
     }
   ],
   "renew_chain": [

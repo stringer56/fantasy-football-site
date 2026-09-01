@@ -286,6 +286,7 @@ def safe_league(row: Mapping[str, Any], *, verification_status: str) -> dict[str
             for name in CAPABILITY_NAMES
         },
         "team_mappings": list(row.get("team_mappings") or []),
+        "archive_coverage": row.get("archive_coverage"),
     }
 
 
@@ -310,4 +311,3 @@ def validate_safe_output(payload: Any) -> list[str]:
 
     inspect(payload, "root")
     return errors
-

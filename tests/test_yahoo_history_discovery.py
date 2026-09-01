@@ -11,7 +11,7 @@ SCRIPTS = ROOT / "scripts"
 if str(SCRIPTS) not in sys.path:
     sys.path.insert(0, str(SCRIPTS))
 
-from discover_yahoo_history import build_committed_baseline  # noqa: E402
+from discover_yahoo_history import build_committed_baseline, local_archive_coverage  # noqa: E402
 from yahoo_history_discovery import (  # noqa: E402
     extract_games,
     extract_leagues,
@@ -128,6 +128,28 @@ class YahooHistoryDiscoveryTests(unittest.TestCase):
         mappings = first["seasons"][1]["team_mappings"]
         self.assertEqual(len(mappings), 12)
         self.assertTrue(all(row["status"] == "verified" for row in mappings))
+
+    def test_commissioner_confirmed_2025_playoffs_are_complete_and_safe(self):
+        path = ROOT / "_data" / "generated" / "history" / "2025" / "playoffs.json"
+        playoffs = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(validate_safe_output(playoffs), [])
+        self.assertEqual(playoffs["coverage"]["status"], "complete_championship_playoff_bracket")
+        self.assertEqual(len(playoffs["games"]), 7)
+        self.assertEqual(len(playoffs["byes"]), 2)
+        final = next(game for game in playoffs["games"] if game["round"] == "Championship")
+        self.assertEqual(final["winner_franchise_id"], "greendale-human-beings")
+        self.assertEqual(final["team_one"]["score"], 107.12)
+        self.assertEqual(final["team_two"]["score"], 106.72)
+        self.assertEqual([row["place"] for row in playoffs["final_placements"]], list(range(1, 7)))
+        participants = {
+            side["franchise_id"]
+            for game in playoffs["games"]
+            for side in (game["team_one"], game["team_two"])
+        }
+        self.assertEqual(len(participants), 6)
+        coverage = local_archive_coverage(2025)
+        self.assertEqual(coverage["scored_playoff_games"], 7)
+        self.assertEqual(coverage["source_file"], "_data/generated/history/2025/playoffs.json")
 
 
 if __name__ == "__main__":

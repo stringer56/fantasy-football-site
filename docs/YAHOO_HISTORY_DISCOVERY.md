@@ -54,7 +54,7 @@ does not mean Yahoo lacks the resource.
 | Season | Metadata | Teams | Standings | Weekly matchups | Final playoff matchups | Rosters | Draft results | Transactions |
 |---:|---|---|---|---|---|---|---|---|
 | 2024 | Not probed | Not probed | Not probed | Not probed | Not probed | Not probed | Not probed | Not probed |
-| 2025 | Available snapshot | Available snapshot | Available snapshot | Single-week (week 16) snapshot only | Available week 16 snapshot | Single-week snapshot only | Not probed | Not probed |
+| 2025 | Available snapshot | Available snapshot | Available snapshot | Complete playoff Weeks 14–16 supplied; regular-season weeks not recovered | Complete seven-game bracket plus two byes | Single-week snapshot only | Not probed | Not probed |
 | 2026 | Authentication required | Authentication required | Authentication required | Authentication required | Authentication required | Authentication required | Authentication required | Authentication required |
 
 On a successful authenticated run, the discovery job probes league metadata,
@@ -98,6 +98,27 @@ No 2024 or 2026 team list was recovered in this milestone. Those season joins,
 the two retired-franchise Yahoo histories, and any older Yahoo identities remain
 unresolved. The script leaves unmatched or ambiguous historical names with a
 null candidate franchise ID instead of using owner/name similarity as a guess.
+
+## Commissioner-confirmed 2025 playoff archive
+
+The commissioner supplied the public Yahoo results for the complete 2025
+championship playoff bracket. They are normalized in
+`_data/generated/history/2025/playoffs.json` rather than folded into the
+current-week matchup snapshot.
+
+- Week 14: New Jersey Giants defeated Van Cortlant Rangers 125.96–113.44;
+  Ayahuasca Rush defeated Maine Moose 75.26–51.92. Greendale and Albany had
+  verified byes.
+- Week 15: Greendale defeated New Jersey 159.06–134.52; Albany defeated
+  Ayahuasca 159.92–86.84. Van Cortlant won the fifth-place game 136.26–110.20.
+- Week 16: Greendale defeated Albany 107.12–106.72 for the championship;
+  Ayahuasca defeated New Jersey 144.58–103.26 for third place.
+
+The archive records seven scored games, two byes, and final places one through
+six. All six participants resolve through their verified 2025 Yahoo team keys.
+Placement games are explicitly classified so future playoff-win leaderboards
+can decide whether to include them rather than silently mixing them with the
+championship bracket.
 
 ## Discovery and publication flow
 

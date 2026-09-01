@@ -87,6 +87,23 @@ def load_franchises() -> list[dict[str, Any]]:
     return list(payload.get("franchises") or [])
 
 
+def local_archive_coverage(season: int | None) -> dict[str, Any] | None:
+    if season is None:
+        return None
+    path = ROOT / "_data" / "generated" / "history" / str(season) / "playoffs.json"
+    if not path.is_file():
+        return None
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    coverage = payload.get("coverage") or {}
+    return {
+        "playoffs": coverage.get("status"),
+        "playoff_weeks": list(coverage.get("weeks") or []),
+        "scored_playoff_games": coverage.get("scored_games"),
+        "playoff_byes": coverage.get("byes"),
+        "source_file": path.relative_to(ROOT).as_posix(),
+    }
+
+
 def entity_count(payload: Any, entity: str) -> int:
     return sum(1 for _ in walk_named(payload, entity))
 
@@ -213,6 +230,7 @@ def discover_live(request_delay: float) -> dict[str, Any]:
         capabilities, mappings = probe_capabilities(client, league, franchises)
         league["capabilities"] = capabilities
         league["team_mappings"] = mappings
+        league["archive_coverage"] = local_archive_coverage(league.get("season"))
         verified.append(safe_league(league, verification_status="verified_renewal_chain"))
 
     candidates = []
@@ -277,6 +295,7 @@ def build_committed_baseline() -> dict[str, Any]:
         "verification_status": "verified_from_2025_renew_metadata",
         "capabilities": dict(base_capabilities),
         "team_mappings": [],
+        "archive_coverage": None,
     }
     season_2025 = {
         "season": 2025,
@@ -301,6 +320,14 @@ def build_committed_baseline() -> dict[str, Any]:
             "rosters": "single_week_snapshot_only",
         },
         "team_mappings": sorted(mappings, key=lambda row: row["yahoo_team_key"] or ""),
+        "archive_coverage": {
+            "standings": "complete_snapshot",
+            "playoffs": "complete_championship_bracket",
+            "playoff_weeks": [14, 15, 16],
+            "scored_playoff_games": 7,
+            "playoff_byes": 2,
+            "source_file": "_data/generated/history/2025/playoffs.json",
+        },
     }
     payload = {
         "schema_version": SCHEMA_VERSION,

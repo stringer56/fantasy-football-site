@@ -193,3 +193,9 @@ and season-scoped Yahoo-team-to-franchise mapping results. Unresolved candidate
 leagues and teams remain explicitly unresolved. OAuth data, account identifiers,
 invitation data, raw Yahoo responses, and authorization headers are prohibited.
 See [Yahoo Historical League Discovery](YAHOO_HISTORY_DISCOVERY.md).
+
+Sanitized recovered season data is stored in small per-season files below
+`_data/generated/history/{season}/`. The 2025 playoff archive preserves scored
+games, byes, bracket/placement classification, final placements, canonical
+franchise mappings, coverage, and public-source provenance without copying raw
+Yahoo responses.
