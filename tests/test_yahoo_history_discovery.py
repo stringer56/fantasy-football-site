@@ -133,6 +133,11 @@ class YahooHistoryDiscoveryTests(unittest.TestCase):
         self.assertEqual([row["season"] for row in first["seasons"]], [2024, 2025])
         self.assertEqual(first["access_status"]["oauth_refresh"], "succeeded")
         self.assertEqual(first["access_status"]["user_game_league_enumeration"], "http_403")
+        self.assertEqual(
+            [row["operation"] for row in first["authorization_probes"]],
+            ["authenticated_user_fantasy_resource"],
+        )
+        self.assertFalse(first["authorization_probes"][0]["success"])
         self.assertTrue(all(
             value == "http_403"
             for season in first["seasons"]
@@ -144,21 +149,47 @@ class YahooHistoryDiscoveryTests(unittest.TestCase):
 
     def test_api_http_failures_are_sanitized(self):
         response = Mock(status_code=403, headers={"Content-Type": "application/json"})
+        response.json.return_value = {
+            "fantasy_content": {
+                "error": {
+                    "code": "ACCOUNT_NOT_AUTHORIZED",
+                    "description": "must never be included",
+                }
+            }
+        }
         response.raise_for_status.side_effect = __import__("requests").HTTPError("unsafe URL")
         with patch("pull_yahoo.requests.get", return_value=response):
             with self.assertRaises(YahooApiError) as raised:
                 get_json("https://example.invalid/private-league-key", "private-token")
-        self.assertEqual(str(raised.exception), "Yahoo Fantasy API request failed with HTTP 403")
+        self.assertEqual(
+            str(raised.exception),
+            "Yahoo Fantasy API request failed with HTTP 403 (ACCOUNT_NOT_AUTHORIZED)",
+        )
         self.assertNotIn("private", str(raised.exception))
+        self.assertNotIn("description", str(raised.exception))
+        self.assertEqual(raised.exception.error_code, "ACCOUNT_NOT_AUTHORIZED")
         self.assertEqual(sanitized_failure_status(raised.exception), "http_403")
 
     def test_oauth_http_failures_are_sanitized(self):
         response = Mock(status_code=400)
+        response.json.return_value = {"error": "invalid_grant"}
         response.raise_for_status.side_effect = __import__("requests").HTTPError("unsafe body")
         with patch("pull_yahoo.requests.post", return_value=response):
             with self.assertRaises(YahooApiError) as raised:
                 refresh_access_token("client", "secret", "refresh")
         self.assertEqual(str(raised.exception), "Yahoo OAuth token refresh failed with HTTP 400")
+
+    def test_non_allowlisted_error_text_is_not_retained(self):
+        response = Mock(status_code=403, headers={"Content-Type": "application/json"})
+        response.json.return_value = {
+            "error": {"code": "contains spaces and secret material"}
+        }
+        response.raise_for_status.side_effect = __import__("requests").HTTPError("unsafe")
+        with patch("pull_yahoo.requests.get", return_value=response):
+            with self.assertRaises(YahooApiError) as raised:
+                get_json("https://example.invalid/private", "private-token")
+        self.assertIsNone(raised.exception.error_code)
+        self.assertEqual(str(raised.exception), "Yahoo Fantasy API request failed with HTTP 403")
 
     def test_commissioner_confirmed_2025_playoffs_are_complete_and_safe(self):
         path = ROOT / "_data" / "generated" / "history" / "2025" / "playoffs.json"

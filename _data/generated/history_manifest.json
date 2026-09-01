@@ -7,6 +7,14 @@
     "user_game_league_enumeration": "http_403",
     "configured_alias_resolution": "http_403"
   },
+  "authorization_probes": [
+    {
+      "operation": "authenticated_user_fantasy_resource",
+      "success": false,
+      "http_status": 403,
+      "error_code": null
+    }
+  ],
   "expected_league_name": "Road To Glory FFL",
   "seasons": [
     {

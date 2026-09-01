@@ -123,6 +123,74 @@ def sanitized_failure_status(error: Exception) -> str:
     return f"error_{type(error).__name__.casefold()}"
 
 
+def authorization_probe(
+    client: YahooDiscoveryClient,
+    operation: str,
+    resource: str,
+) -> tuple[dict[str, Any], dict[str, Any] | None]:
+    """Run one ordered authorization probe and retain only safe diagnostics."""
+
+    try:
+        payload = client.get(resource)
+    except (requests.RequestException, YahooApiError, ValueError, KeyError) as error:
+        status_code = (
+            error.status_code
+            if isinstance(error, YahooApiError)
+            else error.response.status_code
+            if isinstance(error, requests.RequestException) and error.response is not None
+            else None
+        )
+        return ({
+            "operation": operation,
+            "success": False,
+            "http_status": status_code,
+            "error_code": error.error_code if isinstance(error, YahooApiError) else None,
+        }, None)
+    return ({
+        "operation": operation,
+        "success": True,
+        "http_status": 200,
+        "error_code": None,
+    }, payload)
+
+
+def stopped_authorization_manifest(
+    *,
+    probes: list[dict[str, Any]],
+    access_status: dict[str, str],
+    failed_operation: str,
+) -> dict[str, Any]:
+    """Preserve repository evidence while honoring the no-enumeration stop rule."""
+
+    payload = json.loads(json.dumps(build_committed_baseline()))
+    payload["generated_at"] = (
+        datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    )
+    payload["discovery_status"] = "authorization_blocked"
+    payload["access_status"] = access_status
+    payload["authorization_probes"] = probes
+    for season in payload["seasons"]:
+        season["verification_status"] = "verified_repository_evidence_live_retest_blocked"
+        season["capabilities"] = {
+            name: "not_tested_due_authorization_stop" for name in CAPABILITY_NAMES
+        }
+    payload["unresolved_candidates"] = [{
+        "season": 2026,
+        "configured_alias": "nfl.l.26455",
+        "verification_status": "not_tested_due_authorization_stop",
+    }]
+    payload["notes"] = [
+        f"Live retest stopped after {failed_operation} failed, as required by the authorization stop rule.",
+        "No later Yahoo Fantasy resources or historical leagues were enumerated in this run.",
+        "Only HTTP status and an allowlisted Yahoo error code, when available, were retained.",
+        "Previously verified 2024 and 2025 repository evidence remains preserved.",
+    ]
+    errors = validate_safe_output(payload)
+    if errors:
+        raise RuntimeError("Unsafe stopped discovery output rejected: " + "; ".join(errors))
+    return payload
+
+
 def probe(
     client: YahooDiscoveryClient,
     resource: str,
@@ -226,6 +294,58 @@ def discover_live(request_delay: float) -> dict[str, Any]:
     client = YahooDiscoveryClient(token, request_delay=request_delay)
     franchises = load_franchises()
     access_status: dict[str, str] = {"oauth_refresh": "succeeded"}
+    authorization_probes: list[dict[str, Any]] = []
+
+    user_probe, _ = authorization_probe(
+        client,
+        "authenticated_user_fantasy_resource",
+        "users;use_login=1/games",
+    )
+    authorization_probes.append(user_probe)
+    access_status["authenticated_user_fantasy_resource"] = (
+        "succeeded" if user_probe["success"] else f"http_{user_probe['http_status']}"
+    )
+    if not user_probe["success"]:
+        return stopped_authorization_manifest(
+            probes=authorization_probes,
+            access_status={
+                **access_status,
+                "nfl_fantasy_game_resource": "not_tested_due_stop_rule",
+                "configured_alias_resolution": "not_tested_due_stop_rule",
+                "historical_enumeration": "not_tested_due_stop_rule",
+            },
+            failed_operation="authenticated_user_fantasy_resource",
+        )
+
+    game_probe, _ = authorization_probe(
+        client,
+        "nfl_fantasy_game_resource",
+        "game/nfl",
+    )
+    authorization_probes.append(game_probe)
+    access_status["nfl_fantasy_game_resource"] = (
+        "succeeded" if game_probe["success"] else f"http_{game_probe['http_status']}"
+    )
+    if not game_probe["success"]:
+        return stopped_authorization_manifest(
+            probes=authorization_probes,
+            access_status={
+                **access_status,
+                "configured_alias_resolution": "not_tested_due_stop_rule",
+                "historical_enumeration": "not_tested_due_stop_rule",
+            },
+            failed_operation="nfl_fantasy_game_resource",
+        )
+
+    ordered_league_probes = (
+        ("configured_current_league", f"league/{environment['LEAGUE_KEY']}"),
+        ("verified_2025_league", "league/461.l.103926"),
+        ("verified_2024_league", "league/449.l.761310"),
+    )
+    for operation, resource in ordered_league_probes:
+        result, _ = authorization_probe(client, operation, resource)
+        authorization_probes.append(result)
+
     try:
         discovered = fetch_account_leagues(client)
         access_status["user_game_league_enumeration"] = "succeeded"
@@ -338,6 +458,7 @@ def discover_live(request_delay: float) -> dict[str, Any]:
             else "partial"
         ),
         "access_status": access_status,
+        "authorization_probes": authorization_probes,
         "expected_league_name": EXPECTED_LEAGUE_NAME,
         "seasons": sorted(verified, key=lambda row: (row.get("season") or 0, row["league_key"])),
         "renew_chain": linked_keys,
@@ -425,6 +546,14 @@ def build_committed_baseline() -> dict[str, Any]:
             "user_game_league_enumeration": "http_403",
             "configured_alias_resolution": "http_403",
         },
+        "authorization_probes": [
+            {
+                "operation": "authenticated_user_fantasy_resource",
+                "success": False,
+                "http_status": 403,
+                "error_code": None,
+            }
+        ],
         "expected_league_name": EXPECTED_LEAGUE_NAME,
         "seasons": [season_2024, season_2025],
         "renew_chain": ["449.l.761310", "461.l.103926"],
