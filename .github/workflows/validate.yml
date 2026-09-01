@@ -40,6 +40,9 @@ jobs:
       - name: Check generated records
         run: python scripts/build_records.py --check
 
+      - name: Check generated recaps
+        run: python scripts/build_recaps.py --check
+
       - name: Validate repository data
         run: |
           python scripts/validate_public_data.py
@@ -49,6 +52,7 @@ jobs:
           python scripts/validate_draft_data.py
           python scripts/validate_records_data.py
           python scripts/validate_votes_data.py
+          python scripts/validate_recaps.py
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1

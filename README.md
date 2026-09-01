@@ -27,6 +27,8 @@ python scripts/validate_draft_data.py
 python scripts/build_records.py --check
 python scripts/validate_records_data.py
 python scripts/validate_votes_data.py
+python scripts/build_recaps.py --check
+python scripts/validate_recaps.py
 ```
 
 Run a GitHub Pages-compatible build when Ruby and Bundler are installed:
@@ -55,3 +57,6 @@ Record coverage, exclusions, and publication rules are documented in
 The free Google Forms collection boundary, sanitization workflow, deadline
 limitations, and duplicate-ballot policy are documented in
 [Voting Architecture](docs/VOTING_ARCHITECTURE.md).
+Deterministic season, team, playoff, and championship storytelling plus the
+commissioner override workflow are documented in
+[Historical Narrative System](docs/NARRATIVE_SYSTEM.md).

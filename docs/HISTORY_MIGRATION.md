@@ -111,9 +111,10 @@ guessed modern ID, or inferred alias would incorrectly create historical joins.
    matchup captures are structured.
 4. No third-place or consolation game result is shown. Final standings include
    third-place finishers, but no unshown game is created.
-5. The source does not provide written overall-season, playoff-game, championship,
-   or team mini-recaps. The layouts include honest structural sections and source
-   images, not generated narrative.
+5. The source does not provide written overall-season, playoff-game,
+   championship, or team mini-recaps. Milestone 9 now derives conservative
+   narrative from the verified structured results; it does not present those
+   generated passages as migrated source prose.
 6. The committed generated Yahoo fallback is from 2025 and is not used as proof
    for any 2021–2024 historical result.
 
@@ -139,6 +140,9 @@ player-history model in this milestone.
 This structure leaves future narrative fields optional. Commissioner-approved
 story copy, game recaps, and team mini-recaps can be added without duplicating
 the standings or champion records.
+
+Milestone 9 implements that separation in `_data/generated/recaps.json` and
+`_data/editorial/recaps.yml`; see [Historical Narrative System](NARRATIVE_SYSTEM.md).
 
 ## Validation
 

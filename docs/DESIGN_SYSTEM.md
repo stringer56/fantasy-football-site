@@ -80,6 +80,23 @@ Voting grids collapse from two columns to one by 768px. Tables keep deliberate
 horizontal scrolling, buttons retain touch-size targets, and matchup identities
 remain side by side inside their card even when the cards themselves stack.
 
+### Historical narrative patterns
+
+- `.narrative-copy` keeps season and championship prose at an editorial reading
+  width with generous line height; `.narrative-provenance` identifies the
+  verified-data source without exposing technical warnings.
+- `.season-number-card` turns only supported canonical facts into a compact
+  scorecard. Partial source confidence receives a restrained gold treatment.
+- `.playoff-recap-card` sits below the structured result grid, preserving the
+  result cards as the primary score source while adding conservative prose.
+- `.team-recap-card` combines identity art, historical name, W–L–T, concise
+  narrative, and a canonical link. Unresolved identities use a neutral marker
+  and never create a profile link.
+
+Number cards use three columns on desktop, two below 900px, and one below
+560px. Team recaps use two columns before stacking at 560px. The sticky season
+subnavigation remains horizontally scrollable rather than shrinking labels.
+
 ## Accessibility and interaction
 
 - Layouts use semantic header, navigation, main, and footer landmarks.

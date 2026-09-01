@@ -1,0 +1,9 @@
+schema_version: 1
+
+# Commissioner-approved prose may be added here without changing the generator.
+# Each override requires status: approved and a text field. Empty lists preserve
+# the deterministic generated narrative.
+season_recaps: []
+team_recaps: []
+playoff_recaps: []
+championship_recaps: []

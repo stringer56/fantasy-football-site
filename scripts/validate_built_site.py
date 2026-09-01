@@ -155,6 +155,7 @@ def main() -> None:
     voting_data = json.loads((ROOT / "_data" / "generated" / "votes.json").read_text(encoding="utf-8"))
     power_data = json.loads((ROOT / "_data" / "generated" / "power_rankings.json").read_text(encoding="utf-8"))
     picks_data = json.loads((ROOT / "_data" / "generated" / "picks.json").read_text(encoding="utf-8"))
+    recaps_data = json.loads((ROOT / "_data" / "generated" / "recaps.json").read_text(encoding="utf-8"))
     if not voting_data["active_polls"] and "No league ballots are open" not in votes_page:
         errors.append("votes hub did not render its intentional no-active-votes state")
     if not power_data["rankings"] and "Voting opens during the season" not in power_page:
@@ -168,11 +169,22 @@ def main() -> None:
     for season in season_data["seasons"]:
         route = f"/history/{season['year']}/"
         rendered = route_target(route).read_text(encoding="utf-8")
-        for expected in ("Final standings", "Playoff Bracket", "Playoff Results", "Championship recap", "Season Recap Index"):
+        for expected in ("Season story", "By the Numbers", "Final standings", "Playoff Bracket", "Playoff Results", "Playoff Round Recaps", "Championship recap", "Season Recaps"):
             if expected not in rendered:
                 errors.append(f"season page {route} is missing: {expected}")
         if rendered.count('class="playoff-result') < 3:
             errors.append(f"season page {route} did not render playoff result cards")
+        expected_numbers = sum(item["season"] == season["year"] for item in recaps_data["by_the_numbers"])
+        expected_playoff_recaps = sum(item["season"] == season["year"] for item in recaps_data["playoff_recaps"])
+        expected_team_recaps = sum(item["season"] == season["year"] for item in recaps_data["team_recaps"])
+        if rendered.count('class="season-number-card') != expected_numbers:
+            errors.append(f"season page {route} did not render every supported By the Numbers card")
+        if rendered.count('class="playoff-recap-card"') != expected_playoff_recaps:
+            errors.append(f"season page {route} did not render every playoff recap")
+        if rendered.count('class="team-recap-card"') != expected_team_recaps:
+            errors.append(f"season page {route} did not render every team recap")
+        if "Generated from verified league results." not in rendered:
+            errors.append(f"season page {route} is missing the narrative provenance label")
         if f"/drafts/{season['year']}/" not in rendered:
             errors.append(f"season page {route} does not link to its draft")
     for draft in draft_data["drafts"]:
