@@ -29,6 +29,7 @@ python scripts/validate_records_data.py
 python scripts/validate_votes_data.py
 python scripts/build_recaps.py --check
 python scripts/validate_recaps.py
+python scripts/discover_yahoo_history.py --dry-run --check
 ```
 
 Run a GitHub Pages-compatible build when Ruby and Bundler are installed:
@@ -60,3 +61,6 @@ limitations, and duplicate-ballot policy are documented in
 Deterministic season, team, playoff, and championship storytelling plus the
 commissioner override workflow are documented in
 [Historical Narrative System](docs/NARRATIVE_SYSTEM.md).
+The manual, sanitized Yahoo renewal-chain and resource-capability workflow is
+documented in
+[Yahoo Historical League Discovery](docs/YAHOO_HISTORY_DISCOVERY.md).

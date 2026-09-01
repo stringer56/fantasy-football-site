@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-31T00:00:00Z",
+  "discovery_status": "partial_authentication_required",
+  "expected_league_name": "Road To Glory FFL",
+  "seasons": [
+    {
+      "season": 2024,
+      "game_key": "449",
+      "league_key": "449.l.761310",
+      "league_id": "761310",
+      "league_name": "Road To Glory FFL",
+      "number_of_teams": null,
+      "start_date": null,
+      "end_date": null,
+      "finished": true,
+      "previous_league_key": null,
+      "next_league_key": "461.l.103926",
+      "verification_status": "verified_from_2025_renew_metadata",
+      "capabilities": {
+        "league_metadata": "not_probed",
+        "teams": "not_probed",
+        "standings": "not_probed",
+        "weekly_matchups": "not_probed",
+        "final_playoff_matchups": "not_probed",
+        "rosters": "not_probed",
+        "draft_results": "not_probed",
+        "transactions": "not_probed"
+      },
+      "team_mappings": []
+    },
+    {
+      "season": 2025,
+      "game_key": "461",
+      "league_key": "461.l.103926",
+      "league_id": "103926",
+      "league_name": "Road To Glory FFL",
+      "number_of_teams": 12,
+      "start_date": "2025-09-04",
+      "end_date": "2025-12-22",
+      "finished": true,
+      "previous_league_key": "449.l.761310",
+      "next_league_key": null,
+      "verification_status": "verified_from_sanitized_snapshot",
+      "capabilities": {
+        "league_metadata": "available_snapshot",
+        "teams": "available_snapshot",
+        "standings": "available_snapshot",
+        "weekly_matchups": "single_week_snapshot_only",
+        "final_playoff_matchups": "available_snapshot",
+        "rosters": "single_week_snapshot_only",
+        "draft_results": "not_probed",
+        "transactions": "not_probed"
+      },
+      "team_mappings": [
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.1",
+          "yahoo_team_name": "Van Cortlant Rangers",
+          "candidate_franchise_id": "van-cortlant-rangers",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.10",
+          "yahoo_team_name": "Turnbull AC’s",
+          "candidate_franchise_id": "turnbull-acs",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.11",
+          "yahoo_team_name": "Vegas Vandals",
+          "candidate_franchise_id": "vegas-vandals",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.12",
+          "yahoo_team_name": "New Jersey Giants",
+          "candidate_franchise_id": "new-jersey-giants",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.2",
+          "yahoo_team_name": "Albany Kneelers",
+          "candidate_franchise_id": "albany-kneelers",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.3",
+          "yahoo_team_name": "Ayahuasca Rush",
+          "candidate_franchise_id": "ayahuasca-rush",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.4",
+          "yahoo_team_name": "Buffalo Bravados",
+          "candidate_franchise_id": "buffalo-bravado",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.5",
+          "yahoo_team_name": "Chris's Crazy Team",
+          "candidate_franchise_id": "crazy-wazs-team",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.6",
+          "yahoo_team_name": "Greendale Human Beings",
+          "candidate_franchise_id": "greendale-human-beings",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.7",
+          "yahoo_team_name": "Maine Moose",
+          "candidate_franchise_id": "maine-moose",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.8",
+          "yahoo_team_name": "North town Ninnyhammers",
+          "candidate_franchise_id": "north-town-ninnyhammers",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.9",
+          "yahoo_team_name": "The Baseball Furies",
+          "candidate_franchise_id": "baseball-furies",
+          "status": "verified",
+          "basis": "season_team_key"
+        }
+      ]
+    }
+  ],
+  "renew_chain": [
+    "449.l.761310",
+    "461.l.103926"
+  ],
+  "unresolved_candidates": [
+    {
+      "season": 2026,
+      "configured_alias": "nfl.l.26455",
+      "verification_status": "authentication_required"
+    }
+  ],
+  "missing_renewal_links": [],
+  "notes": [
+    "The committed baseline contains only previously sanitized repository evidence.",
+    "A live authenticated discovery has not completed because Yahoo token refresh returns HTTP 400.",
+    "Capability values marked not_probed are not evidence of unavailability."
+  ]
+}

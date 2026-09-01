@@ -183,3 +183,13 @@ Every narrative carries `season`, `source_files`, `generated_at`,
 public text, and a public provenance label. Approved overrides remain separate
 from generated prose and survive regeneration. Unresolved identities keep null
 franchise routes. See [Historical Narrative System](NARRATIVE_SYSTEM.md).
+
+### `history_manifest.json`
+
+Contains the sanitized output of the manual Yahoo historical discovery job:
+`generated_at`, `discovery_status`, verified season/game/league keys, safe
+league metadata, explicit renewal relationships, endpoint capability states,
+and season-scoped Yahoo-team-to-franchise mapping results. Unresolved candidate
+leagues and teams remain explicitly unresolved. OAuth data, account identifiers,
+invitation data, raw Yahoo responses, and authorization headers are prohibited.
+See [Yahoo Historical League Discovery](YAHOO_HISTORY_DISCOVERY.md).
