@@ -81,7 +81,14 @@ editorial decisions, and unresolved fields.
   `franchise_id: null` and `mapping_status: unresolved`. Image-only selections
   remain `picks: null` with `pick_data_status: image_only_unverified` until an
   authoritative export can be checked. See [Draft Migration](DRAFT_MIGRATION.md).
-- `records.yml`: typed record definitions and ranked entries with provenance.
+- `records.yml`: typed coverage definitions for career, season, playoff, game,
+  streak, and bench domains. Every category declares its output type,
+  `coverage_status`, whether calculation is allowed, source type/years/files,
+  and notes. The empty `bench_blunder_schema` fixes the future entry shape
+  without publishing invented rows. `scripts/build_records.py` reads these
+  definitions and the canonical historical files to create the sanitized
+  `_data/generated/records.json`; see
+  [Records Data Coverage](RECORDS_DATA_COVERAGE.md).
 - `votes.yml`: poll metadata, options, static result snapshots, and timestamps.
 
 Unmigrated domains retain empty arrays. Season, champion, and playoff values are
@@ -132,3 +139,12 @@ injury/status designation when supplied by Yahoo.
 
 Contains `schema_version`, `updated`, and valid article `items`. Feed failures
 are logged in Actions and are never stored as public headlines.
+
+### `records.json`
+
+Contains deterministic record-book output: `generated_at`, archive coverage,
+typed leaderboards, single-season records, unavailable-category states, and an
+empty bench-blunder structure. Every published group carries `source_type`,
+`source_years`, `source_files`, `coverage_status`, `last_generated`, and notes.
+Partial groups use the label `Verified 2021–2024`; unavailable groups contain no
+record values.

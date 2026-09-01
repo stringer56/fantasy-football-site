@@ -17,6 +17,7 @@ REQUIRED_FILES = {
     "standings.json",
     "matchups.json",
     "rosters.json",
+    "records.json",
 }
 FORBIDDEN_KEYS = {
     "access_token",
