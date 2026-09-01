@@ -26,6 +26,22 @@ control the custom page presentation.
 Includes remain intentionally coarse-grained. One-off editorial compositions,
 such as the homepage hero and Brew Crew Cup feature, stay in the page template.
 
+### Draft archive patterns
+
+- `.draft-season-card` pairs a cropped source-result preview with compact year,
+  team-count, and round-count metadata on the newest-first archive.
+- `.draft-order-entry` uses a large opening slot, canonical identity art, the
+  exact historical team name, and a quieter canonical-name line. Unresolved
+  identities replace the image with a neutral marker and never create a link.
+- `.draft-results-gallery` preserves dense source images at full width and links
+  every capture to its original-size local file.
+- `.draft-analysis-hooks` reserves future analysis regions without presenting
+  unavailable calculations as content.
+
+At mobile widths, archive cards and draft-order entries collapse to one column;
+long historical names may wrap, and dense result images remain available through
+their full-size links rather than being downscaled into illegibility.
+
 ## Accessibility and interaction
 
 - Layouts use semantic header, navigation, main, and footer landmarks.

@@ -462,6 +462,63 @@ a:hover { color: var(--navy-900); }
 .team-recap-grid h3 { margin: var(--space-2) 0; color: var(--navy-900); font-size: .95rem; }
 .team-recap-grid p { margin: 0; color: var(--slate-600); font-size: .78rem; }
 
+/* Draft archive */
+.draft-archive { padding-block: clamp(3.5rem, 7vw, 6.5rem); }
+.draft-archive-grid { display: grid; gap: var(--space-6); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.draft-season-card { display: grid; min-width: 0; overflow: hidden; border: 1px solid var(--slate-200); background: var(--white); grid-template-columns: minmax(11rem, .8fr) minmax(0, 1.2fr); box-shadow: var(--shadow-sm); }
+.draft-season-card__image { position: relative; display: block; min-height: 21rem; overflow: hidden; background: var(--navy-900); }
+.draft-season-card__image::after { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(5, 13, 24, .82), transparent 62%); content: ""; }
+.draft-season-card__image img { width: 100%; height: 100%; object-fit: cover; object-position: left top; transition: transform .25s ease; }
+.draft-season-card__image:hover img { transform: scale(1.02); }
+.draft-season-card__image > span { position: absolute; z-index: 1; bottom: var(--space-5); left: var(--space-5); color: var(--gold-300); font-family: var(--font-display); font-size: 3.2rem; line-height: 1; }
+.draft-season-card__body { display: flex; min-width: 0; flex-direction: column; justify-content: center; padding: clamp(1.4rem, 3vw, 2.5rem); }
+.draft-season-card h2 { margin: 0; font-family: var(--font-display); font-size: clamp(2.2rem, 4vw, 3.5rem); line-height: .95; text-transform: uppercase; }
+.draft-season-card h2 a { color: var(--navy-900); text-decoration: none; }
+.draft-season-card dl { display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-5); margin: var(--space-5) 0; }
+.draft-season-card dl div { display: grid; gap: .15rem; }
+.draft-season-card dt { color: var(--slate-600); font-size: .6rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.draft-season-card dd { margin: 0; color: var(--navy-900); font-weight: 900; }
+.draft-hero { position: relative; isolation: isolate; overflow: hidden; background: radial-gradient(circle at 80% 18%, rgba(235, 196, 95, .16), transparent 27rem), linear-gradient(115deg, var(--navy-950), var(--navy-800)); color: var(--white); }
+.draft-hero::before { position: absolute; z-index: -1; right: -2vw; bottom: -7vw; color: rgba(255, 255, 255, .025); content: attr(data-year); font-family: var(--font-display); font-size: 26vw; line-height: .75; }
+.draft-hero__grid { display: grid; min-height: 40rem; align-items: center; gap: clamp(2rem, 7vw, 7rem); grid-template-columns: minmax(0, 1fr) minmax(20rem, .9fr); padding-block: clamp(4rem, 8vw, 7rem); }
+.draft-hero__grid > * { min-width: 0; }
+.draft-hero__year { margin: 0 0 var(--space-3); color: var(--gold-300); font-family: var(--font-display); font-size: clamp(3rem, 7vw, 6rem); line-height: .8; }
+.draft-hero h1 { margin: 0; font-family: var(--font-display); font-size: clamp(4rem, 9vw, 8rem); line-height: .82; text-transform: uppercase; }
+.draft-hero__lede { max-width: 38rem; margin: var(--space-5) 0 0; color: var(--slate-200); font-size: clamp(1rem, 1.6vw, 1.2rem); }
+.draft-hero__facts { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-5); }
+.draft-hero__facts span { display: grid; min-width: 7rem; gap: .15rem; padding: .7rem 1rem; border-left: 3px solid var(--gold-500); background: rgba(255, 255, 255, .07); color: var(--slate-300); font-size: .63rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+.draft-hero__facts strong { color: var(--white); font-size: 1rem; letter-spacing: 0; text-transform: none; }
+.draft-hero__preview { position: relative; display: block; overflow: hidden; width: 100%; aspect-ratio: 1.08; border: 1px solid rgba(235, 196, 95, .5); background: var(--white); box-shadow: var(--shadow-dark); }
+.draft-hero__preview img { width: 100%; height: 100%; object-fit: cover; object-position: left top; }
+.draft-hero__preview > span { position: absolute; right: 0; bottom: 0; left: 0; padding: var(--space-4); background: rgba(5, 13, 24, .92); color: var(--gold-300); font-size: .64rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.draft-order-grid { display: grid; margin: 0; padding: 0; gap: var(--space-3); grid-template-columns: repeat(2, minmax(0, 1fr)); list-style: none; counter-reset: none; }
+.draft-order-entry { display: grid; min-width: 0; min-height: 7.5rem; align-items: center; overflow: hidden; border: 1px solid var(--slate-200); border-left: 4px solid var(--gold-500); background: var(--white); grid-template-columns: 4.5rem 6rem minmax(0, 1fr); box-shadow: var(--shadow-sm); }
+.draft-order-entry__slot { color: var(--navy-900); font-family: var(--font-display); font-size: 2.7rem; text-align: center; }
+.draft-order-entry img, .draft-order-entry__placeholder { width: 6rem; height: 6rem; object-fit: cover; background: var(--slate-100); }
+.draft-order-entry__placeholder { display: grid; place-items: center; color: var(--slate-500); font-family: var(--font-display); font-size: 2rem; }
+.draft-order-entry > div { min-width: 0; padding: var(--space-4); }
+.draft-order-entry a, .draft-order-entry strong { display: block; overflow-wrap: anywhere; color: var(--navy-900); font-size: .95rem; font-weight: 900; line-height: 1.2; }
+.draft-order-entry a { text-decoration-thickness: 1px; text-underline-offset: .18em; }
+.draft-order-entry > div span { display: block; margin-top: var(--space-1); overflow-wrap: anywhere; color: var(--slate-600); font-size: .65rem; }
+.draft-results-gallery { display: grid; gap: var(--space-5); }
+.draft-results-gallery figure { margin: 0; overflow: hidden; border: 1px solid var(--slate-300); background: var(--white); box-shadow: var(--shadow-sm); }
+.draft-results-gallery a, .draft-results-gallery img { display: block; }
+.draft-results-gallery a { overflow-x: auto; }
+.draft-results-gallery img { width: 100%; min-width: min(58rem, 100%); height: auto; }
+.draft-results-gallery figcaption { padding: var(--space-3) var(--space-4); border-top: 1px solid var(--slate-200); color: var(--slate-600); font-size: .68rem; font-weight: 850; letter-spacing: .06em; text-transform: uppercase; }
+.draft-recap { display: grid; align-items: center; gap: var(--space-6); grid-template-columns: minmax(17rem, .7fr) minmax(0, 1.3fr) auto; }
+.draft-recap h2, .draft-notes-grid h2 { margin: 0; color: var(--navy-900); font-family: var(--font-display); font-size: clamp(2.6rem, 5vw, 4.6rem); line-height: .92; text-transform: uppercase; }
+.draft-recap > p { color: var(--slate-600); }
+.draft-notes-grid { display: grid; align-items: start; gap: var(--space-7); grid-template-columns: minmax(17rem, .7fr) minmax(0, 1.3fr); }
+.draft-notes-grid h2 { color: var(--white); }
+.draft-notes-grid ul { display: grid; gap: var(--space-3); margin: 0; padding-left: 1.2rem; color: var(--slate-300); }
+.draft-analysis-hooks { display: grid; gap: var(--space-3); grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.draft-analysis-hooks div { display: grid; min-width: 0; min-height: 8rem; align-content: center; gap: var(--space-1); padding: var(--space-4); border: 1px dashed var(--slate-300); background: var(--slate-100); }
+.draft-analysis-hooks div > span { color: var(--gold-600); font-family: var(--font-display); font-size: 1.5rem; }
+.draft-analysis-hooks strong { color: var(--navy-900); overflow-wrap: anywhere; }
+.draft-analysis-hooks small { color: var(--slate-600); font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; }
+.draft-back-links { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); }
+
 /* Footer */
 .site-footer { border-top: 3px solid var(--gold-500); background: var(--navy-950); color: var(--slate-300); }
 .site-footer__grid { display: grid; min-height: 14rem; align-items: center; gap: var(--space-6); grid-template-columns: minmax(0, 1.2fr) auto auto; padding-block: var(--space-6); }
@@ -486,6 +543,10 @@ a:hover { color: var(--navy-900); }
   .season-archive-grid { grid-template-columns: 1fr; }
   .playoff-results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .championship-feature { grid-template-columns: 1fr; }
+  .draft-archive-grid { grid-template-columns: 1fr; }
+  .draft-hero__grid { gap: var(--space-6); grid-template-columns: minmax(0, 1fr) minmax(18rem, .8fr); }
+  .draft-recap { align-items: start; grid-template-columns: minmax(15rem, .7fr) minmax(0, 1.3fr); }
+  .draft-recap > .text-link { grid-column: 2; }
 }
 
 @media (max-width: 900px) {
@@ -514,6 +575,10 @@ a:hover { color: var(--navy-900); }
   .season-hero__grid { min-height: auto; grid-template-columns: 1fr; }
   .season-hero__identity { width: min(75vw, 28rem); justify-self: start; }
   .team-recap-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .draft-hero__grid { min-height: auto; grid-template-columns: 1fr; }
+  .draft-hero__preview { width: min(100%, 38rem); }
+  .draft-order-grid { grid-template-columns: 1fr; }
+  .draft-analysis-hooks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 768px) {
@@ -533,6 +598,8 @@ a:hover { color: var(--navy-900); }
   .retired-card__image { min-height: 22rem; }
   .history-intro { align-items: start; flex-direction: column; }
   .championship-feature__media { grid-template-columns: 1fr 1.6fr; }
+  .draft-recap, .draft-notes-grid { grid-template-columns: 1fr; }
+  .draft-recap > .text-link { grid-column: auto; }
 }
 
 @media (max-width: 560px) {
@@ -575,6 +642,16 @@ a:hover { color: var(--navy-900); }
   .season-hero h1 { font-size: clamp(3rem, 16vw, 5.2rem); }
   .season-hero__identity { width: 100%; }
   .table-scroll-note { display: block; }
+  .draft-season-card { grid-template-columns: 1fr; }
+  .draft-season-card__image { min-height: auto; aspect-ratio: 1.25; }
+  .draft-hero h1 { font-size: clamp(3rem, 17vw, 5rem); }
+  .draft-hero__preview { aspect-ratio: 1; }
+  .draft-order-entry { min-height: 6.3rem; grid-template-columns: 3.25rem 4.75rem minmax(0, 1fr); }
+  .draft-order-entry__slot { font-size: 2rem; }
+  .draft-order-entry img, .draft-order-entry__placeholder { width: 4.75rem; height: 4.75rem; }
+  .draft-order-entry > div { padding: var(--space-3); }
+  .draft-analysis-hooks { grid-template-columns: 1fr; }
+  .draft-back-links { align-items: start; flex-direction: column; }
 }
 
 @media (prefers-reduced-motion: reduce) {

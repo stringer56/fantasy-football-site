@@ -73,7 +73,14 @@ editorial decisions, and unresolved fields.
   Games include a stable game ID, actual source round, order, seeds, display names,
   optional franchise IDs, nullable scores, winner, and a source note. Unpublished
   scores remain `null`; a third-place or consolation game is absent unless sourced.
-- `drafts.yml`: season, order, picks, recap metadata, and source state.
+- `drafts.yml`: one source-backed draft per year with nullable date/location,
+  observed draft type, round/team counts, ordered opening slots, local result
+  assets, optional board/recap assets, notes, and pick-data status. Each order
+  entry preserves `display_name_that_year`; verified joins use a stable
+  `franchise_id` and `mapping_status: resolved`, while uncertain identities use
+  `franchise_id: null` and `mapping_status: unresolved`. Image-only selections
+  remain `picks: null` with `pick_data_status: image_only_unverified` until an
+  authoritative export can be checked. See [Draft Migration](DRAFT_MIGRATION.md).
 - `records.yml`: typed record definitions and ranked entries with provenance.
 - `votes.yml`: poll metadata, options, static result snapshots, and timestamps.
 

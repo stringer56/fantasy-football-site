@@ -1,0 +1,100 @@
+---
+layout: default
+---
+{% assign draft = site.data.drafts.drafts | where: "year", page.year | first %}
+
+<article class="draft-page">
+  <header class="draft-hero" data-year="{{ draft.year }}">
+    <div class="wrap draft-hero__grid">
+      <div>
+        <p class="eyebrow">Road to Glory draft archive</p>
+        <p class="draft-hero__year">{{ draft.year }}</p>
+        <h1>The Draft</h1>
+        <p class="draft-hero__lede">The verified opening order and all {{ draft.rounds }} rounds of the original published results.</p>
+        <div class="draft-hero__facts" aria-label="Draft facts">
+          <span><strong>{{ draft.team_count }}</strong> teams</span>
+          <span><strong>{{ draft.rounds }}</strong> rounds</span>
+          {% if draft.draft_date %}<span><strong>{{ draft.draft_date | date: "%b %-d" }}</strong> draft date</span>{% endif %}
+          {% if draft.location %}<span><strong>{{ draft.location }}</strong> location</span>{% endif %}
+        </div>
+        <div class="season-hero__actions">
+          <a class="button button--gold" href="#order">Draft order</a>
+          <a class="button button--outline-light" href="#results">Original results</a>
+        </div>
+      </div>
+      <a class="draft-hero__preview" href="{{ draft.results_assets[0].path | relative_url }}">
+        <img src="{{ draft.results_assets[0].path | relative_url }}" alt="{{ draft.results_assets[0].alt }}">
+        <span>Open rounds {{ draft.results_assets[0].rounds }} full size <span aria-hidden="true">↗</span></span>
+      </a>
+    </div>
+  </header>
+
+  <nav class="season-subnav" aria-label="Draft page sections">
+    <div class="wrap"><a href="#order">Order</a><a href="#results">Results</a><a href="#recap">Recap</a><a href="#notes">Notes</a><a href="#analysis">Future analysis</a></div>
+  </nav>
+
+  <section class="shell-content season-section" id="order" aria-labelledby="draft-order-heading">
+    <div class="section-heading">
+      <div><p class="eyebrow">Opening sequence</p><h2 id="draft-order-heading">{{ draft.year }} Draft Order</h2></div>
+      <span class="section-note">Historical names preserved</span>
+    </div>
+    <ol class="draft-order-grid">
+      {% for entry in draft.draft_order %}
+        {% assign franchise = site.data.franchises.franchises | where: "franchise_id", entry.franchise_id | first %}
+        <li class="draft-order-entry">
+          <span class="draft-order-entry__slot" aria-label="Draft slot {{ entry.slot }}">{{ entry.slot }}</span>
+          {% if franchise %}
+            {% if franchise.status == 'retired' %}{% assign franchise_path = '/retired/' | append: franchise.slug | append: '/' %}{% else %}{% assign franchise_path = '/teams/' | append: franchise.slug | append: '/' %}{% endif %}
+            <img src="{{ franchise.branding.identity_image | relative_url }}" alt="">
+            <div><a href="{{ franchise_path | relative_url }}">{{ entry.display_name_that_year }}</a><span>{{ franchise.name }}</span></div>
+          {% else %}
+            <span class="draft-order-entry__placeholder" aria-hidden="true">?</span>
+            <div><strong>{{ entry.display_name_that_year }}</strong><span>Historical identity unresolved</span></div>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <section class="season-section season-section--tint" id="results" aria-labelledby="draft-results-heading">
+    <div class="shell-content">
+      <div class="section-heading">
+        <div><p class="eyebrow">Original source captures</p><h2 id="draft-results-heading">Draft Board &amp; Results</h2></div>
+        <span class="section-note">Select an image to view full size</span>
+      </div>
+      <p class="season-section__intro">These local, full-resolution captures preserve the public Yahoo results exactly as published in the league recap.</p>
+      <div class="draft-results-gallery">
+        {% for asset in draft.results_assets %}
+          <figure>
+            <a href="{{ asset.path | relative_url }}"><img src="{{ asset.path | relative_url }}" alt="{{ asset.alt }}" loading="lazy"></a>
+            <figcaption>Rounds {{ asset.rounds }} · Open full size <span aria-hidden="true">↗</span></figcaption>
+          </figure>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="shell-content season-section draft-recap" id="recap" aria-labelledby="draft-recap-heading">
+    <div><p class="eyebrow">Draft recap</p><h2 id="draft-recap-heading">The source is the recap</h2></div>
+    <p>The original {{ draft.year }} recap page contains the results images above but no written recap. No grades, steals, busts, or reconstructed commentary have been added.</p>
+    <a class="text-link" href="{{ draft.source_url }}" target="_blank" rel="noopener">Open original Google Site page <span aria-hidden="true">↗</span></a>
+  </section>
+
+  <section class="season-section season-section--dark" id="notes" aria-labelledby="draft-notes-heading">
+    <div class="shell-content draft-notes-grid">
+      <div><p class="eyebrow">Historical record</p><h2 id="draft-notes-heading">Verified Notes</h2></div>
+      <ul>{% for note in draft.notes %}<li>{{ note }}</li>{% endfor %}<li>{{ draft.draft_type_note }}</li></ul>
+    </div>
+  </section>
+
+  <section class="shell-content season-section" id="analysis" aria-labelledby="draft-analysis-heading">
+    <div class="section-heading"><div><p class="eyebrow">Foundation only</p><h2 id="draft-analysis-heading">Future Draft Analysis</h2></div><span class="section-note">Not yet calculated</span></div>
+    <p class="season-section__intro">The archive is structured to support commissioner-approved analysis after authoritative pick data is verified.</p>
+    <div class="draft-analysis-hooks" aria-label="Planned draft analysis modules">
+      {% assign analysis_modules = "Best value picks,Draft steals,Draft busts,Team-by-team grades,ADP value,Draft-slot performance" | split: "," %}
+      {% for module in analysis_modules %}<div><span aria-hidden="true">+</span><strong>{{ module }}</strong><small>Data hook reserved</small></div>{% endfor %}
+    </div>
+  </section>
+
+  <nav class="profile-back-nav"><div class="wrap draft-back-links"><a class="text-link" href="{{ '/drafts/' | relative_url }}"><span aria-hidden="true">←</span> Back to Draft Archive</a><a class="text-link" href="{{ '/history/' | append: draft.year | append: '/' | relative_url }}">View {{ draft.year }} season <span aria-hidden="true">→</span></a></div></nav>
+</article>

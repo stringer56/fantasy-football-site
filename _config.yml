@@ -12,6 +12,9 @@ collections:
   seasons:
     output: true
     permalink: /history/:name/
+  drafts:
+    output: true
+    permalink: /drafts/:name/
 defaults:
   - scope:
       path: ""
@@ -23,3 +26,8 @@ defaults:
       type: seasons
     values:
       layout: season
+  - scope:
+      path: ""
+      type: drafts
+    values:
+      layout: draft

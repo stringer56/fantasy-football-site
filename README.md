@@ -21,6 +21,9 @@ Run the offline parser/news tests:
 python -m unittest discover -s tests -v
 python scripts/validate_public_data.py
 python scripts/validate_repository.py
+python scripts/validate_franchise_data.py
+python scripts/validate_history_data.py
+python scripts/validate_draft_data.py
 ```
 
 Run a GitHub Pages-compatible build when Ruby and Bundler are installed:
@@ -40,3 +43,7 @@ See [Yahoo Data Pipeline](docs/YAHOO_DATA_PIPELINE.md),
 component usage are documented in [Design System](docs/DESIGN_SYSTEM.md). The
 Google Site team inventory, editorial decisions, asset provenance, and Yahoo
 identity joins are recorded in [Franchise Migration](docs/FRANCHISE_MIGRATION.md).
+Verified season provenance is recorded in
+[History Migration](docs/HISTORY_MIGRATION.md), and the image-backed draft
+archive and unresolved draft identities are recorded in
+[Draft Migration](docs/DRAFT_MIGRATION.md).
