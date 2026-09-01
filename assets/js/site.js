@@ -11,6 +11,7 @@
   header.classList.add('nav-is-ready');
 
   const setMenuState = (isOpen) => {
+    toggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
     toggle.setAttribute('aria-expanded', String(isOpen));
     header.classList.toggle('nav-is-open', isOpen);
   };

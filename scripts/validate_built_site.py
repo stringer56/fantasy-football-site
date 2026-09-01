@@ -111,6 +111,8 @@ def main() -> None:
     votes_page = route_target("/votes/").read_text(encoding="utf-8")
     power_page = route_target("/votes/power-rankings/").read_text(encoding="utf-8")
     picks_page = route_target("/votes/picks/").read_text(encoding="utf-8")
+    if 'aria-label="Open navigation"' not in votes_page:
+        errors.append("mobile navigation toggle must have an accessible name")
     if teams_page.count('class="franchise-card"') != 12:
         errors.append("teams directory must render exactly 12 active franchise cards")
     if retired_page.count('class="retired-card"') != 2:
