@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "season": 2026,
+  "week": null,
+  "generated_at": null,
+  "source": {
+    "type": "none",
+    "coverage_status": "unavailable",
+    "accepted_ballots": 0,
+    "rejected_ballots": 0,
+    "superseded_ballots": 0,
+    "duplicate_policy": "latest_valid_submission_before_deadline",
+    "ranking_input": "manager_ballots_only"
+  },
+  "scoring": {
+    "team_count": 12,
+    "first_place_points": 12,
+    "last_place_points": 1,
+    "tie_breakers": [
+      "total_points",
+      "first_place_votes",
+      "average_rank",
+      "franchise_id"
+    ]
+  },
+  "ballots_counted": 0,
+  "rankings": []
+}

@@ -48,6 +48,7 @@ jobs:
           python scripts/validate_history_data.py
           python scripts/validate_draft_data.py
           python scripts/validate_records_data.py
+          python scripts/validate_votes_data.py
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1

@@ -61,6 +61,25 @@ hero and honor boards stack, and at 560px every record card becomes one column.
 Dense semantic tables keep an accessible horizontal scroll treatment rather
 than shrinking numeric content past legibility.
 
+### Voting patterns
+
+- `.vote-principles` explains the free static architecture without exposing
+  commissioner controls or raw form data.
+- `.poll-card` supports a real ballot question, public deadline, result bars,
+  and a finger-friendly external Google Form action.
+- `.vote-matchup-card` and `.pick-card` keep two-team choices legible without
+  pretending the static page accepts or locks a vote.
+- `.community-feature` previews Power Rankings and the Picks Leaderboard while
+  preserving explicit empty-season states.
+- `.vote-table` handles manager-voted rankings and season pick totals in a
+  labelled keyboard-focusable horizontal scroll region.
+- `.vote-empty` is the canonical no-ballot, stale-matchup, or no-results state;
+  it never fills the UI with example votes.
+
+Voting grids collapse from two columns to one by 768px. Tables keep deliberate
+horizontal scrolling, buttons retain touch-size targets, and matchup identities
+remain side by side inside their card even when the cards themselves stack.
+
 ## Accessibility and interaction
 
 - Layouts use semantic header, navigation, main, and footer landmarks.

@@ -22,6 +22,8 @@ EXPECTED_ROUTES = (
     "/cup/",
     "/records/",
     "/votes/",
+    "/votes/power-rankings/",
+    "/votes/picks/",
     "/retired/",
     "/rules/",
 )
@@ -106,6 +108,11 @@ def main() -> None:
     drafts_page = route_target("/drafts/").read_text(encoding="utf-8")
     cup_page = route_target("/cup/").read_text(encoding="utf-8")
     records_page = route_target("/records/").read_text(encoding="utf-8")
+    votes_page = route_target("/votes/").read_text(encoding="utf-8")
+    power_page = route_target("/votes/power-rankings/").read_text(encoding="utf-8")
+    picks_page = route_target("/votes/picks/").read_text(encoding="utf-8")
+    if 'aria-label="Open navigation"' not in votes_page:
+        errors.append("mobile navigation toggle must have an accessible name")
     if teams_page.count('class="franchise-card"') != 12:
         errors.append("teams directory must render exactly 12 active franchise cards")
     if retired_page.count('class="retired-card"') != 2:
@@ -136,6 +143,28 @@ def main() -> None:
         errors.append("records page must render exactly 7 verified single-season record cards")
     if records_page.count('class="unavailable-card') != len(record_book["unavailable_categories"]):
         errors.append("records page must render every unavailable category exactly once")
+    for expected in ("League", "Votes", "Active Votes", "Weekly Matchup Picks", "Power Rankings", "Vote Archive"):
+        if expected not in votes_page:
+            errors.append(f"votes hub is missing: {expected}")
+    for expected in ("Manager Power Rankings", "Purely Manager Voted"):
+        if expected not in power_page:
+            errors.append(f"Power Rankings page is missing: {expected}")
+    for expected in ("Matchup Picks", "Weekly Matchups", "Season Picks Leaderboard", "Pick Results Archive"):
+        if expected not in picks_page:
+            errors.append(f"Picks page is missing: {expected}")
+    voting_data = json.loads((ROOT / "_data" / "generated" / "votes.json").read_text(encoding="utf-8"))
+    power_data = json.loads((ROOT / "_data" / "generated" / "power_rankings.json").read_text(encoding="utf-8"))
+    picks_data = json.loads((ROOT / "_data" / "generated" / "picks.json").read_text(encoding="utf-8"))
+    if not voting_data["active_polls"] and "No league ballots are open" not in votes_page:
+        errors.append("votes hub did not render its intentional no-active-votes state")
+    if not power_data["rankings"] and "Voting opens during the season" not in power_page:
+        errors.append("Power Rankings page did not render its offseason state")
+    if power_data["rankings"] and power_page.count('class="vote-team"') != len(power_data["rankings"]):
+        errors.append("Power Rankings page did not render every ranked franchise")
+    if picks_data["current_week"] is None and "current slate is not available yet" not in picks_page:
+        errors.append("Picks page did not render its unavailable current-week state")
+    if not picks_data["leaderboard"] and "Results begin after verified games" not in picks_page:
+        errors.append("Picks page did not render its empty leaderboard state")
     for season in season_data["seasons"]:
         route = f"/history/{season['year']}/"
         rendered = route_target(route).read_text(encoding="utf-8")
