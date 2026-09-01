@@ -98,6 +98,9 @@ editorial decisions, and unresolved fields.
   arrays identify season, team, playoff-game, and championship copy without
   changing generator code. Unresolved team overrides use a null franchise ID
   plus the exact historical display name.
+- `yahoo_leagues.yml`: verified season-specific Yahoo game/league keys and the
+  reciprocal renewal chain. Every row carries evidence and a verification date;
+  configured aliases and ambiguous candidates remain outside the canonical list.
 
 Unmigrated domains retain empty arrays. Season, champion, and playoff values are
 published only after transcription and source verification; see
@@ -183,3 +186,26 @@ Every narrative carries `season`, `source_files`, `generated_at`,
 public text, and a public provenance label. Approved overrides remain separate
 from generated prose and survive regeneration. Unresolved identities keep null
 franchise routes. See [Historical Narrative System](NARRATIVE_SYSTEM.md).
+
+### Yahoo historical outputs
+
+- `yahoo_history_manifest.json`: sanitized verified league map, unverified and
+  ambiguous candidates, and archive coverage. It contains no user account or
+  OAuth data.
+- `history/{season}/matchups.json`: week-scoped matchups with exact historical
+  names, nullable scores, stable IDs where resolved, winner/tie state, playoff
+  flags, provenance, and completeness metadata.
+- `history/{season}/team_weeks.json`: one score/opponent/result/margin row per
+  fantasy team and week. Missing values remain null.
+- `history/{season}/rosters.json`: grouped roster snapshots containing only
+  public player identity, NFL team, position, selected fantasy position, and
+  public status.
+- `history/{season}/player_weeks.json`: weekly roster position and Yahoo fantasy
+  points. Bench entries are generated only when position and scoring coverage
+  are complete.
+- `history/{season}/facts.json`: publication-gated weekly scoring, margin, and
+  streak facts reserved for later record/narrative consumers.
+- `head_to_head.json`: franchise-pair aggregates plus an explicit complete,
+  partial, or unavailable source-period label. Unavailable output has no pairs.
+
+See [Yahoo Historical Data Coverage](YAHOO_HISTORY_COVERAGE.md).

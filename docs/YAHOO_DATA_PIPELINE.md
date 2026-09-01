@@ -16,6 +16,15 @@ Yahoo Fantasy API
 Raw Yahoo responses are not written to the repository. The Action keeps them in
 memory only long enough to create sanitized public data.
 
+Historical discovery/backfill is intentionally separate. It runs only through
+the manual `Backfill Yahoo History` workflow, writes sanitized per-season files,
+and uploads a review artifact without pushing to the repository. See
+[Yahoo Historical Data Coverage](YAHOO_HISTORY_COVERAGE.md).
+
+GitHub exposes that manual workflow only after the workflow file has reached the
+default branch. Its offline code and configuration are validated on the pull
+request; the first authenticated dispatch follows merge.
+
 ## Required GitHub Actions secrets
 
 Configure these under **Repository Settings → Secrets and variables → Actions**:
@@ -39,6 +48,10 @@ source of truth and does not hardcode a resolved game key.
 4. Select **Run workflow** and choose the intended branch.
 5. Review the normalizer tests, Yahoo fetch, news fetch, public-data validation,
    and commit steps.
+
+If token refresh returns HTTP 400, no Fantasy API request has occurred. An
+authorized administrator must reauthorize or replace the refresh credential in
+Actions Secrets; do not add a token to source or logs.
 
 The Action commits only `_data/generated/*.json` and `_data/news.json`, and only
 when their normalized content changed.
@@ -66,6 +79,8 @@ python -m venv .venv
 .venv\Scripts\python -m pip install -r requirements-dev.txt
 .venv\Scripts\python -m unittest discover -s tests -v
 .venv\Scripts\python scripts/validate_public_data.py
+.venv\Scripts\python scripts/discover_yahoo_history.py --dry-run --check
+.venv\Scripts\python scripts/validate_yahoo_history.py
 ```
 
 The tests use synthetic, sanitized Yahoo-shaped fixtures and make no network

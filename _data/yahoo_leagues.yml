@@ -1,0 +1,29 @@
+schema_version: 1
+leagues:
+  - season: 2024
+    game_key: "449"
+    league_key: 449.l.761310
+    league_id: "761310"
+    source:
+      type: yahoo_renewal_metadata
+      evidence: >-
+        The Yahoo metadata fetched for the verified 2025 Road To Glory FFL
+        league identifies 449_761310 in its renew field.
+      repository_commit: 7469260830439fcfb451b71423a976fa4561236b
+      verified_on: 2026-08-31
+    verified: true
+    previous_league_key:
+    next_league_key: 461.l.103926
+
+  - season: 2025
+    game_key: "461"
+    league_key: 461.l.103926
+    league_id: "103926"
+    source:
+      type: sanitized_yahoo_snapshot
+      evidence: _data/generated/league.json
+      repository_commit: 7469260830439fcfb451b71423a976fa4561236b
+      verified_on: 2026-08-31
+    verified: true
+    previous_league_key: 449.l.761310
+    next_league_key:

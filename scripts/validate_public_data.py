@@ -22,6 +22,8 @@ REQUIRED_FILES = {
     "power_rankings.json",
     "picks.json",
     "recaps.json",
+    "yahoo_history_manifest.json",
+    "head_to_head.json",
 }
 FORBIDDEN_KEYS = {
     "access_token",
@@ -40,6 +42,12 @@ FORBIDDEN_KEYS = {
     "account_id",
     "auth_token",
     "edit_url",
+    "xoauth_yahoo_guid",
+    "user_guid",
+    "yahoo_user_id",
+    "manager_guid",
+    "oauth_token",
+    "consumer_secret",
 }
 FORBIDDEN_TEXT = ("/invitation?key=", "&ikey=")
 
@@ -107,7 +115,8 @@ def main() -> None:
         f"missing generated file: {name}" for name in sorted(REQUIRED_FILES - present)
     ]
 
-    for path in sorted(GENERATED_DIRECTORY.glob("*.json")):
+    generated_paths = sorted(GENERATED_DIRECTORY.rglob("*.json"))
+    for path in generated_paths:
         try:
             payload = json.loads(path.read_text(encoding="utf-8"))
         except (json.JSONDecodeError, OSError) as error:
@@ -128,7 +137,7 @@ def main() -> None:
             print(f"- {error}", file=sys.stderr)
         raise SystemExit(1)
 
-    print(f"Validated {len(REQUIRED_FILES)} sanitized generated files and news data")
+    print(f"Validated {len(generated_paths)} sanitized generated files and news data")
 
 
 if __name__ == "__main__":
