@@ -47,7 +47,9 @@ jobs:
         run: python scripts/build_records.py
 
       - name: Validate public generated data
-        run: python scripts/validate_public_data.py
+        run: |
+          python scripts/validate_public_data.py
+          python scripts/validate_votes_data.py
 
       - name: Commit and push changed public data
         shell: bash

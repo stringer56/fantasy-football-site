@@ -1,2 +1,42 @@
 schema_version: 1
+
+submission_architecture:
+  provider: google_forms
+  response_store: private_google_sheet
+  public_import_format: sanitized_csv_or_json
+  duplicate_policy: latest_valid_submission_before_deadline
+  voter_identity_field: owner_id
+  public_identity: approved_manager_display_name_or_aggregate
+  notes:
+    - Google Form and Sheet edit URLs must never be committed.
+    - Email collection is disabled; controlled owner choices are mapped to canonical owner IDs during sanitization.
+    - Raw response exports stay outside the repository in private-vote-imports/.
+
+poll_types:
+  - league_rule
+  - power_ranking
+  - matchup_pick
+  - award
+  - custom
+
+poll_schema:
+  required_fields: [id, season, week, title, description, type, status, opens_at, closes_at, options, submission_url, results_status, results_source, notes]
+  valid_statuses: [scheduled, open, closed, archived]
+  valid_results_statuses: [unavailable, hidden, provisional, final]
+  option_fields: [id, label, description]
+
+power_ranking_schema:
+  ballot_fields: [owner_id, submitted_at, rankings]
+  ranking_method: descending_points
+  scoring_rule: "For N active teams, rank 1 receives N points and rank N receives 1 point."
+  tie_breakers: [total_points, first_place_votes, average_rank, franchise_id]
+  public_fields: [rank, movement, franchise_id, total_points, average_rank, first_place_votes, ballots_counted]
+
+matchup_pick_schema:
+  ballot_fields: [owner_id, submitted_at, picks]
+  pick_fields: [matchup_id, franchise_id]
+  scoring: {correct: 1, incorrect: 0, confidence_points: false}
+  leaderboard_sort: [correct, accuracy, display_name]
+  weekly_result_fields: [season, week, matchups, manager_results]
+
 polls: []

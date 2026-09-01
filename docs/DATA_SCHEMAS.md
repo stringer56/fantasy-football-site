@@ -90,6 +90,10 @@ editorial decisions, and unresolved fields.
   `_data/generated/records.json`; see
   [Records Data Coverage](RECORDS_DATA_COVERAGE.md).
 - `votes.yml`: poll metadata, options, static result snapshots, and timestamps.
+  It also fixes the allowed poll types, required fields, Google Forms import
+  architecture, manager-only Power Ranking scoring, picks scoring, privacy
+  boundary, and latest-valid-before-deadline duplicate policy. Production polls
+  remain absent until the commissioner supplies them.
 
 Unmigrated domains retain empty arrays. Season, champion, and playoff values are
 published only after transcription and source verification; see
@@ -148,3 +152,20 @@ empty bench-blunder structure. Every published group carries `source_type`,
 `source_years`, `source_files`, `coverage_status`, `last_generated`, and notes.
 Partial groups use the label `Verified 2021–2024`; unavailable groups contain no
 record values.
+
+### Voting outputs
+
+- `votes.json`: active and archived public poll metadata plus anonymous option
+  counts/percentages. It never contains individual general-vote ballots.
+- `power_rankings.json`: manager-voted aggregate rank, movement when a prior
+  week exists, total points, average rank, first-place votes, and ballots counted.
+  Individual ballots and Yahoo standings are not inputs to the public output.
+- `picks.json`: current canonical Yahoo matchup choices, optional public vote
+  percentages, weekly approved manager results, verified winner state, and the
+  cumulative season Picks Leaderboard. Correctness is recorded only after Yahoo
+  reports a completed matchup winner.
+
+All three include `season`, nullable `week`, nullable `generated_at`, and a
+source/coverage object with accepted, rejected, and superseded ballot counts.
+Empty preseason data uses explicit unavailable states.
+See [Voting Architecture](VOTING_ARCHITECTURE.md) for private export handling.

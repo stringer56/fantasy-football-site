@@ -26,6 +26,7 @@ python scripts/validate_history_data.py
 python scripts/validate_draft_data.py
 python scripts/build_records.py --check
 python scripts/validate_records_data.py
+python scripts/validate_votes_data.py
 ```
 
 Run a GitHub Pages-compatible build when Ruby and Bundler are installed:
@@ -51,3 +52,6 @@ archive and unresolved draft identities are recorded in
 [Draft Migration](docs/DRAFT_MIGRATION.md).
 Record coverage, exclusions, and publication rules are documented in
 [Records Data Coverage](docs/RECORDS_DATA_COVERAGE.md).
+The free Google Forms collection boundary, sanitization workflow, deadline
+limitations, and duplicate-ballot policy are documented in
+[Voting Architecture](docs/VOTING_ARCHITECTURE.md).

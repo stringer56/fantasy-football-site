@@ -18,6 +18,9 @@ REQUIRED_FILES = {
     "matchups.json",
     "rosters.json",
     "records.json",
+    "votes.json",
+    "power_rankings.json",
+    "picks.json",
 }
 FORBIDDEN_KEYS = {
     "access_token",
@@ -29,6 +32,13 @@ FORBIDDEN_KEYS = {
     "password",
     "refresh_token",
     "short_invitation_url",
+    "email_address",
+    "ip",
+    "ip_address",
+    "google_user_id",
+    "account_id",
+    "auth_token",
+    "edit_url",
 }
 FORBIDDEN_TEXT = ("/invitation?key=", "&ikey=")
 

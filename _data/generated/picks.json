@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "season": 2026,
+  "week": null,
+  "generated_at": null,
+  "source": {
+    "type": "normalized_yahoo",
+    "coverage_status": "unavailable",
+    "matchup_status": "stale_yahoo_data",
+    "accepted_ballots": 0,
+    "rejected_ballots": 0,
+    "superseded_ballots": 0,
+    "duplicate_policy": "latest_valid_submission_before_deadline",
+    "winner_source": "verified_completed_yahoo_matchups_only"
+  },
+  "scoring": {
+    "correct": 1,
+    "incorrect": 0,
+    "confidence_points": false
+  },
+  "current_week": null,
+  "weekly_results": [],
+  "leaderboard": []
+}
