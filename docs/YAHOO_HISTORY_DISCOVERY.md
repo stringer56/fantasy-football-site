@@ -7,15 +7,16 @@ Glory FFL league available to the Yahoo account authorized by the repository.
 It does not change OAuth, publish raw Yahoo responses, or perform a full
 historical import.
 
-The latest authenticated attempt on 2026-08-31 did not reach the Fantasy API:
-Yahoo's OAuth token endpoint returned HTTP 400 while refreshing the stored
-credential. The failure occurred before the script could enumerate the user's
-games or probe historical resources. No credential value, authorization header,
-token response, or raw API body was printed or saved.
+The live test on 2026-09-01 confirms that Yahoo's refresh-token exchange now
+succeeds and returns a usable bearer token. Yahoo then returns HTTP 403 for
+every tested Fantasy API resource: the configured 2026 alias, logged-in user
+game/league enumeration, and the verified 2024 and 2025 global league keys.
 
-The committed manifest therefore reports a **partial** baseline using only
-previously sanitized, source-controlled Yahoo evidence. A successful manual
-workflow run will replace it with a live sanitized discovery report.
+The committed manifest therefore reports **partial access denied**. Its 2024
+and 2025 identities remain supported by earlier sanitized evidence; the live
+test did not recover new Yahoo data. No credential value, authorization header,
+request URL, token response, error body, or raw API response was printed or
+saved.
 
 ## Verified seasons and safe league keys
 
@@ -23,7 +24,7 @@ workflow run will replace it with a live sanitized discovery report.
 |---:|---:|---|---:|---|
 | 2024 | `449` | `449.l.761310` | `761310` | The preserved authenticated 2025 metadata names `449_761310` as the prior league in its `renew` field. |
 | 2025 | `461` | `461.l.103926` | `103926` | The committed sanitized league/team/standings snapshot is from Road To Glory FFL. |
-| 2026 | Unresolved | Unresolved | `26455` in configured alias only | `nfl.l.26455` has not resolved while authentication is blocked, so it is not recorded as a global season key. |
+| 2026 | Unresolved | Unresolved | `26455` in configured alias only | OAuth succeeds, but Yahoo returns HTTP 403 when resolving `nfl.l.26455`; it is not recorded as a global season key. |
 
 The earliest verified Yahoo season is currently **2024** and the latest is
 **2025**. This is the earliest verified season available from repository
@@ -48,20 +49,34 @@ across seasons.
 
 `available_snapshot` means a safe existing snapshot proves that resource was
 once returned. `single_week_snapshot_only` is not a historical archive.
-`not_probed` means the current credential failure prevented a live check; it
-does not mean Yahoo lacks the resource.
+`HTTP 403` means the resource was requested with the refreshed access token and
+Yahoo denied Fantasy API access. It does not establish whether the resource
+would exist for a correctly authorized Fantasy Sports application/account.
 
 | Season | Metadata | Teams | Standings | Weekly matchups | Final playoff matchups | Rosters | Draft results | Transactions |
 |---:|---|---|---|---|---|---|---|---|
-| 2024 | Not probed | Not probed | Not probed | Not probed | Not probed | Not probed | Not probed | Not probed |
-| 2025 | Available snapshot | Available snapshot | Available snapshot | Complete playoff Weeks 14–16 supplied; regular-season weeks not recovered | Complete seven-game bracket plus two byes | Single-week snapshot only | Not probed | Not probed |
-| 2026 | Authentication required | Authentication required | Authentication required | Authentication required | Authentication required | Authentication required | Authentication required | Authentication required |
+| 2024 | HTTP 403 | HTTP 403 | HTTP 403 | HTTP 403 | HTTP 403 | HTTP 403 | HTTP 403 | HTTP 403 |
+| 2025 | HTTP 403 live; prior snapshot retained | HTTP 403 live; prior snapshot retained | HTTP 403 live; final snapshot retained | HTTP 403 live; commissioner-supplied playoff Weeks 14–16 retained | HTTP 403 live; seven-game bracket plus two byes retained | HTTP 403 live; prior Week 16 snapshot retained | HTTP 403 | HTTP 403 |
+| 2026 | HTTP 403 | HTTP 403 | HTTP 403 | HTTP 403 | HTTP 403 | HTTP 403 | HTTP 403 | HTTP 403 |
 
 On a successful authenticated run, the discovery job probes league metadata,
 teams, standings, the first weekly scoreboard, the final-week scoreboard, one
 representative roster, draft results, and transactions. A successful probe
 means the endpoint returned the requested resource; it does not prove every
 week or every row is complete.
+
+The result is consistent with an OAuth application or Yahoo account that can
+refresh a token but is not authorized for Fantasy Sports private data. Yahoo's
+official registration guidance requires the developer application to request
+private user data and select Fantasy Sports Read or Read/Write access. The
+refresh token must be newly authorized from that same application by a Yahoo
+account that belongs to the private league.
+
+Live workflow evidence:
+
+- OAuth/2026 update test: <https://github.com/stringer56/fantasy-football-site/actions/runs/33465603477>
+- Sanitized historical diagnostic: <https://github.com/stringer56/fantasy-football-site/actions/runs/33465879232>
+- Site validation: <https://github.com/stringer56/fantasy-football-site/actions/runs/33465873918>
 
 The endpoint composition follows Yahoo's official Fantasy Sports API resources:
 
@@ -161,15 +176,20 @@ Raw Yahoo responses are kept only in memory and are never written as artifacts.
 
 ## Recommended automated import strategy
 
-After an authorized administrator restores the Yahoo refresh credential:
+After an authorized administrator restores Fantasy Sports authorization:
 
-1. run **Update Yahoo Data** to verify the current 2026 alias and team mappings;
-2. merge this milestone, then manually run **Discover Yahoo History**;
-3. review the sanitized season/key chain and unresolved same-name candidates;
-4. backfill standings and weekly scoreboards one verified season at a time;
-5. validate team identity and week completeness before importing rosters,
+1. confirm the Yahoo developer application has private Fantasy Sports Read or
+   Read/Write permission;
+2. issue a new authorization code/refresh token from that same application
+   while signed into the Yahoo account that belongs to Road to Glory FFL;
+3. update all three matching application credentials in GitHub Secrets;
+4. run **Update Yahoo Data** to verify the current 2026 alias and team mappings;
+5. merge this milestone, then manually run **Discover Yahoo History**;
+6. review the sanitized season/key chain and unresolved same-name candidates;
+7. backfill standings and weekly scoreboards one verified season at a time;
+8. validate team identity and week completeness before importing rosters,
    draft results, or transactions; and
-6. keep historical backfill manual rather than adding it to the six-hour
+9. keep historical backfill manual rather than adding it to the six-hour
    current-season workflow.
 
 Milestone 5 should use **both** sources. Yahoo should supply structured standings,

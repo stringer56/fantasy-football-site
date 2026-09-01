@@ -131,6 +131,13 @@ class YahooHistoryDiscoveryTests(unittest.TestCase):
         self.assertEqual(first, second)
         self.assertEqual(validate_safe_output(first), [])
         self.assertEqual([row["season"] for row in first["seasons"]], [2024, 2025])
+        self.assertEqual(first["access_status"]["oauth_refresh"], "succeeded")
+        self.assertEqual(first["access_status"]["user_game_league_enumeration"], "http_403")
+        self.assertTrue(all(
+            value == "http_403"
+            for season in first["seasons"]
+            for value in season["capabilities"].values()
+        ))
         mappings = first["seasons"][1]["team_mappings"]
         self.assertEqual(len(mappings), 12)
         self.assertTrue(all(row["status"] == "verified" for row in mappings))

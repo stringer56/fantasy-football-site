@@ -1,7 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-31T00:00:00Z",
-  "discovery_status": "partial_authentication_required",
+  "generated_at": "2026-09-01T03:21:01Z",
+  "discovery_status": "partial_access_denied",
+  "access_status": {
+    "oauth_refresh": "succeeded",
+    "user_game_league_enumeration": "http_403",
+    "configured_alias_resolution": "http_403"
+  },
   "expected_league_name": "Road To Glory FFL",
   "seasons": [
     {
@@ -16,16 +21,16 @@
       "finished": true,
       "previous_league_key": null,
       "next_league_key": "461.l.103926",
-      "verification_status": "verified_from_2025_renew_metadata",
+      "verification_status": "verified_repository_evidence_live_access_denied",
       "capabilities": {
-        "league_metadata": "not_probed",
-        "teams": "not_probed",
-        "standings": "not_probed",
-        "weekly_matchups": "not_probed",
-        "final_playoff_matchups": "not_probed",
-        "rosters": "not_probed",
-        "draft_results": "not_probed",
-        "transactions": "not_probed"
+        "league_metadata": "http_403",
+        "teams": "http_403",
+        "standings": "http_403",
+        "weekly_matchups": "http_403",
+        "final_playoff_matchups": "http_403",
+        "rosters": "http_403",
+        "draft_results": "http_403",
+        "transactions": "http_403"
       },
       "team_mappings": [],
       "archive_coverage": null
@@ -42,16 +47,16 @@
       "finished": true,
       "previous_league_key": "449.l.761310",
       "next_league_key": null,
-      "verification_status": "verified_from_sanitized_snapshot",
+      "verification_status": "verified_repository_evidence_live_access_denied",
       "capabilities": {
-        "league_metadata": "available_snapshot",
-        "teams": "available_snapshot",
-        "standings": "available_snapshot",
-        "weekly_matchups": "single_week_snapshot_only",
-        "final_playoff_matchups": "available_snapshot",
-        "rosters": "single_week_snapshot_only",
-        "draft_results": "not_probed",
-        "transactions": "not_probed"
+        "league_metadata": "http_403",
+        "teams": "http_403",
+        "standings": "http_403",
+        "weekly_matchups": "http_403",
+        "final_playoff_matchups": "http_403",
+        "rosters": "http_403",
+        "draft_results": "http_403",
+        "transactions": "http_403"
       },
       "team_mappings": [
         {
@@ -173,13 +178,13 @@
     {
       "season": 2026,
       "configured_alias": "nfl.l.26455",
-      "verification_status": "authentication_required"
+      "verification_status": "http_403"
     }
   ],
   "missing_renewal_links": [],
   "notes": [
-    "The committed baseline contains only previously sanitized repository evidence.",
-    "A live authenticated discovery has not completed because Yahoo token refresh returns HTTP 400.",
-    "Capability values marked not_probed are not evidence of unavailability."
+    "Yahoo OAuth refresh succeeds, but every tested Fantasy API resource returns HTTP 403.",
+    "The committed league identities remain based on previously sanitized repository evidence.",
+    "HTTP status labels contain no response body, request URL, or credential value."
   ]
 }

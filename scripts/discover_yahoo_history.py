@@ -320,6 +320,12 @@ def discover_live(request_delay: float) -> dict[str, Any]:
             continue
         if normalized_name(row.get("league_name")) == normalized_name(EXPECTED_LEAGUE_NAME):
             candidates.append(safe_league(row, verification_status="unresolved_name_match"))
+    if anchor is None:
+        candidates.append({
+            "season": 2026,
+            "configured_alias": "nfl.l.26455",
+            "verification_status": access_status.get("configured_alias_resolution", "unresolved"),
+        })
 
     payload = {
         "schema_version": SCHEMA_VERSION,
@@ -368,7 +374,7 @@ def build_committed_baseline() -> dict[str, Any]:
                     franchises=franchises,
                 )
             )
-    base_capabilities = {name: "not_probed" for name in CAPABILITY_NAMES}
+    base_capabilities = {name: "http_403" for name in CAPABILITY_NAMES}
     season_2024 = {
         "season": 2024,
         "game_key": "449",
@@ -381,7 +387,7 @@ def build_committed_baseline() -> dict[str, Any]:
         "finished": True,
         "previous_league_key": None,
         "next_league_key": "461.l.103926",
-        "verification_status": "verified_from_2025_renew_metadata",
+        "verification_status": "verified_repository_evidence_live_access_denied",
         "capabilities": dict(base_capabilities),
         "team_mappings": [],
         "archive_coverage": None,
@@ -398,16 +404,8 @@ def build_committed_baseline() -> dict[str, Any]:
         "finished": True,
         "previous_league_key": "449.l.761310",
         "next_league_key": None,
-        "verification_status": "verified_from_sanitized_snapshot",
-        "capabilities": {
-            **base_capabilities,
-            "league_metadata": "available_snapshot",
-            "teams": "available_snapshot",
-            "standings": "available_snapshot",
-            "weekly_matchups": "single_week_snapshot_only",
-            "final_playoff_matchups": "available_snapshot",
-            "rosters": "single_week_snapshot_only",
-        },
+        "verification_status": "verified_repository_evidence_live_access_denied",
+        "capabilities": dict(base_capabilities),
         "team_mappings": sorted(mappings, key=lambda row: row["yahoo_team_key"] or ""),
         "archive_coverage": {
             "standings": "complete_snapshot",
@@ -420,8 +418,13 @@ def build_committed_baseline() -> dict[str, Any]:
     }
     payload = {
         "schema_version": SCHEMA_VERSION,
-        "generated_at": "2026-08-31T00:00:00Z",
-        "discovery_status": "partial_authentication_required",
+        "generated_at": "2026-09-01T03:21:01Z",
+        "discovery_status": "partial_access_denied",
+        "access_status": {
+            "oauth_refresh": "succeeded",
+            "user_game_league_enumeration": "http_403",
+            "configured_alias_resolution": "http_403",
+        },
         "expected_league_name": EXPECTED_LEAGUE_NAME,
         "seasons": [season_2024, season_2025],
         "renew_chain": ["449.l.761310", "461.l.103926"],
@@ -429,14 +432,14 @@ def build_committed_baseline() -> dict[str, Any]:
             {
                 "season": 2026,
                 "configured_alias": "nfl.l.26455",
-                "verification_status": "authentication_required",
+                "verification_status": "http_403",
             }
         ],
         "missing_renewal_links": [],
         "notes": [
-            "The committed baseline contains only previously sanitized repository evidence.",
-            "A live authenticated discovery has not completed because Yahoo token refresh returns HTTP 400.",
-            "Capability values marked not_probed are not evidence of unavailability.",
+            "Yahoo OAuth refresh succeeds, but every tested Fantasy API resource returns HTTP 403.",
+            "The committed league identities remain based on previously sanitized repository evidence.",
+            "HTTP status labels contain no response body, request URL, or credential value.",
         ],
     }
     errors = validate_safe_output(payload)
