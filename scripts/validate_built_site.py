@@ -105,6 +105,7 @@ def main() -> None:
     history_page = route_target("/history/").read_text(encoding="utf-8")
     drafts_page = route_target("/drafts/").read_text(encoding="utf-8")
     cup_page = route_target("/cup/").read_text(encoding="utf-8")
+    records_page = route_target("/records/").read_text(encoding="utf-8")
     if teams_page.count('class="franchise-card"') != 12:
         errors.append("teams directory must render exactly 12 active franchise cards")
     if retired_page.count('class="retired-card"') != 2:
@@ -115,6 +116,25 @@ def main() -> None:
         errors.append("draft archive must render exactly 4 draft cards")
     if cup_page.count("<article>") != 4:
         errors.append("Brew Crew Cup page must render exactly 4 champion entries")
+    for expected in (
+        "Road to Glory Record Book",
+        "Career Leaderboard",
+        "Season Records",
+        "Playoff Records",
+        "Still Being Built",
+        "Bench Blunders",
+    ):
+        if expected not in records_page:
+            errors.append(f"records page is missing: {expected}")
+    record_book = json.loads((ROOT / "_data" / "generated" / "records.json").read_text(encoding="utf-8"))
+    career_count = len(record_book["leaderboards"]["career_totals"]["entries"])
+    playoff_count = len(record_book["leaderboards"]["playoff_results"]["entries"])
+    if records_page.count('class="record-team"') < career_count + playoff_count:
+        errors.append("records page did not render every career and playoff franchise reference")
+    if records_page.count('class="record-card"') != 7:
+        errors.append("records page must render exactly 7 verified single-season record cards")
+    if records_page.count('class="unavailable-card') != len(record_book["unavailable_categories"]):
+        errors.append("records page must render every unavailable category exactly once")
     for season in season_data["seasons"]:
         route = f"/history/{season['year']}/"
         rendered = route_target(route).read_text(encoding="utf-8")

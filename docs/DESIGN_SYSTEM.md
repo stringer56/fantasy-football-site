@@ -42,6 +42,25 @@ At mobile widths, archive cards and draft-order entries collapse to one column;
 long historical names may wrap, and dense result images remain available through
 their full-size links rather than being downscaled into illegibility.
 
+### Records patterns
+
+- `.coverage-scorecard` makes the verified date window prominent without
+  describing a partial archive as all-time history.
+- `.record-table` presents compact, linked franchise totals inside a labelled,
+  keyboard-focusable horizontal scroll region. The public view leads with ten
+  rows and preserves the remaining totals in a native disclosure.
+- `.record-card` pairs one verified single-season value with every tied holder;
+  unresolved historical names render as text and never create broken links.
+- `.honor-board` and `.streak-grid` separate complete championship results from
+  partial bracket-derived totals.
+- `.unavailable-card` explains missing source coverage as an intentional state;
+  it never renders an empty or fabricated Top 10.
+
+At 1100px the record cards and streaks reduce their column count, at 900px the
+hero and honor boards stack, and at 560px every record card becomes one column.
+Dense semantic tables keep an accessible horizontal scroll treatment rather
+than shrinking numeric content past legibility.
+
 ## Accessibility and interaction
 
 - Layouts use semantic header, navigation, main, and footer landmarks.

@@ -1,2 +1,180 @@
 schema_version: 1
-records: []
+archive:
+  label: Verified 2021–2024 archive
+  source_years: [2021, 2022, 2023, 2024]
+  source_files:
+    - _data/seasons.yml
+    - _data/champions.yml
+    - _data/playoffs.yml
+    - _data/franchises.yml
+  unresolved_standings_rows: 5
+  unresolved_playoff_participants: 1
+  notes:
+    - Career totals include only standings rows with a verified franchise mapping.
+    - The 2024 final standings table is used for PF and PA, while the conflicting champions-page labels remain unresolved.
+
+categories:
+  - category_id: career_totals
+    domain: career
+    output_type: leaderboard
+    label: Franchise Career Totals
+    coverage_status: partial
+    public_calculation_allowed: true
+    source_type: verified_final_standings
+    source_years: [2021, 2022, 2023, 2024]
+    source_files: [_data/seasons.yml, _data/franchises.yml]
+    notes:
+      - Five standings rows with unresolved identities are excluded from franchise totals.
+      - PF and PA include the 2024 standings-table values; a conflicting champions-page label remains under review.
+
+  - category_id: season_wins
+    domain: season
+    output_type: records
+    label: Single-Season Results
+    coverage_status: complete
+    public_calculation_allowed: true
+    source_type: verified_final_standings
+    source_years: [2021, 2022, 2023, 2024]
+    source_files: [_data/seasons.yml]
+    notes:
+      - Every published standings row contains wins, losses, ties, and a calculable winning percentage.
+
+  - category_id: season_points
+    domain: season
+    output_type: records
+    label: Single-Season Scoring
+    coverage_status: partial
+    public_calculation_allowed: true
+    source_type: verified_final_standings
+    source_years: [2021, 2022, 2023, 2024]
+    source_files: [_data/seasons.yml, docs/HISTORY_MIGRATION.md]
+    notes:
+      - The 2024 final standings table supplies PF and PA; the champions page reverses those labels for Turnbull AC's.
+
+  - category_id: championships
+    domain: playoffs
+    output_type: leaderboard
+    label: Championships
+    coverage_status: complete
+    public_calculation_allowed: true
+    source_type: verified_championship_results
+    source_years: [2021, 2022, 2023, 2024]
+    source_files: [_data/champions.yml]
+    notes:
+      - All four champions are mapped to canonical franchises.
+
+  - category_id: finals_appearances
+    domain: playoffs
+    output_type: leaderboard
+    label: Championship Appearances
+    coverage_status: complete
+    public_calculation_allowed: true
+    source_type: verified_championship_results
+    source_years: [2021, 2022, 2023, 2024]
+    source_files: [_data/champions.yml]
+    notes:
+      - All eight finalist slots are mapped to canonical franchises.
+
+  - category_id: playoff_results
+    domain: playoffs
+    output_type: leaderboard
+    label: Playoff Results
+    coverage_status: partial
+    public_calculation_allowed: true
+    source_type: verified_playoff_brackets
+    source_years: [2021, 2022, 2023, 2024]
+    source_files: [_data/playoffs.yml, _data/franchises.yml]
+    notes:
+      - Wins and losses are counted from verified advancing teams even when scores are unavailable.
+      - One 2021 playoff participant has no resolved franchise mapping and is excluded from franchise totals.
+      - The 2023 bracket lane ambiguity does not change the verified winners used here.
+
+  - category_id: playoff_appearance_streaks
+    domain: streaks
+    output_type: leaderboard
+    label: Consecutive Playoff Appearances
+    coverage_status: partial
+    public_calculation_allowed: true
+    source_type: verified_playoff_brackets
+    source_years: [2021, 2022, 2023, 2024]
+    source_files: [_data/playoffs.yml, _data/franchises.yml]
+    notes:
+      - Streaks cover only the verified 2021–2024 window.
+      - One unresolved 2021 participant is excluded rather than assigned by assumption.
+
+  - category_id: playoff_scoring
+    domain: playoffs
+    output_type: unavailable
+    label: Playoff Scoring Records
+    coverage_status: unavailable
+    public_calculation_allowed: false
+    source_type: incomplete_playoff_scores
+    source_years: [2021, 2022, 2023, 2024]
+    source_files: [_data/playoffs.yml]
+    public_message: Non-final playoff scores are still being imported.
+    notes:
+      - Twelve non-final playoff games have verified winners but no published scores.
+
+  - category_id: game_margin
+    domain: games
+    output_type: unavailable
+    label: Game & Margin Records
+    coverage_status: unavailable
+    public_calculation_allowed: false
+    source_type: missing_weekly_matchups
+    source_years: []
+    source_files: []
+    public_message: Weekly matchup history is still being imported.
+    notes:
+      - Final standings cannot establish single-game scores or margins.
+
+  - category_id: regular_season_streaks
+    domain: streaks
+    output_type: unavailable
+    label: Regular-Season Streaks
+    coverage_status: unavailable
+    public_calculation_allowed: false
+    source_type: missing_weekly_matchups
+    source_years: []
+    source_files: []
+    public_message: Win and loss streaks await complete weekly matchup history.
+    notes:
+      - Final records do not preserve game sequence.
+
+  - category_id: playoff_droughts
+    domain: streaks
+    output_type: unavailable
+    label: Playoff Droughts
+    coverage_status: unavailable
+    public_calculation_allowed: false
+    source_type: incomplete_franchise_tenure
+    source_years: [2021, 2022, 2023, 2024]
+    source_files: [_data/playoffs.yml, _data/franchises.yml]
+    public_message: Franchise tenure history is needed before playoff droughts can be ranked.
+    notes:
+      - Founding seasons and unresolved franchise continuity prevent a defensible drought calculation.
+
+  - category_id: bench_blunders
+    domain: bench
+    output_type: unavailable
+    label: Bench Blunders
+    coverage_status: unavailable
+    public_calculation_allowed: false
+    source_type: missing_historical_bench_scoring
+    source_years: []
+    source_files: []
+    public_message: Historical bench scoring is still being imported.
+    notes:
+      - No verified weekly bench scoring exists in the current archive.
+
+bench_blunder_schema:
+  required_fields:
+    - rank
+    - franchise_id
+    - historical_team_name
+    - year
+    - week
+    - player_name
+    - points_missed
+    - source
+  entries: []

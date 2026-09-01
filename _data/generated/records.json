@@ -1,0 +1,1088 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-31T00:00:00Z",
+  "coverage": {
+    "label": "Verified 2021–2024 archive",
+    "source_years": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "unresolved_standings_rows": 5,
+    "unresolved_playoff_participants": 1,
+    "notes": [
+      "Career totals include only standings rows with a verified franchise mapping.",
+      "The 2024 final standings table is used for PF and PA, while the conflicting champions-page labels remain unresolved."
+    ]
+  },
+  "leaderboards": {
+    "career_totals": {
+      "category_id": "career_totals",
+      "label": "Franchise Career Totals",
+      "provenance": {
+        "source_type": "verified_final_standings",
+        "source_years": [
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "source_files": [
+          "_data/seasons.yml",
+          "_data/franchises.yml"
+        ],
+        "coverage_status": "partial",
+        "last_generated": "2026-08-31T00:00:00Z",
+        "notes": [
+          "Five standings rows with unresolved identities are excluded from franchise totals.",
+          "PF and PA include the 2024 standings-table values; a conflicting champions-page label remains under review."
+        ]
+      },
+      "entries": [
+        {
+          "rank": 1,
+          "franchise_id": "albany-kneelers",
+          "display_name": "Albany Kneelers",
+          "short_name": "Kneelers",
+          "path": "/teams/albany-kneelers/",
+          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+          "seasons": [
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "wins": 35,
+          "losses": 19,
+          "ties": 0,
+          "points_for": 6705.12,
+          "points_against": 6111.74,
+          "championships": 1,
+          "runner_up_finishes": 1,
+          "seasons_counted": 4,
+          "win_pct": 0.648
+        },
+        {
+          "rank": 2,
+          "franchise_id": "turnbull-acs",
+          "display_name": "Turnbull AC's",
+          "short_name": "Turnbull",
+          "path": "/teams/turnbull-acs/",
+          "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
+          "seasons": [
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "wins": 34,
+          "losses": 20,
+          "ties": 0,
+          "points_for": 6313.52,
+          "points_against": 5946.26,
+          "championships": 1,
+          "runner_up_finishes": 1,
+          "seasons_counted": 4,
+          "win_pct": 0.63
+        },
+        {
+          "rank": 2,
+          "franchise_id": "greendale-human-beings",
+          "display_name": "Greendale Human Beings",
+          "short_name": "Human Beings",
+          "path": "/teams/greendale-human-beings/",
+          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+          "seasons": [
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "wins": 34,
+          "losses": 20,
+          "ties": 0,
+          "points_for": 6642.38,
+          "points_against": 5991.22,
+          "championships": 1,
+          "runner_up_finishes": 0,
+          "seasons_counted": 4,
+          "win_pct": 0.63
+        },
+        {
+          "rank": 4,
+          "franchise_id": "ayahuasca-rush",
+          "display_name": "Ayahuasca Rush",
+          "short_name": "Rush",
+          "path": "/teams/ayahuasca-rush/",
+          "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+          "seasons": [
+            2022,
+            2023,
+            2024
+          ],
+          "wins": 30,
+          "losses": 10,
+          "ties": 0,
+          "points_for": 4859.68,
+          "points_against": 4255.82,
+          "championships": 1,
+          "runner_up_finishes": 0,
+          "seasons_counted": 3,
+          "win_pct": 0.75
+        },
+        {
+          "rank": 5,
+          "franchise_id": "savage-huns",
+          "display_name": "The Savage Huns",
+          "short_name": "Savage Huns",
+          "path": "/retired/the-savage-huns/",
+          "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
+          "seasons": [
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "wins": 26,
+          "losses": 27,
+          "ties": 1,
+          "points_for": 6091.24,
+          "points_against": 6178.52,
+          "championships": 0,
+          "runner_up_finishes": 1,
+          "seasons_counted": 4,
+          "win_pct": 0.491
+        },
+        {
+          "rank": 6,
+          "franchise_id": "crazy-wazs-team",
+          "display_name": "Crazy Waz's Team",
+          "short_name": "Crazy Waz",
+          "path": "/teams/crazy-wazs-team/",
+          "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
+          "seasons": [
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "wins": 25,
+          "losses": 29,
+          "ties": 0,
+          "points_for": 6456.32,
+          "points_against": 6310.1,
+          "championships": 0,
+          "runner_up_finishes": 1,
+          "seasons_counted": 4,
+          "win_pct": 0.463
+        },
+        {
+          "rank": 7,
+          "franchise_id": "van-cortlant-rangers",
+          "display_name": "Van Cortlant Rangers",
+          "short_name": "Rangers",
+          "path": "/teams/van-cortlant-rangers/",
+          "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
+          "seasons": [
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "wins": 22,
+          "losses": 32,
+          "ties": 0,
+          "points_for": 5948.34,
+          "points_against": 6310.9,
+          "championships": 0,
+          "runner_up_finishes": 0,
+          "seasons_counted": 4,
+          "win_pct": 0.407
+        },
+        {
+          "rank": 8,
+          "franchise_id": "maine-moose",
+          "display_name": "Maine Moose",
+          "short_name": "Moose",
+          "path": "/teams/maine-moose/",
+          "identity_image": "/assets/img/franchises/maine-moose/identity.jpg",
+          "seasons": [
+            2022,
+            2023,
+            2024
+          ],
+          "wins": 21,
+          "losses": 19,
+          "ties": 0,
+          "points_for": 4825.84,
+          "points_against": 4496.86,
+          "championships": 0,
+          "runner_up_finishes": 0,
+          "seasons_counted": 3,
+          "win_pct": 0.525
+        },
+        {
+          "rank": 9,
+          "franchise_id": "baseball-furies",
+          "display_name": "The Baseball Furies",
+          "short_name": "Furies",
+          "path": "/teams/baseball-furies/",
+          "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
+          "seasons": [
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "wins": 20,
+          "losses": 34,
+          "ties": 0,
+          "points_for": 5770.56,
+          "points_against": 6184.08,
+          "championships": 0,
+          "runner_up_finishes": 0,
+          "seasons_counted": 4,
+          "win_pct": 0.37
+        },
+        {
+          "rank": 10,
+          "franchise_id": "quahog-stripes",
+          "display_name": "Quahog Stripes",
+          "short_name": "Stripes",
+          "path": "/retired/quahog-stripes/",
+          "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
+          "seasons": [
+            2021,
+            2022
+          ],
+          "wins": 14,
+          "losses": 14,
+          "ties": 0,
+          "points_for": 3106.04,
+          "points_against": 3152.7,
+          "championships": 0,
+          "runner_up_finishes": 0,
+          "seasons_counted": 2,
+          "win_pct": 0.5
+        },
+        {
+          "rank": 11,
+          "franchise_id": "north-town-ninnyhammers",
+          "display_name": "North Town Ninnyhammers",
+          "short_name": "Ninnyhammers",
+          "path": "/teams/north-town-ninnyhammers/",
+          "identity_image": "/assets/img/franchises/north-town-ninnyhammers/identity.jpg",
+          "seasons": [
+            2023,
+            2024
+          ],
+          "wins": 12,
+          "losses": 14,
+          "ties": 0,
+          "points_for": 2735.16,
+          "points_against": 2995.36,
+          "championships": 0,
+          "runner_up_finishes": 0,
+          "seasons_counted": 2,
+          "win_pct": 0.462
+        },
+        {
+          "rank": 12,
+          "franchise_id": "buffalo-bravado",
+          "display_name": "Buffalo Bravado",
+          "short_name": "Bravado",
+          "path": "/teams/buffalo-bravado/",
+          "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+          "seasons": [
+            2023,
+            2024
+          ],
+          "wins": 7,
+          "losses": 19,
+          "ties": 0,
+          "points_for": 2724.72,
+          "points_against": 3129.0,
+          "championships": 0,
+          "runner_up_finishes": 0,
+          "seasons_counted": 2,
+          "win_pct": 0.269
+        },
+        {
+          "rank": 13,
+          "franchise_id": "vegas-vandals",
+          "display_name": "Vegas Vandals",
+          "short_name": "Vandals",
+          "path": "/teams/vegas-vandals/",
+          "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
+          "seasons": [
+            2024
+          ],
+          "wins": 3,
+          "losses": 10,
+          "ties": 0,
+          "points_for": 1278.54,
+          "points_against": 1607.18,
+          "championships": 0,
+          "runner_up_finishes": 0,
+          "seasons_counted": 1,
+          "win_pct": 0.231
+        }
+      ]
+    },
+    "championships": {
+      "category_id": "championships",
+      "label": "Championships",
+      "provenance": {
+        "source_type": "verified_championship_results",
+        "source_years": [
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "source_files": [
+          "_data/champions.yml"
+        ],
+        "coverage_status": "complete",
+        "last_generated": "2026-08-31T00:00:00Z",
+        "notes": [
+          "All four champions are mapped to canonical franchises."
+        ]
+      },
+      "entries": [
+        {
+          "rank": 1,
+          "franchise_id": "turnbull-acs",
+          "display_name": "Turnbull AC's",
+          "short_name": "Turnbull",
+          "path": "/teams/turnbull-acs/",
+          "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
+          "championships": 1
+        },
+        {
+          "rank": 1,
+          "franchise_id": "greendale-human-beings",
+          "display_name": "Greendale Human Beings",
+          "short_name": "Human Beings",
+          "path": "/teams/greendale-human-beings/",
+          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+          "championships": 1
+        },
+        {
+          "rank": 1,
+          "franchise_id": "ayahuasca-rush",
+          "display_name": "Ayahuasca Rush",
+          "short_name": "Rush",
+          "path": "/teams/ayahuasca-rush/",
+          "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+          "championships": 1
+        },
+        {
+          "rank": 1,
+          "franchise_id": "albany-kneelers",
+          "display_name": "Albany Kneelers",
+          "short_name": "Kneelers",
+          "path": "/teams/albany-kneelers/",
+          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+          "championships": 1
+        }
+      ]
+    },
+    "finals_appearances": {
+      "category_id": "finals_appearances",
+      "label": "Championship Appearances",
+      "provenance": {
+        "source_type": "verified_championship_results",
+        "source_years": [
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "source_files": [
+          "_data/champions.yml"
+        ],
+        "coverage_status": "complete",
+        "last_generated": "2026-08-31T00:00:00Z",
+        "notes": [
+          "All eight finalist slots are mapped to canonical franchises."
+        ]
+      },
+      "entries": [
+        {
+          "rank": 1,
+          "franchise_id": "turnbull-acs",
+          "display_name": "Turnbull AC's",
+          "short_name": "Turnbull",
+          "path": "/teams/turnbull-acs/",
+          "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
+          "finals_appearances": 2
+        },
+        {
+          "rank": 1,
+          "franchise_id": "albany-kneelers",
+          "display_name": "Albany Kneelers",
+          "short_name": "Kneelers",
+          "path": "/teams/albany-kneelers/",
+          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+          "finals_appearances": 2
+        },
+        {
+          "rank": 3,
+          "franchise_id": "savage-huns",
+          "display_name": "The Savage Huns",
+          "short_name": "Savage Huns",
+          "path": "/retired/the-savage-huns/",
+          "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
+          "finals_appearances": 1
+        },
+        {
+          "rank": 3,
+          "franchise_id": "greendale-human-beings",
+          "display_name": "Greendale Human Beings",
+          "short_name": "Human Beings",
+          "path": "/teams/greendale-human-beings/",
+          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+          "finals_appearances": 1
+        },
+        {
+          "rank": 3,
+          "franchise_id": "crazy-wazs-team",
+          "display_name": "Crazy Waz's Team",
+          "short_name": "Crazy Waz",
+          "path": "/teams/crazy-wazs-team/",
+          "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
+          "finals_appearances": 1
+        },
+        {
+          "rank": 3,
+          "franchise_id": "ayahuasca-rush",
+          "display_name": "Ayahuasca Rush",
+          "short_name": "Rush",
+          "path": "/teams/ayahuasca-rush/",
+          "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+          "finals_appearances": 1
+        }
+      ]
+    },
+    "playoff_results": {
+      "category_id": "playoff_results",
+      "label": "Playoff Results",
+      "provenance": {
+        "source_type": "verified_playoff_brackets",
+        "source_years": [
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "source_files": [
+          "_data/playoffs.yml",
+          "_data/franchises.yml"
+        ],
+        "coverage_status": "partial",
+        "last_generated": "2026-08-31T00:00:00Z",
+        "notes": [
+          "Wins and losses are counted from verified advancing teams even when scores are unavailable.",
+          "One 2021 playoff participant has no resolved franchise mapping and is excluded from franchise totals.",
+          "The 2023 bracket lane ambiguity does not change the verified winners used here."
+        ]
+      },
+      "entries": [
+        {
+          "rank": 1,
+          "franchise_id": "turnbull-acs",
+          "display_name": "Turnbull AC's",
+          "short_name": "Turnbull",
+          "path": "/teams/turnbull-acs/",
+          "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
+          "seasons": [
+            2022,
+            2023,
+            2024
+          ],
+          "wins": 4,
+          "losses": 2,
+          "appearances": 3
+        },
+        {
+          "rank": 2,
+          "franchise_id": "greendale-human-beings",
+          "display_name": "Greendale Human Beings",
+          "short_name": "Human Beings",
+          "path": "/teams/greendale-human-beings/",
+          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+          "seasons": [
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "wins": 3,
+          "losses": 3,
+          "appearances": 4
+        },
+        {
+          "rank": 3,
+          "franchise_id": "albany-kneelers",
+          "display_name": "Albany Kneelers",
+          "short_name": "Kneelers",
+          "path": "/teams/albany-kneelers/",
+          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+          "seasons": [
+            2021,
+            2023
+          ],
+          "wins": 3,
+          "losses": 1,
+          "appearances": 2
+        },
+        {
+          "rank": 4,
+          "franchise_id": "ayahuasca-rush",
+          "display_name": "Ayahuasca Rush",
+          "short_name": "Rush",
+          "path": "/teams/ayahuasca-rush/",
+          "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+          "seasons": [
+            2022,
+            2023,
+            2024
+          ],
+          "wins": 2,
+          "losses": 2,
+          "appearances": 3
+        },
+        {
+          "rank": 5,
+          "franchise_id": "crazy-wazs-team",
+          "display_name": "Crazy Waz's Team",
+          "short_name": "Crazy Waz",
+          "path": "/teams/crazy-wazs-team/",
+          "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
+          "seasons": [
+            2024
+          ],
+          "wins": 2,
+          "losses": 1,
+          "appearances": 1
+        },
+        {
+          "rank": 6,
+          "franchise_id": "savage-huns",
+          "display_name": "The Savage Huns",
+          "short_name": "Savage Huns",
+          "path": "/retired/the-savage-huns/",
+          "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
+          "seasons": [
+            2021,
+            2023
+          ],
+          "wins": 1,
+          "losses": 2,
+          "appearances": 2
+        },
+        {
+          "rank": 6,
+          "franchise_id": "maine-moose",
+          "display_name": "Maine Moose",
+          "short_name": "Moose",
+          "path": "/teams/maine-moose/",
+          "identity_image": "/assets/img/franchises/maine-moose/identity.jpg",
+          "seasons": [
+            2023,
+            2024
+          ],
+          "wins": 1,
+          "losses": 2,
+          "appearances": 2
+        },
+        {
+          "rank": 8,
+          "franchise_id": "quahog-stripes",
+          "display_name": "Quahog Stripes",
+          "short_name": "Stripes",
+          "path": "/retired/quahog-stripes/",
+          "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
+          "seasons": [
+            2022
+          ],
+          "wins": 0,
+          "losses": 1,
+          "appearances": 1
+        },
+        {
+          "rank": 8,
+          "franchise_id": "buffalo-bravado",
+          "display_name": "Buffalo Bravado",
+          "short_name": "Bravado",
+          "path": "/teams/buffalo-bravado/",
+          "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+          "seasons": [
+            2024
+          ],
+          "wins": 0,
+          "losses": 1,
+          "appearances": 1
+        }
+      ]
+    },
+    "playoff_appearance_streaks": {
+      "category_id": "playoff_appearance_streaks",
+      "label": "Consecutive Playoff Appearances",
+      "provenance": {
+        "source_type": "verified_playoff_brackets",
+        "source_years": [
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "source_files": [
+          "_data/playoffs.yml",
+          "_data/franchises.yml"
+        ],
+        "coverage_status": "partial",
+        "last_generated": "2026-08-31T00:00:00Z",
+        "notes": [
+          "Streaks cover only the verified 2021–2024 window.",
+          "One unresolved 2021 participant is excluded rather than assigned by assumption."
+        ]
+      },
+      "entries": [
+        {
+          "rank": 1,
+          "franchise_id": "greendale-human-beings",
+          "display_name": "Greendale Human Beings",
+          "short_name": "Human Beings",
+          "path": "/teams/greendale-human-beings/",
+          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+          "streak": 4,
+          "start_year": 2021,
+          "end_year": 2024
+        },
+        {
+          "rank": 2,
+          "franchise_id": "turnbull-acs",
+          "display_name": "Turnbull AC's",
+          "short_name": "Turnbull",
+          "path": "/teams/turnbull-acs/",
+          "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
+          "streak": 3,
+          "start_year": 2022,
+          "end_year": 2024
+        },
+        {
+          "rank": 2,
+          "franchise_id": "ayahuasca-rush",
+          "display_name": "Ayahuasca Rush",
+          "short_name": "Rush",
+          "path": "/teams/ayahuasca-rush/",
+          "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+          "streak": 3,
+          "start_year": 2022,
+          "end_year": 2024
+        },
+        {
+          "rank": 4,
+          "franchise_id": "maine-moose",
+          "display_name": "Maine Moose",
+          "short_name": "Moose",
+          "path": "/teams/maine-moose/",
+          "identity_image": "/assets/img/franchises/maine-moose/identity.jpg",
+          "streak": 2,
+          "start_year": 2023,
+          "end_year": 2024
+        },
+        {
+          "rank": 5,
+          "franchise_id": "savage-huns",
+          "display_name": "The Savage Huns",
+          "short_name": "Savage Huns",
+          "path": "/retired/the-savage-huns/",
+          "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
+          "streak": 1,
+          "start_year": 2021,
+          "end_year": 2021
+        },
+        {
+          "rank": 5,
+          "franchise_id": "quahog-stripes",
+          "display_name": "Quahog Stripes",
+          "short_name": "Stripes",
+          "path": "/retired/quahog-stripes/",
+          "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
+          "streak": 1,
+          "start_year": 2022,
+          "end_year": 2022
+        },
+        {
+          "rank": 5,
+          "franchise_id": "crazy-wazs-team",
+          "display_name": "Crazy Waz's Team",
+          "short_name": "Crazy Waz",
+          "path": "/teams/crazy-wazs-team/",
+          "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
+          "streak": 1,
+          "start_year": 2024,
+          "end_year": 2024
+        },
+        {
+          "rank": 5,
+          "franchise_id": "buffalo-bravado",
+          "display_name": "Buffalo Bravado",
+          "short_name": "Bravado",
+          "path": "/teams/buffalo-bravado/",
+          "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+          "streak": 1,
+          "start_year": 2024,
+          "end_year": 2024
+        },
+        {
+          "rank": 5,
+          "franchise_id": "albany-kneelers",
+          "display_name": "Albany Kneelers",
+          "short_name": "Kneelers",
+          "path": "/teams/albany-kneelers/",
+          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+          "streak": 1,
+          "start_year": 2021,
+          "end_year": 2021
+        }
+      ]
+    }
+  },
+  "records": {
+    "season_results": {
+      "category_id": "season_wins",
+      "label": "Single-Season Results",
+      "provenance": {
+        "source_type": "verified_final_standings",
+        "source_years": [
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "source_files": [
+          "_data/seasons.yml"
+        ],
+        "coverage_status": "complete",
+        "last_generated": "2026-08-31T00:00:00Z",
+        "notes": [
+          "Every published standings row contains wins, losses, ties, and a calculable winning percentage."
+        ]
+      },
+      "entries": [
+        {
+          "record_id": "most_wins",
+          "label": "Most regular-season wins",
+          "format": "wins",
+          "holders": [
+            {
+              "year": 2023,
+              "season_path": "/history/2023/",
+              "franchise_id": "albany-kneelers",
+              "historical_team_name": "Albany Kneelers",
+              "display_name": "Albany Kneelers",
+              "path": "/teams/albany-kneelers/",
+              "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+              "source": {
+                "file": "_data/seasons.yml",
+                "year": 2023
+              },
+              "value": 12
+            }
+          ]
+        },
+        {
+          "record_id": "fewest_wins",
+          "label": "Fewest regular-season wins",
+          "format": "wins",
+          "holders": [
+            {
+              "year": 2024,
+              "season_path": "/history/2024/",
+              "franchise_id": "baseball-furies",
+              "historical_team_name": "The Baseball Furies",
+              "display_name": "The Baseball Furies",
+              "path": "/teams/baseball-furies/",
+              "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
+              "source": {
+                "file": "_data/seasons.yml",
+                "year": 2024
+              },
+              "value": 2
+            },
+            {
+              "year": 2021,
+              "season_path": "/history/2021/",
+              "franchise_id": null,
+              "historical_team_name": "Matthew's Optimal Team",
+              "display_name": "Matthew's Optimal Team",
+              "path": null,
+              "identity_image": null,
+              "source": {
+                "file": "_data/seasons.yml",
+                "year": 2021
+              },
+              "value": 2
+            }
+          ]
+        },
+        {
+          "record_id": "best_win_pct",
+          "label": "Best regular-season win percentage",
+          "format": "percentage",
+          "holders": [
+            {
+              "year": 2023,
+              "season_path": "/history/2023/",
+              "franchise_id": "albany-kneelers",
+              "historical_team_name": "Albany Kneelers",
+              "display_name": "Albany Kneelers",
+              "path": "/teams/albany-kneelers/",
+              "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+              "source": {
+                "file": "_data/seasons.yml",
+                "year": 2023
+              },
+              "value": 0.923
+            }
+          ]
+        }
+      ]
+    },
+    "season_points": {
+      "category_id": "season_points",
+      "label": "Single-Season Scoring",
+      "provenance": {
+        "source_type": "verified_final_standings",
+        "source_years": [
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "source_files": [
+          "_data/seasons.yml",
+          "docs/HISTORY_MIGRATION.md"
+        ],
+        "coverage_status": "partial",
+        "last_generated": "2026-08-31T00:00:00Z",
+        "notes": [
+          "The 2024 final standings table supplies PF and PA; the champions page reverses those labels for Turnbull AC's."
+        ]
+      },
+      "entries": [
+        {
+          "record_id": "highest_points_for",
+          "label": "Highest points for",
+          "format": "points",
+          "holders": [
+            {
+              "year": 2022,
+              "season_path": "/history/2022/",
+              "franchise_id": "ayahuasca-rush",
+              "historical_team_name": "Ayahuasca Rush",
+              "display_name": "Ayahuasca Rush",
+              "path": "/teams/ayahuasca-rush/",
+              "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+              "source": {
+                "file": "_data/seasons.yml",
+                "year": 2022
+              },
+              "value": 1935.92
+            }
+          ]
+        },
+        {
+          "record_id": "lowest_points_for",
+          "label": "Lowest points for",
+          "format": "points",
+          "holders": [
+            {
+              "year": 2023,
+              "season_path": "/history/2023/",
+              "franchise_id": "baseball-furies",
+              "historical_team_name": "The Baseball Furies",
+              "display_name": "The Baseball Furies",
+              "path": "/teams/baseball-furies/",
+              "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
+              "source": {
+                "file": "_data/seasons.yml",
+                "year": 2023
+              },
+              "value": 1266.66
+            }
+          ]
+        },
+        {
+          "record_id": "highest_points_against",
+          "label": "Highest points against",
+          "format": "points",
+          "holders": [
+            {
+              "year": 2021,
+              "season_path": "/history/2021/",
+              "franchise_id": null,
+              "historical_team_name": "Matthew's Optimal Team",
+              "display_name": "Matthew's Optimal Team",
+              "path": null,
+              "identity_image": null,
+              "source": {
+                "file": "_data/seasons.yml",
+                "year": 2021
+              },
+              "value": 1867.14
+            }
+          ]
+        },
+        {
+          "record_id": "lowest_points_against",
+          "label": "Lowest points against",
+          "format": "points",
+          "holders": [
+            {
+              "year": 2023,
+              "season_path": "/history/2023/",
+              "franchise_id": "ayahuasca-rush",
+              "historical_team_name": "Ayahuasca Rush",
+              "display_name": "Ayahuasca Rush",
+              "path": "/teams/ayahuasca-rush/",
+              "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+              "source": {
+                "file": "_data/seasons.yml",
+                "year": 2023
+              },
+              "value": 1303.28
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "unavailable_categories": [
+    {
+      "category_id": "playoff_scoring",
+      "label": "Playoff Scoring Records",
+      "message": "Non-final playoff scores are still being imported.",
+      "provenance": {
+        "source_type": "incomplete_playoff_scores",
+        "source_years": [
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "source_files": [
+          "_data/playoffs.yml"
+        ],
+        "coverage_status": "unavailable",
+        "last_generated": "2026-08-31T00:00:00Z",
+        "notes": [
+          "Twelve non-final playoff games have verified winners but no published scores."
+        ]
+      },
+      "entries": []
+    },
+    {
+      "category_id": "game_margin",
+      "label": "Game & Margin Records",
+      "message": "Weekly matchup history is still being imported.",
+      "provenance": {
+        "source_type": "missing_weekly_matchups",
+        "source_years": [],
+        "source_files": [],
+        "coverage_status": "unavailable",
+        "last_generated": "2026-08-31T00:00:00Z",
+        "notes": [
+          "Final standings cannot establish single-game scores or margins."
+        ]
+      },
+      "entries": []
+    },
+    {
+      "category_id": "regular_season_streaks",
+      "label": "Regular-Season Streaks",
+      "message": "Win and loss streaks await complete weekly matchup history.",
+      "provenance": {
+        "source_type": "missing_weekly_matchups",
+        "source_years": [],
+        "source_files": [],
+        "coverage_status": "unavailable",
+        "last_generated": "2026-08-31T00:00:00Z",
+        "notes": [
+          "Final records do not preserve game sequence."
+        ]
+      },
+      "entries": []
+    },
+    {
+      "category_id": "playoff_droughts",
+      "label": "Playoff Droughts",
+      "message": "Franchise tenure history is needed before playoff droughts can be ranked.",
+      "provenance": {
+        "source_type": "incomplete_franchise_tenure",
+        "source_years": [
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "source_files": [
+          "_data/playoffs.yml",
+          "_data/franchises.yml"
+        ],
+        "coverage_status": "unavailable",
+        "last_generated": "2026-08-31T00:00:00Z",
+        "notes": [
+          "Founding seasons and unresolved franchise continuity prevent a defensible drought calculation."
+        ]
+      },
+      "entries": []
+    },
+    {
+      "category_id": "bench_blunders",
+      "label": "Bench Blunders",
+      "message": "Historical bench scoring is still being imported.",
+      "provenance": {
+        "source_type": "missing_historical_bench_scoring",
+        "source_years": [],
+        "source_files": [],
+        "coverage_status": "unavailable",
+        "last_generated": "2026-08-31T00:00:00Z",
+        "notes": [
+          "No verified weekly bench scoring exists in the current archive."
+        ]
+      },
+      "entries": []
+    }
+  ],
+  "bench_blunders": {
+    "category_id": "bench_blunders",
+    "label": "Bench Blunders",
+    "required_fields": [
+      "rank",
+      "franchise_id",
+      "historical_team_name",
+      "year",
+      "week",
+      "player_name",
+      "points_missed",
+      "source"
+    ],
+    "provenance": {
+      "source_type": "missing_historical_bench_scoring",
+      "source_years": [],
+      "source_files": [],
+      "coverage_status": "unavailable",
+      "last_generated": "2026-08-31T00:00:00Z",
+      "notes": [
+        "No verified weekly bench scoring exists in the current archive."
+      ]
+    },
+    "entries": []
+  }
+}

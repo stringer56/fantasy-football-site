@@ -43,6 +43,9 @@ jobs:
       - name: Pull news feeds
         run: python scripts/pull_news.py
 
+      - name: Rebuild historical records
+        run: python scripts/build_records.py
+
       - name: Validate public generated data
         run: python scripts/validate_public_data.py
 

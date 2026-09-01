@@ -24,6 +24,8 @@ python scripts/validate_repository.py
 python scripts/validate_franchise_data.py
 python scripts/validate_history_data.py
 python scripts/validate_draft_data.py
+python scripts/build_records.py --check
+python scripts/validate_records_data.py
 ```
 
 Run a GitHub Pages-compatible build when Ruby and Bundler are installed:
@@ -47,3 +49,5 @@ Verified season provenance is recorded in
 [History Migration](docs/HISTORY_MIGRATION.md), and the image-backed draft
 archive and unresolved draft identities are recorded in
 [Draft Migration](docs/DRAFT_MIGRATION.md).
+Record coverage, exclusions, and publication rules are documented in
+[Records Data Coverage](docs/RECORDS_DATA_COVERAGE.md).
