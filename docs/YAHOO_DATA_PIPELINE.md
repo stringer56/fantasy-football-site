@@ -21,6 +21,10 @@ the manual `Backfill Yahoo History` workflow, writes sanitized per-season files,
 and uploads a review artifact without pushing to the repository. See
 [Yahoo Historical Data Coverage](YAHOO_HISTORY_COVERAGE.md).
 
+GitHub exposes that manual workflow only after the workflow file has reached the
+default branch. Its offline code and configuration are validated on the pull
+request; the first authenticated dispatch follows merge.
+
 ## Required GitHub Actions secrets
 
 Configure these under **Repository Settings → Secrets and variables → Actions**:

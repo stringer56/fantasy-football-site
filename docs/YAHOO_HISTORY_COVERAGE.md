@@ -93,6 +93,11 @@ manual workflow_dispatch
 repository permission. It never runs on the normal six-hour update. The workflow
 does not push data; it uploads a sanitized artifact for review.
 
+GitHub registers a new `workflow_dispatch` workflow only after its workflow file
+exists on the default branch. PR validation exercises all offline discovery,
+normalization, privacy, and archive tests, but the first authenticated historical
+dispatch must occur after this milestone is reviewed and merged.
+
 The request client uses an in-memory cache, a configurable inter-request delay,
 bounded retries, exponential backoff for network failures and 429/5xx responses,
 and `Retry-After` when supplied. The backfill writes sanitized checkpoints after
