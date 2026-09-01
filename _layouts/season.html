@@ -6,6 +6,11 @@ layout: default
 {% assign playoff = site.data.playoffs.playoffs | where: "season", page.year | first %}
 {% assign champion = site.data.franchises.franchises | where: "franchise_id", season.champion_franchise_id | first %}
 {% assign draft = site.data.drafts.drafts | where: "year", page.year | first %}
+{% assign season_recap = site.data.generated.recaps.seasons | where: "season", page.year | first %}
+{% assign season_numbers = site.data.generated.recaps.by_the_numbers | where: "season", page.year %}
+{% assign playoff_recaps = site.data.generated.recaps.playoff_recaps | where: "season", page.year %}
+{% assign championship_recap = site.data.generated.recaps.championship_recaps | where: "season", page.year | first %}
+{% assign team_recaps = site.data.generated.recaps.team_recaps | where: "season", page.year %}
 
 <article class="season-page">
   <header class="season-hero" data-year="{{ season.year }}">
@@ -30,15 +35,25 @@ layout: default
 
   <nav class="season-subnav" aria-label="Season page sections">
     <div class="wrap">
-      <a href="#standings">Standings</a><a href="#bracket">Bracket</a><a href="#playoffs">Results</a><a href="#championship">Championship</a><a href="#teams">Teams</a>
+      <a href="#recap">Recap</a><a href="#numbers">Numbers</a><a href="#standings">Standings</a><a href="#bracket">Bracket</a><a href="#playoffs">Playoffs</a><a href="#championship">Championship</a><a href="#teams">Teams</a>
     </div>
   </nav>
 
-  <section class="shell-content season-section season-story" aria-labelledby="story-heading">
+  <section class="shell-content season-section season-story" id="recap" aria-labelledby="story-heading">
     <div class="section-heading">
-      <div><p class="eyebrow">Season story</p><h2 id="story-heading">A verified record, without invented color</h2></div>
+      <div><p class="eyebrow">Season story</p><h2 id="story-heading">{{ season_recap.headline }}</h2></div>
     </div>
-    <p>The public archive verifies the final standings, playoff field, advancing teams, champion, runner-up, and championship score. It does not include a written season narrative, so this page keeps the record factual until commissioner-approved recap copy is available.</p>
+    <div class="narrative-copy">{% for paragraph in season_recap.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}</div>
+    <p class="narrative-provenance"><span aria-hidden="true">✓</span> {{ season_recap.provenance_label }}{% if season_recap.content_source == 'editorial_override' %} Commissioner-edited.{% endif %}</p>
+  </section>
+
+  <section class="season-section season-numbers" id="numbers" aria-labelledby="numbers-heading">
+    <div class="shell-content">
+      <div class="section-heading"><div><p class="eyebrow">The season at a glance</p><h2 id="numbers-heading">By the Numbers</h2><p>Only facts supported by the verified standings, bracket, and championship result appear here.</p></div></div>
+      <div class="season-number-grid">
+        {% for item in season_numbers %}<article class="season-number-card{% if item.coverage_status == 'partial' %} season-number-card--partial{% endif %}"><span>{{ item.label }}</span><strong>{{ item.display_value }}</strong>{% if item.coverage_status == 'partial' %}<small>Verified source conflict noted</small>{% endif %}</article>{% endfor %}
+      </div>
+    </div>
   </section>
 
   <section class="season-section season-section--tint" id="standings" aria-labelledby="standings-heading">
@@ -87,21 +102,33 @@ layout: default
           </article>
         {% endfor %}
       </div>
+      <div class="playoff-narratives" aria-labelledby="playoff-recaps-heading">
+        <div><p class="eyebrow">The bracket in words</p><h3 id="playoff-recaps-heading">Playoff Round Recaps</h3></div>
+        <div class="playoff-recap-grid">
+          {% for recap in playoff_recaps %}<article class="playoff-recap-card"><span>{{ recap.round }} · Game {{ recap.order }}</span>{% for paragraph in recap.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}{% if recap.coverage_status == 'partial' %}<small>Winner verified · score unavailable</small>{% endif %}</article>{% endfor %}
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="shell-content season-section" id="championship" aria-labelledby="championship-heading">
     <div class="championship-feature">
-      <div class="championship-feature__copy"><p class="eyebrow">Championship recap</p><h2 id="championship-heading">{{ championship.champion_display_name }} {{ championship.champion_score }}, {{ championship.runner_up_display_name }} {{ championship.runner_up_score }}</h2><p>{{ championship.champion_display_name }} captured the {{ season.year }} Brew Crew Cup. The public archive supplies the matchup result and source images, but no written game recap; the verified final is preserved here without added play-by-play.</p><a class="text-link" href="{{ championship.source_url }}" target="_blank" rel="noopener">Open original recap page <span aria-hidden="true">↗</span></a></div>
+      <div class="championship-feature__copy"><p class="eyebrow">Championship recap</p><h2 id="championship-heading">{{ championship.champion_display_name }} {{ championship.champion_score }}, {{ championship.runner_up_display_name }} {{ championship.runner_up_score }}</h2><div class="narrative-copy">{% for paragraph in championship_recap.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}</div><p class="narrative-provenance"><span aria-hidden="true">✓</span> {{ championship_recap.provenance_label }}{% if championship_recap.content_source == 'editorial_override' %} Commissioner-edited.{% endif %}</p><a class="text-link" href="{{ championship.source_url }}" target="_blank" rel="noopener">Open original recap page <span aria-hidden="true">↗</span></a></div>
       <div class="championship-feature__media"><a href="{{ season.championship_portrait_asset | relative_url }}"><img src="{{ season.championship_portrait_asset | relative_url }}" alt="{{ championship.champion_display_name }} championship artwork"></a><a href="{{ season.championship_matchup_asset | relative_url }}"><img src="{{ season.championship_matchup_asset | relative_url }}" alt="Original {{ season.year }} championship matchup capture"></a></div>
     </div>
   </section>
 
   <section class="season-section season-section--tint" id="teams" aria-labelledby="teams-heading">
     <div class="shell-content">
-      <div class="section-heading"><div><p class="eyebrow">Team by team</p><h2 id="teams-heading">Season Recap Index</h2></div></div>
-      <p class="season-section__intro">The public source does not contain individual team recap copy. These verified finish cards establish the structure for commissioner-approved recaps without fabricating summaries.</p>
-      <div class="team-recap-grid">{% for row in season.standings %}<article><span>Finished {{ row.rank }}</span><h3>{{ row.team_name }}</h3><p>{{ row.wins }}–{{ row.losses }}–{{ row.ties }} · {{ row.points_for }} PF</p></article>{% endfor %}</div>
+      <div class="section-heading"><div><p class="eyebrow">Team by team</p><h2 id="teams-heading">Season Recaps</h2></div></div>
+      <p class="season-section__intro">Every team receives a concise recap assembled from its final record, point totals, and verified playoff outcome.</p>
+      <div class="team-recap-grid">
+        {% for recap in team_recaps %}<article class="team-recap-card">
+          <div class="team-recap-card__header">{% if recap.identity_image %}<img src="{{ recap.identity_image | relative_url }}" alt="{{ recap.identity_alt }}">{% else %}<span class="team-recap-card__unresolved" aria-hidden="true">?</span>{% endif %}<div><span>Finished {{ recap.rank }} · {{ recap.record.wins }}–{{ recap.record.losses }}–{{ recap.record.ties }}</span><h3>{{ recap.historical_team_name }}</h3></div></div>
+          {% for paragraph in recap.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+          <div class="team-recap-card__footer">{% if recap.path %}<a class="text-link" href="{{ recap.path | relative_url }}">Franchise profile <span aria-hidden="true">→</span></a>{% else %}<span class="unresolved-label">Unmapped historical identity</span>{% endif %}<small>{{ recap.provenance_label }}</small></div>
+        </article>{% endfor %}
+      </div>
     </div>
   </section>
 

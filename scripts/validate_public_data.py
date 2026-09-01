@@ -21,6 +21,7 @@ REQUIRED_FILES = {
     "votes.json",
     "power_rankings.json",
     "picks.json",
+    "recaps.json",
 }
 FORBIDDEN_KEYS = {
     "access_token",

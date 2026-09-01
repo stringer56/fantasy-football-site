@@ -94,6 +94,10 @@ editorial decisions, and unresolved fields.
   architecture, manager-only Power Ranking scoring, picks scoring, privacy
   boundary, and latest-valid-before-deadline duplicate policy. Production polls
   remain absent until the commissioner supplies them.
+- `editorial/recaps.yml`: approved commissioner narrative overrides. Separate
+  arrays identify season, team, playoff-game, and championship copy without
+  changing generator code. Unresolved team overrides use a null franchise ID
+  plus the exact historical display name.
 
 Unmigrated domains retain empty arrays. Season, champion, and playoff values are
 published only after transcription and source verification; see
@@ -169,3 +173,13 @@ All three include `season`, nullable `week`, nullable `generated_at`, and a
 source/coverage object with accepted, rejected, and superseded ballot counts.
 Empty preseason data uses explicit unavailable states.
 See [Voting Architecture](VOTING_ARCHITECTURE.md) for private export handling.
+
+### `recaps.json`
+
+Contains deterministic historical storytelling output in `seasons`,
+`team_recaps`, `playoff_recaps`, `championship_recaps`, and `by_the_numbers`.
+Every narrative carries `season`, `source_files`, `generated_at`,
+`coverage_status`, `facts_used`, `warnings`, generated fallback text, selected
+public text, and a public provenance label. Approved overrides remain separate
+from generated prose and survive regeneration. Unresolved identities keep null
+franchise routes. See [Historical Narrative System](NARRATIVE_SYSTEM.md).
