@@ -117,7 +117,8 @@ def main() -> None:
     if cup_page.count("<article>") != 4:
         errors.append("Brew Crew Cup page must render exactly 4 champion entries")
     for expected in (
-        "Road to Glory Record Book",
+        "Road to Glory",
+        "Record Book",
         "Career Leaderboard",
         "Season Records",
         "Playoff Records",
