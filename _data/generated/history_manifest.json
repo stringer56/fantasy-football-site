@@ -1,11 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-01T03:21:01Z",
-  "discovery_status": "partial_access_denied",
+  "generated_at": "2026-09-01T03:54:14Z",
+  "discovery_status": "authorization_blocked",
   "access_status": {
     "oauth_refresh": "succeeded",
-    "user_game_league_enumeration": "http_403",
-    "configured_alias_resolution": "http_403"
+    "authenticated_user_fantasy_resource": "http_403",
+    "nfl_fantasy_game_resource": "not_tested_due_stop_rule",
+    "configured_alias_resolution": "not_tested_due_stop_rule",
+    "historical_enumeration": "not_tested_due_stop_rule"
   },
   "authorization_probes": [
     {
@@ -29,16 +31,16 @@
       "finished": true,
       "previous_league_key": null,
       "next_league_key": "461.l.103926",
-      "verification_status": "verified_repository_evidence_live_access_denied",
+      "verification_status": "verified_repository_evidence_live_retest_blocked",
       "capabilities": {
-        "league_metadata": "http_403",
-        "teams": "http_403",
-        "standings": "http_403",
-        "weekly_matchups": "http_403",
-        "final_playoff_matchups": "http_403",
-        "rosters": "http_403",
-        "draft_results": "http_403",
-        "transactions": "http_403"
+        "league_metadata": "not_tested_due_authorization_stop",
+        "teams": "not_tested_due_authorization_stop",
+        "standings": "not_tested_due_authorization_stop",
+        "weekly_matchups": "not_tested_due_authorization_stop",
+        "final_playoff_matchups": "not_tested_due_authorization_stop",
+        "rosters": "not_tested_due_authorization_stop",
+        "draft_results": "not_tested_due_authorization_stop",
+        "transactions": "not_tested_due_authorization_stop"
       },
       "team_mappings": [],
       "archive_coverage": null
@@ -55,16 +57,16 @@
       "finished": true,
       "previous_league_key": "449.l.761310",
       "next_league_key": null,
-      "verification_status": "verified_repository_evidence_live_access_denied",
+      "verification_status": "verified_repository_evidence_live_retest_blocked",
       "capabilities": {
-        "league_metadata": "http_403",
-        "teams": "http_403",
-        "standings": "http_403",
-        "weekly_matchups": "http_403",
-        "final_playoff_matchups": "http_403",
-        "rosters": "http_403",
-        "draft_results": "http_403",
-        "transactions": "http_403"
+        "league_metadata": "not_tested_due_authorization_stop",
+        "teams": "not_tested_due_authorization_stop",
+        "standings": "not_tested_due_authorization_stop",
+        "weekly_matchups": "not_tested_due_authorization_stop",
+        "final_playoff_matchups": "not_tested_due_authorization_stop",
+        "rosters": "not_tested_due_authorization_stop",
+        "draft_results": "not_tested_due_authorization_stop",
+        "transactions": "not_tested_due_authorization_stop"
       },
       "team_mappings": [
         {
@@ -186,13 +188,14 @@
     {
       "season": 2026,
       "configured_alias": "nfl.l.26455",
-      "verification_status": "http_403"
+      "verification_status": "not_tested_due_authorization_stop"
     }
   ],
   "missing_renewal_links": [],
   "notes": [
-    "Yahoo OAuth refresh succeeds, but every tested Fantasy API resource returns HTTP 403.",
-    "The committed league identities remain based on previously sanitized repository evidence.",
-    "HTTP status labels contain no response body, request URL, or credential value."
+    "Live retest stopped after authenticated_user_fantasy_resource failed, as required by the authorization stop rule.",
+    "No later Yahoo Fantasy resources or historical leagues were enumerated in this run.",
+    "Only HTTP status and an allowlisted Yahoo error code, when available, were retained.",
+    "Previously verified 2024 and 2025 repository evidence remains preserved."
   ]
 }
