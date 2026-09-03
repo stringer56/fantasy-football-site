@@ -1,0 +1,356 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-03T19:03:09Z",
+  "source": "official_yahoo_public_archive",
+  "scope": {
+    "league_started": 2021,
+    "completed_seasons": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  "seasons": [
+    {
+      "season": 2021,
+      "league_key": "406.l.12928",
+      "team_count_expected": 10,
+      "sections": {
+        "league": {
+          "status": "complete",
+          "rows": 1
+        },
+        "standings": {
+          "status": "unavailable",
+          "rows": 0
+        },
+        "teams": {
+          "status": "unavailable",
+          "rows": 0
+        },
+        "weekly_matchups": {
+          "status": "unavailable",
+          "weeks": 0,
+          "expected_weeks": 0,
+          "games": 0,
+          "all_scores_present": false
+        },
+        "playoffs": {
+          "status": "unavailable",
+          "games": 0,
+          "all_scores_present": false,
+          "classification_note": "Yahoo weekly archive is unavailable without an accessible scoreboard."
+        },
+        "draft": {
+          "status": "unavailable",
+          "picks": 0
+        },
+        "transactions": {
+          "status": "unavailable",
+          "rows": 0,
+          "pages": 1
+        },
+        "rosters": {
+          "status": "not_requested",
+          "player_rows": 0
+        },
+        "player_weekly_points": {
+          "status": "not_requested",
+          "player_rows": 0
+        }
+      },
+      "franchise_mapping": {
+        "status": "unavailable",
+        "unresolved_names": []
+      },
+      "weeks_expected": null,
+      "weeks_fetched": 0,
+      "matchups_expected": null,
+      "matchups_fetched": 0,
+      "roster_weeks_fetched": 0,
+      "unresolved_franchise_mappings": [],
+      "confidence": "partial_manual_only"
+    },
+    {
+      "season": 2022,
+      "league_key": "414.l.527645",
+      "team_count_expected": 12,
+      "sections": {
+        "league": {
+          "status": "complete",
+          "rows": 1
+        },
+        "standings": {
+          "status": "complete",
+          "rows": 12,
+          "expected": 12
+        },
+        "teams": {
+          "status": "complete",
+          "rows": 12,
+          "expected": 12
+        },
+        "weekly_matchups": {
+          "status": "complete",
+          "weeks": 16,
+          "expected_weeks": 16,
+          "games": 92,
+          "all_scores_present": true
+        },
+        "playoffs": {
+          "status": "complete",
+          "games": 8,
+          "all_scores_present": true,
+          "classification_note": "Yahoo weekly archive identifies playoff weeks; consolation classification is not inferred."
+        },
+        "draft": {
+          "status": "complete",
+          "picks": 180
+        },
+        "transactions": {
+          "status": "complete",
+          "rows": 337,
+          "pages": 14
+        },
+        "rosters": {
+          "status": "not_requested",
+          "player_rows": 0
+        },
+        "player_weekly_points": {
+          "status": "not_requested",
+          "player_rows": 0
+        }
+      },
+      "franchise_mapping": {
+        "status": "partial",
+        "unresolved_names": [
+          "Broncos Country Let’s Ride",
+          "Dilly Dilly"
+        ]
+      },
+      "weeks_expected": 16,
+      "weeks_fetched": 16,
+      "matchups_expected": 92,
+      "matchups_fetched": 92,
+      "roster_weeks_fetched": 0,
+      "unresolved_franchise_mappings": [
+        "Broncos Country Let’s Ride",
+        "Dilly Dilly"
+      ],
+      "confidence": "high_results_partial_identity"
+    },
+    {
+      "season": 2023,
+      "league_key": "423.l.161807",
+      "team_count_expected": 12,
+      "sections": {
+        "league": {
+          "status": "complete",
+          "rows": 1
+        },
+        "standings": {
+          "status": "complete",
+          "rows": 12,
+          "expected": 12
+        },
+        "teams": {
+          "status": "complete",
+          "rows": 12,
+          "expected": 12
+        },
+        "weekly_matchups": {
+          "status": "complete",
+          "weeks": 16,
+          "expected_weeks": 16,
+          "games": 92,
+          "all_scores_present": true
+        },
+        "playoffs": {
+          "status": "complete",
+          "games": 14,
+          "all_scores_present": true,
+          "classification_note": "Yahoo weekly archive identifies playoff weeks; consolation classification is not inferred."
+        },
+        "draft": {
+          "status": "complete",
+          "picks": 180
+        },
+        "transactions": {
+          "status": "complete",
+          "rows": 283,
+          "pages": 12
+        },
+        "rosters": {
+          "status": "not_requested",
+          "player_rows": 0
+        },
+        "player_weekly_points": {
+          "status": "not_requested",
+          "player_rows": 0
+        }
+      },
+      "franchise_mapping": {
+        "status": "partial",
+        "unresolved_names": [
+          "Broncos Country Let’s Ride"
+        ]
+      },
+      "weeks_expected": 16,
+      "weeks_fetched": 16,
+      "matchups_expected": 92,
+      "matchups_fetched": 92,
+      "roster_weeks_fetched": 0,
+      "unresolved_franchise_mappings": [
+        "Broncos Country Let’s Ride"
+      ],
+      "confidence": "high_results_partial_identity"
+    },
+    {
+      "season": 2024,
+      "league_key": "449.l.761310",
+      "team_count_expected": 12,
+      "sections": {
+        "league": {
+          "status": "complete",
+          "rows": 1
+        },
+        "standings": {
+          "status": "complete",
+          "rows": 12,
+          "expected": 12
+        },
+        "teams": {
+          "status": "complete",
+          "rows": 12,
+          "expected": 12
+        },
+        "weekly_matchups": {
+          "status": "complete",
+          "weeks": 16,
+          "expected_weeks": 16,
+          "games": 92,
+          "all_scores_present": true
+        },
+        "playoffs": {
+          "status": "complete",
+          "games": 14,
+          "all_scores_present": true,
+          "classification_note": "Yahoo weekly archive identifies playoff weeks; consolation classification is not inferred."
+        },
+        "draft": {
+          "status": "complete",
+          "picks": 180
+        },
+        "transactions": {
+          "status": "complete",
+          "rows": 259,
+          "pages": 11
+        },
+        "rosters": {
+          "status": "not_requested",
+          "player_rows": 0
+        },
+        "player_weekly_points": {
+          "status": "not_requested",
+          "player_rows": 0
+        }
+      },
+      "franchise_mapping": {
+        "status": "complete",
+        "unresolved_names": []
+      },
+      "weeks_expected": 16,
+      "weeks_fetched": 16,
+      "matchups_expected": 92,
+      "matchups_fetched": 92,
+      "roster_weeks_fetched": 0,
+      "unresolved_franchise_mappings": [],
+      "confidence": "high_results_complete_identity"
+    },
+    {
+      "season": 2025,
+      "league_key": "461.l.103926",
+      "team_count_expected": 12,
+      "sections": {
+        "league": {
+          "status": "complete",
+          "rows": 1
+        },
+        "standings": {
+          "status": "complete",
+          "rows": 12,
+          "expected": 12
+        },
+        "teams": {
+          "status": "complete",
+          "rows": 12,
+          "expected": 12
+        },
+        "weekly_matchups": {
+          "status": "complete",
+          "weeks": 16,
+          "expected_weeks": 16,
+          "games": 92,
+          "all_scores_present": true
+        },
+        "playoffs": {
+          "status": "complete",
+          "games": 14,
+          "all_scores_present": true,
+          "classification_note": "Yahoo weekly archive identifies playoff weeks; consolation classification is not inferred."
+        },
+        "draft": {
+          "status": "complete",
+          "picks": 180
+        },
+        "transactions": {
+          "status": "complete",
+          "rows": 261,
+          "pages": 11
+        },
+        "rosters": {
+          "status": "not_requested",
+          "player_rows": 0
+        },
+        "player_weekly_points": {
+          "status": "not_requested",
+          "player_rows": 0
+        }
+      },
+      "franchise_mapping": {
+        "status": "complete",
+        "unresolved_names": []
+      },
+      "weeks_expected": 16,
+      "weeks_fetched": 16,
+      "matchups_expected": 92,
+      "matchups_fetched": 92,
+      "roster_weeks_fetched": 0,
+      "unresolved_franchise_mappings": [],
+      "confidence": "high_results_complete_identity"
+    }
+  ],
+  "failures": [
+    {
+      "season": 2021,
+      "section": "archive_home",
+      "error_type": "RuntimeError",
+      "message": "Yahoo archive requires sign-in"
+    },
+    {
+      "season": 2021,
+      "section": "draft",
+      "error_type": "RuntimeError",
+      "message": "Yahoo archive requires sign-in"
+    },
+    {
+      "season": 2021,
+      "section": "transactions_offset_0",
+      "error_type": "RuntimeError",
+      "message": "Yahoo archive request failed (ConnectionError)"
+    }
+  ],
+  "publication_policy": "Only verified normalized rows may unlock derived records; partial and unavailable categories remain labeled."
+}

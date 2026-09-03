@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "season": 2022,
+  "league_key": "414.l.527645",
+  "generated_at": "2026-09-03T19:03:09Z",
+  "source": {
+    "type": "official_yahoo_public_archive",
+    "url": "https://football.fantasysports.yahoo.com/2022/f1/527645",
+    "coverage_status": "verified_rows_only"
+  },
+  "league": {
+    "name": "Road To Glory FFL",
+    "game_key": "414",
+    "league_id": "527645",
+    "team_count": 12,
+    "finished": true,
+    "previous_league_key": "406.l.12928",
+    "next_league_key": "423.l.161807"
+  }
+}

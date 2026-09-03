@@ -1,0 +1,80 @@
+name: Backfill Yahoo History
+
+on:
+  workflow_dispatch:
+    inputs:
+      seasons:
+        description: "Verified seasons or ranges (for example 2022-2025)"
+        required: true
+        default: "2021-2025"
+        type: string
+      request_delay:
+        description: "Minimum seconds between Yahoo requests"
+        required: true
+        default: "3.0"
+        type: string
+      include_rosters:
+        description: "Experimental large roster crawl (normally leave off)"
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: yahoo-history-backfill-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install pinned dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements.txt
+
+      - name: Run offline archive parser tests
+        run: python -m unittest tests.test_yahoo_archive -v
+
+      - name: Backfill public Yahoo archives
+        shell: bash
+        env:
+          BACKFILL_SEASONS: ${{ inputs.seasons }}
+          REQUEST_DELAY: ${{ inputs.request_delay }}
+          INCLUDE_ROSTERS: ${{ inputs.include_rosters }}
+        run: |
+          args=(--seasons "$BACKFILL_SEASONS" --delay "$REQUEST_DELAY")
+          if [[ "$INCLUDE_ROSTERS" == "true" ]]; then
+            args+=(--include-rosters)
+          fi
+          python scripts/backfill_yahoo_history.py "${args[@]}"
+
+      - name: Validate normalized public output
+        run: |
+          python scripts/validate_yahoo_history_backfill.py
+          python scripts/validate_public_data.py
+          python scripts/validate_repository.py
+          python scripts/validate_franchise_data.py
+
+      - name: Commit sanitized backfill
+        shell: bash
+        run: |
+          git add _data/generated/history
+          if git diff --cached --quiet; then
+            echo "No normalized history changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "Backfill sanitized Yahoo league history"
+          git push

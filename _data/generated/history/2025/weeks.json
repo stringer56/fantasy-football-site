@@ -1,0 +1,2708 @@
+{
+  "schema_version": 1,
+  "season": 2025,
+  "league_key": "461.l.103926",
+  "generated_at": "2026-09-03T19:03:09Z",
+  "source": {
+    "type": "official_yahoo_public_archive",
+    "url": "https://football.fantasysports.yahoo.com/2025/f1/103926",
+    "coverage_status": "verified_rows_only"
+  },
+  "coverage": {
+    "available_weeks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "recovered_weeks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "complete": true
+  },
+  "weeks": [
+    {
+      "week": 1,
+      "matchups": [
+        {
+          "season": 2025,
+          "week": 1,
+          "matchup_id": "2025-w01-01-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 91.02
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 100.72
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 9.7,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 1,
+          "matchup_id": "2025-w01-02-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 120.32
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.8",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 94.72
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 25.6,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 1,
+          "matchup_id": "2025-w01-03-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 95.92
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 117.46
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 21.54,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 1,
+          "matchup_id": "2025-w01-04-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.4",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 123.46
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.12",
+            "franchise_id": "new-jersey-giants",
+            "historical_team_name": "New Jersey Giants",
+            "mapping_status": "verified",
+            "score": 71.44
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 52.02,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 1,
+          "matchup_id": "2025-w01-05-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 77.12
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.6",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 120.22
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 43.1,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 1,
+          "matchup_id": "2025-w01-07-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.7",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 115.08
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.11",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 97.88
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 17.2,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "matchups": [
+        {
+          "season": 2025,
+          "week": 2,
+          "matchup_id": "2025-w02-01-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 102.04
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.12",
+            "franchise_id": "new-jersey-giants",
+            "historical_team_name": "New Jersey Giants",
+            "mapping_status": "verified",
+            "score": 108.84
+          },
+          "winner_franchise_id": "new-jersey-giants",
+          "winner_historical_name": "New Jersey Giants",
+          "tie": false,
+          "margin": 6.8,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 2,
+          "matchup_id": "2025-w02-02-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 123.08
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.7",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 78.2
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 44.88,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 2,
+          "matchup_id": "2025-w02-03-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 123.98
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 87.24
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 36.74,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 2,
+          "matchup_id": "2025-w02-04-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.4",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 93.62
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.6",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 114.1
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 20.48,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 2,
+          "matchup_id": "2025-w02-08-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.8",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 162.1
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 110.08
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 52.02,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 2,
+          "matchup_id": "2025-w02-10-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 124.2
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.11",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 102.64
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 21.56,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "matchups": [
+        {
+          "season": 2025,
+          "week": 3,
+          "matchup_id": "2025-w03-01-04",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 109.24
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.4",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 96.52
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 12.72,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 3,
+          "matchup_id": "2025-w03-02-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 102.26
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 118.72
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 16.46,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 3,
+          "matchup_id": "2025-w03-03-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 93.22
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.6",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 132.96
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 39.74,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 3,
+          "matchup_id": "2025-w03-05-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 105.52
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.11",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 84.54
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 20.98,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 3,
+          "matchup_id": "2025-w03-07-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.7",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 122.76
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 119.96
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 2.8,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 3,
+          "matchup_id": "2025-w03-08-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.8",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 140.42
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.12",
+            "franchise_id": "new-jersey-giants",
+            "historical_team_name": "New Jersey Giants",
+            "mapping_status": "verified",
+            "score": 109.32
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 31.1,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "matchups": [
+        {
+          "season": 2025,
+          "week": 4,
+          "matchup_id": "2025-w04-01-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 136.76
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.8",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 133.58
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 3.18,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 4,
+          "matchup_id": "2025-w04-02-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 110.64
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 153.98
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 43.34,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 4,
+          "matchup_id": "2025-w04-03-04",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 101.88
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.4",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 155.46
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 53.58,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 4,
+          "matchup_id": "2025-w04-06-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.6",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 100.7
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.11",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 109.4
+          },
+          "winner_franchise_id": "vegas-vandals",
+          "winner_historical_name": "Vegas Vandals",
+          "tie": false,
+          "margin": 8.7,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 4,
+          "matchup_id": "2025-w04-07-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.7",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 113.48
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.12",
+            "franchise_id": "new-jersey-giants",
+            "historical_team_name": "New Jersey Giants",
+            "mapping_status": "verified",
+            "score": 110.94
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 2.54,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 4,
+          "matchup_id": "2025-w04-09-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 113.0
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 90.58
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 22.42,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "matchups": [
+        {
+          "season": 2025,
+          "week": 5,
+          "matchup_id": "2025-w05-01-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 142.18
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.7",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 95.12
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 47.06,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 5,
+          "matchup_id": "2025-w05-02-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 133.72
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.6",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 160.7
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 26.98,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 5,
+          "matchup_id": "2025-w05-03-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 123.82
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.11",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 114.0
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 9.82,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 5,
+          "matchup_id": "2025-w05-04-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.4",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 118.42
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.8",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 123.36
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 4.94,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 5,
+          "matchup_id": "2025-w05-05-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 99.38
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 121.12
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 21.74,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 5,
+          "matchup_id": "2025-w05-10-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 116.52
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.12",
+            "franchise_id": "new-jersey-giants",
+            "historical_team_name": "New Jersey Giants",
+            "mapping_status": "verified",
+            "score": 88.98
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 27.54,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "matchups": [
+        {
+          "season": 2025,
+          "week": 6,
+          "matchup_id": "2025-w06-01-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 134.54
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 104.82
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 29.72,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 6,
+          "matchup_id": "2025-w06-02-03",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 100.34
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 91.04
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 9.3,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 6,
+          "matchup_id": "2025-w06-04-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.4",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 102.2
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.11",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 89.52
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 12.68,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 6,
+          "matchup_id": "2025-w06-05-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 90.28
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.12",
+            "franchise_id": "new-jersey-giants",
+            "historical_team_name": "New Jersey Giants",
+            "mapping_status": "verified",
+            "score": 67.66
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 22.62,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 6,
+          "matchup_id": "2025-w06-06-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.6",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 127.3
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 153.1
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 25.8,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 6,
+          "matchup_id": "2025-w06-07-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.7",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 148.62
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.8",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 78.34
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 70.28,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "matchups": [
+        {
+          "season": 2025,
+          "week": 7,
+          "matchup_id": "2025-w07-01-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 110.16
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 77.42
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 32.74,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 7,
+          "matchup_id": "2025-w07-02-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 109.64
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.11",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 108.34
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 1.3,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 7,
+          "matchup_id": "2025-w07-03-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 136.98
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 99.14
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 37.84,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 7,
+          "matchup_id": "2025-w07-04-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.4",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 111.32
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.7",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 124.54
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 13.22,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 7,
+          "matchup_id": "2025-w07-06-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.6",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 131.66
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.12",
+            "franchise_id": "new-jersey-giants",
+            "historical_team_name": "New Jersey Giants",
+            "mapping_status": "verified",
+            "score": 173.66
+          },
+          "winner_franchise_id": "new-jersey-giants",
+          "winner_historical_name": "New Jersey Giants",
+          "tie": false,
+          "margin": 42.0,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 7,
+          "matchup_id": "2025-w07-08-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.8",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 137.14
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 72.54
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 64.6,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "matchups": [
+        {
+          "season": 2025,
+          "week": 8,
+          "matchup_id": "2025-w08-01-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 114.12
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.6",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 142.32
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 28.2,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 8,
+          "matchup_id": "2025-w08-02-04",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 156.42
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.4",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 134.42
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 22.0,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 8,
+          "matchup_id": "2025-w08-03-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 110.48
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.12",
+            "franchise_id": "new-jersey-giants",
+            "historical_team_name": "New Jersey Giants",
+            "mapping_status": "verified",
+            "score": 120.68
+          },
+          "winner_franchise_id": "new-jersey-giants",
+          "winner_historical_name": "New Jersey Giants",
+          "tie": false,
+          "margin": 10.2,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 8,
+          "matchup_id": "2025-w08-05-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 54.58
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.8",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 108.88
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 54.3,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 8,
+          "matchup_id": "2025-w08-07-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.7",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 132.62
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 103.42
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 29.2,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 8,
+          "matchup_id": "2025-w08-09-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 108.86
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.11",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 110.06
+          },
+          "winner_franchise_id": "vegas-vandals",
+          "winner_historical_name": "Vegas Vandals",
+          "tie": false,
+          "margin": 1.2,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "matchups": [
+        {
+          "season": 2025,
+          "week": 9,
+          "matchup_id": "2025-w09-01-03",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 109.3
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 120.66
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 11.36,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 9,
+          "matchup_id": "2025-w09-02-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 112.54
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 90.3
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 22.24,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 9,
+          "matchup_id": "2025-w09-04-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.4",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 104.62
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 82.26
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 22.36,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 9,
+          "matchup_id": "2025-w09-05-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 72.28
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.7",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 116.4
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 44.12,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 9,
+          "matchup_id": "2025-w09-06-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.6",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 112.8
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.8",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 99.12
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 13.68,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 9,
+          "matchup_id": "2025-w09-11-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.11",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 112.9
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.12",
+            "franchise_id": "new-jersey-giants",
+            "historical_team_name": "New Jersey Giants",
+            "mapping_status": "verified",
+            "score": 150.66
+          },
+          "winner_franchise_id": "new-jersey-giants",
+          "winner_historical_name": "New Jersey Giants",
+          "tie": false,
+          "margin": 37.76,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "matchups": [
+        {
+          "season": 2025,
+          "week": 10,
+          "matchup_id": "2025-w10-01-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 115.62
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.11",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 139.52
+          },
+          "winner_franchise_id": "vegas-vandals",
+          "winner_historical_name": "Vegas Vandals",
+          "tie": false,
+          "margin": 23.9,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 10,
+          "matchup_id": "2025-w10-02-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 110.18
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.12",
+            "franchise_id": "new-jersey-giants",
+            "historical_team_name": "New Jersey Giants",
+            "mapping_status": "verified",
+            "score": 143.9
+          },
+          "winner_franchise_id": "new-jersey-giants",
+          "winner_historical_name": "New Jersey Giants",
+          "tie": false,
+          "margin": 33.72,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 10,
+          "matchup_id": "2025-w10-03-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 117.1
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.8",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 95.62
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 21.48,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 10,
+          "matchup_id": "2025-w10-04-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.4",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 97.64
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 87.66
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 9.98,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 10,
+          "matchup_id": "2025-w10-05-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 78.2
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 97.24
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 19.04,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 10,
+          "matchup_id": "2025-w10-06-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.6",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 178.02
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.7",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 129.76
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 48.26,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "matchups": [
+        {
+          "season": 2025,
+          "week": 11,
+          "matchup_id": "2025-w11-01-02",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 97.42
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 91.1
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 6.32,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 11,
+          "matchup_id": "2025-w11-03-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 111.14
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.7",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 91.2
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 19.94,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 11,
+          "matchup_id": "2025-w11-04-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.4",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 152.48
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 93.52
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 58.96,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 11,
+          "matchup_id": "2025-w11-06-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.6",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 155.06
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 62.82
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 92.24,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 11,
+          "matchup_id": "2025-w11-08-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.8",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 77.02
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.11",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 85.0
+          },
+          "winner_franchise_id": "vegas-vandals",
+          "winner_historical_name": "Vegas Vandals",
+          "tie": false,
+          "margin": 7.98,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 11,
+          "matchup_id": "2025-w11-09-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 88.14
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.12",
+            "franchise_id": "new-jersey-giants",
+            "historical_team_name": "New Jersey Giants",
+            "mapping_status": "verified",
+            "score": 123.6
+          },
+          "winner_franchise_id": "new-jersey-giants",
+          "winner_historical_name": "New Jersey Giants",
+          "tie": false,
+          "margin": 35.46,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "matchups": [
+        {
+          "season": 2025,
+          "week": 12,
+          "matchup_id": "2025-w12-01-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 123.26
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 125.08
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 1.82,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 12,
+          "matchup_id": "2025-w12-02-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 112.72
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.8",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 103.14
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 9.58,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 12,
+          "matchup_id": "2025-w12-03-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 106.26
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 84.22
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 22.04,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 12,
+          "matchup_id": "2025-w12-04-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.4",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 114.02
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.12",
+            "franchise_id": "new-jersey-giants",
+            "historical_team_name": "New Jersey Giants",
+            "mapping_status": "verified",
+            "score": 149.46
+          },
+          "winner_franchise_id": "new-jersey-giants",
+          "winner_historical_name": "New Jersey Giants",
+          "tie": false,
+          "margin": 35.44,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 12,
+          "matchup_id": "2025-w12-05-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 115.56
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.6",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 164.88
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 49.32,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 12,
+          "matchup_id": "2025-w12-07-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.7",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 90.92
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.11",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 118.66
+          },
+          "winner_franchise_id": "vegas-vandals",
+          "winner_historical_name": "Vegas Vandals",
+          "tie": false,
+          "margin": 27.74,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "matchups": [
+        {
+          "season": 2025,
+          "week": 13,
+          "matchup_id": "2025-w13-01-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 164.1
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.12",
+            "franchise_id": "new-jersey-giants",
+            "historical_team_name": "New Jersey Giants",
+            "mapping_status": "verified",
+            "score": 110.64
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 53.46,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 13,
+          "matchup_id": "2025-w13-02-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 89.92
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.7",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 83.54
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 6.38,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 13,
+          "matchup_id": "2025-w13-03-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 97.08
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 89.64
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 7.44,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 13,
+          "matchup_id": "2025-w13-04-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.4",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 89.42
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.6",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 122.54
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 33.12,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 13,
+          "matchup_id": "2025-w13-08-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.8",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 89.36
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 121.44
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 32.08,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 13,
+          "matchup_id": "2025-w13-10-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 89.24
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.11",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 110.8
+          },
+          "winner_franchise_id": "vegas-vandals",
+          "winner_historical_name": "Vegas Vandals",
+          "tie": false,
+          "margin": 21.56,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 14,
+      "matchups": [
+        {
+          "season": 2025,
+          "week": 14,
+          "matchup_id": "2025-w14-01-12",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 113.44
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.12",
+            "franchise_id": "new-jersey-giants",
+            "historical_team_name": "New Jersey Giants",
+            "mapping_status": "verified",
+            "score": 125.96
+          },
+          "winner_franchise_id": "new-jersey-giants",
+          "winner_historical_name": "New Jersey Giants",
+          "tie": false,
+          "margin": 12.52,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 14,
+          "matchup_id": "2025-w14-03-07",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 75.26
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.7",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 51.92
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 23.34,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 14,
+          "matchup_id": "2025-w14-05-11",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 76.46
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.11",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 85.8
+          },
+          "winner_franchise_id": "vegas-vandals",
+          "winner_historical_name": "Vegas Vandals",
+          "tie": false,
+          "margin": 9.34,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 14,
+          "matchup_id": "2025-w14-08-10",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.8",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 150.98
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 97.66
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 53.32,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 15,
+      "matchups": [
+        {
+          "season": 2025,
+          "week": 15,
+          "matchup_id": "2025-w15-02-03",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 159.92
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 86.84
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 73.08,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 15,
+          "matchup_id": "2025-w15-06-12",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.6",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 159.06
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.12",
+            "franchise_id": "new-jersey-giants",
+            "historical_team_name": "New Jersey Giants",
+            "mapping_status": "verified",
+            "score": 134.52
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 24.54,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 15,
+          "matchup_id": "2025-w15-01-07",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 136.26
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.7",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 110.2
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 26.06,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 15,
+          "matchup_id": "2025-w15-04-08",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.4",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 115.82
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.8",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 155.58
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 39.76,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 15,
+          "matchup_id": "2025-w15-05-10",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 83.2
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 83.0
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 0.2,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 15,
+          "matchup_id": "2025-w15-09-11",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 90.66
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.11",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 88.7
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 1.96,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "matchups": [
+        {
+          "season": 2025,
+          "week": 16,
+          "matchup_id": "2025-w16-02-06",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 106.72
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.6",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 107.12
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 0.4,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 16,
+          "matchup_id": "2025-w16-03-12",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 144.58
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.12",
+            "franchise_id": "new-jersey-giants",
+            "historical_team_name": "New Jersey Giants",
+            "mapping_status": "verified",
+            "score": 103.26
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 41.32,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 16,
+          "matchup_id": "2025-w16-04-11",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.4",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 114.0
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.11",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 86.3
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 27.7,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2025,
+          "week": 16,
+          "matchup_id": "2025-w16-08-09",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "461.l.103926.t.8",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 110.3
+          },
+          "team_b": {
+            "yahoo_team_key": "461.l.103926.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 52.7
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 57.6,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    }
+  ]
+}

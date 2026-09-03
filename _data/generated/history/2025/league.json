@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "season": 2025,
+  "league_key": "461.l.103926",
+  "generated_at": "2026-09-03T19:03:09Z",
+  "source": {
+    "type": "official_yahoo_public_archive",
+    "url": "https://football.fantasysports.yahoo.com/2025/f1/103926",
+    "coverage_status": "verified_rows_only"
+  },
+  "league": {
+    "name": "Road To Glory FFL",
+    "game_key": "461",
+    "league_id": "103926",
+    "team_count": 12,
+    "finished": true,
+    "previous_league_key": "449.l.761310",
+    "next_league_key": "470.l.26455"
+  }
+}

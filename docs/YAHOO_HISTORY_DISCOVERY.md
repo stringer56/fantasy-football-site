@@ -234,6 +234,12 @@ The archive can now be backfilled without guessing league IDs:
 9. keep historical retrieval manual rather than adding it to the six-hour
    current-season workflow.
 
+The follow-on public archive importer is now implemented and documented in
+[Yahoo Historical Backfill](YAHOO_HISTORY_BACKFILL.md). It recovered complete
+weekly scoreboards and public draft boards for 2022–2025. The 2021 detailed
+archive currently redirects automated requests to Yahoo sign-in, so the existing
+verified manual 2021 sources remain authoritative until access changes.
+
 Milestone 5 should use **both** sources. Yahoo should supply structured standings,
 weekly results, and draft data only where authenticated discovery and coverage
 checks succeed. The Google Site should continue to supply the verified 2021–2024
