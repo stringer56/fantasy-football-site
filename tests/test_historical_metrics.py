@@ -54,6 +54,9 @@ class HistoricalMetricsTests(unittest.TestCase):
         entries = [{"matchup_id": "g1", "season": 2022, "week": 1, "score": 80}, {"matchup_id": "g2", "season": 2022, "week": 2, "score": 140}]
         self.assertEqual(140, metrics.ranked(entries, lambda row: row["score"])[0]["score"])
 
+    def test_decimal_ties_round_consistently_across_python_versions(self) -> None:
+        self.assertEqual(118.113, metrics.rounded(118.1125, 3))
+
     def test_streak_calculation_and_cross_season_boundary(self) -> None:
         sequence = [(2022, 13, "W"), (2023, 1, "W"), (2023, 2, "L")]
         self.assertEqual(1, metrics.best_streak(sequence, {"W"}, cross_season=False)["games"])

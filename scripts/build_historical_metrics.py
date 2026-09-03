@@ -7,6 +7,7 @@ import argparse
 import difflib
 import json
 from collections import defaultdict
+from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -47,7 +48,8 @@ def coverage(kind: str, source_files: list[str]) -> dict[str, Any]:
 
 
 def rounded(value: float, digits: int = 2) -> float:
-    return round(value + 0.0, digits)
+    quantum = Decimal("1").scaleb(-digits)
+    return float(Decimal(str(value)).quantize(quantum, rounding=ROUND_HALF_UP))
 
 
 def identity_index(franchises: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
