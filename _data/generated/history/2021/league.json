@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "season": 2021,
+  "league_key": "406.l.12928",
+  "generated_at": "2026-09-03T19:03:09Z",
+  "source": {
+    "type": "official_yahoo_public_archive",
+    "url": "https://football.fantasysports.yahoo.com/2021/f1/12928",
+    "coverage_status": "verified_rows_only"
+  },
+  "league": {
+    "name": "Road To Glory FFL",
+    "game_key": "406",
+    "league_id": "12928",
+    "team_count": 10,
+    "finished": true,
+    "previous_league_key": null,
+    "next_league_key": "414.l.527645"
+  }
+}

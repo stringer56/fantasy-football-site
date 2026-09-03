@@ -1,0 +1,2708 @@
+{
+  "schema_version": 1,
+  "season": 2022,
+  "league_key": "414.l.527645",
+  "generated_at": "2026-09-03T19:03:09Z",
+  "source": {
+    "type": "official_yahoo_public_archive",
+    "url": "https://football.fantasysports.yahoo.com/2022/f1/527645",
+    "coverage_status": "verified_rows_only"
+  },
+  "coverage": {
+    "available_weeks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "recovered_weeks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "complete": true
+  },
+  "weeks": [
+    {
+      "week": 1,
+      "matchups": [
+        {
+          "season": 2022,
+          "week": 1,
+          "matchup_id": "2022-w01-01-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 110.88
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.7",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 162.98
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 52.1,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 1,
+          "matchup_id": "2022-w01-02-03",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 112.72
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.3",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 144.16
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 31.44,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 1,
+          "matchup_id": "2022-w01-04-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.4",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 99.0
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.5",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 100.9
+          },
+          "winner_franchise_id": null,
+          "winner_historical_name": "Broncos Country Let’s Ride",
+          "tie": false,
+          "margin": 1.9,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 1,
+          "matchup_id": "2022-w01-06-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.6",
+            "franchise_id": "quahog-stripes",
+            "historical_team_name": "Quahog Stripes",
+            "mapping_status": "verified",
+            "score": 92.2
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.11",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 107.32
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 15.12,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 1,
+          "matchup_id": "2022-w01-08-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.8",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 100.36
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.12",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 121.72
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 21.36,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 1,
+          "matchup_id": "2022-w01-09-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.9",
+            "franchise_id": null,
+            "historical_team_name": "Dilly Dilly",
+            "mapping_status": "unresolved",
+            "score": 112.98
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 123.52
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 10.54,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "matchups": [
+        {
+          "season": 2022,
+          "week": 2,
+          "matchup_id": "2022-w02-01-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 85.34
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.6",
+            "franchise_id": "quahog-stripes",
+            "historical_team_name": "Quahog Stripes",
+            "mapping_status": "verified",
+            "score": 92.96
+          },
+          "winner_franchise_id": "quahog-stripes",
+          "winner_historical_name": "Quahog Stripes",
+          "tie": false,
+          "margin": 7.62,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 2,
+          "matchup_id": "2022-w02-02-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 120.02
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.5",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 85.96
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 34.06,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 2,
+          "matchup_id": "2022-w02-03-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.3",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 133.76
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.8",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 86.6
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 47.16,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 2,
+          "matchup_id": "2022-w02-04-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.4",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 122.4
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.11",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 113.46
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 8.94,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 2,
+          "matchup_id": "2022-w02-07-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.7",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 177.88
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.9",
+            "franchise_id": null,
+            "historical_team_name": "Dilly Dilly",
+            "mapping_status": "unresolved",
+            "score": 83.8
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 94.08,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 2,
+          "matchup_id": "2022-w02-10-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 159.82
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.12",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 139.68
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 20.14,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "matchups": [
+        {
+          "season": 2022,
+          "week": 3,
+          "matchup_id": "2022-w03-01-04",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 83.1
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.4",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 92.98
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 9.88,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 3,
+          "matchup_id": "2022-w03-02-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 158.42
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.8",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 105.28
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 53.14,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 3,
+          "matchup_id": "2022-w03-03-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.3",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 98.84
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 119.2
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 20.36,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 3,
+          "matchup_id": "2022-w03-05-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.5",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 118.16
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.11",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 135.1
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 16.94,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 3,
+          "matchup_id": "2022-w03-06-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.6",
+            "franchise_id": "quahog-stripes",
+            "historical_team_name": "Quahog Stripes",
+            "mapping_status": "verified",
+            "score": 96.7
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.9",
+            "franchise_id": null,
+            "historical_team_name": "Dilly Dilly",
+            "mapping_status": "unresolved",
+            "score": 95.74
+          },
+          "winner_franchise_id": "quahog-stripes",
+          "winner_historical_name": "Quahog Stripes",
+          "tie": false,
+          "margin": 0.96,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 3,
+          "matchup_id": "2022-w03-07-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.7",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 100.8
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.12",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 95.16
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 5.64,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "matchups": [
+        {
+          "season": 2022,
+          "week": 4,
+          "matchup_id": "2022-w04-01-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 107.82
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.5",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 104.48
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 3.34,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 4,
+          "matchup_id": "2022-w04-02-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 127.76
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.11",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 146.38
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 18.62,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 4,
+          "matchup_id": "2022-w04-03-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.3",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 115.2
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.7",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 87.32
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 27.88,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 4,
+          "matchup_id": "2022-w04-04-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.4",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 156.76
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.9",
+            "franchise_id": null,
+            "historical_team_name": "Dilly Dilly",
+            "mapping_status": "unresolved",
+            "score": 90.8
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 65.96,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 4,
+          "matchup_id": "2022-w04-06-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.6",
+            "franchise_id": "quahog-stripes",
+            "historical_team_name": "Quahog Stripes",
+            "mapping_status": "verified",
+            "score": 122.64
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.12",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 129.08
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 6.44,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 4,
+          "matchup_id": "2022-w04-08-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.8",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 143.72
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 103.96
+          },
+          "winner_franchise_id": "savage-huns",
+          "winner_historical_name": "THE SAVAGE HUNS",
+          "tie": false,
+          "margin": 39.76,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "matchups": [
+        {
+          "season": 2022,
+          "week": 5,
+          "matchup_id": "2022-w05-01-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 72.04
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.11",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 167.98
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 95.94,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 5,
+          "matchup_id": "2022-w05-02-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 117.56
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 130.16
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 12.6,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 5,
+          "matchup_id": "2022-w05-03-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.3",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 145.62
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.6",
+            "franchise_id": "quahog-stripes",
+            "historical_team_name": "Quahog Stripes",
+            "mapping_status": "verified",
+            "score": 144.98
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 0.64,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 5,
+          "matchup_id": "2022-w05-04-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.4",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 133.58
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.12",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 104.9
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 28.68,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 5,
+          "matchup_id": "2022-w05-05-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.5",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 98.78
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.9",
+            "franchise_id": null,
+            "historical_team_name": "Dilly Dilly",
+            "mapping_status": "unresolved",
+            "score": 139.64
+          },
+          "winner_franchise_id": null,
+          "winner_historical_name": "Dilly Dilly",
+          "tie": false,
+          "margin": 40.86,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 5,
+          "matchup_id": "2022-w05-07-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.7",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 80.76
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.8",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 101.56
+          },
+          "winner_franchise_id": "savage-huns",
+          "winner_historical_name": "THE SAVAGE HUNS",
+          "tie": false,
+          "margin": 20.8,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "matchups": [
+        {
+          "season": 2022,
+          "week": 6,
+          "matchup_id": "2022-w06-01-02",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 96.9
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 87.1
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 9.8,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 6,
+          "matchup_id": "2022-w06-03-04",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.3",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 99.22
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.4",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 118.16
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 18.94,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 6,
+          "matchup_id": "2022-w06-05-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.5",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 121.42
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.12",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 110.18
+          },
+          "winner_franchise_id": null,
+          "winner_historical_name": "Broncos Country Let’s Ride",
+          "tie": false,
+          "margin": 11.24,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 6,
+          "matchup_id": "2022-w06-06-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.6",
+            "franchise_id": "quahog-stripes",
+            "historical_team_name": "Quahog Stripes",
+            "mapping_status": "verified",
+            "score": 74.64
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.8",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 72.96
+          },
+          "winner_franchise_id": "quahog-stripes",
+          "winner_historical_name": "Quahog Stripes",
+          "tie": false,
+          "margin": 1.68,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 6,
+          "matchup_id": "2022-w06-07-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.7",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 92.86
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 105.2
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 12.34,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 6,
+          "matchup_id": "2022-w06-09-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.9",
+            "franchise_id": null,
+            "historical_team_name": "Dilly Dilly",
+            "mapping_status": "unresolved",
+            "score": 120.92
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.11",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 163.1
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 42.18,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "matchups": [
+        {
+          "season": 2022,
+          "week": 7,
+          "matchup_id": "2022-w07-01-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 128.58
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.9",
+            "franchise_id": null,
+            "historical_team_name": "Dilly Dilly",
+            "mapping_status": "unresolved",
+            "score": 103.4
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 25.18,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 7,
+          "matchup_id": "2022-w07-02-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 90.1
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.7",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 108.72
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 18.62,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 7,
+          "matchup_id": "2022-w07-03-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.3",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 80.82
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.5",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 72.64
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 8.18,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 7,
+          "matchup_id": "2022-w07-04-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.4",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 146.52
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.8",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 110.52
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 36.0,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 7,
+          "matchup_id": "2022-w07-06-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.6",
+            "franchise_id": "quahog-stripes",
+            "historical_team_name": "Quahog Stripes",
+            "mapping_status": "verified",
+            "score": 118.16
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 94.52
+          },
+          "winner_franchise_id": "quahog-stripes",
+          "winner_historical_name": "Quahog Stripes",
+          "tie": false,
+          "margin": 23.64,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 7,
+          "matchup_id": "2022-w07-11-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.11",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 145.64
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.12",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 115.26
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 30.38,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "matchups": [
+        {
+          "season": 2022,
+          "week": 8,
+          "matchup_id": "2022-w08-01-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 106.26
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.12",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 100.84
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 5.42,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 8,
+          "matchup_id": "2022-w08-02-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 168.48
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.9",
+            "franchise_id": null,
+            "historical_team_name": "Dilly Dilly",
+            "mapping_status": "unresolved",
+            "score": 87.0
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 81.48,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 8,
+          "matchup_id": "2022-w08-03-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.3",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 164.78
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.11",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 177.78
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 13.0,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 8,
+          "matchup_id": "2022-w08-04-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.4",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 177.34
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 121.1
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 56.24,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 8,
+          "matchup_id": "2022-w08-05-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.5",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 63.84
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.8",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 138.34
+          },
+          "winner_franchise_id": "savage-huns",
+          "winner_historical_name": "THE SAVAGE HUNS",
+          "tie": false,
+          "margin": 74.5,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 8,
+          "matchup_id": "2022-w08-06-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.6",
+            "franchise_id": "quahog-stripes",
+            "historical_team_name": "Quahog Stripes",
+            "mapping_status": "verified",
+            "score": 94.08
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.7",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 105.02
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 10.94,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "matchups": [
+        {
+          "season": 2022,
+          "week": 9,
+          "matchup_id": "2022-w09-01-03",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 143.72
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.3",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 139.68
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 4.04,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 9,
+          "matchup_id": "2022-w09-02-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 70.02
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.6",
+            "franchise_id": "quahog-stripes",
+            "historical_team_name": "Quahog Stripes",
+            "mapping_status": "verified",
+            "score": 106.84
+          },
+          "winner_franchise_id": "quahog-stripes",
+          "winner_historical_name": "Quahog Stripes",
+          "tie": false,
+          "margin": 36.82,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 9,
+          "matchup_id": "2022-w09-04-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.4",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 122.34
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.7",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 90.7
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 31.64,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 9,
+          "matchup_id": "2022-w09-05-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.5",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 82.16
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 81.82
+          },
+          "winner_franchise_id": null,
+          "winner_historical_name": "Broncos Country Let’s Ride",
+          "tie": false,
+          "margin": 0.34,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 9,
+          "matchup_id": "2022-w09-08-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.8",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 137.56
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.11",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 150.14
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 12.58,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 9,
+          "matchup_id": "2022-w09-09-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.9",
+            "franchise_id": null,
+            "historical_team_name": "Dilly Dilly",
+            "mapping_status": "unresolved",
+            "score": 87.4
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.12",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 104.2
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 16.8,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "matchups": [
+        {
+          "season": 2022,
+          "week": 10,
+          "matchup_id": "2022-w10-01-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 104.88
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.8",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 121.6
+          },
+          "winner_franchise_id": "savage-huns",
+          "winner_historical_name": "THE SAVAGE HUNS",
+          "tie": false,
+          "margin": 16.72,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 10,
+          "matchup_id": "2022-w10-02-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 126.38
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.12",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 103.48
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 22.9,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 10,
+          "matchup_id": "2022-w10-03-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.3",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 82.5
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.9",
+            "franchise_id": null,
+            "historical_team_name": "Dilly Dilly",
+            "mapping_status": "unresolved",
+            "score": 95.6
+          },
+          "winner_franchise_id": null,
+          "winner_historical_name": "Dilly Dilly",
+          "tie": false,
+          "margin": 13.1,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 10,
+          "matchup_id": "2022-w10-04-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.4",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 105.24
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.6",
+            "franchise_id": "quahog-stripes",
+            "historical_team_name": "Quahog Stripes",
+            "mapping_status": "verified",
+            "score": 117.24
+          },
+          "winner_franchise_id": "quahog-stripes",
+          "winner_historical_name": "Quahog Stripes",
+          "tie": false,
+          "margin": 12.0,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 10,
+          "matchup_id": "2022-w10-05-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.5",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 96.72
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.7",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 88.9
+          },
+          "winner_franchise_id": null,
+          "winner_historical_name": "Broncos Country Let’s Ride",
+          "tie": false,
+          "margin": 7.82,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 10,
+          "matchup_id": "2022-w10-10-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 119.5
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.11",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 104.26
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 15.24,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "matchups": [
+        {
+          "season": 2022,
+          "week": 11,
+          "matchup_id": "2022-w11-01-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 85.46
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 102.8
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 17.34,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 11,
+          "matchup_id": "2022-w11-02-04",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 94.12
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.4",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 131.36
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 37.24,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 11,
+          "matchup_id": "2022-w11-03-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.3",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 110.8
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.12",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 140.04
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 29.24,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 11,
+          "matchup_id": "2022-w11-05-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.5",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 78.18
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.6",
+            "franchise_id": "quahog-stripes",
+            "historical_team_name": "Quahog Stripes",
+            "mapping_status": "verified",
+            "score": 127.98
+          },
+          "winner_franchise_id": "quahog-stripes",
+          "winner_historical_name": "Quahog Stripes",
+          "tie": false,
+          "margin": 49.8,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 11,
+          "matchup_id": "2022-w11-07-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.7",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 120.78
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.11",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 142.16
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 21.38,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 11,
+          "matchup_id": "2022-w11-08-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.8",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 86.04
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.9",
+            "franchise_id": null,
+            "historical_team_name": "Dilly Dilly",
+            "mapping_status": "unresolved",
+            "score": 86.04
+          },
+          "winner_franchise_id": null,
+          "winner_historical_name": null,
+          "tie": true,
+          "margin": 0.0,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "matchups": [
+        {
+          "season": 2022,
+          "week": 12,
+          "matchup_id": "2022-w12-01-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 122.66
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.7",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 132.42
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 9.76,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 12,
+          "matchup_id": "2022-w12-02-03",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 140.26
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.3",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 93.76
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 46.5,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 12,
+          "matchup_id": "2022-w12-04-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.4",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 111.3
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.5",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 120.94
+          },
+          "winner_franchise_id": null,
+          "winner_historical_name": "Broncos Country Let’s Ride",
+          "tie": false,
+          "margin": 9.64,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 12,
+          "matchup_id": "2022-w12-06-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.6",
+            "franchise_id": "quahog-stripes",
+            "historical_team_name": "Quahog Stripes",
+            "mapping_status": "verified",
+            "score": 110.88
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.11",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 107.4
+          },
+          "winner_franchise_id": "quahog-stripes",
+          "winner_historical_name": "Quahog Stripes",
+          "tie": false,
+          "margin": 3.48,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 12,
+          "matchup_id": "2022-w12-08-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.8",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 84.32
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.12",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 135.14
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 50.82,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 12,
+          "matchup_id": "2022-w12-09-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.9",
+            "franchise_id": null,
+            "historical_team_name": "Dilly Dilly",
+            "mapping_status": "unresolved",
+            "score": 101.14
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 130.72
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 29.58,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "matchups": [
+        {
+          "season": 2022,
+          "week": 13,
+          "matchup_id": "2022-w13-01-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 132.56
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.6",
+            "franchise_id": "quahog-stripes",
+            "historical_team_name": "Quahog Stripes",
+            "mapping_status": "verified",
+            "score": 157.56
+          },
+          "winner_franchise_id": "quahog-stripes",
+          "winner_historical_name": "Quahog Stripes",
+          "tie": false,
+          "margin": 25.0,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 13,
+          "matchup_id": "2022-w13-02-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 100.34
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.5",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 104.0
+          },
+          "winner_franchise_id": null,
+          "winner_historical_name": "Broncos Country Let’s Ride",
+          "tie": false,
+          "margin": 3.66,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 13,
+          "matchup_id": "2022-w13-03-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.3",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 116.5
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.8",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 87.54
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 28.96,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 13,
+          "matchup_id": "2022-w13-04-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.4",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 110.92
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.11",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 137.44
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 26.52,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 13,
+          "matchup_id": "2022-w13-07-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.7",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 66.82
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.9",
+            "franchise_id": null,
+            "historical_team_name": "Dilly Dilly",
+            "mapping_status": "unresolved",
+            "score": 103.7
+          },
+          "winner_franchise_id": null,
+          "winner_historical_name": "Dilly Dilly",
+          "tie": false,
+          "margin": 36.88,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 13,
+          "matchup_id": "2022-w13-10-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 129.2
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.12",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 119.5
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 9.7,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 14,
+      "matchups": [
+        {
+          "season": 2022,
+          "week": 14,
+          "matchup_id": "2022-w14-01-04",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 96.5
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.4",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 104.78
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 8.28,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 14,
+          "matchup_id": "2022-w14-02-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 103.62
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.8",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 79.16
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 24.46,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 14,
+          "matchup_id": "2022-w14-03-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.3",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 99.5
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 109.48
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 9.98,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 14,
+          "matchup_id": "2022-w14-05-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.5",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 95.88
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.11",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 137.76
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 41.88,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 14,
+          "matchup_id": "2022-w14-06-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.6",
+            "franchise_id": "quahog-stripes",
+            "historical_team_name": "Quahog Stripes",
+            "mapping_status": "verified",
+            "score": 74.92
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.9",
+            "franchise_id": null,
+            "historical_team_name": "Dilly Dilly",
+            "mapping_status": "unresolved",
+            "score": 122.06
+          },
+          "winner_franchise_id": null,
+          "winner_historical_name": "Dilly Dilly",
+          "tie": false,
+          "margin": 47.14,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 14,
+          "matchup_id": "2022-w14-07-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.7",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 91.78
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.12",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 102.46
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 10.68,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 15,
+      "matchups": [
+        {
+          "season": 2022,
+          "week": 15,
+          "matchup_id": "2022-w15-04-10",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.4",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 117.94
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 132.2
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 14.26,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 15,
+          "matchup_id": "2022-w15-06-11",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.6",
+            "franchise_id": "quahog-stripes",
+            "historical_team_name": "Quahog Stripes",
+            "mapping_status": "verified",
+            "score": 75.76
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.11",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 149.7
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 73.94,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 15,
+          "matchup_id": "2022-w15-02-12",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 109.58
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.12",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 87.2
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 22.38,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 15,
+          "matchup_id": "2022-w15-03-07",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.3",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 115.36
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.7",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 126.16
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 10.8,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "matchups": [
+        {
+          "season": 2022,
+          "week": 16,
+          "matchup_id": "2022-w16-10-11",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.10",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 69.16
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.11",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 115.2
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 46.04,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 16,
+          "matchup_id": "2022-w16-02-07",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 83.66
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.7",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 88.08
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 4.42,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 16,
+          "matchup_id": "2022-w16-03-12",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.3",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 94.8
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.12",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 105.36
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 10.56,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2022,
+          "week": 16,
+          "matchup_id": "2022-w16-04-06",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "414.l.527645.t.4",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 148.96
+          },
+          "team_b": {
+            "yahoo_team_key": "414.l.527645.t.6",
+            "franchise_id": "quahog-stripes",
+            "historical_team_name": "Quahog Stripes",
+            "mapping_status": "verified",
+            "score": 83.12
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 65.84,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    }
+  ]
+}

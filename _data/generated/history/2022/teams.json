@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "season": 2022,
+  "league_key": "414.l.527645",
+  "generated_at": "2026-09-03T19:03:09Z",
+  "source": {
+    "type": "official_yahoo_public_archive",
+    "url": "https://football.fantasysports.yahoo.com/2022/f1/527645",
+    "coverage_status": "verified_rows_only"
+  },
+  "teams": [
+    {
+      "yahoo_team_key": "414.l.527645.t.1",
+      "yahoo_team_id": 1,
+      "franchise_id": "van-cortlant-rangers",
+      "historical_team_name": "Van Cortlant Rangers",
+      "mapping_status": "verified"
+    },
+    {
+      "yahoo_team_key": "414.l.527645.t.2",
+      "yahoo_team_id": 2,
+      "franchise_id": "albany-kneelers",
+      "historical_team_name": "Albany Kneelers",
+      "mapping_status": "verified"
+    },
+    {
+      "yahoo_team_key": "414.l.527645.t.3",
+      "yahoo_team_id": 3,
+      "franchise_id": "crazy-wazs-team",
+      "historical_team_name": "Chris's Crazy Team",
+      "mapping_status": "verified"
+    },
+    {
+      "yahoo_team_key": "414.l.527645.t.4",
+      "yahoo_team_id": 4,
+      "franchise_id": "greendale-human-beings",
+      "historical_team_name": "Greendale Human Beings",
+      "mapping_status": "verified"
+    },
+    {
+      "yahoo_team_key": "414.l.527645.t.5",
+      "yahoo_team_id": 5,
+      "franchise_id": null,
+      "historical_team_name": "Broncos Country Let’s Ride",
+      "mapping_status": "unresolved"
+    },
+    {
+      "yahoo_team_key": "414.l.527645.t.6",
+      "yahoo_team_id": 6,
+      "franchise_id": "quahog-stripes",
+      "historical_team_name": "Quahog Stripes",
+      "mapping_status": "verified"
+    },
+    {
+      "yahoo_team_key": "414.l.527645.t.7",
+      "yahoo_team_id": 7,
+      "franchise_id": "baseball-furies",
+      "historical_team_name": "The Baseball Furies",
+      "mapping_status": "verified"
+    },
+    {
+      "yahoo_team_key": "414.l.527645.t.8",
+      "yahoo_team_id": 8,
+      "franchise_id": "savage-huns",
+      "historical_team_name": "THE SAVAGE HUNS",
+      "mapping_status": "verified"
+    },
+    {
+      "yahoo_team_key": "414.l.527645.t.9",
+      "yahoo_team_id": 9,
+      "franchise_id": null,
+      "historical_team_name": "Dilly Dilly",
+      "mapping_status": "unresolved"
+    },
+    {
+      "yahoo_team_key": "414.l.527645.t.10",
+      "yahoo_team_id": 10,
+      "franchise_id": "turnbull-acs",
+      "historical_team_name": "Turnbull AC’s",
+      "mapping_status": "verified"
+    },
+    {
+      "yahoo_team_key": "414.l.527645.t.11",
+      "yahoo_team_id": 11,
+      "franchise_id": "ayahuasca-rush",
+      "historical_team_name": "Ayahuasca Rush",
+      "mapping_status": "verified"
+    },
+    {
+      "yahoo_team_key": "414.l.527645.t.12",
+      "yahoo_team_id": 12,
+      "franchise_id": "maine-moose",
+      "historical_team_name": "Maine Moose",
+      "mapping_status": "verified"
+    }
+  ]
+}

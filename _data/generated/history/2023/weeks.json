@@ -1,0 +1,2708 @@
+{
+  "schema_version": 1,
+  "season": 2023,
+  "league_key": "423.l.161807",
+  "generated_at": "2026-09-03T19:03:09Z",
+  "source": {
+    "type": "official_yahoo_public_archive",
+    "url": "https://football.fantasysports.yahoo.com/2023/f1/161807",
+    "coverage_status": "verified_rows_only"
+  },
+  "coverage": {
+    "available_weeks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "recovered_weeks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "complete": true
+  },
+  "weeks": [
+    {
+      "week": 1,
+      "matchups": [
+        {
+          "season": 2023,
+          "week": 1,
+          "matchup_id": "2023-w01-01-04",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 109.86
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.4",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 96.4
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 13.46,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 1,
+          "matchup_id": "2023-w01-02-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 98.2
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 80.54
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 17.66,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 1,
+          "matchup_id": "2023-w01-03-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 100.26
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.10",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 97.04
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 3.22,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 1,
+          "matchup_id": "2023-w01-05-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 99.94
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.12",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 124.36
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 24.42,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 1,
+          "matchup_id": "2023-w01-06-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 94.74
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 145.18
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 50.44,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 1,
+          "matchup_id": "2023-w01-09-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.9",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 116.56
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.11",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 75.76
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 40.8,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "matchups": [
+        {
+          "season": 2023,
+          "week": 2,
+          "matchup_id": "2023-w02-01-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 126.86
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.12",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 110.74
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 16.12,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 2,
+          "matchup_id": "2023-w02-02-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 133.22
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 127.56
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 5.66,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 2,
+          "matchup_id": "2023-w02-03-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 112.68
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 74.74
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 37.94,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 2,
+          "matchup_id": "2023-w02-04-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.4",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 117.28
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 114.24
+          },
+          "winner_franchise_id": null,
+          "winner_historical_name": "Broncos Country Let’s Ride",
+          "tie": false,
+          "margin": 3.04,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 2,
+          "matchup_id": "2023-w02-07-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 81.58
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.9",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 103.8
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 22.22,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 2,
+          "matchup_id": "2023-w02-10-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.10",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 120.16
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.11",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 99.1
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 21.06,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "matchups": [
+        {
+          "season": 2023,
+          "week": 3,
+          "matchup_id": "2023-w03-01-02",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 131.08
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 146.98
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 15.9,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 3,
+          "matchup_id": "2023-w03-03-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 137.18
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 137.58
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 0.4,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 3,
+          "matchup_id": "2023-w03-04-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.4",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 136.16
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 120.06
+          },
+          "winner_franchise_id": null,
+          "winner_historical_name": "Broncos Country Let’s Ride",
+          "tie": false,
+          "margin": 16.1,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 3,
+          "matchup_id": "2023-w03-06-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 82.76
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.12",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 89.74
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 6.98,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 3,
+          "matchup_id": "2023-w03-08-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 132.76
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.11",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 88.96
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 43.8,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 3,
+          "matchup_id": "2023-w03-09-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.9",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 129.7
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.10",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 95.98
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 33.72,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "matchups": [
+        {
+          "season": 2023,
+          "week": 4,
+          "matchup_id": "2023-w04-01-03",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 75.96
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 99.14
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 23.18,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 4,
+          "matchup_id": "2023-w04-02-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 133.66
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 123.2
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 10.46,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 4,
+          "matchup_id": "2023-w04-04-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.4",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 113.36
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.9",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 85.78
+          },
+          "winner_franchise_id": null,
+          "winner_historical_name": "Broncos Country Let’s Ride",
+          "tie": false,
+          "margin": 27.58,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 4,
+          "matchup_id": "2023-w04-05-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 97.0
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.11",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 166.6
+          },
+          "winner_franchise_id": "savage-huns",
+          "winner_historical_name": "THE SAVAGE HUNS",
+          "tie": false,
+          "margin": 69.6,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 4,
+          "matchup_id": "2023-w04-07-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 79.1
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.12",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 150.82
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 71.72,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 4,
+          "matchup_id": "2023-w04-08-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 131.4
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.10",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 56.02
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 75.38,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "matchups": [
+        {
+          "season": 2023,
+          "week": 5,
+          "matchup_id": "2023-w05-01-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 99.36
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.11",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 111.82
+          },
+          "winner_franchise_id": "savage-huns",
+          "winner_historical_name": "THE SAVAGE HUNS",
+          "tie": false,
+          "margin": 12.46,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 5,
+          "matchup_id": "2023-w05-02-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 125.62
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 119.52
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 6.1,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 5,
+          "matchup_id": "2023-w05-03-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 149.64
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 66.26
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 83.38,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 5,
+          "matchup_id": "2023-w05-04-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.4",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 101.38
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.12",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 80.98
+          },
+          "winner_franchise_id": null,
+          "winner_historical_name": "Broncos Country Let’s Ride",
+          "tie": false,
+          "margin": 20.4,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 5,
+          "matchup_id": "2023-w05-05-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 97.96
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.10",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 119.34
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 21.38,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 5,
+          "matchup_id": "2023-w05-08-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 237.18
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.9",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 123.52
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 113.66,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "matchups": [
+        {
+          "season": 2023,
+          "week": 6,
+          "matchup_id": "2023-w06-01-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 82.74
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.10",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 110.04
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 27.3,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 6,
+          "matchup_id": "2023-w06-02-04",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 117.0
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.4",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 96.94
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 20.06,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 6,
+          "matchup_id": "2023-w06-03-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 121.82
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 120.9
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 0.92,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 6,
+          "matchup_id": "2023-w06-05-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 93.36
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 97.12
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 3.76,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 6,
+          "matchup_id": "2023-w06-06-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 85.94
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.11",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 111.3
+          },
+          "winner_franchise_id": "savage-huns",
+          "winner_historical_name": "THE SAVAGE HUNS",
+          "tie": false,
+          "margin": 25.36,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 6,
+          "matchup_id": "2023-w06-09-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.9",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 131.98
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.12",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 83.9
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 48.08,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "matchups": [
+        {
+          "season": 2023,
+          "week": 7,
+          "matchup_id": "2023-w07-01-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 122.82
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 102.46
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 20.36,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 7,
+          "matchup_id": "2023-w07-02-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 102.56
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.12",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 93.38
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 9.18,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 7,
+          "matchup_id": "2023-w07-03-04",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 123.08
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.4",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 69.74
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 53.34,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 7,
+          "matchup_id": "2023-w07-05-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 107.8
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.9",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 57.14
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 50.66,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 7,
+          "matchup_id": "2023-w07-06-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 117.2
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.10",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 123.96
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 6.76,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 7,
+          "matchup_id": "2023-w07-07-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 132.56
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.11",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 135.56
+          },
+          "winner_franchise_id": "savage-huns",
+          "winner_historical_name": "THE SAVAGE HUNS",
+          "tie": false,
+          "margin": 3.0,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "matchups": [
+        {
+          "season": 2023,
+          "week": 8,
+          "matchup_id": "2023-w08-01-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 87.56
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 139.96
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 52.4,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 8,
+          "matchup_id": "2023-w08-02-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 148.46
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.9",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 104.36
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 44.1,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 8,
+          "matchup_id": "2023-w08-03-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 120.98
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.12",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 115.6
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 5.38,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 8,
+          "matchup_id": "2023-w08-04-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.4",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 108.68
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.11",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 144.08
+          },
+          "winner_franchise_id": "savage-huns",
+          "winner_historical_name": "THE SAVAGE HUNS",
+          "tie": false,
+          "margin": 35.4,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 8,
+          "matchup_id": "2023-w08-06-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 103.88
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 119.2
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 15.32,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 8,
+          "matchup_id": "2023-w08-07-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 145.52
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.10",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 82.4
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 63.12,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "matchups": [
+        {
+          "season": 2023,
+          "week": 9,
+          "matchup_id": "2023-w09-01-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 114.84
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.9",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 88.52
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 26.32,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 9,
+          "matchup_id": "2023-w09-02-03",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 108.6
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 71.98
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 36.62,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 9,
+          "matchup_id": "2023-w09-04-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.4",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 120.86
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.10",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 68.7
+          },
+          "winner_franchise_id": null,
+          "winner_historical_name": "Broncos Country Let’s Ride",
+          "tie": false,
+          "margin": 52.16,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 9,
+          "matchup_id": "2023-w09-05-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 135.42
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 144.08
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 8.66,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 9,
+          "matchup_id": "2023-w09-07-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 123.42
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 67.28
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 56.14,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 9,
+          "matchup_id": "2023-w09-11-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.11",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 118.8
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.12",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 115.92
+          },
+          "winner_franchise_id": "savage-huns",
+          "winner_historical_name": "THE SAVAGE HUNS",
+          "tie": false,
+          "margin": 2.88,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "matchups": [
+        {
+          "season": 2023,
+          "week": 10,
+          "matchup_id": "2023-w10-01-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 93.1
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 116.72
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 23.62,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 10,
+          "matchup_id": "2023-w10-02-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 112.58
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.11",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 130.14
+          },
+          "winner_franchise_id": "savage-huns",
+          "winner_historical_name": "THE SAVAGE HUNS",
+          "tie": false,
+          "margin": 17.56,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 10,
+          "matchup_id": "2023-w10-03-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 104.06
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.9",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 95.82
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 8.24,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 10,
+          "matchup_id": "2023-w10-04-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.4",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 144.82
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 117.06
+          },
+          "winner_franchise_id": null,
+          "winner_historical_name": "Broncos Country Let’s Ride",
+          "tie": false,
+          "margin": 27.76,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 10,
+          "matchup_id": "2023-w10-05-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 131.28
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 140.38
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 9.1,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 10,
+          "matchup_id": "2023-w10-10-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.10",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 96.52
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.12",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 117.44
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 20.92,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "matchups": [
+        {
+          "season": 2023,
+          "week": 11,
+          "matchup_id": "2023-w11-01-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 112.26
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 131.14
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 18.88,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 11,
+          "matchup_id": "2023-w11-02-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 117.1
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.10",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 104.28
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 12.82,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 11,
+          "matchup_id": "2023-w11-03-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 69.16
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.11",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 87.24
+          },
+          "winner_franchise_id": "savage-huns",
+          "winner_historical_name": "THE SAVAGE HUNS",
+          "tie": false,
+          "margin": 18.08,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 11,
+          "matchup_id": "2023-w11-04-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.4",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 86.8
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 93.4
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 6.6,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 11,
+          "matchup_id": "2023-w11-06-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 111.44
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.9",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 112.4
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 0.96,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 11,
+          "matchup_id": "2023-w11-08-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 110.06
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.12",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 123.22
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 13.16,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "matchups": [
+        {
+          "season": 2023,
+          "week": 12,
+          "matchup_id": "2023-w12-01-04",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 121.76
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.4",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 91.0
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 30.76,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 12,
+          "matchup_id": "2023-w12-02-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 151.2
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 115.08
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 36.12,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 12,
+          "matchup_id": "2023-w12-03-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 100.74
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.10",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 88.82
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 11.92,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 12,
+          "matchup_id": "2023-w12-05-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 129.06
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.12",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 118.96
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 10.1,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 12,
+          "matchup_id": "2023-w12-06-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 120.6
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 150.46
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 29.86,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 12,
+          "matchup_id": "2023-w12-09-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.9",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 102.58
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.11",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 101.46
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 1.12,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "matchups": [
+        {
+          "season": 2023,
+          "week": 13,
+          "matchup_id": "2023-w13-01-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 104.74
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.12",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 136.16
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 31.42,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 13,
+          "matchup_id": "2023-w13-02-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 122.22
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 95.42
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 26.8,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 13,
+          "matchup_id": "2023-w13-03-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 113.26
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 164.98
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 51.72,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 13,
+          "matchup_id": "2023-w13-04-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.4",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 128.46
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 170.82
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 42.36,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 13,
+          "matchup_id": "2023-w13-07-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 145.86
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.9",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 99.5
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 46.36,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 13,
+          "matchup_id": "2023-w13-10-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.10",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 103.4
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.11",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 95.66
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 7.74,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 14,
+      "matchups": [
+        {
+          "season": 2023,
+          "week": 14,
+          "matchup_id": "2023-w14-07-08",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 132.76
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 101.62
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 31.14,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 14,
+          "matchup_id": "2023-w14-11-12",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.11",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 107.84
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.12",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 120.22
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 12.38,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 14,
+          "matchup_id": "2023-w14-01-10",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 82.76
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.10",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 119.34
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 36.58,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 14,
+          "matchup_id": "2023-w14-05-06",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 100.54
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 115.22
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 14.68,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 15,
+      "matchups": [
+        {
+          "season": 2023,
+          "week": 15,
+          "matchup_id": "2023-w15-02-12",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 114.38
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.12",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 61.38
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 53.0,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 15,
+          "matchup_id": "2023-w15-03-07",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 73.44
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 118.32
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 44.88,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 15,
+          "matchup_id": "2023-w15-01-05",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 112.42
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 103.82
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 8.6,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 15,
+          "matchup_id": "2023-w15-04-06",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.4",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 88.56
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 112.76
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 24.2,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 15,
+          "matchup_id": "2023-w15-08-11",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 72.84
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.11",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 128.4
+          },
+          "winner_franchise_id": "savage-huns",
+          "winner_historical_name": "THE SAVAGE HUNS",
+          "tie": false,
+          "margin": 55.56,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 15,
+          "matchup_id": "2023-w15-09-10",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.9",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 121.76
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.10",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 77.5
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 44.26,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "matchups": [
+        {
+          "season": 2023,
+          "week": 16,
+          "matchup_id": "2023-w16-02-07",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 132.74
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 132.82
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 0.08,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 16,
+          "matchup_id": "2023-w16-03-12",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 86.78
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.12",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 108.3
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 21.52,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 16,
+          "matchup_id": "2023-w16-04-10",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.4",
+            "franchise_id": null,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "mapping_status": "unresolved",
+            "score": 92.7
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.10",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 102.9
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 10.2,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2023,
+          "week": 16,
+          "matchup_id": "2023-w16-06-09",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "423.l.161807.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 141.08
+          },
+          "team_b": {
+            "yahoo_team_key": "423.l.161807.t.9",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 119.42
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 21.66,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    }
+  ]
+}

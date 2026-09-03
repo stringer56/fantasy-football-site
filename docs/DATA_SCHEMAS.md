@@ -203,3 +203,32 @@ Sanitized recovered season data is stored in small per-season files below
 games, byes, bracket/placement classification, final placements, canonical
 franchise mappings, coverage, and public-source provenance without copying raw
 Yahoo responses.
+
+### Yahoo public archive backfill
+
+`_data/generated/history/completeness.json` is the coverage gate for historical
+Yahoo imports. It records each season and category as `complete`, `partial`,
+`unavailable`, or `not_requested`, with recovered row/week counts and sanitized
+failures. A downstream builder must not publish an unsupported category merely
+because a file exists.
+
+Per-season backfill files use these shapes:
+
+- `league.json`: safe season/game/league metadata and renewal links.
+- `teams.json`: Yahoo team key/ID, exact historical name, nullable canonical
+  `franchise_id`, and explicit `mapping_status`.
+- `standings.json`: final rank, W-L-T, PF/PA, streak, and the same identity fields.
+- `weeks.json`: available/recovered-week coverage plus matchups containing two
+  teams, final scores, winner/tie state, playoff-week flag, source, and verified
+  state. Missing values remain null; projected scores are not imported.
+- `draft.json`: round, round pick, sequential overall pick, exact player and
+  historical team names, public Yahoo player ID, provenance, and mapping state.
+- `transactions.json`: paginated add/drop/trade event type, Yahoo display
+  timestamp, historical team identity, normalized player action metadata, and
+  explicit pagination coverage.
+- `rosters.json` (optional): season/week/team, player ID/name, selected position,
+  starter-or-bench state, and verified fantasy points. It is absent until the
+  public historical roster identity is trustworthy.
+
+Raw HTML lives only under ignored `.cache/yahoo-history/`. See
+[Yahoo Historical Backfill](YAHOO_HISTORY_BACKFILL.md).

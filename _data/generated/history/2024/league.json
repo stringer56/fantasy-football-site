@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "season": 2024,
+  "league_key": "449.l.761310",
+  "generated_at": "2026-09-03T19:03:09Z",
+  "source": {
+    "type": "official_yahoo_public_archive",
+    "url": "https://football.fantasysports.yahoo.com/2024/f1/761310",
+    "coverage_status": "verified_rows_only"
+  },
+  "league": {
+    "name": "Road To Glory FFL",
+    "game_key": "449",
+    "league_id": "761310",
+    "team_count": 12,
+    "finished": true,
+    "previous_league_key": "423.l.161807",
+    "next_league_key": "461.l.103926"
+  }
+}

@@ -30,6 +30,7 @@ python scripts/validate_votes_data.py
 python scripts/build_recaps.py --check
 python scripts/validate_recaps.py
 python scripts/discover_yahoo_history.py --dry-run --check
+python scripts/validate_yahoo_history_backfill.py
 ```
 
 Run a GitHub Pages-compatible build when Ruby and Bundler are installed:
@@ -64,3 +65,6 @@ commissioner override workflow are documented in
 The manual, sanitized Yahoo renewal-chain and resource-capability workflow is
 documented in
 [Yahoo Historical League Discovery](docs/YAHOO_HISTORY_DISCOVERY.md).
+The cache-first, rate-limited public archive importer and its verified coverage
+are documented in
+[Yahoo Historical Backfill](docs/YAHOO_HISTORY_BACKFILL.md).

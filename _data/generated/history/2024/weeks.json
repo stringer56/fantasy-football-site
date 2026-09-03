@@ -1,0 +1,2708 @@
+{
+  "schema_version": 1,
+  "season": 2024,
+  "league_key": "449.l.761310",
+  "generated_at": "2026-09-03T19:03:09Z",
+  "source": {
+    "type": "official_yahoo_public_archive",
+    "url": "https://football.fantasysports.yahoo.com/2024/f1/761310",
+    "coverage_status": "verified_rows_only"
+  },
+  "coverage": {
+    "available_weeks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "recovered_weeks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "complete": true
+  },
+  "weeks": [
+    {
+      "week": 1,
+      "matchups": [
+        {
+          "season": 2024,
+          "week": 1,
+          "matchup_id": "2024-w01-01-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 87.66
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 139.98
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 52.32,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 1,
+          "matchup_id": "2024-w01-02-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 104.46
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 108.66
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 4.2,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 1,
+          "matchup_id": "2024-w01-03-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 152.0
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 105.64
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 46.36,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 1,
+          "matchup_id": "2024-w01-04-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.4",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 86.28
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.12",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 128.78
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 42.5,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 1,
+          "matchup_id": "2024-w01-07-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 121.46
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.10",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 73.98
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 47.48,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 1,
+          "matchup_id": "2024-w01-09-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 103.12
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.11",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 106.92
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 3.8,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "matchups": [
+        {
+          "season": 2024,
+          "week": 2,
+          "matchup_id": "2024-w02-01-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 137.1
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.11",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 145.18
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 8.08,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 2,
+          "matchup_id": "2024-w02-02-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 120.02
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 115.46
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 4.56,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 2,
+          "matchup_id": "2024-w02-03-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 127.04
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 125.62
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 1.42,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 2,
+          "matchup_id": "2024-w02-04-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.4",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 122.18
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 115.0
+          },
+          "winner_franchise_id": "vegas-vandals",
+          "winner_historical_name": "Vegas Vandals",
+          "tie": false,
+          "margin": 7.18,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 2,
+          "matchup_id": "2024-w02-06-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 123.04
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.12",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 91.36
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 31.68,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 2,
+          "matchup_id": "2024-w02-09-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 102.42
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.10",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 104.34
+          },
+          "winner_franchise_id": "savage-huns",
+          "winner_historical_name": "THE SAVAGE HUNS",
+          "tie": false,
+          "margin": 1.92,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "matchups": [
+        {
+          "season": 2024,
+          "week": 3,
+          "matchup_id": "2024-w03-01-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 100.3
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.10",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 83.58
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 16.72,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 3,
+          "matchup_id": "2024-w03-02-03",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 106.16
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 114.54
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 8.38,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 3,
+          "matchup_id": "2024-w03-04-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.4",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 135.96
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 120.46
+          },
+          "winner_franchise_id": "vegas-vandals",
+          "winner_historical_name": "Vegas Vandals",
+          "tie": false,
+          "margin": 15.5,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 3,
+          "matchup_id": "2024-w03-05-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 152.86
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.12",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 92.02
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 60.84,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 3,
+          "matchup_id": "2024-w03-06-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 91.78
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 112.1
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 20.32,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 3,
+          "matchup_id": "2024-w03-08-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 133.48
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.11",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 88.18
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 45.3,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "matchups": [
+        {
+          "season": 2024,
+          "week": 4,
+          "matchup_id": "2024-w04-01-04",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 76.7
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.4",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 114.28
+          },
+          "winner_franchise_id": "vegas-vandals",
+          "winner_historical_name": "Vegas Vandals",
+          "tie": false,
+          "margin": 37.58,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 4,
+          "matchup_id": "2024-w04-02-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 137.44
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.11",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 137.54
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 0.1,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 4,
+          "matchup_id": "2024-w04-03-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 116.6
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.12",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 72.0
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 44.6,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 4,
+          "matchup_id": "2024-w04-05-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 116.78
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 118.6
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 1.82,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 4,
+          "matchup_id": "2024-w04-06-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 68.7
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 128.12
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 59.42,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 4,
+          "matchup_id": "2024-w04-08-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 102.94
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.10",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 126.08
+          },
+          "winner_franchise_id": "savage-huns",
+          "winner_historical_name": "THE SAVAGE HUNS",
+          "tie": false,
+          "margin": 23.14,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "matchups": [
+        {
+          "season": 2024,
+          "week": 5,
+          "matchup_id": "2024-w05-01-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 105.06
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 113.6
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 8.54,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 5,
+          "matchup_id": "2024-w05-02-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 134.58
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.12",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 120.54
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 14.04,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 5,
+          "matchup_id": "2024-w05-03-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 113.26
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 98.94
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 14.32,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 5,
+          "matchup_id": "2024-w05-04-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.4",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 77.16
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 153.26
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 76.1,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 5,
+          "matchup_id": "2024-w05-05-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 155.28
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 138.74
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 16.54,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 5,
+          "matchup_id": "2024-w05-10-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.10",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 133.3
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.11",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 146.52
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 13.22,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "matchups": [
+        {
+          "season": 2024,
+          "week": 6,
+          "matchup_id": "2024-w06-01-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 113.0
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 139.32
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 26.32,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 6,
+          "matchup_id": "2024-w06-02-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 86.42
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.10",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 82.16
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 4.26,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 6,
+          "matchup_id": "2024-w06-03-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 129.62
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 94.66
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 34.96,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 6,
+          "matchup_id": "2024-w06-04-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.4",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 112.2
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.11",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 134.92
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 22.72,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 6,
+          "matchup_id": "2024-w06-06-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 99.4
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 115.2
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 15.8,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 6,
+          "matchup_id": "2024-w06-07-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 100.18
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.12",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 114.5
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 14.32,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "matchups": [
+        {
+          "season": 2024,
+          "week": 7,
+          "matchup_id": "2024-w07-01-03",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 97.28
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 84.7
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 12.58,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 7,
+          "matchup_id": "2024-w07-02-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 104.96
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 119.04
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 14.08,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 7,
+          "matchup_id": "2024-w07-04-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.4",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 89.0
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.10",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 156.3
+          },
+          "winner_franchise_id": "savage-huns",
+          "winner_historical_name": "THE SAVAGE HUNS",
+          "tie": false,
+          "margin": 67.3,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 7,
+          "matchup_id": "2024-w07-05-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 144.24
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 114.56
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 29.68,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 7,
+          "matchup_id": "2024-w07-06-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 77.0
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.11",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 145.34
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 68.34,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 7,
+          "matchup_id": "2024-w07-09-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 80.56
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.12",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 111.02
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 30.46,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "matchups": [
+        {
+          "season": 2024,
+          "week": 8,
+          "matchup_id": "2024-w08-01-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 153.46
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.12",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 90.42
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 63.04,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 8,
+          "matchup_id": "2024-w08-02-04",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 137.02
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.4",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 101.9
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 35.12,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 8,
+          "matchup_id": "2024-w08-03-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 108.14
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 150.6
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 42.46,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 8,
+          "matchup_id": "2024-w08-05-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 106.96
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.11",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 116.66
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 9.7,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 8,
+          "matchup_id": "2024-w08-06-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 141.0
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.10",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 105.98
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 35.02,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 8,
+          "matchup_id": "2024-w08-07-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 131.9
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 123.54
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 8.36,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "matchups": [
+        {
+          "season": 2024,
+          "week": 9,
+          "matchup_id": "2024-w09-01-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 112.08
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 143.04
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 30.96,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 9,
+          "matchup_id": "2024-w09-02-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 114.32
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 123.5
+          },
+          "winner_franchise_id": "baseball-furies",
+          "winner_historical_name": "The Baseball Furies",
+          "tie": false,
+          "margin": 9.18,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 9,
+          "matchup_id": "2024-w09-03-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 111.82
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.11",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 107.6
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 4.22,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 9,
+          "matchup_id": "2024-w09-04-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.4",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 82.9
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 94.64
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 11.74,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 9,
+          "matchup_id": "2024-w09-05-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 156.52
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.10",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 90.86
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 65.66,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 9,
+          "matchup_id": "2024-w09-08-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 116.68
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.12",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 95.5
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 21.18,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "matchups": [
+        {
+          "season": 2024,
+          "week": 10,
+          "matchup_id": "2024-w10-01-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 87.64
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 84.68
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 2.96,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 10,
+          "matchup_id": "2024-w10-02-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 99.46
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 76.34
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 23.12,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 10,
+          "matchup_id": "2024-w10-03-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 111.14
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.10",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 87.24
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 23.9,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 10,
+          "matchup_id": "2024-w10-04-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.4",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 97.2
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 133.32
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 36.12,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 10,
+          "matchup_id": "2024-w10-07-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 109.78
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 137.88
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 28.1,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 10,
+          "matchup_id": "2024-w10-11-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.11",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 121.7
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.12",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 83.3
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 38.4,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "matchups": [
+        {
+          "season": 2024,
+          "week": 11,
+          "matchup_id": "2024-w11-01-02",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 173.82
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 202.9
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 29.08,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 11,
+          "matchup_id": "2024-w11-03-04",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 140.44
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.4",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 100.88
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 39.56,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 11,
+          "matchup_id": "2024-w11-05-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 138.14
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 104.38
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 33.76,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 11,
+          "matchup_id": "2024-w11-07-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 99.28
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.11",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 103.58
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 4.3,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 11,
+          "matchup_id": "2024-w11-08-09",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 111.32
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 86.64
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 24.68,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 11,
+          "matchup_id": "2024-w11-10-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.10",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 116.88
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.12",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 129.68
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 12.8,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "matchups": [
+        {
+          "season": 2024,
+          "week": 12,
+          "matchup_id": "2024-w12-01-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 145.62
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 127.98
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 17.64,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 12,
+          "matchup_id": "2024-w12-02-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 109.72
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 88.36
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 21.36,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 12,
+          "matchup_id": "2024-w12-03-06",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 90.62
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 75.42
+          },
+          "winner_franchise_id": "ayahuasca-rush",
+          "winner_historical_name": "Ayahuasca Rush",
+          "tie": false,
+          "margin": 15.2,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 12,
+          "matchup_id": "2024-w12-04-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.4",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 68.96
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.12",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 101.46
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 32.5,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 12,
+          "matchup_id": "2024-w12-07-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 135.28
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.10",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 142.4
+          },
+          "winner_franchise_id": "savage-huns",
+          "winner_historical_name": "THE SAVAGE HUNS",
+          "tie": false,
+          "margin": 7.12,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 12,
+          "matchup_id": "2024-w12-09-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 79.26
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.11",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 133.88
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 54.62,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "matchups": [
+        {
+          "season": 2024,
+          "week": 13,
+          "matchup_id": "2024-w13-01-11",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 111.32
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.11",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 122.08
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 10.76,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 13,
+          "matchup_id": "2024-w13-02-08",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 132.68
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 135.0
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 2.32,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 13,
+          "matchup_id": "2024-w13-03-05",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 99.86
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 101.46
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 1.6,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 13,
+          "matchup_id": "2024-w13-04-07",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.4",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 89.64
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 114.88
+          },
+          "winner_franchise_id": "greendale-human-beings",
+          "winner_historical_name": "Greendale Human Beings",
+          "tie": false,
+          "margin": 25.24,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 13,
+          "matchup_id": "2024-w13-06-12",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 101.9
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.12",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 152.92
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 51.02,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 13,
+          "matchup_id": "2024-w13-09-10",
+          "status": "final",
+          "is_playoffs": false,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 104.72
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.10",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 119.0
+          },
+          "winner_franchise_id": "savage-huns",
+          "winner_historical_name": "THE SAVAGE HUNS",
+          "tie": false,
+          "margin": 14.28,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 14,
+      "matchups": [
+        {
+          "season": 2024,
+          "week": 14,
+          "matchup_id": "2024-w14-02-08",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 103.52
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 156.14
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 52.62,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 14,
+          "matchup_id": "2024-w14-05-07",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 142.96
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 113.12
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 29.84,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 14,
+          "matchup_id": "2024-w14-04-06",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.4",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 90.92
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 96.6
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 5.68,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 14,
+          "matchup_id": "2024-w14-09-10",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 75.92
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.10",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 117.36
+          },
+          "winner_franchise_id": "savage-huns",
+          "winner_historical_name": "THE SAVAGE HUNS",
+          "tie": false,
+          "margin": 41.44,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 15,
+      "matchups": [
+        {
+          "season": 2024,
+          "week": 15,
+          "matchup_id": "2024-w15-03-05",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 105.96
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 117.34
+          },
+          "winner_franchise_id": "crazy-wazs-team",
+          "winner_historical_name": "Chris's Crazy Team",
+          "tie": false,
+          "margin": 11.38,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 15,
+          "matchup_id": "2024-w15-08-11",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 106.54
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.11",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 160.3
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 53.76,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 15,
+          "matchup_id": "2024-w15-01-10",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 176.8
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.10",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 110.56
+          },
+          "winner_franchise_id": "van-cortlant-rangers",
+          "winner_historical_name": "Van Cortlant Rangers",
+          "tie": false,
+          "margin": 66.24,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 15,
+          "matchup_id": "2024-w15-02-07",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.2",
+            "franchise_id": "albany-kneelers",
+            "historical_team_name": "Albany Kneelers",
+            "mapping_status": "verified",
+            "score": 143.68
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.7",
+            "franchise_id": "greendale-human-beings",
+            "historical_team_name": "Greendale Human Beings",
+            "mapping_status": "verified",
+            "score": 103.14
+          },
+          "winner_franchise_id": "albany-kneelers",
+          "winner_historical_name": "Albany Kneelers",
+          "tie": false,
+          "margin": 40.54,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 15,
+          "matchup_id": "2024-w15-04-09",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.4",
+            "franchise_id": "vegas-vandals",
+            "historical_team_name": "Vegas Vandals",
+            "mapping_status": "verified",
+            "score": 113.86
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.9",
+            "franchise_id": "baseball-furies",
+            "historical_team_name": "The Baseball Furies",
+            "mapping_status": "verified",
+            "score": 99.8
+          },
+          "winner_franchise_id": "vegas-vandals",
+          "winner_historical_name": "Vegas Vandals",
+          "tie": false,
+          "margin": 14.06,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 15,
+          "matchup_id": "2024-w15-06-12",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 145.92
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.12",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 117.58
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 28.34,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "matchups": [
+        {
+          "season": 2024,
+          "week": 16,
+          "matchup_id": "2024-w16-05-11",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.5",
+            "franchise_id": "crazy-wazs-team",
+            "historical_team_name": "Chris's Crazy Team",
+            "mapping_status": "verified",
+            "score": 140.98
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.11",
+            "franchise_id": "turnbull-acs",
+            "historical_team_name": "Turnbull AC’s",
+            "mapping_status": "verified",
+            "score": 148.18
+          },
+          "winner_franchise_id": "turnbull-acs",
+          "winner_historical_name": "Turnbull AC’s",
+          "tie": false,
+          "margin": 7.2,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 16,
+          "matchup_id": "2024-w16-01-06",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.1",
+            "franchise_id": "van-cortlant-rangers",
+            "historical_team_name": "Van Cortlant Rangers",
+            "mapping_status": "verified",
+            "score": 110.2
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.6",
+            "franchise_id": "buffalo-bravado",
+            "historical_team_name": "Buffalo Bravados",
+            "mapping_status": "verified",
+            "score": 134.62
+          },
+          "winner_franchise_id": "buffalo-bravado",
+          "winner_historical_name": "Buffalo Bravados",
+          "tie": false,
+          "margin": 24.42,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 16,
+          "matchup_id": "2024-w16-03-08",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.3",
+            "franchise_id": "ayahuasca-rush",
+            "historical_team_name": "Ayahuasca Rush",
+            "mapping_status": "verified",
+            "score": 127.18
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.8",
+            "franchise_id": "maine-moose",
+            "historical_team_name": "Maine Moose",
+            "mapping_status": "verified",
+            "score": 149.9
+          },
+          "winner_franchise_id": "maine-moose",
+          "winner_historical_name": "Maine Moose",
+          "tie": false,
+          "margin": 22.72,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        },
+        {
+          "season": 2024,
+          "week": 16,
+          "matchup_id": "2024-w16-10-12",
+          "status": "final",
+          "is_playoffs": true,
+          "is_consolation": null,
+          "team_a": {
+            "yahoo_team_key": "449.l.761310.t.10",
+            "franchise_id": "savage-huns",
+            "historical_team_name": "THE SAVAGE HUNS",
+            "mapping_status": "verified",
+            "score": 118.78
+          },
+          "team_b": {
+            "yahoo_team_key": "449.l.761310.t.12",
+            "franchise_id": "north-town-ninnyhammers",
+            "historical_team_name": "North town Ninnyhammers",
+            "mapping_status": "verified",
+            "score": 135.06
+          },
+          "winner_franchise_id": "north-town-ninnyhammers",
+          "winner_historical_name": "North town Ninnyhammers",
+          "tie": false,
+          "margin": 16.28,
+          "source": "official_yahoo_public_archive",
+          "verified": true
+        }
+      ]
+    }
+  ]
+}
