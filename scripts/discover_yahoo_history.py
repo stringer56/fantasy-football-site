@@ -299,7 +299,7 @@ def discover_live(request_delay: float) -> dict[str, Any]:
     user_probe, _ = authorization_probe(
         client,
         "authenticated_user_fantasy_resource",
-        "users;use_login=1/games",
+        "users;use_login=1/games;game_keys=nfl/teams",
     )
     authorization_probes.append(user_probe)
     access_status["authenticated_user_fantasy_resource"] = (
