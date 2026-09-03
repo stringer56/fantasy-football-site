@@ -233,8 +233,8 @@
           "tie": false,
           "team_a": {
             "franchise_id": "albany-kneelers",
-            "display_name": "Albany Kneelers",
-            "short_name": "Kneelers",
+            "display_name": "Albany Redskins",
+            "short_name": "Redskins",
             "path": "/teams/albany-kneelers/",
             "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
             "score": 132.74
@@ -262,8 +262,8 @@
           },
           "loser": {
             "franchise_id": "albany-kneelers",
-            "display_name": "Albany Kneelers",
-            "short_name": "Kneelers",
+            "display_name": "Albany Redskins",
+            "short_name": "Redskins",
             "path": "/teams/albany-kneelers/",
             "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
           },
@@ -349,8 +349,8 @@
             "tie": false,
             "team_a": {
               "franchise_id": "albany-kneelers",
-              "display_name": "Albany Kneelers",
-              "short_name": "Kneelers",
+              "display_name": "Albany Redskins",
+              "short_name": "Redskins",
               "path": "/teams/albany-kneelers/",
               "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
               "score": 132.74
@@ -378,8 +378,8 @@
             },
             "loser": {
               "franchise_id": "albany-kneelers",
-              "display_name": "Albany Kneelers",
-              "short_name": "Kneelers",
+              "display_name": "Albany Redskins",
+              "short_name": "Redskins",
               "path": "/teams/albany-kneelers/",
               "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
             },
@@ -394,8 +394,8 @@
     },
     {
       "franchise_id": "albany-kneelers",
-      "display_name": "Albany Kneelers",
-      "short_name": "Kneelers",
+      "display_name": "Albany Redskins",
+      "short_name": "Redskins",
       "path": "/teams/albany-kneelers/",
       "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
       "season_history": {
@@ -529,50 +529,50 @@
         "highest_score": 202.9,
         "lowest_score": 70.02,
         "biggest_win": {
-          "matchup_id": "2025-w15-02-03",
-          "season": 2025,
-          "week": 15,
-          "game_type": "championship_playoff",
-          "playoff_round": "Semifinal",
+          "matchup_id": "2022-w08-02-09",
+          "season": 2022,
+          "week": 8,
+          "game_type": "regular_season",
+          "playoff_round": null,
           "tie": false,
           "team_a": {
             "franchise_id": "albany-kneelers",
-            "display_name": "Albany Kneelers",
-            "short_name": "Kneelers",
+            "display_name": "Albany Redskins",
+            "short_name": "Redskins",
             "path": "/teams/albany-kneelers/",
             "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
-            "score": 159.92
+            "score": 168.48
           },
           "team_b": {
-            "franchise_id": "ayahuasca-rush",
-            "display_name": "Ayahuasca Rush",
-            "short_name": "Rush",
-            "path": "/teams/ayahuasca-rush/",
-            "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
-            "score": 86.84
+            "franchise_id": "buffalo-bravado",
+            "display_name": "Buffalo Bravado",
+            "short_name": "Bravado",
+            "path": "/teams/buffalo-bravado/",
+            "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+            "score": 87.0
           },
           "historical_team_a": "Albany Kneelers",
-          "historical_team_b": "Ayahuasca Rush",
-          "team_a_score": 159.92,
-          "team_b_score": 86.84,
-          "combined_score": 246.76,
-          "margin": 73.08,
+          "historical_team_b": "Dilly Dilly",
+          "team_a_score": 168.48,
+          "team_b_score": 87.0,
+          "combined_score": 255.48,
+          "margin": 81.48,
           "winner": {
             "franchise_id": "albany-kneelers",
-            "display_name": "Albany Kneelers",
-            "short_name": "Kneelers",
+            "display_name": "Albany Redskins",
+            "short_name": "Redskins",
             "path": "/teams/albany-kneelers/",
             "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
           },
           "loser": {
-            "franchise_id": "ayahuasca-rush",
-            "display_name": "Ayahuasca Rush",
-            "short_name": "Rush",
-            "path": "/teams/ayahuasca-rush/",
-            "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg"
+            "franchise_id": "buffalo-bravado",
+            "display_name": "Buffalo Bravado",
+            "short_name": "Bravado",
+            "path": "/teams/buffalo-bravado/",
+            "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg"
           },
-          "winner_score": 159.92,
-          "loser_score": 86.84
+          "winner_score": 168.48,
+          "loser_score": 87.0
         },
         "closest_win": {
           "matchup_id": "2025-w07-02-11",
@@ -583,8 +583,8 @@
           "tie": false,
           "team_a": {
             "franchise_id": "albany-kneelers",
-            "display_name": "Albany Kneelers",
-            "short_name": "Kneelers",
+            "display_name": "Albany Redskins",
+            "short_name": "Redskins",
             "path": "/teams/albany-kneelers/",
             "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
             "score": 109.64
@@ -605,8 +605,8 @@
           "margin": 1.3,
           "winner": {
             "franchise_id": "albany-kneelers",
-            "display_name": "Albany Kneelers",
-            "short_name": "Kneelers",
+            "display_name": "Albany Redskins",
+            "short_name": "Redskins",
             "path": "/teams/albany-kneelers/",
             "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
           },
@@ -622,8 +622,8 @@
         },
         "longest_winning_streak": {
           "franchise_id": "albany-kneelers",
-          "display_name": "Albany Kneelers",
-          "short_name": "Kneelers",
+          "display_name": "Albany Redskins",
+          "short_name": "Redskins",
           "path": "/teams/albany-kneelers/",
           "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
           "games": 9,
@@ -635,8 +635,8 @@
         },
         "playoff_record": {
           "franchise_id": "albany-kneelers",
-          "display_name": "Albany Kneelers",
-          "short_name": "Kneelers",
+          "display_name": "Albany Redskins",
+          "short_name": "Redskins",
           "path": "/teams/albany-kneelers/",
           "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
           "playoff_games": 4,
@@ -653,8 +653,8 @@
             "tie": false,
             "team_a": {
               "franchise_id": "albany-kneelers",
-              "display_name": "Albany Kneelers",
-              "short_name": "Kneelers",
+              "display_name": "Albany Redskins",
+              "short_name": "Redskins",
               "path": "/teams/albany-kneelers/",
               "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
               "score": 159.92
@@ -675,8 +675,8 @@
             "margin": 73.08,
             "winner": {
               "franchise_id": "albany-kneelers",
-              "display_name": "Albany Kneelers",
-              "short_name": "Kneelers",
+              "display_name": "Albany Redskins",
+              "short_name": "Redskins",
               "path": "/teams/albany-kneelers/",
               "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
             },
@@ -699,8 +699,8 @@
             "tie": false,
             "team_a": {
               "franchise_id": "albany-kneelers",
-              "display_name": "Albany Kneelers",
-              "short_name": "Kneelers",
+              "display_name": "Albany Redskins",
+              "short_name": "Redskins",
               "path": "/teams/albany-kneelers/",
               "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
               "score": 114.38
@@ -721,8 +721,8 @@
             "margin": 53.0,
             "winner": {
               "franchise_id": "albany-kneelers",
-              "display_name": "Albany Kneelers",
-              "short_name": "Kneelers",
+              "display_name": "Albany Redskins",
+              "short_name": "Redskins",
               "path": "/teams/albany-kneelers/",
               "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
             },
@@ -933,8 +933,8 @@
           "tie": false,
           "team_a": {
             "franchise_id": "albany-kneelers",
-            "display_name": "Albany Kneelers",
-            "short_name": "Kneelers",
+            "display_name": "Albany Redskins",
+            "short_name": "Redskins",
             "path": "/teams/albany-kneelers/",
             "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
             "score": 137.44
@@ -962,8 +962,8 @@
           },
           "loser": {
             "franchise_id": "albany-kneelers",
-            "display_name": "Albany Kneelers",
-            "short_name": "Kneelers",
+            "display_name": "Albany Redskins",
+            "short_name": "Redskins",
             "path": "/teams/albany-kneelers/",
             "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
           },
@@ -981,7 +981,7 @@
           "start_week": 10,
           "end_season": 2022,
           "end_week": 14,
-          "rank": 7
+          "rank": 6
         },
         "playoff_record": {
           "franchise_id": "turnbull-acs",
@@ -1339,11 +1339,11 @@
             "playoff_round": "Semifinal",
             "tie": false,
             "team_a": {
-              "franchise_id": "quahog-stripes",
-              "display_name": "Quahog Stripes",
-              "short_name": "Stripes",
-              "path": "/retired/quahog-stripes/",
-              "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
+              "franchise_id": "new-jersey-giants",
+              "display_name": "New Jersey Giants",
+              "short_name": "Giants",
+              "path": "/teams/new-jersey-giants/",
+              "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
               "score": 75.76
             },
             "team_b": {
@@ -1368,11 +1368,11 @@
               "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg"
             },
             "loser": {
-              "franchise_id": "quahog-stripes",
-              "display_name": "Quahog Stripes",
-              "short_name": "Stripes",
-              "path": "/retired/quahog-stripes/",
-              "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg"
+              "franchise_id": "new-jersey-giants",
+              "display_name": "New Jersey Giants",
+              "short_name": "Giants",
+              "path": "/teams/new-jersey-giants/",
+              "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
             },
             "winner_score": 149.7,
             "loser_score": 75.76
@@ -1668,7 +1668,7 @@
           "start_week": 3,
           "end_season": 2025,
           "end_week": 7,
-          "rank": 8
+          "rank": 7
         },
         "playoff_record": {
           "franchise_id": "van-cortlant-rangers",
@@ -1684,7 +1684,7 @@
           "largest_playoff_win": null,
           "closest_playoff_win": null,
           "highest_playoff_score": 113.44,
-          "rank": 10
+          "rank": 9
         },
         "head_to_head_available": true
       }
@@ -1928,7 +1928,7 @@
           "start_week": 5,
           "end_season": 2024,
           "end_week": 7,
-          "rank": 13
+          "rank": 12
         },
         "playoff_record": {
           "franchise_id": "crazy-wazs-team",
@@ -2217,8 +2217,8 @@
           "tie": false,
           "team_a": {
             "franchise_id": "albany-kneelers",
-            "display_name": "Albany Kneelers",
-            "short_name": "Kneelers",
+            "display_name": "Albany Redskins",
+            "short_name": "Redskins",
             "path": "/teams/albany-kneelers/",
             "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
             "score": 132.68
@@ -2246,8 +2246,8 @@
           },
           "loser": {
             "franchise_id": "albany-kneelers",
-            "display_name": "Albany Kneelers",
-            "short_name": "Kneelers",
+            "display_name": "Albany Redskins",
+            "short_name": "Redskins",
             "path": "/teams/albany-kneelers/",
             "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
           },
@@ -2265,7 +2265,7 @@
           "start_week": 3,
           "end_season": 2023,
           "end_week": 6,
-          "rank": 9
+          "rank": 8
         },
         "playoff_record": {
           "franchise_id": "maine-moose",
@@ -2423,34 +2423,34 @@
         "highest_score": 177.88,
         "lowest_score": 52.7,
         "biggest_win": {
-          "matchup_id": "2024-w04-06-09",
-          "season": 2024,
-          "week": 4,
+          "matchup_id": "2022-w02-07-09",
+          "season": 2022,
+          "week": 2,
           "game_type": "regular_season",
           "playoff_round": null,
           "tie": false,
           "team_a": {
-            "franchise_id": "buffalo-bravado",
-            "display_name": "Buffalo Bravado",
-            "short_name": "Bravado",
-            "path": "/teams/buffalo-bravado/",
-            "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
-            "score": 68.7
-          },
-          "team_b": {
             "franchise_id": "baseball-furies",
             "display_name": "The Baseball Furies",
             "short_name": "Furies",
             "path": "/teams/baseball-furies/",
             "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
-            "score": 128.12
+            "score": 177.88
           },
-          "historical_team_a": "Buffalo Bravados",
-          "historical_team_b": "The Baseball Furies",
-          "team_a_score": 68.7,
-          "team_b_score": 128.12,
-          "combined_score": 196.82,
-          "margin": 59.42,
+          "team_b": {
+            "franchise_id": "buffalo-bravado",
+            "display_name": "Buffalo Bravado",
+            "short_name": "Bravado",
+            "path": "/teams/buffalo-bravado/",
+            "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+            "score": 83.8
+          },
+          "historical_team_a": "The Baseball Furies",
+          "historical_team_b": "Dilly Dilly",
+          "team_a_score": 177.88,
+          "team_b_score": 83.8,
+          "combined_score": 261.68,
+          "margin": 94.08,
           "winner": {
             "franchise_id": "baseball-furies",
             "display_name": "The Baseball Furies",
@@ -2465,8 +2465,8 @@
             "path": "/teams/buffalo-bravado/",
             "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg"
           },
-          "winner_score": 128.12,
-          "loser_score": 68.7
+          "winner_score": 177.88,
+          "loser_score": 83.8
         },
         "closest_win": {
           "matchup_id": "2025-w12-01-09",
@@ -2525,7 +2525,7 @@
           "start_week": 1,
           "end_season": 2022,
           "end_week": 3,
-          "rank": 11
+          "rank": 10
         },
         "playoff_record": null,
         "head_to_head_available": true
@@ -2655,19 +2655,19 @@
         "highest_score": 166.6,
         "lowest_score": 72.96,
         "biggest_win": {
-          "matchup_id": "2023-w04-05-11",
-          "season": 2023,
-          "week": 4,
+          "matchup_id": "2022-w08-05-08",
+          "season": 2022,
+          "week": 8,
           "game_type": "regular_season",
           "playoff_round": null,
           "tie": false,
           "team_a": {
-            "franchise_id": "crazy-wazs-team",
-            "display_name": "Crazy Waz's Team",
-            "short_name": "Crazy Waz",
-            "path": "/teams/crazy-wazs-team/",
-            "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
-            "score": 97.0
+            "franchise_id": "vegas-vandals",
+            "display_name": "Vegas Vandals",
+            "short_name": "Vandals",
+            "path": "/teams/vegas-vandals/",
+            "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
+            "score": 63.84
           },
           "team_b": {
             "franchise_id": "savage-huns",
@@ -2675,14 +2675,14 @@
             "short_name": "Savage Huns",
             "path": "/retired/the-savage-huns/",
             "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
-            "score": 166.6
+            "score": 138.34
           },
-          "historical_team_a": "Chris's Crazy Team",
+          "historical_team_a": "Broncos Country Let’s Ride",
           "historical_team_b": "THE SAVAGE HUNS",
-          "team_a_score": 97.0,
-          "team_b_score": 166.6,
-          "combined_score": 263.6,
-          "margin": 69.6,
+          "team_a_score": 63.84,
+          "team_b_score": 138.34,
+          "combined_score": 202.18,
+          "margin": 74.5,
           "winner": {
             "franchise_id": "savage-huns",
             "display_name": "The Savage Huns",
@@ -2691,14 +2691,14 @@
             "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg"
           },
           "loser": {
-            "franchise_id": "crazy-wazs-team",
-            "display_name": "Crazy Waz's Team",
-            "short_name": "Crazy Waz",
-            "path": "/teams/crazy-wazs-team/",
-            "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg"
+            "franchise_id": "vegas-vandals",
+            "display_name": "Vegas Vandals",
+            "short_name": "Vandals",
+            "path": "/teams/vegas-vandals/",
+            "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg"
           },
-          "winner_score": 166.6,
-          "loser_score": 97.0
+          "winner_score": 138.34,
+          "loser_score": 63.84
         },
         "closest_win": {
           "matchup_id": "2024-w02-09-10",
@@ -2773,8 +2773,796 @@
           "largest_playoff_win": null,
           "closest_playoff_win": null,
           "highest_playoff_score": 107.84,
+          "rank": 8
+        },
+        "head_to_head_available": true
+      }
+    },
+    {
+      "franchise_id": "new-jersey-giants",
+      "display_name": "New Jersey Giants",
+      "short_name": "Giants",
+      "path": "/teams/new-jersey-giants/",
+      "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
+      "season_history": {
+        "coverage": {
+          "class": "season_level",
+          "label": "Verified 2021–2025",
+          "start_season": 2021,
+          "end_season": 2025,
+          "source_years": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+          ],
+          "source_files": [
+            "_data/generated/history/2021/standings.json",
+            "_data/generated/history/2022/standings.json",
+            "_data/generated/history/2023/standings.json",
+            "_data/generated/history/2024/standings.json",
+            "_data/generated/history/2025/standings.json",
+            "_data/champions.yml",
+            "_data/generated/history/2025/playoffs.json"
+          ]
+        },
+        "seasons_represented": [
+          2021,
+          2022,
+          2025
+        ],
+        "season_count": 3,
+        "wins": 21,
+        "losses": 20,
+        "ties": 0,
+        "points_for": 4635.82,
+        "points_against": 4670.38,
+        "average_final_rank": 5.667,
+        "championships": 0,
+        "seasons": [
+          {
+            "season": 2021,
+            "historical_team_name": "Quahog Stripes",
+            "rank": 9,
+            "wins": 5,
+            "losses": 9,
+            "ties": 0,
+            "points_for": 1574.26,
+            "points_against": 1701.64,
+            "playoff_seed": null,
+            "playoff_finish": null
+          },
+          {
+            "season": 2022,
+            "historical_team_name": "Quahog Stripes",
+            "rank": 4,
+            "wins": 9,
+            "losses": 5,
+            "ties": 0,
+            "points_for": 1531.78,
+            "points_against": 1451.06,
+            "playoff_seed": 4,
+            "playoff_finish": null
+          },
+          {
+            "season": 2025,
+            "historical_team_name": "New Jersey Giants",
+            "rank": 4,
+            "wins": 7,
+            "losses": 6,
+            "ties": 0,
+            "points_for": 1529.78,
+            "points_against": 1517.68,
+            "playoff_seed": 4,
+            "playoff_finish": null
+          }
+        ]
+      },
+      "weekly_performance": {
+        "coverage": {
+          "class": "weekly_derived",
+          "label": "Verified 2022–2025",
+          "start_season": 2022,
+          "end_season": 2025,
+          "source_years": [
+            2022,
+            2023,
+            2024,
+            2025
+          ],
+          "source_files": [
+            "_data/generated/history/2022/weeks.json",
+            "_data/generated/history/2023/weeks.json",
+            "_data/generated/history/2024/weeks.json",
+            "_data/generated/history/2025/weeks.json"
+          ]
+        },
+        "games": 32,
+        "wins": 17,
+        "losses": 15,
+        "ties": 0,
+        "win_percentage": 0.53125,
+        "points_for": 3584.18,
+        "points_against": 3684.48,
+        "average_score": 112.006,
+        "highest_score": 173.66,
+        "lowest_score": 67.66,
+        "biggest_win": {
+          "matchup_id": "2022-w11-05-06",
+          "season": 2022,
+          "week": 11,
+          "game_type": "regular_season",
+          "playoff_round": null,
+          "tie": false,
+          "team_a": {
+            "franchise_id": "vegas-vandals",
+            "display_name": "Vegas Vandals",
+            "short_name": "Vandals",
+            "path": "/teams/vegas-vandals/",
+            "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
+            "score": 78.18
+          },
+          "team_b": {
+            "franchise_id": "new-jersey-giants",
+            "display_name": "New Jersey Giants",
+            "short_name": "Giants",
+            "path": "/teams/new-jersey-giants/",
+            "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
+            "score": 127.98
+          },
+          "historical_team_a": "Broncos Country Let’s Ride",
+          "historical_team_b": "Quahog Stripes",
+          "team_a_score": 78.18,
+          "team_b_score": 127.98,
+          "combined_score": 206.16,
+          "margin": 49.8,
+          "winner": {
+            "franchise_id": "new-jersey-giants",
+            "display_name": "New Jersey Giants",
+            "short_name": "Giants",
+            "path": "/teams/new-jersey-giants/",
+            "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
+          },
+          "loser": {
+            "franchise_id": "vegas-vandals",
+            "display_name": "Vegas Vandals",
+            "short_name": "Vandals",
+            "path": "/teams/vegas-vandals/",
+            "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg"
+          },
+          "winner_score": 127.98,
+          "loser_score": 78.18
+        },
+        "closest_win": {
+          "matchup_id": "2022-w03-06-09",
+          "season": 2022,
+          "week": 3,
+          "game_type": "regular_season",
+          "playoff_round": null,
+          "tie": false,
+          "team_a": {
+            "franchise_id": "new-jersey-giants",
+            "display_name": "New Jersey Giants",
+            "short_name": "Giants",
+            "path": "/teams/new-jersey-giants/",
+            "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
+            "score": 96.7
+          },
+          "team_b": {
+            "franchise_id": "buffalo-bravado",
+            "display_name": "Buffalo Bravado",
+            "short_name": "Bravado",
+            "path": "/teams/buffalo-bravado/",
+            "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+            "score": 95.74
+          },
+          "historical_team_a": "Quahog Stripes",
+          "historical_team_b": "Dilly Dilly",
+          "team_a_score": 96.7,
+          "team_b_score": 95.74,
+          "combined_score": 192.44,
+          "margin": 0.96,
+          "winner": {
+            "franchise_id": "new-jersey-giants",
+            "display_name": "New Jersey Giants",
+            "short_name": "Giants",
+            "path": "/teams/new-jersey-giants/",
+            "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
+          },
+          "loser": {
+            "franchise_id": "buffalo-bravado",
+            "display_name": "Buffalo Bravado",
+            "short_name": "Bravado",
+            "path": "/teams/buffalo-bravado/",
+            "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg"
+          },
+          "winner_score": 96.7,
+          "loser_score": 95.74
+        },
+        "longest_winning_streak": {
+          "franchise_id": "new-jersey-giants",
+          "display_name": "New Jersey Giants",
+          "short_name": "Giants",
+          "path": "/teams/new-jersey-giants/",
+          "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
+          "games": 6,
+          "start_season": 2025,
+          "start_week": 7,
+          "end_season": 2025,
+          "end_week": 12,
+          "rank": 5
+        },
+        "playoff_record": {
+          "franchise_id": "new-jersey-giants",
+          "display_name": "New Jersey Giants",
+          "short_name": "Giants",
+          "path": "/teams/new-jersey-giants/",
+          "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
+          "playoff_games": 3,
+          "playoff_wins": 1,
+          "playoff_losses": 2,
+          "championship_appearances": 0,
+          "championships": 0,
+          "largest_playoff_win": {
+            "matchup_id": "2025-w14-01-12",
+            "season": 2025,
+            "week": 14,
+            "game_type": "championship_playoff",
+            "playoff_round": "Quarterfinal",
+            "tie": false,
+            "team_a": {
+              "franchise_id": "van-cortlant-rangers",
+              "display_name": "Van Cortlant Rangers",
+              "short_name": "Rangers",
+              "path": "/teams/van-cortlant-rangers/",
+              "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
+              "score": 113.44
+            },
+            "team_b": {
+              "franchise_id": "new-jersey-giants",
+              "display_name": "New Jersey Giants",
+              "short_name": "Giants",
+              "path": "/teams/new-jersey-giants/",
+              "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
+              "score": 125.96
+            },
+            "historical_team_a": "Van Cortlant Rangers",
+            "historical_team_b": "New Jersey Giants",
+            "team_a_score": 113.44,
+            "team_b_score": 125.96,
+            "combined_score": 239.4,
+            "margin": 12.52,
+            "winner": {
+              "franchise_id": "new-jersey-giants",
+              "display_name": "New Jersey Giants",
+              "short_name": "Giants",
+              "path": "/teams/new-jersey-giants/",
+              "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
+            },
+            "loser": {
+              "franchise_id": "van-cortlant-rangers",
+              "display_name": "Van Cortlant Rangers",
+              "short_name": "Rangers",
+              "path": "/teams/van-cortlant-rangers/",
+              "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg"
+            },
+            "winner_score": 125.96,
+            "loser_score": 113.44
+          },
+          "closest_playoff_win": {
+            "matchup_id": "2025-w14-01-12",
+            "season": 2025,
+            "week": 14,
+            "game_type": "championship_playoff",
+            "playoff_round": "Quarterfinal",
+            "tie": false,
+            "team_a": {
+              "franchise_id": "van-cortlant-rangers",
+              "display_name": "Van Cortlant Rangers",
+              "short_name": "Rangers",
+              "path": "/teams/van-cortlant-rangers/",
+              "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
+              "score": 113.44
+            },
+            "team_b": {
+              "franchise_id": "new-jersey-giants",
+              "display_name": "New Jersey Giants",
+              "short_name": "Giants",
+              "path": "/teams/new-jersey-giants/",
+              "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
+              "score": 125.96
+            },
+            "historical_team_a": "Van Cortlant Rangers",
+            "historical_team_b": "New Jersey Giants",
+            "team_a_score": 113.44,
+            "team_b_score": 125.96,
+            "combined_score": 239.4,
+            "margin": 12.52,
+            "winner": {
+              "franchise_id": "new-jersey-giants",
+              "display_name": "New Jersey Giants",
+              "short_name": "Giants",
+              "path": "/teams/new-jersey-giants/",
+              "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
+            },
+            "loser": {
+              "franchise_id": "van-cortlant-rangers",
+              "display_name": "Van Cortlant Rangers",
+              "short_name": "Rangers",
+              "path": "/teams/van-cortlant-rangers/",
+              "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg"
+            },
+            "winner_score": 125.96,
+            "loser_score": 113.44
+          },
+          "highest_playoff_score": 134.52,
+          "rank": 6
+        },
+        "head_to_head_available": true
+      }
+    },
+    {
+      "franchise_id": "vegas-vandals",
+      "display_name": "Vegas Vandals",
+      "short_name": "Vandals",
+      "path": "/teams/vegas-vandals/",
+      "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
+      "season_history": {
+        "coverage": {
+          "class": "season_level",
+          "label": "Verified 2021–2025",
+          "start_season": 2021,
+          "end_season": 2025,
+          "source_years": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+          ],
+          "source_files": [
+            "_data/generated/history/2021/standings.json",
+            "_data/generated/history/2022/standings.json",
+            "_data/generated/history/2023/standings.json",
+            "_data/generated/history/2024/standings.json",
+            "_data/generated/history/2025/standings.json",
+            "_data/champions.yml",
+            "_data/generated/history/2025/playoffs.json"
+          ]
+        },
+        "seasons_represented": [
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "season_count": 4,
+        "wins": 21,
+        "losses": 32,
+        "ties": 0,
+        "points_for": 5417.74,
+        "points_against": 6066.5,
+        "average_final_rank": 10.0,
+        "championships": 0,
+        "seasons": [
+          {
+            "season": 2022,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "rank": 9,
+            "wins": 6,
+            "losses": 8,
+            "ties": 0,
+            "points_for": 1344.06,
+            "points_against": 1579.02,
+            "playoff_seed": null,
+            "playoff_finish": null
+          },
+          {
+            "season": 2023,
+            "historical_team_name": "Broncos Country Let’s Ride",
+            "rank": 10,
+            "wins": 6,
+            "losses": 7,
+            "ties": 0,
+            "points_for": 1411.88,
+            "points_against": 1466.82,
+            "playoff_seed": null,
+            "playoff_finish": null
+          },
+          {
+            "season": 2024,
+            "historical_team_name": "Vegas Vandals",
+            "rank": 11,
+            "wins": 3,
+            "losses": 10,
+            "ties": 0,
+            "points_for": 1278.54,
+            "points_against": 1607.18,
+            "playoff_seed": null,
+            "playoff_finish": null
+          },
+          {
+            "season": 2025,
+            "historical_team_name": "Vegas Vandals",
+            "rank": 10,
+            "wins": 6,
+            "losses": 7,
+            "ties": 0,
+            "points_for": 1383.26,
+            "points_against": 1413.48,
+            "playoff_seed": null,
+            "playoff_finish": null
+          }
+        ]
+      },
+      "weekly_performance": {
+        "coverage": {
+          "class": "weekly_derived",
+          "label": "Verified 2022–2025",
+          "start_season": 2022,
+          "end_season": 2025,
+          "source_years": [
+            2022,
+            2023,
+            2024,
+            2025
+          ],
+          "source_files": [
+            "_data/generated/history/2022/weeks.json",
+            "_data/generated/history/2023/weeks.json",
+            "_data/generated/history/2024/weeks.json",
+            "_data/generated/history/2025/weeks.json"
+          ]
+        },
+        "games": 60,
+        "wins": 23,
+        "losses": 37,
+        "ties": 0,
+        "win_percentage": 0.383333,
+        "points_for": 6064.58,
+        "points_against": 6759.68,
+        "average_score": 101.076,
+        "highest_score": 144.82,
+        "lowest_score": 63.84,
+        "biggest_win": {
+          "matchup_id": "2023-w09-04-10",
+          "season": 2023,
+          "week": 9,
+          "game_type": "regular_season",
+          "playoff_round": null,
+          "tie": false,
+          "team_a": {
+            "franchise_id": "vegas-vandals",
+            "display_name": "Vegas Vandals",
+            "short_name": "Vandals",
+            "path": "/teams/vegas-vandals/",
+            "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
+            "score": 120.86
+          },
+          "team_b": {
+            "franchise_id": "baseball-furies",
+            "display_name": "The Baseball Furies",
+            "short_name": "Furies",
+            "path": "/teams/baseball-furies/",
+            "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
+            "score": 68.7
+          },
+          "historical_team_a": "Broncos Country Let’s Ride",
+          "historical_team_b": "The Baseball Furies",
+          "team_a_score": 120.86,
+          "team_b_score": 68.7,
+          "combined_score": 189.56,
+          "margin": 52.16,
+          "winner": {
+            "franchise_id": "vegas-vandals",
+            "display_name": "Vegas Vandals",
+            "short_name": "Vandals",
+            "path": "/teams/vegas-vandals/",
+            "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg"
+          },
+          "loser": {
+            "franchise_id": "baseball-furies",
+            "display_name": "The Baseball Furies",
+            "short_name": "Furies",
+            "path": "/teams/baseball-furies/",
+            "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg"
+          },
+          "winner_score": 120.86,
+          "loser_score": 68.7
+        },
+        "closest_win": {
+          "matchup_id": "2022-w09-05-10",
+          "season": 2022,
+          "week": 9,
+          "game_type": "regular_season",
+          "playoff_round": null,
+          "tie": false,
+          "team_a": {
+            "franchise_id": "vegas-vandals",
+            "display_name": "Vegas Vandals",
+            "short_name": "Vandals",
+            "path": "/teams/vegas-vandals/",
+            "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
+            "score": 82.16
+          },
+          "team_b": {
+            "franchise_id": "turnbull-acs",
+            "display_name": "Turnbull AC's",
+            "short_name": "Turnbull",
+            "path": "/teams/turnbull-acs/",
+            "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
+            "score": 81.82
+          },
+          "historical_team_a": "Broncos Country Let’s Ride",
+          "historical_team_b": "Turnbull AC’s",
+          "team_a_score": 82.16,
+          "team_b_score": 81.82,
+          "combined_score": 163.98,
+          "margin": 0.34,
+          "winner": {
+            "franchise_id": "vegas-vandals",
+            "display_name": "Vegas Vandals",
+            "short_name": "Vandals",
+            "path": "/teams/vegas-vandals/",
+            "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg"
+          },
+          "loser": {
+            "franchise_id": "turnbull-acs",
+            "display_name": "Turnbull AC's",
+            "short_name": "Turnbull",
+            "path": "/teams/turnbull-acs/",
+            "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg"
+          },
+          "winner_score": 82.16,
+          "loser_score": 81.82
+        },
+        "longest_winning_streak": {
+          "franchise_id": "vegas-vandals",
+          "display_name": "Vegas Vandals",
+          "short_name": "Vandals",
+          "path": "/teams/vegas-vandals/",
+          "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
+          "games": 4,
+          "start_season": 2023,
+          "start_week": 2,
+          "end_season": 2023,
+          "end_week": 5,
           "rank": 9
         },
+        "playoff_record": null,
+        "head_to_head_available": true
+      }
+    },
+    {
+      "franchise_id": "buffalo-bravado",
+      "display_name": "Buffalo Bravado",
+      "short_name": "Bravado",
+      "path": "/teams/buffalo-bravado/",
+      "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+      "season_history": {
+        "coverage": {
+          "class": "season_level",
+          "label": "Verified 2021–2025",
+          "start_season": 2021,
+          "end_season": 2025,
+          "source_years": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+          ],
+          "source_files": [
+            "_data/generated/history/2021/standings.json",
+            "_data/generated/history/2022/standings.json",
+            "_data/generated/history/2023/standings.json",
+            "_data/generated/history/2024/standings.json",
+            "_data/generated/history/2025/standings.json",
+            "_data/champions.yml",
+            "_data/generated/history/2025/playoffs.json"
+          ]
+        },
+        "seasons_represented": [
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "season_count": 4,
+        "wins": 17,
+        "losses": 35,
+        "ties": 1,
+        "points_for": 5648.54,
+        "points_against": 6213.94,
+        "average_final_rank": 8.75,
+        "championships": 0,
+        "seasons": [
+          {
+            "season": 2022,
+            "historical_team_name": "Dilly Dilly",
+            "rank": 12,
+            "wins": 4,
+            "losses": 9,
+            "ties": 1,
+            "points_for": 1430.22,
+            "points_against": 1659.0,
+            "playoff_seed": null,
+            "playoff_finish": null
+          },
+          {
+            "season": 2023,
+            "historical_team_name": "Buffalo Bravados",
+            "rank": 7,
+            "wins": 3,
+            "losses": 10,
+            "ties": 0,
+            "points_for": 1451.88,
+            "points_against": 1609.8,
+            "playoff_seed": null,
+            "playoff_finish": null
+          },
+          {
+            "season": 2024,
+            "historical_team_name": "Buffalo Bravados",
+            "rank": 7,
+            "wins": 4,
+            "losses": 9,
+            "ties": 0,
+            "points_for": 1272.84,
+            "points_against": 1519.2,
+            "playoff_seed": null,
+            "playoff_finish": null
+          },
+          {
+            "season": 2025,
+            "historical_team_name": "Buffalo Bravados",
+            "rank": 9,
+            "wins": 6,
+            "losses": 7,
+            "ties": 0,
+            "points_for": 1493.6,
+            "points_against": 1425.94,
+            "playoff_seed": null,
+            "playoff_finish": null
+          }
+        ]
+      },
+      "weekly_performance": {
+        "coverage": {
+          "class": "weekly_derived",
+          "label": "Verified 2022–2025",
+          "start_season": 2022,
+          "end_season": 2025,
+          "source_years": [
+            2022,
+            2023,
+            2024,
+            2025
+          ],
+          "source_files": [
+            "_data/generated/history/2022/weeks.json",
+            "_data/generated/history/2023/weeks.json",
+            "_data/generated/history/2024/weeks.json",
+            "_data/generated/history/2025/weeks.json"
+          ]
+        },
+        "games": 61,
+        "wins": 24,
+        "losses": 36,
+        "ties": 1,
+        "win_percentage": 0.401639,
+        "points_for": 6624.56,
+        "points_against": 7083.04,
+        "average_score": 108.599,
+        "highest_score": 170.82,
+        "lowest_score": 66.26,
+        "biggest_win": {
+          "matchup_id": "2025-w11-04-05",
+          "season": 2025,
+          "week": 11,
+          "game_type": "regular_season",
+          "playoff_round": null,
+          "tie": false,
+          "team_a": {
+            "franchise_id": "buffalo-bravado",
+            "display_name": "Buffalo Bravado",
+            "short_name": "Bravado",
+            "path": "/teams/buffalo-bravado/",
+            "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+            "score": 152.48
+          },
+          "team_b": {
+            "franchise_id": "crazy-wazs-team",
+            "display_name": "Crazy Waz's Team",
+            "short_name": "Crazy Waz",
+            "path": "/teams/crazy-wazs-team/",
+            "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
+            "score": 93.52
+          },
+          "historical_team_a": "Buffalo Bravados",
+          "historical_team_b": "Chris's Crazy Team",
+          "team_a_score": 152.48,
+          "team_b_score": 93.52,
+          "combined_score": 246.0,
+          "margin": 58.96,
+          "winner": {
+            "franchise_id": "buffalo-bravado",
+            "display_name": "Buffalo Bravado",
+            "short_name": "Bravado",
+            "path": "/teams/buffalo-bravado/",
+            "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg"
+          },
+          "loser": {
+            "franchise_id": "crazy-wazs-team",
+            "display_name": "Crazy Waz's Team",
+            "short_name": "Crazy Waz",
+            "path": "/teams/crazy-wazs-team/",
+            "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg"
+          },
+          "winner_score": 152.48,
+          "loser_score": 93.52
+        },
+        "closest_win": {
+          "matchup_id": "2024-w14-04-06",
+          "season": 2024,
+          "week": 14,
+          "game_type": "postseason_unclassified",
+          "playoff_round": null,
+          "tie": false,
+          "team_a": {
+            "franchise_id": "vegas-vandals",
+            "display_name": "Vegas Vandals",
+            "short_name": "Vandals",
+            "path": "/teams/vegas-vandals/",
+            "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
+            "score": 90.92
+          },
+          "team_b": {
+            "franchise_id": "buffalo-bravado",
+            "display_name": "Buffalo Bravado",
+            "short_name": "Bravado",
+            "path": "/teams/buffalo-bravado/",
+            "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+            "score": 96.6
+          },
+          "historical_team_a": "Vegas Vandals",
+          "historical_team_b": "Buffalo Bravados",
+          "team_a_score": 90.92,
+          "team_b_score": 96.6,
+          "combined_score": 187.52,
+          "margin": 5.68,
+          "winner": {
+            "franchise_id": "buffalo-bravado",
+            "display_name": "Buffalo Bravado",
+            "short_name": "Bravado",
+            "path": "/teams/buffalo-bravado/",
+            "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg"
+          },
+          "loser": {
+            "franchise_id": "vegas-vandals",
+            "display_name": "Vegas Vandals",
+            "short_name": "Vandals",
+            "path": "/teams/vegas-vandals/",
+            "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg"
+          },
+          "winner_score": 96.6,
+          "loser_score": 90.92
+        },
+        "longest_winning_streak": {
+          "franchise_id": "buffalo-bravado",
+          "display_name": "Buffalo Bravado",
+          "short_name": "Bravado",
+          "path": "/teams/buffalo-bravado/",
+          "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+          "games": 3,
+          "start_season": 2025,
+          "start_week": 9,
+          "end_season": 2025,
+          "end_week": 11,
+          "rank": 11
+        },
+        "playoff_record": null,
         "head_to_head_available": true
       }
     },
@@ -2991,953 +3779,9 @@
           "start_week": 1,
           "end_season": 2023,
           "end_week": 3,
-          "rank": 14
+          "rank": 13
         },
         "playoff_record": null,
-        "head_to_head_available": true
-      }
-    },
-    {
-      "franchise_id": "quahog-stripes",
-      "display_name": "Quahog Stripes",
-      "short_name": "Stripes",
-      "path": "/retired/quahog-stripes/",
-      "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
-      "season_history": {
-        "coverage": {
-          "class": "season_level",
-          "label": "Verified 2021–2025",
-          "start_season": 2021,
-          "end_season": 2025,
-          "source_years": [
-            2021,
-            2022,
-            2023,
-            2024,
-            2025
-          ],
-          "source_files": [
-            "_data/generated/history/2021/standings.json",
-            "_data/generated/history/2022/standings.json",
-            "_data/generated/history/2023/standings.json",
-            "_data/generated/history/2024/standings.json",
-            "_data/generated/history/2025/standings.json",
-            "_data/champions.yml",
-            "_data/generated/history/2025/playoffs.json"
-          ]
-        },
-        "seasons_represented": [
-          2021,
-          2022
-        ],
-        "season_count": 2,
-        "wins": 14,
-        "losses": 14,
-        "ties": 0,
-        "points_for": 3106.04,
-        "points_against": 3152.7,
-        "average_final_rank": 6.5,
-        "championships": 0,
-        "seasons": [
-          {
-            "season": 2021,
-            "historical_team_name": "Quahog Stripes",
-            "rank": 9,
-            "wins": 5,
-            "losses": 9,
-            "ties": 0,
-            "points_for": 1574.26,
-            "points_against": 1701.64,
-            "playoff_seed": null,
-            "playoff_finish": null
-          },
-          {
-            "season": 2022,
-            "historical_team_name": "Quahog Stripes",
-            "rank": 4,
-            "wins": 9,
-            "losses": 5,
-            "ties": 0,
-            "points_for": 1531.78,
-            "points_against": 1451.06,
-            "playoff_seed": 4,
-            "playoff_finish": null
-          }
-        ]
-      },
-      "weekly_performance": {
-        "coverage": {
-          "class": "weekly_derived",
-          "label": "Verified 2022–2025",
-          "start_season": 2022,
-          "end_season": 2025,
-          "source_years": [
-            2022,
-            2023,
-            2024,
-            2025
-          ],
-          "source_files": [
-            "_data/generated/history/2022/weeks.json",
-            "_data/generated/history/2023/weeks.json",
-            "_data/generated/history/2024/weeks.json",
-            "_data/generated/history/2025/weeks.json"
-          ]
-        },
-        "games": 16,
-        "wins": 9,
-        "losses": 7,
-        "ties": 0,
-        "win_percentage": 0.5625,
-        "points_for": 1690.66,
-        "points_against": 1749.72,
-        "average_score": 105.666,
-        "highest_score": 157.56,
-        "lowest_score": 74.64,
-        "biggest_win": {
-          "matchup_id": "2022-w09-02-06",
-          "season": 2022,
-          "week": 9,
-          "game_type": "regular_season",
-          "playoff_round": null,
-          "tie": false,
-          "team_a": {
-            "franchise_id": "albany-kneelers",
-            "display_name": "Albany Kneelers",
-            "short_name": "Kneelers",
-            "path": "/teams/albany-kneelers/",
-            "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
-            "score": 70.02
-          },
-          "team_b": {
-            "franchise_id": "quahog-stripes",
-            "display_name": "Quahog Stripes",
-            "short_name": "Stripes",
-            "path": "/retired/quahog-stripes/",
-            "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
-            "score": 106.84
-          },
-          "historical_team_a": "Albany Kneelers",
-          "historical_team_b": "Quahog Stripes",
-          "team_a_score": 70.02,
-          "team_b_score": 106.84,
-          "combined_score": 176.86,
-          "margin": 36.82,
-          "winner": {
-            "franchise_id": "quahog-stripes",
-            "display_name": "Quahog Stripes",
-            "short_name": "Stripes",
-            "path": "/retired/quahog-stripes/",
-            "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg"
-          },
-          "loser": {
-            "franchise_id": "albany-kneelers",
-            "display_name": "Albany Kneelers",
-            "short_name": "Kneelers",
-            "path": "/teams/albany-kneelers/",
-            "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
-          },
-          "winner_score": 106.84,
-          "loser_score": 70.02
-        },
-        "closest_win": {
-          "matchup_id": "2022-w06-06-08",
-          "season": 2022,
-          "week": 6,
-          "game_type": "regular_season",
-          "playoff_round": null,
-          "tie": false,
-          "team_a": {
-            "franchise_id": "quahog-stripes",
-            "display_name": "Quahog Stripes",
-            "short_name": "Stripes",
-            "path": "/retired/quahog-stripes/",
-            "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
-            "score": 74.64
-          },
-          "team_b": {
-            "franchise_id": "savage-huns",
-            "display_name": "The Savage Huns",
-            "short_name": "Savage Huns",
-            "path": "/retired/the-savage-huns/",
-            "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
-            "score": 72.96
-          },
-          "historical_team_a": "Quahog Stripes",
-          "historical_team_b": "THE SAVAGE HUNS",
-          "team_a_score": 74.64,
-          "team_b_score": 72.96,
-          "combined_score": 147.6,
-          "margin": 1.68,
-          "winner": {
-            "franchise_id": "quahog-stripes",
-            "display_name": "Quahog Stripes",
-            "short_name": "Stripes",
-            "path": "/retired/quahog-stripes/",
-            "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg"
-          },
-          "loser": {
-            "franchise_id": "savage-huns",
-            "display_name": "The Savage Huns",
-            "short_name": "Savage Huns",
-            "path": "/retired/the-savage-huns/",
-            "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg"
-          },
-          "winner_score": 74.64,
-          "loser_score": 72.96
-        },
-        "longest_winning_streak": {
-          "franchise_id": "quahog-stripes",
-          "display_name": "Quahog Stripes",
-          "short_name": "Stripes",
-          "path": "/retired/quahog-stripes/",
-          "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
-          "games": 5,
-          "start_season": 2022,
-          "start_week": 9,
-          "end_season": 2022,
-          "end_week": 13,
-          "rank": 6
-        },
-        "playoff_record": {
-          "franchise_id": "quahog-stripes",
-          "display_name": "Quahog Stripes",
-          "short_name": "Stripes",
-          "path": "/retired/quahog-stripes/",
-          "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
-          "playoff_games": 1,
-          "playoff_wins": 0,
-          "playoff_losses": 1,
-          "championship_appearances": 0,
-          "championships": 0,
-          "largest_playoff_win": null,
-          "closest_playoff_win": null,
-          "highest_playoff_score": 75.76,
-          "rank": 8
-        },
-        "head_to_head_available": true
-      }
-    },
-    {
-      "franchise_id": "buffalo-bravado",
-      "display_name": "Buffalo Bravado",
-      "short_name": "Bravado",
-      "path": "/teams/buffalo-bravado/",
-      "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
-      "season_history": {
-        "coverage": {
-          "class": "season_level",
-          "label": "Verified 2021–2025",
-          "start_season": 2021,
-          "end_season": 2025,
-          "source_years": [
-            2021,
-            2022,
-            2023,
-            2024,
-            2025
-          ],
-          "source_files": [
-            "_data/generated/history/2021/standings.json",
-            "_data/generated/history/2022/standings.json",
-            "_data/generated/history/2023/standings.json",
-            "_data/generated/history/2024/standings.json",
-            "_data/generated/history/2025/standings.json",
-            "_data/champions.yml",
-            "_data/generated/history/2025/playoffs.json"
-          ]
-        },
-        "seasons_represented": [
-          2023,
-          2024,
-          2025
-        ],
-        "season_count": 3,
-        "wins": 13,
-        "losses": 26,
-        "ties": 0,
-        "points_for": 4218.32,
-        "points_against": 4554.94,
-        "average_final_rank": 7.667,
-        "championships": 0,
-        "seasons": [
-          {
-            "season": 2023,
-            "historical_team_name": "Buffalo Bravados",
-            "rank": 7,
-            "wins": 3,
-            "losses": 10,
-            "ties": 0,
-            "points_for": 1451.88,
-            "points_against": 1609.8,
-            "playoff_seed": null,
-            "playoff_finish": null
-          },
-          {
-            "season": 2024,
-            "historical_team_name": "Buffalo Bravados",
-            "rank": 7,
-            "wins": 4,
-            "losses": 9,
-            "ties": 0,
-            "points_for": 1272.84,
-            "points_against": 1519.2,
-            "playoff_seed": null,
-            "playoff_finish": null
-          },
-          {
-            "season": 2025,
-            "historical_team_name": "Buffalo Bravados",
-            "rank": 9,
-            "wins": 6,
-            "losses": 7,
-            "ties": 0,
-            "points_for": 1493.6,
-            "points_against": 1425.94,
-            "playoff_seed": null,
-            "playoff_finish": null
-          }
-        ]
-      },
-      "weekly_performance": {
-        "coverage": {
-          "class": "weekly_derived",
-          "label": "Verified 2022–2025",
-          "start_season": 2022,
-          "end_season": 2025,
-          "source_years": [
-            2022,
-            2023,
-            2024,
-            2025
-          ],
-          "source_files": [
-            "_data/generated/history/2022/weeks.json",
-            "_data/generated/history/2023/weeks.json",
-            "_data/generated/history/2024/weeks.json",
-            "_data/generated/history/2025/weeks.json"
-          ]
-        },
-        "games": 47,
-        "wins": 20,
-        "losses": 27,
-        "ties": 0,
-        "win_percentage": 0.425532,
-        "points_for": 5194.34,
-        "points_against": 5424.04,
-        "average_score": 110.518,
-        "highest_score": 170.82,
-        "lowest_score": 66.26,
-        "biggest_win": {
-          "matchup_id": "2025-w11-04-05",
-          "season": 2025,
-          "week": 11,
-          "game_type": "regular_season",
-          "playoff_round": null,
-          "tie": false,
-          "team_a": {
-            "franchise_id": "buffalo-bravado",
-            "display_name": "Buffalo Bravado",
-            "short_name": "Bravado",
-            "path": "/teams/buffalo-bravado/",
-            "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
-            "score": 152.48
-          },
-          "team_b": {
-            "franchise_id": "crazy-wazs-team",
-            "display_name": "Crazy Waz's Team",
-            "short_name": "Crazy Waz",
-            "path": "/teams/crazy-wazs-team/",
-            "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
-            "score": 93.52
-          },
-          "historical_team_a": "Buffalo Bravados",
-          "historical_team_b": "Chris's Crazy Team",
-          "team_a_score": 152.48,
-          "team_b_score": 93.52,
-          "combined_score": 246.0,
-          "margin": 58.96,
-          "winner": {
-            "franchise_id": "buffalo-bravado",
-            "display_name": "Buffalo Bravado",
-            "short_name": "Bravado",
-            "path": "/teams/buffalo-bravado/",
-            "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg"
-          },
-          "loser": {
-            "franchise_id": "crazy-wazs-team",
-            "display_name": "Crazy Waz's Team",
-            "short_name": "Crazy Waz",
-            "path": "/teams/crazy-wazs-team/",
-            "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg"
-          },
-          "winner_score": 152.48,
-          "loser_score": 93.52
-        },
-        "closest_win": {
-          "matchup_id": "2024-w14-04-06",
-          "season": 2024,
-          "week": 14,
-          "game_type": "postseason_unclassified",
-          "playoff_round": null,
-          "tie": false,
-          "team_a": {
-            "franchise_id": "vegas-vandals",
-            "display_name": "Vegas Vandals",
-            "short_name": "Vandals",
-            "path": "/teams/vegas-vandals/",
-            "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
-            "score": 90.92
-          },
-          "team_b": {
-            "franchise_id": "buffalo-bravado",
-            "display_name": "Buffalo Bravado",
-            "short_name": "Bravado",
-            "path": "/teams/buffalo-bravado/",
-            "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
-            "score": 96.6
-          },
-          "historical_team_a": "Vegas Vandals",
-          "historical_team_b": "Buffalo Bravados",
-          "team_a_score": 90.92,
-          "team_b_score": 96.6,
-          "combined_score": 187.52,
-          "margin": 5.68,
-          "winner": {
-            "franchise_id": "buffalo-bravado",
-            "display_name": "Buffalo Bravado",
-            "short_name": "Bravado",
-            "path": "/teams/buffalo-bravado/",
-            "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg"
-          },
-          "loser": {
-            "franchise_id": "vegas-vandals",
-            "display_name": "Vegas Vandals",
-            "short_name": "Vandals",
-            "path": "/teams/vegas-vandals/",
-            "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg"
-          },
-          "winner_score": 96.6,
-          "loser_score": 90.92
-        },
-        "longest_winning_streak": {
-          "franchise_id": "buffalo-bravado",
-          "display_name": "Buffalo Bravado",
-          "short_name": "Bravado",
-          "path": "/teams/buffalo-bravado/",
-          "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
-          "games": 3,
-          "start_season": 2025,
-          "start_week": 9,
-          "end_season": 2025,
-          "end_week": 11,
-          "rank": 12
-        },
-        "playoff_record": null,
-        "head_to_head_available": true
-      }
-    },
-    {
-      "franchise_id": "vegas-vandals",
-      "display_name": "Vegas Vandals",
-      "short_name": "Vandals",
-      "path": "/teams/vegas-vandals/",
-      "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
-      "season_history": {
-        "coverage": {
-          "class": "season_level",
-          "label": "Verified 2021–2025",
-          "start_season": 2021,
-          "end_season": 2025,
-          "source_years": [
-            2021,
-            2022,
-            2023,
-            2024,
-            2025
-          ],
-          "source_files": [
-            "_data/generated/history/2021/standings.json",
-            "_data/generated/history/2022/standings.json",
-            "_data/generated/history/2023/standings.json",
-            "_data/generated/history/2024/standings.json",
-            "_data/generated/history/2025/standings.json",
-            "_data/champions.yml",
-            "_data/generated/history/2025/playoffs.json"
-          ]
-        },
-        "seasons_represented": [
-          2024,
-          2025
-        ],
-        "season_count": 2,
-        "wins": 9,
-        "losses": 17,
-        "ties": 0,
-        "points_for": 2661.8,
-        "points_against": 3020.66,
-        "average_final_rank": 10.5,
-        "championships": 0,
-        "seasons": [
-          {
-            "season": 2024,
-            "historical_team_name": "Vegas Vandals",
-            "rank": 11,
-            "wins": 3,
-            "losses": 10,
-            "ties": 0,
-            "points_for": 1278.54,
-            "points_against": 1607.18,
-            "playoff_seed": null,
-            "playoff_finish": null
-          },
-          {
-            "season": 2025,
-            "historical_team_name": "Vegas Vandals",
-            "rank": 10,
-            "wins": 6,
-            "losses": 7,
-            "ties": 0,
-            "points_for": 1383.26,
-            "points_against": 1413.48,
-            "playoff_seed": null,
-            "playoff_finish": null
-          }
-        ]
-      },
-      "weekly_performance": {
-        "coverage": {
-          "class": "weekly_derived",
-          "label": "Verified 2022–2025",
-          "start_season": 2022,
-          "end_season": 2025,
-          "source_years": [
-            2022,
-            2023,
-            2024,
-            2025
-          ],
-          "source_files": [
-            "_data/generated/history/2022/weeks.json",
-            "_data/generated/history/2023/weeks.json",
-            "_data/generated/history/2024/weeks.json",
-            "_data/generated/history/2025/weeks.json"
-          ]
-        },
-        "games": 31,
-        "wins": 11,
-        "losses": 20,
-        "ties": 0,
-        "win_percentage": 0.354839,
-        "points_for": 3127.38,
-        "points_against": 3498.18,
-        "average_score": 100.883,
-        "highest_score": 139.52,
-        "lowest_score": 68.96,
-        "biggest_win": {
-          "matchup_id": "2024-w04-01-04",
-          "season": 2024,
-          "week": 4,
-          "game_type": "regular_season",
-          "playoff_round": null,
-          "tie": false,
-          "team_a": {
-            "franchise_id": "van-cortlant-rangers",
-            "display_name": "Van Cortlant Rangers",
-            "short_name": "Rangers",
-            "path": "/teams/van-cortlant-rangers/",
-            "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
-            "score": 76.7
-          },
-          "team_b": {
-            "franchise_id": "vegas-vandals",
-            "display_name": "Vegas Vandals",
-            "short_name": "Vandals",
-            "path": "/teams/vegas-vandals/",
-            "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
-            "score": 114.28
-          },
-          "historical_team_a": "Van Cortlant Rangers",
-          "historical_team_b": "Vegas Vandals",
-          "team_a_score": 76.7,
-          "team_b_score": 114.28,
-          "combined_score": 190.98,
-          "margin": 37.58,
-          "winner": {
-            "franchise_id": "vegas-vandals",
-            "display_name": "Vegas Vandals",
-            "short_name": "Vandals",
-            "path": "/teams/vegas-vandals/",
-            "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg"
-          },
-          "loser": {
-            "franchise_id": "van-cortlant-rangers",
-            "display_name": "Van Cortlant Rangers",
-            "short_name": "Rangers",
-            "path": "/teams/van-cortlant-rangers/",
-            "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg"
-          },
-          "winner_score": 114.28,
-          "loser_score": 76.7
-        },
-        "closest_win": {
-          "matchup_id": "2025-w08-09-11",
-          "season": 2025,
-          "week": 8,
-          "game_type": "regular_season",
-          "playoff_round": null,
-          "tie": false,
-          "team_a": {
-            "franchise_id": "baseball-furies",
-            "display_name": "The Baseball Furies",
-            "short_name": "Furies",
-            "path": "/teams/baseball-furies/",
-            "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
-            "score": 108.86
-          },
-          "team_b": {
-            "franchise_id": "vegas-vandals",
-            "display_name": "Vegas Vandals",
-            "short_name": "Vandals",
-            "path": "/teams/vegas-vandals/",
-            "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
-            "score": 110.06
-          },
-          "historical_team_a": "The Baseball Furies",
-          "historical_team_b": "Vegas Vandals",
-          "team_a_score": 108.86,
-          "team_b_score": 110.06,
-          "combined_score": 218.92,
-          "margin": 1.2,
-          "winner": {
-            "franchise_id": "vegas-vandals",
-            "display_name": "Vegas Vandals",
-            "short_name": "Vandals",
-            "path": "/teams/vegas-vandals/",
-            "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg"
-          },
-          "loser": {
-            "franchise_id": "baseball-furies",
-            "display_name": "The Baseball Furies",
-            "short_name": "Furies",
-            "path": "/teams/baseball-furies/",
-            "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg"
-          },
-          "winner_score": 110.06,
-          "loser_score": 108.86
-        },
-        "longest_winning_streak": {
-          "franchise_id": "vegas-vandals",
-          "display_name": "Vegas Vandals",
-          "short_name": "Vandals",
-          "path": "/teams/vegas-vandals/",
-          "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
-          "games": 4,
-          "start_season": 2025,
-          "start_week": 10,
-          "end_season": 2025,
-          "end_week": 13,
-          "rank": 10
-        },
-        "playoff_record": null,
-        "head_to_head_available": true
-      }
-    },
-    {
-      "franchise_id": "new-jersey-giants",
-      "display_name": "New Jersey Giants",
-      "short_name": "Giants",
-      "path": "/teams/new-jersey-giants/",
-      "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
-      "season_history": {
-        "coverage": {
-          "class": "season_level",
-          "label": "Verified 2021–2025",
-          "start_season": 2021,
-          "end_season": 2025,
-          "source_years": [
-            2021,
-            2022,
-            2023,
-            2024,
-            2025
-          ],
-          "source_files": [
-            "_data/generated/history/2021/standings.json",
-            "_data/generated/history/2022/standings.json",
-            "_data/generated/history/2023/standings.json",
-            "_data/generated/history/2024/standings.json",
-            "_data/generated/history/2025/standings.json",
-            "_data/champions.yml",
-            "_data/generated/history/2025/playoffs.json"
-          ]
-        },
-        "seasons_represented": [
-          2025
-        ],
-        "season_count": 1,
-        "wins": 7,
-        "losses": 6,
-        "ties": 0,
-        "points_for": 1529.78,
-        "points_against": 1517.68,
-        "average_final_rank": 4.0,
-        "championships": 0,
-        "seasons": [
-          {
-            "season": 2025,
-            "historical_team_name": "New Jersey Giants",
-            "rank": 4,
-            "wins": 7,
-            "losses": 6,
-            "ties": 0,
-            "points_for": 1529.78,
-            "points_against": 1517.68,
-            "playoff_seed": 4,
-            "playoff_finish": null
-          }
-        ]
-      },
-      "weekly_performance": {
-        "coverage": {
-          "class": "weekly_derived",
-          "label": "Verified 2022–2025",
-          "start_season": 2022,
-          "end_season": 2025,
-          "source_years": [
-            2022,
-            2023,
-            2024,
-            2025
-          ],
-          "source_files": [
-            "_data/generated/history/2022/weeks.json",
-            "_data/generated/history/2023/weeks.json",
-            "_data/generated/history/2024/weeks.json",
-            "_data/generated/history/2025/weeks.json"
-          ]
-        },
-        "games": 16,
-        "wins": 8,
-        "losses": 8,
-        "ties": 0,
-        "win_percentage": 0.5,
-        "points_for": 1893.52,
-        "points_against": 1934.76,
-        "average_score": 118.345,
-        "highest_score": 173.66,
-        "lowest_score": 67.66,
-        "biggest_win": {
-          "matchup_id": "2025-w07-06-12",
-          "season": 2025,
-          "week": 7,
-          "game_type": "regular_season",
-          "playoff_round": null,
-          "tie": false,
-          "team_a": {
-            "franchise_id": "greendale-human-beings",
-            "display_name": "Greendale Human Beings",
-            "short_name": "Human Beings",
-            "path": "/teams/greendale-human-beings/",
-            "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
-            "score": 131.66
-          },
-          "team_b": {
-            "franchise_id": "new-jersey-giants",
-            "display_name": "New Jersey Giants",
-            "short_name": "Giants",
-            "path": "/teams/new-jersey-giants/",
-            "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
-            "score": 173.66
-          },
-          "historical_team_a": "Greendale Human Beings",
-          "historical_team_b": "New Jersey Giants",
-          "team_a_score": 131.66,
-          "team_b_score": 173.66,
-          "combined_score": 305.32,
-          "margin": 42.0,
-          "winner": {
-            "franchise_id": "new-jersey-giants",
-            "display_name": "New Jersey Giants",
-            "short_name": "Giants",
-            "path": "/teams/new-jersey-giants/",
-            "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
-          },
-          "loser": {
-            "franchise_id": "greendale-human-beings",
-            "display_name": "Greendale Human Beings",
-            "short_name": "Human Beings",
-            "path": "/teams/greendale-human-beings/",
-            "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg"
-          },
-          "winner_score": 173.66,
-          "loser_score": 131.66
-        },
-        "closest_win": {
-          "matchup_id": "2025-w02-01-12",
-          "season": 2025,
-          "week": 2,
-          "game_type": "regular_season",
-          "playoff_round": null,
-          "tie": false,
-          "team_a": {
-            "franchise_id": "van-cortlant-rangers",
-            "display_name": "Van Cortlant Rangers",
-            "short_name": "Rangers",
-            "path": "/teams/van-cortlant-rangers/",
-            "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
-            "score": 102.04
-          },
-          "team_b": {
-            "franchise_id": "new-jersey-giants",
-            "display_name": "New Jersey Giants",
-            "short_name": "Giants",
-            "path": "/teams/new-jersey-giants/",
-            "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
-            "score": 108.84
-          },
-          "historical_team_a": "Van Cortlant Rangers",
-          "historical_team_b": "New Jersey Giants",
-          "team_a_score": 102.04,
-          "team_b_score": 108.84,
-          "combined_score": 210.88,
-          "margin": 6.8,
-          "winner": {
-            "franchise_id": "new-jersey-giants",
-            "display_name": "New Jersey Giants",
-            "short_name": "Giants",
-            "path": "/teams/new-jersey-giants/",
-            "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
-          },
-          "loser": {
-            "franchise_id": "van-cortlant-rangers",
-            "display_name": "Van Cortlant Rangers",
-            "short_name": "Rangers",
-            "path": "/teams/van-cortlant-rangers/",
-            "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg"
-          },
-          "winner_score": 108.84,
-          "loser_score": 102.04
-        },
-        "longest_winning_streak": {
-          "franchise_id": "new-jersey-giants",
-          "display_name": "New Jersey Giants",
-          "short_name": "Giants",
-          "path": "/teams/new-jersey-giants/",
-          "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
-          "games": 6,
-          "start_season": 2025,
-          "start_week": 7,
-          "end_season": 2025,
-          "end_week": 12,
-          "rank": 5
-        },
-        "playoff_record": {
-          "franchise_id": "new-jersey-giants",
-          "display_name": "New Jersey Giants",
-          "short_name": "Giants",
-          "path": "/teams/new-jersey-giants/",
-          "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
-          "playoff_games": 2,
-          "playoff_wins": 1,
-          "playoff_losses": 1,
-          "championship_appearances": 0,
-          "championships": 0,
-          "largest_playoff_win": {
-            "matchup_id": "2025-w14-01-12",
-            "season": 2025,
-            "week": 14,
-            "game_type": "championship_playoff",
-            "playoff_round": "Quarterfinal",
-            "tie": false,
-            "team_a": {
-              "franchise_id": "van-cortlant-rangers",
-              "display_name": "Van Cortlant Rangers",
-              "short_name": "Rangers",
-              "path": "/teams/van-cortlant-rangers/",
-              "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
-              "score": 113.44
-            },
-            "team_b": {
-              "franchise_id": "new-jersey-giants",
-              "display_name": "New Jersey Giants",
-              "short_name": "Giants",
-              "path": "/teams/new-jersey-giants/",
-              "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
-              "score": 125.96
-            },
-            "historical_team_a": "Van Cortlant Rangers",
-            "historical_team_b": "New Jersey Giants",
-            "team_a_score": 113.44,
-            "team_b_score": 125.96,
-            "combined_score": 239.4,
-            "margin": 12.52,
-            "winner": {
-              "franchise_id": "new-jersey-giants",
-              "display_name": "New Jersey Giants",
-              "short_name": "Giants",
-              "path": "/teams/new-jersey-giants/",
-              "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
-            },
-            "loser": {
-              "franchise_id": "van-cortlant-rangers",
-              "display_name": "Van Cortlant Rangers",
-              "short_name": "Rangers",
-              "path": "/teams/van-cortlant-rangers/",
-              "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg"
-            },
-            "winner_score": 125.96,
-            "loser_score": 113.44
-          },
-          "closest_playoff_win": {
-            "matchup_id": "2025-w14-01-12",
-            "season": 2025,
-            "week": 14,
-            "game_type": "championship_playoff",
-            "playoff_round": "Quarterfinal",
-            "tie": false,
-            "team_a": {
-              "franchise_id": "van-cortlant-rangers",
-              "display_name": "Van Cortlant Rangers",
-              "short_name": "Rangers",
-              "path": "/teams/van-cortlant-rangers/",
-              "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
-              "score": 113.44
-            },
-            "team_b": {
-              "franchise_id": "new-jersey-giants",
-              "display_name": "New Jersey Giants",
-              "short_name": "Giants",
-              "path": "/teams/new-jersey-giants/",
-              "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
-              "score": 125.96
-            },
-            "historical_team_a": "Van Cortlant Rangers",
-            "historical_team_b": "New Jersey Giants",
-            "team_a_score": 113.44,
-            "team_b_score": 125.96,
-            "combined_score": 239.4,
-            "margin": 12.52,
-            "winner": {
-              "franchise_id": "new-jersey-giants",
-              "display_name": "New Jersey Giants",
-              "short_name": "Giants",
-              "path": "/teams/new-jersey-giants/",
-              "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
-            },
-            "loser": {
-              "franchise_id": "van-cortlant-rangers",
-              "display_name": "Van Cortlant Rangers",
-              "short_name": "Rangers",
-              "path": "/teams/van-cortlant-rangers/",
-              "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg"
-            },
-            "winner_score": 125.96,
-            "loser_score": 113.44
-          },
-          "highest_playoff_score": 134.52,
-          "rank": 6
-        },
         "head_to_head_available": true
       }
     }

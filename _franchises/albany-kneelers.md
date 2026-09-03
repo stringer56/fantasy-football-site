@@ -1,5 +1,5 @@
 ---
-title: Albany Kneelers
+title: Albany Redskins
 franchise_id: albany-kneelers
-description: Albany Kneelers franchise profile, owner, identity, and league story.
+description: Albany Redskins franchise profile, owner, identity, and league story.
 ---

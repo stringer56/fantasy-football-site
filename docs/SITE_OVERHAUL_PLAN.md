@@ -196,9 +196,9 @@ The existing Google Site contains these migration sources:
   - Turnbull AC's
   - Van Cortlant Rangers
   - Vegas Vandals
-- Retired Teams index and two retired franchise pages:
-  - Quahog Stripes
-  - The Savage Huns
+- Franchise Archive index with one retired franchise and one preserved former identity:
+  - Quahog Stripes (2021–2022 identity of New Jersey Giants)
+  - The Savage Huns (retired franchise)
 - League History hub with:
   - Past champions for 2021–2024
   - Final standings for 2021–2024
@@ -672,7 +672,7 @@ Milestone 2 exit criteria:
 
 ### Milestone 4 — Franchise content and asset migration
 
-- Import owners/franchises, stable IDs, aliases, 12 active franchises, and 2 retired franchises.
+- Import owners/franchises, stable IDs, aliases, 12 active franchises, one retired franchise, and preserved historical identities.
 - Export and optimize approved logos, helmets, stadium images, and title media.
 - Add franchise collection/layout and active/retired indexes.
 - Complete editorial and accessibility review.

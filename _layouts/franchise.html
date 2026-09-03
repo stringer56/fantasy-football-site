@@ -46,6 +46,17 @@ layout: default
             </div>
           {% endif %}
 
+          {% if franchise.historical_identities and franchise.historical_identities.size > 0 %}
+            <div class="alias-block">
+              <h3>Historical identities</h3>
+              <ul class="rival-links">
+                {% for identity in franchise.historical_identities %}
+                  <li><a href="{{ identity.archive_path | relative_url }}">{{ identity.name }} ({{ identity.seasons | join: '–' }})</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+
           {% if franchise.rival_franchise_ids and franchise.rival_franchise_ids.size > 0 %}
             <div class="alias-block">
               <h3>League rivals</h3>

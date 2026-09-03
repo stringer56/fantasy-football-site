@@ -14,6 +14,7 @@ if str(SCRIPTS) not in sys.path:
 
 from discover_yahoo_history import (  # noqa: E402
     build_committed_baseline,
+    load_franchises,
     local_archive_coverage,
     sanitized_failure_status,
 )
@@ -180,22 +181,47 @@ class YahooHistoryDiscoveryTests(unittest.TestCase):
         self.assertEqual(len(mappings), 12)
         self.assertTrue(all(row["status"] == "verified" for row in mappings))
 
-    def test_public_history_team_mappings_do_not_guess_unknown_names(self):
+    def test_commissioner_confirmed_aliases_resolve_without_guessing_other_names(self):
         baseline = build_committed_baseline()
         season_2022 = next(row for row in baseline["seasons"] if row["season"] == 2022)
-        unresolved_2022 = {
-            row["yahoo_team_name"]
+        mapped_2022 = {
+            row["yahoo_team_name"]: row["candidate_franchise_id"]
             for row in season_2022["team_mappings"]
-            if row["status"] == "unresolved"
         }
-        self.assertEqual(unresolved_2022, {"Broncos Country Let’s Ride", "Dilly Dilly"})
+        self.assertEqual(mapped_2022["Broncos Country Let’s Ride"], "vegas-vandals")
+        self.assertEqual(mapped_2022["Dilly Dilly"], "buffalo-bravado")
+        self.assertTrue(all(row["status"] == "verified" for row in season_2022["team_mappings"]))
         season_2026 = next(row for row in baseline["seasons"] if row["season"] == 2026)
         albany = next(
             row for row in season_2026["team_mappings"]
             if row["yahoo_team_name"] == "Albany Redskins"
         )
-        self.assertEqual(albany["status"], "unresolved")
-        self.assertIsNone(albany["candidate_franchise_id"])
+        self.assertEqual(albany["status"], "verified")
+        self.assertEqual(albany["candidate_franchise_id"], "albany-kneelers")
+
+        season_2021 = next(row for row in baseline["seasons"] if row["season"] == 2021)
+        unresolved_2021 = {
+            row["yahoo_team_name"]
+            for row in season_2021["team_mappings"]
+            if row["status"] == "unresolved"
+        }
+        self.assertEqual(unresolved_2021, {"The Swagger Daggers", "Matthew's Optimal Team"})
+        mapped_2021 = {
+            row["yahoo_team_name"]: row["candidate_franchise_id"]
+            for row in season_2021["team_mappings"]
+        }
+        self.assertEqual(mapped_2021["Quahog Stripes"], "new-jersey-giants")
+
+        franchises = load_franchises()
+        new_jersey = next(
+            franchise for franchise in franchises
+            if franchise["franchise_id"] == "new-jersey-giants"
+        )
+        self.assertIn("Quahog Stripes", new_jersey["aliases"])
+        self.assertNotIn(
+            "quahog-stripes",
+            {franchise["franchise_id"] for franchise in franchises},
+        )
 
     def test_api_http_failures_are_sanitized(self):
         response = Mock(status_code=403, headers={"Content-Type": "application/json"})

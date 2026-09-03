@@ -35,8 +35,8 @@ the word “all-time” is not used for any generated category.
 
 | Category | Seasons | Sources | Coverage | Unresolved impact | Public calculation |
 |---|---|---|---|---|---|
-| Franchise wins, losses, ties, win percentage | 2021–2024 | `_data/seasons.yml`, `_data/franchises.yml` | PARTIAL | Five standings rows / four names cannot join to franchises | Yes, resolved rows only and explicitly labelled partial |
-| Franchise PF and PA | 2021–2024 | `_data/seasons.yml`, `_data/franchises.yml` | PARTIAL | Same unresolved rows; 2024 Turnbull PF/PA labels conflict between two source views | Yes, using the final-standings table with the conflict disclosed |
+| Franchise wins, losses, ties, win percentage | 2021–2024 | `_data/seasons.yml`, `_data/franchises.yml` | PARTIAL | Two 2021 standings rows cannot join to franchises | Yes, resolved rows only and explicitly labelled partial |
+| Franchise PF and PA | 2021–2024 | `_data/seasons.yml`, `_data/franchises.yml` | PARTIAL | Same two unresolved rows; 2024 Turnbull PF/PA labels conflict between two source views | Yes, using the final-standings table with the conflict disclosed |
 | Single-season wins, losses, ties, win percentage | 2021–2024 | `_data/seasons.yml` | COMPLETE | Historical names can remain unlinked without changing season values | Yes |
 | Single-season PF and PA | 2021–2024 | `_data/seasons.yml`, `docs/HISTORY_MIGRATION.md` | PARTIAL | Identity mapping does not affect values; 2024 Turnbull label conflict affects source confidence | Yes, labelled partial and sourced to final standings |
 | Championships | 2021–2024 | `_data/champions.yml` | COMPLETE | None; all champions resolve | Yes |
@@ -57,8 +57,8 @@ the word “all-time” is not used for any generated category.
 
 - Four verified season standings contain 46 rows and complete W–L–T, PF, and PA
   values for their historical team-season entries.
-- Forty-one standings rows resolve to stable franchise IDs. Five rows retain
-  four unresolved historical names and are never silently assigned.
+- Forty-four standings rows resolve to stable franchise IDs. Two 2021 rows retain
+  unresolved historical names and are never silently assigned.
 - All four champions and all eight finalist slots resolve to canonical franchises.
 - Sixteen playoff games have verified participants and winners. Only the four
   championships have scores; twelve non-final scores remain null.
@@ -93,6 +93,6 @@ verified season inputs without changing authentication.
 
 To expand the record book, import commissioner-approved weekly matchup exports,
 weekly active/bench roster scoring, franchise tenure dates, and mappings for the
-four unresolved historical identities. Each new source should be normalized to
+two unresolved historical identities. Each new source should be normalized to
 stable franchise IDs, retain year/week provenance, and pass the records validator
 before any coverage label is upgraded.

@@ -69,10 +69,10 @@ class HistoricalMetricsTests(unittest.TestCase):
         self.assertEqual(17, len(payload["games"]))
         self.assertTrue(all(item["game_type"] == "championship_playoff" and item["playoff_round"] for item in payload["games"]))
 
-    def test_unresolved_matchups_are_excluded_from_head_to_head(self) -> None:
+    def test_weekly_matchups_are_fully_resolved_after_confirmed_mappings(self) -> None:
         manifest = metrics.build_payloads()["manifest"]
-        self.assertEqual(42, manifest["counts"]["excluded_unresolved_matchups"])
-        self.assertEqual(86, manifest["counts"]["head_to_head_pairs"])
+        self.assertEqual(0, manifest["counts"]["excluded_unresolved_matchups"])
+        self.assertEqual(78, manifest["counts"]["head_to_head_pairs"])
 
     def test_2021_is_excluded_from_every_weekly_output(self) -> None:
         payloads = metrics.build_payloads()

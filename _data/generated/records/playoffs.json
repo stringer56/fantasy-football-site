@@ -89,8 +89,8 @@
         "tie": false,
         "team_a": {
           "franchise_id": "albany-kneelers",
-          "display_name": "Albany Kneelers",
-          "short_name": "Kneelers",
+          "display_name": "Albany Redskins",
+          "short_name": "Redskins",
           "path": "/teams/albany-kneelers/",
           "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
           "score": 132.74
@@ -118,8 +118,8 @@
         },
         "loser": {
           "franchise_id": "albany-kneelers",
-          "display_name": "Albany Kneelers",
-          "short_name": "Kneelers",
+          "display_name": "Albany Redskins",
+          "short_name": "Redskins",
           "path": "/teams/albany-kneelers/",
           "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
         },
@@ -254,11 +254,11 @@
         "playoff_round": "Semifinal",
         "tie": false,
         "team_a": {
-          "franchise_id": "quahog-stripes",
-          "display_name": "Quahog Stripes",
-          "short_name": "Stripes",
-          "path": "/retired/quahog-stripes/",
-          "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
+          "franchise_id": "new-jersey-giants",
+          "display_name": "New Jersey Giants",
+          "short_name": "Giants",
+          "path": "/teams/new-jersey-giants/",
+          "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
           "score": 75.76
         },
         "team_b": {
@@ -283,11 +283,11 @@
           "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg"
         },
         "loser": {
-          "franchise_id": "quahog-stripes",
-          "display_name": "Quahog Stripes",
-          "short_name": "Stripes",
-          "path": "/retired/quahog-stripes/",
-          "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg"
+          "franchise_id": "new-jersey-giants",
+          "display_name": "New Jersey Giants",
+          "short_name": "Giants",
+          "path": "/teams/new-jersey-giants/",
+          "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
         },
         "winner_score": 149.7,
         "loser_score": 75.76
@@ -343,8 +343,8 @@
     },
     {
       "franchise_id": "albany-kneelers",
-      "display_name": "Albany Kneelers",
-      "short_name": "Kneelers",
+      "display_name": "Albany Redskins",
+      "short_name": "Redskins",
       "path": "/teams/albany-kneelers/",
       "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
       "playoff_games": 4,
@@ -361,8 +361,8 @@
         "tie": false,
         "team_a": {
           "franchise_id": "albany-kneelers",
-          "display_name": "Albany Kneelers",
-          "short_name": "Kneelers",
+          "display_name": "Albany Redskins",
+          "short_name": "Redskins",
           "path": "/teams/albany-kneelers/",
           "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
           "score": 159.92
@@ -383,8 +383,8 @@
         "margin": 73.08,
         "winner": {
           "franchise_id": "albany-kneelers",
-          "display_name": "Albany Kneelers",
-          "short_name": "Kneelers",
+          "display_name": "Albany Redskins",
+          "short_name": "Redskins",
           "path": "/teams/albany-kneelers/",
           "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
         },
@@ -407,8 +407,8 @@
         "tie": false,
         "team_a": {
           "franchise_id": "albany-kneelers",
-          "display_name": "Albany Kneelers",
-          "short_name": "Kneelers",
+          "display_name": "Albany Redskins",
+          "short_name": "Redskins",
           "path": "/teams/albany-kneelers/",
           "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
           "score": 114.38
@@ -429,8 +429,8 @@
         "margin": 53.0,
         "winner": {
           "franchise_id": "albany-kneelers",
-          "display_name": "Albany Kneelers",
-          "short_name": "Kneelers",
+          "display_name": "Albany Redskins",
+          "short_name": "Redskins",
           "path": "/teams/albany-kneelers/",
           "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
         },
@@ -559,9 +559,9 @@
       "short_name": "Giants",
       "path": "/teams/new-jersey-giants/",
       "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
-      "playoff_games": 2,
+      "playoff_games": 3,
       "playoff_wins": 1,
-      "playoff_losses": 1,
+      "playoff_losses": 2,
       "championship_appearances": 0,
       "championships": 0,
       "largest_playoff_win": {
@@ -676,22 +676,6 @@
       "rank": 7
     },
     {
-      "franchise_id": "quahog-stripes",
-      "display_name": "Quahog Stripes",
-      "short_name": "Stripes",
-      "path": "/retired/quahog-stripes/",
-      "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
-      "playoff_games": 1,
-      "playoff_wins": 0,
-      "playoff_losses": 1,
-      "championship_appearances": 0,
-      "championships": 0,
-      "largest_playoff_win": null,
-      "closest_playoff_win": null,
-      "highest_playoff_score": 75.76,
-      "rank": 8
-    },
-    {
       "franchise_id": "savage-huns",
       "display_name": "The Savage Huns",
       "short_name": "Savage Huns",
@@ -705,7 +689,7 @@
       "largest_playoff_win": null,
       "closest_playoff_win": null,
       "highest_playoff_score": 107.84,
-      "rank": 9
+      "rank": 8
     },
     {
       "franchise_id": "van-cortlant-rangers",
@@ -721,7 +705,7 @@
       "largest_playoff_win": null,
       "closest_playoff_win": null,
       "highest_playoff_score": 113.44,
-      "rank": 10
+      "rank": 9
     }
   ],
   "games": [
@@ -779,11 +763,11 @@
       "playoff_round": "Semifinal",
       "tie": false,
       "team_a": {
-        "franchise_id": "quahog-stripes",
-        "display_name": "Quahog Stripes",
-        "short_name": "Stripes",
-        "path": "/retired/quahog-stripes/",
-        "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
+        "franchise_id": "new-jersey-giants",
+        "display_name": "New Jersey Giants",
+        "short_name": "Giants",
+        "path": "/teams/new-jersey-giants/",
+        "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
         "score": 75.76
       },
       "team_b": {
@@ -808,11 +792,11 @@
         "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg"
       },
       "loser": {
-        "franchise_id": "quahog-stripes",
-        "display_name": "Quahog Stripes",
-        "short_name": "Stripes",
-        "path": "/retired/quahog-stripes/",
-        "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg"
+        "franchise_id": "new-jersey-giants",
+        "display_name": "New Jersey Giants",
+        "short_name": "Giants",
+        "path": "/teams/new-jersey-giants/",
+        "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
       },
       "winner_score": 149.7,
       "loser_score": 75.76
@@ -964,8 +948,8 @@
       "tie": false,
       "team_a": {
         "franchise_id": "albany-kneelers",
-        "display_name": "Albany Kneelers",
-        "short_name": "Kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
         "path": "/teams/albany-kneelers/",
         "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
         "score": 114.38
@@ -986,8 +970,8 @@
       "margin": 53.0,
       "winner": {
         "franchise_id": "albany-kneelers",
-        "display_name": "Albany Kneelers",
-        "short_name": "Kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
         "path": "/teams/albany-kneelers/",
         "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
       },
@@ -1056,8 +1040,8 @@
       "tie": false,
       "team_a": {
         "franchise_id": "albany-kneelers",
-        "display_name": "Albany Kneelers",
-        "short_name": "Kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
         "path": "/teams/albany-kneelers/",
         "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
         "score": 132.74
@@ -1085,8 +1069,8 @@
       },
       "loser": {
         "franchise_id": "albany-kneelers",
-        "display_name": "Albany Kneelers",
-        "short_name": "Kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
         "path": "/teams/albany-kneelers/",
         "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
       },
@@ -1378,8 +1362,8 @@
       "tie": false,
       "team_a": {
         "franchise_id": "albany-kneelers",
-        "display_name": "Albany Kneelers",
-        "short_name": "Kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
         "path": "/teams/albany-kneelers/",
         "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
         "score": 159.92
@@ -1400,8 +1384,8 @@
       "margin": 73.08,
       "winner": {
         "franchise_id": "albany-kneelers",
-        "display_name": "Albany Kneelers",
-        "short_name": "Kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
         "path": "/teams/albany-kneelers/",
         "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
       },
@@ -1470,8 +1454,8 @@
       "tie": false,
       "team_a": {
         "franchise_id": "albany-kneelers",
-        "display_name": "Albany Kneelers",
-        "short_name": "Kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
         "path": "/teams/albany-kneelers/",
         "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
         "score": 106.72
@@ -1499,8 +1483,8 @@
       },
       "loser": {
         "franchise_id": "albany-kneelers",
-        "display_name": "Albany Kneelers",
-        "short_name": "Kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
         "path": "/teams/albany-kneelers/",
         "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
       },

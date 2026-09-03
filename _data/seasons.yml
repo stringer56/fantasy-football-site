@@ -55,7 +55,7 @@ seasons:
       - {rank: 7, franchise_id: buffalo-bravado, team_name: Buffalo Bravados, wins: 3, losses: 10, ties: 0, points_for: 1451.88, points_against: 1609.80}
       - {rank: 8, franchise_id: north-town-ninnyhammers, team_name: North town Ninnyhammers, wins: 6, losses: 7, ties: 0, points_for: 1351.66, points_against: 1521.68}
       - {rank: 9, franchise_id: baseball-furies, team_name: The Baseball Furies, wins: 5, losses: 8, ties: 0, points_for: 1266.66, points_against: 1455.68}
-      - {rank: 10, franchise_id: null, team_name: Broncos Country Let's Ride, wins: 6, losses: 7, ties: 0, points_for: 1411.88, points_against: 1466.82}
+      - {rank: 10, franchise_id: vegas-vandals, team_name: Broncos Country Let's Ride, wins: 6, losses: 7, ties: 0, points_for: 1411.88, points_against: 1466.82}
       - {rank: 11, franchise_id: van-cortlant-rangers, team_name: Van Cortlant Rangers, wins: 5, losses: 8, ties: 0, points_for: 1382.94, points_against: 1481.08}
       - {rank: 12, franchise_id: crazy-wazs-team, team_name: Chris's Crazy Team, wins: 5, losses: 8, ties: 0, points_for: 1485.74, points_against: 1534.96}
   - year: 2022
@@ -78,15 +78,15 @@ seasons:
       - {rank: 1, franchise_id: ayahuasca-rush, team_name: Ayahuasca Rush, wins: 11, losses: 3, ties: 0, points_for: 1935.92, points_against: 1629.04}
       - {rank: 2, franchise_id: turnbull-acs, team_name: Turnbull AC's, wins: 10, losses: 4, ties: 0, points_for: 1631.00, points_against: 1593.16}
       - {rank: 3, franchise_id: greendale-human-beings, team_name: Greendale Human Beings, wins: 10, losses: 4, ties: 0, points_for: 1732.68, points_against: 1480.94}
-      - {rank: 4, franchise_id: quahog-stripes, team_name: Quahog Stripes, wins: 9, losses: 5, ties: 0, points_for: 1531.78, points_against: 1451.06}
+      - {rank: 4, franchise_id: new-jersey-giants, team_name: Quahog Stripes, wins: 9, losses: 5, ties: 0, points_for: 1531.78, points_against: 1451.06}
       - {rank: 5, franchise_id: baseball-furies, team_name: The Baseball Furies, wins: 6, losses: 8, ties: 0, points_for: 1507.74, points_against: 1486.02}
       - {rank: 6, franchise_id: albany-kneelers, team_name: Albany Kneelers, wins: 6, losses: 8, ties: 0, points_for: 1616.90, points_against: 1523.16}
       - {rank: 7, franchise_id: maine-moose, team_name: Maine Moose, wins: 6, losses: 8, ties: 0, points_for: 1621.64, points_against: 1620.40}
       - {rank: 8, franchise_id: crazy-wazs-team, team_name: Chris's Crazy Team, wins: 6, losses: 8, ties: 0, points_for: 1625.14, points_against: 1636.04}
-      - {rank: 9, franchise_id: null, team_name: Broncos Country Let's Ride, wins: 6, losses: 8, ties: 0, points_for: 1344.06, points_against: 1579.02}
+      - {rank: 9, franchise_id: vegas-vandals, team_name: Broncos Country Let's Ride, wins: 6, losses: 8, ties: 0, points_for: 1344.06, points_against: 1579.02}
       - {rank: 10, franchise_id: van-cortlant-rangers, team_name: Van Cortlant Rangers, wins: 5, losses: 9, ties: 0, points_for: 1476.70, points_against: 1671.56}
       - {rank: 11, franchise_id: savage-huns, team_name: THE SAVAGE HUNS, wins: 4, losses: 9, ties: 1, points_for: 1455.56, points_against: 1579.94}
-      - {rank: 12, franchise_id: null, team_name: Dilly Dilly, wins: 4, losses: 9, ties: 1, points_for: 1430.22, points_against: 1659.00}
+      - {rank: 12, franchise_id: buffalo-bravado, team_name: Dilly Dilly, wins: 4, losses: 9, ties: 1, points_for: 1430.22, points_against: 1659.00}
   - year: 2021
     title: 2021 Season
     status: verified
@@ -112,5 +112,5 @@ seasons:
       - {rank: 6, franchise_id: van-cortlant-rangers, team_name: Van Cortlant Rangers, wins: 7, losses: 7, ties: 0, division_wins: 3, division_losses: 5, division_ties: 0, points_for: 1587.66, points_against: 1566.52}
       - {rank: 7, franchise_id: turnbull-acs, team_name: Turnbull AC's, wins: 7, losses: 7, ties: 0, division_wins: 5, division_losses: 3, division_ties: 0, points_for: 1611.20, points_against: 1522.78}
       - {rank: 8, franchise_id: crazy-wazs-team, team_name: Chris's Crazy Team, wins: 5, losses: 9, ties: 0, division_wins: 2, division_losses: 6, division_ties: 0, points_for: 1677.92, points_against: 1712.00}
-      - {rank: 9, franchise_id: quahog-stripes, team_name: Quahog Stripes, wins: 5, losses: 9, ties: 0, division_wins: 2, division_losses: 6, division_ties: 0, points_for: 1574.26, points_against: 1701.64}
+      - {rank: 9, franchise_id: new-jersey-giants, team_name: Quahog Stripes, wins: 5, losses: 9, ties: 0, division_wins: 2, division_losses: 6, division_ties: 0, points_for: 1574.26, points_against: 1701.64}
       - {rank: 10, franchise_id: null, team_name: Matthew's Optimal Team, wins: 2, losses: 12, ties: 0, division_wins: 1, division_losses: 7, division_ties: 0, points_for: 1600.16, points_against: 1867.14}

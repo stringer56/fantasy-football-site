@@ -30,7 +30,7 @@
     "team_recaps": 46,
     "playoff_recaps": 16,
     "championship_recaps": 4,
-    "unresolved_team_recaps": 5
+    "unresolved_team_recaps": 2
   },
   "seasons": [
     {
@@ -1562,7 +1562,7 @@
       "content_source": "deterministic_generated"
     },
     {
-      "recap_id": "team-2023-broncos-country-let-s-ride",
+      "recap_id": "team-2023-vegas-vandals",
       "season": 2023,
       "source_files": [
         "_data/seasons.yml",
@@ -1571,7 +1571,7 @@
         "_data/franchises.yml"
       ],
       "generated_at": "2026-08-31T00:00:00Z",
-      "coverage_status": "partial",
+      "coverage_status": "complete",
       "facts_used": [
         {
           "fact_type": "standing",
@@ -1593,12 +1593,10 @@
           "games": []
         }
       ],
-      "warnings": [
-        "unresolved_franchise_mapping"
-      ],
+      "warnings": [],
       "provenance_label": "Generated from verified league results.",
-      "franchise_id": null,
-      "mapping_status": "unresolved",
+      "franchise_id": "vegas-vandals",
+      "mapping_status": "resolved",
       "historical_team_name": "Broncos Country Let's Ride",
       "rank": 10,
       "record": {
@@ -1608,16 +1606,16 @@
       },
       "points_for": 1411.88,
       "points_against": 1466.82,
-      "path": null,
-      "identity_image": null,
-      "identity_alt": null,
-      "generated_text": "Broncos Country Let's Ride finished 10th in the 2023 final standings with a final record of 6–7–0. The team posted 1,411.88 points for and 1,466.82 points against. Its points-for total ranked 9th in the 12-team field. The structured playoff bracket does not list Broncos Country Let's Ride among the verified postseason participants. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
+      "path": "/teams/vegas-vandals/",
+      "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
+      "identity_alt": "Black Vegas Vandals football helmet with flaming playing cards",
+      "generated_text": "Broncos Country Let's Ride finished 10th in the 2023 final standings with a final record of 6–7–0. The team posted 1,411.88 points for and 1,466.82 points against. Its points-for total ranked 9th in the 12-team field. The structured playoff bracket does not list Broncos Country Let's Ride among the verified postseason participants. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
       "generated_paragraphs": [
-        "Broncos Country Let's Ride finished 10th in the 2023 final standings with a final record of 6–7–0. The team posted 1,411.88 points for and 1,466.82 points against. Its points-for total ranked 9th in the 12-team field. The structured playoff bracket does not list Broncos Country Let's Ride among the verified postseason participants. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
+        "Broncos Country Let's Ride finished 10th in the 2023 final standings with a final record of 6–7–0. The team posted 1,411.88 points for and 1,466.82 points against. Its points-for total ranked 9th in the 12-team field. The structured playoff bracket does not list Broncos Country Let's Ride among the verified postseason participants. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
       ],
-      "text": "Broncos Country Let's Ride finished 10th in the 2023 final standings with a final record of 6–7–0. The team posted 1,411.88 points for and 1,466.82 points against. Its points-for total ranked 9th in the 12-team field. The structured playoff bracket does not list Broncos Country Let's Ride among the verified postseason participants. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
+      "text": "Broncos Country Let's Ride finished 10th in the 2023 final standings with a final record of 6–7–0. The team posted 1,411.88 points for and 1,466.82 points against. Its points-for total ranked 9th in the 12-team field. The structured playoff bracket does not list Broncos Country Let's Ride among the verified postseason participants. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
       "paragraphs": [
-        "Broncos Country Let's Ride finished 10th in the 2023 final standings with a final record of 6–7–0. The team posted 1,411.88 points for and 1,466.82 points against. Its points-for total ranked 9th in the 12-team field. The structured playoff bracket does not list Broncos Country Let's Ride among the verified postseason participants. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
+        "Broncos Country Let's Ride finished 10th in the 2023 final standings with a final record of 6–7–0. The team posted 1,411.88 points for and 1,466.82 points against. Its points-for total ranked 9th in the 12-team field. The structured playoff bracket does not list Broncos Country Let's Ride among the verified postseason participants. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
       ],
       "content_source": "deterministic_generated"
     },
@@ -1921,7 +1919,7 @@
       "content_source": "deterministic_generated"
     },
     {
-      "recap_id": "team-2022-quahog-stripes",
+      "recap_id": "team-2022-new-jersey-giants",
       "season": 2022,
       "source_files": [
         "_data/seasons.yml",
@@ -1957,7 +1955,7 @@
       ],
       "warnings": [],
       "provenance_label": "Generated from verified league results.",
-      "franchise_id": "quahog-stripes",
+      "franchise_id": "new-jersey-giants",
       "mapping_status": "resolved",
       "historical_team_name": "Quahog Stripes",
       "rank": 4,
@@ -1968,9 +1966,9 @@
       },
       "points_for": 1531.78,
       "points_against": 1451.06,
-      "path": "/retired/quahog-stripes/",
-      "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
-      "identity_alt": "White Quahog Stripes football helmet with an orange animal emblem",
+      "path": "/teams/new-jersey-giants/",
+      "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
+      "identity_alt": "Blue New Jersey Giants football helmet",
       "generated_text": "Quahog Stripes finished 4th in the 2022 final standings with a final record of 9–5–0. The team posted 1,531.78 points for and 1,451.06 points against. Its points-for total ranked 7th in the 12-team field. Quahog Stripes reached the semifinal before Ayahuasca Rush advanced. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
       "generated_paragraphs": [
         "Quahog Stripes finished 4th in the 2022 final standings with a final record of 9–5–0. The team posted 1,531.78 points for and 1,451.06 points against. Its points-for total ranked 7th in the 12-team field. Quahog Stripes reached the semifinal before Ayahuasca Rush advanced. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
@@ -2214,7 +2212,7 @@
       "content_source": "deterministic_generated"
     },
     {
-      "recap_id": "team-2022-broncos-country-let-s-ride",
+      "recap_id": "team-2022-vegas-vandals",
       "season": 2022,
       "source_files": [
         "_data/seasons.yml",
@@ -2223,7 +2221,7 @@
         "_data/franchises.yml"
       ],
       "generated_at": "2026-08-31T00:00:00Z",
-      "coverage_status": "partial",
+      "coverage_status": "complete",
       "facts_used": [
         {
           "fact_type": "standing",
@@ -2245,12 +2243,10 @@
           "games": []
         }
       ],
-      "warnings": [
-        "unresolved_franchise_mapping"
-      ],
+      "warnings": [],
       "provenance_label": "Generated from verified league results.",
-      "franchise_id": null,
-      "mapping_status": "unresolved",
+      "franchise_id": "vegas-vandals",
+      "mapping_status": "resolved",
       "historical_team_name": "Broncos Country Let's Ride",
       "rank": 9,
       "record": {
@@ -2260,16 +2256,16 @@
       },
       "points_for": 1344.06,
       "points_against": 1579.02,
-      "path": null,
-      "identity_image": null,
-      "identity_alt": null,
-      "generated_text": "Broncos Country Let's Ride finished 9th in the 2022 final standings with a final record of 6–8–0. The team posted 1,344.06 points for and 1,579.02 points against. Its points-for total ranked 12th in the 12-team field. The structured playoff bracket does not list Broncos Country Let's Ride among the verified postseason participants. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
+      "path": "/teams/vegas-vandals/",
+      "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
+      "identity_alt": "Black Vegas Vandals football helmet with flaming playing cards",
+      "generated_text": "Broncos Country Let's Ride finished 9th in the 2022 final standings with a final record of 6–8–0. The team posted 1,344.06 points for and 1,579.02 points against. Its points-for total ranked 12th in the 12-team field. The structured playoff bracket does not list Broncos Country Let's Ride among the verified postseason participants. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
       "generated_paragraphs": [
-        "Broncos Country Let's Ride finished 9th in the 2022 final standings with a final record of 6–8–0. The team posted 1,344.06 points for and 1,579.02 points against. Its points-for total ranked 12th in the 12-team field. The structured playoff bracket does not list Broncos Country Let's Ride among the verified postseason participants. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
+        "Broncos Country Let's Ride finished 9th in the 2022 final standings with a final record of 6–8–0. The team posted 1,344.06 points for and 1,579.02 points against. Its points-for total ranked 12th in the 12-team field. The structured playoff bracket does not list Broncos Country Let's Ride among the verified postseason participants. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
       ],
-      "text": "Broncos Country Let's Ride finished 9th in the 2022 final standings with a final record of 6–8–0. The team posted 1,344.06 points for and 1,579.02 points against. Its points-for total ranked 12th in the 12-team field. The structured playoff bracket does not list Broncos Country Let's Ride among the verified postseason participants. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
+      "text": "Broncos Country Let's Ride finished 9th in the 2022 final standings with a final record of 6–8–0. The team posted 1,344.06 points for and 1,579.02 points against. Its points-for total ranked 12th in the 12-team field. The structured playoff bracket does not list Broncos Country Let's Ride among the verified postseason participants. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
       "paragraphs": [
-        "Broncos Country Let's Ride finished 9th in the 2022 final standings with a final record of 6–8–0. The team posted 1,344.06 points for and 1,579.02 points against. Its points-for total ranked 12th in the 12-team field. The structured playoff bracket does not list Broncos Country Let's Ride among the verified postseason participants. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
+        "Broncos Country Let's Ride finished 9th in the 2022 final standings with a final record of 6–8–0. The team posted 1,344.06 points for and 1,579.02 points against. Its points-for total ranked 12th in the 12-team field. The structured playoff bracket does not list Broncos Country Let's Ride among the verified postseason participants. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
       ],
       "content_source": "deterministic_generated"
     },
@@ -2390,7 +2386,7 @@
       "content_source": "deterministic_generated"
     },
     {
-      "recap_id": "team-2022-dilly-dilly",
+      "recap_id": "team-2022-buffalo-bravado",
       "season": 2022,
       "source_files": [
         "_data/seasons.yml",
@@ -2399,7 +2395,7 @@
         "_data/franchises.yml"
       ],
       "generated_at": "2026-08-31T00:00:00Z",
-      "coverage_status": "partial",
+      "coverage_status": "complete",
       "facts_used": [
         {
           "fact_type": "standing",
@@ -2421,12 +2417,10 @@
           "games": []
         }
       ],
-      "warnings": [
-        "unresolved_franchise_mapping"
-      ],
+      "warnings": [],
       "provenance_label": "Generated from verified league results.",
-      "franchise_id": null,
-      "mapping_status": "unresolved",
+      "franchise_id": "buffalo-bravado",
+      "mapping_status": "resolved",
       "historical_team_name": "Dilly Dilly",
       "rank": 12,
       "record": {
@@ -2436,16 +2430,16 @@
       },
       "points_for": 1430.22,
       "points_against": 1659.0,
-      "path": null,
-      "identity_image": null,
-      "identity_alt": null,
-      "generated_text": "Dilly Dilly finished 12th in the 2022 final standings with a final record of 4–9–1. The team posted 1,430.22 points for and 1,659.00 points against. Its points-for total ranked 11th in the 12-team field. The structured playoff bracket does not list Dilly Dilly among the verified postseason participants. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
+      "path": "/teams/buffalo-bravado/",
+      "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+      "identity_alt": "Light blue Buffalo Bravado football helmet with a heraldic crest",
+      "generated_text": "Dilly Dilly finished 12th in the 2022 final standings with a final record of 4–9–1. The team posted 1,430.22 points for and 1,659.00 points against. Its points-for total ranked 11th in the 12-team field. The structured playoff bracket does not list Dilly Dilly among the verified postseason participants. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
       "generated_paragraphs": [
-        "Dilly Dilly finished 12th in the 2022 final standings with a final record of 4–9–1. The team posted 1,430.22 points for and 1,659.00 points against. Its points-for total ranked 11th in the 12-team field. The structured playoff bracket does not list Dilly Dilly among the verified postseason participants. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
+        "Dilly Dilly finished 12th in the 2022 final standings with a final record of 4–9–1. The team posted 1,430.22 points for and 1,659.00 points against. Its points-for total ranked 11th in the 12-team field. The structured playoff bracket does not list Dilly Dilly among the verified postseason participants. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
       ],
-      "text": "Dilly Dilly finished 12th in the 2022 final standings with a final record of 4–9–1. The team posted 1,430.22 points for and 1,659.00 points against. Its points-for total ranked 11th in the 12-team field. The structured playoff bracket does not list Dilly Dilly among the verified postseason participants. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
+      "text": "Dilly Dilly finished 12th in the 2022 final standings with a final record of 4–9–1. The team posted 1,430.22 points for and 1,659.00 points against. Its points-for total ranked 11th in the 12-team field. The structured playoff bracket does not list Dilly Dilly among the verified postseason participants. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
       "paragraphs": [
-        "Dilly Dilly finished 12th in the 2022 final standings with a final record of 4–9–1. The team posted 1,430.22 points for and 1,659.00 points against. Its points-for total ranked 11th in the 12-team field. The structured playoff bracket does not list Dilly Dilly among the verified postseason participants. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
+        "Dilly Dilly finished 12th in the 2022 final standings with a final record of 4–9–1. The team posted 1,430.22 points for and 1,659.00 points against. Its points-for total ranked 11th in the 12-team field. The structured playoff bracket does not list Dilly Dilly among the verified postseason participants. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
       ],
       "content_source": "deterministic_generated"
     },
@@ -2928,7 +2922,7 @@
       "content_source": "deterministic_generated"
     },
     {
-      "recap_id": "team-2021-quahog-stripes",
+      "recap_id": "team-2021-new-jersey-giants",
       "season": 2021,
       "source_files": [
         "_data/seasons.yml",
@@ -2961,7 +2955,7 @@
       ],
       "warnings": [],
       "provenance_label": "Generated from verified league results.",
-      "franchise_id": "quahog-stripes",
+      "franchise_id": "new-jersey-giants",
       "mapping_status": "resolved",
       "historical_team_name": "Quahog Stripes",
       "rank": 9,
@@ -2972,9 +2966,9 @@
       },
       "points_for": 1574.26,
       "points_against": 1701.64,
-      "path": "/retired/quahog-stripes/",
-      "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
-      "identity_alt": "White Quahog Stripes football helmet with an orange animal emblem",
+      "path": "/teams/new-jersey-giants/",
+      "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
+      "identity_alt": "Blue New Jersey Giants football helmet",
       "generated_text": "Quahog Stripes finished 9th in the 2021 final standings with a final record of 5–9–0. The team posted 1,574.26 points for and 1,701.64 points against. Its points-for total ranked 10th in the 10-team field. The structured playoff bracket does not list Quahog Stripes among the verified postseason participants. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
       "generated_paragraphs": [
         "Quahog Stripes finished 9th in the 2021 final standings with a final record of 5–9–0. The team posted 1,574.26 points for and 1,701.64 points against. Its points-for total ranked 10th in the 10-team field. The structured playoff bracket does not list Quahog Stripes among the verified postseason participants. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
@@ -3491,7 +3485,7 @@
           "round": "Semifinal",
           "winner_franchise_id": "ayahuasca-rush",
           "winner_name": "Ayahuasca Rush",
-          "loser_franchise_id": "quahog-stripes",
+          "loser_franchise_id": "new-jersey-giants",
           "loser_name": "Quahog Stripes",
           "winner_score": null,
           "loser_score": null

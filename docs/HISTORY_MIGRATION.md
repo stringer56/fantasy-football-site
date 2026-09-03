@@ -13,8 +13,8 @@ in the source from mappings or narratives that remain unresolved.
 - Playoff games represented: **16**
 - Locally preserved history assets: **16**
 - Season routes: **4** (`/history/2021/` through `/history/2024/`)
-- Stable franchise joins resolved: **41 of 46 standings rows**
-- Unique historical display names still unresolved: **4**
+- Stable franchise joins resolved: **44 of 46 standings rows**
+- Unique historical display names still unresolved: **2**
 
 The final rank in the Yahoo captures reflects the completed season, including
 playoff placement. It is not assumed to be the playoff seed. Seeds come from the
@@ -72,27 +72,31 @@ canonical name or an already verified alias from the franchise migration.
 | Greendale Human Beings | `greendale-human-beings` | Exact canonical name |
 | Maine Moose | `maine-moose` | Exact canonical name |
 | North town Ninnyhammers | `north-town-ninnyhammers` | Verified capitalization alias |
-| Quahog Stripes | `quahog-stripes` | Exact retired-franchise name |
+| Quahog Stripes | `new-jersey-giants` | Commissioner-confirmed former identity |
 | THE SAVAGE HUNS / Savage Huns | `savage-huns` | Canonical name / verified alias |
 | Turnbull AC's | `turnbull-acs` | Exact canonical name |
 | Van Cortlant Rangers | `van-cortlant-rangers` | Exact canonical name |
 | Vegas Vandals | `vegas-vandals` | Exact canonical name |
+| Broncos Country Let's Ride | `vegas-vandals` | Commissioner-confirmed historical continuity |
+| Dilly Dilly | `buffalo-bravado` | Commissioner-confirmed historical continuity |
 
-No new aliases were necessary: every resolved historical variant was already in
-the canonical franchise record. Retired teams remain linked to retired-profile
-routes rather than being treated as active teams.
+Commissioner-confirmed historical names are retained as canonical aliases.
+Quahog results link to the current New Jersey Giants stable identity while the
+historical display name remains unchanged. The Savage Huns remains linked to its
+retired-franchise profile.
 
 ## Unresolved historical identities
 
 | Display name | Season(s) | What is known | Missing proof |
 |---|---:|---|---|
-| Broncos Country Let's Ride | 2022, 2023 | Final rank and season statistics | Verified continuity to a canonical franchise/owner |
-| Dilly Dilly | 2022 | Final rank and season statistics | Verified continuity to a canonical franchise/owner |
 | The Swagger Daggers | 2021 | Final rank, playoff seed, semifinal loss | Verified continuity to a canonical franchise/owner |
 | Matthew's Optimal Team | 2021 | Final rank and season statistics | Verified continuity to a canonical franchise/owner |
 
-These rows retain the source display name and a null `franchise_id`. A zero,
+These two 2021 rows retain the source display name and a null `franchise_id`. A zero,
 guessed modern ID, or inferred alias would incorrectly create historical joins.
+
+Quahog Stripes is part of New Jersey Giants franchise history for 2021–2022 and
+is not counted as a separate franchise.
 
 ## Source conflicts and limitations
 
@@ -155,7 +159,7 @@ internal asset/link target.
 
 ## Items requiring commissioner verification
 
-- Map the four unresolved historical display names to stable franchises, or
+- Map the two unresolved historical display names to stable franchises, or
   confirm that they should remain season-only identities.
 - Confirm the 2023 quarterfinal-winner lane ordering shown inconsistently by the
   source graphic.

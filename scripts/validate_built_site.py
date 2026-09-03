@@ -117,8 +117,10 @@ def main() -> None:
         errors.append("mobile navigation toggle must have an accessible name")
     if teams_page.count('class="franchise-card"') != 12:
         errors.append("teams directory must render exactly 12 active franchise cards")
-    if retired_page.count('class="retired-card"') != 2:
-        errors.append("retired directory must render exactly 2 retired franchise cards")
+    if retired_page.count('data-archive-kind="retired-franchise"') != 1:
+        errors.append("franchise archive must render exactly 1 retired franchise card")
+    if retired_page.count('data-archive-kind="historical-identity"') != 1:
+        errors.append("franchise archive must render exactly 1 historical identity card")
     if history_page.count('class="season-archive-card"') != 4:
         errors.append("history archive must render exactly 4 season cards")
     if drafts_page.count('class="draft-season-card"') != 4:

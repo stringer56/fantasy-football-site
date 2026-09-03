@@ -30,9 +30,8 @@ nine schema-versioned files under `_data/generated/records/`. Repeated builds
 with unchanged inputs produce identical bytes.
 
 General weekly rankings use final Yahoo matchups where both canonical identities
-resolve. A resolved franchise's own weekly summary may retain a result against an
-unresolved historical opponent, but opponent-dependent records and head-to-head
-pairs require both identities.
+resolve. All 368 recovered 2022–2025 matchups now have both identities, producing
+78 franchise-pair series without an unresolved-matchup exclusion.
 
 ## Playoff classification
 
@@ -49,11 +48,10 @@ Albany Kneelers against Maine Moose. No side is selected by assumption.
 
 ## Unresolved identities
 
-The Swagger Daggers, Matthew's Optimal Team, Broncos Country Let’s Ride, and
-Dilly Dilly remain unresolved wherever they appear. The builder excludes 42
-2022–2025 matchups from pair/opponent-dependent canonical metrics because at
-least one side is unresolved. It does not create aliases or modify franchise
-history.
+The Swagger Daggers and Matthew's Optimal Team remain unresolved in 2021. Since
+no 2021 weekly matchups were recovered, they do not enter the weekly-derived
+window. Commissioner-confirmed aliases resolve every 2022–2025 weekly matchup;
+the builder does not infer any additional continuity.
 
 ## Definitions
 

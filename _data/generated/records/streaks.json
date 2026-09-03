@@ -23,8 +23,8 @@
   "single_season_wins": [
     {
       "franchise_id": "albany-kneelers",
-      "display_name": "Albany Kneelers",
-      "short_name": "Kneelers",
+      "display_name": "Albany Redskins",
+      "short_name": "Redskins",
       "path": "/teams/albany-kneelers/",
       "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
       "games": 9,
@@ -87,19 +87,6 @@
       "rank": 5
     },
     {
-      "franchise_id": "quahog-stripes",
-      "display_name": "Quahog Stripes",
-      "short_name": "Stripes",
-      "path": "/retired/quahog-stripes/",
-      "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
-      "games": 5,
-      "start_season": 2022,
-      "start_week": 9,
-      "end_season": 2022,
-      "end_week": 13,
-      "rank": 6
-    },
-    {
       "franchise_id": "turnbull-acs",
       "display_name": "Turnbull AC's",
       "short_name": "Turnbull",
@@ -110,7 +97,7 @@
       "start_week": 10,
       "end_season": 2022,
       "end_week": 14,
-      "rank": 7
+      "rank": 6
     },
     {
       "franchise_id": "van-cortlant-rangers",
@@ -123,7 +110,7 @@
       "start_week": 3,
       "end_season": 2025,
       "end_week": 7,
-      "rank": 8
+      "rank": 7
     },
     {
       "franchise_id": "maine-moose",
@@ -136,7 +123,7 @@
       "start_week": 3,
       "end_season": 2023,
       "end_week": 6,
-      "rank": 9
+      "rank": 8
     },
     {
       "franchise_id": "vegas-vandals",
@@ -145,11 +132,11 @@
       "path": "/teams/vegas-vandals/",
       "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
       "games": 4,
-      "start_season": 2025,
-      "start_week": 10,
-      "end_season": 2025,
-      "end_week": 13,
-      "rank": 10
+      "start_season": 2023,
+      "start_week": 2,
+      "end_season": 2023,
+      "end_week": 5,
+      "rank": 9
     },
     {
       "franchise_id": "baseball-furies",
@@ -162,7 +149,7 @@
       "start_week": 1,
       "end_season": 2022,
       "end_week": 3,
-      "rank": 11
+      "rank": 10
     },
     {
       "franchise_id": "buffalo-bravado",
@@ -175,7 +162,7 @@
       "start_week": 9,
       "end_season": 2025,
       "end_week": 11,
-      "rank": 12
+      "rank": 11
     },
     {
       "franchise_id": "crazy-wazs-team",
@@ -188,7 +175,7 @@
       "start_week": 5,
       "end_season": 2024,
       "end_week": 7,
-      "rank": 13
+      "rank": 12
     },
     {
       "franchise_id": "north-town-ninnyhammers",
@@ -201,7 +188,7 @@
       "start_week": 1,
       "end_season": 2023,
       "end_week": 3,
-      "rank": 14
+      "rank": 13
     }
   ],
   "single_season_losses": [
@@ -311,8 +298,8 @@
     },
     {
       "franchise_id": "albany-kneelers",
-      "display_name": "Albany Kneelers",
-      "short_name": "Kneelers",
+      "display_name": "Albany Redskins",
+      "short_name": "Redskins",
       "path": "/teams/albany-kneelers/",
       "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
       "games": 4,
@@ -373,26 +360,13 @@
       "end_season": 2024,
       "end_week": 8,
       "rank": 13
-    },
-    {
-      "franchise_id": "quahog-stripes",
-      "display_name": "Quahog Stripes",
-      "short_name": "Stripes",
-      "path": "/retired/quahog-stripes/",
-      "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
-      "games": 2,
-      "start_season": 2022,
-      "start_week": 4,
-      "end_season": 2022,
-      "end_week": 5,
-      "rank": 14
     }
   ],
   "single_season_unbeaten": [
     {
       "franchise_id": "albany-kneelers",
-      "display_name": "Albany Kneelers",
-      "short_name": "Kneelers",
+      "display_name": "Albany Redskins",
+      "short_name": "Redskins",
       "path": "/teams/albany-kneelers/",
       "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
       "games": 9,
@@ -455,19 +429,6 @@
       "rank": 5
     },
     {
-      "franchise_id": "quahog-stripes",
-      "display_name": "Quahog Stripes",
-      "short_name": "Stripes",
-      "path": "/retired/quahog-stripes/",
-      "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
-      "games": 5,
-      "start_season": 2022,
-      "start_week": 9,
-      "end_season": 2022,
-      "end_week": 13,
-      "rank": 6
-    },
-    {
       "franchise_id": "turnbull-acs",
       "display_name": "Turnbull AC's",
       "short_name": "Turnbull",
@@ -478,7 +439,7 @@
       "start_week": 10,
       "end_season": 2022,
       "end_week": 14,
-      "rank": 7
+      "rank": 6
     },
     {
       "franchise_id": "van-cortlant-rangers",
@@ -491,7 +452,7 @@
       "start_week": 3,
       "end_season": 2025,
       "end_week": 7,
-      "rank": 8
+      "rank": 7
     },
     {
       "franchise_id": "maine-moose",
@@ -504,7 +465,7 @@
       "start_week": 3,
       "end_season": 2023,
       "end_week": 6,
-      "rank": 9
+      "rank": 8
     },
     {
       "franchise_id": "vegas-vandals",
@@ -513,11 +474,11 @@
       "path": "/teams/vegas-vandals/",
       "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
       "games": 4,
-      "start_season": 2025,
-      "start_week": 10,
-      "end_season": 2025,
-      "end_week": 13,
-      "rank": 10
+      "start_season": 2023,
+      "start_week": 2,
+      "end_season": 2023,
+      "end_week": 5,
+      "rank": 9
     },
     {
       "franchise_id": "baseball-furies",
@@ -530,7 +491,7 @@
       "start_week": 1,
       "end_season": 2022,
       "end_week": 3,
-      "rank": 11
+      "rank": 10
     },
     {
       "franchise_id": "buffalo-bravado",
@@ -543,7 +504,7 @@
       "start_week": 9,
       "end_season": 2025,
       "end_week": 11,
-      "rank": 12
+      "rank": 11
     },
     {
       "franchise_id": "crazy-wazs-team",
@@ -556,7 +517,7 @@
       "start_week": 5,
       "end_season": 2024,
       "end_week": 7,
-      "rank": 13
+      "rank": 12
     },
     {
       "franchise_id": "north-town-ninnyhammers",
@@ -569,14 +530,14 @@
       "start_week": 1,
       "end_season": 2023,
       "end_week": 3,
-      "rank": 14
+      "rank": 13
     }
   ],
   "cross_season_wins": [
     {
       "franchise_id": "albany-kneelers",
-      "display_name": "Albany Kneelers",
-      "short_name": "Kneelers",
+      "display_name": "Albany Redskins",
+      "short_name": "Redskins",
       "path": "/teams/albany-kneelers/",
       "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
       "games": 10,
@@ -652,19 +613,6 @@
       "rank": 6
     },
     {
-      "franchise_id": "quahog-stripes",
-      "display_name": "Quahog Stripes",
-      "short_name": "Stripes",
-      "path": "/retired/quahog-stripes/",
-      "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
-      "games": 5,
-      "start_season": 2022,
-      "start_week": 9,
-      "end_season": 2022,
-      "end_week": 13,
-      "rank": 7
-    },
-    {
       "franchise_id": "van-cortlant-rangers",
       "display_name": "Van Cortlant Rangers",
       "short_name": "Rangers",
@@ -675,7 +623,7 @@
       "start_week": 3,
       "end_season": 2025,
       "end_week": 7,
-      "rank": 8
+      "rank": 7
     },
     {
       "franchise_id": "maine-moose",
@@ -688,7 +636,7 @@
       "start_week": 3,
       "end_season": 2023,
       "end_week": 6,
-      "rank": 9
+      "rank": 8
     },
     {
       "franchise_id": "vegas-vandals",
@@ -697,11 +645,11 @@
       "path": "/teams/vegas-vandals/",
       "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
       "games": 4,
-      "start_season": 2025,
-      "start_week": 10,
-      "end_season": 2025,
-      "end_week": 13,
-      "rank": 10
+      "start_season": 2023,
+      "start_week": 2,
+      "end_season": 2023,
+      "end_week": 5,
+      "rank": 9
     },
     {
       "franchise_id": "baseball-furies",
@@ -714,7 +662,7 @@
       "start_week": 1,
       "end_season": 2022,
       "end_week": 3,
-      "rank": 11
+      "rank": 10
     },
     {
       "franchise_id": "buffalo-bravado",
@@ -727,7 +675,7 @@
       "start_week": 9,
       "end_season": 2025,
       "end_week": 11,
-      "rank": 12
+      "rank": 11
     },
     {
       "franchise_id": "crazy-wazs-team",
@@ -740,7 +688,7 @@
       "start_week": 5,
       "end_season": 2024,
       "end_week": 7,
-      "rank": 13
+      "rank": 12
     },
     {
       "franchise_id": "north-town-ninnyhammers",
@@ -753,7 +701,7 @@
       "start_week": 1,
       "end_season": 2023,
       "end_week": 3,
-      "rank": 14
+      "rank": 13
     }
   ],
   "cross_season_losses": [
@@ -876,8 +824,8 @@
     },
     {
       "franchise_id": "albany-kneelers",
-      "display_name": "Albany Kneelers",
-      "short_name": "Kneelers",
+      "display_name": "Albany Redskins",
+      "short_name": "Redskins",
       "path": "/teams/albany-kneelers/",
       "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
       "games": 4,
@@ -925,19 +873,6 @@
       "end_season": 2024,
       "end_week": 8,
       "rank": 13
-    },
-    {
-      "franchise_id": "quahog-stripes",
-      "display_name": "Quahog Stripes",
-      "short_name": "Stripes",
-      "path": "/retired/quahog-stripes/",
-      "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
-      "games": 2,
-      "start_season": 2022,
-      "start_week": 4,
-      "end_season": 2022,
-      "end_week": 5,
-      "rank": 14
     }
   ]
 }

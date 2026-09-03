@@ -9,8 +9,8 @@ Only evidence attributable to this league is published.
 
 - Draft years migrated: **4** (2021–2024)
 - Draft-order slots migrated: **46**
-- Stable franchise joins resolved: **41 of 46 slots**
-- Unresolved order entries: **5 slots / 4 unique historical names**
+- Stable franchise joins resolved: **44 of 46 slots**
+- Unresolved order entries: **2 slots / 2 unique historical names**
 - Original result captures stored locally: **12**
 - Verified rounds represented: **15 per year**
 - Structured pick-by-pick selections: **0**
@@ -28,8 +28,8 @@ links four league-hosted recap pages and one external 2025 Yahoo result link.
 | Year | Source Google page | Order | Board | Results | Recap | Date | Location | Franchise mapping |
 |---:|---|---|---|---|---|---|---|---|
 | 2024 | [2024 Draft Recap](https://sites.google.com/view/road-to-glory-ffl/league-draft-recaps/2024-draft-recap) | 12 slots | No separate board | 3 images / 15 rounds | Images only | Not published | Not published | 12 resolved |
-| 2023 | [2023 Draft Recap](https://sites.google.com/view/road-to-glory-ffl/league-draft-recaps/2023-draft-recap) | 12 slots | No separate board | 3 images / 15 rounds | Images only | Not published | Not published | 11 resolved, 1 unresolved |
-| 2022 | [2022 Draft Recap](https://sites.google.com/view/road-to-glory-ffl/league-draft-recaps/2022-draft-recap) | 12 slots | No separate board | 3 images / 15 rounds | Images only | Not published | Not published | 10 resolved, 2 unresolved |
+| 2023 | [2023 Draft Recap](https://sites.google.com/view/road-to-glory-ffl/league-draft-recaps/2023-draft-recap) | 12 slots | No separate board | 3 images / 15 rounds | Images only | Not published | Not published | 12 resolved |
+| 2022 | [2022 Draft Recap](https://sites.google.com/view/road-to-glory-ffl/league-draft-recaps/2022-draft-recap) | 12 slots | No separate board | 3 images / 15 rounds | Images only | Not published | Not published | 12 resolved |
 | 2021 | [2021 Draft Recap](https://sites.google.com/view/road-to-glory-ffl/league-draft-recaps/2021-draft-recap) | 10 slots | No separate board | 3 images / 15 rounds | Images only | Not published | Not published | 8 resolved, 2 unresolved |
 
 Each Google recap consists of three Yahoo screenshots covering rounds 1–6,
@@ -57,17 +57,18 @@ to duplicate files.
 
 Resolved order entries reuse the Milestone 4 franchise IDs and verified aliases.
 Historical labels such as `Buffalo Bravados`, `North town Ninnyhammers`,
-`Chris's Crazy Team`, and `THE SAVAGE HUNS` remain visible while linking to the
-canonical franchise. Retired `Quahog Stripes` and `THE SAVAGE HUNS` entries link
-to retired-franchise profiles.
+`Dilly Dilly`, `Broncos Country Let's Ride`, `Chris's Crazy Team`, and `THE
+SAVAGE HUNS` remain visible while linking to the canonical franchise. Dilly
+Dilly resolves to Buffalo Bravado, Broncos Country Let's Ride resolves to Vegas
+Vandals, and Quahog Stripes resolves to New Jersey Giants through
+commissioner-confirmed continuity. The historical Quahog label remains visible;
+`THE SAVAGE HUNS` entries continue to link to the retired-franchise profile.
 
-The five unresolved slots reuse the exact unresolved state established in the
-league-history migration:
+The two remaining unresolved slots reuse the exact unresolved state established
+in the league-history migration:
 
 | Historical display name | Draft year(s) | Canonical ID | Status |
 |---|---:|---|---|
-| Broncos Country Let's Ride | 2022, 2023 | `null` | Unresolved |
-| Dilly Dilly | 2022 | `null` | Unresolved |
 | Matthew's Optimal Team | 2021 | `null` | Unresolved |
 | The Swagger Daggers | 2021 | `null` | Unresolved |
 
@@ -135,7 +136,7 @@ result assets, season cross-links, and internal file targets.
 
 1. Supply the correct Road to Glory 2025 draft-results source; the Google Site's
    current external link points to a different league.
-2. Map the four unresolved historical names to stable franchises, or confirm
+2. Map the two unresolved historical names to stable franchises, or confirm
    they should remain year-only identities.
 3. Supply draft dates and locations for 2021–2024 if they are approved public facts.
 4. Supply any separate boards or written recap copy that exists outside the
