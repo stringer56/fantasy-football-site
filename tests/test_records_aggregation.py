@@ -59,11 +59,11 @@ class RecordsAggregationTests(unittest.TestCase):
         )
         self.assertEqual([item["rank"] for item in entries], [1, 1, 3])
 
-    def test_unresolved_standings_rows_are_excluded(self) -> None:
+    def test_all_commissioner_confirmed_standings_rows_are_resolved(self) -> None:
         entries, unresolved = build_records.build_career_totals(
             self.seasons["seasons"], self.champions["champions"], self.identities
         )
-        self.assertEqual(unresolved, 2)
+        self.assertEqual(unresolved, 0)
         self.assertNotIn(None, {item["franchise_id"] for item in entries})
 
     def test_missing_points_are_not_converted_to_zero(self) -> None:
@@ -79,7 +79,7 @@ class RecordsAggregationTests(unittest.TestCase):
         entries, unresolved = build_records.build_playoff_results(self.playoffs["playoffs"], self.identities)
         greendale = next(item for item in entries if item["franchise_id"] == "greendale-human-beings")
         self.assertEqual((greendale["wins"], greendale["losses"], greendale["appearances"]), (3, 3, 4))
-        self.assertEqual(unresolved, 1)
+        self.assertEqual(unresolved, 0)
 
     def test_partial_coverage_never_claims_all_time(self) -> None:
         payload = build_records.build_payload(

@@ -2,8 +2,9 @@
 
 Milestone 5 migrates the public Road to Glory league-history archive into local,
 structured Jekyll data and collection-backed season pages. The Google Site was
-reviewed in the browser on 2026-08-31. This record distinguishes facts visible
-in the source from mappings or narratives that remain unresolved.
+reviewed in the browser on 2026-08-31 and supplemented by the commissioner
+source archive on 2026-09-03. This record distinguishes source facts from
+editorial narrative that remains unavailable.
 
 ## Migration status
 
@@ -13,8 +14,8 @@ in the source from mappings or narratives that remain unresolved.
 - Playoff games represented: **16**
 - Locally preserved history assets: **16**
 - Season routes: **4** (`/history/2021/` through `/history/2024/`)
-- Stable franchise joins resolved: **44 of 46 standings rows**
-- Unique historical display names still unresolved: **2**
+- Stable franchise joins resolved: **46 of 46 standings rows**
+- Unique historical display names still unresolved: **0**
 
 The final rank in the Yahoo captures reflects the completed season, including
 playoff placement. It is not assumed to be the playoff seed. Seeds come from the
@@ -79,21 +80,20 @@ canonical name or an already verified alias from the franchise migration.
 | Vegas Vandals | `vegas-vandals` | Exact canonical name |
 | Broncos Country Let's Ride | `vegas-vandals` | Commissioner-confirmed historical continuity |
 | Dilly Dilly | `buffalo-bravado` | Commissioner-confirmed historical continuity |
+| The Swagger Daggers | `buffalo-bravado` | Commissioner-provided 2021 draft-order crosswalk |
+| Matthew's Optimal Team | `vegas-vandals` | Commissioner-provided 2021 draft-order crosswalk |
 
 Commissioner-confirmed historical names are retained as canonical aliases.
 Quahog results link to the current New Jersey Giants stable identity while the
 historical display name remains unchanged. The Savage Huns remains linked to its
 retired-franchise profile.
 
-## Unresolved historical identities
+## Commissioner-confirmed 2021 crosswalk
 
-| Display name | Season(s) | What is known | Missing proof |
-|---|---:|---|---|
-| The Swagger Daggers | 2021 | Final rank, playoff seed, semifinal loss | Verified continuity to a canonical franchise/owner |
-| Matthew's Optimal Team | 2021 | Final rank and season statistics | Verified continuity to a canonical franchise/owner |
-
-These two 2021 rows retain the source display name and a null `franchise_id`. A zero,
-guessed modern ID, or inferred alias would incorrectly create historical joins.
+The 2021 draft-order text identifies Vegas Vandals in the same opening slot
+occupied by Matthew's Optimal Team in Yahoo, and Buffalo Bravado in the slot
+occupied by The Swagger Daggers. Those paired source records establish the two
+remaining continuity joins without changing their historical display names.
 
 Quahog Stripes is part of New Jersey Giants franchise history for 2021–2022 and
 is not counted as a separate franchise.
@@ -159,8 +159,6 @@ internal asset/link target.
 
 ## Items requiring commissioner verification
 
-- Map the two unresolved historical display names to stable franchises, or
-  confirm that they should remain season-only identities.
 - Confirm the 2023 quarterfinal-winner lane ordering shown inconsistently by the
   source graphic.
 - Resolve the 2024 champion PF/PA label conflict if another authoritative export

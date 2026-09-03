@@ -75,13 +75,12 @@ editorial decisions, and unresolved fields.
   optional franchise IDs, nullable scores, winner, and a source note. Unpublished
   scores remain `null`; a third-place or consolation game is absent unless sourced.
 - `drafts.yml`: one source-backed draft per year with nullable date/location,
-  observed draft type, round/team counts, ordered opening slots, local result
-  assets, optional board/recap assets, notes, and pick-data status. Each order
-  entry preserves `display_name_that_year`; verified joins use a stable
-  `franchise_id` and `mapping_status: resolved`, while uncertain identities use
-  `franchise_id: null` and `mapping_status: unresolved`. Image-only selections
-  remain `picks: null` with `pick_data_status: image_only_unverified` until an
-  authoritative export can be checked. See [Draft Migration](DRAFT_MIGRATION.md).
+  observed draft type, round/team counts, ordered opening slots, local source
+  assets, notes, and pick-data status. Each order entry preserves
+  `display_name_that_year` while resolved joins use a stable `franchise_id`.
+  The 2022–2025 entries point to complete structured Yahoo boards at
+  `_data/generated/history/{year}/draft.json`; 2021 remains explicitly
+  `image_only_unverified`. See [Draft Migration](DRAFT_MIGRATION.md).
 - `records.yml`: typed coverage definitions for career, season, playoff, game,
   streak, and bench domains. Every category declares its output type,
   `coverage_status`, whether calculation is allowed, source type/years/files,
@@ -216,7 +215,8 @@ Its `coverage_scopes` object separates source windows by metric type:
 
 - `season_level_metrics` is labelled `Verified 2021–2025` and allows final
   standings, W-L-T, PF/PA, final rank, playoff seed, verified championships, and
-  resolved franchise season summaries. Unresolved identities remain unlinked.
+  resolved franchise season summaries. All currently represented identities
+  resolve; the null mapping policy remains fail-closed for future unknown names.
 - `weekly_derived_metrics` is labelled `Verified 2022–2025` and allows only
   results derived from complete weekly matchups, including head-to-head, weekly
   scoring and margins, season-bounded result streaks, and detailed playoff games.
@@ -261,7 +261,7 @@ Raw HTML lives only under ignored `.cache/yahoo-history/`. See
 `_data/generated/records/` contains nine deterministic schema-versioned files:
 
 - `manifest.json`: coverage windows, file inventory, source/exclusion counts,
-  unresolved-identity policy, and the disabled bench-record flag.
+  identity-mapping policy, and the disabled bench-record flag.
 - `head_to_head.json`: resolved franchise pairs, series totals, points, averages,
   largest/closest/highest meetings, current streak, playoff totals, and recent games.
 - `biggest_wins.json` and `closest_games.json`: Top 10 overall, regular-season,

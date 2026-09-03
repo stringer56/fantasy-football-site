@@ -20,7 +20,7 @@ class DraftDataValidationTests(unittest.TestCase):
         output = io.StringIO()
         with contextlib.redirect_stdout(output):
             validate_draft_data.main()
-        self.assertIn("Validated 4 drafts", output.getvalue())
+        self.assertIn("Validated 5 drafts", output.getvalue())
 
     def test_duplicate_draft_slot_is_rejected(self) -> None:
         datasets = copy.deepcopy(self.datasets)
@@ -32,16 +32,19 @@ class DraftDataValidationTests(unittest.TestCase):
 
     def test_unresolved_mapping_cannot_hide_a_franchise_id(self) -> None:
         datasets = copy.deepcopy(self.datasets)
-        unresolved = next(
-            entry
-            for draft in datasets["drafts.yml"]["drafts"]
-            for entry in draft["draft_order"]
-            if entry["mapping_status"] == "unresolved"
-        )
-        unresolved["franchise_id"] = "maine-moose"
+        unresolved = datasets["drafts.yml"]["drafts"][0]["draft_order"][0]
+        unresolved["mapping_status"] = "unresolved"
 
         with mock.patch.object(validate_draft_data, "load", side_effect=datasets.__getitem__):
             with self.assertRaisesRegex(SystemExit, "unresolved mapping must have a null franchise_id"):
+                validate_draft_data.main()
+
+    def test_structured_pick_count_must_match_verified_board(self) -> None:
+        datasets = copy.deepcopy(self.datasets)
+        datasets["drafts.yml"]["drafts"][0]["pick_count"] = 179
+
+        with mock.patch.object(validate_draft_data, "load", side_effect=datasets.__getitem__):
+            with self.assertRaisesRegex(SystemExit, "structured pick count"):
                 validate_draft_data.main()
 
 

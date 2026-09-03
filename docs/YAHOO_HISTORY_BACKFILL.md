@@ -35,7 +35,7 @@ all-time label:
 
 | Season | League key | Standings | Weekly archive | Scored matchups | Draft | Transactions | Franchise mapping |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| 2021 | `406.l.12928` | 10/10 commissioner-supplied Yahoo | Yahoo weekly routes require sign-in | 0 | Image-only / unverified picks | 0 | 8 resolved, 2 unresolved |
+| 2021 | `406.l.12928` | 10/10 commissioner-supplied Yahoo | Yahoo weekly routes require sign-in | 0 | Image-only / unverified picks | 0 | 10 resolved |
 | 2022 | `414.l.527645` | 12/12 | 16/16 weeks | 92 | 180 picks | 337 | 12 resolved |
 | 2023 | `423.l.161807` | 12/12 | 16/16 weeks | 92 | 180 picks | 283 | 12 resolved |
 | 2024 | `449.l.761310` | 12/12 | 16/16 weeks | 92 | 180 picks | 259 | 12 resolved |
@@ -74,9 +74,9 @@ evidence is stored separately from automated archive output and remains
 explicitly source-labelled:
 
 - All 10 Yahoo team IDs and final standings rows are recovered. Every W-L-T and
-  PF/PA value agrees with the existing Google Site/canonical table. Eight teams
-  map to canonical franchises; The Swagger Daggers and Matthew's Optimal Team
-  remain unresolved.
+  PF/PA value agrees with the existing Google Site/canonical table. All ten
+  teams map to canonical franchises through verified names or the commissioner
+  draft-order crosswalk.
 - Yahoo explicitly confirms Albany Kneelers first, The Savage Huns second, and
   The Swagger Daggers third. Other final placement values remain null.
 - Fourteen regular-season games per team plus the verified semifinal and final
@@ -93,14 +93,13 @@ and conservative recap features with its existing provenance under the label
 **Verified 2021–2025**. It must not enter weekly head-to-head, margin, scoring,
 or streak calculations. Those features retain the label **Verified 2022–2025**.
 
-## Unresolved identities
+## Historical identity crosswalk
 
 Commissioner confirmation resolves Dilly Dilly to Buffalo Bravado, Broncos
 Country Let’s Ride to Vegas Vandals, and Quahog Stripes to New Jersey Giants.
-Their weekly results and draft picks preserve the exact historical names while
-using the stable franchise IDs. The commissioner-supplied 2021 Yahoo team keys
-still preserve The Swagger Daggers and Matthew's Optimal Team as unresolved
-rather than guessing their franchise continuity.
+Their results and draft orders preserve the exact historical names while using
+stable franchise IDs. The 2021 draft-order crosswalk additionally resolves The
+Swagger Daggers to Buffalo Bravado and Matthew's Optimal Team to Vegas Vandals.
 
 ## Storage model
 
@@ -220,7 +219,7 @@ record book.
 
 - 2021 detailed archive content redirects automated requests to Yahoo sign-in;
   its recovery level remains C.
-- Two 2021 historical identities remain unresolved; all 2022–2025 weekly teams resolve.
+- All recovered historical identities resolve; 2021 weekly scoreboards remain unavailable.
 - Postseason matchup lane/consolation classification is not inferred.
 - Historical rosters and player points are not verified.
 - 2026 is current and intentionally excluded from completed-season backfill.

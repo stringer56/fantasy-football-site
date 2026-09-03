@@ -123,8 +123,8 @@ def main() -> None:
         errors.append("franchise archive must render exactly 1 historical identity card")
     if history_page.count('class="season-archive-card"') != 4:
         errors.append("history archive must render exactly 4 season cards")
-    if drafts_page.count('class="draft-season-card"') != 4:
-        errors.append("draft archive must render exactly 4 draft cards")
+    if drafts_page.count('class="draft-season-card"') != 5:
+        errors.append("draft archive must render exactly 5 draft cards")
     if cup_page.count("<article>") != 4:
         errors.append("Brew Crew Cup page must render exactly 4 champion entries")
     for expected in (
@@ -210,6 +210,13 @@ def main() -> None:
             errors.append(f"draft page {route} did not render every order entry")
         if rendered.count("Open full size") != len(draft["results_assets"]):
             errors.append(f"draft page {route} did not render every result asset")
+        if draft.get("order_asset") and Path(draft["order_asset"]["path"]).name not in rendered:
+            errors.append(f"draft page {route} did not render its commissioner order asset")
+        if draft.get("pick_data_status") == "verified_structured":
+            if rendered.count('class="draft-round"') != draft["rounds"]:
+                errors.append(f"draft page {route} did not render every structured round")
+            if rendered.count("<tbody>") != draft["rounds"] or rendered.count("<tr>") < draft["pick_count"]:
+                errors.append(f"draft page {route} did not render the complete structured board")
     for franchise in franchise_data["franchises"]:
         route = f"/{'retired' if franchise['status'] == 'retired' else 'teams'}/{franchise['slug']}/"
         profile = route_target(route).read_text(encoding="utf-8")

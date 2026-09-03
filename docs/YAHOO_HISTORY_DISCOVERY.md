@@ -146,11 +146,10 @@ The public history pages expose complete 12-team link sets for 2022–2026. The
 commissioner confirmed on 2026-09-03 that Dilly Dilly continues as Buffalo
 Bravado, Broncos Country Let’s Ride continues as Vegas Vandals, Albany Kneelers
 now uses the name Albany Redskins, and Quahog Stripes continues as New Jersey
-Giants. Those confirmations resolve all 12 teams in 2022–2026 without changing
-stable franchise IDs. The
-commissioner-supplied 2021 Yahoo table provides all 10 historical team keys;
-eight resolve, while The Swagger Daggers and Matthew's Optimal Team retain null
-candidate franchise IDs.
+Giants. The commissioner source archive also pairs the 2021 draft slots for The
+Swagger Daggers and Matthew's Optimal Team with Buffalo Bravado and Vegas
+Vandals respectively. All recovered 2021–2026 team identities now resolve
+without changing historical display names or stable franchise IDs.
 
 Quahog Stripes is mapped to stable franchise ID `new-jersey-giants` for 2021
 and 2022. The source name remains visible in historical results and its archive

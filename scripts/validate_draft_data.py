@@ -2,14 +2,20 @@
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPECTED_YEARS = {2021, 2022, 2023, 2024}
+EXPECTED_YEARS = {2021, 2022, 2023, 2024, 2025}
 VALID_MAPPING_STATUSES = {"resolved", "unresolved"}
+VALID_STATUSES = {
+    "source_verified_images",
+    "source_verified_structured",
+    "source_verified_images_and_structured",
+}
 
 
 def load(name: str) -> dict:
@@ -42,7 +48,7 @@ def main() -> None:
     season_years = {item.get("year") for item in seasons}
     years = [item.get("year") for item in drafts]
     if set(years) != EXPECTED_YEARS or len(years) != len(set(years)):
-        errors.append("draft years must contain 2021-2024 exactly once")
+        errors.append("draft years must contain 2021-2025 exactly once")
 
     resolved_count = 0
     unresolved_count = 0
@@ -53,17 +59,19 @@ def main() -> None:
         if not isinstance(year, int):
             errors.append(f"{label}: year must be an integer")
             continue
-        if year not in season_years:
+        if year not in season_years and draft.get("status") != "source_verified_structured":
             errors.append(f"{year}: corresponding season record is missing")
         route = ROOT / "_drafts" / f"{year}.md"
         if not route.is_file() or f"permalink: /drafts/{year}/" not in route.read_text(encoding="utf-8"):
             errors.append(f"{year}: collection route /drafts/{year}/ is missing")
-        if draft.get("status") != "source_verified_images":
+        if draft.get("status") not in VALID_STATUSES:
             errors.append(f"{year}: unsupported status {draft.get('status')!r}")
-        if not str(draft.get("source_url") or "").startswith(
-            "https://sites.google.com/view/road-to-glory-ffl/"
-        ):
-            errors.append(f"{year}: public Google source URL is required")
+        source_url = str(draft.get("source_url") or "")
+        if not source_url.startswith((
+            "https://sites.google.com/view/road-to-glory-ffl/",
+            "https://football.fantasysports.yahoo.com/",
+        )):
+            errors.append(f"{year}: approved public source URL is required")
         if draft.get("draft_date") == "" or draft.get("location") == "":
             errors.append(f"{year}: unknown date/location must be null, never an empty string")
         if draft.get("draft_type") != "snake" or not str(draft.get("draft_type_note") or "").strip():
@@ -104,8 +112,12 @@ def main() -> None:
                     errors.append(f"{entry_label}: unresolved mapping must have a null franchise_id")
 
         assets = draft.get("results_assets")
-        if not isinstance(assets, list) or len(assets) != 3:
-            errors.append(f"{year}: exactly three result image assets are required")
+        has_result_images = draft.get("status") in {
+            "source_verified_images", "source_verified_images_and_structured"
+        }
+        expected_asset_count = 3 if has_result_images else 0
+        if not isinstance(assets, list) or len(assets) != expected_asset_count:
+            errors.append(f"{year}: expected {expected_asset_count} result image assets")
             assets = assets if isinstance(assets, list) else []
         asset_paths: set[str] = set()
         for asset in assets:
@@ -124,8 +136,29 @@ def main() -> None:
                 errors.append(f"{year}: unknown {optional_asset} must be null, never empty")
             elif value is not None and not local_asset(value, year):
                 errors.append(f"{year}: invalid {optional_asset} {value!r}")
-        if draft.get("pick_data_status") != "image_only_unverified" or draft.get("picks") is not None:
-            errors.append(f"{year}: unverified image-only pick data must remain explicitly null")
+        if draft.get("pick_data_status") == "image_only_unverified":
+            if draft.get("pick_data_status") != "image_only_unverified" or draft.get("picks") is not None:
+                errors.append(f"{year}: unverified image-only pick data must remain explicitly null")
+        else:
+            order_asset = draft.get("order_asset") or {}
+            if draft.get("status") == "source_verified_structured":
+                if not local_asset(order_asset.get("path"), year) or not str(order_asset.get("alt") or "").strip():
+                    errors.append(f"{year}: commissioner order asset and alt text are required")
+                else:
+                    asset_count += 1
+            raw_pick_path = draft.get("pick_data_path")
+            pick_path = ROOT / str(raw_pick_path or "")
+            if raw_pick_path != f"_data/generated/history/{year}/draft.json" or not pick_path.is_file():
+                errors.append(f"{year}: verified structured pick-data path is missing")
+            else:
+                payload = json.loads(pick_path.read_text(encoding="utf-8"))
+                picks = payload.get("picks") or []
+                if payload.get("season") != year or len(picks) != draft.get("pick_count"):
+                    errors.append(f"{year}: structured pick count or season does not match")
+                if payload.get("coverage", {}).get("status") != "complete_public_draft_board":
+                    errors.append(f"{year}: structured Yahoo draft board must be complete")
+            if draft.get("pick_data_status") != "verified_structured" or draft.get("picks") is not None:
+                errors.append(f"{year}: structured pick-data status is invalid")
         if not isinstance(draft.get("notes"), list) or not draft["notes"]:
             errors.append(f"{year}: source notes are required")
 

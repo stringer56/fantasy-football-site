@@ -506,6 +506,28 @@ a:hover { color: var(--navy-900); }
 .draft-season-card dl div { display: grid; gap: .15rem; }
 .draft-season-card dt { color: var(--slate-600); font-size: .6rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
 .draft-season-card dd { margin: 0; color: var(--navy-900); font-weight: 900; }
+.draft-board { display: grid; gap: var(--space-3); margin-top: var(--space-7); }
+.draft-round { overflow: hidden; border: 1px solid var(--slate-200); border-radius: var(--radius-md); background: var(--white); box-shadow: var(--shadow-sm); }
+.draft-round summary { display: flex; cursor: pointer; align-items: center; justify-content: space-between; padding: 1rem 1.2rem; color: var(--navy-900); font-family: var(--font-display); font-size: 1.25rem; letter-spacing: .02em; text-transform: uppercase; }
+.draft-round summary small { color: var(--slate-600); font-family: var(--font-body); font-size: .7rem; font-weight: 900; letter-spacing: .08em; }
+.draft-round[open] summary { border-bottom: 1px solid var(--slate-200); background: var(--navy-900); color: var(--white); }
+.draft-round[open] summary small { color: var(--gold-300); }
+.draft-round .table-scroll { margin: 0; }
+.draft-round table { margin: 0; }
+.draft-round th:first-child, .draft-round td:first-child { width: 5rem; text-align: center; }
+.cup-trophy-feature { display: grid; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; grid-template-columns: minmax(16rem, .8fr) minmax(0, 1.2fr); padding-block: clamp(3rem, 7vw, 6rem); }
+.cup-trophy-feature__photo { position: relative; margin: 0; overflow: hidden; border: .55rem solid var(--white); background: var(--navy-900); box-shadow: var(--shadow-lg); transform: rotate(-1deg); }
+.cup-trophy-feature__photo img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+.cup-trophy-feature__photo figcaption { padding: .85rem 1rem; background: var(--navy-900); color: var(--gold-300); font-size: .68rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.cup-trophy-feature__story h2 { max-width: 13ch; margin: .35rem 0 1.25rem; color: var(--navy-900); font-family: var(--font-display); font-size: clamp(2.7rem, 6vw, 5.5rem); line-height: .9; text-transform: uppercase; }
+.cup-trophy-feature__story > p:not(.eyebrow) { max-width: 43rem; color: var(--slate-700); font-size: 1.05rem; line-height: 1.75; }
+.cup-trophy-feature__facts { display: grid; gap: 1px; margin: 2rem 0 0; overflow: hidden; border: 1px solid var(--slate-200); background: var(--slate-200); grid-template-columns: repeat(3, 1fr); }
+.cup-trophy-feature__facts div { padding: 1rem; background: var(--white); }
+.cup-trophy-feature__facts dt { color: var(--slate-600); font-size: .62rem; font-weight: 900; letter-spacing: .09em; text-transform: uppercase; }
+.cup-trophy-feature__facts dd { margin: .35rem 0 0; color: var(--navy-900); font-weight: 900; }
+.cup-banner { overflow: hidden; padding-block: clamp(2rem, 5vw, 4rem); background: var(--navy-900); }
+.cup-banner img { display: block; width: min(100%, 58rem); max-height: 34rem; margin-inline: auto; border: .45rem solid rgba(255,255,255,.12); object-fit: cover; object-position: center 38%; box-shadow: var(--shadow-lg); }
+.cup-roll { padding-block: clamp(3rem, 7vw, 6rem); }
 .draft-hero { position: relative; isolation: isolate; overflow: hidden; background: radial-gradient(circle at 80% 18%, rgba(235, 196, 95, .16), transparent 27rem), linear-gradient(115deg, var(--navy-950), var(--navy-800)); color: var(--white); }
 .draft-hero::before { position: absolute; z-index: -1; right: -2vw; bottom: -7vw; color: rgba(255, 255, 255, .025); content: attr(data-year); font-family: var(--font-display); font-size: 26vw; line-height: .75; }
 .draft-hero__grid { display: grid; min-height: 40rem; align-items: center; gap: clamp(2rem, 7vw, 7rem); grid-template-columns: minmax(0, 1fr) minmax(20rem, .9fr); padding-block: clamp(4rem, 8vw, 7rem); }
@@ -857,6 +879,9 @@ a:hover { color: var(--navy-900); }
   .matchup-grid { grid-template-columns: 1fr; }
   .cup-feature { grid-template-columns: 1fr; }
   .cup-feature__mark { width: 10rem; }
+  .cup-trophy-feature { grid-template-columns: 1fr; }
+  .cup-trophy-feature__photo { width: min(100%, 28rem); margin-inline: auto; }
+  .cup-trophy-feature__facts { grid-template-columns: 1fr; }
   .page-hero__number { display: none; }
   .page-hero__inner { min-height: 20rem; }
   .team-directory-intro { align-items: start; flex-direction: column; }

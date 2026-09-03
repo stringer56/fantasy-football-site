@@ -138,12 +138,9 @@
         }
       },
       "franchise_mapping": {
-        "status": "partial",
-        "resolved": 8,
-        "unresolved_names": [
-          "Matthew's Optimal Team",
-          "The Swagger Daggers"
-        ],
+        "status": "complete",
+        "resolved": 10,
+        "unresolved_names": [],
         "yahoo_team_keys_recovered": 10
       },
       "weeks_expected": 16,
@@ -151,10 +148,7 @@
       "matchups_expected": null,
       "matchups_fetched": 0,
       "roster_weeks_fetched": 0,
-      "unresolved_franchise_mappings": [
-        "Matthew's Optimal Team",
-        "The Swagger Daggers"
-      ],
+      "unresolved_franchise_mappings": [],
       "confidence": "partial_mixed_verified_sources",
       "recovery_level": "C",
       "yahoo_route_status": "authentication_required",
