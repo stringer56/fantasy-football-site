@@ -189,7 +189,10 @@ franchise routes. See [Historical Narrative System](NARRATIVE_SYSTEM.md).
 Contains the sanitized output of the manual Yahoo historical discovery job:
 `generated_at`, `discovery_status`, verified season/game/league keys, safe
 league metadata, explicit renewal relationships, endpoint capability states,
-and season-scoped Yahoo-team-to-franchise mapping results. Unresolved candidate
+public Yahoo history URLs, the separately labeled commissioner-linked history
+chain, and season-scoped Yahoo-team-to-franchise mapping results. Capability
+values distinguish authenticated API probes from representative official public
+history pages; neither implies complete row-level ingestion. Unresolved candidate
 leagues and teams remain explicitly unresolved. OAuth data, account identifiers,
 invitation data, raw Yahoo responses, and authorization headers are prohibited.
 See [Yahoo Historical League Discovery](YAHOO_HISTORY_DISCOVERY.md).

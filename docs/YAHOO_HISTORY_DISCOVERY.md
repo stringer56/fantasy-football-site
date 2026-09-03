@@ -2,44 +2,61 @@
 
 ## Status
 
-Milestone 4.5 adds a manual, credential-safe discovery path for every Road to
-Glory FFL league available to the Yahoo account authorized by the repository.
-It does not change OAuth, publish raw Yahoo responses, or perform a full
-historical import.
+Milestone 4.5 now has two deliberately separate discovery paths: the existing
+credential-safe Yahoo API probe and the commissioner-linked public Yahoo League
+History archive. Neither path changes OAuth, publishes raw Yahoo responses, or
+performs a full historical import.
 
-The ordered live retest on 2026-09-02 confirms that Yahoo's refresh-token
+The latest ordered live retest on 2026-09-03 confirms that Yahoo's refresh-token
 exchange succeeds. The first Fantasy API request—Yahoo's documented
-logged-in-user NFL teams resource—still returns HTTP 403, with no safe Yahoo
-error code in the response. Per the required stop rule, the job did not request the NFL game
-resource, the configured 2026 alias, either known historical key, or user
-league enumeration after that failure.
+logged-in-user NFL teams resource—still returns HTTP 403. Per the stop rule, the
+job does not attempt later authenticated resources after that failure.
 
-The committed manifest therefore reports **authorization blocked**. Its 2024
-and 2025 identities remain supported by earlier sanitized repository evidence;
-the retest did not recover new Yahoo data. No credential value, authorization
-header, request URL, token response, error body, or raw API response was printed
-or saved.
+The commissioner created the public custom league URL `rtgffl264552026` and
+linked the Road to Glory seasons in Yahoo's League History tool. Those official
+Yahoo pages independently resolve the exact 2021–2026 league IDs and expose
+representative standings, team, matchup, roster, draft, and transaction pages.
+Yahoo rate-limited the 2021 capability probe, so that season's identity is
+verified while its page-level coverage remains unclassified. No credential
+value, authorization header, token response, private commissioner information,
+or raw Yahoo page was printed or saved.
 
 ## Verified seasons and safe league keys
 
 | Season | Game key | Yahoo league key | League ID | Verification evidence |
 |---:|---:|---|---:|---|
+| 2021 | `406` | `406.l.12928` | `12928` | Commissioner-provided Yahoo archive URL and linked custom history route. |
+| 2022 | `414` | `414.l.527645` | `527645` | Official Yahoo custom history page resolved the underlying league ID. |
+| 2023 | `423` | `423.l.161807` | `161807` | Official Yahoo custom history page resolved the underlying league ID. |
 | 2024 | `449` | `449.l.761310` | `761310` | The preserved authenticated 2025 metadata names `449_761310` as the prior league in its `renew` field. |
 | 2025 | `461` | `461.l.103926` | `103926` | The committed sanitized league/team/standings snapshot is from Road To Glory FFL. |
-| 2026 | Unresolved | Unresolved | `26455` in configured alias only | Not tested in the ordered retest because the authenticated user Fantasy resource failed first; the alias is not recorded as a global season key. |
+| 2026 | `470` | `470.l.26455` | `26455` | Official current league page exposes game ID 470 and league ID 26455. |
 
-The earliest verified Yahoo season is currently **2024** and the latest is
-**2025**. This is the earliest verified season available from repository
-evidence, not a claim that the authenticated account exposes nothing earlier.
-A live user/game enumeration is required to answer that conclusively.
+The earliest linked and verified Yahoo season is **2021** and the latest is
+**2026**. The year-qualified 2020 route did not resolve to a Road to Glory league.
 
 ## Renewal chain
 
-The verified portion is:
+Yahoo renewal metadata previously verified this portion:
 
 ```text
 449.l.761310 (2024) -> 461.l.103926 (2025)
 ```
+
+The commissioner-linked Yahoo League History chain is broader:
+
+```text
+406.l.12928 (2021)
+  -> 414.l.527645 (2022)
+  -> 423.l.161807 (2023)
+  -> 449.l.761310 (2024)
+  -> 461.l.103926 (2025)
+  -> 470.l.26455 (2026)
+```
+
+The manifest keeps `renew_chain` limited to relationships proven by Yahoo
+renewal metadata and records the complete UI-linked sequence separately as
+`linked_history_chain`.
 
 The script starts from the configured current alias, resolves it while
 authenticated, and follows only explicit Yahoo `renew` and `renewed`
@@ -57,9 +74,12 @@ exist for a correctly authorized Fantasy Sports application/account.
 
 | Season | Metadata | Teams | Standings | Weekly matchups | Final playoff matchups | Rosters | Draft results | Transactions |
 |---:|---|---|---|---|---|---|---|---|
-| 2024 | Not tested — authorization stop | Not tested — authorization stop | Not tested — authorization stop | Not tested — authorization stop | Not tested — authorization stop | Not tested — authorization stop | Not tested — authorization stop | Not tested — authorization stop |
-| 2025 | Not tested; prior snapshot retained | Not tested; prior snapshot retained | Not tested; final snapshot retained | Not tested; commissioner-supplied playoff Weeks 14–16 retained | Not tested; seven-game bracket plus two byes retained | Not tested; prior Week 16 snapshot retained | Not tested — authorization stop | Not tested — authorization stop |
-| 2026 | Not tested — authorization stop | Not tested — authorization stop | Not tested — authorization stop | Not tested — authorization stop | Not tested — authorization stop | Not tested — authorization stop | Not tested — authorization stop | Not tested — authorization stop |
+| 2021 | Public history URL verified | Rate-limited | Rate-limited | Rate-limited | Rate-limited | Rate-limited | Rate-limited | Rate-limited |
+| 2022 | Public page available | 12 team links | Available | Week 1 available | Week 16 available | Sample roster/points available | Available | Available |
+| 2023 | Public page available | 12 team links | Available | Week 1 available | Week 16 available | Sample roster/points available | Available | Available |
+| 2024 | Public page available | 12 team links | Available | Week 1 available | Week 16 available | Sample roster/points available | Available | Available |
+| 2025 | Public page plus prior snapshot | 12 team links | Complete snapshot retained | Week 1 available | Complete seven-game bracket retained | Sample roster/points available | Available | Available |
+| 2026 | Public page available | 12 team links | Available | Week 1 page available | Not yet available | Sample roster available | Available | Available |
 
 On a successful authenticated run, the discovery job probes league metadata,
 teams, standings, the first weekly scoreboard, the final-week scoreboard, one
@@ -119,10 +139,18 @@ The existing 2025 key-based joins remain verified:
 | `461.l.103926.t.11` | Vegas Vandals | `vegas-vandals` | Verified |
 | `461.l.103926.t.12` | New Jersey Giants | `new-jersey-giants` | Verified |
 
-No 2024 or 2026 team list was recovered in this milestone. Those season joins,
-the two retired-franchise Yahoo histories, and any older Yahoo identities remain
-unresolved. The script leaves unmatched or ambiguous historical names with a
-null candidate franchise ID instead of using owner/name similarity as a guess.
+The public history pages expose complete 12-team link sets for 2022–2026. Name
+and key matching resolves 10 of 12 teams in 2022, 11 of 12 in 2023, all 12 in
+2024, all 12 in 2025, and 11 of 12 in 2026. The unresolved public identities are:
+
+- 2022: Broncos Country Let’s Ride and Dilly Dilly;
+- 2023: Broncos Country Let’s Ride; and
+- 2026: Albany Redskins.
+
+The 2026 name is not silently assigned to Albany Kneelers without explicit
+continuity evidence. The 2021 league identity is verified, but team-key
+extraction remains deferred because Yahoo returned HTTP 429. Unmatched names
+retain a null candidate franchise ID.
 
 ## Commissioner-confirmed 2025 playoff archive
 
@@ -186,26 +214,23 @@ Raw Yahoo responses are kept only in memory and are never written as artifacts.
 
 ## Recommended automated import strategy
 
-Before another live retest:
+The archive can now be backfilled without guessing league IDs:
 
-1. confirm the Yahoo developer application has private Fantasy Sports Read or
-   Read/Write permission;
-2. complete a fresh authorization-code consent from that same application while
-   signed into the Yahoo account that belongs to Road to Glory FFL;
-3. update `YAHOO_REFRESH_TOKEN` in GitHub Secrets with the refresh token from
-   that post-permission authorization-code exchange; do not paste it into Codex,
-   logs, commits, or artifacts;
-4. confirm `YAHOO_CLIENT_ID` and `YAHOO_CLIENT_SECRET` are from the same app and
-   keep `LEAGUE_KEY` as the existing public alias;
-5. run **Update Yahoo Data** to repeat the ordered user/game/league probes;
-6. after the user-level probe succeeds, verify the current 2026 alias and team
-   mappings;
-7. merge this milestone, then manually run **Discover Yahoo History**;
-8. review the sanitized season/key chain and unresolved same-name candidates;
-9. backfill standings and weekly scoreboards one verified season at a time;
-10. validate team identity and week completeness before importing rosters,
-   draft results, or transactions; and
-11. keep historical backfill manual rather than adding it to the six-hour
+1. merge this milestone and retain the exact six-season key map;
+2. build a manual, cached backfill job against the verified official Yahoo
+   archive pages while authenticated API access remains blocked;
+3. throttle requests, retry HTTP 429/5xx responses with backoff, and resume from
+   cached normalized checkpoints;
+4. import league standings and every weekly matchup before attempting derived
+   records;
+5. validate team identity and week completeness before importing rosters,
+   player scoring, draft results, or transactions;
+6. keep raw Yahoo HTML and private account data out of the repository;
+7. continue pursuing Fantasy Sports Read approval because the documented API is
+   the preferred durable source;
+8. after approval, rerun **Update Yahoo Data** and compare API-normalized output
+   against the public-history backfill; and
+9. keep historical retrieval manual rather than adding it to the six-hour
    current-season workflow.
 
 Milestone 5 should use **both** sources. Yahoo should supply structured standings,

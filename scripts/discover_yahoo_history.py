@@ -166,24 +166,18 @@ def stopped_authorization_manifest(
     payload["generated_at"] = (
         datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     )
-    payload["discovery_status"] = "authorization_blocked"
-    payload["access_status"] = access_status
+    payload["discovery_status"] = "public_history_verified_api_authorization_blocked"
+    payload["access_status"] = {**payload["access_status"], **access_status}
     payload["authorization_probes"] = probes
     for season in payload["seasons"]:
-        season["verification_status"] = "verified_repository_evidence_live_retest_blocked"
-        season["capabilities"] = {
-            name: "not_tested_due_authorization_stop" for name in CAPABILITY_NAMES
-        }
-    payload["unresolved_candidates"] = [{
-        "season": 2026,
-        "configured_alias": "nfl.l.26455",
-        "verification_status": "not_tested_due_authorization_stop",
-    }]
+        season["verification_status"] = "verified_public_yahoo_history_api_retest_blocked"
+    payload["unresolved_candidates"] = []
     payload["notes"] = [
         f"Live retest stopped after {failed_operation} failed, as required by the authorization stop rule.",
         "No later Yahoo Fantasy resources or historical leagues were enumerated in this run.",
         "Only HTTP status and an allowlisted Yahoo error code, when available, were retained.",
-        "Previously verified 2024 and 2025 repository evidence remains preserved.",
+        "Official public Yahoo league-history routes independently verify the 2021 through 2026 league identities.",
+        "Public capability probes are preserved separately from the blocked authenticated API probes.",
     ]
     errors = validate_safe_output(payload)
     if errors:
@@ -400,7 +394,7 @@ def discover_live(request_delay: float) -> dict[str, Any]:
                     "season", "game_key", "league_key", "league_id", "league_name",
                     "number_of_teams", "draft_status", "current_week", "start_date",
                     "end_date", "start_week", "end_week", "finished",
-                    "previous_league_key", "next_league_key",
+                    "previous_league_key", "next_league_key", "public_history_url", "source",
                 )
             }
 
@@ -419,7 +413,14 @@ def discover_live(request_delay: float) -> dict[str, Any]:
             continue
         metadata_access = known_access.get(key)
         if metadata_access and metadata_access.startswith(("http_", "error_")):
-            capabilities = {name: metadata_access for name in CAPABILITY_NAMES}
+            capabilities = dict(next(
+                (
+                    row.get("capabilities") or {}
+                    for row in baseline["seasons"]
+                    if row["league_key"] == key
+                ),
+                {name: metadata_access for name in CAPABILITY_NAMES},
+            ))
             mappings = list(
                 next(
                     (row.get("team_mappings") or [] for row in baseline["seasons"] if row["league_key"] == key),
@@ -478,77 +479,134 @@ def discover_live(request_delay: float) -> dict[str, Any]:
 
 
 def build_committed_baseline() -> dict[str, Any]:
-    """Build the honest pre-live baseline from previously sanitized evidence."""
+    """Build the honest baseline from sanitized repository and Yahoo history evidence."""
 
     franchises = load_franchises()
-    mappings = []
-    for franchise in franchises:
-        yahoo = franchise.get("yahoo") or {}
-        key = (yahoo.get("team_keys") or {}).get("2025")
-        name = (yahoo.get("team_names") or {}).get("2025")
-        if key:
-            mappings.append(
-                safe_team_mapping(
-                    season=2025,
-                    team_key=key,
-                    team_name=name,
-                    franchises=franchises,
-                )
+    public_teams = {
+        2022: [
+            (1, "Van Cortlant Rangers"), (2, "Albany Kneelers"),
+            (3, "Chris's Crazy Team"), (4, "Greendale Human Beings"),
+            (5, "Broncos Country Let’s Ride"), (6, "Quahog Stripes"),
+            (7, "The Baseball Furies"), (8, "THE SAVAGE HUNS"),
+            (9, "Dilly Dilly"), (10, "Turnbull AC’s"),
+            (11, "Ayahuasca Rush"), (12, "Maine Moose"),
+        ],
+        2023: [
+            (1, "Van Cortlant Rangers"), (2, "Albany Kneelers"),
+            (3, "Ayahuasca Rush"), (4, "Broncos Country Let’s Ride"),
+            (5, "Chris's Crazy Team"), (6, "Buffalo Bravados"),
+            (7, "Greendale Human Beings"), (8, "Maine Moose"),
+            (9, "North town Ninnyhammers"), (10, "The Baseball Furies"),
+            (11, "THE SAVAGE HUNS"), (12, "Turnbull AC’s"),
+        ],
+        2024: [
+            (1, "Van Cortlant Rangers"), (2, "Albany Kneelers"),
+            (3, "Ayahuasca Rush"), (4, "Vegas Vandals"),
+            (5, "Chris's Crazy Team"), (6, "Buffalo Bravados"),
+            (7, "Greendale Human Beings"), (8, "Maine Moose"),
+            (9, "The Baseball Furies"), (10, "THE SAVAGE HUNS"),
+            (11, "Turnbull AC’s"), (12, "North town Ninnyhammers"),
+        ],
+        2025: [
+            (1, "Van Cortlant Rangers"), (2, "Albany Kneelers"),
+            (3, "Ayahuasca Rush"), (4, "Buffalo Bravados"),
+            (5, "Chris's Crazy Team"), (6, "Greendale Human Beings"),
+            (7, "Maine Moose"), (8, "North town Ninnyhammers"),
+            (9, "The Baseball Furies"), (10, "Turnbull AC’s"),
+            (11, "Vegas Vandals"), (12, "New Jersey Giants"),
+        ],
+        2026: [
+            (1, "Van Cortlant Rangers"), (2, "Albany Redskins"),
+            (3, "Ayahuasca Rush"), (4, "Buffalo Bravados"),
+            (5, "Chris's Crazy Team"), (6, "Greendale Human Beings"),
+            (7, "Maine Moose"), (8, "New Jersey Giants"),
+            (9, "North town Ninnyhammers"), (10, "The Baseball Furies"),
+            (11, "Turnbull AC’s"), (12, "Vegas Vandals"),
+        ],
+    }
+    identities = [
+        (2021, "406", "12928", 10),
+        (2022, "414", "527645", 12),
+        (2023, "423", "161807", 12),
+        (2024, "449", "761310", 12),
+        (2025, "461", "103926", 12),
+        (2026, "470", "26455", 12),
+    ]
+    seasons: list[dict[str, Any]] = []
+    for index, (season, game_key, league_id, team_count) in enumerate(identities):
+        league_key = f"{game_key}.l.{league_id}"
+        if season == 2021:
+            capabilities = {
+                "league_metadata": "available_public_history",
+                **{
+                    name: "not_tested_due_yahoo_rate_limit"
+                    for name in CAPABILITY_NAMES
+                    if name != "league_metadata"
+                },
+            }
+        else:
+            capabilities = {name: "available_public_history" for name in CAPABILITY_NAMES}
+            if season == 2026:
+                capabilities["final_playoff_matchups"] = "not_yet_available_current_season"
+        mappings = [
+            safe_team_mapping(
+                season=season,
+                team_key=f"{league_key}.t.{team_id}",
+                team_name=team_name,
+                franchises=franchises,
             )
-    base_capabilities = {
-        name: "not_tested_due_authorization_stop" for name in CAPABILITY_NAMES
-    }
-    season_2024 = {
-        "season": 2024,
-        "game_key": "449",
-        "league_key": "449.l.761310",
-        "league_id": "761310",
-        "league_name": EXPECTED_LEAGUE_NAME,
-        "number_of_teams": None,
-        "start_date": None,
-        "end_date": None,
-        "finished": True,
-        "previous_league_key": None,
-        "next_league_key": "461.l.103926",
-        "verification_status": "verified_repository_evidence_live_retest_blocked",
-        "capabilities": dict(base_capabilities),
-        "team_mappings": [],
-        "archive_coverage": None,
-    }
-    season_2025 = {
-        "season": 2025,
-        "game_key": "461",
-        "league_key": "461.l.103926",
-        "league_id": "103926",
-        "league_name": EXPECTED_LEAGUE_NAME,
-        "number_of_teams": 12,
-        "start_date": "2025-09-04",
-        "end_date": "2025-12-22",
-        "finished": True,
-        "previous_league_key": "449.l.761310",
-        "next_league_key": None,
-        "verification_status": "verified_repository_evidence_live_retest_blocked",
-        "capabilities": dict(base_capabilities),
-        "team_mappings": sorted(mappings, key=lambda row: row["yahoo_team_key"] or ""),
-        "archive_coverage": {
-            "standings": "complete_snapshot",
-            "playoffs": "complete_championship_bracket",
-            "playoff_weeks": [14, 15, 16],
-            "scored_playoff_games": 7,
-            "playoff_byes": 2,
-            "source_file": "_data/generated/history/2025/playoffs.json",
-        },
-    }
+            for team_id, team_name in public_teams.get(season, [])
+        ]
+        archive_coverage = local_archive_coverage(season)
+        if season == 2025:
+            archive_coverage = {
+                "standings": "complete_snapshot",
+                "playoffs": "complete_championship_bracket",
+                "playoff_weeks": [14, 15, 16],
+                "scored_playoff_games": 7,
+                "playoff_byes": 2,
+                "source_file": "_data/generated/history/2025/playoffs.json",
+            }
+        seasons.append({
+            "season": season,
+            "game_key": game_key,
+            "league_key": league_key,
+            "league_id": league_id,
+            "league_name": EXPECTED_LEAGUE_NAME,
+            "number_of_teams": team_count,
+            "start_date": "2025-09-04" if season == 2025 else None,
+            "end_date": "2025-12-22" if season == 2025 else None,
+            "finished": season < 2026,
+            "previous_league_key": (
+                f"{identities[index - 1][1]}.l.{identities[index - 1][2]}"
+                if index else None
+            ),
+            "next_league_key": (
+                f"{identities[index + 1][1]}.l.{identities[index + 1][2]}"
+                if index + 1 < len(identities) else None
+            ),
+            "public_history_url": (
+                "https://football.fantasysports.yahoo.com/league/"
+                f"rtgffl264552026/{season}"
+            ),
+            "source": "commissioner_linked_official_yahoo_history",
+            "verification_status": "verified_public_yahoo_history_api_retest_blocked",
+            "capabilities": capabilities,
+            "team_mappings": mappings,
+            "archive_coverage": archive_coverage,
+        })
     payload = {
         "schema_version": SCHEMA_VERSION,
-        "generated_at": "2026-09-03T02:49:55Z",
-        "discovery_status": "authorization_blocked",
+        "generated_at": "2026-09-03T18:15:00Z",
+        "discovery_status": "public_history_verified_api_authorization_blocked",
         "access_status": {
             "oauth_refresh": "succeeded",
             "authenticated_user_fantasy_resource": "http_403",
             "nfl_fantasy_game_resource": "not_tested_due_stop_rule",
             "configured_alias_resolution": "not_tested_due_stop_rule",
             "historical_enumeration": "not_tested_due_stop_rule",
+            "public_history_routes": "succeeded_2021_2026",
+            "public_history_capability_probes": "complete_except_2021_rate_limited",
         },
         "authorization_probes": [
             {
@@ -559,21 +617,21 @@ def build_committed_baseline() -> dict[str, Any]:
             }
         ],
         "expected_league_name": EXPECTED_LEAGUE_NAME,
-        "seasons": [season_2024, season_2025],
+        "seasons": seasons,
         "renew_chain": ["449.l.761310", "461.l.103926"],
-        "unresolved_candidates": [
-            {
-                "season": 2026,
-                "configured_alias": "nfl.l.26455",
-                "verification_status": "not_tested_due_authorization_stop",
-            }
+        "linked_history_chain": [
+            f"{game_key}.l.{league_id}"
+            for _, game_key, league_id, _ in identities
         ],
+        "unresolved_candidates": [],
         "missing_renewal_links": [],
         "notes": [
             "Live retest stopped after authenticated_user_fantasy_resource failed, as required by the authorization stop rule.",
-            "No later Yahoo Fantasy resources or historical leagues were enumerated in this run.",
+            "Official public Yahoo league-history routes verify the linked 2021 through 2026 league identities.",
+            "The renew_chain field retains only relationships verified from Yahoo renewal metadata; linked_history_chain records commissioner-linked seasons.",
+            "Public capability values prove representative pages are available, not that every historical row has been imported.",
+            "The 2021 identity is verified, but its capability probes remain deferred because Yahoo returned HTTP 429.",
             "Only HTTP status and an allowlisted Yahoo error code, when available, were retained.",
-            "Previously verified 2024 and 2025 repository evidence remains preserved.",
         ],
     }
     errors = validate_safe_output(payload)

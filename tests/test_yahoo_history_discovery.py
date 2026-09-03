@@ -130,7 +130,21 @@ class YahooHistoryDiscoveryTests(unittest.TestCase):
         second = build_committed_baseline()
         self.assertEqual(first, second)
         self.assertEqual(validate_safe_output(first), [])
-        self.assertEqual([row["season"] for row in first["seasons"]], [2024, 2025])
+        self.assertEqual(
+            [row["season"] for row in first["seasons"]],
+            [2021, 2022, 2023, 2024, 2025, 2026],
+        )
+        self.assertEqual(
+            first["linked_history_chain"],
+            [
+                "406.l.12928",
+                "414.l.527645",
+                "423.l.161807",
+                "449.l.761310",
+                "461.l.103926",
+                "470.l.26455",
+            ],
+        )
         self.assertEqual(first["access_status"]["oauth_refresh"], "succeeded")
         self.assertEqual(
             first["access_status"]["authenticated_user_fantasy_resource"],
@@ -141,14 +155,36 @@ class YahooHistoryDiscoveryTests(unittest.TestCase):
             ["authenticated_user_fantasy_resource"],
         )
         self.assertFalse(first["authorization_probes"][0]["success"])
+        season_2021 = first["seasons"][0]
+        self.assertEqual(
+            season_2021["capabilities"]["weekly_matchups"],
+            "not_tested_due_yahoo_rate_limit",
+        )
         self.assertTrue(all(
-            value == "not_tested_due_authorization_stop"
-            for season in first["seasons"]
+            value == "available_public_history"
+            for season in first["seasons"][1:5]
             for value in season["capabilities"].values()
         ))
-        mappings = first["seasons"][1]["team_mappings"]
+        mappings = first["seasons"][4]["team_mappings"]
         self.assertEqual(len(mappings), 12)
         self.assertTrue(all(row["status"] == "verified" for row in mappings))
+
+    def test_public_history_team_mappings_do_not_guess_unknown_names(self):
+        baseline = build_committed_baseline()
+        season_2022 = next(row for row in baseline["seasons"] if row["season"] == 2022)
+        unresolved_2022 = {
+            row["yahoo_team_name"]
+            for row in season_2022["team_mappings"]
+            if row["status"] == "unresolved"
+        }
+        self.assertEqual(unresolved_2022, {"Broncos Country Let’s Ride", "Dilly Dilly"})
+        season_2026 = next(row for row in baseline["seasons"] if row["season"] == 2026)
+        albany = next(
+            row for row in season_2026["team_mappings"]
+            if row["yahoo_team_name"] == "Albany Redskins"
+        )
+        self.assertEqual(albany["status"], "unresolved")
+        self.assertIsNone(albany["candidate_franchise_id"])
 
     def test_api_http_failures_are_sanitized(self):
         response = Mock(status_code=403, headers={"Content-Type": "application/json"})

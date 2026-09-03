@@ -286,6 +286,8 @@ def safe_league(row: Mapping[str, Any], *, verification_status: str) -> dict[str
         "finished": row.get("finished"),
         "previous_league_key": row.get("previous_league_key"),
         "next_league_key": row.get("next_league_key"),
+        "public_history_url": row.get("public_history_url"),
+        "source": row.get("source"),
         "verification_status": verification_status,
         "capabilities": {
             name: (row.get("capabilities") or {}).get(name, "not_probed")
