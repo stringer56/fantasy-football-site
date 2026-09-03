@@ -8,7 +8,7 @@ description: Road to Glory FFL seasons, standings, playoffs, championships, and 
 {% include page-hero.html eyebrow="The complete story" title="League History" description="Season standings, playoff brackets, championship stories, and defining moments from across Road to Glory history." compact=true %}
 
 <section class="shell-content">
-  <div class="history-intro"><div><p class="eyebrow">Four seasons. Four champions.</p><h2>Every Road Leaves a Record</h2><p>The archive preserves verified final standings, playoff paths, title-game scores, and original league artwork from 2021 through 2024.</p></div><a class="button button--gold" href="{{ '/cup/' | relative_url }}">See the Cup roll of honor</a></div>
+  <div class="history-intro"><div><p class="eyebrow">Five seasons. Four champions.</p><h2>Every Road Leaves a Record</h2><p>The archive preserves verified final standings, playoff paths, title-game scores, weekly results where available, and approved league artwork from 2021 through 2025.</p></div><a class="button button--gold" href="{{ '/cup/' | relative_url }}">See the Cup roll of honor</a></div>
 
   {% assign seasons = site.data.seasons.seasons | sort: "year" | reverse %}
   <div class="season-archive-grid">

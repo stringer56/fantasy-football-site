@@ -19,7 +19,7 @@ description: The history and championship tradition of the Road to Glory FFL Bre
     <p>The champion’s name and team are engraved on the trophy before the Cup travels to its new home. It stays with the winner until the next champion claims it, turning every season into another chapter of the same league tradition.</p>
     <dl class="cup-trophy-feature__facts">
       <div><dt>Introduced</dt><dd>2021</dd></div>
-      <div><dt>First four seasons</dt><dd>4 different champions</dd></div>
+      <div><dt>First five seasons</dt><dd>4 different champions</dd></div>
       <div><dt>Tradition</dt><dd>Engraved &amp; shipped to the winner</dd></div>
     </dl>
   </div>

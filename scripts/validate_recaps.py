@@ -78,6 +78,9 @@ def check_provenance(
             errors.append(f"{label}: unsupported all-time language")
         for claim, pattern in FORBIDDEN_CLAIM_PATTERNS.items():
             if re.search(pattern, prose, flags=re.IGNORECASE):
+                fact_types = {fact.get("fact_type") for fact in entry.get("facts_used") or []}
+                if claim == "closest game" and fact_types & {"closest_game", "verified_weekly_metrics"}:
+                    continue
                 errors.append(f"{label}: unsupported {claim} language")
 
 
@@ -288,8 +291,27 @@ def main() -> None:
         "fewest_wins", "championship_score", "team_count",
     }
     for year, stat_ids in number_ids.items():
-        if stat_ids != required_numbers:
+        expected_numbers = set(required_numbers)
+        if year == 2025:
+            expected_numbers.update({
+                "highest_weekly_score", "lowest_weekly_score", "biggest_victory",
+                "closest_game", "highest_combined_score", "longest_winning_streak",
+            })
+        if stat_ids != expected_numbers:
             errors.append(f"by_the_numbers/{year}: supported canonical fields are incomplete")
+
+    season_2025 = next((item for item in season_recaps if item.get("season") == 2025), None)
+    if season_2025:
+        weekly = season_2025.get("weekly_archive") or {}
+        if weekly.get("week_count") != 16 or weekly.get("matchup_count") != 92:
+            errors.append("season-2025: weekly archive must contain 16 weeks and 92 matchups")
+        if len(weekly.get("weeks") or []) != 16:
+            errors.append("season-2025: every week must be represented")
+        if len(season_2025.get("paragraphs") or []) < 3 or len(season_2025.get("paragraphs") or []) > 6:
+            errors.append("season-2025: season narrative must contain 3-6 paragraphs")
+    recaps_2025 = [item for item in collections["team_recaps"] if item.get("season") == 2025]
+    if len(recaps_2025) != 12 or any(not item.get("weekly_metrics") for item in recaps_2025):
+        errors.append("2025: all 12 franchises require verified weekly mini-recap metrics")
 
     override_keys: set[tuple[Any, ...]] = set()
     for kind in ("season_recaps", "team_recaps", "playoff_recaps", "championship_recaps"):

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from numbers import Real
 from pathlib import Path
 
@@ -9,8 +10,8 @@ import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPECTED_YEARS = {2021, 2022, 2023, 2024}
-VALID_ROUNDS = {"Quarterfinal", "Semifinal", "Championship"}
+EXPECTED_YEARS = {2021, 2022, 2023, 2024, 2025}
+VALID_ROUNDS = {"Quarterfinal", "Semifinal", "Championship", "Third Place Game", "Fifth Place Game"}
 
 
 def load(name: str) -> dict:
@@ -62,7 +63,7 @@ def main() -> None:
         ("playoff", [item.get("season") for item in playoffs]),
     ):
         if set(values) != EXPECTED_YEARS or len(values) != len(set(values)):
-            errors.append(f"{label} years must contain 2021-2024 exactly once")
+            errors.append(f"{label} years must contain 2021-2025 exactly once")
 
     for year in sorted(EXPECTED_YEARS):
         season = season_by_year.get(year) or {}
@@ -83,17 +84,27 @@ def main() -> None:
         if season.get("runner_up_display_name") != champion.get("runner_up_display_name"):
             errors.append(f"{year}: runner-up display names do not agree")
 
-        for field in (
-            "standings_asset",
-            "bracket_asset",
-            "championship_portrait_asset",
-            "championship_matchup_asset",
-        ):
-            if not local_asset(season.get(field)):
-                errors.append(f"{year}: missing or invalid {field}: {season.get(field)!r}")
-        if champion.get("bracket_path") != season.get("bracket_asset"):
+        if season.get("data_mode") == "detailed":
+            if season.get("status_label") != "Complete":
+                errors.append(f"{year}: detailed season must be labelled Complete")
+            if season.get("bracket_path") != f"/history/{year}/#bracket":
+                errors.append(f"{year}: data-driven bracket path must resolve to the season bracket")
+            week_path = ROOT / str(season.get("weeks_data_path") or "")
+            if not week_path.is_file():
+                errors.append(f"{year}: detailed season weeks_data_path is missing")
+        else:
+            for field in (
+                "standings_asset",
+                "bracket_asset",
+                "championship_portrait_asset",
+                "championship_matchup_asset",
+            ):
+                if not local_asset(season.get(field)):
+                    errors.append(f"{year}: missing or invalid {field}: {season.get(field)!r}")
+        season_bracket = season.get("bracket_path") or season.get("bracket_asset")
+        if champion.get("bracket_path") != season_bracket:
             errors.append(f"{year}: champion bracket path differs from season record")
-        if playoff.get("bracket_path") != season.get("bracket_asset"):
+        if playoff.get("bracket_path") != season_bracket:
             errors.append(f"{year}: playoff bracket path differs from season record")
         if champion.get("season_path") != f"/history/{year}/":
             errors.append(f"{year}: champion season_path must be /history/{year}/")
@@ -168,11 +179,33 @@ def main() -> None:
             if {final.get("team_one_score"), final.get("team_two_score")} != expected_scores:
                 errors.append(f"{year}: championship scores do not match playoff final")
 
+        if year == 2025:
+            source_standings = json.loads((ROOT / "_data/generated/history/2025/standings.json").read_text(encoding="utf-8"))
+            source_rows = {row["franchise_id"]: row for row in source_standings["standings"]}
+            if len(standings) != 12 or set(source_rows) != {row.get("franchise_id") for row in standings}:
+                errors.append("2025: standings must contain the 12 verified Yahoo franchises")
+            for row in standings:
+                source = source_rows.get(row.get("franchise_id"), {})
+                for field in ("rank", "wins", "losses", "ties", "win_percentage", "points_for", "points_against", "playoff_seed"):
+                    if row.get(field) != source.get(field):
+                        errors.append(f"2025 {row.get('franchise_id')}: {field} differs from Yahoo standings")
+            field = playoff.get("playoff_field") or []
+            if len(field) != 6 or [item.get("seed") for item in field] != list(range(1, 7)):
+                errors.append("2025: playoff field must contain verified seeds 1-6")
+            weeks = json.loads((ROOT / "_data/generated/history/2025/weeks.json").read_text(encoding="utf-8"))
+            if weeks.get("coverage", {}).get("recovered_weeks") != list(range(1, 17)):
+                errors.append("2025: all 16 verified weeks are required")
+            matchups = [game for week in weeks.get("weeks") or [] for game in week.get("matchups") or []]
+            if len(matchups) != 92:
+                errors.append("2025: expected 92 verified matchup rows")
+            if any(game.get("verified") is not True or game.get("team_a", {}).get("score") is None or game.get("team_b", {}).get("score") is None for game in matchups):
+                errors.append("2025: every matchup must be verified with both final scores")
+
     if errors:
         raise SystemExit("History validation failed:\n- " + "\n- ".join(errors))
     standings_count = sum(len(item["standings"]) for item in seasons)
     game_count = sum(len(item["games"]) for item in playoffs)
-    print(f"Validated 4 seasons, 4 champions, {standings_count} standings rows, {game_count} playoff games, routes, references, scores, and local assets")
+    print(f"Validated 5 seasons, 5 championship results, {standings_count} standings rows, {game_count} playoff games, routes, references, scores, and approved presentation assets")
 
 
 if __name__ == "__main__":

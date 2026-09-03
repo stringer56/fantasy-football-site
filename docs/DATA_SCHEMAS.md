@@ -70,6 +70,11 @@ editorial decisions, and unresolved fields.
   champion references, and ordered final standings. Each standings row keeps the
   source-season display name plus a stable `franchise_id` when verified; unresolved
   identities use `null`, never `0` or a guessed join.
+  A season with complete weekly Yahoo coverage may set `data_mode: detailed`,
+  `status_label: Complete`, `weeks_data_path`, and a data-driven `bracket_path`.
+  Its standings rows may also include verified `win_percentage`, `playoff_seed`,
+  and `playoff_finish` values. Seasons without these fields retain the archival
+  image presentation.
 - `playoffs.yml`: one record per season with a local bracket and structured games.
   Games include a stable game ID, actual source round, order, seeds, display names,
   optional franchise IDs, nullable scores, winner, and a source note. Unpublished
@@ -154,7 +159,7 @@ Contains deterministic record-book output: `generated_at`, archive coverage,
 typed leaderboards, single-season records, unavailable-category states, and an
 empty bench-blunder structure. Every published group carries `source_type`,
 `source_years`, `source_files`, `coverage_status`, `last_generated`, and notes.
-Partial groups use the label `Verified 2021–2024`; unavailable groups contain no
+Partial groups use the label `Verified 2021–2025`; unavailable groups contain no
 record values.
 
 ### Voting outputs

@@ -87,6 +87,18 @@ class HistoricalMetricsTests(unittest.TestCase):
         self.assertEqual("Verified 2021–2025", payloads["franchise_summaries"]["season_level_coverage"]["label"])
         self.assertEqual("Verified 2022–2025", payloads["head_to_head"]["coverage"]["label"])
 
+    def test_canonical_championship_is_not_duplicated_by_archive_fallback(self) -> None:
+        facts = metrics.championship_facts()
+        self.assertEqual([2021, 2022, 2023, 2024, 2025], [item["season"] for item in facts])
+        self.assertEqual(2, sum(item["champion_franchise_id"] == "greendale-human-beings" for item in facts))
+        self.assertEqual(
+            3,
+            sum(
+                "albany-kneelers" in (item["champion_franchise_id"], item["runner_up_franchise_id"])
+                for item in facts
+            ),
+        )
+
     def test_duplicate_matchup_ids_are_rejected(self) -> None:
         with mock.patch.object(metrics, "WEEKLY_YEARS", [2022, 2022]):
             with self.assertRaisesRegex(ValueError, "duplicate matchup_id"):

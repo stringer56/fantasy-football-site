@@ -2,12 +2,13 @@
   "schema_version": 1,
   "generated_at": "2026-08-31T00:00:00Z",
   "coverage": {
-    "label": "Verified 2021–2024 archive",
+    "label": "Verified 2021–2025 archive",
     "source_years": [
       2021,
       2022,
       2023,
-      2024
+      2024,
+      2025
     ],
     "unresolved_standings_rows": 0,
     "unresolved_playoff_participants": 0,
@@ -26,68 +27,23 @@
           2021,
           2022,
           2023,
-          2024
+          2024,
+          2025
         ],
         "source_files": [
           "_data/seasons.yml",
           "_data/franchises.yml"
         ],
-        "coverage_status": "partial",
+        "coverage_status": "complete",
         "last_generated": "2026-08-31T00:00:00Z",
         "notes": [
-          "Five standings rows with unresolved identities are excluded from franchise totals.",
+          "All 58 standings rows resolve to canonical franchise identities.",
           "PF and PA include the 2024 standings-table values; a conflicting champions-page label remains under review."
         ]
       },
       "entries": [
         {
           "rank": 1,
-          "franchise_id": "albany-kneelers",
-          "display_name": "Albany Redskins",
-          "short_name": "Redskins",
-          "path": "/teams/albany-kneelers/",
-          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
-          "seasons": [
-            2021,
-            2022,
-            2023,
-            2024
-          ],
-          "wins": 35,
-          "losses": 19,
-          "ties": 0,
-          "points_for": 6705.12,
-          "points_against": 6111.74,
-          "championships": 1,
-          "runner_up_finishes": 1,
-          "seasons_counted": 4,
-          "win_pct": 0.648
-        },
-        {
-          "rank": 2,
-          "franchise_id": "turnbull-acs",
-          "display_name": "Turnbull AC's",
-          "short_name": "Turnbull",
-          "path": "/teams/turnbull-acs/",
-          "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
-          "seasons": [
-            2021,
-            2022,
-            2023,
-            2024
-          ],
-          "wins": 34,
-          "losses": 20,
-          "ties": 0,
-          "points_for": 6313.52,
-          "points_against": 5946.26,
-          "championships": 1,
-          "runner_up_finishes": 1,
-          "seasons_counted": 4,
-          "win_pct": 0.63
-        },
-        {
-          "rank": 2,
           "franchise_id": "greendale-human-beings",
           "display_name": "Greendale Human Beings",
           "short_name": "Human Beings",
@@ -97,17 +53,66 @@
             2021,
             2022,
             2023,
-            2024
+            2024,
+            2025
           ],
-          "wins": 34,
-          "losses": 20,
+          "wins": 44,
+          "losses": 23,
           "ties": 0,
-          "points_for": 6642.38,
-          "points_against": 5991.22,
-          "championships": 1,
+          "points_for": 8405.64,
+          "points_against": 7435.86,
+          "championships": 2,
           "runner_up_finishes": 0,
-          "seasons_counted": 4,
-          "win_pct": 0.63
+          "seasons_counted": 5,
+          "win_pct": 0.657
+        },
+        {
+          "rank": 2,
+          "franchise_id": "albany-kneelers",
+          "display_name": "Albany Redskins",
+          "short_name": "Redskins",
+          "path": "/teams/albany-kneelers/",
+          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+          "seasons": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+          ],
+          "wins": 43,
+          "losses": 24,
+          "ties": 0,
+          "points_for": 8178.0,
+          "points_against": 7570.16,
+          "championships": 1,
+          "runner_up_finishes": 2,
+          "seasons_counted": 5,
+          "win_pct": 0.642
+        },
+        {
+          "rank": 3,
+          "franchise_id": "turnbull-acs",
+          "display_name": "Turnbull AC's",
+          "short_name": "Turnbull",
+          "path": "/teams/turnbull-acs/",
+          "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
+          "seasons": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+          ],
+          "wins": 39,
+          "losses": 28,
+          "ties": 0,
+          "points_for": 7577.56,
+          "points_against": 7408.3,
+          "championships": 1,
+          "runner_up_finishes": 1,
+          "seasons_counted": 5,
+          "win_pct": 0.582
         },
         {
           "rank": 4,
@@ -119,20 +124,92 @@
           "seasons": [
             2022,
             2023,
-            2024
+            2024,
+            2025
           ],
-          "wins": 30,
-          "losses": 10,
+          "wins": 38,
+          "losses": 15,
           "ties": 0,
-          "points_for": 4859.68,
-          "points_against": 4255.82,
+          "points_for": 6289.24,
+          "points_against": 5653.08,
           "championships": 1,
           "runner_up_finishes": 0,
-          "seasons_counted": 3,
-          "win_pct": 0.75
+          "seasons_counted": 4,
+          "win_pct": 0.717
         },
         {
           "rank": 5,
+          "franchise_id": "van-cortlant-rangers",
+          "display_name": "Van Cortlant Rangers",
+          "short_name": "Rangers",
+          "path": "/teams/van-cortlant-rangers/",
+          "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
+          "seasons": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+          ],
+          "wins": 29,
+          "losses": 38,
+          "ties": 0,
+          "points_for": 7498.1,
+          "points_against": 7757.24,
+          "championships": 0,
+          "runner_up_finishes": 0,
+          "seasons_counted": 5,
+          "win_pct": 0.433
+        },
+        {
+          "rank": 6,
+          "franchise_id": "maine-moose",
+          "display_name": "Maine Moose",
+          "short_name": "Moose",
+          "path": "/teams/maine-moose/",
+          "identity_image": "/assets/img/franchises/maine-moose/identity.jpg",
+          "seasons": [
+            2022,
+            2023,
+            2024,
+            2025
+          ],
+          "wins": 28,
+          "losses": 25,
+          "ties": 0,
+          "points_for": 6268.08,
+          "points_against": 5954.0,
+          "championships": 0,
+          "runner_up_finishes": 0,
+          "seasons_counted": 4,
+          "win_pct": 0.528
+        },
+        {
+          "rank": 6,
+          "franchise_id": "crazy-wazs-team",
+          "display_name": "Crazy Waz's Team",
+          "short_name": "Crazy Waz",
+          "path": "/teams/crazy-wazs-team/",
+          "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
+          "seasons": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+          ],
+          "wins": 28,
+          "losses": 39,
+          "ties": 0,
+          "points_for": 7651.04,
+          "points_against": 7785.38,
+          "championships": 0,
+          "runner_up_finishes": 1,
+          "seasons_counted": 5,
+          "win_pct": 0.418
+        },
+        {
+          "rank": 8,
           "franchise_id": "savage-huns",
           "display_name": "The Savage Huns",
           "short_name": "Savage Huns",
@@ -155,75 +232,7 @@
           "win_pct": 0.491
         },
         {
-          "rank": 6,
-          "franchise_id": "crazy-wazs-team",
-          "display_name": "Crazy Waz's Team",
-          "short_name": "Crazy Waz",
-          "path": "/teams/crazy-wazs-team/",
-          "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
-          "seasons": [
-            2021,
-            2022,
-            2023,
-            2024
-          ],
-          "wins": 25,
-          "losses": 29,
-          "ties": 0,
-          "points_for": 6456.32,
-          "points_against": 6310.1,
-          "championships": 0,
-          "runner_up_finishes": 1,
-          "seasons_counted": 4,
-          "win_pct": 0.463
-        },
-        {
-          "rank": 7,
-          "franchise_id": "van-cortlant-rangers",
-          "display_name": "Van Cortlant Rangers",
-          "short_name": "Rangers",
-          "path": "/teams/van-cortlant-rangers/",
-          "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
-          "seasons": [
-            2021,
-            2022,
-            2023,
-            2024
-          ],
-          "wins": 22,
-          "losses": 32,
-          "ties": 0,
-          "points_for": 5948.34,
-          "points_against": 6310.9,
-          "championships": 0,
-          "runner_up_finishes": 0,
-          "seasons_counted": 4,
-          "win_pct": 0.407
-        },
-        {
           "rank": 8,
-          "franchise_id": "maine-moose",
-          "display_name": "Maine Moose",
-          "short_name": "Moose",
-          "path": "/teams/maine-moose/",
-          "identity_image": "/assets/img/franchises/maine-moose/identity.jpg",
-          "seasons": [
-            2022,
-            2023,
-            2024
-          ],
-          "wins": 21,
-          "losses": 19,
-          "ties": 0,
-          "points_for": 4825.84,
-          "points_against": 4496.86,
-          "championships": 0,
-          "runner_up_finishes": 0,
-          "seasons_counted": 3,
-          "win_pct": 0.525
-        },
-        {
-          "rank": 9,
           "franchise_id": "baseball-furies",
           "display_name": "The Baseball Furies",
           "short_name": "Furies",
@@ -233,17 +242,18 @@
             2021,
             2022,
             2023,
-            2024
+            2024,
+            2025
           ],
-          "wins": 20,
-          "losses": 34,
+          "wins": 26,
+          "losses": 41,
           "ties": 0,
-          "points_for": 5770.56,
-          "points_against": 6184.08,
+          "points_for": 7209.16,
+          "points_against": 7670.66,
           "championships": 0,
           "runner_up_finishes": 0,
-          "seasons_counted": 4,
-          "win_pct": 0.37
+          "seasons_counted": 5,
+          "win_pct": 0.388
         },
         {
           "rank": 10,
@@ -256,17 +266,18 @@
             2021,
             2022,
             2023,
-            2024
+            2024,
+            2025
           ],
-          "wins": 19,
-          "losses": 34,
+          "wins": 25,
+          "losses": 41,
           "ties": 1,
-          "points_for": 5868.58,
-          "points_against": 6503.7,
+          "points_for": 7362.18,
+          "points_against": 7929.64,
           "championships": 0,
           "runner_up_finishes": 0,
-          "seasons_counted": 4,
-          "win_pct": 0.361
+          "seasons_counted": 5,
+          "win_pct": 0.381
         },
         {
           "rank": 11,
@@ -279,17 +290,18 @@
             2021,
             2022,
             2023,
-            2024
+            2024,
+            2025
           ],
-          "wins": 17,
-          "losses": 37,
+          "wins": 23,
+          "losses": 44,
           "ties": 0,
-          "points_for": 5634.64,
-          "points_against": 6520.16,
+          "points_for": 7017.9,
+          "points_against": 7933.64,
           "championships": 0,
           "runner_up_finishes": 0,
-          "seasons_counted": 4,
-          "win_pct": 0.315
+          "seasons_counted": 5,
+          "win_pct": 0.343
         },
         {
           "rank": 12,
@@ -300,17 +312,18 @@
           "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
           "seasons": [
             2021,
-            2022
+            2022,
+            2025
           ],
-          "wins": 14,
-          "losses": 14,
+          "wins": 21,
+          "losses": 20,
           "ties": 0,
-          "points_for": 3106.04,
-          "points_against": 3152.7,
+          "points_for": 4635.82,
+          "points_against": 4670.38,
           "championships": 0,
           "runner_up_finishes": 0,
-          "seasons_counted": 2,
-          "win_pct": 0.5
+          "seasons_counted": 3,
+          "win_pct": 0.512
         },
         {
           "rank": 13,
@@ -321,17 +334,18 @@
           "identity_image": "/assets/img/franchises/north-town-ninnyhammers/identity.jpg",
           "seasons": [
             2023,
-            2024
+            2024,
+            2025
           ],
-          "wins": 12,
-          "losses": 14,
+          "wins": 17,
+          "losses": 22,
           "ties": 0,
-          "points_for": 2735.16,
-          "points_against": 2995.36,
+          "points_for": 4177.96,
+          "points_against": 4415.06,
           "championships": 0,
           "runner_up_finishes": 0,
-          "seasons_counted": 2,
-          "win_pct": 0.462
+          "seasons_counted": 3,
+          "win_pct": 0.436
         }
       ]
     },
@@ -344,7 +358,8 @@
           2021,
           2022,
           2023,
-          2024
+          2024,
+          2025
         ],
         "source_files": [
           "_data/champions.yml"
@@ -352,12 +367,21 @@
         "coverage_status": "complete",
         "last_generated": "2026-08-31T00:00:00Z",
         "notes": [
-          "All four champions are mapped to canonical franchises."
+          "All five championship results are mapped to canonical franchises."
         ]
       },
       "entries": [
         {
           "rank": 1,
+          "franchise_id": "greendale-human-beings",
+          "display_name": "Greendale Human Beings",
+          "short_name": "Human Beings",
+          "path": "/teams/greendale-human-beings/",
+          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+          "championships": 2
+        },
+        {
+          "rank": 2,
           "franchise_id": "turnbull-acs",
           "display_name": "Turnbull AC's",
           "short_name": "Turnbull",
@@ -366,16 +390,7 @@
           "championships": 1
         },
         {
-          "rank": 1,
-          "franchise_id": "greendale-human-beings",
-          "display_name": "Greendale Human Beings",
-          "short_name": "Human Beings",
-          "path": "/teams/greendale-human-beings/",
-          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
-          "championships": 1
-        },
-        {
-          "rank": 1,
+          "rank": 2,
           "franchise_id": "ayahuasca-rush",
           "display_name": "Ayahuasca Rush",
           "short_name": "Rush",
@@ -384,7 +399,7 @@
           "championships": 1
         },
         {
-          "rank": 1,
+          "rank": 2,
           "franchise_id": "albany-kneelers",
           "display_name": "Albany Redskins",
           "short_name": "Redskins",
@@ -403,7 +418,8 @@
           2021,
           2022,
           2023,
-          2024
+          2024,
+          2025
         ],
         "source_files": [
           "_data/champions.yml"
@@ -411,12 +427,21 @@
         "coverage_status": "complete",
         "last_generated": "2026-08-31T00:00:00Z",
         "notes": [
-          "All eight finalist slots are mapped to canonical franchises."
+          "All ten finalist slots are mapped to canonical franchises."
         ]
       },
       "entries": [
         {
           "rank": 1,
+          "franchise_id": "albany-kneelers",
+          "display_name": "Albany Redskins",
+          "short_name": "Redskins",
+          "path": "/teams/albany-kneelers/",
+          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+          "finals_appearances": 3
+        },
+        {
+          "rank": 2,
           "franchise_id": "turnbull-acs",
           "display_name": "Turnbull AC's",
           "short_name": "Turnbull",
@@ -425,16 +450,16 @@
           "finals_appearances": 2
         },
         {
-          "rank": 1,
-          "franchise_id": "albany-kneelers",
-          "display_name": "Albany Redskins",
-          "short_name": "Redskins",
-          "path": "/teams/albany-kneelers/",
-          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+          "rank": 2,
+          "franchise_id": "greendale-human-beings",
+          "display_name": "Greendale Human Beings",
+          "short_name": "Human Beings",
+          "path": "/teams/greendale-human-beings/",
+          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
           "finals_appearances": 2
         },
         {
-          "rank": 3,
+          "rank": 4,
           "franchise_id": "savage-huns",
           "display_name": "The Savage Huns",
           "short_name": "Savage Huns",
@@ -443,16 +468,7 @@
           "finals_appearances": 1
         },
         {
-          "rank": 3,
-          "franchise_id": "greendale-human-beings",
-          "display_name": "Greendale Human Beings",
-          "short_name": "Human Beings",
-          "path": "/teams/greendale-human-beings/",
-          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
-          "finals_appearances": 1
-        },
-        {
-          "rank": 3,
+          "rank": 4,
           "franchise_id": "crazy-wazs-team",
           "display_name": "Crazy Waz's Team",
           "short_name": "Crazy Waz",
@@ -461,7 +477,7 @@
           "finals_appearances": 1
         },
         {
-          "rank": 3,
+          "rank": 4,
           "franchise_id": "ayahuasca-rush",
           "display_name": "Ayahuasca Rush",
           "short_name": "Rush",
@@ -480,7 +496,8 @@
           2021,
           2022,
           2023,
-          2024
+          2024,
+          2025
         ],
         "source_files": [
           "_data/playoffs.yml",
@@ -490,13 +507,31 @@
         "last_generated": "2026-08-31T00:00:00Z",
         "notes": [
           "Wins and losses are counted from verified advancing teams even when scores are unavailable.",
-          "One 2021 playoff participant has no resolved franchise mapping and is excluded from franchise totals.",
+          "Placement games are excluded from championship-playoff win/loss totals.",
           "The 2023 bracket lane ambiguity does not change the verified winners used here."
         ]
       },
       "entries": [
         {
           "rank": 1,
+          "franchise_id": "greendale-human-beings",
+          "display_name": "Greendale Human Beings",
+          "short_name": "Human Beings",
+          "path": "/teams/greendale-human-beings/",
+          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+          "seasons": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+          ],
+          "wins": 5,
+          "losses": 3,
+          "appearances": 5
+        },
+        {
+          "rank": 2,
           "franchise_id": "turnbull-acs",
           "display_name": "Turnbull AC's",
           "short_name": "Turnbull",
@@ -513,23 +548,6 @@
         },
         {
           "rank": 2,
-          "franchise_id": "greendale-human-beings",
-          "display_name": "Greendale Human Beings",
-          "short_name": "Human Beings",
-          "path": "/teams/greendale-human-beings/",
-          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
-          "seasons": [
-            2021,
-            2022,
-            2023,
-            2024
-          ],
-          "wins": 3,
-          "losses": 3,
-          "appearances": 4
-        },
-        {
-          "rank": 3,
           "franchise_id": "albany-kneelers",
           "display_name": "Albany Redskins",
           "short_name": "Redskins",
@@ -537,11 +555,12 @@
           "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
           "seasons": [
             2021,
-            2023
+            2023,
+            2025
           ],
-          "wins": 3,
-          "losses": 1,
-          "appearances": 2
+          "wins": 4,
+          "losses": 2,
+          "appearances": 3
         },
         {
           "rank": 4,
@@ -553,11 +572,12 @@
           "seasons": [
             2022,
             2023,
-            2024
+            2024,
+            2025
           ],
-          "wins": 2,
-          "losses": 2,
-          "appearances": 3
+          "wins": 3,
+          "losses": 3,
+          "appearances": 4
         },
         {
           "rank": 5,
@@ -575,6 +595,22 @@
         },
         {
           "rank": 6,
+          "franchise_id": "maine-moose",
+          "display_name": "Maine Moose",
+          "short_name": "Moose",
+          "path": "/teams/maine-moose/",
+          "identity_image": "/assets/img/franchises/maine-moose/identity.jpg",
+          "seasons": [
+            2023,
+            2024,
+            2025
+          ],
+          "wins": 1,
+          "losses": 3,
+          "appearances": 3
+        },
+        {
+          "rank": 7,
           "franchise_id": "savage-huns",
           "display_name": "The Savage Huns",
           "short_name": "Savage Huns",
@@ -589,22 +625,22 @@
           "appearances": 2
         },
         {
-          "rank": 6,
-          "franchise_id": "maine-moose",
-          "display_name": "Maine Moose",
-          "short_name": "Moose",
-          "path": "/teams/maine-moose/",
-          "identity_image": "/assets/img/franchises/maine-moose/identity.jpg",
+          "rank": 7,
+          "franchise_id": "new-jersey-giants",
+          "display_name": "New Jersey Giants",
+          "short_name": "Giants",
+          "path": "/teams/new-jersey-giants/",
+          "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
           "seasons": [
-            2023,
-            2024
+            2022,
+            2025
           ],
           "wins": 1,
           "losses": 2,
           "appearances": 2
         },
         {
-          "rank": 8,
+          "rank": 9,
           "franchise_id": "buffalo-bravado",
           "display_name": "Buffalo Bravado",
           "short_name": "Bravado",
@@ -619,14 +655,14 @@
           "appearances": 2
         },
         {
-          "rank": 9,
-          "franchise_id": "new-jersey-giants",
-          "display_name": "New Jersey Giants",
-          "short_name": "Giants",
-          "path": "/teams/new-jersey-giants/",
-          "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
+          "rank": 10,
+          "franchise_id": "van-cortlant-rangers",
+          "display_name": "Van Cortlant Rangers",
+          "short_name": "Rangers",
+          "path": "/teams/van-cortlant-rangers/",
+          "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
           "seasons": [
-            2022
+            2025
           ],
           "wins": 0,
           "losses": 1,
@@ -643,7 +679,8 @@
           2021,
           2022,
           2023,
-          2024
+          2024,
+          2025
         ],
         "source_files": [
           "_data/playoffs.yml",
@@ -652,8 +689,8 @@
         "coverage_status": "partial",
         "last_generated": "2026-08-31T00:00:00Z",
         "notes": [
-          "Streaks cover only the verified 2021–2024 window.",
-          "One unresolved 2021 participant is excluded rather than assigned by assumption."
+          "Streaks cover only the verified 2021–2025 window.",
+          "All playoff participants resolve to canonical franchises."
         ]
       },
       "entries": [
@@ -664,12 +701,23 @@
           "short_name": "Human Beings",
           "path": "/teams/greendale-human-beings/",
           "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
-          "streak": 4,
+          "streak": 5,
           "start_year": 2021,
-          "end_year": 2024
+          "end_year": 2025
         },
         {
           "rank": 2,
+          "franchise_id": "ayahuasca-rush",
+          "display_name": "Ayahuasca Rush",
+          "short_name": "Rush",
+          "path": "/teams/ayahuasca-rush/",
+          "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+          "streak": 4,
+          "start_year": 2022,
+          "end_year": 2025
+        },
+        {
+          "rank": 3,
           "franchise_id": "turnbull-acs",
           "display_name": "Turnbull AC's",
           "short_name": "Turnbull",
@@ -680,26 +728,26 @@
           "end_year": 2024
         },
         {
-          "rank": 2,
-          "franchise_id": "ayahuasca-rush",
-          "display_name": "Ayahuasca Rush",
-          "short_name": "Rush",
-          "path": "/teams/ayahuasca-rush/",
-          "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
-          "streak": 3,
-          "start_year": 2022,
-          "end_year": 2024
-        },
-        {
-          "rank": 4,
+          "rank": 3,
           "franchise_id": "maine-moose",
           "display_name": "Maine Moose",
           "short_name": "Moose",
           "path": "/teams/maine-moose/",
           "identity_image": "/assets/img/franchises/maine-moose/identity.jpg",
-          "streak": 2,
+          "streak": 3,
           "start_year": 2023,
-          "end_year": 2024
+          "end_year": 2025
+        },
+        {
+          "rank": 5,
+          "franchise_id": "van-cortlant-rangers",
+          "display_name": "Van Cortlant Rangers",
+          "short_name": "Rangers",
+          "path": "/teams/van-cortlant-rangers/",
+          "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
+          "streak": 1,
+          "start_year": 2025,
+          "end_year": 2025
         },
         {
           "rank": 5,
@@ -769,7 +817,8 @@
           2021,
           2022,
           2023,
-          2024
+          2024,
+          2025
         ],
         "source_files": [
           "_data/seasons.yml"
@@ -869,7 +918,8 @@
           2021,
           2022,
           2023,
-          2024
+          2024,
+          2025
         ],
         "source_files": [
           "_data/seasons.yml",
@@ -909,18 +959,18 @@
           "format": "points",
           "holders": [
             {
-              "year": 2023,
-              "season_path": "/history/2023/",
-              "franchise_id": "baseball-furies",
-              "historical_team_name": "The Baseball Furies",
-              "display_name": "The Baseball Furies",
-              "path": "/teams/baseball-furies/",
-              "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
+              "year": 2025,
+              "season_path": "/history/2025/",
+              "franchise_id": "crazy-wazs-team",
+              "historical_team_name": "Chris's Crazy Team",
+              "display_name": "Crazy Waz's Team",
+              "path": "/teams/crazy-wazs-team/",
+              "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
               "source": {
                 "file": "_data/seasons.yml",
-                "year": 2023
+                "year": 2025
               },
-              "value": 1266.66
+              "value": 1194.72
             }
           ]
         },
@@ -980,7 +1030,8 @@
           2021,
           2022,
           2023,
-          2024
+          2024,
+          2025
         ],
         "source_files": [
           "_data/playoffs.yml"
@@ -988,7 +1039,7 @@
         "coverage_status": "unavailable",
         "last_generated": "2026-08-31T00:00:00Z",
         "notes": [
-          "Twelve non-final playoff games have verified winners but no published scores."
+          "Twelve 2021–2024 non-final playoff games have verified winners but no published scores; 2025 is complete."
         ]
       },
       "entries": []
@@ -1035,7 +1086,8 @@
           2021,
           2022,
           2023,
-          2024
+          2024,
+          2025
         ],
         "source_files": [
           "_data/playoffs.yml",

@@ -21,7 +21,7 @@ class RecordsAggregationTests(unittest.TestCase):
             self.seasons["seasons"], self.champions["champions"], self.identities
         )
         albany = next(item for item in entries if item["franchise_id"] == "albany-kneelers")
-        self.assertEqual((albany["wins"], albany["losses"], albany["ties"]), (35, 19, 0))
+        self.assertEqual((albany["wins"], albany["losses"], albany["ties"]), (43, 24, 0))
 
     def test_win_percentage_accounts_for_ties(self) -> None:
         self.assertEqual(build_records.calculate_win_pct(4, 5, 1), 0.45)
@@ -32,14 +32,15 @@ class RecordsAggregationTests(unittest.TestCase):
             self.champions["champions"], self.identities
         )
         self.assertEqual(len(titles), 4)
-        self.assertTrue(all(item["rank"] == 1 and item["championships"] == 1 for item in titles))
+        greendale = next(item for item in titles if item["franchise_id"] == "greendale-human-beings")
+        self.assertEqual((greendale["rank"], greendale["championships"]), (1, 2))
 
     def test_finals_appearance_counts(self) -> None:
         _, finals = build_records.build_championship_leaderboards(
             self.champions["champions"], self.identities
         )
         leaders = {item["franchise_id"]: item["finals_appearances"] for item in finals}
-        self.assertEqual(leaders["albany-kneelers"], 2)
+        self.assertEqual(leaders["albany-kneelers"], 3)
         self.assertEqual(leaders["turnbull-acs"], 2)
 
     def test_single_season_points_for_record(self) -> None:
@@ -68,17 +69,18 @@ class RecordsAggregationTests(unittest.TestCase):
 
     def test_missing_points_are_not_converted_to_zero(self) -> None:
         seasons = copy.deepcopy(self.seasons["seasons"])
-        seasons[0]["standings"][0]["points_for"] = None
-        seasons[0]["standings"][0]["points_against"] = None
+        row = next(item for item in seasons[0]["standings"] if item["franchise_id"] == "turnbull-acs")
+        row["points_for"] = None
+        row["points_against"] = None
         entries, _ = build_records.build_career_totals(seasons, self.champions["champions"], self.identities)
         turnbull = next(item for item in entries if item["franchise_id"] == "turnbull-acs")
-        self.assertEqual(turnbull["points_for"], 4703.42)
-        self.assertEqual(turnbull["points_against"], 4520.68)
+        self.assertEqual(turnbull["points_for"], 6313.52)
+        self.assertEqual(turnbull["points_against"], 5946.26)
 
     def test_missing_playoff_scores_do_not_prevent_verified_results(self) -> None:
         entries, unresolved = build_records.build_playoff_results(self.playoffs["playoffs"], self.identities)
         greendale = next(item for item in entries if item["franchise_id"] == "greendale-human-beings")
-        self.assertEqual((greendale["wins"], greendale["losses"], greendale["appearances"]), (3, 3, 4))
+        self.assertEqual((greendale["wins"], greendale["losses"], greendale["appearances"]), (5, 3, 5))
         self.assertEqual(unresolved, 0)
 
     def test_partial_coverage_never_claims_all_time(self) -> None:
