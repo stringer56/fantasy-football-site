@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import difflib
 import json
 from collections import defaultdict
 from pathlib import Path
@@ -464,6 +465,13 @@ def main() -> None:
     if args.check:
         stale = [name for name, payload in payloads.items() if not (OUTPUT_ROOT / f"{name}.json").is_file() or (OUTPUT_ROOT / f"{name}.json").read_text(encoding="utf-8") != serialized(payload)]
         if stale:
+            for name in stale:
+                path = OUTPUT_ROOT / f"{name}.json"
+                committed = path.read_text(encoding="utf-8").splitlines() if path.is_file() else []
+                expected = serialized(payloads[name]).splitlines()
+                preview = list(difflib.unified_diff(committed, expected, fromfile=f"committed/{name}.json", tofile=f"generated/{name}.json", lineterm=""))[:24]
+                if preview:
+                    print("\n".join(preview))
             raise SystemExit(f"Historical metrics are stale: {', '.join(stale)}")
         print(f"Historical metrics are current: {len(payloads)} files")
         return
