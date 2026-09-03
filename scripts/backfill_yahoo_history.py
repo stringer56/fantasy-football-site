@@ -39,6 +39,46 @@ PLAYOFF_START = {2021: 15, 2022: 15, 2023: 14, 2024: 14, 2025: 14}
 DEFAULT_SECTIONS = {"league", "standings", "matchups", "draft", "transactions"}
 
 
+def coverage_scopes() -> dict[str, dict[str, Any]]:
+    """Return the verified metric windows exposed to downstream builders."""
+    return {
+        "season_level_metrics": {
+            "label": "Verified 2021–2025",
+            "source_years": [2021, 2022, 2023, 2024, 2025],
+            "coverage_status": "verified_with_mapping_exclusions",
+            "allowed_metrics": [
+                "final_standings",
+                "season_wins_losses_ties",
+                "season_points_for_against",
+                "final_rank",
+                "playoff_seed",
+                "verified_championships",
+                "resolved_franchise_season_summaries",
+            ],
+            "mapping_policy": (
+                "Unresolved historical identities remain season-level rows but are excluded "
+                "from franchise-level aggregation."
+            ),
+        },
+        "weekly_derived_metrics": {
+            "label": "Verified 2022–2025",
+            "source_years": [2022, 2023, 2024, 2025],
+            "coverage_status": "complete_weekly_results_for_listed_years",
+            "allowed_metrics": [
+                "head_to_head",
+                "largest_margin",
+                "smallest_winning_margin",
+                "weekly_scoring_highs_lows",
+                "matchup_margins",
+                "weekly_win_loss_streaks",
+                "detailed_playoff_matchup_metrics",
+            ],
+            "excluded_years": [2021],
+            "exclusion_reason": "No 2021 Yahoo weekly matchup results were recovered.",
+        },
+    }
+
+
 def utc_now() -> str:
     return dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
@@ -559,6 +599,7 @@ def main() -> None:
         "generated_at": generated_at,
         "source": "official_yahoo_public_archive",
         "scope": {"league_started": 2021, "completed_seasons": sorted(COMPLETED_SEASONS)},
+        "coverage_scopes": coverage_scopes(),
         "seasons": summaries,
         "failures": failures,
         "publication_policy": "Only verified normalized rows may unlock derived records; partial and unavailable categories remain labeled.",

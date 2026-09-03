@@ -12,6 +12,52 @@
       2025
     ]
   },
+  "coverage_scopes": {
+    "season_level_metrics": {
+      "label": "Verified 2021–2025",
+      "source_years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "coverage_status": "verified_with_mapping_exclusions",
+      "allowed_metrics": [
+        "final_standings",
+        "season_wins_losses_ties",
+        "season_points_for_against",
+        "final_rank",
+        "playoff_seed",
+        "verified_championships",
+        "resolved_franchise_season_summaries"
+      ],
+      "mapping_policy": "Unresolved historical identities remain season-level rows but are excluded from franchise-level aggregation."
+    },
+    "weekly_derived_metrics": {
+      "label": "Verified 2022–2025",
+      "source_years": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "coverage_status": "complete_weekly_results_for_listed_years",
+      "allowed_metrics": [
+        "head_to_head",
+        "largest_margin",
+        "smallest_winning_margin",
+        "weekly_scoring_highs_lows",
+        "matchup_margins",
+        "weekly_win_loss_streaks",
+        "detailed_playoff_matchup_metrics"
+      ],
+      "excluded_years": [
+        2021
+      ],
+      "exclusion_reason": "No 2021 Yahoo weekly matchup results were recovered."
+    }
+  },
   "seasons": [
     {
       "season": 2021,

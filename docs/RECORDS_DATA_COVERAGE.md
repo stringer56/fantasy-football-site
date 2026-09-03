@@ -1,5 +1,24 @@
 # Records Data Coverage
 
+## Post-backfill coverage gates
+
+The normalized Yahoo history now exposes two distinct source windows for the
+next records aggregation milestone:
+
+- **Season-level metrics: Verified 2021–2025.** This scope can support final
+  standings, W-L-T, PF/PA, final rank, playoff seed, verified championships, and
+  resolved franchise season summaries. The Swagger Daggers and Matthew's Optimal
+  Team remain unresolved in 2021 and cannot be assigned to franchise totals.
+- **Weekly-derived metrics: Verified 2022–2025.** This scope can support
+  head-to-head, largest wins, closest games, weekly scoring highs/lows, matchup
+  margins, weekly result streaks, and detailed playoff matchup metrics. It must
+  not include 2021 because that season has no recovered weekly scoreboards.
+
+The current public record output below remains the Milestone 7 baseline until a
+dedicated derived-history aggregation milestone consumes and validates these new
+scopes. It must not be silently relabelled, and neither scope may be called
+all-time.
+
 Milestone 7 audits every available structured input before publishing the first
 Road to Glory record book. Coverage is limited to the verified 2021–2024 archive;
 the word “all-time” is not used for any generated category.

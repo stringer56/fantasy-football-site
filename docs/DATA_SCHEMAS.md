@@ -212,6 +212,18 @@ Yahoo imports. It records each season and category as `complete`, `partial`,
 failures. A downstream builder must not publish an unsupported category merely
 because a file exists.
 
+Its `coverage_scopes` object separates source windows by metric type:
+
+- `season_level_metrics` is labelled `Verified 2021–2025` and allows final
+  standings, W-L-T, PF/PA, final rank, playoff seed, verified championships, and
+  resolved franchise season summaries. Unresolved identities remain unlinked.
+- `weekly_derived_metrics` is labelled `Verified 2022–2025` and allows only
+  results derived from complete weekly matchups, including head-to-head, weekly
+  scoring and margins, season-bounded result streaks, and detailed playoff games.
+  It explicitly excludes 2021.
+
+These scopes must never be collapsed into a single all-time label.
+
 The 2021 entry additionally records `recovery_level`, `yahoo_route_status`,
 sanitized public `routes_checked`, and source-labelled fallbacks. Commissioner-
 supplied Yahoo standings provide all ten team keys and final rows; the Google

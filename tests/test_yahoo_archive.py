@@ -21,7 +21,7 @@ from yahoo_archive import (  # noqa: E402
     parse_transactions,
     next_transaction_offset,
 )
-from backfill_yahoo_history import apply_2021_canonical_fallback  # noqa: E402
+from backfill_yahoo_history import apply_2021_canonical_fallback, coverage_scopes  # noqa: E402
 
 
 FIXTURES = ROOT / "tests" / "fixtures" / "yahoo_archive"
@@ -203,6 +203,17 @@ class YahooArchiveParserTests(unittest.TestCase):
             ["Matthew's Optimal Team", "The Swagger Daggers"],
             result["unresolved_franchise_mappings"],
         )
+
+    def test_coverage_scopes_keep_season_and_weekly_windows_separate(self) -> None:
+        scopes = coverage_scopes()
+        season_scope = scopes["season_level_metrics"]
+        weekly_scope = scopes["weekly_derived_metrics"]
+        self.assertEqual("Verified 2021–2025", season_scope["label"])
+        self.assertEqual([2021, 2022, 2023, 2024, 2025], season_scope["source_years"])
+        self.assertEqual("Verified 2022–2025", weekly_scope["label"])
+        self.assertEqual([2022, 2023, 2024, 2025], weekly_scope["source_years"])
+        self.assertEqual([2021], weekly_scope["excluded_years"])
+        self.assertNotIn("all-time", " ".join(scope["label"] for scope in scopes.values()).casefold())
 
     def test_parser_output_is_deterministic(self) -> None:
         args = dict(season=2025, week=1, game_key="461", league_id="103926", mappings=self.mappings, playoff_start_week=14)

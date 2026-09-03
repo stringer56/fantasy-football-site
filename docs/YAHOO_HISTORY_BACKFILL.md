@@ -16,6 +16,21 @@ matchups, fetched roster weeks, unresolved franchise mappings, and a conservativ
 confidence label. `matchups_expected` remains null when Yahoo did not expose a
 schedule rather than silently treating missing games as zero.
 
+## Coverage scopes
+
+Downstream builders must use the two machine-readable scopes in
+`_data/generated/history/completeness.json` and must not combine them into an
+all-time label:
+
+- **Season-level metrics — Verified 2021–2025.** Final standings, W-L-T, PF/PA,
+  final rank, playoff seed, verified championships, and season-level franchise
+  summaries may use this window. Unresolved historical identities remain valid
+  season rows but are excluded from franchise-level aggregation.
+- **Weekly-derived metrics — Verified 2022–2025.** Head-to-head, largest and
+  closest wins, weekly scoring highs/lows, matchup margins, weekly result streaks,
+  and detailed playoff matchup metrics must use this narrower window. The 2021
+  season is explicitly excluded because no Yahoo weekly scoreboards were recovered.
+
 ## Verified coverage
 
 | Season | League key | Standings | Weekly archive | Scored matchups | Draft | Transactions | Franchise mapping |
@@ -74,9 +89,9 @@ explicitly source-labelled:
 - No 2021 Yahoo transaction history was recovered.
 
 Accordingly, 2021 may participate in season-level standings, PF/PA, champion,
-and conservative recap features with its existing provenance. It must not enter
-weekly head-to-head, margin, scoring, or streak calculations. Those features
-retain the label **Verified 2022–2025**.
+and conservative recap features with its existing provenance under the label
+**Verified 2021–2025**. It must not enter weekly head-to-head, margin, scoring,
+or streak calculations. Those features retain the label **Verified 2022–2025**.
 
 ## Unresolved identities
 

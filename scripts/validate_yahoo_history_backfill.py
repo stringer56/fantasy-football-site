@@ -21,6 +21,16 @@ FORBIDDEN_KEYS = {
     "access_token", "refresh_token", "client_secret", "authorization", "email",
     "guid", "account_id", "manager_id", "invitation_key", "auth_token", "edit_url",
 }
+SEASON_LEVEL_METRICS = {
+    "final_standings", "season_wins_losses_ties", "season_points_for_against",
+    "final_rank", "playoff_seed", "verified_championships",
+    "resolved_franchise_season_summaries",
+}
+WEEKLY_DERIVED_METRICS = {
+    "head_to_head", "largest_margin", "smallest_winning_margin",
+    "weekly_scoring_highs_lows", "matchup_margins", "weekly_win_loss_streaks",
+    "detailed_playoff_matchup_metrics",
+}
 
 
 def load_json(path: pathlib.Path) -> dict[str, Any]:
@@ -200,6 +210,38 @@ def main() -> None:
         errors.append("completeness.json: league keys must be unique")
     if any(isinstance(year, int) and year < 2021 for year in years):
         errors.append("completeness.json: Road to Glory did not exist before 2021")
+
+    coverage_scopes = completeness.get("coverage_scopes", {})
+    season_scope = coverage_scopes.get("season_level_metrics", {})
+    weekly_scope = coverage_scopes.get("weekly_derived_metrics", {})
+    if season_scope.get("label") != "Verified 2021–2025":
+        errors.append("completeness.json: season-level coverage label must be Verified 2021–2025")
+    if season_scope.get("source_years") != [2021, 2022, 2023, 2024, 2025]:
+        errors.append("completeness.json: season-level coverage must span 2021–2025")
+    if set(season_scope.get("allowed_metrics", [])) != SEASON_LEVEL_METRICS:
+        errors.append("completeness.json: season-level metric allowlist is incomplete")
+    if not season_scope.get("mapping_policy"):
+        errors.append("completeness.json: season-level mapping exclusions must be documented")
+    if weekly_scope.get("label") != "Verified 2022–2025":
+        errors.append("completeness.json: weekly-derived coverage label must be Verified 2022–2025")
+    if weekly_scope.get("source_years") != [2022, 2023, 2024, 2025]:
+        errors.append("completeness.json: weekly-derived coverage must span 2022–2025")
+    if set(weekly_scope.get("allowed_metrics", [])) != WEEKLY_DERIVED_METRICS:
+        errors.append("completeness.json: weekly-derived metric allowlist is incomplete")
+    if weekly_scope.get("excluded_years") != [2021] or not weekly_scope.get("exclusion_reason"):
+        errors.append("completeness.json: weekly-derived coverage must explicitly exclude 2021")
+    for scope_name, scope in coverage_scopes.items():
+        if "all-time" in str(scope.get("label", "")).casefold():
+            errors.append(f"completeness.json: {scope_name} cannot use an all-time label")
+    summaries_by_year = {item.get("season"): item for item in season_summaries}
+    for year in season_scope.get("source_years", []):
+        standings_status = summaries_by_year.get(year, {}).get("sections", {}).get("standings", {}).get("status")
+        if standings_status != "complete":
+            errors.append(f"completeness.json: season-level scope requires complete {year} standings")
+    for year in weekly_scope.get("source_years", []):
+        weekly_status = summaries_by_year.get(year, {}).get("sections", {}).get("weekly_matchups", {}).get("status")
+        if weekly_status != "complete":
+            errors.append(f"completeness.json: weekly-derived scope requires complete {year} matchups")
 
     totals = {"standings": 0, "weeks": 0, "matchups": 0, "draft_picks": 0, "transactions": 0}
     weeks_by_year: dict[int, dict[str, Any]] = {}
