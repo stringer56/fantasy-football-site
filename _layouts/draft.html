@@ -2,6 +2,10 @@
 layout: default
 ---
 {% assign draft = site.data.drafts.drafts | where: "year", page.year | first %}
+{% assign draft_year_key = draft.year | append: "" %}
+{% assign archive_year = site.data.generated.history[draft_year_key] %}
+{% assign structured_board = archive_year.draft %}
+{% if draft.order_asset %}{% assign preview_asset = draft.order_asset %}{% else %}{% assign preview_asset = draft.results_assets[0] %}{% endif %}
 
 <article class="draft-page">
   <header class="draft-hero" data-year="{{ draft.year }}">
@@ -10,7 +14,7 @@ layout: default
         <p class="eyebrow">Road to Glory draft archive</p>
         <p class="draft-hero__year">{{ draft.year }}</p>
         <h1>The Draft</h1>
-        <p class="draft-hero__lede">The verified opening order and all {{ draft.rounds }} rounds of the original published results.</p>
+        <p class="draft-hero__lede">The verified opening order{% if draft.pick_data_status == 'verified_structured' %} and all {{ draft.pick_count }} selections from the official Yahoo draft board{% else %} and all {{ draft.rounds }} rounds of the original published results{% endif %}.</p>
         <div class="draft-hero__facts" aria-label="Draft facts">
           <span><strong>{{ draft.team_count }}</strong> teams</span>
           <span><strong>{{ draft.rounds }}</strong> rounds</span>
@@ -19,12 +23,12 @@ layout: default
         </div>
         <div class="season-hero__actions">
           <a class="button button--gold" href="#order">Draft order</a>
-          <a class="button button--outline-light" href="#results">Original results</a>
+          <a class="button button--outline-light" href="#results">{% if draft.pick_data_status == 'verified_structured' %}Draft board{% else %}Original results{% endif %}</a>
         </div>
       </div>
-      <a class="draft-hero__preview" href="{{ draft.results_assets[0].path | relative_url }}">
-        <img src="{{ draft.results_assets[0].path | relative_url }}" alt="{{ draft.results_assets[0].alt }}">
-        <span>Open rounds {{ draft.results_assets[0].rounds }} full size <span aria-hidden="true">↗</span></span>
+      <a class="draft-hero__preview" href="{{ preview_asset.path | relative_url }}">
+        <img src="{{ preview_asset.path | relative_url }}" alt="{{ preview_asset.alt }}">
+        <span>{% if preview_asset.rounds %}Open rounds {{ preview_asset.rounds }}{% else %}Open draft-order graphic{% endif %} full size <span aria-hidden="true">↗</span></span>
       </a>
     </div>
   </header>
@@ -62,6 +66,21 @@ layout: default
         <div><p class="eyebrow">Original source captures</p><h2 id="draft-results-heading">Draft Board &amp; Results</h2></div>
         <span class="section-note">Select an image to view full size</span>
       </div>
+      {% if structured_board and draft.pick_data_status == 'verified_structured' %}
+        <p class="season-section__intro">Every selection below comes from the complete official Yahoo public draft board. Expand a round to see its picks in order.</p>
+        <div class="draft-board">
+          {% assign round_groups = structured_board.picks | group_by: "round" %}
+          {% for round in round_groups %}
+            <details class="draft-round"{% if forloop.first %} open{% endif %}>
+              <summary><span>Round {{ round.name }}</span><small>{{ round.items | size }} picks</small></summary>
+              <div class="table-scroll"><table><thead><tr><th scope="col">Pick</th><th scope="col">Player</th><th scope="col">Team</th></tr></thead><tbody>
+                {% for pick in round.items %}<tr><td>{{ pick.overall_pick }}</td><td><strong>{{ pick.player_name }}</strong></td><td>{{ pick.historical_team_name }}</td></tr>{% endfor %}
+              </tbody></table></div>
+            </details>
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% if draft.results_assets.size > 0 %}
       <p class="season-section__intro">These local, full-resolution captures preserve the public Yahoo results exactly as published in the league recap.</p>
       <div class="draft-results-gallery">
         {% for asset in draft.results_assets %}
@@ -71,13 +90,20 @@ layout: default
           </figure>
         {% endfor %}
       </div>
+      {% endif %}
     </div>
   </section>
 
   <section class="shell-content season-section draft-recap" id="recap" aria-labelledby="draft-recap-heading">
     <div><p class="eyebrow">Draft recap</p><h2 id="draft-recap-heading">The source is the recap</h2></div>
-    <p>The original {{ draft.year }} recap page contains the results images above but no written recap. No grades, steals, busts, or reconstructed commentary have been added.</p>
-    <a class="text-link" href="{{ draft.source_url }}" target="_blank" rel="noopener">Open original Google Site page <span aria-hidden="true">↗</span></a>
+    {% if draft.status == 'source_verified_structured' %}
+      <p>The commissioner archive verifies the draft date and order; Yahoo independently preserves the complete 180-pick board. No grades, steals, busts, or reconstructed commentary have been added.</p>
+    {% elsif draft.pick_data_status == 'verified_structured' %}
+      <p>The original {{ draft.year }} recap preserves the result captures above, and Yahoo independently preserves the complete 180-pick board. The source contains no written recap, so no grades, steals, busts, or reconstructed commentary have been added.</p>
+    {% else %}
+      <p>The original {{ draft.year }} recap page contains the results images above but no written recap. No grades, steals, busts, or reconstructed commentary have been added.</p>
+    {% endif %}
+    <a class="text-link" href="{{ draft.source_url }}" target="_blank" rel="noopener">{{ draft.source_label | default: 'Open original Google Site page' }} <span aria-hidden="true">↗</span></a>
   </section>
 
   <section class="season-section season-section--dark" id="notes" aria-labelledby="draft-notes-heading">
@@ -96,5 +122,6 @@ layout: default
     </div>
   </section>
 
-  <nav class="profile-back-nav"><div class="wrap draft-back-links"><a class="text-link" href="{{ '/drafts/' | relative_url }}"><span aria-hidden="true">←</span> Back to Draft Archive</a><a class="text-link" href="{{ '/history/' | append: draft.year | append: '/' | relative_url }}">View {{ draft.year }} season <span aria-hidden="true">→</span></a></div></nav>
+  {% assign season_record = site.data.seasons.seasons | where: "year", draft.year | first %}
+  <nav class="profile-back-nav"><div class="wrap draft-back-links"><a class="text-link" href="{{ '/drafts/' | relative_url }}"><span aria-hidden="true">←</span> Back to Draft Archive</a>{% if season_record %}<a class="text-link" href="{{ '/history/' | append: draft.year | append: '/' | relative_url }}">View {{ draft.year }} season <span aria-hidden="true">→</span></a>{% endif %}</div></nav>
 </article>

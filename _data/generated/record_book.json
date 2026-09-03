@@ -9,8 +9,8 @@
       2023,
       2024
     ],
-    "unresolved_standings_rows": 2,
-    "unresolved_playoff_participants": 1,
+    "unresolved_standings_rows": 0,
+    "unresolved_playoff_participants": 0,
     "notes": [
       "Career totals include only standings rows with a verified franchise mapping.",
       "The 2024 final standings table is used for PF and PA, while the conflicting champions-page labels remain unresolved."
@@ -247,28 +247,52 @@
         },
         {
           "rank": 10,
+          "franchise_id": "buffalo-bravado",
+          "display_name": "Buffalo Bravado",
+          "short_name": "Bravado",
+          "path": "/teams/buffalo-bravado/",
+          "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+          "seasons": [
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "wins": 19,
+          "losses": 34,
+          "ties": 1,
+          "points_for": 5868.58,
+          "points_against": 6503.7,
+          "championships": 0,
+          "runner_up_finishes": 0,
+          "seasons_counted": 4,
+          "win_pct": 0.361
+        },
+        {
+          "rank": 11,
           "franchise_id": "vegas-vandals",
           "display_name": "Vegas Vandals",
           "short_name": "Vandals",
           "path": "/teams/vegas-vandals/",
           "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
           "seasons": [
+            2021,
             2022,
             2023,
             2024
           ],
-          "wins": 15,
-          "losses": 25,
+          "wins": 17,
+          "losses": 37,
           "ties": 0,
-          "points_for": 4034.48,
-          "points_against": 4653.02,
+          "points_for": 5634.64,
+          "points_against": 6520.16,
           "championships": 0,
           "runner_up_finishes": 0,
-          "seasons_counted": 3,
-          "win_pct": 0.375
+          "seasons_counted": 4,
+          "win_pct": 0.315
         },
         {
-          "rank": 11,
+          "rank": 12,
           "franchise_id": "new-jersey-giants",
           "display_name": "New Jersey Giants",
           "short_name": "Giants",
@@ -289,7 +313,7 @@
           "win_pct": 0.5
         },
         {
-          "rank": 12,
+          "rank": 13,
           "franchise_id": "north-town-ninnyhammers",
           "display_name": "North Town Ninnyhammers",
           "short_name": "Ninnyhammers",
@@ -308,28 +332,6 @@
           "runner_up_finishes": 0,
           "seasons_counted": 2,
           "win_pct": 0.462
-        },
-        {
-          "rank": 13,
-          "franchise_id": "buffalo-bravado",
-          "display_name": "Buffalo Bravado",
-          "short_name": "Bravado",
-          "path": "/teams/buffalo-bravado/",
-          "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
-          "seasons": [
-            2022,
-            2023,
-            2024
-          ],
-          "wins": 11,
-          "losses": 28,
-          "ties": 1,
-          "points_for": 4154.94,
-          "points_against": 4788.0,
-          "championships": 0,
-          "runner_up_finishes": 0,
-          "seasons_counted": 3,
-          "win_pct": 0.287
         }
       ]
     },
@@ -603,6 +605,21 @@
         },
         {
           "rank": 8,
+          "franchise_id": "buffalo-bravado",
+          "display_name": "Buffalo Bravado",
+          "short_name": "Bravado",
+          "path": "/teams/buffalo-bravado/",
+          "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+          "seasons": [
+            2021,
+            2024
+          ],
+          "wins": 0,
+          "losses": 2,
+          "appearances": 2
+        },
+        {
+          "rank": 9,
           "franchise_id": "new-jersey-giants",
           "display_name": "New Jersey Giants",
           "short_name": "Giants",
@@ -610,20 +627,6 @@
           "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
           "seasons": [
             2022
-          ],
-          "wins": 0,
-          "losses": 1,
-          "appearances": 1
-        },
-        {
-          "rank": 8,
-          "franchise_id": "buffalo-bravado",
-          "display_name": "Buffalo Bravado",
-          "short_name": "Bravado",
-          "path": "/teams/buffalo-bravado/",
-          "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
-          "seasons": [
-            2024
           ],
           "wins": 0,
           "losses": 1,
@@ -739,8 +742,8 @@
           "path": "/teams/buffalo-bravado/",
           "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
           "streak": 1,
-          "start_year": 2024,
-          "end_year": 2024
+          "start_year": 2021,
+          "end_year": 2021
         },
         {
           "rank": 5,
@@ -821,11 +824,11 @@
             {
               "year": 2021,
               "season_path": "/history/2021/",
-              "franchise_id": null,
+              "franchise_id": "vegas-vandals",
               "historical_team_name": "Matthew's Optimal Team",
-              "display_name": "Matthew's Optimal Team",
-              "path": null,
-              "identity_image": null,
+              "display_name": "Vegas Vandals",
+              "path": "/teams/vegas-vandals/",
+              "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
               "source": {
                 "file": "_data/seasons.yml",
                 "year": 2021
@@ -929,11 +932,11 @@
             {
               "year": 2021,
               "season_path": "/history/2021/",
-              "franchise_id": null,
+              "franchise_id": "vegas-vandals",
               "historical_team_name": "Matthew's Optimal Team",
-              "display_name": "Matthew's Optimal Team",
-              "path": null,
-              "identity_image": null,
+              "display_name": "Vegas Vandals",
+              "path": "/teams/vegas-vandals/",
+              "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
               "source": {
                 "file": "_data/seasons.yml",
                 "year": 2021

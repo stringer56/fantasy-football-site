@@ -199,10 +199,8 @@ class YahooArchiveParserTests(unittest.TestCase):
         self.assertEqual(10, result["franchise_mapping"]["yahoo_team_keys_recovered"])
         self.assertEqual(1, result["sections"]["playoffs"]["scored_games"])
         self.assertEqual(0, result["sections"]["draft"]["picks"])
-        self.assertEqual(
-            ["Matthew's Optimal Team", "The Swagger Daggers"],
-            result["unresolved_franchise_mappings"],
-        )
+        self.assertEqual([], result["unresolved_franchise_mappings"])
+        self.assertEqual(10, result["franchise_mapping"]["resolved"])
 
     def test_coverage_scopes_keep_season_and_weekly_windows_separate(self) -> None:
         scopes = coverage_scopes()

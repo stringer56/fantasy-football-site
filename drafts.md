@@ -18,7 +18,8 @@ description: Verified Road to Glory FFL draft orders, original results, and reca
     {% for draft in drafts %}
       <article class="draft-season-card">
         <a class="draft-season-card__image" href="{{ '/drafts/' | append: draft.year | append: '/' | relative_url }}">
-          <img src="{{ draft.results_assets[0].path | relative_url }}" alt="Preview of {{ draft.year }} Road to Glory draft results">
+          {% if draft.order_asset %}{% assign draft_preview = draft.order_asset %}{% else %}{% assign draft_preview = draft.results_assets[0] %}{% endif %}
+          <img src="{{ draft_preview.path | relative_url }}" alt="{{ draft_preview.alt | default: 'Preview of Road to Glory draft results' }}">
           <span>{{ draft.year }}</span>
         </a>
         <div class="draft-season-card__body">

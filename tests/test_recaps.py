@@ -87,13 +87,12 @@ class RecapGenerationTests(unittest.TestCase):
         self.assertIn("does not publish a score", recap["generated_text"])
         self.assertNotRegex(recap["generated_text"], r"\d+\.\d{2}–\d+\.\d{2}")
 
-    def test_unresolved_franchise_remains_unmapped(self) -> None:
+    def test_commissioner_confirmed_legacy_franchise_is_linked(self) -> None:
         recap = self.team_recap(2021, "The Swagger Daggers")
-        self.assertIsNone(recap["franchise_id"])
-        self.assertIsNone(recap["path"])
-        self.assertEqual(recap["mapping_status"], "unresolved")
-        self.assertIn("unresolved_franchise_mapping", recap["warnings"])
-        self.assertIn("not assigned", recap["generated_text"])
+        self.assertEqual(recap["franchise_id"], "buffalo-bravado")
+        self.assertEqual(recap["path"], "/teams/buffalo-bravado/")
+        self.assertEqual(recap["mapping_status"], "resolved")
+        self.assertNotIn("unresolved_franchise_mapping", recap["warnings"])
 
     def test_tied_best_records_are_preserved(self) -> None:
         card = self.numbers(2021)["best_record"]

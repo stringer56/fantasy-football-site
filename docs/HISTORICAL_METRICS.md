@@ -46,12 +46,13 @@ One 2024 quarterfinal conflict remains intentionally unclassified: the canonical
 bracket lists Buffalo Bravado against Maine Moose, while Yahoo Week 14 records
 Albany Kneelers against Maine Moose. No side is selected by assumption.
 
-## Unresolved identities
+## Historical identity coverage
 
-The Swagger Daggers and Matthew's Optimal Team remain unresolved in 2021. Since
-no 2021 weekly matchups were recovered, they do not enter the weekly-derived
-window. Commissioner-confirmed aliases resolve every 2022–2025 weekly matchup;
-the builder does not infer any additional continuity.
+All 2021 season-level identities now resolve. The commissioner draft-order
+crosswalk maps The Swagger Daggers to Buffalo Bravado and Matthew's Optimal Team
+to Vegas Vandals while preserving their historical display names. The lack of
+2021 weekly scoreboards—not identity ambiguity—is why 2021 remains excluded
+from weekly-derived metrics.
 
 ## Definitions
 

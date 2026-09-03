@@ -114,14 +114,14 @@ franchises:
     name: Buffalo Bravado
     short_name: Bravado
     status: active
-    aliases: [Buffalo Bravados, Dilly Dilly]
+    aliases: [Buffalo Bravados, Dilly Dilly, The Swagger Daggers]
     owner_ids: [nate]
     founded_season:
     retired_season:
     yahoo:
-      team_keys: {"2022": 414.l.527645.t.9, "2025": 461.l.103926.t.4}
-      team_ids: {"2022": 9, "2025": 4}
-      team_names: {"2022": Dilly Dilly, "2025": Buffalo Bravados}
+      team_keys: {"2021": 406.l.12928.t.6, "2022": 414.l.527645.t.9, "2025": 461.l.103926.t.4}
+      team_ids: {"2021": 6, "2022": 9, "2025": 4}
+      team_names: {"2021": The Swagger Daggers, "2022": Dilly Dilly, "2025": Buffalo Bravados}
     branding:
       identity_image: /assets/img/franchises/buffalo-bravado/identity.jpg
       identity_alt: Light blue Buffalo Bravado football helmet with a heraldic crest
@@ -406,14 +406,14 @@ franchises:
     name: Vegas Vandals
     short_name: Vandals
     status: active
-    aliases: [Broncos Country Let’s Ride, Broncos Country Let's Ride]
+    aliases: [Broncos Country Let’s Ride, Broncos Country Let's Ride, Matthew's Optimal Team]
     owner_ids: [coles]
     founded_season:
     retired_season:
     yahoo:
-      team_keys: {"2022": 414.l.527645.t.5, "2023": 423.l.161807.t.4, "2025": 461.l.103926.t.11}
-      team_ids: {"2022": 5, "2023": 4, "2025": 11}
-      team_names: {"2022": Broncos Country Let’s Ride, "2023": Broncos Country Let’s Ride, "2025": Vegas Vandals}
+      team_keys: {"2021": 406.l.12928.t.9, "2022": 414.l.527645.t.5, "2023": 423.l.161807.t.4, "2025": 461.l.103926.t.11}
+      team_ids: {"2021": 9, "2022": 5, "2023": 4, "2025": 11}
+      team_names: {"2021": Matthew's Optimal Team, "2022": Broncos Country Let’s Ride, "2023": Broncos Country Let’s Ride, "2025": Vegas Vandals}
     branding:
       identity_image: /assets/img/franchises/vegas-vandals/identity.jpg
       identity_alt: Black Vegas Vandals football helmet with flaming playing cards

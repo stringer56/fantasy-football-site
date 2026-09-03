@@ -167,7 +167,7 @@ class YahooHistoryDiscoveryTests(unittest.TestCase):
             "available_commissioner_supplied_authenticated_archive",
         )
         self.assertEqual(10, len(season_2021["team_mappings"]))
-        self.assertEqual(8, sum(row["status"] == "verified" for row in season_2021["team_mappings"]))
+        self.assertEqual(10, sum(row["status"] == "verified" for row in season_2021["team_mappings"]))
         self.assertEqual(
             "complete_commissioner_supplied_yahoo",
             season_2021["archive_coverage"]["standings"],
@@ -200,17 +200,14 @@ class YahooHistoryDiscoveryTests(unittest.TestCase):
         self.assertEqual(albany["candidate_franchise_id"], "albany-kneelers")
 
         season_2021 = next(row for row in baseline["seasons"] if row["season"] == 2021)
-        unresolved_2021 = {
-            row["yahoo_team_name"]
-            for row in season_2021["team_mappings"]
-            if row["status"] == "unresolved"
-        }
-        self.assertEqual(unresolved_2021, {"The Swagger Daggers", "Matthew's Optimal Team"})
+        self.assertTrue(all(row["status"] == "verified" for row in season_2021["team_mappings"]))
         mapped_2021 = {
             row["yahoo_team_name"]: row["candidate_franchise_id"]
             for row in season_2021["team_mappings"]
         }
         self.assertEqual(mapped_2021["Quahog Stripes"], "new-jersey-giants")
+        self.assertEqual(mapped_2021["The Swagger Daggers"], "buffalo-bravado")
+        self.assertEqual(mapped_2021["Matthew's Optimal Team"], "vegas-vandals")
 
         franchises = load_franchises()
         new_jersey = next(

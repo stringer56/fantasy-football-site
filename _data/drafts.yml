@@ -1,7 +1,45 @@
 schema_version: 1
 drafts:
+  - year: 2025
+    status: source_verified_structured
+    source_url: https://football.fantasysports.yahoo.com/2025/f1/103926/draftresults
+    source_label: Open the verified 2025 Yahoo draft board
+    verified_on: 2026-09-03
+    draft_date: "2025-08-28 20:00:00 -0400"
+    location:
+    draft_type: snake
+    draft_type_note: Verified by the alternating franchise order in the complete Yahoo draft board.
+    rounds: 15
+    team_count: 12
+    order_asset:
+      path: /assets/img/drafts/2025/draft-order.png
+      alt: Commissioner-published 2025 Road to Glory draft order dated August 28 at 8 PM EDT
+    board_asset:
+    recap_asset:
+    pick_data_status: verified_structured
+    pick_data_path: _data/generated/history/2025/draft.json
+    pick_count: 180
+    picks:
+    results_assets: []
+    draft_order:
+      - {slot: 1, franchise_id: albany-kneelers, display_name_that_year: Albany Kneelers, mapping_status: resolved}
+      - {slot: 2, franchise_id: van-cortlant-rangers, display_name_that_year: Van Cortlant Rangers, mapping_status: resolved}
+      - {slot: 3, franchise_id: turnbull-acs, display_name_that_year: "Turnbull AC's", mapping_status: resolved}
+      - {slot: 4, franchise_id: ayahuasca-rush, display_name_that_year: Ayahuasca Rush, mapping_status: resolved}
+      - {slot: 5, franchise_id: new-jersey-giants, display_name_that_year: New Jersey Giants, mapping_status: resolved}
+      - {slot: 6, franchise_id: crazy-wazs-team, display_name_that_year: "Chris's Crazy Team", mapping_status: resolved}
+      - {slot: 7, franchise_id: north-town-ninnyhammers, display_name_that_year: North Town Ninnyhammers, mapping_status: resolved}
+      - {slot: 8, franchise_id: greendale-human-beings, display_name_that_year: Greendale Human Beings, mapping_status: resolved}
+      - {slot: 9, franchise_id: buffalo-bravado, display_name_that_year: Buffalo Bravados, mapping_status: resolved}
+      - {slot: 10, franchise_id: maine-moose, display_name_that_year: Maine Moose, mapping_status: resolved}
+      - {slot: 11, franchise_id: baseball-furies, display_name_that_year: Baseball Furies, mapping_status: resolved}
+      - {slot: 12, franchise_id: vegas-vandals, display_name_that_year: Vegas Vandals, mapping_status: resolved}
+    notes:
+      - The draft date and opening order come from the commissioner-provided 2025 source archive.
+      - All 180 selections are independently preserved in the complete official Yahoo public draft board.
+
   - year: 2024
-    status: source_verified_images
+    status: source_verified_images_and_structured
     source_url: https://sites.google.com/view/road-to-glory-ffl/league-draft-recaps/2024-draft-recap
     verified_on: 2026-08-31
     draft_date:
@@ -12,7 +50,9 @@ drafts:
     team_count: 12
     board_asset:
     recap_asset:
-    pick_data_status: image_only_unverified
+    pick_data_status: verified_structured
+    pick_data_path: _data/generated/history/2024/draft.json
+    pick_count: 180
     picks:
     results_assets:
       - path: /assets/img/drafts/2024/draft-results-rounds-01-06.jpg
@@ -42,7 +82,7 @@ drafts:
       - Draft date and location are not published on the source page.
 
   - year: 2023
-    status: source_verified_images
+    status: source_verified_images_and_structured
     source_url: https://sites.google.com/view/road-to-glory-ffl/league-draft-recaps/2023-draft-recap
     verified_on: 2026-08-31
     draft_date:
@@ -53,7 +93,9 @@ drafts:
     team_count: 12
     board_asset:
     recap_asset:
-    pick_data_status: image_only_unverified
+    pick_data_status: verified_structured
+    pick_data_path: _data/generated/history/2023/draft.json
+    pick_count: 180
     picks:
     results_assets:
       - path: /assets/img/drafts/2023/draft-results-rounds-01-06.jpg
@@ -83,7 +125,7 @@ drafts:
       - Draft date and location are not published on the source page.
 
   - year: 2022
-    status: source_verified_images
+    status: source_verified_images_and_structured
     source_url: https://sites.google.com/view/road-to-glory-ffl/league-draft-recaps/2022-draft-recap
     verified_on: 2026-08-31
     draft_date:
@@ -94,7 +136,9 @@ drafts:
     team_count: 12
     board_asset:
     recap_asset:
-    pick_data_status: image_only_unverified
+    pick_data_status: verified_structured
+    pick_data_path: _data/generated/history/2022/draft.json
+    pick_count: 180
     picks:
     results_assets:
       - path: /assets/img/drafts/2022/draft-results-rounds-01-06.jpg
@@ -148,16 +192,17 @@ drafts:
         rounds: 13–15
         alt: Original 2021 Road to Glory draft results for rounds 13 through 15
     draft_order:
-      - {slot: 1, franchise_id: null, display_name_that_year: "Matthew's Optimal Team", mapping_status: unresolved}
+      - {slot: 1, franchise_id: vegas-vandals, display_name_that_year: "Matthew's Optimal Team", mapping_status: resolved}
       - {slot: 2, franchise_id: savage-huns, display_name_that_year: THE SAVAGE HUNS, mapping_status: resolved}
       - {slot: 3, franchise_id: new-jersey-giants, display_name_that_year: Quahog Stripes, mapping_status: resolved}
       - {slot: 4, franchise_id: greendale-human-beings, display_name_that_year: Greendale Human Beings, mapping_status: resolved}
       - {slot: 5, franchise_id: baseball-furies, display_name_that_year: The Baseball Furies, mapping_status: resolved}
       - {slot: 6, franchise_id: crazy-wazs-team, display_name_that_year: "Chris's Crazy Team", mapping_status: resolved}
-      - {slot: 7, franchise_id: null, display_name_that_year: The Swagger Daggers, mapping_status: unresolved}
+      - {slot: 7, franchise_id: buffalo-bravado, display_name_that_year: The Swagger Daggers, mapping_status: resolved}
       - {slot: 8, franchise_id: albany-kneelers, display_name_that_year: Albany Kneelers, mapping_status: resolved}
       - {slot: 9, franchise_id: van-cortlant-rangers, display_name_that_year: Van Cortlant Rangers, mapping_status: resolved}
       - {slot: 10, franchise_id: turnbull-acs, display_name_that_year: "Turnbull AC's", mapping_status: resolved}
     notes:
       - The public recap contains three image captures of Yahoo results and no written recap.
       - Draft date and location are not published on the source page.
+      - The commissioner-provided 2021 draft order confirms Matthew's Optimal Team as Vegas Vandals and The Swagger Daggers as Buffalo Bravado.

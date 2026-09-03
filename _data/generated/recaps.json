@@ -30,7 +30,7 @@
     "team_recaps": 46,
     "playoff_recaps": 16,
     "championship_recaps": 4,
-    "unresolved_team_recaps": 2
+    "unresolved_team_recaps": 0
   },
   "seasons": [
     {
@@ -2566,7 +2566,7 @@
       "content_source": "deterministic_generated"
     },
     {
-      "recap_id": "team-2021-the-swagger-daggers",
+      "recap_id": "team-2021-buffalo-bravado",
       "season": 2021,
       "source_files": [
         "_data/seasons.yml",
@@ -2575,7 +2575,7 @@
         "_data/franchises.yml"
       ],
       "generated_at": "2026-08-31T00:00:00Z",
-      "coverage_status": "partial",
+      "coverage_status": "complete",
       "facts_used": [
         {
           "fact_type": "standing",
@@ -2600,12 +2600,10 @@
           ]
         }
       ],
-      "warnings": [
-        "unresolved_franchise_mapping"
-      ],
+      "warnings": [],
       "provenance_label": "Generated from verified league results.",
-      "franchise_id": null,
-      "mapping_status": "unresolved",
+      "franchise_id": "buffalo-bravado",
+      "mapping_status": "resolved",
       "historical_team_name": "The Swagger Daggers",
       "rank": 3,
       "record": {
@@ -2615,16 +2613,16 @@
       },
       "points_for": 1713.64,
       "points_against": 1715.7,
-      "path": null,
-      "identity_image": null,
-      "identity_alt": null,
-      "generated_text": "The Swagger Daggers finished 3rd in the 2021 final standings with a final record of 8–6–0. The team posted 1,713.64 points for and 1,715.70 points against. Its points-for total ranked 4th in the 10-team field. The Swagger Daggers reached the semifinal before Albany Kneelers advanced. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
+      "path": "/teams/buffalo-bravado/",
+      "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+      "identity_alt": "Light blue Buffalo Bravado football helmet with a heraldic crest",
+      "generated_text": "The Swagger Daggers finished 3rd in the 2021 final standings with a final record of 8–6–0. The team posted 1,713.64 points for and 1,715.70 points against. Its points-for total ranked 4th in the 10-team field. The Swagger Daggers reached the semifinal before Albany Kneelers advanced. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
       "generated_paragraphs": [
-        "The Swagger Daggers finished 3rd in the 2021 final standings with a final record of 8–6–0. The team posted 1,713.64 points for and 1,715.70 points against. Its points-for total ranked 4th in the 10-team field. The Swagger Daggers reached the semifinal before Albany Kneelers advanced. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
+        "The Swagger Daggers finished 3rd in the 2021 final standings with a final record of 8–6–0. The team posted 1,713.64 points for and 1,715.70 points against. Its points-for total ranked 4th in the 10-team field. The Swagger Daggers reached the semifinal before Albany Kneelers advanced. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
       ],
-      "text": "The Swagger Daggers finished 3rd in the 2021 final standings with a final record of 8–6–0. The team posted 1,713.64 points for and 1,715.70 points against. Its points-for total ranked 4th in the 10-team field. The Swagger Daggers reached the semifinal before Albany Kneelers advanced. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
+      "text": "The Swagger Daggers finished 3rd in the 2021 final standings with a final record of 8–6–0. The team posted 1,713.64 points for and 1,715.70 points against. Its points-for total ranked 4th in the 10-team field. The Swagger Daggers reached the semifinal before Albany Kneelers advanced. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
       "paragraphs": [
-        "The Swagger Daggers finished 3rd in the 2021 final standings with a final record of 8–6–0. The team posted 1,713.64 points for and 1,715.70 points against. Its points-for total ranked 4th in the 10-team field. The Swagger Daggers reached the semifinal before Albany Kneelers advanced. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
+        "The Swagger Daggers finished 3rd in the 2021 final standings with a final record of 8–6–0. The team posted 1,713.64 points for and 1,715.70 points against. Its points-for total ranked 4th in the 10-team field. The Swagger Daggers reached the semifinal before Albany Kneelers advanced. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
       ],
       "content_source": "deterministic_generated"
     },
@@ -2980,7 +2978,7 @@
       "content_source": "deterministic_generated"
     },
     {
-      "recap_id": "team-2021-matthew-s-optimal-team",
+      "recap_id": "team-2021-vegas-vandals",
       "season": 2021,
       "source_files": [
         "_data/seasons.yml",
@@ -2989,7 +2987,7 @@
         "_data/franchises.yml"
       ],
       "generated_at": "2026-08-31T00:00:00Z",
-      "coverage_status": "partial",
+      "coverage_status": "complete",
       "facts_used": [
         {
           "fact_type": "standing",
@@ -3011,12 +3009,10 @@
           "games": []
         }
       ],
-      "warnings": [
-        "unresolved_franchise_mapping"
-      ],
+      "warnings": [],
       "provenance_label": "Generated from verified league results.",
-      "franchise_id": null,
-      "mapping_status": "unresolved",
+      "franchise_id": "vegas-vandals",
+      "mapping_status": "resolved",
       "historical_team_name": "Matthew's Optimal Team",
       "rank": 10,
       "record": {
@@ -3026,16 +3022,16 @@
       },
       "points_for": 1600.16,
       "points_against": 1867.14,
-      "path": null,
-      "identity_image": null,
-      "identity_alt": null,
-      "generated_text": "Matthew's Optimal Team finished 10th in the 2021 final standings with a final record of 2–12–0. The team posted 1,600.16 points for and 1,867.14 points against. Its points-for total ranked 8th in the 10-team field. The structured playoff bracket does not list Matthew's Optimal Team among the verified postseason participants. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
+      "path": "/teams/vegas-vandals/",
+      "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
+      "identity_alt": "Black Vegas Vandals football helmet with flaming playing cards",
+      "generated_text": "Matthew's Optimal Team finished 10th in the 2021 final standings with a final record of 2–12–0. The team posted 1,600.16 points for and 1,867.14 points against. Its points-for total ranked 8th in the 10-team field. The structured playoff bracket does not list Matthew's Optimal Team among the verified postseason participants. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
       "generated_paragraphs": [
-        "Matthew's Optimal Team finished 10th in the 2021 final standings with a final record of 2–12–0. The team posted 1,600.16 points for and 1,867.14 points against. Its points-for total ranked 8th in the 10-team field. The structured playoff bracket does not list Matthew's Optimal Team among the verified postseason participants. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
+        "Matthew's Optimal Team finished 10th in the 2021 final standings with a final record of 2–12–0. The team posted 1,600.16 points for and 1,867.14 points against. Its points-for total ranked 8th in the 10-team field. The structured playoff bracket does not list Matthew's Optimal Team among the verified postseason participants. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
       ],
-      "text": "Matthew's Optimal Team finished 10th in the 2021 final standings with a final record of 2–12–0. The team posted 1,600.16 points for and 1,867.14 points against. Its points-for total ranked 8th in the 10-team field. The structured playoff bracket does not list Matthew's Optimal Team among the verified postseason participants. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
+      "text": "Matthew's Optimal Team finished 10th in the 2021 final standings with a final record of 2–12–0. The team posted 1,600.16 points for and 1,867.14 points against. Its points-for total ranked 8th in the 10-team field. The structured playoff bracket does not list Matthew's Optimal Team among the verified postseason participants. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred.",
       "paragraphs": [
-        "Matthew's Optimal Team finished 10th in the 2021 final standings with a final record of 2–12–0. The team posted 1,600.16 points for and 1,867.14 points against. Its points-for total ranked 8th in the 10-team field. The structured playoff bracket does not list Matthew's Optimal Team among the verified postseason participants. This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
+        "Matthew's Optimal Team finished 10th in the 2021 final standings with a final record of 2–12–0. The team posted 1,600.16 points for and 1,867.14 points against. Its points-for total ranked 8th in the 10-team field. The structured playoff bracket does not list Matthew's Optimal Team among the verified postseason participants. The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
       ],
       "content_source": "deterministic_generated"
     }
@@ -3612,7 +3608,7 @@
           "round": "Semifinal",
           "winner_franchise_id": "albany-kneelers",
           "winner_name": "Albany Kneelers",
-          "loser_franchise_id": null,
+          "loser_franchise_id": "buffalo-bravado",
           "loser_name": "The Swagger Daggers",
           "winner_score": null,
           "loser_score": null
