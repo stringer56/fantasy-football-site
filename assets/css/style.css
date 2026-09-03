@@ -555,7 +555,7 @@ a:hover { color: var(--navy-900); }
 .records-hero__dek { max-width: 47rem; color: var(--slate-300); font-size: clamp(1rem, 2vw, 1.2rem); }
 .records-hero__actions { display: flex; align-items: center; gap: var(--space-5); margin-top: var(--space-5); }
 .records-hero .text-link { color: var(--gold-300); }
-.coverage-scorecard { padding: var(--space-6); border: 1px solid rgba(235, 196, 95, .5); background: rgba(5, 13, 24, .78); box-shadow: var(--shadow-dark); }
+.coverage-scorecard { min-width: 0; padding: var(--space-6); border: 1px solid rgba(235, 196, 95, .5); background: rgba(5, 13, 24, .78); box-shadow: var(--shadow-dark); }
 .coverage-scorecard__label { color: var(--gold-300); font-size: .67rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
 .coverage-scorecard > strong { display: block; margin: var(--space-3) 0; color: var(--white); font-family: var(--font-display); font-size: clamp(4.25rem, 8vw, 6.5rem); line-height: .85; }
 .coverage-scorecard > strong span { color: var(--gold-500); }
@@ -929,6 +929,7 @@ a:hover { color: var(--navy-900); }
   .draft-back-links { align-items: start; flex-direction: column; }
   .records-hero h1 { font-size: clamp(3.2rem, 17vw, 5.25rem); }
   .coverage-scorecard { padding: var(--space-5); }
+  .coverage-scorecard > strong { font-size: clamp(2.8rem, 13vw, 4rem); }
   .coverage-scorecard dl { grid-template-columns: 1fr; }
   .coverage-scorecard dl div, .coverage-scorecard dl div:first-child { padding: var(--space-3) 0; border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, .12); }
   .record-card-grid, .streak-grid, .unavailable-grid { grid-template-columns: 1fr; }
