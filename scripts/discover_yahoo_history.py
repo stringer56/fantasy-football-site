@@ -541,7 +541,7 @@ def build_committed_baseline() -> dict[str, Any]:
     }
     payload = {
         "schema_version": SCHEMA_VERSION,
-        "generated_at": "2026-09-01T03:54:14Z",
+        "generated_at": "2026-09-03T02:49:55Z",
         "discovery_status": "authorization_blocked",
         "access_status": {
             "oauth_refresh": "succeeded",

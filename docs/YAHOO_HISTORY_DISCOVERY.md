@@ -7,10 +7,10 @@ Glory FFL league available to the Yahoo account authorized by the repository.
 It does not change OAuth, publish raw Yahoo responses, or perform a full
 historical import.
 
-The ordered live retest on 2026-09-01 confirms that Yahoo's refresh-token
-exchange succeeds. The first Fantasy API request—the authenticated user's
-Fantasy resource—still returns HTTP 403, with no safe Yahoo error code in the
-response. Per the required stop rule, the job did not request the NFL game
+The ordered live retest on 2026-09-02 confirms that Yahoo's refresh-token
+exchange succeeds. The first Fantasy API request—Yahoo's documented
+logged-in-user NFL teams resource—still returns HTTP 403, with no safe Yahoo
+error code in the response. Per the required stop rule, the job did not request the NFL game
 resource, the configured 2026 alias, either known historical key, or user
 league enumeration after that failure.
 
@@ -85,6 +85,7 @@ Live workflow evidence:
 - OAuth/2026 update test: <https://github.com/stringer56/fantasy-football-site/actions/runs/33465603477>
 - Sanitized historical diagnostic: <https://github.com/stringer56/fantasy-football-site/actions/runs/33465879232>
 - Ordered authorization retest: <https://github.com/stringer56/fantasy-football-site/actions/runs/33467871852>
+- Documented NFL user-resource retest: <https://github.com/stringer56/fantasy-football-site/actions/runs/33709094263>
 - Site validation: <https://github.com/stringer56/fantasy-football-site/actions/runs/33465873918>
 
 The endpoint composition follows Yahoo's official Fantasy Sports API resources:
