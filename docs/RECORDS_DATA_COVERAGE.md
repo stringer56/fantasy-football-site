@@ -15,9 +15,10 @@ next records aggregation milestone:
   not include 2021 because that season has no recovered weekly scoreboards.
 
 The current public record output below remains the Milestone 7 baseline until a
-dedicated derived-history aggregation milestone consumes and validates these new
-scopes. It must not be silently relabelled, and neither scope may be called
-all-time.
+dedicated derived-history aggregation consumes and validates these new scopes.
+That aggregation now lives under `_data/generated/records/`; its weekly sections
+are published separately from the retained baseline and neither scope is called
+all-time. See [Historical Derived Metrics](HISTORICAL_METRICS.md).
 
 Milestone 7 audits every available structured input before publishing the first
 Road to Glory record book. Coverage is limited to the verified 2021–2024 archive;

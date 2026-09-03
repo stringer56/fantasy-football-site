@@ -7,6 +7,7 @@ layout: default
   {% if franchise.status == "retired" %}{% assign is_retired = true %}{% endif %}
   {% assign profile = franchise.profile %}
   {% assign branding = franchise.branding %}
+  {% assign historical_metrics = site.data.generated.records.franchise_summaries.franchises | where: "franchise_id", franchise.franchise_id | first %}
 
   <article class="franchise-profile{% if is_retired %} franchise-profile--retired{% endif %}">
     <header class="franchise-hero">
@@ -80,6 +81,23 @@ layout: default
         </aside>
       </div>
     </section>
+
+    {% if historical_metrics %}
+      <section class="content-section content-section--neutral content-section--bordered franchise-history">
+        <div class="wrap">
+          <div class="section-heading">
+            <div><p class="eyebrow eyebrow--dark">Verified results</p><h2>Franchise Record</h2><p>Season standings and weekly matchup performance are kept in separate verified windows.</p></div>
+            <a class="button button--outline" href="{{ '/head-to-head/' | relative_url }}">Head-to-head</a>
+          </div>
+          <div class="franchise-history__grid">
+            {% assign season_history = historical_metrics.season_history %}
+            {% if season_history.season_count > 0 %}<article><span>{{ season_history.coverage.label }}</span><h3>Season History</h3><dl><div><dt>Seasons</dt><dd>{{ season_history.season_count }}</dd></div><div><dt>Record</dt><dd>{{ season_history.wins }}–{{ season_history.losses }}{% if season_history.ties > 0 %}–{{ season_history.ties }}{% endif %}</dd></div><div><dt>Points for</dt><dd>{{ season_history.points_for }}</dd></div><div><dt>Average rank</dt><dd>{{ season_history.average_final_rank | round: 2 }}</dd></div><div><dt>Championships</dt><dd>{{ season_history.championships }}</dd></div></dl></article>{% endif %}
+            {% assign weekly = historical_metrics.weekly_performance %}
+            {% if weekly.games > 0 %}<article><span>{{ weekly.coverage.label }}</span><h3>Weekly Performance</h3><dl><div><dt>Games</dt><dd>{{ weekly.games }}</dd></div><div><dt>Record</dt><dd>{{ weekly.wins }}–{{ weekly.losses }}{% if weekly.ties > 0 %}–{{ weekly.ties }}{% endif %}</dd></div><div><dt>Average score</dt><dd>{{ weekly.average_score | round: 2 }}</dd></div><div><dt>High / Low</dt><dd>{{ weekly.highest_score }} / {{ weekly.lowest_score }}</dd></div><div><dt>Best win streak</dt><dd>{% if weekly.longest_winning_streak %}{{ weekly.longest_winning_streak.games }} games{% else %}—{% endif %}</dd></div></dl></article>{% endif %}
+          </div>
+        </div>
+      </section>
+    {% endif %}
 
     <section class="content-section content-section--neutral content-section--bordered">
       <div class="wrap franchise-gallery{% unless branding.honors_image %} franchise-gallery--two{% endunless %}">

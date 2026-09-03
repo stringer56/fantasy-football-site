@@ -88,7 +88,7 @@ editorial decisions, and unresolved fields.
   and notes. The empty `bench_blunder_schema` fixes the future entry shape
   without publishing invented rows. `scripts/build_records.py` reads these
   definitions and the canonical historical files to create the sanitized
-  `_data/generated/records.json`; see
+  `_data/generated/record_book.json`; see
   [Records Data Coverage](RECORDS_DATA_COVERAGE.md).
 - `votes.yml`: poll metadata, options, static result snapshots, and timestamps.
   It also fixes the allowed poll types, required fields, Google Forms import
@@ -149,7 +149,7 @@ injury/status designation when supplied by Yahoo.
 Contains `schema_version`, `updated`, and valid article `items`. Feed failures
 are logged in Actions and are never stored as public headlines.
 
-### `records.json`
+### `record_book.json`
 
 Contains deterministic record-book output: `generated_at`, archive coverage,
 typed leaderboards, single-season records, unavailable-category states, and an
@@ -255,3 +255,26 @@ and canonical franchise joins. It contains no account or authentication data.
 
 Raw HTML lives only under ignored `.cache/yahoo-history/`. See
 [Yahoo Historical Backfill](YAHOO_HISTORY_BACKFILL.md).
+
+### Historical derived metrics
+
+`_data/generated/records/` contains nine deterministic schema-versioned files:
+
+- `manifest.json`: coverage windows, file inventory, source/exclusion counts,
+  unresolved-identity policy, and the disabled bench-record flag.
+- `head_to_head.json`: resolved franchise pairs, series totals, points, averages,
+  largest/closest/highest meetings, current streak, playoff totals, and recent games.
+- `biggest_wins.json` and `closest_games.json`: Top 10 overall, regular-season,
+  and confidently classified playoff results, plus preserved ties.
+- `weekly_scores.json`: Top 10 team scores, season highs/lows, and combined-game totals.
+- `streaks.json`: single-season and separately labelled cross-season win/loss
+  streaks plus single-season unbeaten streaks.
+- `playoffs.json`: only independently classified championship-bracket games and
+  per-franchise playoff metrics.
+- `franchise_summaries.json`: separate season-level 2021–2025 and weekly-derived
+  2022–2025 modules for canonical franchise pages.
+- `record_thresholds.json`: reusable verified thresholds for future Record Watch.
+
+The pre-existing Milestone 7 output is named `_data/generated/record_book.json`
+to avoid a Jekyll data-key collision with the records directory. See
+[Historical Derived Metrics](HISTORICAL_METRICS.md).

@@ -17,7 +17,7 @@ REQUIRED_FILES = {
     "standings.json",
     "matchups.json",
     "rosters.json",
-    "records.json",
+    "record_book.json",
     "votes.json",
     "power_rankings.json",
     "picks.json",

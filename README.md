@@ -31,6 +31,8 @@ python scripts/build_recaps.py --check
 python scripts/validate_recaps.py
 python scripts/discover_yahoo_history.py --dry-run --check
 python scripts/validate_yahoo_history_backfill.py
+python scripts/build_historical_metrics.py --check
+python scripts/validate_historical_metrics.py
 ```
 
 Run a GitHub Pages-compatible build when Ruby and Bundler are installed:
@@ -68,3 +70,6 @@ documented in
 The cache-first, rate-limited public archive importer and its verified coverage
 are documented in
 [Yahoo Historical Backfill](docs/YAHOO_HISTORY_BACKFILL.md).
+The coverage-gated head-to-head, scoring, margin, streak, playoff, and franchise
+summary aggregation is documented in
+[Historical Derived Metrics](docs/HISTORICAL_METRICS.md).
