@@ -346,7 +346,7 @@ a:hover { color: var(--navy-900); }
 .franchise-hero::before { position: absolute; z-index: -1; top: -13rem; right: -9rem; width: 42rem; height: 42rem; border: 1px solid rgba(235, 196, 95, .15); border-radius: 50%; box-shadow: 0 0 0 5rem rgba(235, 196, 95, .02), 0 0 0 10rem rgba(235, 196, 95, .015); content: ""; }
 .franchise-profile--retired .franchise-hero { background: linear-gradient(112deg, #111923, #263243); }
 .franchise-hero__grid { display: grid; min-height: 38rem; align-items: center; gap: clamp(2rem, 7vw, 7rem); grid-template-columns: minmax(0, 1.15fr) minmax(18rem, .65fr); padding-block: clamp(4rem, 8vw, 7rem); }
-.franchise-hero h1 { max-width: 50rem; margin: 0; font-family: var(--font-display); font-size: clamp(3.6rem, 8.5vw, 7.75rem); letter-spacing: .01em; line-height: .88; text-transform: uppercase; }
+.franchise-hero h1 { max-width: 50rem; margin: 0; font-family: var(--font-display); font-size: clamp(3.6rem, 8.5vw, 7.75rem); letter-spacing: .01em; line-height: .88; overflow-wrap: anywhere; text-transform: uppercase; }
 .franchise-hero__lede { max-width: 43rem; margin: var(--space-5) 0 0; color: var(--slate-200); font-size: clamp(1rem, 1.7vw, 1.22rem); }
 .franchise-hero__owners { display: flex; align-items: center; gap: var(--space-3); margin-top: var(--space-5); }
 .franchise-hero__owners span { color: var(--gold-300); font-size: .67rem; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
@@ -366,7 +366,7 @@ a:hover { color: var(--navy-900); }
 .franchise-facts dl { margin: 0; }
 .franchise-facts dl div { display: grid; gap: var(--space-4); padding: var(--space-3) var(--space-5); border-bottom: 1px solid rgba(255, 255, 255, .09); grid-template-columns: 6.5rem minmax(0, 1fr); }
 .franchise-facts dt { color: var(--slate-400); font-size: .65rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
-.franchise-facts dd { margin: 0; color: var(--white); font-size: .86rem; font-weight: 750; }
+.franchise-facts dd { min-width: 0; margin: 0; color: var(--white); font-size: .86rem; font-weight: 750; overflow-wrap: anywhere; }
 .franchise-facts blockquote { margin: 0; padding: var(--space-5); color: var(--gold-300); font-family: Georgia, serif; font-size: 1.05rem; font-style: italic; }
 .franchise-gallery { display: grid; align-items: stretch; gap: var(--space-5); grid-template-columns: minmax(0, 1.4fr) minmax(14rem, .65fr) minmax(15rem, .7fr); }
 .franchise-gallery--two { grid-template-columns: minmax(0, 1.6fr) minmax(18rem, .6fr); }
@@ -555,7 +555,7 @@ a:hover { color: var(--navy-900); }
 .records-hero__dek { max-width: 47rem; color: var(--slate-300); font-size: clamp(1rem, 2vw, 1.2rem); }
 .records-hero__actions { display: flex; align-items: center; gap: var(--space-5); margin-top: var(--space-5); }
 .records-hero .text-link { color: var(--gold-300); }
-.coverage-scorecard { padding: var(--space-6); border: 1px solid rgba(235, 196, 95, .5); background: rgba(5, 13, 24, .78); box-shadow: var(--shadow-dark); }
+.coverage-scorecard { min-width: 0; padding: var(--space-6); border: 1px solid rgba(235, 196, 95, .5); background: rgba(5, 13, 24, .78); box-shadow: var(--shadow-dark); }
 .coverage-scorecard__label { color: var(--gold-300); font-size: .67rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
 .coverage-scorecard > strong { display: block; margin: var(--space-3) 0; color: var(--white); font-family: var(--font-display); font-size: clamp(4.25rem, 8vw, 6.5rem); line-height: .85; }
 .coverage-scorecard > strong span { color: var(--gold-500); }
@@ -626,6 +626,54 @@ a:hover { color: var(--navy-900); }
 .unavailable-card--bench > span { color: var(--gold-500); }
 .record-method { max-width: 52rem; margin: var(--space-6) 0 0; color: var(--slate-600); font-size: .76rem; }
 .record-method a { color: var(--navy-700); font-weight: 850; }
+.record-subhead--light h3 { color: var(--white); }
+.record-table--weekly { min-width: 47rem; }
+.record-table--weekly a { color: var(--navy-800); font-weight: 850; }
+.weekly-record-grid { display: grid; gap: var(--space-5); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.weekly-record-grid > article { min-width: 0; padding: var(--space-5); border: 1px solid var(--slate-300); border-top: 3px solid var(--gold-500); background: var(--white); box-shadow: var(--shadow-sm); }
+.weekly-record-grid h4 { margin: 0 0 var(--space-4); color: var(--navy-900); font-family: var(--font-display); font-size: 2rem; text-transform: uppercase; }
+.weekly-record-grid ol { margin: 0; padding: 0; list-style: none; }
+.weekly-record-grid li { display: grid; min-width: 0; align-items: center; gap: .65rem; padding: .65rem 0; border-top: 1px solid var(--slate-200); grid-template-columns: 1.8rem minmax(0, 1fr) auto auto; }
+.weekly-record-grid li > span { color: var(--gold-600); font-family: var(--font-display); font-size: 1.25rem; }
+.weekly-record-grid li a { min-width: 0; color: var(--navy-900); font-size: .75rem; font-weight: 900; overflow-wrap: anywhere; }
+.weekly-record-grid li strong { color: var(--navy-900); font-variant-numeric: tabular-nums; }
+.weekly-record-grid li small { color: var(--slate-600); font-size: .6rem; white-space: nowrap; }
+.records-franchise-leaders { background: var(--slate-100); }
+
+/* Historical head-to-head */
+.h2h-shell { min-height: 38rem; }
+.h2h-shell .section-heading > div { min-width: 0; }
+.h2h-shell .section-heading h2 { overflow-wrap: anywhere; }
+.h2h-controls { display: grid; align-items: end; gap: var(--space-4); margin-bottom: var(--space-6); padding: var(--space-5); border: 1px solid var(--slate-300); background: var(--slate-100); grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
+.h2h-controls label { display: grid; gap: var(--space-2); color: var(--navy-900); font-size: .67rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.h2h-controls select { width: 100%; min-height: 3.25rem; padding: .7rem 2.5rem .7rem .85rem; border: 1px solid var(--slate-400); border-radius: 0; background: var(--white); color: var(--navy-900); font: inherit; letter-spacing: 0; text-transform: none; }
+.h2h-controls > span { padding-bottom: 1rem; color: var(--gold-600); font-family: var(--font-display); font-size: 1.6rem; text-transform: uppercase; }
+.h2h-score { display: grid; align-items: center; gap: var(--space-4); padding: var(--space-6); border-top: 4px solid var(--gold-500); background: var(--navy-900); color: var(--white); grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
+.h2h-score > div { display: grid; gap: var(--space-3); text-align: center; }
+.h2h-score a { color: var(--white); font-weight: 900; overflow-wrap: anywhere; }
+.h2h-score strong { color: var(--gold-300); font-family: var(--font-display); font-size: clamp(3rem, 7vw, 5rem); line-height: .8; }
+.h2h-score > span { color: var(--slate-400); font-size: .65rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.h2h-metrics { display: grid; border: 1px solid var(--slate-300); border-top: 0; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.h2h-metrics article { min-width: 0; padding: var(--space-4); border-right: 1px solid var(--slate-300); background: var(--white); }
+.h2h-metrics article:last-child { border-right: 0; }
+.h2h-metrics span { display: block; color: var(--slate-600); font-size: .58rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+.h2h-metrics strong { display: block; margin-top: var(--space-2); color: var(--navy-900); font-family: var(--font-display); font-size: 1.65rem; overflow-wrap: anywhere; }
+.h2h-meetings { margin: 0; padding: 0; border: 1px solid var(--slate-300); background: var(--white); list-style: none; }
+.h2h-meetings li { display: grid; align-items: center; gap: var(--space-3); padding: var(--space-4); border-bottom: 1px solid var(--slate-200); grid-template-columns: 8rem minmax(0, 1fr) auto; }
+.h2h-meetings li:last-child { border: 0; }
+.h2h-meetings span, .h2h-meetings small { color: var(--slate-600); font-size: .65rem; }
+.h2h-meetings strong { color: var(--navy-900); overflow-wrap: anywhere; }
+
+/* Franchise historical modules */
+.franchise-history__grid { display: grid; gap: var(--space-5); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.franchise-history__grid article { min-width: 0; padding: var(--space-5); border-top: 3px solid var(--gold-500); background: var(--white); box-shadow: var(--shadow-sm); }
+.franchise-history__grid article > span { color: var(--gold-600); font-size: .62rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.franchise-history__grid h3 { margin: var(--space-2) 0 var(--space-4); color: var(--navy-900); font-family: var(--font-display); font-size: 2rem; text-transform: uppercase; }
+.franchise-history__grid dl { display: grid; margin: 0; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.franchise-history__grid dl div { min-width: 0; padding: var(--space-3); border: 1px solid var(--slate-200); border-right: 0; }
+.franchise-history__grid dl div:last-child { border-right: 1px solid var(--slate-200); }
+.franchise-history__grid dt { color: var(--slate-600); font-size: .56rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+.franchise-history__grid dd { margin: .35rem 0 0; color: var(--navy-900); font-family: var(--font-display); font-size: 1.35rem; overflow-wrap: anywhere; }
 
 /* League votes, Power Rankings, and picks */
 .vote-hero { position: relative; overflow: hidden; border-bottom: 4px solid var(--gold-500); background: linear-gradient(120deg, var(--navy-950) 0%, var(--navy-800) 70%, #26334a 100%); color: var(--white); }
@@ -753,6 +801,9 @@ a:hover { color: var(--navy-900); }
   .draft-recap > .text-link { grid-column: 2; }
   .record-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .streak-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .h2h-metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .h2h-metrics article { border-bottom: 1px solid var(--slate-300); }
+  .franchise-history__grid { grid-template-columns: 1fr; }
   .vote-matchup-grid, .pick-card-grid { grid-template-columns: 1fr; }
   .pick-week-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -817,6 +868,9 @@ a:hover { color: var(--navy-900); }
   .draft-recap > .text-link { grid-column: auto; }
   .records-hero__actions { align-items: start; flex-direction: column; }
   .streak-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .h2h-controls { grid-template-columns: 1fr; }
+  .h2h-controls > span { padding: 0; text-align: center; }
+  .h2h-meetings li { align-items: start; grid-template-columns: 1fr; }
   .poll-grid { grid-template-columns: 1fr; }
   .vote-hero__actions { align-items: start; flex-direction: column; }
 }
@@ -875,9 +929,19 @@ a:hover { color: var(--navy-900); }
   .draft-back-links { align-items: start; flex-direction: column; }
   .records-hero h1 { font-size: clamp(3.2rem, 17vw, 5.25rem); }
   .coverage-scorecard { padding: var(--space-5); }
+  .coverage-scorecard > strong { font-size: clamp(2.8rem, 13vw, 4rem); }
   .coverage-scorecard dl { grid-template-columns: 1fr; }
   .coverage-scorecard dl div, .coverage-scorecard dl div:first-child { padding: var(--space-3) 0; border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, .12); }
   .record-card-grid, .streak-grid, .unavailable-grid { grid-template-columns: 1fr; }
+  .weekly-record-grid, .franchise-history__grid { grid-template-columns: 1fr; }
+  .weekly-record-grid li { grid-template-columns: 1.6rem minmax(0, 1fr) auto; }
+  .weekly-record-grid li small { grid-column: 2 / -1; }
+  .h2h-score { padding: var(--space-4); grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
+  .h2h-metrics { grid-template-columns: 1fr; }
+  .h2h-metrics article, .h2h-metrics article:last-child { border-right: 0; }
+  .franchise-history__grid dl { grid-template-columns: 1fr 1fr; }
+  .franchise-history__grid dl div { border-right: 1px solid var(--slate-200); }
+  .h2h-shell .section-heading h2 { font-size: clamp(2.25rem, 13vw, 3.4rem); }
   .record-card { min-height: 12rem; }
   .record-subhead { align-items: start; flex-direction: column; }
   .unavailable-card { grid-template-columns: 3rem minmax(0, 1fr); padding: var(--space-4); }

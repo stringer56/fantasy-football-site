@@ -68,9 +68,9 @@
           "season": 2021,
           "yahoo_team_key": "406.l.12928.t.3",
           "yahoo_team_name": "Quahog Stripes",
-          "candidate_franchise_id": "quahog-stripes",
+          "candidate_franchise_id": "new-jersey-giants",
           "status": "verified",
-          "basis": "unique_canonical_name_or_alias"
+          "basis": "season_team_key"
         },
         {
           "season": 2021,
@@ -207,17 +207,17 @@
           "season": 2022,
           "yahoo_team_key": "414.l.527645.t.5",
           "yahoo_team_name": "Broncos Country Let’s Ride",
-          "candidate_franchise_id": null,
-          "status": "unresolved",
-          "basis": null
+          "candidate_franchise_id": "vegas-vandals",
+          "status": "verified",
+          "basis": "season_team_key"
         },
         {
           "season": 2022,
           "yahoo_team_key": "414.l.527645.t.6",
           "yahoo_team_name": "Quahog Stripes",
-          "candidate_franchise_id": "quahog-stripes",
+          "candidate_franchise_id": "new-jersey-giants",
           "status": "verified",
-          "basis": "unique_canonical_name_or_alias"
+          "basis": "season_team_key"
         },
         {
           "season": 2022,
@@ -239,9 +239,9 @@
           "season": 2022,
           "yahoo_team_key": "414.l.527645.t.9",
           "yahoo_team_name": "Dilly Dilly",
-          "candidate_franchise_id": null,
-          "status": "unresolved",
-          "basis": null
+          "candidate_franchise_id": "buffalo-bravado",
+          "status": "verified",
+          "basis": "season_team_key"
         },
         {
           "season": 2022,
@@ -324,9 +324,9 @@
           "season": 2023,
           "yahoo_team_key": "423.l.161807.t.4",
           "yahoo_team_name": "Broncos Country Let’s Ride",
-          "candidate_franchise_id": null,
-          "status": "unresolved",
-          "basis": null
+          "candidate_franchise_id": "vegas-vandals",
+          "status": "verified",
+          "basis": "season_team_key"
         },
         {
           "season": 2023,
@@ -694,9 +694,9 @@
           "season": 2026,
           "yahoo_team_key": "470.l.26455.t.2",
           "yahoo_team_name": "Albany Redskins",
-          "candidate_franchise_id": null,
-          "status": "unresolved",
-          "basis": null
+          "candidate_franchise_id": "albany-kneelers",
+          "status": "verified",
+          "basis": "season_team_key"
         },
         {
           "season": 2026,

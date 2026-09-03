@@ -19,7 +19,7 @@ SOURCE_FILES = [
     "_data/playoffs.yml",
     "_data/champions.yml",
     "_data/franchises.yml",
-    "_data/generated/records.json",
+    "_data/generated/record_book.json",
     "_data/editorial/recaps.yml",
 ]
 ROUND_ORDER = {"Quarterfinal": 1, "Semifinal": 2, "Championship": 3}
@@ -638,7 +638,7 @@ def generate(
     playoffs_data = playoffs_data or load_yaml("_data/playoffs.yml")
     champions_data = champions_data or load_yaml("_data/champions.yml")
     franchises_data = franchises_data or load_yaml("_data/franchises.yml")
-    records_data = records_data or load_json("_data/generated/records.json")
+    records_data = records_data or load_json("_data/generated/record_book.json")
     editorial_data = editorial_data or load_yaml("_data/editorial/recaps.yml")
 
     seasons = seasons_data["seasons"]

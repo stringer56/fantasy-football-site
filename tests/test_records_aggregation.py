@@ -63,7 +63,7 @@ class RecordsAggregationTests(unittest.TestCase):
         entries, unresolved = build_records.build_career_totals(
             self.seasons["seasons"], self.champions["champions"], self.identities
         )
-        self.assertEqual(unresolved, 5)
+        self.assertEqual(unresolved, 2)
         self.assertNotIn(None, {item["franchise_id"] for item in entries})
 
     def test_missing_points_are_not_converted_to_zero(self) -> None:

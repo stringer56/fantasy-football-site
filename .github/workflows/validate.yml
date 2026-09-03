@@ -43,6 +43,9 @@ jobs:
       - name: Check generated recaps
         run: python scripts/build_recaps.py --check
 
+      - name: Check generated historical metrics
+        run: python scripts/build_historical_metrics.py --check
+
       - name: Check Yahoo history discovery baseline
         run: python scripts/discover_yahoo_history.py --dry-run --check
 
@@ -57,6 +60,7 @@ jobs:
           python scripts/validate_votes_data.py
           python scripts/validate_recaps.py
           python scripts/validate_yahoo_history_backfill.py
+          python scripts/validate_historical_metrics.py
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1

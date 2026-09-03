@@ -217,22 +217,16 @@
         }
       },
       "franchise_mapping": {
-        "status": "partial",
-        "unresolved_names": [
-          "Broncos Country Let’s Ride",
-          "Dilly Dilly"
-        ]
+        "status": "complete",
+        "unresolved_names": []
       },
       "weeks_expected": 16,
       "weeks_fetched": 16,
       "matchups_expected": 92,
       "matchups_fetched": 92,
       "roster_weeks_fetched": 0,
-      "unresolved_franchise_mappings": [
-        "Broncos Country Let’s Ride",
-        "Dilly Dilly"
-      ],
-      "confidence": "high_results_partial_identity"
+      "unresolved_franchise_mappings": [],
+      "confidence": "high_results_complete_identity"
     },
     {
       "season": 2023,
@@ -285,20 +279,16 @@
         }
       },
       "franchise_mapping": {
-        "status": "partial",
-        "unresolved_names": [
-          "Broncos Country Let’s Ride"
-        ]
+        "status": "complete",
+        "unresolved_names": []
       },
       "weeks_expected": 16,
       "weeks_fetched": 16,
       "matchups_expected": 92,
       "matchups_fetched": 92,
       "roster_weeks_fetched": 0,
-      "unresolved_franchise_mappings": [
-        "Broncos Country Let’s Ride"
-      ],
-      "confidence": "high_results_partial_identity"
+      "unresolved_franchise_mappings": [],
+      "confidence": "high_results_complete_identity"
     },
     {
       "season": 2024,

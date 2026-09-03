@@ -21,6 +21,7 @@ EXPECTED_ROUTES = (
     "/drafts/",
     "/cup/",
     "/records/",
+    "/head-to-head/",
     "/votes/",
     "/votes/power-rankings/",
     "/votes/picks/",
@@ -108,6 +109,7 @@ def main() -> None:
     drafts_page = route_target("/drafts/").read_text(encoding="utf-8")
     cup_page = route_target("/cup/").read_text(encoding="utf-8")
     records_page = route_target("/records/").read_text(encoding="utf-8")
+    head_to_head_page = route_target("/head-to-head/").read_text(encoding="utf-8")
     votes_page = route_target("/votes/").read_text(encoding="utf-8")
     power_page = route_target("/votes/power-rankings/").read_text(encoding="utf-8")
     picks_page = route_target("/votes/picks/").read_text(encoding="utf-8")
@@ -115,8 +117,10 @@ def main() -> None:
         errors.append("mobile navigation toggle must have an accessible name")
     if teams_page.count('class="franchise-card"') != 12:
         errors.append("teams directory must render exactly 12 active franchise cards")
-    if retired_page.count('class="retired-card"') != 2:
-        errors.append("retired directory must render exactly 2 retired franchise cards")
+    if retired_page.count('data-archive-kind="retired-franchise"') != 1:
+        errors.append("franchise archive must render exactly 1 retired franchise card")
+    if retired_page.count('data-archive-kind="historical-identity"') != 1:
+        errors.append("franchise archive must render exactly 1 historical identity card")
     if history_page.count('class="season-archive-card"') != 4:
         errors.append("history archive must render exactly 4 season cards")
     if drafts_page.count('class="draft-season-card"') != 4:
@@ -126,23 +130,32 @@ def main() -> None:
     for expected in (
         "Road to Glory",
         "Record Book",
-        "Career Leaderboard",
+        "Franchise Leaders",
         "Season Records",
+        "Weekly Records",
+        "Biggest Wins",
+        "Closest Games",
+        "Winning &amp; Losing Streaks",
         "Playoff Records",
         "Still Being Built",
         "Bench Blunders",
     ):
         if expected not in records_page:
             errors.append(f"records page is missing: {expected}")
-    record_book = json.loads((ROOT / "_data" / "generated" / "records.json").read_text(encoding="utf-8"))
-    career_count = len(record_book["leaderboards"]["career_totals"]["entries"])
-    playoff_count = len(record_book["leaderboards"]["playoff_results"]["entries"])
+    record_book = json.loads((ROOT / "_data" / "generated" / "record_book.json").read_text(encoding="utf-8"))
+    historical_summaries = json.loads((ROOT / "_data" / "generated" / "records" / "franchise_summaries.json").read_text(encoding="utf-8"))
+    historical_playoffs = json.loads((ROOT / "_data" / "generated" / "records" / "playoffs.json").read_text(encoding="utf-8"))
+    career_count = len(historical_summaries["franchises"])
+    playoff_count = len(historical_playoffs["franchises"])
     if records_page.count('class="record-team"') < career_count + playoff_count:
         errors.append("records page did not render every career and playoff franchise reference")
     if records_page.count('class="record-card"') != 7:
         errors.append("records page must render exactly 7 verified single-season record cards")
-    if records_page.count('class="unavailable-card') != len(record_book["unavailable_categories"]):
-        errors.append("records page must render every unavailable category exactly once")
+    if records_page.count('class="unavailable-card') != 2:
+        errors.append("records page must render only playoff drought and bench unavailable states")
+    for expected in ('id="franchise-a"', 'id="franchise-b"', 'id="h2h-data"', "Verified 2022–2025"):
+        if expected not in head_to_head_page:
+            errors.append(f"head-to-head page is missing: {expected}")
     for expected in ("League", "Votes", "Active Votes", "Weekly Matchup Picks", "Power Rankings", "Vote Archive"):
         if expected not in votes_page:
             errors.append(f"votes hub is missing: {expected}")

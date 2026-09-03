@@ -14,7 +14,7 @@ The source of truth is limited to:
   documented bracket ambiguity;
 - `_data/champions.yml` for verified finalists and championship scores;
 - `_data/franchises.yml` for stable IDs, public routes, and local identity art;
-- `_data/generated/records.json` for provenance-aware archive records; and
+- `_data/generated/record_book.json` for provenance-aware archive records; and
 - `_data/editorial/recaps.yml` for commissioner-approved prose overrides.
 
 Rendered HTML, source screenshots, the old Google Site, current Yahoo output,
@@ -38,7 +38,7 @@ Relative claims are emitted only when every team-season row has the required
 value. If one PF value is unavailable, for example, the engine omits the
 highest/lowest PF cards and all relative PF prose for that season.
 
-Record references use `_data/generated/records.json`. Partial categories are
+Record references use `_data/generated/record_book.json`. Partial categories are
 always phrased as verified within the 2021–2024 archive and never as all-time
 league history.
 

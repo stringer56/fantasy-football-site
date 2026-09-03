@@ -119,7 +119,7 @@ The endpoint composition follows Yahoo's official Fantasy Sports API resources:
 
 ## Historical franchise mapping
 
-The discovery output compares Yahoo teams with the 14 canonical franchise
+The discovery output compares Yahoo teams with the 13 canonical franchise
 records. It resolves a mapping only when either:
 
 1. the exact season-specific Yahoo team key is already verified; or
@@ -142,18 +142,19 @@ The existing 2025 key-based joins remain verified:
 | `461.l.103926.t.11` | Vegas Vandals | `vegas-vandals` | Verified |
 | `461.l.103926.t.12` | New Jersey Giants | `new-jersey-giants` | Verified |
 
-The public history pages expose complete 12-team link sets for 2022–2026. Name
-and key matching resolves 10 of 12 teams in 2022, 11 of 12 in 2023, all 12 in
-2024, all 12 in 2025, and 11 of 12 in 2026. The unresolved public identities are:
+The public history pages expose complete 12-team link sets for 2022–2026. The
+commissioner confirmed on 2026-09-03 that Dilly Dilly continues as Buffalo
+Bravado, Broncos Country Let’s Ride continues as Vegas Vandals, Albany Kneelers
+now uses the name Albany Redskins, and Quahog Stripes continues as New Jersey
+Giants. Those confirmations resolve all 12 teams in 2022–2026 without changing
+stable franchise IDs. The
+commissioner-supplied 2021 Yahoo table provides all 10 historical team keys;
+eight resolve, while The Swagger Daggers and Matthew's Optimal Team retain null
+candidate franchise IDs.
 
-- 2022: Broncos Country Let’s Ride and Dilly Dilly;
-- 2023: Broncos Country Let’s Ride; and
-- 2026: Albany Redskins.
-
-The 2026 name is not silently assigned to Albany Kneelers without explicit
-continuity evidence. The commissioner-supplied 2021 Yahoo table now provides all
-10 historical team keys. Eight resolve through established aliases; The Swagger
-Daggers and Matthew's Optimal Team retain null candidate franchise IDs.
+Quahog Stripes is mapped to stable franchise ID `new-jersey-giants` for 2021
+and 2022. The source name remains visible in historical results and its archive
+page remains available.
 
 ## Commissioner-confirmed 2025 playoff archive
 

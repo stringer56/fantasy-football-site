@@ -9,7 +9,7 @@
       2023,
       2024
     ],
-    "unresolved_standings_rows": 5,
+    "unresolved_standings_rows": 2,
     "unresolved_playoff_participants": 1,
     "notes": [
       "Career totals include only standings rows with a verified franchise mapping.",
@@ -43,8 +43,8 @@
         {
           "rank": 1,
           "franchise_id": "albany-kneelers",
-          "display_name": "Albany Kneelers",
-          "short_name": "Kneelers",
+          "display_name": "Albany Redskins",
+          "short_name": "Redskins",
           "path": "/teams/albany-kneelers/",
           "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
           "seasons": [
@@ -247,11 +247,33 @@
         },
         {
           "rank": 10,
-          "franchise_id": "quahog-stripes",
-          "display_name": "Quahog Stripes",
-          "short_name": "Stripes",
-          "path": "/retired/quahog-stripes/",
-          "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
+          "franchise_id": "vegas-vandals",
+          "display_name": "Vegas Vandals",
+          "short_name": "Vandals",
+          "path": "/teams/vegas-vandals/",
+          "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
+          "seasons": [
+            2022,
+            2023,
+            2024
+          ],
+          "wins": 15,
+          "losses": 25,
+          "ties": 0,
+          "points_for": 4034.48,
+          "points_against": 4653.02,
+          "championships": 0,
+          "runner_up_finishes": 0,
+          "seasons_counted": 3,
+          "win_pct": 0.375
+        },
+        {
+          "rank": 11,
+          "franchise_id": "new-jersey-giants",
+          "display_name": "New Jersey Giants",
+          "short_name": "Giants",
+          "path": "/teams/new-jersey-giants/",
+          "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
           "seasons": [
             2021,
             2022
@@ -267,7 +289,7 @@
           "win_pct": 0.5
         },
         {
-          "rank": 11,
+          "rank": 12,
           "franchise_id": "north-town-ninnyhammers",
           "display_name": "North Town Ninnyhammers",
           "short_name": "Ninnyhammers",
@@ -288,45 +310,26 @@
           "win_pct": 0.462
         },
         {
-          "rank": 12,
+          "rank": 13,
           "franchise_id": "buffalo-bravado",
           "display_name": "Buffalo Bravado",
           "short_name": "Bravado",
           "path": "/teams/buffalo-bravado/",
           "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
           "seasons": [
+            2022,
             2023,
             2024
           ],
-          "wins": 7,
-          "losses": 19,
-          "ties": 0,
-          "points_for": 2724.72,
-          "points_against": 3129.0,
+          "wins": 11,
+          "losses": 28,
+          "ties": 1,
+          "points_for": 4154.94,
+          "points_against": 4788.0,
           "championships": 0,
           "runner_up_finishes": 0,
-          "seasons_counted": 2,
-          "win_pct": 0.269
-        },
-        {
-          "rank": 13,
-          "franchise_id": "vegas-vandals",
-          "display_name": "Vegas Vandals",
-          "short_name": "Vandals",
-          "path": "/teams/vegas-vandals/",
-          "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
-          "seasons": [
-            2024
-          ],
-          "wins": 3,
-          "losses": 10,
-          "ties": 0,
-          "points_for": 1278.54,
-          "points_against": 1607.18,
-          "championships": 0,
-          "runner_up_finishes": 0,
-          "seasons_counted": 1,
-          "win_pct": 0.231
+          "seasons_counted": 3,
+          "win_pct": 0.287
         }
       ]
     },
@@ -381,8 +384,8 @@
         {
           "rank": 1,
           "franchise_id": "albany-kneelers",
-          "display_name": "Albany Kneelers",
-          "short_name": "Kneelers",
+          "display_name": "Albany Redskins",
+          "short_name": "Redskins",
           "path": "/teams/albany-kneelers/",
           "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
           "championships": 1
@@ -422,8 +425,8 @@
         {
           "rank": 1,
           "franchise_id": "albany-kneelers",
-          "display_name": "Albany Kneelers",
-          "short_name": "Kneelers",
+          "display_name": "Albany Redskins",
+          "short_name": "Redskins",
           "path": "/teams/albany-kneelers/",
           "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
           "finals_appearances": 2
@@ -526,8 +529,8 @@
         {
           "rank": 3,
           "franchise_id": "albany-kneelers",
-          "display_name": "Albany Kneelers",
-          "short_name": "Kneelers",
+          "display_name": "Albany Redskins",
+          "short_name": "Redskins",
           "path": "/teams/albany-kneelers/",
           "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
           "seasons": [
@@ -600,11 +603,11 @@
         },
         {
           "rank": 8,
-          "franchise_id": "quahog-stripes",
-          "display_name": "Quahog Stripes",
-          "short_name": "Stripes",
-          "path": "/retired/quahog-stripes/",
-          "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
+          "franchise_id": "new-jersey-giants",
+          "display_name": "New Jersey Giants",
+          "short_name": "Giants",
+          "path": "/teams/new-jersey-giants/",
+          "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
           "seasons": [
             2022
           ],
@@ -708,11 +711,11 @@
         },
         {
           "rank": 5,
-          "franchise_id": "quahog-stripes",
-          "display_name": "Quahog Stripes",
-          "short_name": "Stripes",
-          "path": "/retired/quahog-stripes/",
-          "identity_image": "/assets/img/franchises/quahog-stripes/identity.jpg",
+          "franchise_id": "new-jersey-giants",
+          "display_name": "New Jersey Giants",
+          "short_name": "Giants",
+          "path": "/teams/new-jersey-giants/",
+          "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
           "streak": 1,
           "start_year": 2022,
           "end_year": 2022
@@ -742,8 +745,8 @@
         {
           "rank": 5,
           "franchise_id": "albany-kneelers",
-          "display_name": "Albany Kneelers",
-          "short_name": "Kneelers",
+          "display_name": "Albany Redskins",
+          "short_name": "Redskins",
           "path": "/teams/albany-kneelers/",
           "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
           "streak": 1,
@@ -785,7 +788,7 @@
               "season_path": "/history/2023/",
               "franchise_id": "albany-kneelers",
               "historical_team_name": "Albany Kneelers",
-              "display_name": "Albany Kneelers",
+              "display_name": "Albany Redskins",
               "path": "/teams/albany-kneelers/",
               "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
               "source": {
@@ -841,7 +844,7 @@
               "season_path": "/history/2023/",
               "franchise_id": "albany-kneelers",
               "historical_team_name": "Albany Kneelers",
-              "display_name": "Albany Kneelers",
+              "display_name": "Albany Redskins",
               "path": "/teams/albany-kneelers/",
               "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
               "source": {

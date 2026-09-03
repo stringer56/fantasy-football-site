@@ -37,6 +37,7 @@ YAHOO_2021_SOURCE_PATH = ROOT / "_data" / "yahoo_history" / "2021.yml"
 COMPLETED_SEASONS = {2021, 2022, 2023, 2024, 2025}
 PLAYOFF_START = {2021: 15, 2022: 15, 2023: 14, 2024: 14, 2025: 14}
 DEFAULT_SECTIONS = {"league", "standings", "matchups", "draft", "transactions"}
+REMAPPABLE_FILES = ("teams.json", "standings.json", "weeks.json", "draft.json", "transactions.json", "rosters.json")
 
 
 def coverage_scopes() -> dict[str, dict[str, Any]]:
@@ -129,6 +130,94 @@ def mappings_for(season: dict[str, Any]) -> tuple[dict[str, str | None], dict[st
         if name:
             name_map[name.casefold()] = franchise_id
     return key_map, name_map
+
+
+def remap_payload(value: Any, mappings_by_name: dict[str, str | None]) -> int:
+    """Apply only approved canonical aliases to an already normalized payload."""
+    changes = 0
+    if isinstance(value, list):
+        return sum(remap_payload(item, mappings_by_name) for item in value)
+    if not isinstance(value, dict):
+        return 0
+    for child in value.values():
+        changes += remap_payload(child, mappings_by_name)
+
+    historical_name = value.get("historical_team_name")
+    if historical_name and "franchise_id" in value:
+        franchise_id = mappings_by_name.get(str(historical_name).casefold())
+        if franchise_id:
+            if value.get("franchise_id") != franchise_id:
+                value["franchise_id"] = franchise_id
+                changes += 1
+            if "mapping_status" in value and value.get("mapping_status") != "verified":
+                value["mapping_status"] = "verified"
+                changes += 1
+
+    winner_name = value.get("winner_historical_name")
+    if winner_name and "winner_franchise_id" in value:
+        franchise_id = mappings_by_name.get(str(winner_name).casefold())
+        if franchise_id and value.get("winner_franchise_id") != franchise_id:
+            value["winner_franchise_id"] = franchise_id
+            changes += 1
+    return changes
+
+
+def remap_committed_history(selected: list[int]) -> int:
+    """Refresh canonical joins without refetching or changing Yahoo source facts."""
+    mappings_by_name = canonical_name_map()
+    changed_files = 0
+    for year in selected:
+        for filename in REMAPPABLE_FILES:
+            path = OUTPUT_ROOT / str(year) / filename
+            if not path.is_file():
+                continue
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            if remap_payload(payload, mappings_by_name):
+                write_json(path, payload)
+                changed_files += 1
+
+    completeness_path = OUTPUT_ROOT / "completeness.json"
+    completeness = json.loads(completeness_path.read_text(encoding="utf-8"))
+    completeness_changed = False
+    for summary in completeness.get("seasons", []):
+        year = int(summary["season"])
+        if year not in selected:
+            continue
+        standings_path = OUTPUT_ROOT / str(year) / "standings.json"
+        if not standings_path.is_file():
+            continue
+        standings = json.loads(standings_path.read_text(encoding="utf-8")).get("standings", [])
+        unresolved = sorted(
+            row["historical_team_name"] for row in standings if not row.get("franchise_id")
+        )
+        mapping = summary.setdefault("franchise_mapping", {})
+        replacement = "complete" if standings and not unresolved else ("partial" if standings else "unavailable")
+        if mapping.get("status") != replacement:
+            mapping["status"] = replacement
+            completeness_changed = True
+        if mapping.get("unresolved_names") != unresolved:
+            mapping["unresolved_names"] = unresolved
+            completeness_changed = True
+        if "resolved" in mapping:
+            resolved = len(standings) - len(unresolved)
+            if mapping.get("resolved") != resolved:
+                mapping["resolved"] = resolved
+                completeness_changed = True
+        if summary.get("unresolved_franchise_mappings") != unresolved:
+            summary["unresolved_franchise_mappings"] = unresolved
+            completeness_changed = True
+        confidence = (
+            "partial_mixed_verified_sources" if year == 2021
+            else "high_results_partial_identity" if unresolved
+            else "high_results_complete_identity"
+        )
+        if summary.get("confidence") != confidence:
+            summary["confidence"] = confidence
+            completeness_changed = True
+    if completeness_changed:
+        write_json(completeness_path, completeness)
+        changed_files += 1
+    return changed_files
 
 
 def payload_base(season: dict[str, Any], generated_at: str) -> dict[str, Any]:
@@ -574,6 +663,11 @@ def main() -> None:
     parser.add_argument("--delay", type=float, default=2.5, help="Minimum seconds between Yahoo requests")
     parser.add_argument("--max-retries", type=int, default=4)
     parser.add_argument("--generated-at", default=None, help="ISO-8601 timestamp override for reproducible fixtures")
+    parser.add_argument(
+        "--remap-only",
+        action="store_true",
+        help="Reapply canonical aliases to committed normalized files without network requests",
+    )
     args = parser.parse_args()
 
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
@@ -586,6 +680,10 @@ def main() -> None:
     unsupported = sections - {"league", "standings", "matchups", "draft", "transactions", "rosters"}
     if unsupported:
         parser.error(f"unsupported section(s): {', '.join(sorted(unsupported))}")
+    if args.remap_only:
+        changed = remap_committed_history(selected)
+        print(f"Historical remap complete: {changed} file(s) updated")
+        return
     include_rosters = args.include_rosters or "rosters" in sections
     generated_at = args.generated_at or utc_now()
     client = ArchiveClient(CACHE_ROOT, delay_seconds=max(0.5, args.delay), max_retries=max(0, args.max_retries))

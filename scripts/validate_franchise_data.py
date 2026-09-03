@@ -40,6 +40,9 @@ def main() -> None:
     owners_data = load_yaml("owners.yml")
     retired_data = load_yaml("retired_franchises.yml")
     generated = json.loads((ROOT / "_data" / "generated" / "teams.json").read_text(encoding="utf-8"))
+    history_manifest = json.loads(
+        (ROOT / "_data" / "generated" / "history_manifest.json").read_text(encoding="utf-8")
+    )
 
     for name, payload in (
         ("franchises.yml", franchises_data),
@@ -55,12 +58,12 @@ def main() -> None:
     if not isinstance(franchises, list) or not isinstance(owners, list) or not isinstance(retired_ids, list):
         raise SystemExit("Franchise validation failed: canonical arrays are missing")
 
-    if len(franchises) != 14:
-        errors.append(f"expected 14 franchises, found {len(franchises)}")
+    if len(franchises) != 13:
+        errors.append(f"expected 13 canonical franchises, found {len(franchises)}")
     active = [item for item in franchises if item.get("status") == "active"]
     retired = [item for item in franchises if item.get("status") == "retired"]
-    if len(active) != 12 or len(retired) != 2:
-        errors.append(f"expected 12 active and 2 retired franchises, found {len(active)} and {len(retired)}")
+    if len(active) != 12 or len(retired) != 1:
+        errors.append(f"expected 12 active and 1 retired franchise, found {len(active)} and {len(retired)}")
 
     owner_by_id: dict[str, dict] = {}
     for owner in owners:
@@ -81,6 +84,12 @@ def main() -> None:
     identity_to_id: dict[str, str] = {}
     mapped_team_keys: set[str] = set()
     generated_by_key = {team["team_key"]: team for team in generated.get("teams", [])}
+    historical_by_key = {
+        mapping["yahoo_team_key"]: mapping
+        for season in history_manifest.get("seasons", [])
+        for mapping in season.get("team_mappings", [])
+        if mapping.get("yahoo_team_key") and mapping.get("status") == "verified"
+    }
     collection_ids: dict[str, Path] = {}
 
     for path in sorted((ROOT / "_franchises").glob("*.md")):
@@ -157,13 +166,12 @@ def main() -> None:
         name_map = yahoo.get("team_names") or {}
         if set(key_map) != set(id_map) or set(key_map) != set(name_map):
             errors.append(f"{label}: Yahoo season mapping keys do not align")
-        if "2026" in key_map:
-            errors.append(f"{label}: unverified 2026 Yahoo mapping must not be committed")
         for season, team_key in key_map.items():
             if team_key in mapped_team_keys:
                 errors.append(f"duplicate Yahoo team key mapping: {team_key}")
             mapped_team_keys.add(team_key)
             generated_team = generated_by_key.get(team_key)
+            historical_team = historical_by_key.get(team_key)
             if season == "2025" and not generated_team:
                 errors.append(f"{label}: 2025 team key is absent from generated teams: {team_key}")
             elif generated_team:
@@ -173,6 +181,15 @@ def main() -> None:
                     errors.append(f"{label}: Yahoo team_name mismatch for {season}")
                 if str(name_map.get(season)).casefold() not in {str(name).casefold() for name in names}:
                     errors.append(f"{label}: Yahoo team_name must be canonical or an alias")
+            elif not historical_team:
+                errors.append(f"{label}: {season} team key is absent from the verified history manifest: {team_key}")
+            else:
+                if historical_team.get("candidate_franchise_id") != franchise_id:
+                    errors.append(f"{label}: historical Yahoo franchise mismatch for {season}")
+                if historical_team.get("yahoo_team_name") != name_map.get(season):
+                    errors.append(f"{label}: historical Yahoo team_name mismatch for {season}")
+                if str(name_map.get(season)).casefold() not in {str(name).casefold() for name in names}:
+                    errors.append(f"{label}: historical Yahoo team_name must be canonical or an alias")
 
         page_path = collection_ids.get(franchise_id)
         if page_path is None:
@@ -211,7 +228,7 @@ def main() -> None:
 
     if errors:
         raise SystemExit("Franchise validation failed:\n- " + "\n- ".join(errors))
-    print("Validated 12 active franchises, 2 retired franchises, 12 current owners, local assets, routes, aliases, and Yahoo mappings")
+    print("Validated 12 active franchises, 1 retired franchise, 12 current owners, local assets, routes, aliases, and Yahoo mappings")
 
 
 if __name__ == "__main__":

@@ -32,7 +32,12 @@ class DraftDataValidationTests(unittest.TestCase):
 
     def test_unresolved_mapping_cannot_hide_a_franchise_id(self) -> None:
         datasets = copy.deepcopy(self.datasets)
-        unresolved = datasets["drafts.yml"]["drafts"][1]["draft_order"][1]
+        unresolved = next(
+            entry
+            for draft in datasets["drafts.yml"]["drafts"]
+            for entry in draft["draft_order"]
+            if entry["mapping_status"] == "unresolved"
+        )
         unresolved["franchise_id"] = "maine-moose"
 
         with mock.patch.object(validate_draft_data, "load", side_effect=datasets.__getitem__):

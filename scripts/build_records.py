@@ -13,7 +13,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "_data"
-OUTPUT_PATH = DATA_DIR / "generated" / "records.json"
+OUTPUT_PATH = DATA_DIR / "generated" / "record_book.json"
 
 
 def load_yaml(name: str) -> dict[str, Any]:

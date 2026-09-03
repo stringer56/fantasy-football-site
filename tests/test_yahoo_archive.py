@@ -21,7 +21,7 @@ from yahoo_archive import (  # noqa: E402
     parse_transactions,
     next_transaction_offset,
 )
-from backfill_yahoo_history import apply_2021_canonical_fallback, coverage_scopes  # noqa: E402
+from backfill_yahoo_history import apply_2021_canonical_fallback, coverage_scopes, remap_payload  # noqa: E402
 
 
 FIXTURES = ROOT / "tests" / "fixtures" / "yahoo_archive"
@@ -214,6 +214,31 @@ class YahooArchiveParserTests(unittest.TestCase):
         self.assertEqual([2022, 2023, 2024, 2025], weekly_scope["source_years"])
         self.assertEqual([2021], weekly_scope["excluded_years"])
         self.assertNotIn("all-time", " ".join(scope["label"] for scope in scopes.values()).casefold())
+
+    def test_remap_payload_applies_only_approved_aliases(self) -> None:
+        payload = {
+            "team_a": {
+                "historical_team_name": "Dilly Dilly",
+                "franchise_id": None,
+                "mapping_status": "unresolved",
+            },
+            "team_b": {
+                "historical_team_name": "The Swagger Daggers",
+                "franchise_id": None,
+                "mapping_status": "unresolved",
+            },
+            "winner_historical_name": "Dilly Dilly",
+            "winner_franchise_id": None,
+        }
+        changes = remap_payload(
+            payload,
+            {"dilly dilly": "buffalo-bravado", "the swagger daggers": None},
+        )
+        self.assertGreater(changes, 0)
+        self.assertEqual(payload["team_a"]["franchise_id"], "buffalo-bravado")
+        self.assertEqual(payload["team_a"]["mapping_status"], "verified")
+        self.assertIsNone(payload["team_b"]["franchise_id"])
+        self.assertEqual(payload["winner_franchise_id"], "buffalo-bravado")
 
     def test_parser_output_is_deterministic(self) -> None:
         args = dict(season=2025, week=1, game_key="461", league_id="103926", mappings=self.mappings, playoff_start_week=14)

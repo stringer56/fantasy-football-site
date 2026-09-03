@@ -14,7 +14,7 @@ from validate_public_data import validate_payload
 
 
 ROOT = Path(__file__).resolve().parents[1]
-RECORDS_PATH = ROOT / "_data" / "generated" / "records.json"
+RECORDS_PATH = ROOT / "_data" / "generated" / "record_book.json"
 VALID_COVERAGE = {"complete", "partial", "unavailable"}
 
 

@@ -2,17 +2,17 @@ schema_version: 1
 franchises:
   - franchise_id: albany-kneelers
     slug: albany-kneelers
-    name: Albany Kneelers
-    short_name: Kneelers
+    name: Albany Redskins
+    short_name: Redskins
     status: active
-    aliases: []
+    aliases: [Albany Kneelers]
     owner_ids: [james-beast]
     founded_season:
     retired_season:
     yahoo:
-      team_keys: {"2025": 461.l.103926.t.2}
-      team_ids: {"2025": 2}
-      team_names: {"2025": Albany Kneelers}
+      team_keys: {"2025": 461.l.103926.t.2, "2026": 470.l.26455.t.2}
+      team_ids: {"2025": 2, "2026": 2}
+      team_names: {"2025": Albany Kneelers, "2026": Albany Redskins}
     branding:
       identity_image: /assets/img/franchises/albany-kneelers/identity.jpg
       identity_alt: Black Albany Kneelers football helmet with the team seal
@@ -114,14 +114,14 @@ franchises:
     name: Buffalo Bravado
     short_name: Bravado
     status: active
-    aliases: [Buffalo Bravados]
+    aliases: [Buffalo Bravados, Dilly Dilly]
     owner_ids: [nate]
     founded_season:
     retired_season:
     yahoo:
-      team_keys: {"2025": 461.l.103926.t.4}
-      team_ids: {"2025": 4}
-      team_names: {"2025": Buffalo Bravados}
+      team_keys: {"2022": 414.l.527645.t.9, "2025": 461.l.103926.t.4}
+      team_ids: {"2022": 9, "2025": 4}
+      team_names: {"2022": Dilly Dilly, "2025": Buffalo Bravados}
     branding:
       identity_image: /assets/img/franchises/buffalo-bravado/identity.jpg
       identity_alt: Light blue Buffalo Bravado football helmet with a heraldic crest
@@ -256,14 +256,14 @@ franchises:
     name: New Jersey Giants
     short_name: Giants
     status: active
-    aliases: []
+    aliases: [Quahog Stripes]
     owner_ids: [jack-d]
     founded_season:
     retired_season:
     yahoo:
-      team_keys: {"2025": 461.l.103926.t.12}
-      team_ids: {"2025": 12}
-      team_names: {"2025": New Jersey Giants}
+      team_keys: {"2021": 406.l.12928.t.3, "2022": 414.l.527645.t.6, "2025": 461.l.103926.t.12}
+      team_ids: {"2021": 3, "2022": 6, "2025": 12}
+      team_names: {"2021": Quahog Stripes, "2022": Quahog Stripes, "2025": New Jersey Giants}
     branding:
       identity_image: /assets/img/franchises/new-jersey-giants/identity.jpg
       identity_alt: Blue New Jersey Giants football helmet
@@ -282,6 +282,15 @@ franchises:
       rivals: [Greendale Human Beings, Maine Moose]
       slogan: "Football isn't just a game. It's the calculation behind every heartbeat and the war behind every yard."
       fight_song: Head Coach Jack's Theme Song
+    historical_identities:
+      - name: Quahog Stripes
+        seasons: [2021, 2022]
+        archive_path: /retired/quahog-stripes/
+        identity_image: /assets/img/franchises/quahog-stripes/identity.jpg
+        identity_alt: White Quahog Stripes football helmet with an orange animal emblem
+        venue_image: /assets/img/franchises/quahog-stripes/venue.jpg
+        venue_alt: Quahog Dome, former home of the Quahog Stripes identity
+        source_url: https://sites.google.com/view/road-to-glory-ffl/retired-teams/quahog-stripes
     rival_franchise_ids: [greendale-human-beings, maine-moose]
     source:
       google_site_url: https://sites.google.com/view/road-to-glory-ffl/teams/new-jersey-giants
@@ -397,14 +406,14 @@ franchises:
     name: Vegas Vandals
     short_name: Vandals
     status: active
-    aliases: []
+    aliases: [Broncos Country Let’s Ride, Broncos Country Let's Ride]
     owner_ids: [coles]
     founded_season:
     retired_season:
     yahoo:
-      team_keys: {"2025": 461.l.103926.t.11}
-      team_ids: {"2025": 11}
-      team_names: {"2025": Vegas Vandals}
+      team_keys: {"2022": 414.l.527645.t.5, "2023": 423.l.161807.t.4, "2025": 461.l.103926.t.11}
+      team_ids: {"2022": 5, "2023": 4, "2025": 11}
+      team_names: {"2022": Broncos Country Let’s Ride, "2023": Broncos Country Let’s Ride, "2025": Vegas Vandals}
     branding:
       identity_image: /assets/img/franchises/vegas-vandals/identity.jpg
       identity_alt: Black Vegas Vandals football helmet with flaming playing cards
@@ -426,41 +435,6 @@ franchises:
     rival_franchise_ids: [albany-kneelers]
     source:
       google_site_url: https://sites.google.com/view/road-to-glory-ffl/teams/vegas-vandals
-      verified_on: 2026-08-31
-
-  - franchise_id: quahog-stripes
-    slug: quahog-stripes
-    name: Quahog Stripes
-    short_name: Stripes
-    status: retired
-    aliases: []
-    owner_ids: [jack-d]
-    founded_season:
-    retired_season:
-    yahoo:
-      team_keys: {}
-      team_ids: {}
-      team_names: {}
-    branding:
-      identity_image: /assets/img/franchises/quahog-stripes/identity.jpg
-      identity_alt: White Quahog Stripes football helmet with an orange animal emblem
-      venue_image: /assets/img/franchises/quahog-stripes/venue.jpg
-      venue_alt: Quahog Dome, former home of the Quahog Stripes
-    profile:
-      summary: >-
-        The Quahog Stripes brought a new-age, analytics-heavy approach to the
-        league. Coach Jack leaned on statistics, waiver-wire work, and careful
-        roster management in the belief that math and science could produce a title.
-      location: Quahog, Rhode Island
-      home_field: Quahog Dome
-      capacity: "65,000"
-      championship_seasons: []
-      rivals: [Greendale Human Beings, Maine Moose]
-      slogan: "Some people think football is a matter of life and death. I assure you, it's much more serious than that."
-      fight_song: Head Coach Jack's Theme Song
-    rival_franchise_ids: [greendale-human-beings, maine-moose]
-    source:
-      google_site_url: https://sites.google.com/view/road-to-glory-ffl/retired-teams/quahog-stripes
       verified_on: 2026-08-31
 
   - franchise_id: savage-huns
