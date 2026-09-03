@@ -6,6 +6,8 @@ layout: default
 {% assign playoff = site.data.playoffs.playoffs | where: "season", page.year | first %}
 {% assign champion = site.data.franchises.franchises | where: "franchise_id", season.champion_franchise_id | first %}
 {% assign runner_up = site.data.franchises.franchises | where: "franchise_id", season.runner_up_franchise_id | first %}
+{% assign champion_root = '/teams/' %}{% if champion.status == 'retired' %}{% assign champion_root = '/retired/' %}{% endif %}
+{% assign runner_up_root = '/teams/' %}{% if runner_up.status == 'retired' %}{% assign runner_up_root = '/retired/' %}{% endif %}
 {% assign draft = site.data.drafts.drafts | where: "year", page.year | first %}
 {% assign season_recap = site.data.generated.recaps.seasons | where: "season", page.year | first %}
 {% assign season_numbers = site.data.generated.recaps.by_the_numbers | where: "season", page.year %}
@@ -21,8 +23,8 @@ layout: default
       <div>
         <p class="eyebrow">Road to Glory archive</p>
         <div class="season-hero__meta"><p class="season-hero__year">{{ season.year }}</p><span class="season-status">{{ season.status_label | default: "Verified" }}</span></div>
-        <h1><a href="{{ '/teams/' | append: champion.slug | append: '/' | relative_url }}">{{ season.champion_display_name }}</a></h1>
-        <p class="season-hero__lede">Brew Crew Cup champions after a {{ championship.champion_score }}–{{ championship.runner_up_score }} title-game victory over <a href="{{ '/teams/' | append: runner_up.slug | append: '/' | relative_url }}">{{ championship.runner_up_display_name }}</a>.</p>
+        <h1><a href="{{ champion_root | append: champion.slug | append: '/' | relative_url }}">{{ season.champion_display_name }}</a></h1>
+        <p class="season-hero__lede">Brew Crew Cup champions after a {{ championship.champion_score }}–{{ championship.runner_up_score }} title-game victory over <a href="{{ runner_up_root | append: runner_up.slug | append: '/' | relative_url }}">{{ championship.runner_up_display_name }}</a>.</p>
         <div class="season-hero__actions">
           <a class="button button--gold" href="#standings">Final standings</a>
           <a class="button button--outline-light" href="{{ bracket_path | relative_url }}">Playoff bracket</a>
