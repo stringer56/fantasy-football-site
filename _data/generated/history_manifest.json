@@ -1,0 +1,712 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-03T18:15:00Z",
+  "discovery_status": "public_history_verified_api_authorization_blocked",
+  "access_status": {
+    "oauth_refresh": "succeeded",
+    "authenticated_user_fantasy_resource": "http_403",
+    "nfl_fantasy_game_resource": "not_tested_due_stop_rule",
+    "configured_alias_resolution": "not_tested_due_stop_rule",
+    "historical_enumeration": "not_tested_due_stop_rule",
+    "public_history_routes": "succeeded_2021_2026",
+    "public_history_capability_probes": "complete_except_2021_rate_limited"
+  },
+  "authorization_probes": [
+    {
+      "operation": "authenticated_user_fantasy_resource",
+      "success": false,
+      "http_status": 403,
+      "error_code": null
+    }
+  ],
+  "expected_league_name": "Road To Glory FFL",
+  "league_founded_season": 2021,
+  "seasons": [
+    {
+      "season": 2021,
+      "game_key": "406",
+      "league_key": "406.l.12928",
+      "league_id": "12928",
+      "league_name": "Road To Glory FFL",
+      "number_of_teams": 10,
+      "start_date": null,
+      "end_date": null,
+      "finished": true,
+      "previous_league_key": null,
+      "next_league_key": "414.l.527645",
+      "public_history_url": "https://football.fantasysports.yahoo.com/league/rtgffl264552026/2021",
+      "source": "commissioner_linked_official_yahoo_history",
+      "verification_status": "verified_public_yahoo_history_api_retest_blocked",
+      "capabilities": {
+        "league_metadata": "available_public_history",
+        "teams": "not_tested_due_yahoo_rate_limit",
+        "standings": "not_tested_due_yahoo_rate_limit",
+        "weekly_matchups": "not_tested_due_yahoo_rate_limit",
+        "final_playoff_matchups": "not_tested_due_yahoo_rate_limit",
+        "rosters": "not_tested_due_yahoo_rate_limit",
+        "draft_results": "not_tested_due_yahoo_rate_limit",
+        "transactions": "not_tested_due_yahoo_rate_limit"
+      },
+      "team_mappings": [],
+      "archive_coverage": null
+    },
+    {
+      "season": 2022,
+      "game_key": "414",
+      "league_key": "414.l.527645",
+      "league_id": "527645",
+      "league_name": "Road To Glory FFL",
+      "number_of_teams": 12,
+      "start_date": null,
+      "end_date": null,
+      "finished": true,
+      "previous_league_key": "406.l.12928",
+      "next_league_key": "423.l.161807",
+      "public_history_url": "https://football.fantasysports.yahoo.com/league/rtgffl264552026/2022",
+      "source": "commissioner_linked_official_yahoo_history",
+      "verification_status": "verified_public_yahoo_history_api_retest_blocked",
+      "capabilities": {
+        "league_metadata": "available_public_history",
+        "teams": "available_public_history",
+        "standings": "available_public_history",
+        "weekly_matchups": "available_public_history",
+        "final_playoff_matchups": "available_public_history",
+        "rosters": "available_public_history",
+        "draft_results": "available_public_history",
+        "transactions": "available_public_history"
+      },
+      "team_mappings": [
+        {
+          "season": 2022,
+          "yahoo_team_key": "414.l.527645.t.1",
+          "yahoo_team_name": "Van Cortlant Rangers",
+          "candidate_franchise_id": "van-cortlant-rangers",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2022,
+          "yahoo_team_key": "414.l.527645.t.2",
+          "yahoo_team_name": "Albany Kneelers",
+          "candidate_franchise_id": "albany-kneelers",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2022,
+          "yahoo_team_key": "414.l.527645.t.3",
+          "yahoo_team_name": "Chris's Crazy Team",
+          "candidate_franchise_id": "crazy-wazs-team",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2022,
+          "yahoo_team_key": "414.l.527645.t.4",
+          "yahoo_team_name": "Greendale Human Beings",
+          "candidate_franchise_id": "greendale-human-beings",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2022,
+          "yahoo_team_key": "414.l.527645.t.5",
+          "yahoo_team_name": "Broncos Country Let’s Ride",
+          "candidate_franchise_id": null,
+          "status": "unresolved",
+          "basis": null
+        },
+        {
+          "season": 2022,
+          "yahoo_team_key": "414.l.527645.t.6",
+          "yahoo_team_name": "Quahog Stripes",
+          "candidate_franchise_id": "quahog-stripes",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2022,
+          "yahoo_team_key": "414.l.527645.t.7",
+          "yahoo_team_name": "The Baseball Furies",
+          "candidate_franchise_id": "baseball-furies",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2022,
+          "yahoo_team_key": "414.l.527645.t.8",
+          "yahoo_team_name": "THE SAVAGE HUNS",
+          "candidate_franchise_id": "savage-huns",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2022,
+          "yahoo_team_key": "414.l.527645.t.9",
+          "yahoo_team_name": "Dilly Dilly",
+          "candidate_franchise_id": null,
+          "status": "unresolved",
+          "basis": null
+        },
+        {
+          "season": 2022,
+          "yahoo_team_key": "414.l.527645.t.10",
+          "yahoo_team_name": "Turnbull AC’s",
+          "candidate_franchise_id": "turnbull-acs",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2022,
+          "yahoo_team_key": "414.l.527645.t.11",
+          "yahoo_team_name": "Ayahuasca Rush",
+          "candidate_franchise_id": "ayahuasca-rush",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2022,
+          "yahoo_team_key": "414.l.527645.t.12",
+          "yahoo_team_name": "Maine Moose",
+          "candidate_franchise_id": "maine-moose",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        }
+      ],
+      "archive_coverage": null
+    },
+    {
+      "season": 2023,
+      "game_key": "423",
+      "league_key": "423.l.161807",
+      "league_id": "161807",
+      "league_name": "Road To Glory FFL",
+      "number_of_teams": 12,
+      "start_date": null,
+      "end_date": null,
+      "finished": true,
+      "previous_league_key": "414.l.527645",
+      "next_league_key": "449.l.761310",
+      "public_history_url": "https://football.fantasysports.yahoo.com/league/rtgffl264552026/2023",
+      "source": "commissioner_linked_official_yahoo_history",
+      "verification_status": "verified_public_yahoo_history_api_retest_blocked",
+      "capabilities": {
+        "league_metadata": "available_public_history",
+        "teams": "available_public_history",
+        "standings": "available_public_history",
+        "weekly_matchups": "available_public_history",
+        "final_playoff_matchups": "available_public_history",
+        "rosters": "available_public_history",
+        "draft_results": "available_public_history",
+        "transactions": "available_public_history"
+      },
+      "team_mappings": [
+        {
+          "season": 2023,
+          "yahoo_team_key": "423.l.161807.t.1",
+          "yahoo_team_name": "Van Cortlant Rangers",
+          "candidate_franchise_id": "van-cortlant-rangers",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2023,
+          "yahoo_team_key": "423.l.161807.t.2",
+          "yahoo_team_name": "Albany Kneelers",
+          "candidate_franchise_id": "albany-kneelers",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2023,
+          "yahoo_team_key": "423.l.161807.t.3",
+          "yahoo_team_name": "Ayahuasca Rush",
+          "candidate_franchise_id": "ayahuasca-rush",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2023,
+          "yahoo_team_key": "423.l.161807.t.4",
+          "yahoo_team_name": "Broncos Country Let’s Ride",
+          "candidate_franchise_id": null,
+          "status": "unresolved",
+          "basis": null
+        },
+        {
+          "season": 2023,
+          "yahoo_team_key": "423.l.161807.t.5",
+          "yahoo_team_name": "Chris's Crazy Team",
+          "candidate_franchise_id": "crazy-wazs-team",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2023,
+          "yahoo_team_key": "423.l.161807.t.6",
+          "yahoo_team_name": "Buffalo Bravados",
+          "candidate_franchise_id": "buffalo-bravado",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2023,
+          "yahoo_team_key": "423.l.161807.t.7",
+          "yahoo_team_name": "Greendale Human Beings",
+          "candidate_franchise_id": "greendale-human-beings",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2023,
+          "yahoo_team_key": "423.l.161807.t.8",
+          "yahoo_team_name": "Maine Moose",
+          "candidate_franchise_id": "maine-moose",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2023,
+          "yahoo_team_key": "423.l.161807.t.9",
+          "yahoo_team_name": "North town Ninnyhammers",
+          "candidate_franchise_id": "north-town-ninnyhammers",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2023,
+          "yahoo_team_key": "423.l.161807.t.10",
+          "yahoo_team_name": "The Baseball Furies",
+          "candidate_franchise_id": "baseball-furies",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2023,
+          "yahoo_team_key": "423.l.161807.t.11",
+          "yahoo_team_name": "THE SAVAGE HUNS",
+          "candidate_franchise_id": "savage-huns",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2023,
+          "yahoo_team_key": "423.l.161807.t.12",
+          "yahoo_team_name": "Turnbull AC’s",
+          "candidate_franchise_id": "turnbull-acs",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        }
+      ],
+      "archive_coverage": null
+    },
+    {
+      "season": 2024,
+      "game_key": "449",
+      "league_key": "449.l.761310",
+      "league_id": "761310",
+      "league_name": "Road To Glory FFL",
+      "number_of_teams": 12,
+      "start_date": null,
+      "end_date": null,
+      "finished": true,
+      "previous_league_key": "423.l.161807",
+      "next_league_key": "461.l.103926",
+      "public_history_url": "https://football.fantasysports.yahoo.com/league/rtgffl264552026/2024",
+      "source": "commissioner_linked_official_yahoo_history",
+      "verification_status": "verified_public_yahoo_history_api_retest_blocked",
+      "capabilities": {
+        "league_metadata": "available_public_history",
+        "teams": "available_public_history",
+        "standings": "available_public_history",
+        "weekly_matchups": "available_public_history",
+        "final_playoff_matchups": "available_public_history",
+        "rosters": "available_public_history",
+        "draft_results": "available_public_history",
+        "transactions": "available_public_history"
+      },
+      "team_mappings": [
+        {
+          "season": 2024,
+          "yahoo_team_key": "449.l.761310.t.1",
+          "yahoo_team_name": "Van Cortlant Rangers",
+          "candidate_franchise_id": "van-cortlant-rangers",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2024,
+          "yahoo_team_key": "449.l.761310.t.2",
+          "yahoo_team_name": "Albany Kneelers",
+          "candidate_franchise_id": "albany-kneelers",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2024,
+          "yahoo_team_key": "449.l.761310.t.3",
+          "yahoo_team_name": "Ayahuasca Rush",
+          "candidate_franchise_id": "ayahuasca-rush",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2024,
+          "yahoo_team_key": "449.l.761310.t.4",
+          "yahoo_team_name": "Vegas Vandals",
+          "candidate_franchise_id": "vegas-vandals",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2024,
+          "yahoo_team_key": "449.l.761310.t.5",
+          "yahoo_team_name": "Chris's Crazy Team",
+          "candidate_franchise_id": "crazy-wazs-team",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2024,
+          "yahoo_team_key": "449.l.761310.t.6",
+          "yahoo_team_name": "Buffalo Bravados",
+          "candidate_franchise_id": "buffalo-bravado",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2024,
+          "yahoo_team_key": "449.l.761310.t.7",
+          "yahoo_team_name": "Greendale Human Beings",
+          "candidate_franchise_id": "greendale-human-beings",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2024,
+          "yahoo_team_key": "449.l.761310.t.8",
+          "yahoo_team_name": "Maine Moose",
+          "candidate_franchise_id": "maine-moose",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2024,
+          "yahoo_team_key": "449.l.761310.t.9",
+          "yahoo_team_name": "The Baseball Furies",
+          "candidate_franchise_id": "baseball-furies",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2024,
+          "yahoo_team_key": "449.l.761310.t.10",
+          "yahoo_team_name": "THE SAVAGE HUNS",
+          "candidate_franchise_id": "savage-huns",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2024,
+          "yahoo_team_key": "449.l.761310.t.11",
+          "yahoo_team_name": "Turnbull AC’s",
+          "candidate_franchise_id": "turnbull-acs",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2024,
+          "yahoo_team_key": "449.l.761310.t.12",
+          "yahoo_team_name": "North town Ninnyhammers",
+          "candidate_franchise_id": "north-town-ninnyhammers",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        }
+      ],
+      "archive_coverage": null
+    },
+    {
+      "season": 2025,
+      "game_key": "461",
+      "league_key": "461.l.103926",
+      "league_id": "103926",
+      "league_name": "Road To Glory FFL",
+      "number_of_teams": 12,
+      "start_date": "2025-09-04",
+      "end_date": "2025-12-22",
+      "finished": true,
+      "previous_league_key": "449.l.761310",
+      "next_league_key": "470.l.26455",
+      "public_history_url": "https://football.fantasysports.yahoo.com/league/rtgffl264552026/2025",
+      "source": "commissioner_linked_official_yahoo_history",
+      "verification_status": "verified_public_yahoo_history_api_retest_blocked",
+      "capabilities": {
+        "league_metadata": "available_public_history",
+        "teams": "available_public_history",
+        "standings": "available_public_history",
+        "weekly_matchups": "available_public_history",
+        "final_playoff_matchups": "available_public_history",
+        "rosters": "available_public_history",
+        "draft_results": "available_public_history",
+        "transactions": "available_public_history"
+      },
+      "team_mappings": [
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.1",
+          "yahoo_team_name": "Van Cortlant Rangers",
+          "candidate_franchise_id": "van-cortlant-rangers",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.2",
+          "yahoo_team_name": "Albany Kneelers",
+          "candidate_franchise_id": "albany-kneelers",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.3",
+          "yahoo_team_name": "Ayahuasca Rush",
+          "candidate_franchise_id": "ayahuasca-rush",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.4",
+          "yahoo_team_name": "Buffalo Bravados",
+          "candidate_franchise_id": "buffalo-bravado",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.5",
+          "yahoo_team_name": "Chris's Crazy Team",
+          "candidate_franchise_id": "crazy-wazs-team",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.6",
+          "yahoo_team_name": "Greendale Human Beings",
+          "candidate_franchise_id": "greendale-human-beings",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.7",
+          "yahoo_team_name": "Maine Moose",
+          "candidate_franchise_id": "maine-moose",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.8",
+          "yahoo_team_name": "North town Ninnyhammers",
+          "candidate_franchise_id": "north-town-ninnyhammers",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.9",
+          "yahoo_team_name": "The Baseball Furies",
+          "candidate_franchise_id": "baseball-furies",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.10",
+          "yahoo_team_name": "Turnbull AC’s",
+          "candidate_franchise_id": "turnbull-acs",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.11",
+          "yahoo_team_name": "Vegas Vandals",
+          "candidate_franchise_id": "vegas-vandals",
+          "status": "verified",
+          "basis": "season_team_key"
+        },
+        {
+          "season": 2025,
+          "yahoo_team_key": "461.l.103926.t.12",
+          "yahoo_team_name": "New Jersey Giants",
+          "candidate_franchise_id": "new-jersey-giants",
+          "status": "verified",
+          "basis": "season_team_key"
+        }
+      ],
+      "archive_coverage": {
+        "standings": "complete_snapshot",
+        "playoffs": "complete_championship_bracket",
+        "playoff_weeks": [
+          14,
+          15,
+          16
+        ],
+        "scored_playoff_games": 7,
+        "playoff_byes": 2,
+        "source_file": "_data/generated/history/2025/playoffs.json"
+      }
+    },
+    {
+      "season": 2026,
+      "game_key": "470",
+      "league_key": "470.l.26455",
+      "league_id": "26455",
+      "league_name": "Road To Glory FFL",
+      "number_of_teams": 12,
+      "start_date": null,
+      "end_date": null,
+      "finished": false,
+      "previous_league_key": "461.l.103926",
+      "next_league_key": null,
+      "public_history_url": "https://football.fantasysports.yahoo.com/league/rtgffl264552026/2026",
+      "source": "commissioner_linked_official_yahoo_history",
+      "verification_status": "verified_public_yahoo_history_api_retest_blocked",
+      "capabilities": {
+        "league_metadata": "available_public_history",
+        "teams": "available_public_history",
+        "standings": "available_public_history",
+        "weekly_matchups": "available_public_history",
+        "final_playoff_matchups": "not_yet_available_current_season",
+        "rosters": "available_public_history",
+        "draft_results": "available_public_history",
+        "transactions": "available_public_history"
+      },
+      "team_mappings": [
+        {
+          "season": 2026,
+          "yahoo_team_key": "470.l.26455.t.1",
+          "yahoo_team_name": "Van Cortlant Rangers",
+          "candidate_franchise_id": "van-cortlant-rangers",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2026,
+          "yahoo_team_key": "470.l.26455.t.2",
+          "yahoo_team_name": "Albany Redskins",
+          "candidate_franchise_id": null,
+          "status": "unresolved",
+          "basis": null
+        },
+        {
+          "season": 2026,
+          "yahoo_team_key": "470.l.26455.t.3",
+          "yahoo_team_name": "Ayahuasca Rush",
+          "candidate_franchise_id": "ayahuasca-rush",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2026,
+          "yahoo_team_key": "470.l.26455.t.4",
+          "yahoo_team_name": "Buffalo Bravados",
+          "candidate_franchise_id": "buffalo-bravado",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2026,
+          "yahoo_team_key": "470.l.26455.t.5",
+          "yahoo_team_name": "Chris's Crazy Team",
+          "candidate_franchise_id": "crazy-wazs-team",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2026,
+          "yahoo_team_key": "470.l.26455.t.6",
+          "yahoo_team_name": "Greendale Human Beings",
+          "candidate_franchise_id": "greendale-human-beings",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2026,
+          "yahoo_team_key": "470.l.26455.t.7",
+          "yahoo_team_name": "Maine Moose",
+          "candidate_franchise_id": "maine-moose",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2026,
+          "yahoo_team_key": "470.l.26455.t.8",
+          "yahoo_team_name": "New Jersey Giants",
+          "candidate_franchise_id": "new-jersey-giants",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2026,
+          "yahoo_team_key": "470.l.26455.t.9",
+          "yahoo_team_name": "North town Ninnyhammers",
+          "candidate_franchise_id": "north-town-ninnyhammers",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2026,
+          "yahoo_team_key": "470.l.26455.t.10",
+          "yahoo_team_name": "The Baseball Furies",
+          "candidate_franchise_id": "baseball-furies",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2026,
+          "yahoo_team_key": "470.l.26455.t.11",
+          "yahoo_team_name": "Turnbull AC’s",
+          "candidate_franchise_id": "turnbull-acs",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        },
+        {
+          "season": 2026,
+          "yahoo_team_key": "470.l.26455.t.12",
+          "yahoo_team_name": "Vegas Vandals",
+          "candidate_franchise_id": "vegas-vandals",
+          "status": "verified",
+          "basis": "unique_canonical_name_or_alias"
+        }
+      ],
+      "archive_coverage": null
+    }
+  ],
+  "renew_chain": [
+    "449.l.761310",
+    "461.l.103926"
+  ],
+  "linked_history_chain": [
+    "406.l.12928",
+    "414.l.527645",
+    "423.l.161807",
+    "449.l.761310",
+    "461.l.103926",
+    "470.l.26455"
+  ],
+  "unresolved_candidates": [],
+  "missing_renewal_links": [],
+  "notes": [
+    "Live retest stopped after authenticated_user_fantasy_resource failed, as required by the authorization stop rule.",
+    "Official public Yahoo league-history routes verify the linked 2021 through 2026 league identities.",
+    "The renew_chain field retains only relationships verified from Yahoo renewal metadata; linked_history_chain records commissioner-linked seasons.",
+    "Public capability values prove representative pages are available, not that every historical row has been imported.",
+    "The 2021 identity is verified, but its capability probes remain deferred because Yahoo returned HTTP 429.",
+    "Only HTTP status and an allowlisted Yahoo error code, when available, were retained."
+  ]
+}

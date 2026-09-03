@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "season": 2025,
+  "league_key": "461.l.103926",
+  "coverage": {
+    "status": "complete_championship_playoff_bracket",
+    "weeks": [14, 15, 16],
+    "scored_games": 7,
+    "byes": 2,
+    "source_type": "commissioner_supplied_yahoo_public_results",
+    "source_url": "https://football.fantasysports.yahoo.com/2025/f1/103926",
+    "verified_on": "2026-08-31"
+  },
+  "byes": [
+    {"week": 14, "round": "Quarterfinal", "seed": 1, "franchise_id": "greendale-human-beings", "yahoo_team_key": "461.l.103926.t.6", "historical_team_name": "Greendale Human Beings"},
+    {"week": 14, "round": "Quarterfinal", "seed": 2, "franchise_id": "albany-kneelers", "yahoo_team_key": "461.l.103926.t.2", "historical_team_name": "Albany Kneelers"}
+  ],
+  "games": [
+    {
+      "game_id": "2025-w14-quarterfinal-1", "week": 14, "date_range": "Dec 2 - Dec 8", "round": "Quarterfinal", "bracket_type": "championship",
+      "team_one": {"seed": 4, "franchise_id": "van-cortlant-rangers", "yahoo_team_key": "461.l.103926.t.1", "historical_team_name": "Van Cortlant Rangers", "score": 113.44},
+      "team_two": {"seed": 5, "franchise_id": "new-jersey-giants", "yahoo_team_key": "461.l.103926.t.12", "historical_team_name": "New Jersey Giants", "score": 125.96},
+      "winner_franchise_id": "new-jersey-giants"
+    },
+    {
+      "game_id": "2025-w14-quarterfinal-2", "week": 14, "date_range": "Dec 2 - Dec 8", "round": "Quarterfinal", "bracket_type": "championship",
+      "team_one": {"seed": 3, "franchise_id": "ayahuasca-rush", "yahoo_team_key": "461.l.103926.t.3", "historical_team_name": "Ayahuasca Rush", "score": 75.26},
+      "team_two": {"seed": 6, "franchise_id": "maine-moose", "yahoo_team_key": "461.l.103926.t.7", "historical_team_name": "Maine Moose", "score": 51.92},
+      "winner_franchise_id": "ayahuasca-rush"
+    },
+    {
+      "game_id": "2025-w15-semifinal-1", "week": 15, "date_range": "Dec 9 - Dec 15", "round": "Semifinal", "bracket_type": "championship",
+      "team_one": {"seed": 1, "franchise_id": "greendale-human-beings", "yahoo_team_key": "461.l.103926.t.6", "historical_team_name": "Greendale Human Beings", "score": 159.06},
+      "team_two": {"seed": 5, "franchise_id": "new-jersey-giants", "yahoo_team_key": "461.l.103926.t.12", "historical_team_name": "New Jersey Giants", "score": 134.52},
+      "winner_franchise_id": "greendale-human-beings"
+    },
+    {
+      "game_id": "2025-w15-semifinal-2", "week": 15, "date_range": "Dec 9 - Dec 15", "round": "Semifinal", "bracket_type": "championship",
+      "team_one": {"seed": 2, "franchise_id": "albany-kneelers", "yahoo_team_key": "461.l.103926.t.2", "historical_team_name": "Albany Kneelers", "score": 159.92},
+      "team_two": {"seed": 3, "franchise_id": "ayahuasca-rush", "yahoo_team_key": "461.l.103926.t.3", "historical_team_name": "Ayahuasca Rush", "score": 86.84},
+      "winner_franchise_id": "albany-kneelers"
+    },
+    {
+      "game_id": "2025-w15-fifth-place", "week": 15, "date_range": "Dec 9 - Dec 15", "round": "Fifth Place Game", "bracket_type": "placement",
+      "team_one": {"seed": 4, "franchise_id": "van-cortlant-rangers", "yahoo_team_key": "461.l.103926.t.1", "historical_team_name": "Van Cortlant Rangers", "score": 136.26},
+      "team_two": {"seed": 6, "franchise_id": "maine-moose", "yahoo_team_key": "461.l.103926.t.7", "historical_team_name": "Maine Moose", "score": 110.20},
+      "winner_franchise_id": "van-cortlant-rangers"
+    },
+    {
+      "game_id": "2025-w16-final", "week": 16, "date_range": "Dec 16 - Dec 22", "round": "Championship", "bracket_type": "championship",
+      "team_one": {"seed": 1, "franchise_id": "greendale-human-beings", "yahoo_team_key": "461.l.103926.t.6", "historical_team_name": "Greendale Human Beings", "score": 107.12},
+      "team_two": {"seed": 2, "franchise_id": "albany-kneelers", "yahoo_team_key": "461.l.103926.t.2", "historical_team_name": "Albany Kneelers", "score": 106.72},
+      "winner_franchise_id": "greendale-human-beings"
+    },
+    {
+      "game_id": "2025-w16-third-place", "week": 16, "date_range": "Dec 16 - Dec 22", "round": "Third Place Game", "bracket_type": "placement",
+      "team_one": {"seed": 3, "franchise_id": "ayahuasca-rush", "yahoo_team_key": "461.l.103926.t.3", "historical_team_name": "Ayahuasca Rush", "score": 144.58},
+      "team_two": {"seed": 5, "franchise_id": "new-jersey-giants", "yahoo_team_key": "461.l.103926.t.12", "historical_team_name": "New Jersey Giants", "score": 103.26},
+      "winner_franchise_id": "ayahuasca-rush"
+    }
+  ],
+  "final_placements": [
+    {"place": 1, "franchise_id": "greendale-human-beings", "historical_team_name": "Greendale Human Beings", "basis": "championship winner"},
+    {"place": 2, "franchise_id": "albany-kneelers", "historical_team_name": "Albany Kneelers", "basis": "championship runner-up"},
+    {"place": 3, "franchise_id": "ayahuasca-rush", "historical_team_name": "Ayahuasca Rush", "basis": "third-place game winner"},
+    {"place": 4, "franchise_id": "new-jersey-giants", "historical_team_name": "New Jersey Giants", "basis": "third-place game runner-up"},
+    {"place": 5, "franchise_id": "van-cortlant-rangers", "historical_team_name": "Van Cortlant Rangers", "basis": "fifth-place game winner"},
+    {"place": 6, "franchise_id": "maine-moose", "historical_team_name": "Maine Moose", "basis": "fifth-place game runner-up"}
+  ]
+}

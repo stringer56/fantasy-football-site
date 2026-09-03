@@ -43,6 +43,9 @@ jobs:
       - name: Check generated recaps
         run: python scripts/build_recaps.py --check
 
+      - name: Check Yahoo history discovery baseline
+        run: python scripts/discover_yahoo_history.py --dry-run --check
+
       - name: Validate repository data
         run: |
           python scripts/validate_public_data.py

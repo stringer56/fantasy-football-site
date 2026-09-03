@@ -1,0 +1,57 @@
+{
+  "games": {
+    "fantasy_content": {
+      "users": {
+        "0": {
+          "user": [
+            {},
+            {
+              "games": {
+                "0": {"game": [{"game_key": "449"}, {"code": "nfl"}, {"season": "2024"}]},
+                "1": {"game": [{"game_key": "461"}, {"code": "nfl"}, {"season": "2025"}]},
+                "2": {"game": [{"game_key": "472"}, {"code": "nfl"}, {"season": "2026"}]}
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "leagues": {
+    "fantasy_content": {
+      "users": {
+        "0": {
+          "user": [
+            {},
+            {
+              "games": {
+                "0": {
+                  "game": [
+                    {"game_key": "449", "season": "2024"},
+                    {"leagues": {"0": {"league": [{"league_key": "449.l.761310"}, {"league_id": "761310"}, {"name": "Road To Glory FFL"}, {"season": "2024"}, {"renewed": "461_103926"}]}}}
+                  ]
+                },
+                "1": {
+                  "game": [
+                    {"game_key": "461", "season": "2025"},
+                    {"leagues": {
+                      "0": {"league": [{"league_key": "461.l.103926"}, {"league_id": "103926"}, {"name": "Road To Glory FFL"}, {"season": "2025"}, {"num_teams": 12}, {"renew": "449_761310"}, {"renewed": "472_26455"}]},
+                      "1": {"league": [{"league_key": "461.l.999999"}, {"league_id": "999999"}, {"name": "Other League"}, {"season": "2025"}]},
+                      "2": {"league": [{"league_key": "461.l.103926"}, {"league_id": "103926"}, {"name": "Road To Glory FFL"}, {"season": "2025"}]}
+                    }}
+                  ]
+                },
+                "2": {
+                  "game": [
+                    {"game_key": "472", "season": "2026"},
+                    {"leagues": {"0": {"league": [{"league_key": "472.l.26455"}, {"league_id": "26455"}, {"name": "Road To Glory FFL"}, {"season": "2026"}, {"renew": "461_103926"}]}}}
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -22,6 +22,7 @@ REQUIRED_FILES = {
     "power_rankings.json",
     "picks.json",
     "recaps.json",
+    "history_manifest.json",
 }
 FORBIDDEN_KEYS = {
     "access_token",
@@ -107,7 +108,8 @@ def main() -> None:
         f"missing generated file: {name}" for name in sorted(REQUIRED_FILES - present)
     ]
 
-    for path in sorted(GENERATED_DIRECTORY.glob("*.json")):
+    generated_paths = sorted(GENERATED_DIRECTORY.rglob("*.json"))
+    for path in generated_paths:
         try:
             payload = json.loads(path.read_text(encoding="utf-8"))
         except (json.JSONDecodeError, OSError) as error:
@@ -128,7 +130,7 @@ def main() -> None:
             print(f"- {error}", file=sys.stderr)
         raise SystemExit(1)
 
-    print(f"Validated {len(REQUIRED_FILES)} sanitized generated files and news data")
+    print(f"Validated {len(generated_paths)} sanitized generated files and news data")
 
 
 if __name__ == "__main__":

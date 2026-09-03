@@ -19,6 +19,7 @@ key; do not copy that resolved key into configuration.
 
 ### `league.yml`
 
+- `founded_season`: commissioner-confirmed inaugural league season.
 - `draft_datetime`: commissioner-confirmed ISO-8601 draft date and time.
 
 The timestamp must include an explicit UTC offset, for example
@@ -183,3 +184,22 @@ Every narrative carries `season`, `source_files`, `generated_at`,
 public text, and a public provenance label. Approved overrides remain separate
 from generated prose and survive regeneration. Unresolved identities keep null
 franchise routes. See [Historical Narrative System](NARRATIVE_SYSTEM.md).
+
+### `history_manifest.json`
+
+Contains the sanitized output of the manual Yahoo historical discovery job:
+`generated_at`, `discovery_status`, verified season/game/league keys, safe
+league metadata, explicit renewal relationships, endpoint capability states,
+public Yahoo history URLs, the separately labeled commissioner-linked history
+chain, the confirmed inaugural season, and season-scoped Yahoo-team-to-franchise mapping results. Capability
+values distinguish authenticated API probes from representative official public
+history pages; neither implies complete row-level ingestion. Unresolved candidate
+leagues and teams remain explicitly unresolved. OAuth data, account identifiers,
+invitation data, raw Yahoo responses, and authorization headers are prohibited.
+See [Yahoo Historical League Discovery](YAHOO_HISTORY_DISCOVERY.md).
+
+Sanitized recovered season data is stored in small per-season files below
+`_data/generated/history/{season}/`. The 2025 playoff archive preserves scored
+games, byes, bracket/placement classification, final placements, canonical
+franchise mappings, coverage, and public-source provenance without copying raw
+Yahoo responses.
