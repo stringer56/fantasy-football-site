@@ -225,6 +225,15 @@ def main() -> None:
             "partial_manual_only", "high_results_partial_identity", "high_results_complete_identity",
         }:
             errors.append(f"{year}: invalid confidence label")
+        if year == 2021:
+            if summary.get("recovery_level") != "C":
+                errors.append("2021: focused recovery must remain Level C while weekly Yahoo data is unavailable")
+            if summary.get("yahoo_route_status") != "authentication_required":
+                errors.append("2021: Yahoo route status must record the authentication gate")
+            if declared_matchups.get("status") != "unavailable" or summary.get("weeks_fetched") != 0:
+                errors.append("2021: unavailable Yahoo weekly data cannot be presented as recovered")
+            if summary.get("sections", {}).get("standings", {}).get("coverage_type") != "google_site_verified_canonical":
+                errors.append("2021: fallback standings must retain their Google Site/canonical provenance")
         standings_path = season_dir / "standings.json"
         if standings_path.exists():
             payload = load_json(standings_path)

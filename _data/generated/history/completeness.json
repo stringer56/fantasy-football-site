@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-03T19:03:09Z",
+  "generated_at": "2026-09-03T19:50:58Z",
   "source": "official_yahoo_public_archive",
   "scope": {
     "league_started": 2021,
@@ -23,29 +23,58 @@
           "rows": 1
         },
         "standings": {
-          "status": "unavailable",
-          "rows": 0
+          "status": "partial",
+          "coverage_type": "google_site_verified_canonical",
+          "rows": 10,
+          "expected": 10,
+          "yahoo_rows": 0,
+          "source_files": [
+            "_data/seasons.yml"
+          ]
         },
         "teams": {
-          "status": "unavailable",
-          "rows": 0
+          "status": "partial",
+          "coverage_type": "canonical_names_without_yahoo_team_keys",
+          "rows": 10,
+          "expected": 10,
+          "resolved_franchises": 8,
+          "source_files": [
+            "_data/seasons.yml",
+            "_data/franchises.yml"
+          ]
         },
         "weekly_matchups": {
           "status": "unavailable",
           "weeks": 0,
-          "expected_weeks": 0,
-          "games": 0,
-          "all_scores_present": false
-        },
-        "playoffs": {
-          "status": "unavailable",
+          "expected_weeks": 16,
           "games": 0,
           "all_scores_present": false,
-          "classification_note": "Yahoo weekly archive is unavailable without an accessible scoreboard."
+          "expected_weeks_basis": "14 verified regular-season games plus two verified playoff rounds"
+        },
+        "playoffs": {
+          "status": "partial",
+          "coverage_type": "google_site_verified_canonical",
+          "games": 3,
+          "scored_games": 1,
+          "all_scores_present": false,
+          "source_files": [
+            "_data/playoffs.yml",
+            "_data/champions.yml"
+          ],
+          "classification_note": "Semifinal winners and the scored championship are verified; semifinal scores are unavailable."
         },
         "draft": {
-          "status": "unavailable",
-          "picks": 0
+          "status": "partial",
+          "coverage_type": "google_site_verified_images",
+          "picks": 0,
+          "rounds_visible": 15,
+          "draft_order_slots": 10,
+          "result_assets": 3,
+          "pick_data_status": "image_only_unverified",
+          "source_files": [
+            "_data/drafts.yml",
+            "assets/img/drafts/2021/"
+          ]
         },
         "transactions": {
           "status": "unavailable",
@@ -62,16 +91,33 @@
         }
       },
       "franchise_mapping": {
-        "status": "unavailable",
-        "unresolved_names": []
+        "status": "partial",
+        "resolved": 8,
+        "unresolved_names": [
+          "Matthew's Optimal Team",
+          "The Swagger Daggers"
+        ],
+        "yahoo_team_keys_recovered": 0
       },
-      "weeks_expected": null,
+      "weeks_expected": 16,
       "weeks_fetched": 0,
       "matchups_expected": null,
       "matchups_fetched": 0,
       "roster_weeks_fetched": 0,
-      "unresolved_franchise_mappings": [],
-      "confidence": "partial_manual_only"
+      "unresolved_franchise_mappings": [
+        "Matthew's Optimal Team",
+        "The Swagger Daggers"
+      ],
+      "confidence": "partial_manual_only",
+      "recovery_level": "C",
+      "yahoo_route_status": "authentication_required",
+      "routes_checked": [
+        "https://football.fantasysports.yahoo.com/league/rtgffl264552026/2021",
+        "https://football.fantasysports.yahoo.com/2021/f1/12928",
+        "https://football.fantasysports.yahoo.com/2021/f1/12928/standings",
+        "https://football.fantasysports.yahoo.com/archive/nfl/2021/12928"
+      ],
+      "route_observation": "The public history routes redirect to Yahoo sign-in; the legacy route redirects to the explicit 2021 route."
     },
     {
       "season": 2022,
@@ -349,7 +395,7 @@
       "season": 2021,
       "section": "transactions_offset_0",
       "error_type": "RuntimeError",
-      "message": "Yahoo archive request failed (ConnectionError)"
+      "message": "Yahoo archive requires sign-in"
     }
   ],
   "publication_policy": "Only verified normalized rows may unlock derived records; partial and unavailable categories remain labeled."

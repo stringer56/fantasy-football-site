@@ -9,7 +9,7 @@
     "configured_alias_resolution": "not_tested_due_stop_rule",
     "historical_enumeration": "not_tested_due_stop_rule",
     "public_history_routes": "succeeded_2021_2026",
-    "public_history_capability_probes": "complete_except_2021_rate_limited"
+    "public_history_capability_probes": "complete_except_2021_authentication_required"
   },
   "authorization_probes": [
     {
@@ -39,13 +39,13 @@
       "verification_status": "verified_public_yahoo_history_api_retest_blocked",
       "capabilities": {
         "league_metadata": "available_public_history",
-        "teams": "not_tested_due_yahoo_rate_limit",
-        "standings": "not_tested_due_yahoo_rate_limit",
-        "weekly_matchups": "not_tested_due_yahoo_rate_limit",
-        "final_playoff_matchups": "not_tested_due_yahoo_rate_limit",
-        "rosters": "not_tested_due_yahoo_rate_limit",
-        "draft_results": "not_tested_due_yahoo_rate_limit",
-        "transactions": "not_tested_due_yahoo_rate_limit"
+        "teams": "unavailable_public_authentication_required",
+        "standings": "unavailable_public_authentication_required",
+        "weekly_matchups": "unavailable_public_authentication_required",
+        "final_playoff_matchups": "unavailable_public_authentication_required",
+        "rosters": "unavailable_public_authentication_required",
+        "draft_results": "unavailable_public_authentication_required",
+        "transactions": "unavailable_public_authentication_required"
       },
       "team_mappings": [],
       "archive_coverage": null
@@ -706,7 +706,7 @@
     "Official public Yahoo league-history routes verify the linked 2021 through 2026 league identities.",
     "The renew_chain field retains only relationships verified from Yahoo renewal metadata; linked_history_chain records commissioner-linked seasons.",
     "Public capability values prove representative pages are available, not that every historical row has been imported.",
-    "The 2021 identity is verified, but its capability probes remain deferred because Yahoo returned HTTP 429.",
+    "The 2021 identity is verified, but detailed public routes redirect to Yahoo sign-in; followed requests may then return HTTP 429.",
     "Only HTTP status and an allowlisted Yahoo error code, when available, were retained."
   ]
 }

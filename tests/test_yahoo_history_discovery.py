@@ -159,7 +159,7 @@ class YahooHistoryDiscoveryTests(unittest.TestCase):
         season_2021 = first["seasons"][0]
         self.assertEqual(
             season_2021["capabilities"]["weekly_matchups"],
-            "not_tested_due_yahoo_rate_limit",
+            "unavailable_public_authentication_required",
         )
         self.assertTrue(all(
             value == "available_public_history"

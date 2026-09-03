@@ -20,7 +20,7 @@ schedule rather than silently treating missing games as zero.
 
 | Season | League key | Standings | Weekly archive | Scored matchups | Draft | Transactions | Franchise mapping |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| 2021 | `406.l.12928` | Existing manual archive only | Public request redirects to sign-in | 0 imported | Not imported | Not imported | Existing manual mappings only |
+| 2021 | `406.l.12928` | 10/10 Google Site/canonical | Yahoo redirects to sign-in | 0 | Image-only / unverified picks | 0 | 8 resolved, 2 unresolved |
 | 2022 | `414.l.527645` | 12/12 | 16/16 weeks | 92 | 180 picks | 337 | 10 resolved, 2 unresolved |
 | 2023 | `423.l.161807` | 12/12 | 16/16 weeks | 92 | 180 picks | 283 | 11 resolved, 1 unresolved |
 | 2024 | `449.l.761310` | 12/12 | 16/16 weeks | 92 | 180 picks | 259 | 12 resolved |
@@ -35,6 +35,42 @@ because the league-wide scoreboard does not identify bracket lanes reliably.
 The two independently captured 2025 playoff sources agree on the championship
 bracket scores: commissioner-supplied results remain in `2025/playoffs.json`,
 while the full Yahoo weekly schedule is in `2025/weeks.json`.
+
+## Focused 2021 recovery pass
+
+The 2021 recovery result is **Level C — Partial**. A small, sequential route
+test was performed before any crawl. The working 2022 explicit archive route
+returned HTTP 200, while each 2021 content route returned HTTP 302 to Yahoo's
+sign-in host:
+
+- the commissioner-linked custom history route;
+- the explicit `https://football.fantasysports.yahoo.com/2021/f1/12928` route;
+- the explicit 2021 standings subroute; and
+- the legacy `/archive/nfl/2021/12928` form, which redirects back to the
+  explicit 2021 route before the sign-in gate.
+
+Earlier followed requests sometimes ended with HTTP 429 on the Yahoo login
+destination. The archive entry route itself is now classified as authentication
+required, not as an unknown league key or a recoverable rate-limit-only failure.
+No full crawl followed the failed small probe.
+
+The fallback remains explicitly source-labelled:
+
+- Google Site/canonical standings verify all 10 final rows, with eight canonical
+  franchise mappings and two unresolved historical identities.
+- Fourteen regular-season games per team plus the verified semifinal and final
+  rounds establish an expected 16-week season, but zero Yahoo weekly scoreboards
+  were recovered.
+- The playoff bracket verifies both semifinal winners and the championship;
+  only the 121.50–118.70 championship has verified scores.
+- Three local draft-result images cover 15 rounds and preserve the 10-team draft
+  order, but pick-by-pick data remains image-only and unverified.
+- No 2021 Yahoo transaction history was recovered.
+
+Accordingly, 2021 may participate in season-level standings, PF/PA, champion,
+and conservative recap features with its existing provenance. It must not enter
+weekly head-to-head, margin, scoring, or streak calculations. Those features
+retain the label **Verified 2022–2025**.
 
 ## Unresolved identities
 
@@ -165,7 +201,8 @@ record book.
 
 ## Known gaps
 
-- 2021 public archive content redirects automated requests to Yahoo sign-in.
+- 2021 detailed archive content redirects automated requests to Yahoo sign-in;
+  its recovery level remains C.
 - Three 2022–2023 historical identities remain unresolved.
 - Postseason matchup lane/consolation classification is not inferred.
 - Historical rosters and player points are not verified.

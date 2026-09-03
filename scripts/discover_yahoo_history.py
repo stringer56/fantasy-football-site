@@ -540,7 +540,7 @@ def build_committed_baseline() -> dict[str, Any]:
             capabilities = {
                 "league_metadata": "available_public_history",
                 **{
-                    name: "not_tested_due_yahoo_rate_limit"
+                    name: "unavailable_public_authentication_required"
                     for name in CAPABILITY_NAMES
                     if name != "league_metadata"
                 },
@@ -607,7 +607,7 @@ def build_committed_baseline() -> dict[str, Any]:
             "configured_alias_resolution": "not_tested_due_stop_rule",
             "historical_enumeration": "not_tested_due_stop_rule",
             "public_history_routes": "succeeded_2021_2026",
-            "public_history_capability_probes": "complete_except_2021_rate_limited",
+            "public_history_capability_probes": "complete_except_2021_authentication_required",
         },
         "authorization_probes": [
             {
@@ -632,7 +632,7 @@ def build_committed_baseline() -> dict[str, Any]:
             "Official public Yahoo league-history routes verify the linked 2021 through 2026 league identities.",
             "The renew_chain field retains only relationships verified from Yahoo renewal metadata; linked_history_chain records commissioner-linked seasons.",
             "Public capability values prove representative pages are available, not that every historical row has been imported.",
-            "The 2021 identity is verified, but its capability probes remain deferred because Yahoo returned HTTP 429.",
+            "The 2021 identity is verified, but detailed public routes redirect to Yahoo sign-in; followed requests may then return HTTP 429.",
             "Only HTTP status and an allowlisted Yahoo error code, when available, were retained.",
         ],
     }

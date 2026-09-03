@@ -212,6 +212,12 @@ Yahoo imports. It records each season and category as `complete`, `partial`,
 failures. A downstream builder must not publish an unsupported category merely
 because a file exists.
 
+The 2021 entry additionally records `recovery_level`, `yahoo_route_status`,
+sanitized public `routes_checked`, and source-labelled canonical fallbacks. Its
+Google Site standings, playoff bracket, and draft images remain `partial`; zero
+Yahoo weekly matchups were fetched, so the fallback cannot unlock weekly-derived
+metrics.
+
 Per-season backfill files use these shapes:
 
 - `league.json`: safe season/game/league metadata and renewal links.
