@@ -134,6 +134,7 @@ class YahooHistoryDiscoveryTests(unittest.TestCase):
             [row["season"] for row in first["seasons"]],
             [2021, 2022, 2023, 2024, 2025, 2026],
         )
+        self.assertEqual(first["league_founded_season"], 2021)
         self.assertEqual(
             first["linked_history_chain"],
             [

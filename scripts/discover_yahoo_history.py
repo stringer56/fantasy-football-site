@@ -461,6 +461,7 @@ def discover_live(request_delay: float) -> dict[str, Any]:
         "access_status": access_status,
         "authorization_probes": authorization_probes,
         "expected_league_name": EXPECTED_LEAGUE_NAME,
+        "league_founded_season": 2021,
         "seasons": sorted(verified, key=lambda row: (row.get("season") or 0, row["league_key"])),
         "renew_chain": linked_keys,
         "unresolved_candidates": sorted(candidates, key=lambda row: (row.get("season") or 0, row["league_key"])),
@@ -617,6 +618,7 @@ def build_committed_baseline() -> dict[str, Any]:
             }
         ],
         "expected_league_name": EXPECTED_LEAGUE_NAME,
+        "league_founded_season": 2021,
         "seasons": seasons,
         "renew_chain": ["449.l.761310", "461.l.103926"],
         "linked_history_chain": [

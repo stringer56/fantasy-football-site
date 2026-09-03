@@ -33,7 +33,8 @@ or raw Yahoo page was printed or saved.
 | 2026 | `470` | `470.l.26455` | `26455` | Official current league page exposes game ID 470 and league ID 26455. |
 
 The earliest linked and verified Yahoo season is **2021** and the latest is
-**2026**. The year-qualified 2020 route did not resolve to a Road to Glory league.
+**2026**. The commissioner confirmed that Road to Glory began in 2021, so the
+absence of a 2020 league is expected and is not a migration gap.
 
 ## Renewal chain
 

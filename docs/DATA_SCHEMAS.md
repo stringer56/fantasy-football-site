@@ -19,6 +19,7 @@ key; do not copy that resolved key into configuration.
 
 ### `league.yml`
 
+- `founded_season`: commissioner-confirmed inaugural league season.
 - `draft_datetime`: commissioner-confirmed ISO-8601 draft date and time.
 
 The timestamp must include an explicit UTC offset, for example
@@ -190,7 +191,7 @@ Contains the sanitized output of the manual Yahoo historical discovery job:
 `generated_at`, `discovery_status`, verified season/game/league keys, safe
 league metadata, explicit renewal relationships, endpoint capability states,
 public Yahoo history URLs, the separately labeled commissioner-linked history
-chain, and season-scoped Yahoo-team-to-franchise mapping results. Capability
+chain, the confirmed inaugural season, and season-scoped Yahoo-team-to-franchise mapping results. Capability
 values distinguish authenticated API probes from representative official public
 history pages; neither implies complete row-level ingestion. Unresolved candidate
 leagues and teams remain explicitly unresolved. OAuth data, account identifiers,
