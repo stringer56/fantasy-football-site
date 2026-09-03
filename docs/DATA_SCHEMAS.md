@@ -212,6 +212,24 @@ Yahoo imports. It records each season and category as `complete`, `partial`,
 failures. A downstream builder must not publish an unsupported category merely
 because a file exists.
 
+Its `coverage_scopes` object separates source windows by metric type:
+
+- `season_level_metrics` is labelled `Verified 2021–2025` and allows final
+  standings, W-L-T, PF/PA, final rank, playoff seed, verified championships, and
+  resolved franchise season summaries. Unresolved identities remain unlinked.
+- `weekly_derived_metrics` is labelled `Verified 2022–2025` and allows only
+  results derived from complete weekly matchups, including head-to-head, weekly
+  scoring and margins, season-bounded result streaks, and detailed playoff games.
+  It explicitly excludes 2021.
+
+These scopes must never be collapsed into a single all-time label.
+
+The 2021 entry additionally records `recovery_level`, `yahoo_route_status`,
+sanitized public `routes_checked`, and source-labelled fallbacks. Commissioner-
+supplied Yahoo standings provide all ten team keys and final rows; the Google
+Site playoff bracket and draft images remain partial. Zero Yahoo weekly
+matchups were fetched, so these sources cannot unlock weekly-derived metrics.
+
 Per-season backfill files use these shapes:
 
 - `league.json`: safe season/game/league metadata and renewal links.
@@ -229,6 +247,11 @@ Per-season backfill files use these shapes:
 - `rosters.json` (optional): season/week/team, player ID/name, selected position,
   starter-or-bench state, and verified fantasy points. It is absent until the
   public historical roster identity is trustworthy.
+
+`_data/yahoo_history/2021.yml` is the commissioner-supplied source transcription
+for the authenticated 2021 Yahoo standings page. It contains only public fantasy
+team IDs/names, final standings values, playoff seeds/known finishes, provenance,
+and canonical franchise joins. It contains no account or authentication data.
 
 Raw HTML lives only under ignored `.cache/yahoo-history/`. See
 [Yahoo Historical Backfill](YAHOO_HISTORY_BACKFILL.md).

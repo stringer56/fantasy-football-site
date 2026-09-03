@@ -16,9 +16,20 @@ HISTORY_ROOT = ROOT / "_data" / "generated" / "history"
 COMPLETENESS_PATH = HISTORY_ROOT / "completeness.json"
 FRANCHISES_PATH = ROOT / "_data" / "franchises.yml"
 CHAMPIONS_PATH = ROOT / "_data" / "champions.yml"
+YAHOO_2021_SOURCE_PATH = ROOT / "_data" / "yahoo_history" / "2021.yml"
 FORBIDDEN_KEYS = {
     "access_token", "refresh_token", "client_secret", "authorization", "email",
     "guid", "account_id", "manager_id", "invitation_key", "auth_token", "edit_url",
+}
+SEASON_LEVEL_METRICS = {
+    "final_standings", "season_wins_losses_ties", "season_points_for_against",
+    "final_rank", "playoff_seed", "verified_championships",
+    "resolved_franchise_season_summaries",
+}
+WEEKLY_DERIVED_METRICS = {
+    "head_to_head", "largest_margin", "smallest_winning_margin",
+    "weekly_scoring_highs_lows", "matchup_margins", "weekly_win_loss_streaks",
+    "detailed_playoff_matchup_metrics",
 }
 
 
@@ -200,6 +211,38 @@ def main() -> None:
     if any(isinstance(year, int) and year < 2021 for year in years):
         errors.append("completeness.json: Road to Glory did not exist before 2021")
 
+    coverage_scopes = completeness.get("coverage_scopes", {})
+    season_scope = coverage_scopes.get("season_level_metrics", {})
+    weekly_scope = coverage_scopes.get("weekly_derived_metrics", {})
+    if season_scope.get("label") != "Verified 2021–2025":
+        errors.append("completeness.json: season-level coverage label must be Verified 2021–2025")
+    if season_scope.get("source_years") != [2021, 2022, 2023, 2024, 2025]:
+        errors.append("completeness.json: season-level coverage must span 2021–2025")
+    if set(season_scope.get("allowed_metrics", [])) != SEASON_LEVEL_METRICS:
+        errors.append("completeness.json: season-level metric allowlist is incomplete")
+    if not season_scope.get("mapping_policy"):
+        errors.append("completeness.json: season-level mapping exclusions must be documented")
+    if weekly_scope.get("label") != "Verified 2022–2025":
+        errors.append("completeness.json: weekly-derived coverage label must be Verified 2022–2025")
+    if weekly_scope.get("source_years") != [2022, 2023, 2024, 2025]:
+        errors.append("completeness.json: weekly-derived coverage must span 2022–2025")
+    if set(weekly_scope.get("allowed_metrics", [])) != WEEKLY_DERIVED_METRICS:
+        errors.append("completeness.json: weekly-derived metric allowlist is incomplete")
+    if weekly_scope.get("excluded_years") != [2021] or not weekly_scope.get("exclusion_reason"):
+        errors.append("completeness.json: weekly-derived coverage must explicitly exclude 2021")
+    for scope_name, scope in coverage_scopes.items():
+        if "all-time" in str(scope.get("label", "")).casefold():
+            errors.append(f"completeness.json: {scope_name} cannot use an all-time label")
+    summaries_by_year = {item.get("season"): item for item in season_summaries}
+    for year in season_scope.get("source_years", []):
+        standings_status = summaries_by_year.get(year, {}).get("sections", {}).get("standings", {}).get("status")
+        if standings_status != "complete":
+            errors.append(f"completeness.json: season-level scope requires complete {year} standings")
+    for year in weekly_scope.get("source_years", []):
+        weekly_status = summaries_by_year.get(year, {}).get("sections", {}).get("weekly_matchups", {}).get("status")
+        if weekly_status != "complete":
+            errors.append(f"completeness.json: weekly-derived scope requires complete {year} matchups")
+
     totals = {"standings": 0, "weeks": 0, "matchups": 0, "draft_picks": 0, "transactions": 0}
     weeks_by_year: dict[int, dict[str, Any]] = {}
     for summary in season_summaries:
@@ -222,9 +265,23 @@ def main() -> None:
         if not isinstance(summary.get("roster_weeks_fetched"), int) or summary["roster_weeks_fetched"] < 0:
             errors.append(f"{year}: roster_weeks_fetched must be a non-negative integer")
         if summary.get("confidence") not in {
-            "partial_manual_only", "high_results_partial_identity", "high_results_complete_identity",
+            "partial_manual_only", "partial_mixed_verified_sources",
+            "high_results_partial_identity", "high_results_complete_identity",
         }:
             errors.append(f"{year}: invalid confidence label")
+        if year == 2021:
+            if summary.get("recovery_level") != "C":
+                errors.append("2021: focused recovery must remain Level C while weekly Yahoo data is unavailable")
+            if summary.get("yahoo_route_status") != "authentication_required":
+                errors.append("2021: Yahoo route status must record the authentication gate")
+            if declared_matchups.get("status") != "unavailable" or summary.get("weeks_fetched") != 0:
+                errors.append("2021: unavailable Yahoo weekly data cannot be presented as recovered")
+            if summary.get("sections", {}).get("standings", {}).get("coverage_type") != "commissioner_supplied_yahoo_archive":
+                errors.append("2021: standings must retain their commissioner-supplied Yahoo provenance")
+            if summary.get("sections", {}).get("standings", {}).get("yahoo_rows") != 10:
+                errors.append("2021: all ten supplied Yahoo standings rows must be represented")
+            if summary.get("franchise_mapping", {}).get("yahoo_team_keys_recovered") != 10:
+                errors.append("2021: all ten supplied Yahoo team keys must be represented")
         standings_path = season_dir / "standings.json"
         if standings_path.exists():
             payload = load_json(standings_path)
@@ -235,6 +292,24 @@ def main() -> None:
             expected = summary.get("team_count_expected")
             if summary.get("sections", {}).get("standings", {}).get("status") == "complete" and len(team_keys) != expected:
                 errors.append(f"{standings_path}: complete standings must match expected team count")
+            if year == 2021:
+                source = yaml.safe_load(YAHOO_2021_SOURCE_PATH.read_text(encoding="utf-8"))
+                source_by_rank = {row["rank"]: row for row in source.get("standings", [])}
+                for row in payload.get("standings", []):
+                    source_row = source_by_rank.get(row.get("rank"), {})
+                    expected_key = f"406.l.12928.t.{source_row.get('yahoo_team_id')}"
+                    if row.get("yahoo_team_key") != expected_key:
+                        errors.append(f"{standings_path}: rank {row.get('rank')} Yahoo team key disagrees with source")
+                    for generated_field, source_field in (
+                        ("historical_team_name", "yahoo_team_name"), ("wins", "wins"),
+                        ("losses", "losses"), ("ties", "ties"), ("points_for", "points_for"),
+                        ("points_against", "points_against"), ("playoff_seed", "playoff_seed"),
+                        ("playoff_finish", "playoff_finish"),
+                    ):
+                        if row.get(generated_field) != source_row.get(source_field):
+                            errors.append(
+                                f"{standings_path}: rank {row.get('rank')} {generated_field} disagrees with source"
+                            )
         weeks_path = season_dir / "weeks.json"
         if weeks_path.exists():
             payload = load_json(weeks_path)

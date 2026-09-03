@@ -12,6 +12,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from yahoo_archive import (  # noqa: E402
     ArchiveClient,
     is_login_page,
+    is_login_url,
     parse_available_weeks,
     parse_draft,
     parse_matchups,
@@ -20,6 +21,7 @@ from yahoo_archive import (  # noqa: E402
     parse_transactions,
     next_transaction_offset,
 )
+from backfill_yahoo_history import apply_2021_canonical_fallback, coverage_scopes  # noqa: E402
 
 
 FIXTURES = ROOT / "tests" / "fixtures" / "yahoo_archive"
@@ -30,10 +32,12 @@ def fixture(name: str) -> str:
 
 
 class FakeResponse:
-    def __init__(self, status: int, text: str = "", headers: dict[str, str] | None = None):
+    def __init__(self, status: int, text: str = "", headers: dict[str, str] | None = None,
+                 url: str = "https://football.fantasysports.yahoo.com/"):
         self.status_code = status
         self.text = text
         self.headers = headers or {}
+        self.url = url
 
     def raise_for_status(self) -> None:
         if self.status_code >= 400:
@@ -166,6 +170,50 @@ class YahooArchiveParserTests(unittest.TestCase):
             client = ArchiveClient(root, session=FakeSession([]), sleeper=lambda _: None)
             with self.assertRaisesRegex(RuntimeError, "requires sign-in"):
                 client.get("https://example.invalid", pathlib.Path("2021/page.html"))
+
+    def test_2021_login_redirect_is_rejected_even_without_login_markup(self) -> None:
+        self.assertTrue(is_login_url("https://login.yahoo.com/config/login?.src=sports"))
+        self.assertFalse(is_login_url("https://football.fantasysports.yahoo.com/2021/f1/12928"))
+        with tempfile.TemporaryDirectory() as directory:
+            response = FakeResponse(200, "generic authentication page", url="https://login.yahoo.com/config/login")
+            client = ArchiveClient(
+                pathlib.Path(directory), delay_seconds=0, max_retries=0,
+                session=FakeSession([response]), sleeper=lambda _: None,
+            )
+            with self.assertRaisesRegex(RuntimeError, "requires sign-in"):
+                client.get(
+                    "https://football.fantasysports.yahoo.com/2021/f1/12928",
+                    pathlib.Path("2021/page.html"),
+                )
+            self.assertFalse((pathlib.Path(directory) / "2021" / "page.html").exists())
+
+    def test_2021_canonical_fallback_remains_partial(self) -> None:
+        result = apply_2021_canonical_fallback(
+            {"sections": {}}, "2026-09-03T00:00:00Z", write_outputs=False
+        )
+        self.assertEqual("C", result["recovery_level"])
+        self.assertEqual(16, result["weeks_expected"])
+        self.assertEqual(0, result["weeks_fetched"])
+        self.assertEqual(10, result["sections"]["standings"]["rows"])
+        self.assertEqual(10, result["sections"]["standings"]["yahoo_rows"])
+        self.assertEqual(10, result["franchise_mapping"]["yahoo_team_keys_recovered"])
+        self.assertEqual(1, result["sections"]["playoffs"]["scored_games"])
+        self.assertEqual(0, result["sections"]["draft"]["picks"])
+        self.assertEqual(
+            ["Matthew's Optimal Team", "The Swagger Daggers"],
+            result["unresolved_franchise_mappings"],
+        )
+
+    def test_coverage_scopes_keep_season_and_weekly_windows_separate(self) -> None:
+        scopes = coverage_scopes()
+        season_scope = scopes["season_level_metrics"]
+        weekly_scope = scopes["weekly_derived_metrics"]
+        self.assertEqual("Verified 2021–2025", season_scope["label"])
+        self.assertEqual([2021, 2022, 2023, 2024, 2025], season_scope["source_years"])
+        self.assertEqual("Verified 2022–2025", weekly_scope["label"])
+        self.assertEqual([2022, 2023, 2024, 2025], weekly_scope["source_years"])
+        self.assertEqual([2021], weekly_scope["excluded_years"])
+        self.assertNotIn("all-time", " ".join(scope["label"] for scope in scopes.values()).casefold())
 
     def test_parser_output_is_deterministic(self) -> None:
         args = dict(season=2025, week=1, game_key="461", league_id="103926", mappings=self.mappings, playoff_start_week=14)

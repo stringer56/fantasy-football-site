@@ -31,9 +31,52 @@ OUTPUT_ROOT = ROOT / "_data" / "generated" / "history"
 CACHE_ROOT = ROOT / ".cache" / "yahoo-history"
 FRANCHISES_PATH = ROOT / "_data" / "franchises.yml"
 SEASONS_PATH = ROOT / "_data" / "seasons.yml"
+PLAYOFFS_PATH = ROOT / "_data" / "playoffs.yml"
+DRAFTS_PATH = ROOT / "_data" / "drafts.yml"
+YAHOO_2021_SOURCE_PATH = ROOT / "_data" / "yahoo_history" / "2021.yml"
 COMPLETED_SEASONS = {2021, 2022, 2023, 2024, 2025}
 PLAYOFF_START = {2021: 15, 2022: 15, 2023: 14, 2024: 14, 2025: 14}
 DEFAULT_SECTIONS = {"league", "standings", "matchups", "draft", "transactions"}
+
+
+def coverage_scopes() -> dict[str, dict[str, Any]]:
+    """Return the verified metric windows exposed to downstream builders."""
+    return {
+        "season_level_metrics": {
+            "label": "Verified 2021–2025",
+            "source_years": [2021, 2022, 2023, 2024, 2025],
+            "coverage_status": "verified_with_mapping_exclusions",
+            "allowed_metrics": [
+                "final_standings",
+                "season_wins_losses_ties",
+                "season_points_for_against",
+                "final_rank",
+                "playoff_seed",
+                "verified_championships",
+                "resolved_franchise_season_summaries",
+            ],
+            "mapping_policy": (
+                "Unresolved historical identities remain season-level rows but are excluded "
+                "from franchise-level aggregation."
+            ),
+        },
+        "weekly_derived_metrics": {
+            "label": "Verified 2022–2025",
+            "source_years": [2022, 2023, 2024, 2025],
+            "coverage_status": "complete_weekly_results_for_listed_years",
+            "allowed_metrics": [
+                "head_to_head",
+                "largest_margin",
+                "smallest_winning_margin",
+                "weekly_scoring_highs_lows",
+                "matchup_margins",
+                "weekly_win_loss_streaks",
+                "detailed_playoff_matchup_metrics",
+            ],
+            "excluded_years": [2021],
+            "exclusion_reason": "No 2021 Yahoo weekly matchup results were recovered.",
+        },
+    }
 
 
 def utc_now() -> str:
@@ -107,6 +150,164 @@ def safe_failure(season: int, section: str, error: Exception) -> dict[str, Any]:
     if "http" in message.lower():
         message = message.split("(", 1)[0].strip()
     return {"season": season, "section": section, "error_type": type(error).__name__, "message": message[:160]}
+
+
+def apply_2021_canonical_fallback(summary: dict[str, Any], generated_at: str,
+                                  *, write_outputs: bool = True) -> dict[str, Any]:
+    """Combine the commissioner-supplied Yahoo table with verified manual coverage."""
+    season = next(
+        item for item in yaml.safe_load(SEASONS_PATH.read_text(encoding="utf-8"))["seasons"]
+        if item["year"] == 2021
+    )
+    playoffs = next(
+        item for item in yaml.safe_load(PLAYOFFS_PATH.read_text(encoding="utf-8"))["playoffs"]
+        if item["season"] == 2021
+    )
+    draft = next(
+        item for item in yaml.safe_load(DRAFTS_PATH.read_text(encoding="utf-8"))["drafts"]
+        if item["year"] == 2021
+    )
+    yahoo_source = yaml.safe_load(YAHOO_2021_SOURCE_PATH.read_text(encoding="utf-8"))
+    source_rows = yahoo_source["standings"]
+    canonical_by_rank = {row["rank"]: row for row in season["standings"]}
+    standings = []
+    for source_row in source_rows:
+        canonical = canonical_by_rank[source_row["rank"]]
+        row = {
+            "rank": source_row["rank"],
+            "yahoo_team_key": f"406.l.12928.t.{source_row['yahoo_team_id']}",
+            "yahoo_team_id": source_row["yahoo_team_id"],
+            "franchise_id": source_row.get("franchise_id"),
+            "historical_team_name": source_row["yahoo_team_name"],
+            "mapping_status": "verified" if source_row.get("franchise_id") else "unresolved",
+            "wins": source_row["wins"],
+            "losses": source_row["losses"],
+            "ties": source_row["ties"],
+            "win_percentage": round(
+                (source_row["wins"] + 0.5 * source_row["ties"])
+                / (source_row["wins"] + source_row["losses"] + source_row["ties"]),
+                6,
+            ),
+            "points_for": source_row["points_for"],
+            "points_against": source_row["points_against"],
+            "streak": source_row["streak"],
+            "playoff_seed": source_row.get("playoff_seed"),
+            "playoff_finish": source_row.get("playoff_finish"),
+        }
+        for field in ("wins", "losses", "ties", "points_for", "points_against"):
+            if source_row[field] != canonical[field]:
+                raise ValueError(f"2021 Yahoo standings conflict at rank {source_row['rank']}: {field}")
+        standings.append(row)
+    unresolved = sorted(row["historical_team_name"] for row in standings if not row.get("franchise_id"))
+    regular_games = max(row["wins"] + row["losses"] + row.get("ties", 0) for row in standings)
+    playoff_rounds = len({game["round"] for game in playoffs["games"]})
+    expected_weeks = regular_games + playoff_rounds
+    scored_playoff_games = sum(
+        game.get("team_one_score") is not None and game.get("team_two_score") is not None
+        for game in playoffs["games"]
+    )
+
+    source = {
+        "type": yahoo_source["source_type"],
+        "url": yahoo_source["source_url"],
+        "coverage_status": "complete_final_standings",
+        "verified_on": str(yahoo_source["verified_on"]),
+    }
+    standings_payload = {
+        "schema_version": 1,
+        "season": 2021,
+        "league_key": "406.l.12928",
+        "generated_at": generated_at,
+        "source": source,
+        "standings": standings,
+    }
+    teams_payload = {
+        "schema_version": 1,
+        "season": 2021,
+        "league_key": "406.l.12928",
+        "generated_at": generated_at,
+        "source": source,
+        "teams": [
+            {key: row[key] for key in (
+                "yahoo_team_key", "yahoo_team_id", "franchise_id", "historical_team_name", "mapping_status"
+            )}
+            for row in sorted(standings, key=lambda item: item["yahoo_team_id"])
+        ],
+    }
+    if write_outputs:
+        write_json(OUTPUT_ROOT / "2021" / "standings.json", standings_payload)
+        write_json(OUTPUT_ROOT / "2021" / "teams.json", teams_payload)
+
+    summary["sections"].update({
+        "standings": {
+            "status": "complete",
+            "coverage_type": "commissioner_supplied_yahoo_archive",
+            "rows": len(standings),
+            "expected": season["team_count"],
+            "yahoo_rows": len(standings),
+            "source_files": ["_data/yahoo_history/2021.yml", "_data/seasons.yml"],
+        },
+        "teams": {
+            "status": "complete",
+            "coverage_type": "commissioner_supplied_yahoo_archive",
+            "rows": len(standings),
+            "expected": season["team_count"],
+            "resolved_franchises": len(standings) - len(unresolved),
+            "source_files": ["_data/yahoo_history/2021.yml", "_data/franchises.yml"],
+        },
+        "weekly_matchups": {
+            "status": "unavailable",
+            "weeks": 0,
+            "expected_weeks": expected_weeks,
+            "games": 0,
+            "all_scores_present": False,
+            "expected_weeks_basis": "14 verified regular-season games plus two verified playoff rounds",
+        },
+        "playoffs": {
+            "status": "partial",
+            "coverage_type": "google_site_verified_canonical",
+            "games": len(playoffs["games"]),
+            "scored_games": scored_playoff_games,
+            "all_scores_present": scored_playoff_games == len(playoffs["games"]),
+            "source_files": ["_data/playoffs.yml", "_data/champions.yml"],
+            "classification_note": "Semifinal winners and the scored championship are verified; semifinal scores are unavailable.",
+        },
+        "draft": {
+            "status": "partial",
+            "coverage_type": "google_site_verified_images",
+            "picks": 0,
+            "rounds_visible": draft["rounds"],
+            "draft_order_slots": len(draft["draft_order"]),
+            "result_assets": len(draft["results_assets"]),
+            "pick_data_status": draft["pick_data_status"],
+            "source_files": ["_data/drafts.yml", "assets/img/drafts/2021/"],
+        },
+    })
+    summary["franchise_mapping"] = {
+        "status": "partial",
+        "resolved": len(standings) - len(unresolved),
+        "unresolved_names": unresolved,
+        "yahoo_team_keys_recovered": len(standings),
+    }
+    summary.update({
+        "weeks_expected": expected_weeks,
+        "weeks_fetched": 0,
+        "matchups_expected": None,
+        "matchups_fetched": 0,
+        "roster_weeks_fetched": 0,
+        "unresolved_franchise_mappings": unresolved,
+        "confidence": "partial_mixed_verified_sources",
+        "recovery_level": "C",
+        "yahoo_route_status": "authentication_required",
+        "routes_checked": [
+            "https://football.fantasysports.yahoo.com/league/rtgffl264552026/2021",
+            "https://football.fantasysports.yahoo.com/2021/f1/12928",
+            "https://football.fantasysports.yahoo.com/2021/f1/12928/standings",
+            "https://football.fantasysports.yahoo.com/archive/nfl/2021/12928",
+        ],
+        "route_observation": "The public history routes redirect to Yahoo sign-in; the legacy route redirects to the explicit 2021 route.",
+    })
+    return summary
 
 
 def backfill_season(client: ArchiveClient, season: dict[str, Any], sections: set[str],
@@ -359,6 +560,8 @@ def backfill_season(client: ArchiveClient, season: dict[str, Any], sections: set
             else "high_results_complete_identity"
         ),
     })
+    if year == 2021 and not standings:
+        apply_2021_canonical_fallback(summary, generated_at)
     return summary
 
 
@@ -396,6 +599,7 @@ def main() -> None:
         "generated_at": generated_at,
         "source": "official_yahoo_public_archive",
         "scope": {"league_started": 2021, "completed_seasons": sorted(COMPLETED_SEASONS)},
+        "coverage_scopes": coverage_scopes(),
         "seasons": summaries,
         "failures": failures,
         "publication_policy": "Only verified normalized rows may unlock derived records; partial and unavailable categories remain labeled.",

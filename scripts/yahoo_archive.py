@@ -10,6 +10,7 @@ import re
 import time
 from dataclasses import dataclass
 from typing import Any, Callable
+from urllib.parse import urlsplit
 
 import requests
 
@@ -26,6 +27,14 @@ def clean_text(value: str) -> str:
 
 def is_login_page(value: str) -> bool:
     return "<title>Login - Sign in to Yahoo</title>" in value or "Sign in to Yahoo Fantasy" in value
+
+
+def is_login_url(value: str) -> bool:
+    """Return true only for Yahoo's authentication host."""
+    try:
+        return (urlsplit(value).hostname or "").casefold() == "login.yahoo.com"
+    except ValueError:
+        return False
 
 
 def _attrs(fragment: str) -> dict[str, str]:
@@ -354,7 +363,7 @@ class ArchiveClient:
                         self.sleeper(wait)
                         continue
                 response.raise_for_status()
-                if is_login_page(response.text):
+                if is_login_url(getattr(response, "url", "")) or is_login_page(response.text):
                     raise RuntimeError("Yahoo archive requires sign-in")
                 path.write_text(response.text, encoding="utf-8")
                 return response.text
