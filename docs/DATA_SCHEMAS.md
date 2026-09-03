@@ -213,10 +213,10 @@ failures. A downstream builder must not publish an unsupported category merely
 because a file exists.
 
 The 2021 entry additionally records `recovery_level`, `yahoo_route_status`,
-sanitized public `routes_checked`, and source-labelled canonical fallbacks. Its
-Google Site standings, playoff bracket, and draft images remain `partial`; zero
-Yahoo weekly matchups were fetched, so the fallback cannot unlock weekly-derived
-metrics.
+sanitized public `routes_checked`, and source-labelled fallbacks. Commissioner-
+supplied Yahoo standings provide all ten team keys and final rows; the Google
+Site playoff bracket and draft images remain partial. Zero Yahoo weekly
+matchups were fetched, so these sources cannot unlock weekly-derived metrics.
 
 Per-season backfill files use these shapes:
 
@@ -235,6 +235,11 @@ Per-season backfill files use these shapes:
 - `rosters.json` (optional): season/week/team, player ID/name, selected position,
   starter-or-bench state, and verified fantasy points. It is absent until the
   public historical roster identity is trustworthy.
+
+`_data/yahoo_history/2021.yml` is the commissioner-supplied source transcription
+for the authenticated 2021 Yahoo standings page. It contains only public fantasy
+team IDs/names, final standings values, playoff seeds/known finishes, provenance,
+and canonical franchise joins. It contains no account or authentication data.
 
 Raw HTML lives only under ignored `.cache/yahoo-history/`. See
 [Yahoo Historical Backfill](YAHOO_HISTORY_BACKFILL.md).

@@ -16,9 +16,10 @@ The commissioner created the public custom league URL `rtgffl264552026` and
 linked the Road to Glory seasons in Yahoo's League History tool. Those official
 Yahoo pages independently resolve the exact 2021–2026 league IDs and expose
 representative standings, team, matchup, roster, draft, and transaction pages.
-The focused 2021 recovery pass established that its detailed public routes
+The focused 2021 recovery pass established that its automated public routes
 redirect to Yahoo sign-in; followed requests may then receive HTTP 429. The
-season identity remains verified while its Yahoo page-level data is unavailable.
+commissioner subsequently supplied the authenticated Yahoo standings table,
+which recovers all ten team IDs and final rows without exposing login data.
 No credential value, authorization header, token response, private commissioner
 information, or raw Yahoo page was printed or saved.
 
@@ -76,7 +77,7 @@ exist for a correctly authorized Fantasy Sports application/account.
 
 | Season | Metadata | Teams | Standings | Weekly matchups | Final playoff matchups | Rosters | Draft results | Transactions |
 |---:|---|---|---|---|---|---|---|---|
-| 2021 | Public history URL verified | Authentication required | Authentication required | Authentication required | Authentication required | Authentication required | Authentication required | Authentication required |
+| 2021 | Public history URL verified | 10 supplied team IDs | Complete supplied table | Authentication required | Google Site/canonical fallback | Authentication required | Google Site images only | Authentication required |
 | 2022 | Public page available | 12 team links | Available | Week 1 available | Week 16 available | Sample roster/points available | Available | Available |
 | 2023 | Public page available | 12 team links | Available | Week 1 available | Week 16 available | Sample roster/points available | Available | Available |
 | 2024 | Public page available | 12 team links | Available | Week 1 available | Week 16 available | Sample roster/points available | Available | Available |
@@ -150,10 +151,9 @@ and key matching resolves 10 of 12 teams in 2022, 11 of 12 in 2023, all 12 in
 - 2026: Albany Redskins.
 
 The 2026 name is not silently assigned to Albany Kneelers without explicit
-continuity evidence. The 2021 league identity is verified, but team-key
-extraction remains unavailable because Yahoo redirects detailed archive routes
-to sign-in. Unmatched names
-retain a null candidate franchise ID.
+continuity evidence. The commissioner-supplied 2021 Yahoo table now provides all
+10 historical team keys. Eight resolve through established aliases; The Swagger
+Daggers and Matthew's Optimal Team retain null candidate franchise IDs.
 
 ## Commissioner-confirmed 2025 playoff archive
 

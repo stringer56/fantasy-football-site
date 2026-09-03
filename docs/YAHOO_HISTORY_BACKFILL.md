@@ -20,7 +20,7 @@ schedule rather than silently treating missing games as zero.
 
 | Season | League key | Standings | Weekly archive | Scored matchups | Draft | Transactions | Franchise mapping |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| 2021 | `406.l.12928` | 10/10 Google Site/canonical | Yahoo redirects to sign-in | 0 | Image-only / unverified picks | 0 | 8 resolved, 2 unresolved |
+| 2021 | `406.l.12928` | 10/10 commissioner-supplied Yahoo | Yahoo weekly routes require sign-in | 0 | Image-only / unverified picks | 0 | 8 resolved, 2 unresolved |
 | 2022 | `414.l.527645` | 12/12 | 16/16 weeks | 92 | 180 picks | 337 | 10 resolved, 2 unresolved |
 | 2023 | `423.l.161807` | 12/12 | 16/16 weeks | 92 | 180 picks | 283 | 11 resolved, 1 unresolved |
 | 2024 | `449.l.761310` | 12/12 | 16/16 weeks | 92 | 180 picks | 259 | 12 resolved |
@@ -54,10 +54,16 @@ destination. The archive entry route itself is now classified as authentication
 required, not as an unknown league key or a recoverable rate-limit-only failure.
 No full crawl followed the failed small probe.
 
-The fallback remains explicitly source-labelled:
+The commissioner then supplied the authenticated Yahoo standings table. That
+evidence is stored separately from automated archive output and remains
+explicitly source-labelled:
 
-- Google Site/canonical standings verify all 10 final rows, with eight canonical
-  franchise mappings and two unresolved historical identities.
+- All 10 Yahoo team IDs and final standings rows are recovered. Every W-L-T and
+  PF/PA value agrees with the existing Google Site/canonical table. Eight teams
+  map to canonical franchises; The Swagger Daggers and Matthew's Optimal Team
+  remain unresolved.
+- Yahoo explicitly confirms Albany Kneelers first, The Savage Huns second, and
+  The Swagger Daggers third. Other final placement values remain null.
 - Fourteen regular-season games per team plus the verified semifinal and final
   rounds establish an expected 16-week season, but zero Yahoo weekly scoreboards
   were recovered.
@@ -81,9 +87,9 @@ No continuity was guessed. These names remain explicitly unresolved:
 - 2023: Broncos Country Let’s Ride
 
 Their weekly results and draft picks are preserved under the exact historical
-name with a null `franchise_id`. The previously documented unresolved 2021 names
-also remain unchanged because the 2021 public archive is not accessible to the
-backfill client.
+name with a null `franchise_id`. The commissioner-supplied 2021 Yahoo team keys
+also preserve The Swagger Daggers and Matthew's Optimal Team as unresolved
+rather than guessing their franchise continuity.
 
 ## Storage model
 

@@ -16,6 +16,7 @@ HISTORY_ROOT = ROOT / "_data" / "generated" / "history"
 COMPLETENESS_PATH = HISTORY_ROOT / "completeness.json"
 FRANCHISES_PATH = ROOT / "_data" / "franchises.yml"
 CHAMPIONS_PATH = ROOT / "_data" / "champions.yml"
+YAHOO_2021_SOURCE_PATH = ROOT / "_data" / "yahoo_history" / "2021.yml"
 FORBIDDEN_KEYS = {
     "access_token", "refresh_token", "client_secret", "authorization", "email",
     "guid", "account_id", "manager_id", "invitation_key", "auth_token", "edit_url",
@@ -222,7 +223,8 @@ def main() -> None:
         if not isinstance(summary.get("roster_weeks_fetched"), int) or summary["roster_weeks_fetched"] < 0:
             errors.append(f"{year}: roster_weeks_fetched must be a non-negative integer")
         if summary.get("confidence") not in {
-            "partial_manual_only", "high_results_partial_identity", "high_results_complete_identity",
+            "partial_manual_only", "partial_mixed_verified_sources",
+            "high_results_partial_identity", "high_results_complete_identity",
         }:
             errors.append(f"{year}: invalid confidence label")
         if year == 2021:
@@ -232,8 +234,12 @@ def main() -> None:
                 errors.append("2021: Yahoo route status must record the authentication gate")
             if declared_matchups.get("status") != "unavailable" or summary.get("weeks_fetched") != 0:
                 errors.append("2021: unavailable Yahoo weekly data cannot be presented as recovered")
-            if summary.get("sections", {}).get("standings", {}).get("coverage_type") != "google_site_verified_canonical":
-                errors.append("2021: fallback standings must retain their Google Site/canonical provenance")
+            if summary.get("sections", {}).get("standings", {}).get("coverage_type") != "commissioner_supplied_yahoo_archive":
+                errors.append("2021: standings must retain their commissioner-supplied Yahoo provenance")
+            if summary.get("sections", {}).get("standings", {}).get("yahoo_rows") != 10:
+                errors.append("2021: all ten supplied Yahoo standings rows must be represented")
+            if summary.get("franchise_mapping", {}).get("yahoo_team_keys_recovered") != 10:
+                errors.append("2021: all ten supplied Yahoo team keys must be represented")
         standings_path = season_dir / "standings.json"
         if standings_path.exists():
             payload = load_json(standings_path)
@@ -244,6 +250,24 @@ def main() -> None:
             expected = summary.get("team_count_expected")
             if summary.get("sections", {}).get("standings", {}).get("status") == "complete" and len(team_keys) != expected:
                 errors.append(f"{standings_path}: complete standings must match expected team count")
+            if year == 2021:
+                source = yaml.safe_load(YAHOO_2021_SOURCE_PATH.read_text(encoding="utf-8"))
+                source_by_rank = {row["rank"]: row for row in source.get("standings", [])}
+                for row in payload.get("standings", []):
+                    source_row = source_by_rank.get(row.get("rank"), {})
+                    expected_key = f"406.l.12928.t.{source_row.get('yahoo_team_id')}"
+                    if row.get("yahoo_team_key") != expected_key:
+                        errors.append(f"{standings_path}: rank {row.get('rank')} Yahoo team key disagrees with source")
+                    for generated_field, source_field in (
+                        ("historical_team_name", "yahoo_team_name"), ("wins", "wins"),
+                        ("losses", "losses"), ("ties", "ties"), ("points_for", "points_for"),
+                        ("points_against", "points_against"), ("playoff_seed", "playoff_seed"),
+                        ("playoff_finish", "playoff_finish"),
+                    ):
+                        if row.get(generated_field) != source_row.get(source_field):
+                            errors.append(
+                                f"{standings_path}: rank {row.get('rank')} {generated_field} disagrees with source"
+                            )
         weeks_path = season_dir / "weeks.json"
         if weeks_path.exists():
             payload = load_json(weeks_path)

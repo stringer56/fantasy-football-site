@@ -161,6 +161,16 @@ class YahooHistoryDiscoveryTests(unittest.TestCase):
             season_2021["capabilities"]["weekly_matchups"],
             "unavailable_public_authentication_required",
         )
+        self.assertEqual(
+            season_2021["capabilities"]["standings"],
+            "available_commissioner_supplied_authenticated_archive",
+        )
+        self.assertEqual(10, len(season_2021["team_mappings"]))
+        self.assertEqual(8, sum(row["status"] == "verified" for row in season_2021["team_mappings"]))
+        self.assertEqual(
+            "complete_commissioner_supplied_yahoo",
+            season_2021["archive_coverage"]["standings"],
+        )
         self.assertTrue(all(
             value == "available_public_history"
             for season in first["seasons"][1:5]

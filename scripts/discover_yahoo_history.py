@@ -95,6 +95,22 @@ def load_franchises() -> list[dict[str, Any]]:
 def local_archive_coverage(season: int | None) -> dict[str, Any] | None:
     if season is None:
         return None
+    if season == 2021:
+        return {
+            "teams": "complete_commissioner_supplied_yahoo",
+            "standings": "complete_commissioner_supplied_yahoo",
+            "weekly_matchups": "unavailable",
+            "playoffs": "partial_google_site_canonical",
+            "draft": "image_only_unverified",
+            "transactions": "unavailable",
+            "source_files": [
+                "_data/yahoo_history/2021.yml",
+                "_data/generated/history/2021/standings.json",
+                "_data/generated/history/2021/teams.json",
+                "_data/playoffs.yml",
+                "_data/drafts.yml",
+            ],
+        }
     path = ROOT / "_data" / "generated" / "history" / str(season) / "playoffs.json"
     if not path.is_file():
         return None
@@ -484,6 +500,13 @@ def build_committed_baseline() -> dict[str, Any]:
 
     franchises = load_franchises()
     public_teams = {
+        2021: [
+            (1, "Van Cortlant Rangers"), (2, "THE SAVAGE HUNS"),
+            (3, "Quahog Stripes"), (4, "Greendale Human Beings"),
+            (5, "Chris's Crazy Team"), (6, "The Swagger Daggers"),
+            (7, "Turnbull AC’s"), (8, "Albany Kneelers"),
+            (9, "Matthew's Optimal Team"), (10, "The Baseball Furies"),
+        ],
         2022: [
             (1, "Van Cortlant Rangers"), (2, "Albany Kneelers"),
             (3, "Chris's Crazy Team"), (4, "Greendale Human Beings"),
@@ -539,11 +562,13 @@ def build_committed_baseline() -> dict[str, Any]:
         if season == 2021:
             capabilities = {
                 "league_metadata": "available_public_history",
-                **{
-                    name: "unavailable_public_authentication_required"
-                    for name in CAPABILITY_NAMES
-                    if name != "league_metadata"
-                },
+                "teams": "available_commissioner_supplied_authenticated_archive",
+                "standings": "available_commissioner_supplied_authenticated_archive",
+                "weekly_matchups": "unavailable_public_authentication_required",
+                "final_playoff_matchups": "available_google_site_canonical",
+                "rosters": "unavailable_public_authentication_required",
+                "draft_results": "available_google_site_images_unstructured",
+                "transactions": "unavailable_public_authentication_required",
             }
         else:
             capabilities = {name: "available_public_history" for name in CAPABILITY_NAMES}

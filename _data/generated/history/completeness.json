@@ -23,23 +23,24 @@
           "rows": 1
         },
         "standings": {
-          "status": "partial",
-          "coverage_type": "google_site_verified_canonical",
+          "status": "complete",
+          "coverage_type": "commissioner_supplied_yahoo_archive",
           "rows": 10,
           "expected": 10,
-          "yahoo_rows": 0,
+          "yahoo_rows": 10,
           "source_files": [
+            "_data/yahoo_history/2021.yml",
             "_data/seasons.yml"
           ]
         },
         "teams": {
-          "status": "partial",
-          "coverage_type": "canonical_names_without_yahoo_team_keys",
+          "status": "complete",
+          "coverage_type": "commissioner_supplied_yahoo_archive",
           "rows": 10,
           "expected": 10,
           "resolved_franchises": 8,
           "source_files": [
-            "_data/seasons.yml",
+            "_data/yahoo_history/2021.yml",
             "_data/franchises.yml"
           ]
         },
@@ -97,7 +98,7 @@
           "Matthew's Optimal Team",
           "The Swagger Daggers"
         ],
-        "yahoo_team_keys_recovered": 0
+        "yahoo_team_keys_recovered": 10
       },
       "weeks_expected": 16,
       "weeks_fetched": 0,
@@ -108,7 +109,7 @@
         "Matthew's Optimal Team",
         "The Swagger Daggers"
       ],
-      "confidence": "partial_manual_only",
+      "confidence": "partial_mixed_verified_sources",
       "recovery_level": "C",
       "yahoo_route_status": "authentication_required",
       "routes_checked": [

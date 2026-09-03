@@ -188,11 +188,15 @@ class YahooArchiveParserTests(unittest.TestCase):
             self.assertFalse((pathlib.Path(directory) / "2021" / "page.html").exists())
 
     def test_2021_canonical_fallback_remains_partial(self) -> None:
-        result = apply_2021_canonical_fallback({"sections": {}})
+        result = apply_2021_canonical_fallback(
+            {"sections": {}}, "2026-09-03T00:00:00Z", write_outputs=False
+        )
         self.assertEqual("C", result["recovery_level"])
         self.assertEqual(16, result["weeks_expected"])
         self.assertEqual(0, result["weeks_fetched"])
         self.assertEqual(10, result["sections"]["standings"]["rows"])
+        self.assertEqual(10, result["sections"]["standings"]["yahoo_rows"])
+        self.assertEqual(10, result["franchise_mapping"]["yahoo_team_keys_recovered"])
         self.assertEqual(1, result["sections"]["playoffs"]["scored_games"])
         self.assertEqual(0, result["sections"]["draft"]["picks"])
         self.assertEqual(
