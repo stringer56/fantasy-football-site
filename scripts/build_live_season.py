@@ -309,6 +309,39 @@ def franchise_summaries(by_id: dict[str, dict[str, Any]], standings: list[dict[s
     return summaries
 
 
+def power_ranking_summary(
+    season: int,
+    week: int | None,
+    current: dict[str, Any],
+    history: dict[str, Any],
+) -> dict[str, Any]:
+    """Return only the finalized ranking that belongs to this Yahoo week."""
+
+    finalized = next(
+        (
+            row
+            for row in history.get("weeks", [])
+            if row.get("season") == season and row.get("week") == week and row.get("rankings")
+        ),
+        None,
+    )
+    if not finalized and current.get("season") == season and current.get("week") == week and current.get("rankings"):
+        finalized = current
+    summary = {
+        "status": "ready" if finalized else "unavailable",
+        "week": finalized.get("week") if finalized else None,
+        "top_three": (finalized.get("rankings") or [])[:3] if finalized else [],
+        "biggest_riser": None,
+        "biggest_faller": None,
+    }
+    if finalized:
+        movements = [row for row in finalized["rankings"] if isinstance(row.get("movement"), int)]
+        if movements:
+            summary["biggest_riser"] = max(movements, key=lambda row: (row["movement"], row["franchise_id"]))
+            summary["biggest_faller"] = min(movements, key=lambda row: (row["movement"], row["franchise_id"]))
+    return summary
+
+
 def build_live_payload(*, stale: bool = False) -> tuple[dict[str, Any], dict[str, Any]]:
     site = load_yaml(ROOT / "_data" / "site.yml")
     season = int(site["current_season"])
@@ -356,6 +389,7 @@ def build_live_payload(*, stale: bool = False) -> tuple[dict[str, Any], dict[str
     thresholds = load_json(GENERATED / "records" / "record_thresholds.json")
     h2h = load_json(GENERATED / "records" / "head_to_head.json")
     power = load_json(GENERATED / "power_rankings.json")
+    power_history = load_json(GENERATED / "power_rankings_history.json")
     picks = load_json(GENERATED / "picks.json")
     by_id, by_key = franchise_indexes(franchises_data, season)
     if len(by_id) != 12 or len(by_key) != 12:
@@ -379,19 +413,7 @@ def build_live_payload(*, stale: bool = False) -> tuple[dict[str, Any], dict[str
     projected_matchups = [game for game in matchups if all(isinstance(team.get("projected_score"), (int, float)) for team in game["teams"])]
     featured_matchup = min(projected_matchups, key=lambda game: (abs(game["teams"][0]["projected_score"] - game["teams"][1]["projected_score"]), game["matchup_id"])) if projected_matchups else (matchups[0] if matchups else None)
 
-    power_current = power if power.get("season") == season and power.get("rankings") else None
-    power_rankings = {
-        "status": "ready" if power_current else "unavailable",
-        "week": power_current.get("week") if power_current else None,
-        "top_three": (power_current.get("rankings") or [])[:3] if power_current else [],
-        "biggest_riser": None,
-        "biggest_faller": None,
-    }
-    if power_current:
-        movements = [row for row in power_current["rankings"] if isinstance(row.get("movement"), int)]
-        if movements:
-            power_rankings["biggest_riser"] = max(movements, key=lambda row: (row["movement"], row["franchise_id"]))
-            power_rankings["biggest_faller"] = min(movements, key=lambda row: (row["movement"], row["franchise_id"]))
+    power_rankings = power_ranking_summary(season, week, power, power_history)
 
     league = league_data.get("league") or {}
     end_week = league.get("end_week")

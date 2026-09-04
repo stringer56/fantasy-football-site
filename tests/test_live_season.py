@@ -105,6 +105,15 @@ class LiveSeasonTests(unittest.TestCase):
         live["data_status"] = "unavailable"
         self.assertNotIn("unavailable live data must not publish synthetic results", validate_live_season.validate(live, {"schema_version": 1, "season": 2026, "items": []}))
 
+    def test_weekly_hub_uses_only_that_weeks_finalized_power_ranking(self) -> None:
+        week_one = {"season": 2026, "week": 1, "rankings": [{"franchise_id": "alpha", "rank": 1, "movement": None}]}
+        week_two = {"season": 2026, "week": 2, "rankings": [{"franchise_id": "beta", "rank": 1, "movement": 2}]}
+        summary = build_live_season.power_ranking_summary(2026, 1, week_two, {"weeks": [week_one]})
+        self.assertEqual(summary["week"], 1)
+        self.assertEqual(summary["top_three"][0]["franchise_id"], "alpha")
+        missing = build_live_season.power_ranking_summary(2026, 3, week_two, {"weeks": [week_one]})
+        self.assertEqual(missing["status"], "unavailable")
+
 
 if __name__ == "__main__":
     unittest.main()

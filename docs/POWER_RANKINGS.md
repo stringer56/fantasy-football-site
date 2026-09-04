@@ -29,6 +29,10 @@ Finalization writes an immutable weekly aggregate to
 content refuses to overwrite the finalized week. Later weeks automatically use
 the latest earlier finalized week for prior rank and movement.
 
+After review, run `python scripts/build_live_season.py` so the matching Yahoo
+week snapshot receives that week's finalized aggregate. Weekly hubs never show
+a different week's rankings merely because it is the latest available result.
+
 Every archived ranking row contains `season`, `week`, `franchise_id`, `rank`,
 `previous_rank`, `movement`, `average_rank`, `ranking_points`,
 `first_place_votes`, and `votes_received`. Missing weeks remain explicit in the
@@ -58,4 +62,3 @@ Top-3 and movement modules only after a finalized aggregate exists.
 No 2026 ballots are committed at this milestone, so the current page correctly
 renders an unavailable state. It does not manufacture sample rankings merely
 to populate the visualization.
-
