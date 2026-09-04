@@ -36,9 +36,9 @@ class RecapGenerationTests(unittest.TestCase):
     def test_expected_recap_counts(self) -> None:
         self.assertEqual(len(self.payload["seasons"]), 5)
         self.assertEqual(len(self.payload["team_recaps"]), 58)
-        self.assertEqual(len(self.payload["playoff_recaps"]), 25)
+        self.assertEqual(len(self.payload["playoff_recaps"]), 27)
         self.assertEqual(len(self.payload["championship_recaps"]), 5)
-        self.assertEqual(len(self.payload["by_the_numbers"]), 57)
+        self.assertEqual(len(self.payload["by_the_numbers"]), 63)
 
     def test_2025_complete_weekly_archive_and_narrative(self) -> None:
         recap = self.season_recap(2025)
@@ -110,7 +110,7 @@ class RecapGenerationTests(unittest.TestCase):
         self.assertLessEqual(len(recap["generated_text"].split()), 200)
 
     def test_missing_playoff_score_is_not_invented(self) -> None:
-        recap = self.playoff_recap("2023-qf-1")
+        recap = self.playoff_recap("2022-sf-1")
         self.assertIsNone(recap["winner_score"])
         self.assertIsNone(recap["loser_score"])
         self.assertIn("does not publish a score", recap["generated_text"])

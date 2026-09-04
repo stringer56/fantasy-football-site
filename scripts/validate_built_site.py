@@ -202,7 +202,7 @@ def main() -> None:
             errors.append(f"season page {route} does not link to its draft")
         if "/cup/" not in rendered:
             errors.append(f"season page {route} does not link to the Brew Crew Cup")
-        if season["year"] in (2024, 2025):
+        if season.get("data_mode") == "detailed":
             expected_content = ["Complete", "Week-by-Week Archive", "Playoff Field"]
             if season["year"] == 2025:
                 expected_content.extend(["Verified Yahoo results", "Albany Kneelers selected Ja’Marr Chase"])

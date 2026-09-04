@@ -300,7 +300,10 @@ def main() -> None:
         if stat_ids != expected_numbers:
             errors.append(f"by_the_numbers/{year}: supported canonical fields are incomplete")
 
-    for detailed_year in (2024, 2025):
+    detailed_years = sorted(
+        year for year, season in season_by_year.items() if season.get("data_mode") == "detailed"
+    )
+    for detailed_year in detailed_years:
         season_recap = next((item for item in season_recaps if item.get("season") == detailed_year), None)
         if not season_recap:
             continue

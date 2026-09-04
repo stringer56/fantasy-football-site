@@ -47,6 +47,11 @@ Albany Kneelers against Maine Moose. Correcting the earlier Buffalo transcriptio
 allows that quarterfinal to enter the classified playoff metrics. The 2024 and
 2025 placement games remain explicitly excluded from playoff-win calculations.
 
+The complete 2023 season audit adds numeric scores to all five canonical
+championship-bracket games and resolves the bracket image's crossed semifinal
+connectors through Yahoo Week 15. Its verified third- and fifth-place games are
+also explicit, but remain excluded from playoff-win calculations.
+
 ## Historical identity coverage
 
 All 2021 season-level identities now resolve. The commissioner draft-order
