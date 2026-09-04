@@ -15,6 +15,8 @@ The source of truth is limited to:
 - `_data/champions.yml` for verified finalists and championship scores;
 - `_data/franchises.yml` for stable IDs, public routes, and local identity art;
 - `_data/generated/record_book.json` for provenance-aware archive records; and
+- a season's allowlisted `_data/generated/history/{year}/weeks.json` when its
+  canonical record declares complete week coverage; and
 - `_data/editorial/recaps.yml` for commissioner-approved prose overrides.
 
 Rendered HTML, source screenshots, the old Google Site, current Yahoo output,
@@ -24,13 +26,14 @@ and unstructured franchise profile copy are not narrative inputs.
 
 The generator may state a final standing, record, PF/PA total, complete-season
 relative PF rank, playoff participation/result, advancing team, final score,
-verified championship count within the 2021–2024 archive, and a record-book
+verified championship count within the 2021–2025 archive, and a record-book
 fact whose provenance permits publication.
 
-It does not infer trades, injuries, player performances, weekly events, waiver
-moves, draft effects, rivalries, streaks, seeding, luck, strategy, emotion,
-upsets, comebacks, dominance, bench decisions, game margins, or any other event
-not encoded in the canonical sources. Missing playoff scores remain missing.
+It does not infer trades, injuries, player performances, waiver moves, draft
+effects, rivalries, luck, strategy, emotion, upsets, comebacks, dominance, bench
+decisions, or any event not encoded in the canonical sources. When all weekly
+results are verified, it may calculate deterministic scores, margins, and
+regular-season result streaks. Missing playoff scores remain missing.
 Final standings rank is described as final placement and is never relabelled as
 a playoff seed.
 
@@ -39,7 +42,7 @@ value. If one PF value is unavailable, for example, the engine omits the
 highest/lowest PF cards and all relative PF prose for that season.
 
 Record references use `_data/generated/record_book.json`. Partial categories are
-always phrased as verified within the 2021–2024 archive and never as all-time
+always phrased as verified within the 2021–2025 archive and never as all-time
 league history.
 
 ## Generated output
@@ -129,8 +132,8 @@ recap regeneration and review.
 
 The season layout prefers approved editorial text when present, otherwise the
 generated paragraphs. It renders the season recap, By the Numbers cards,
-standings, bracket, result cards, playoff prose, championship story, and compact
-team recap cards from canonical data. Public pages show only the subtle label
+standings, bracket, result cards, playoff prose, championship story, optional
+week-by-week accordions, and compact team recap cards from canonical data. Public pages show only the subtle label
 “Generated from verified league results”; technical facts and warnings remain
 available in the generated JSON and validation documentation.
 
@@ -139,3 +142,7 @@ available in the generated JSON and validation documentation.
 Narratives describe fantasy franchises and public results. The generator does
 not read owner contact data and cannot emit emails, addresses, medical details,
 Yahoo account identifiers, invitations, credentials, or private communications.
+
+The 2025 output is the first complete weekly season narrative: four season-story
+paragraphs, 16 weekly groups containing 92 final matchups, seven classified
+postseason/placement recaps, and one mini recap for each of 12 franchises.

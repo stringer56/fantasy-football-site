@@ -121,12 +121,12 @@ def main() -> None:
         errors.append("franchise archive must render exactly 1 retired franchise card")
     if retired_page.count('data-archive-kind="historical-identity"') != 1:
         errors.append("franchise archive must render exactly 1 historical identity card")
-    if history_page.count('class="season-archive-card"') != 4:
-        errors.append("history archive must render exactly 4 season cards")
+    if history_page.count('class="season-archive-card"') != 5:
+        errors.append("history archive must render exactly 5 season cards")
     if drafts_page.count('class="draft-season-card"') != 5:
         errors.append("draft archive must render exactly 5 draft cards")
-    if cup_page.count("<article>") != 4:
-        errors.append("Brew Crew Cup page must render exactly 4 champion entries")
+    if cup_page.count("<article>") != 5:
+        errors.append("Brew Crew Cup page must render exactly 5 champion entries")
     for expected in (
         "Road to Glory",
         "Record Book",
@@ -200,6 +200,20 @@ def main() -> None:
             errors.append(f"season page {route} is missing the narrative provenance label")
         if f"/drafts/{season['year']}/" not in rendered:
             errors.append(f"season page {route} does not link to its draft")
+        if "/cup/" not in rendered:
+            errors.append(f"season page {route} does not link to the Brew Crew Cup")
+        if season["year"] == 2025:
+            for expected in ("Complete", "Week-by-Week Archive", "Playoff Field", "Verified Yahoo results", "Albany Kneelers selected Ja’Marr Chase"):
+                if expected not in rendered:
+                    errors.append(f"season page {route} is missing 2025 content: {expected}")
+            if rendered.count('class="week-card"') != 16:
+                errors.append("2025 season page must render all 16 weekly accordions")
+            if rendered.count('class="week-matchup"') != 92:
+                errors.append("2025 season page must render all 92 verified matchups")
+            if rendered.count('class="playoff-field__grid"') != 1 or rendered.count("Seed #") < 6:
+                errors.append("2025 season page must render the six-team playoff field")
+            if rendered.count('class="team-recap-card"') != 12:
+                errors.append("2025 season page must render all 12 team mini-recaps")
     for draft in draft_data["drafts"]:
         route = f"/drafts/{draft['year']}/"
         rendered = route_target(route).read_text(encoding="utf-8")

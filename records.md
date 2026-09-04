@@ -74,7 +74,7 @@ description: Verified Road to Glory franchise, season, championship, and playoff
     {% for record in record_book.records.season_results.entries %}<article class="record-card"><p>{{ record.label }}</p><strong>{% if record.format == 'percentage' %}{{ record.holders[0].value | times: 100 | round: 1 }}%{% else %}{{ record.holders[0].value }}{% endif %}</strong><div>{% for holder in record.holders %}<span>{% if holder.path %}<a href="{{ holder.path | relative_url }}">{{ holder.historical_team_name }}</a>{% else %}{{ holder.historical_team_name }}{% endif %} · <a href="{{ holder.season_path | relative_url }}">{{ holder.year }}</a></span>{% endfor %}</div></article>{% endfor %}
     {% for record in record_book.records.season_points.entries %}<article class="record-card"><p>{{ record.label }}</p><strong>{{ record.holders[0].value }}</strong><div>{% for holder in record.holders %}<span>{% if holder.path %}<a href="{{ holder.path | relative_url }}">{{ holder.historical_team_name }}</a>{% else %}{{ holder.historical_team_name }}{% endif %} · <a href="{{ holder.season_path | relative_url }}">{{ holder.year }}</a></span>{% endfor %}</div></article>{% endfor %}
   </div>
-  <p class="record-source record-source--dark">Results: complete for 2021–2024 · Scoring: partial while the 2024 PF/PA source conflict remains under review</p>
+  <p class="record-source record-source--dark">Results: complete for 2021–2025 · Scoring: partial while the 2024 PF/PA source conflict remains under review</p>
 </div></section>
 
 <section class="shell-content records-section" id="playoff-records" aria-labelledby="playoff-heading">

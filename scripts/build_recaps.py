@@ -22,7 +22,13 @@ SOURCE_FILES = [
     "_data/generated/record_book.json",
     "_data/editorial/recaps.yml",
 ]
-ROUND_ORDER = {"Quarterfinal": 1, "Semifinal": 2, "Championship": 3}
+ROUND_ORDER = {
+    "Quarterfinal": 1,
+    "Semifinal": 2,
+    "Fifth Place Game": 3,
+    "Championship": 4,
+    "Third Place Game": 4,
+}
 
 
 def load_yaml(relative_path: str) -> dict[str, Any]:
@@ -112,6 +118,176 @@ def identity_index(franchises: list[dict[str, Any]]) -> dict[str, dict[str, Any]
             "identity_alt": (franchise.get("branding") or {}).get("identity_alt"),
         }
     return result
+
+
+def load_week_archive(season: dict[str, Any]) -> dict[str, Any] | None:
+    relative_path = season.get("weeks_data_path")
+    if not relative_path:
+        return None
+    payload = load_json(str(relative_path))
+    coverage = payload.get("coverage") or {}
+    expected = list(range(1, 17))
+    if payload.get("season") != season["year"] or coverage.get("complete") is not True:
+        raise ValueError(f"{relative_path}: complete season coverage is required")
+    if coverage.get("recovered_weeks") != expected:
+        raise ValueError(f"{relative_path}: expected verified weeks 1-16")
+    return payload
+
+
+def derive_weekly_archive(
+    season: dict[str, Any], playoff: dict[str, Any], identities: dict[str, dict[str, Any]]
+) -> dict[str, Any] | None:
+    payload = load_week_archive(season)
+    if payload is None:
+        return None
+
+    playoff_games: dict[tuple[int, frozenset[str]], dict[str, Any]] = {}
+    for game in playoff.get("games") or []:
+        if game.get("week") is None:
+            continue
+        playoff_games[(game["week"], frozenset((game["team_one_franchise_id"], game["team_two_franchise_id"])))] = game
+
+    team_games: dict[str, list[dict[str, Any]]] = {row["franchise_id"]: [] for row in season["standings"]}
+    week_summaries: list[dict[str, Any]] = []
+    all_games: list[dict[str, Any]] = []
+    all_scores: list[dict[str, Any]] = []
+
+    def side(raw: dict[str, Any]) -> dict[str, Any]:
+        identity = identities[raw["franchise_id"]]
+        return {
+            "franchise_id": raw["franchise_id"],
+            "name": raw["historical_team_name"],
+            "score": float(raw["score"]),
+            "path": identity["path"],
+        }
+
+    for week in payload["weeks"]:
+        normalized: list[dict[str, Any]] = []
+        for raw in week["matchups"]:
+            one = side(raw["team_a"])
+            two = side(raw["team_b"])
+            classification = playoff_games.get(
+                (week["week"], frozenset((one["franchise_id"], two["franchise_id"])))
+            )
+            game = {
+                "matchup_id": raw["matchup_id"],
+                "week": week["week"],
+                "team_one": one,
+                "team_two": two,
+                "winner_franchise_id": raw.get("winner_franchise_id"),
+                "winner_name": raw.get("winner_historical_name"),
+                "tie": raw.get("tie") is True,
+                "margin": float(raw["margin"]),
+                "combined_score": round(one["score"] + two["score"], 2),
+                "playoff_round": classification.get("round") if classification else None,
+                "bracket_type": classification.get("bracket_type") if classification else None,
+                "notable_labels": [],
+            }
+            normalized.append(game)
+            all_games.append(game)
+            all_scores.extend(
+                ({"week": week["week"], **one}, {"week": week["week"], **two})
+            )
+            for current, opponent in ((one, two), (two, one)):
+                result = "T" if game["tie"] else (
+                    "W" if game["winner_franchise_id"] == current["franchise_id"] else "L"
+                )
+                team_games[current["franchise_id"]].append({
+                    "week": week["week"],
+                    "score": current["score"],
+                    "opponent_franchise_id": opponent["franchise_id"],
+                    "opponent_name": opponent["name"],
+                    "opponent_score": opponent["score"],
+                    "margin": game["margin"],
+                    "result": result,
+                    "playoff_round": game["playoff_round"],
+                })
+
+        highest_score = max(max(game["team_one"]["score"], game["team_two"]["score"]) for game in normalized)
+        closest_margin = min(game["margin"] for game in normalized)
+        biggest_margin = max(game["margin"] for game in normalized)
+        for game in normalized:
+            if highest_score in (game["team_one"]["score"], game["team_two"]["score"]):
+                game["notable_labels"].append("Highest score of the week")
+            if game["margin"] == closest_margin:
+                game["notable_labels"].append("Closest matchup")
+            if game["margin"] == biggest_margin:
+                game["notable_labels"].append("Biggest margin")
+            if game["playoff_round"]:
+                game["notable_labels"].append(game["playoff_round"])
+        week_summaries.append({"week": week["week"], "matchups": normalized})
+
+    def score_label(item: dict[str, Any]) -> str:
+        return f"{item['name']} · {format_points(item['score'])} · Week {item['week']}"
+
+    highest_score = max(all_scores, key=lambda item: (item["score"], -item["week"]))
+    lowest_score = min(all_scores, key=lambda item: (item["score"], item["week"]))
+    biggest_game = max(all_games, key=lambda item: (item["margin"], -item["week"]))
+    closest_game = min(all_games, key=lambda item: (item["margin"], item["week"]))
+    combined_game = max(all_games, key=lambda item: (item["combined_score"], -item["week"]))
+
+    team_metrics: dict[str, dict[str, Any]] = {}
+    league_streaks: list[dict[str, Any]] = []
+    for franchise_id, games in team_games.items():
+        high = max(games, key=lambda item: (item["score"], -item["week"]))
+        wins = [item for item in games if item["result"] == "W"]
+        closest = min(games, key=lambda item: (item["margin"], item["week"]))
+        biggest = max(wins, key=lambda item: (item["margin"], -item["week"])) if wins else None
+        longest_win = longest_loss = current_win = current_loss = 0
+        for game in sorted((item for item in games if item["week"] <= 13), key=lambda item: item["week"]):
+            if game["result"] == "W":
+                current_win += 1
+                current_loss = 0
+            elif game["result"] == "L":
+                current_loss += 1
+                current_win = 0
+            else:
+                current_win = current_loss = 0
+            longest_win = max(longest_win, current_win)
+            longest_loss = max(longest_loss, current_loss)
+        name = next(row["team_name"] for row in season["standings"] if row["franchise_id"] == franchise_id)
+        league_streaks.append({"franchise_id": franchise_id, "name": name, "wins": longest_win})
+        team_metrics[franchise_id] = {
+            "highest_score": {"week": high["week"], "score": high["score"]},
+            "biggest_win": ({
+                "week": biggest["week"], "opponent_name": biggest["opponent_name"], "margin": biggest["margin"]
+            } if biggest else None),
+            "closest_game": {
+                "week": closest["week"], "opponent_name": closest["opponent_name"],
+                "margin": closest["margin"], "result": closest["result"],
+            },
+            "longest_regular_season_win_streak": longest_win,
+            "longest_regular_season_loss_streak": longest_loss,
+        }
+
+    best_streak = max(item["wins"] for item in league_streaks)
+    streak_holders = [item for item in league_streaks if item["wins"] == best_streak]
+
+    def matchup_label(game: dict[str, Any], value: float) -> str:
+        return (
+            f"{game['team_one']['name']} vs. {game['team_two']['name']} · "
+            f"{format_points(value)} · Week {game['week']}"
+        )
+
+    return {
+        "coverage_label": "Verified Weeks 1–16",
+        "week_count": len(week_summaries),
+        "matchup_count": len(all_games),
+        "weeks": week_summaries,
+        "team_metrics": team_metrics,
+        "season_metrics": {
+            "highest_weekly_score": {**highest_score, "display": score_label(highest_score)},
+            "lowest_weekly_score": {**lowest_score, "display": score_label(lowest_score)},
+            "biggest_victory": {**biggest_game, "display": matchup_label(biggest_game, biggest_game["margin"])},
+            "closest_game": {**closest_game, "display": matchup_label(closest_game, closest_game["margin"])},
+            "highest_combined_score": {**combined_game, "display": matchup_label(combined_game, combined_game["combined_score"])},
+            "longest_winning_streak": {
+                "games": best_streak,
+                "holders": streak_holders,
+                "display": f"{join_names(item['name'] for item in streak_holders)} · {best_streak} games",
+            },
+        },
+    }
 
 
 def generated_timestamp(champions: list[dict[str, Any]]) -> str:
@@ -207,6 +383,16 @@ def game_side_for_row(row: dict[str, Any], game: dict[str, Any]) -> str | None:
 def playoff_status(row: dict[str, Any], playoff: dict[str, Any]) -> tuple[str, dict[str, Any]]:
     games = [game for game in playoff.get("games") or [] if game_side_for_row(row, game)]
     name = row["team_name"]
+    finish = row.get("playoff_finish")
+    if finish is not None:
+        labels = {1: "won the Brew Crew Cup", 2: "finished as the Brew Crew Cup runner-up",
+                  3: "won the third-place game", 4: "finished fourth",
+                  5: "won the fifth-place game", 6: "finished sixth"}
+        return (
+            f"{name} reached the postseason and {labels[finish]}.",
+            {"fact_type": "playoff_status", "status": f"finished_{finish}",
+             "playoff_finish": finish, "games": [game["game_id"] for game in games]},
+        )
     if not games:
         return (
             f"The structured playoff bracket does not list {name} among the verified postseason participants.",
@@ -285,7 +471,7 @@ def record_reference(records: dict[str, Any], year: int) -> tuple[str | None, di
 
 def build_season_recap(
     season: dict[str, Any], champion: dict[str, Any], playoff: dict[str, Any], records: dict[str, Any],
-    generated_at: str, editorial: dict[str, Any]
+    generated_at: str, editorial: dict[str, Any], weekly: dict[str, Any] | None = None
 ) -> dict[str, Any]:
     year = season["year"]
     rows = season["standings"]
@@ -328,7 +514,40 @@ def build_season_recap(
     record_sentence, record_fact = record_reference(records, year)
     if record_sentence and record_fact:
         facts.append(record_fact)
-    paragraphs = [opening + " " + " ".join(details)]
+    paragraphs = [opening]
+    if weekly:
+        paragraphs.append(" ".join(details))
+        metrics = weekly["season_metrics"]
+        high = metrics["highest_weekly_score"]
+        low = metrics["lowest_weekly_score"]
+        biggest = metrics["biggest_victory"]
+        closest = metrics["closest_game"]
+        combined = metrics["highest_combined_score"]
+        streak = metrics["longest_winning_streak"]
+        paragraphs.append(
+            f"Across all 16 verified weeks, {high['name']} recorded the season's highest weekly score at "
+            f"{format_points(high['score'])} in Week {high['week']}, while {low['name']} posted the lowest at "
+            f"{format_points(low['score'])} in Week {low['week']}. The largest victory margin was "
+            f"{format_points(biggest['margin'])} points in Week {biggest['week']}, and the closest game was decided "
+            f"by {format_points(closest['margin'])} points in Week {closest['week']}."
+        )
+        paragraphs.append(
+            f"The highest combined score reached {format_points(combined['combined_score'])} in Week "
+            f"{combined['week']}. {join_names(item['name'] for item in streak['holders'])} produced the longest "
+            f"verified regular-season run at {streak['games']} consecutive wins. The six-team championship field "
+            "was seeded from the verified final standings, with Greendale Human Beings and Albany Kneelers earning "
+            "the two first-round byes."
+        )
+        facts.extend([
+            {"fact_type": "weekly_archive_coverage", "weeks": weekly["week_count"], "matchups": weekly["matchup_count"]},
+            {"fact_type": "highest_weekly_score", "franchise_id": high["franchise_id"], "week": high["week"], "value": high["score"]},
+            {"fact_type": "lowest_weekly_score", "franchise_id": low["franchise_id"], "week": low["week"], "value": low["score"]},
+            {"fact_type": "biggest_victory", "matchup_id": biggest["matchup_id"], "value": biggest["margin"]},
+            {"fact_type": "closest_game", "matchup_id": closest["matchup_id"], "value": closest["margin"]},
+            {"fact_type": "highest_combined_score", "matchup_id": combined["matchup_id"], "value": combined["combined_score"]},
+        ])
+    else:
+        paragraphs[0] += " " + " ".join(details)
     if record_sentence:
         paragraphs.append(record_sentence)
     summary = (
@@ -345,13 +564,15 @@ def build_season_recap(
         "headline": f"{champion['champion_display_name']} Takes the Cup",
         "summary": summary,
         "best_record_display": best_display or None,
+        "weekly_archive": weekly,
     }
     apply_override(entry, paragraphs, override_for(editorial, "season_recaps", season=year))
     return entry
 
 
 def build_by_the_numbers(
-    season: dict[str, Any], champion: dict[str, Any], generated_at: str
+    season: dict[str, Any], champion: dict[str, Any], generated_at: str,
+    weekly: dict[str, Any] | None = None
 ) -> list[dict[str, Any]]:
     year = season["year"]
     rows = season["standings"]
@@ -389,12 +610,29 @@ def build_by_the_numbers(
         point_cards.append(card("lowest_pf", "Lowest PF", f"{join_names(row['team_name'] for row in lowest_pf)} · {format_points(lowest_pf[0]['points_for'])}", [{"fact_type": "lowest_points_for", "team_names": [row["team_name"] for row in lowest_pf], "value": lowest_pf[0]["points_for"]}], coverage=point_coverage, warnings=point_warnings))
     insertion = 3 if best else 2
     cards[insertion:insertion] = point_cards
+    if weekly:
+        metrics = weekly["season_metrics"]
+        weekly_source = [str(season["weeks_data_path"])]
+
+        def weekly_card(stat_id: str, label: str, display: str, fact: dict[str, Any]) -> dict[str, Any]:
+            item = card(stat_id, label, display, [fact])
+            item["source_files"] = weekly_source
+            return item
+
+        cards.extend([
+            weekly_card("highest_weekly_score", "Highest Weekly Score", metrics["highest_weekly_score"]["display"], {"fact_type": "highest_weekly_score", "value": metrics["highest_weekly_score"]["score"]}),
+            weekly_card("lowest_weekly_score", "Lowest Weekly Score", metrics["lowest_weekly_score"]["display"], {"fact_type": "lowest_weekly_score", "value": metrics["lowest_weekly_score"]["score"]}),
+            weekly_card("biggest_victory", "Biggest Victory", metrics["biggest_victory"]["display"], {"fact_type": "biggest_victory", "value": metrics["biggest_victory"]["margin"]}),
+            weekly_card("closest_game", "Closest Game", metrics["closest_game"]["display"], {"fact_type": "closest_game", "value": metrics["closest_game"]["margin"]}),
+            weekly_card("highest_combined_score", "Highest Combined Score", metrics["highest_combined_score"]["display"], {"fact_type": "highest_combined_score", "value": metrics["highest_combined_score"]["combined_score"]}),
+            weekly_card("longest_winning_streak", "Longest Winning Streak", metrics["longest_winning_streak"]["display"], {"fact_type": "longest_regular_season_winning_streak", "value": metrics["longest_winning_streak"]["games"]}),
+        ])
     return cards
 
 
 def build_team_recap(
     season: dict[str, Any], row: dict[str, Any], playoff: dict[str, Any], identities: dict[str, dict[str, Any]],
-    generated_at: str, editorial: dict[str, Any]
+    generated_at: str, editorial: dict[str, Any], weekly: dict[str, Any] | None = None
 ) -> dict[str, Any]:
     year = season["year"]
     identity = identities.get(row.get("franchise_id"))
@@ -435,13 +673,39 @@ def build_team_recap(
     status_sentence, status_fact = playoff_status(row, playoff)
     sentences.append(status_sentence)
     facts.append(status_fact)
+    weekly_metrics = weekly["team_metrics"].get(row.get("franchise_id")) if weekly and row.get("franchise_id") else None
+    if weekly_metrics:
+        high = weekly_metrics["highest_score"]
+        biggest = weekly_metrics.get("biggest_win")
+        closest = weekly_metrics["closest_game"]
+        weekly_sentence = (
+            f"Its highest verified weekly score was {format_points(high['score'])} in Week {high['week']}. "
+        )
+        if biggest:
+            weekly_sentence += (
+                f"Its largest win came by {format_points(biggest['margin'])} points over "
+                f"{biggest['opponent_name']} in Week {biggest['week']}. "
+            )
+        weekly_sentence += (
+            f"Its closest game was a {format_points(closest['margin'])}-point decision against "
+            f"{closest['opponent_name']} in Week {closest['week']}; its longest regular-season runs were "
+            f"{weekly_metrics['longest_regular_season_win_streak']} consecutive wins and "
+            f"{weekly_metrics['longest_regular_season_loss_streak']} consecutive losses."
+        )
+        sentences.append(weekly_sentence)
+        facts.append({"fact_type": "verified_weekly_metrics", **weekly_metrics})
     if not identity:
         sentences.append(
             "This historical identity remains unresolved, so the season result is not assigned to a current or retired franchise profile."
         )
-    sentences.append(
-        "The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
-    )
+    if weekly_metrics:
+        sentences.append(
+            "The recap uses the verified final standings, classified playoff results, and complete 16-week matchup archive; no transaction or player-level detail is inferred."
+        )
+    else:
+        sentences.append(
+            "The recap uses only the verified final standings and structured playoff bracket; no weekly, transaction, or player-level detail is inferred."
+        )
     entry = {
         "recap_id": f"team-{year}-{row.get('franchise_id') or re.sub(r'[^a-z0-9]+', '-', row['team_name'].casefold()).strip('-')}",
         **provenance(year, generated_at, coverage, facts, warnings, SOURCE_FILES[:4]),
@@ -455,6 +719,7 @@ def build_team_recap(
         "path": identity["path"] if identity else None,
         "identity_image": identity["identity_image"] if identity else None,
         "identity_alt": identity["identity_alt"] if identity else None,
+        "weekly_metrics": weekly_metrics,
     }
     override = override_for(
         editorial,
@@ -504,7 +769,12 @@ def build_playoff_recap(
     }]
     warnings: list[str] = []
     if scores_available:
-        action = "to win the Brew Crew Cup" if game["round"] == "Championship" else f"in the {year} {game['round'].lower()}"
+        if game["round"] == "Championship":
+            action = "to win the Brew Crew Cup"
+        elif game["round"] in {"Third Place Game", "Fifth Place Game"}:
+            action = f"in the {year} {game['round'].lower()}"
+        else:
+            action = f"in the {year} {game['round'].lower()}"
         text = (
             f"{winner['name']} defeated {loser['name']} {format_points(winner['score'])}–"
             f"{format_points(loser['score'])} {action}."
@@ -543,7 +813,7 @@ def build_playoff_recap(
 def path_sentence(team_name: str, franchise_id: str, playoff: dict[str, Any]) -> tuple[str | None, list[str]]:
     wins: list[tuple[str, str, str]] = []
     for game in playoff.get("games") or []:
-        if game["round"] == "Championship" or game.get("winner_franchise_id") != franchise_id:
+        if game["round"] == "Championship" or game.get("bracket_type") == "placement" or game.get("winner_franchise_id") != franchise_id:
             continue
         one, two = game_participants(game)
         opponent = two if one["franchise_id"] == franchise_id else one
@@ -586,10 +856,11 @@ def build_championship_recap(
     )
     path_parts = [item for item in (champion_path, runner_path) if item]
     third = " ".join(path_parts)
+    archive_start = min(item["year"] for item in all_champions)
     fourth = (
         f"The victory marked championship No. {title_count} for {champion['champion_display_name']} within the verified "
-        "2021–2024 archive through that season. The available sources do not establish player-level or weekly events, "
-        "so this recap is limited to the standings, advancing teams, and final score."
+        f"{archive_start}–{year} archive through that season. The available sources do not establish player-level events, "
+        "so this recap is limited to verified standings, playoff results, and the final score."
     )
     paragraphs = [first + " " + second, " ".join(part for part in (third, fourth) if part)]
     facts = [
@@ -608,7 +879,7 @@ def build_championship_recap(
             "runner_up_record": format_record(runner_row),
         },
         {"fact_type": "verified_playoff_path", "champion_games": champion_games, "runner_up_games": runner_games},
-        {"fact_type": "verified_archive_title_count", "value": title_count, "source_years": [2021, 2022, 2023, 2024]},
+        {"fact_type": "verified_archive_title_count", "value": title_count, "source_years": list(range(archive_start, year + 1))},
     ]
     entry = {
         "recap_id": f"championship-{year}",
@@ -656,10 +927,13 @@ def generate(
         year = season["year"]
         playoff = playoffs[year]
         champion = champions[year]
-        season_recaps.append(build_season_recap(season, champion, playoff, records_data, generated_at, editorial_data))
-        by_the_numbers.extend(build_by_the_numbers(season, champion, generated_at))
+        weekly = derive_weekly_archive(season, playoff, identities)
+        season_recaps.append(build_season_recap(
+            season, champion, playoff, records_data, generated_at, editorial_data, weekly
+        ))
+        by_the_numbers.extend(build_by_the_numbers(season, champion, generated_at, weekly))
         team_recaps.extend(
-            build_team_recap(season, row, playoff, identities, generated_at, editorial_data)
+            build_team_recap(season, row, playoff, identities, generated_at, editorial_data, weekly)
             for row in season["standings"]
         )
         playoff_recaps.extend(
@@ -681,7 +955,7 @@ def generate(
             "override_priority": ["approved_editorial_override", "deterministic_generated", "unavailable"],
         },
         "coverage": {
-            "label": "Verified 2021–2024 archive",
+            "label": f"Verified {min(item['year'] for item in seasons)}–{max(item['year'] for item in seasons)} archive",
             "source_years": sorted(item["year"] for item in seasons),
             "source_files": SOURCE_FILES,
             "season_recaps": len(season_recaps),

@@ -1,5 +1,16 @@
 schema_version: 1
 champions:
+  - year: 2025
+    champion_franchise_id: greendale-human-beings
+    champion_display_name: Greendale Human Beings
+    runner_up_franchise_id: albany-kneelers
+    runner_up_display_name: Albany Kneelers
+    champion_score: 107.12
+    runner_up_score: 106.72
+    bracket_path: /history/2025/#bracket
+    season_path: /history/2025/
+    source_url: https://football.fantasysports.yahoo.com/2025/f1/103926
+    verified_on: 2026-08-31
   - year: 2024
     champion_franchise_id: turnbull-acs
     champion_display_name: Turnbull AC's

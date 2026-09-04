@@ -8,13 +8,13 @@ editorial narrative that remains unavailable.
 
 ## Migration status
 
-- Completed seasons represented: **4** (2021–2024)
-- Verified champions and runners-up: **4 of 4**
-- Final standings rows transcribed: **46**
-- Playoff games represented: **16**
+- Completed seasons represented: **5** (2021–2025)
+- Verified champions and runners-up: **5 of 5**
+- Final standings rows transcribed: **58**
+- Playoff games represented: **23**
 - Locally preserved history assets: **16**
-- Season routes: **4** (`/history/2021/` through `/history/2024/`)
-- Stable franchise joins resolved: **46 of 46 standings rows**
+- Season routes: **5** (`/history/2021/` through `/history/2025/`)
+- Stable franchise joins resolved: **58 of 58 standings rows**
 - Unique historical display names still unresolved: **0**
 
 The final rank in the Yahoo captures reflects the completed season, including
@@ -31,6 +31,7 @@ All four seasons use these public source hubs:
 
 | Season | Champion | Runner-up | Final | Standings | Playoff field | Source recap content |
 |---|---|---|---:|---:|---:|---|
+| 2025 | Greendale Human Beings | Albany Kneelers | 107.12–106.72 | 12 rows | 6 teams / 7 scored games | Complete Yahoo standings, Weeks 1–16, classified playoff results, and local franchise identity art; no player-level recap |
 | 2024 | Turnbull AC's | Chris's Crazy Team | 148.18–140.98 | 12 rows | 6 teams / 5 games | Champion artwork and Yahoo matchup capture; no written recap |
 | 2023 | Greendale Human Beings | Albany Kneelers | 132.82–132.74 | 12 rows | 6 teams / 5 games | Champion artwork and Yahoo matchup capture; no written recap |
 | 2022 | Ayahuasca Rush | Turnbull AC's | 115.20–69.16 | 12 rows | 4 teams / 3 games | Champion artwork and Yahoo matchup capture; no written recap |
@@ -44,7 +45,7 @@ they do not manufacture play-by-play or season stories.
 
 ## Local asset mapping
 
-Each season folder contains four source assets:
+Each 2021–2024 season folder contains four source assets:
 
 ```text
 assets/img/history/{year}/final-standings.jpg
@@ -57,6 +58,11 @@ The bracket and standings images are linked to their full-size local files. No
 Google-hosted image URL is required at render time. The championship files keep
 the source format; the 2022 champion artwork is PNG and the remaining source
 exports are JPEG.
+
+The 2025 page is deliberately data-driven because no commissioner-approved
+2025 standings, bracket, or championship image has been imported. Its bracket,
+scoreboard, and championship card render from verified structured results and
+reuse only the already approved local franchise identity art.
 
 ## Stable franchise mapping
 
@@ -110,11 +116,12 @@ is not counted as a separate franchise.
    finalists. The structured games preserve those advancing identities and add
    a source-conflict note; commissioner confirmation of lane ordering remains
    welcome.
-3. The bracket graphics do not publish quarterfinal or semifinal scores. Those
+3. The 2021–2024 bracket graphics do not publish quarterfinal or semifinal scores. Those
    values are `null`, never zero. Only championship scores visible in the public
-   matchup captures are structured.
-4. No third-place or consolation game result is shown. Final standings include
-   third-place finishers, but no unshown game is created.
+   matchup captures are structured. The separately verified 2025 bracket contains
+   all seven scores.
+4. No 2021–2024 third-place or consolation game result is shown. The 2025 third-
+   and fifth-place games are included and explicitly classified as placement games.
 5. The source does not provide written overall-season, playoff-game,
    championship, or team mini-recaps. Milestone 9 now derives conservative
    narrative from the verified structured results; it does not present those
@@ -137,7 +144,9 @@ player-history model in this milestone.
 - `_data/champions.yml` owns one canonical championship result per year.
 - `_data/playoffs.yml` owns rounds, games, seeds, scores, winners, and source notes.
 - `_seasons/{year}.md` provides stable collection routes.
-- `_layouts/season.html` renders every season from those canonical records.
+- `_layouts/season.html` renders every season from those canonical records and
+  adds the complete weekly archive only when a season supplies a verified
+  `weeks_data_path`.
 - `history.md` is the newest-first season archive.
 - `cup.md` reads the same championship source of truth.
 

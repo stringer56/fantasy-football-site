@@ -5,6 +5,8 @@
   --navy-800: #0d223d;
   --navy-700: #173654;
   --gold-500: #d8aa3d;
+  --gold-600: #a8791f;
+  --gold-700: #76520f;
   --gold-400: #ebc45f;
   --gold-300: #f2d783;
   --cream-100: #fbf8f1;
@@ -408,7 +410,11 @@ a:hover { color: var(--navy-900); }
 .season-hero__grid { display: grid; min-height: 42rem; align-items: center; gap: clamp(2rem, 7vw, 7rem); grid-template-columns: minmax(0, 1.15fr) minmax(18rem, .65fr); padding-block: clamp(4rem, 8vw, 7rem); }
 .season-hero__year { margin: 0 0 var(--space-3); color: var(--gold-300); font-family: var(--font-display); font-size: clamp(3rem, 7vw, 6rem); line-height: .8; }
 .season-hero h1 { max-width: 52rem; margin: 0; font-family: var(--font-display); font-size: clamp(3.5rem, 8vw, 7.5rem); line-height: .86; text-transform: uppercase; }
+.season-hero h1 a { color: inherit; text-decoration: none; }
+.season-hero__meta { display: flex; align-items: center; gap: var(--space-4); }
+.season-status { display: inline-flex; align-items: center; min-height: 1.8rem; padding: .25rem .65rem; border: 1px solid rgba(235, 196, 95, .55); border-radius: 999px; background: rgba(235, 196, 95, .12); color: var(--gold-300); font-size: .65rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
 .season-hero__lede { max-width: 42rem; margin: var(--space-5) 0 0; color: var(--slate-200); font-size: clamp(1rem, 1.6vw, 1.2rem); }
+.season-hero__lede a { color: var(--gold-300); font-weight: 850; }
 .season-hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
 .season-hero__identity { position: relative; overflow: hidden; width: min(100%, 32rem); aspect-ratio: 1; justify-self: end; margin: 0; border: 1px solid rgba(235, 196, 95, .55); background: var(--white); box-shadow: var(--shadow-dark); }
 .season-hero__identity img { width: 100%; height: 100%; object-fit: cover; }
@@ -454,6 +460,29 @@ a:hover { color: var(--navy-900); }
 .bracket-frame { display: block; overflow: hidden; border: 1px solid var(--slate-300); background: var(--white); box-shadow: var(--shadow-md); }
 .bracket-frame img { display: block; width: 100%; height: auto; transition: transform .25s ease; }
 .bracket-frame:hover img { transform: scale(1.01); }
+.data-bracket-scroll { overflow-x: auto; padding: var(--space-4); border: 1px solid var(--slate-300); background: linear-gradient(135deg, var(--slate-100), var(--white)); box-shadow: var(--shadow-md); }
+.data-bracket { display: grid; min-width: 58rem; align-items: center; gap: var(--space-5); grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.data-bracket__round { display: grid; align-content: center; gap: var(--space-3); }
+.data-bracket__round h3 { margin: 0 0 var(--space-2); color: var(--navy-800); font-family: var(--font-display); font-size: 1.35rem; letter-spacing: .03em; text-transform: uppercase; }
+.bracket-game, .bracket-bye { position: relative; padding: var(--space-3); border: 1px solid var(--slate-300); border-left: 3px solid var(--gold-500); background: var(--white); box-shadow: var(--shadow-sm); }
+.bracket-game--final { border-color: var(--gold-500); background: linear-gradient(140deg, rgba(235, 196, 95, .18), var(--white)); }
+.bracket-game > span, .bracket-bye > span, .bracket-bye > small { color: var(--slate-600); font-size: .62rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.bracket-game > div { display: grid; align-items: center; gap: var(--space-2); padding: .65rem 0; border-top: 1px solid var(--slate-200); grid-template-columns: minmax(0, 1fr) auto; }
+.bracket-game > div:first-of-type { margin-top: var(--space-2); }
+.bracket-game a { overflow-wrap: anywhere; color: var(--navy-800); font-size: .76rem; font-weight: 800; }
+.bracket-game strong { color: var(--slate-600); font-variant-numeric: tabular-nums; }
+.bracket-game .is-winner strong { color: var(--gold-700); }
+.bracket-game em, .playoff-result__team em, .week-matchup__team em { grid-column: 1 / -1; color: var(--gold-700); font-size: .58rem; font-style: normal; font-weight: 900; letter-spacing: .09em; text-transform: uppercase; }
+.bracket-bye { display: grid; gap: .2rem; }
+.bracket-bye strong { color: var(--navy-900); }
+.playoff-field { margin-top: var(--space-7); }
+.playoff-field h3 { margin: 0; color: var(--navy-900); font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); text-transform: uppercase; }
+.playoff-field__grid { display: grid; gap: var(--space-3); margin-top: var(--space-4); grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.playoff-field__grid article { min-width: 0; padding: var(--space-4); border-top: 3px solid var(--gold-500); background: var(--slate-100); }
+.playoff-field__grid span { color: var(--slate-600); font-size: .62rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.playoff-field__grid h4 { margin: var(--space-2) 0; }
+.playoff-field__grid h4 a { color: var(--navy-900); }
+.playoff-field__grid strong { color: var(--gold-700); font-size: .72rem; text-transform: uppercase; }
 .playoff-results { display: grid; gap: var(--space-4); grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .playoff-result { padding: var(--space-4); border: 1px solid rgba(255, 255, 255, .15); background: var(--navy-850); }
 .playoff-result--final { border-color: var(--gold-500); background: linear-gradient(140deg, rgba(235, 196, 95, .12), var(--navy-850)); }
@@ -463,6 +492,8 @@ a:hover { color: var(--navy-900); }
 .playoff-result__team small { color: var(--slate-500); font-weight: 900; }
 .playoff-result__team.is-winner { color: var(--white); font-weight: 850; }
 .playoff-result__team.is-winner strong { color: var(--gold-300); }
+.playoff-result__team a { color: inherit; }
+.playoff-result__team em { color: var(--gold-300); }
 .playoff-result > p { margin: var(--space-3) 0 0; color: var(--slate-500); font-size: .68rem; }
 .playoff-narratives { margin-top: clamp(3rem, 6vw, 5rem); padding-top: var(--space-6); border-top: 1px solid rgba(255, 255, 255, .14); }
 .playoff-narratives > div:first-child h3 { margin: 0 0 var(--space-5); color: var(--white); font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.5rem); text-transform: uppercase; }
@@ -478,6 +509,35 @@ a:hover { color: var(--navy-900); }
 .championship-feature__media a { display: block; overflow: hidden; min-height: 28rem; border: 1px solid var(--slate-300); background: var(--slate-100); box-shadow: var(--shadow-sm); }
 .championship-feature__media img { width: 100%; height: 100%; object-fit: cover; }
 .championship-feature__media a:last-child img { object-fit: contain; background: var(--white); }
+.championship-scorecard { display: grid; overflow: hidden; border: 1px solid var(--slate-300); background: var(--navy-900); grid-template-columns: repeat(2, minmax(0, 1fr)); box-shadow: var(--shadow-md); }
+.championship-scorecard > div { display: grid; min-width: 0; align-content: start; gap: var(--space-2); padding: var(--space-4); color: var(--white); }
+.championship-scorecard > div + div { border-left: 1px solid rgba(255, 255, 255, .16); }
+.championship-scorecard img { width: 100%; aspect-ratio: 1; margin-bottom: var(--space-2); background: var(--white); object-fit: cover; }
+.championship-scorecard span { color: var(--gold-300); font-size: .62rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.championship-scorecard strong { overflow-wrap: anywhere; font-size: .92rem; }
+.championship-scorecard b { color: var(--gold-300); font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4.5rem); font-variant-numeric: tabular-nums; }
+.week-archive { display: grid; gap: var(--space-3); }
+.week-card { overflow: hidden; border: 1px solid var(--slate-300); background: var(--white); box-shadow: var(--shadow-sm); }
+.week-card summary { display: flex; min-height: 4.25rem; cursor: pointer; align-items: center; justify-content: space-between; gap: var(--space-4); padding: var(--space-4); color: var(--navy-900); }
+.week-card summary span { font-family: var(--font-display); font-size: 1.45rem; text-transform: uppercase; }
+.week-card summary strong { color: var(--slate-600); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
+.week-card[open] summary { background: var(--navy-900); color: var(--white); }
+.week-card[open] summary strong { color: var(--gold-300); }
+.week-card__games { display: grid; gap: 1px; background: var(--slate-200); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.week-matchup { min-width: 0; padding: var(--space-4); background: var(--white); }
+.week-matchup__meta { display: flex; justify-content: space-between; gap: var(--space-3); margin-bottom: var(--space-2); color: var(--slate-600); font-size: .6rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+.week-matchup__team { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding: .65rem 0; border-top: 1px solid var(--slate-200); }
+.week-matchup__team a { overflow-wrap: anywhere; color: var(--slate-600); font-size: .78rem; }
+.week-matchup__team > span { display: flex; align-items: center; gap: var(--space-2); }
+.week-matchup__team.is-winner a, .week-matchup__team.is-winner strong { color: var(--navy-900); font-weight: 900; }
+.week-matchup__team em { color: var(--gold-700); }
+.week-matchup__notes { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: var(--space-3) 0 0; padding: 0; list-style: none; }
+.week-matchup__notes li { padding: .2rem .45rem; border: 1px solid var(--gold-400); border-radius: 999px; color: var(--gold-700); font-size: .56rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+.season-draft-link { display: grid; align-items: center; gap: clamp(2rem, 6vw, 5rem); grid-template-columns: minmax(0, 1fr) minmax(18rem, .75fr); }
+.season-draft-link h2 { margin: 0; color: var(--navy-900); font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4.5rem); text-transform: uppercase; }
+.season-draft-link p { max-width: 48rem; color: var(--slate-600); line-height: 1.75; }
+.season-draft-link__image { display: block; overflow: hidden; max-height: 28rem; border: 1px solid var(--slate-300); background: var(--navy-900); box-shadow: var(--shadow-md); }
+.season-draft-link__image img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: left top; }
 .team-recap-grid { display: grid; gap: var(--space-4); grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .team-recap-card { display: flex; min-width: 0; flex-direction: column; padding: var(--space-5); border-top: 3px solid var(--gold-500); background: var(--white); box-shadow: var(--shadow-sm); }
 .team-recap-card__header { display: flex; min-width: 0; align-items: center; gap: var(--space-3); }
@@ -817,6 +877,7 @@ a:hover { color: var(--navy-900); }
   .season-archive-grid { grid-template-columns: 1fr; }
   .playoff-results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .championship-feature { grid-template-columns: 1fr; }
+  .season-draft-link { grid-template-columns: 1fr; }
   .draft-archive-grid { grid-template-columns: 1fr; }
   .draft-hero__grid { gap: var(--space-6); grid-template-columns: minmax(0, 1fr) minmax(18rem, .8fr); }
   .draft-recap { align-items: start; grid-template-columns: minmax(15rem, .7fr) minmax(0, 1.3fr); }
@@ -889,6 +950,8 @@ a:hover { color: var(--navy-900); }
   .retired-card__image { min-height: 22rem; }
   .history-intro { align-items: start; flex-direction: column; }
   .championship-feature__media { grid-template-columns: 1fr 1.6fr; }
+  .playoff-field__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .week-card__games { grid-template-columns: 1fr; }
   .draft-recap, .draft-notes-grid { grid-template-columns: 1fr; }
   .draft-recap > .text-link { grid-column: auto; }
   .records-hero__actions { align-items: start; flex-direction: column; }
@@ -932,6 +995,10 @@ a:hover { color: var(--navy-900); }
   .season-archive-card { grid-template-columns: 1fr; }
   .season-archive-card__image { min-height: auto; aspect-ratio: 1.25; }
   .season-number-grid, .playoff-results, .playoff-recap-grid, .team-recap-grid { grid-template-columns: 1fr; }
+  .playoff-field__grid { grid-template-columns: 1fr; }
+  .week-card summary { align-items: flex-start; flex-direction: column; gap: var(--space-1); }
+  .championship-scorecard { grid-template-columns: 1fr; }
+  .championship-scorecard > div + div { border-top: 1px solid rgba(255, 255, 255, .16); border-left: 0; }
   .championship-feature__media { grid-template-columns: 1fr; }
   .championship-feature__media a { min-height: auto; }
   .championship-feature__media img { height: auto; }

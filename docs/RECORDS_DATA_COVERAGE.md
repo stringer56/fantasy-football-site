@@ -10,9 +10,9 @@ as all-time.
   margins, streaks, and classified playoff-game metrics use this window. The
   2021 season is excluded because no weekly scoreboard archive was recovered.
 
-The canonical four season pages remain the verified 2021–2024 presentation
-archive. The broader deterministic outputs live in `_data/generated/records/`
-and retain their own source lists and coverage labels.
+The canonical five season pages now cover 2021–2025. The 2025 page adds the
+complete verified weekly archive; the broader deterministic outputs live in
+`_data/generated/records/` and retain their own source lists and coverage labels.
 
 ## Coverage matrix
 

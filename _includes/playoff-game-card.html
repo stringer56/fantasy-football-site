@@ -1,0 +1,9 @@
+{% assign one = site.data.franchises.franchises | where: "franchise_id", include.game.team_one_franchise_id | first %}
+{% assign two = site.data.franchises.franchises | where: "franchise_id", include.game.team_two_franchise_id | first %}
+{% assign one_root = '/teams/' %}{% if one.status == 'retired' %}{% assign one_root = '/retired/' %}{% endif %}
+{% assign two_root = '/teams/' %}{% if two.status == 'retired' %}{% assign two_root = '/retired/' %}{% endif %}
+<article class="bracket-game{% if include.game.round == 'Championship' %} bracket-game--final{% endif %}">
+  <span>Week {{ include.game.week }}</span>
+  <div class="{% if include.game.winner_franchise_id == include.game.team_one_franchise_id %}is-winner{% endif %}"><a href="{{ one_root | append: one.slug | append: '/' | relative_url }}">#{{ include.game.team_one_seed }} {{ include.game.team_one_display_name }}</a><strong>{{ include.game.team_one_score }}</strong>{% if include.game.winner_franchise_id == include.game.team_one_franchise_id %}<em>Winner</em>{% endif %}</div>
+  <div class="{% if include.game.winner_franchise_id == include.game.team_two_franchise_id %}is-winner{% endif %}"><a href="{{ two_root | append: two.slug | append: '/' | relative_url }}">#{{ include.game.team_two_seed }} {{ include.game.team_two_display_name }}</a><strong>{{ include.game.team_two_score }}</strong>{% if include.game.winner_franchise_id == include.game.team_two_franchise_id %}<em>Winner</em>{% endif %}</div>
+</article>

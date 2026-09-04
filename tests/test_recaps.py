@@ -34,11 +34,32 @@ class RecapGenerationTests(unittest.TestCase):
         }
 
     def test_expected_recap_counts(self) -> None:
-        self.assertEqual(len(self.payload["seasons"]), 4)
-        self.assertEqual(len(self.payload["team_recaps"]), 46)
-        self.assertEqual(len(self.payload["playoff_recaps"]), 16)
-        self.assertEqual(len(self.payload["championship_recaps"]), 4)
-        self.assertEqual(len(self.payload["by_the_numbers"]), 36)
+        self.assertEqual(len(self.payload["seasons"]), 5)
+        self.assertEqual(len(self.payload["team_recaps"]), 58)
+        self.assertEqual(len(self.payload["playoff_recaps"]), 23)
+        self.assertEqual(len(self.payload["championship_recaps"]), 5)
+        self.assertEqual(len(self.payload["by_the_numbers"]), 51)
+
+    def test_2025_complete_weekly_archive_and_narrative(self) -> None:
+        recap = self.season_recap(2025)
+        weekly = recap["weekly_archive"]
+        self.assertEqual(weekly["week_count"], 16)
+        self.assertEqual(weekly["matchup_count"], 92)
+        self.assertEqual([item["week"] for item in weekly["weeks"]], list(range(1, 17)))
+        self.assertGreaterEqual(len(recap["paragraphs"]), 3)
+        self.assertLessEqual(len(recap["paragraphs"]), 6)
+
+    def test_2025_verified_weekly_metrics(self) -> None:
+        metrics = self.season_recap(2025)["weekly_archive"]["season_metrics"]
+        self.assertEqual((metrics["highest_weekly_score"]["name"], metrics["highest_weekly_score"]["score"]), ("Greendale Human Beings", 178.02))
+        self.assertEqual(metrics["biggest_victory"]["margin"], 92.24)
+        self.assertEqual(metrics["closest_game"]["margin"], 0.20)
+        self.assertEqual(metrics["highest_combined_score"]["combined_score"], 307.78)
+
+    def test_all_2025_franchises_have_weekly_mini_recap_metrics(self) -> None:
+        recaps = [item for item in self.payload["team_recaps"] if item["season"] == 2025]
+        self.assertEqual(len(recaps), 12)
+        self.assertTrue(all(item["weekly_metrics"] for item in recaps))
 
     def test_season_champion_and_runner_up_are_correct(self) -> None:
         recap = self.season_recap(2024)
@@ -53,7 +74,7 @@ class RecapGenerationTests(unittest.TestCase):
         self.assertEqual(record["record_id"], "highest_points_for")
         self.assertEqual(record["value"], 1935.92)
         self.assertEqual(record["coverage_status"], "partial")
-        self.assertIn("highest verified total in the 2021–2024 archive", recap["generated_text"])
+        self.assertIn("highest verified total in the 2021–2025 archive", recap["generated_text"])
         self.assertIn("category remains partial", recap["generated_text"])
 
     def test_team_record_is_inserted_exactly(self) -> None:
@@ -138,7 +159,7 @@ class RecapGenerationTests(unittest.TestCase):
         self.assertIn("The 2024 Road to Glory season ended", recap["generated_text"])
         self.assertIn("_data/editorial/recaps.yml", recap["source_files"])
 
-    def test_no_unsupported_streak_margin_or_bench_claim(self) -> None:
+    def test_no_unsupported_player_or_editorial_claim(self) -> None:
         prose = " ".join(
             entry["generated_text"]
             for key in ("seasons", "team_recaps", "playoff_recaps", "championship_recaps")
@@ -146,9 +167,10 @@ class RecapGenerationTests(unittest.TestCase):
         ).casefold()
         self.assertNotIn("winning streak", prose)
         self.assertNotIn("losing streak", prose)
-        self.assertNotIn("victory margin", prose)
         self.assertNotIn("biggest blowout", prose)
         self.assertNotIn("bench blunder", prose)
+        self.assertNotIn("injury", prose)
+        self.assertNotIn("manager strategy", prose)
 
     def test_no_external_ai_or_runtime_api_is_required(self) -> None:
         self.assertEqual(self.payload["engine"]["type"], "deterministic_template_rules")

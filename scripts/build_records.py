@@ -223,6 +223,8 @@ def build_playoff_results(
         year = playoff["season"]
         season_participants: set[str] = set()
         for game in playoff.get("games") or []:
+            if game.get("bracket_type") == "placement":
+                continue
             winner_id = game.get("winner_franchise_id")
             for side in ("team_one", "team_two"):
                 franchise_id = game.get(f"{side}_franchise_id")

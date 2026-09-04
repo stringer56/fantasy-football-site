@@ -313,11 +313,27 @@ def build_streaks(games: list[dict[str, Any]], identities: dict[str, dict[str, A
 
 
 def championship_facts() -> list[dict[str, Any]]:
-    facts = [{"season": item["year"], "champion_franchise_id": item["champion_franchise_id"], "runner_up_franchise_id": item["runner_up_franchise_id"]} for item in load_yaml(ROOT / "_data" / "champions.yml")["champions"]]
-    placements = load_json(ROOT / "_data" / "generated" / "history" / "2025" / "playoffs.json")["final_placements"]
-    by_place = {item["place"]: item for item in placements}
-    facts.append({"season": 2025, "champion_franchise_id": by_place[1]["franchise_id"], "runner_up_franchise_id": by_place[2]["franchise_id"]})
-    return sorted(facts, key=lambda item: item["season"])
+    facts_by_season = {
+        item["year"]: {
+            "season": item["year"],
+            "champion_franchise_id": item["champion_franchise_id"],
+            "runner_up_franchise_id": item["runner_up_franchise_id"],
+        }
+        for item in load_yaml(ROOT / "_data" / "champions.yml")["champions"]
+    }
+
+    # The generated playoff archive remains a fallback while a season is being
+    # backfilled. Once that season has a canonical champions.yml entry, do not
+    # count the same championship a second time.
+    if 2025 not in facts_by_season:
+        placements = load_json(ROOT / "_data" / "generated" / "history" / "2025" / "playoffs.json")["final_placements"]
+        by_place = {item["place"]: item for item in placements}
+        facts_by_season[2025] = {
+            "season": 2025,
+            "champion_franchise_id": by_place[1]["franchise_id"],
+            "runner_up_franchise_id": by_place[2]["franchise_id"],
+        }
+    return [facts_by_season[season] for season in sorted(facts_by_season)]
 
 
 def build_playoff_metrics(games: list[dict[str, Any]], identities: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:

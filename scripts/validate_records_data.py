@@ -52,8 +52,8 @@ def main() -> None:
     if payload.get("schema_version") != 1:
         errors.append("schema_version must be 1")
     coverage = payload.get("coverage")
-    if not isinstance(coverage, dict) or coverage.get("source_years") != [2021, 2022, 2023, 2024]:
-        errors.append("coverage must identify the verified 2021-2024 source period")
+    if not isinstance(coverage, dict) or coverage.get("source_years") != [2021, 2022, 2023, 2024, 2025]:
+        errors.append("coverage must identify the verified 2021-2025 source period")
 
     published: list[dict[str, Any]] = []
     leaderboards = payload.get("leaderboards")

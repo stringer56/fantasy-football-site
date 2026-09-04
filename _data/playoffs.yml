@@ -1,5 +1,26 @@
 schema_version: 1
 playoffs:
+  - season: 2025
+    bracket_path: /history/2025/#bracket
+    bracket_mode: data_driven
+    byes:
+      - {week: 14, seed: 1, franchise_id: greendale-human-beings, display_name: Greendale Human Beings}
+      - {week: 14, seed: 2, franchise_id: albany-kneelers, display_name: Albany Kneelers}
+    playoff_field:
+      - {seed: 1, franchise_id: greendale-human-beings, display_name: Greendale Human Beings, wins: 10, losses: 3, ties: 0, result: Champion}
+      - {seed: 2, franchise_id: albany-kneelers, display_name: Albany Kneelers, wins: 8, losses: 5, ties: 0, result: Runner-up}
+      - {seed: 3, franchise_id: ayahuasca-rush, display_name: Ayahuasca Rush, wins: 8, losses: 5, ties: 0, result: Third place}
+      - {seed: 4, franchise_id: new-jersey-giants, display_name: New Jersey Giants, wins: 7, losses: 6, ties: 0, result: Fourth place}
+      - {seed: 5, franchise_id: van-cortlant-rangers, display_name: Van Cortlant Rangers, wins: 7, losses: 6, ties: 0, result: Fifth place}
+      - {seed: 6, franchise_id: maine-moose, display_name: Maine Moose, wins: 7, losses: 6, ties: 0, result: Sixth place}
+    games:
+      - {game_id: 2025-w14-quarterfinal-1, week: 14, round: Quarterfinal, bracket_type: championship, order: 1, team_one_seed: 4, team_one_franchise_id: van-cortlant-rangers, team_one_display_name: Van Cortlant Rangers, team_one_score: 113.44, team_two_seed: 5, team_two_franchise_id: new-jersey-giants, team_two_display_name: New Jersey Giants, team_two_score: 125.96, winner_franchise_id: new-jersey-giants, winner_display_name: New Jersey Giants, notes: Verified from the commissioner-supplied Yahoo playoff archive.}
+      - {game_id: 2025-w14-quarterfinal-2, week: 14, round: Quarterfinal, bracket_type: championship, order: 2, team_one_seed: 3, team_one_franchise_id: ayahuasca-rush, team_one_display_name: Ayahuasca Rush, team_one_score: 75.26, team_two_seed: 6, team_two_franchise_id: maine-moose, team_two_display_name: Maine Moose, team_two_score: 51.92, winner_franchise_id: ayahuasca-rush, winner_display_name: Ayahuasca Rush, notes: Verified from the commissioner-supplied Yahoo playoff archive.}
+      - {game_id: 2025-w15-semifinal-1, week: 15, round: Semifinal, bracket_type: championship, order: 3, team_one_seed: 1, team_one_franchise_id: greendale-human-beings, team_one_display_name: Greendale Human Beings, team_one_score: 159.06, team_two_seed: 5, team_two_franchise_id: new-jersey-giants, team_two_display_name: New Jersey Giants, team_two_score: 134.52, winner_franchise_id: greendale-human-beings, winner_display_name: Greendale Human Beings, notes: Verified from the commissioner-supplied Yahoo playoff archive.}
+      - {game_id: 2025-w15-semifinal-2, week: 15, round: Semifinal, bracket_type: championship, order: 4, team_one_seed: 2, team_one_franchise_id: albany-kneelers, team_one_display_name: Albany Kneelers, team_one_score: 159.92, team_two_seed: 3, team_two_franchise_id: ayahuasca-rush, team_two_display_name: Ayahuasca Rush, team_two_score: 86.84, winner_franchise_id: albany-kneelers, winner_display_name: Albany Kneelers, notes: Verified from the commissioner-supplied Yahoo playoff archive.}
+      - {game_id: 2025-w15-fifth-place, week: 15, round: Fifth Place Game, bracket_type: placement, order: 5, team_one_seed: 4, team_one_franchise_id: van-cortlant-rangers, team_one_display_name: Van Cortlant Rangers, team_one_score: 136.26, team_two_seed: 6, team_two_franchise_id: maine-moose, team_two_display_name: Maine Moose, team_two_score: 110.20, winner_franchise_id: van-cortlant-rangers, winner_display_name: Van Cortlant Rangers, notes: Placement game verified from the commissioner-supplied Yahoo playoff archive.}
+      - {game_id: 2025-w16-final, week: 16, round: Championship, bracket_type: championship, order: 6, team_one_seed: 1, team_one_franchise_id: greendale-human-beings, team_one_display_name: Greendale Human Beings, team_one_score: 107.12, team_two_seed: 2, team_two_franchise_id: albany-kneelers, team_two_display_name: Albany Kneelers, team_two_score: 106.72, winner_franchise_id: greendale-human-beings, winner_display_name: Greendale Human Beings, notes: Championship score verified from the commissioner-supplied Yahoo playoff archive.}
+      - {game_id: 2025-w16-third-place, week: 16, round: Third Place Game, bracket_type: placement, order: 7, team_one_seed: 3, team_one_franchise_id: ayahuasca-rush, team_one_display_name: Ayahuasca Rush, team_one_score: 144.58, team_two_seed: 5, team_two_franchise_id: new-jersey-giants, team_two_display_name: New Jersey Giants, team_two_score: 103.26, winner_franchise_id: ayahuasca-rush, winner_display_name: Ayahuasca Rush, notes: Placement game verified from the commissioner-supplied Yahoo playoff archive.}
   - season: 2024
     bracket_path: /assets/img/history/2024/playoff-bracket.jpg
     games:

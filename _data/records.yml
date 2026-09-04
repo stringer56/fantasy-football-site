@@ -1,14 +1,14 @@
 schema_version: 1
 archive:
-  label: Verified 2021–2024 archive
-  source_years: [2021, 2022, 2023, 2024]
+  label: Verified 2021–2025 archive
+  source_years: [2021, 2022, 2023, 2024, 2025]
   source_files:
     - _data/seasons.yml
     - _data/champions.yml
     - _data/playoffs.yml
     - _data/franchises.yml
-  unresolved_standings_rows: 5
-  unresolved_playoff_participants: 1
+  unresolved_standings_rows: 0
+  unresolved_playoff_participants: 0
   notes:
     - Career totals include only standings rows with a verified franchise mapping.
     - The 2024 final standings table is used for PF and PA, while the conflicting champions-page labels remain unresolved.
@@ -18,13 +18,13 @@ categories:
     domain: career
     output_type: leaderboard
     label: Franchise Career Totals
-    coverage_status: partial
+    coverage_status: complete
     public_calculation_allowed: true
     source_type: verified_final_standings
-    source_years: [2021, 2022, 2023, 2024]
+    source_years: [2021, 2022, 2023, 2024, 2025]
     source_files: [_data/seasons.yml, _data/franchises.yml]
     notes:
-      - Five standings rows with unresolved identities are excluded from franchise totals.
+      - All 58 standings rows resolve to canonical franchise identities.
       - PF and PA include the 2024 standings-table values; a conflicting champions-page label remains under review.
 
   - category_id: season_wins
@@ -34,7 +34,7 @@ categories:
     coverage_status: complete
     public_calculation_allowed: true
     source_type: verified_final_standings
-    source_years: [2021, 2022, 2023, 2024]
+    source_years: [2021, 2022, 2023, 2024, 2025]
     source_files: [_data/seasons.yml]
     notes:
       - Every published standings row contains wins, losses, ties, and a calculable winning percentage.
@@ -46,7 +46,7 @@ categories:
     coverage_status: partial
     public_calculation_allowed: true
     source_type: verified_final_standings
-    source_years: [2021, 2022, 2023, 2024]
+    source_years: [2021, 2022, 2023, 2024, 2025]
     source_files: [_data/seasons.yml, docs/HISTORY_MIGRATION.md]
     notes:
       - The 2024 final standings table supplies PF and PA; the champions page reverses those labels for Turnbull AC's.
@@ -58,10 +58,10 @@ categories:
     coverage_status: complete
     public_calculation_allowed: true
     source_type: verified_championship_results
-    source_years: [2021, 2022, 2023, 2024]
+    source_years: [2021, 2022, 2023, 2024, 2025]
     source_files: [_data/champions.yml]
     notes:
-      - All four champions are mapped to canonical franchises.
+      - All five championship results are mapped to canonical franchises.
 
   - category_id: finals_appearances
     domain: playoffs
@@ -70,10 +70,10 @@ categories:
     coverage_status: complete
     public_calculation_allowed: true
     source_type: verified_championship_results
-    source_years: [2021, 2022, 2023, 2024]
+    source_years: [2021, 2022, 2023, 2024, 2025]
     source_files: [_data/champions.yml]
     notes:
-      - All eight finalist slots are mapped to canonical franchises.
+      - All ten finalist slots are mapped to canonical franchises.
 
   - category_id: playoff_results
     domain: playoffs
@@ -82,11 +82,11 @@ categories:
     coverage_status: partial
     public_calculation_allowed: true
     source_type: verified_playoff_brackets
-    source_years: [2021, 2022, 2023, 2024]
+    source_years: [2021, 2022, 2023, 2024, 2025]
     source_files: [_data/playoffs.yml, _data/franchises.yml]
     notes:
       - Wins and losses are counted from verified advancing teams even when scores are unavailable.
-      - One 2021 playoff participant has no resolved franchise mapping and is excluded from franchise totals.
+      - Placement games are excluded from championship-playoff win/loss totals.
       - The 2023 bracket lane ambiguity does not change the verified winners used here.
 
   - category_id: playoff_appearance_streaks
@@ -96,11 +96,11 @@ categories:
     coverage_status: partial
     public_calculation_allowed: true
     source_type: verified_playoff_brackets
-    source_years: [2021, 2022, 2023, 2024]
+    source_years: [2021, 2022, 2023, 2024, 2025]
     source_files: [_data/playoffs.yml, _data/franchises.yml]
     notes:
-      - Streaks cover only the verified 2021–2024 window.
-      - One unresolved 2021 participant is excluded rather than assigned by assumption.
+      - Streaks cover only the verified 2021–2025 window.
+      - All playoff participants resolve to canonical franchises.
 
   - category_id: playoff_scoring
     domain: playoffs
@@ -109,11 +109,11 @@ categories:
     coverage_status: unavailable
     public_calculation_allowed: false
     source_type: incomplete_playoff_scores
-    source_years: [2021, 2022, 2023, 2024]
+    source_years: [2021, 2022, 2023, 2024, 2025]
     source_files: [_data/playoffs.yml]
     public_message: Non-final playoff scores are still being imported.
     notes:
-      - Twelve non-final playoff games have verified winners but no published scores.
+      - Twelve 2021–2024 non-final playoff games have verified winners but no published scores; 2025 is complete.
 
   - category_id: game_margin
     domain: games
@@ -148,7 +148,7 @@ categories:
     coverage_status: unavailable
     public_calculation_allowed: false
     source_type: incomplete_franchise_tenure
-    source_years: [2021, 2022, 2023, 2024]
+    source_years: [2021, 2022, 2023, 2024, 2025]
     source_files: [_data/playoffs.yml, _data/franchises.yml]
     public_message: Franchise tenure history is needed before playoff droughts can be ranked.
     notes:
