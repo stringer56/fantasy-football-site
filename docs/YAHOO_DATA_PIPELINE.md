@@ -13,6 +13,12 @@ Yahoo Fantasy API
   -> GitHub Pages/Jekyll render
 ```
 
+If the authenticated current-season request fails, the scheduled workflow uses
+`scripts/yahoo_live.py` against the official public Yahoo league pages and emits
+the same allowlisted files. If both sources fail, the last valid current-season
+snapshot is retained and labelled stale. Raw public-page HTML is not committed.
+The API remains primary and OAuth handling is unchanged.
+
 Raw Yahoo responses are not written to the repository. The Action keeps them in
 memory only long enough to create sanitized public data.
 
@@ -40,8 +46,9 @@ source of truth and does not hardcode a resolved game key.
 5. Review the normalizer tests, Yahoo fetch, news fetch, public-data validation,
    and commit steps.
 
-The Action commits only `_data/generated/*.json` and `_data/news.json`, and only
-when their normalized content changed.
+The Action commits only public generated data, normalized live-week routes,
+finalized Power Ranking aggregates, and `_data/news.json`, and only when their
+normalized content changed.
 
 ## Moving to a new Yahoo season
 

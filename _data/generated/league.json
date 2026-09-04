@@ -1,17 +1,19 @@
 {
   "schema_version": 1,
   "league": {
-    "league_key": "461.l.103926",
-    "league_id": "103926",
+    "league_key": "470.l.26455",
+    "league_id": "26455",
     "league_name": "Road To Glory FFL",
-    "season": 2025,
+    "season": 2026,
     "number_of_teams": 12,
-    "current_week": 16,
-    "matchup_week": 16,
-    "start_date": "2025-09-04",
-    "end_date": "2025-12-22",
-    "is_finished": true,
-    "league_logo_url": "https://yahoofantasysports-res.cloudinary.com/image/upload/t_s192sq/fantasy-logos/a23e3eba7d25bf4ae6a3b4894e0c03ec5176de330bcbbdca669e9a9f91e9705b.jpg",
-    "source_update_timestamp": "1767858249"
+    "current_week": 1,
+    "matchup_week": 1,
+    "start_week": 1,
+    "end_week": 16,
+    "start_date": null,
+    "end_date": null,
+    "is_finished": false,
+    "league_logo_url": null,
+    "source_update_timestamp": "2026-09-04T21:30:24Z"
   }
 }

@@ -129,6 +129,50 @@ def main() -> None:
     if not rankings and power.get("source", {}).get("coverage_status") != "unavailable":
         errors.append("power_rankings.json: empty rankings require an unavailable state")
 
+    history = load_json("power_rankings_history.json")
+    errors.extend(validate_payload(GENERATED / "power_rankings_history.json", history))
+    if history.get("season") != 2026:
+        errors.append("power_rankings_history.json: season must be 2026")
+    finalized_weeks = history.get("finalized_weeks") or []
+    if finalized_weeks != sorted(set(finalized_weeks)):
+        errors.append("power_rankings_history.json: finalized weeks must be unique and ordered")
+    archived = history.get("weeks") or []
+    if [item.get("week") for item in archived] != finalized_weeks:
+        errors.append("power_rankings_history.json: week archive disagrees with finalized_weeks")
+    prior_ranks: dict[str, int] = {}
+    required_history_fields = {
+        "season", "week", "franchise_id", "rank", "previous_rank", "movement",
+        "average_rank", "ranking_points", "first_place_votes", "votes_received",
+    }
+    for week_result in archived:
+        week = week_result.get("week")
+        rows = week_result.get("rankings") or []
+        if len(rows) != len(active_franchise_ids):
+            errors.append(f"Power Ranking week {week}: must contain every active franchise")
+        if [item.get("rank") for item in rows] != list(range(1, len(rows) + 1)):
+            errors.append(f"Power Ranking week {week}: ranks must be unique and ordered")
+        for row in rows:
+            franchise_id = row.get("franchise_id")
+            if not required_history_fields <= set(row):
+                errors.append(f"Power Ranking week {week}: normalized fields are incomplete")
+            if row.get("season") != 2026 or row.get("week") != week:
+                errors.append(f"Power Ranking week {week}: row season/week mismatch")
+            if franchise_id not in active_franchise_ids:
+                errors.append(f"Power Ranking week {week}: unknown franchise ID")
+            expected_previous = prior_ranks.get(franchise_id)
+            expected_movement = expected_previous - row["rank"] if expected_previous is not None else None
+            if row.get("previous_rank") != expected_previous or row.get("movement") != expected_movement:
+                errors.append(f"Power Ranking week {week}: previous rank/movement mismatch for {franchise_id}")
+        prior_ranks = {row["franchise_id"]: row["rank"] for row in rows}
+
+    archive_root = ROOT / "_data" / "power_rankings" / "2026"
+    archive_paths = sorted(archive_root.glob("week-*.json")) if archive_root.is_dir() else []
+    if len(archive_paths) != len(archived):
+        errors.append("Power Ranking immutable archive and generated history counts disagree")
+    for path, expected in zip(archive_paths, archived):
+        if json.loads(path.read_text(encoding="utf-8")) != expected:
+            errors.append(f"{path}: immutable result differs from generated history")
+
     picks = datasets["picks.json"]
     for week in picks.get("weekly_results") or []:
         matchup_ids: set[str] = set()
@@ -179,7 +223,8 @@ def main() -> None:
         raise SystemExit("Voting validation failed:\n- " + "\n- ".join(errors))
     print(
         f"Validated {len(config.get('polls') or [])} polls, {len(rankings)} Power Ranking rows, "
-        f"{len(picks.get('weekly_results') or [])} pick weeks, privacy rules, identities, and empty states"
+        f"{len(picks.get('weekly_results') or [])} pick weeks, {len(archived)} finalized ranking weeks, "
+        "privacy rules, identities, and empty states"
     )
 
 

@@ -1,0 +1,19 @@
+{% assign live = include.live %}
+{% if live.standings and live.standings.size > 0 %}
+  <p class="table-scroll-note">Swipe horizontally to see every standings field.</p>
+  <div class="table-scroll live-table-wrap" role="region" aria-label="{{ live.season }} live standings; scroll horizontally for all statistics" tabindex="0">
+    <table class="standings-table live-standings-table">
+      <thead><tr><th scope="col">Rank</th><th scope="col">Franchise</th><th scope="col">W-L-T</th><th scope="col">Win %</th><th scope="col">PF</th><th scope="col">PA</th><th scope="col">Streak</th><th scope="col">Seed</th></tr></thead>
+      <tbody>{% for team in live.standings %}<tr{% if team.rank and team.rank <= 4 %} class="rank-highlight"{% endif %}>
+        <td class="rank-cell">{{ team.rank | default: '—' }}</td>
+        <td><a class="live-team-link" href="{{ team.path | relative_url }}"><img src="{{ team.identity_image | relative_url }}" alt=""><span>{{ team.display_name }}</span></a></td>
+        <td class="standings-record">{{ team.wins }}–{{ team.losses }}–{{ team.ties }}</td>
+        <td>{% if team.winning_percentage %}{{ team.winning_percentage | times: 100 | round: 1 }}%{% else %}—{% endif %}</td>
+        <td class="standings-points">{{ team.points_for | default: 0 | round: 2 }}</td><td class="standings-points">{{ team.points_against | default: 0 | round: 2 }}</td>
+        <td>{% if team.streak %}{{ team.streak.type | slice: 0 | upcase }}{{ team.streak.value }}{% else %}—{% endif %}</td><td>{{ team.playoff_seed | default: '—' }}</td>
+      </tr>{% endfor %}</tbody>
+    </table>
+  </div>
+{% else %}
+  {% include empty-state.html title="Standings are unavailable" description="The last Yahoo refresh did not contain a verified current-season table." href="/history/" link_text="Explore completed seasons" %}
+{% endif %}

@@ -23,6 +23,9 @@ REQUIRED_FILES = {
     "picks.json",
     "recaps.json",
     "history_manifest.json",
+    "live_season.json",
+    "league_wire.json",
+    "power_rankings_history.json",
 }
 FORBIDDEN_KEYS = {
     "access_token",

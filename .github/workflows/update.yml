@@ -56,6 +56,8 @@ jobs:
           retention-days: 3
 
       - name: Pull Yahoo data
+        id: yahoo_api
+        continue-on-error: true
         env:
           YAHOO_CLIENT_ID: ${{ secrets.YAHOO_CLIENT_ID }}
           YAHOO_CLIENT_SECRET: ${{ secrets.YAHOO_CLIENT_SECRET }}
@@ -63,22 +65,40 @@ jobs:
           LEAGUE_KEY: ${{ secrets.LEAGUE_KEY }}
         run: python scripts/pull_yahoo.py
 
+      - name: Use official Yahoo page fallback
+        id: yahoo_public
+        if: ${{ steps.yahoo_api.outcome == 'failure' }}
+        continue-on-error: true
+        run: python scripts/yahoo_live.py
+
       - name: Pull news feeds
         run: python scripts/pull_news.py
 
       - name: Rebuild historical records
         run: python scripts/build_records.py
 
+      - name: Build fresh 2026 live hub data
+        if: ${{ steps.yahoo_api.outcome == 'success' || steps.yahoo_public.outcome == 'success' }}
+        run: python scripts/build_live_season.py
+
+      - name: Preserve last valid live snapshot as stale
+        if: ${{ steps.yahoo_api.outcome == 'failure' && steps.yahoo_public.outcome == 'failure' }}
+        run: python scripts/build_live_season.py --stale
+
+      - name: Synchronize verified weekly routes
+        run: python scripts/sync_live_week_pages.py
+
       - name: Validate public generated data
         run: |
           python scripts/validate_public_data.py
+          python scripts/validate_live_season.py
           python scripts/validate_votes_data.py
           python scripts/validate_recaps.py
 
       - name: Commit and push changed public data
         shell: bash
         run: |
-          git add _data/generated/*.json _data/news.json
+          git add _data/generated _data/power_rankings _live_weeks _data/news.json
           if git diff --cached --quiet; then
             echo "No public data changes."
             exit 0

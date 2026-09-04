@@ -121,7 +121,7 @@ complete. Picks never write to or modify Yahoo.
 
    ```powershell
    python scripts/import_vote_results.py --input private-vote-imports/general.csv
-   python scripts/build_power_rankings.py --input private-vote-imports/power-rankings.csv
+   python scripts/build_power_rankings.py --input private-vote-imports/power-rankings.csv --finalize
    python scripts/build_picks_leaderboard.py --input private-vote-imports/matchup-picks.csv
    ```
 
@@ -131,6 +131,11 @@ complete. Picks never write to or modify Yahoo.
 
 Generated timestamps come from the sanitized export, not the local clock, so
 re-running the same import produces identical output.
+
+`--finalize` preserves the reviewed weekly aggregate under
+`_data/power_rankings/{season}/week-{week}.json`, refuses a different overwrite,
+and regenerates the ordered chart/facts model. See
+[2026 Power Rankings](POWER_RANKINGS.md).
 
 ## Archive process
 

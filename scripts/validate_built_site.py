@@ -24,7 +24,10 @@ EXPECTED_ROUTES = (
     "/head-to-head/",
     "/all-time-standings/",
     "/championships/",
+    "/2026/",
+    "/2026/week/1/",
     "/votes/",
+    "/power-rankings/",
     "/votes/power-rankings/",
     "/votes/picks/",
     "/retired/",
@@ -117,7 +120,10 @@ def main() -> None:
     all_time_page = route_target("/all-time-standings/").read_text(encoding="utf-8")
     championships_page = route_target("/championships/").read_text(encoding="utf-8")
     votes_page = route_target("/votes/").read_text(encoding="utf-8")
-    power_page = route_target("/votes/power-rankings/").read_text(encoding="utf-8")
+    live_page = route_target("/2026/").read_text(encoding="utf-8")
+    live_week_page = route_target("/2026/week/1/").read_text(encoding="utf-8")
+    power_page = route_target("/power-rankings/").read_text(encoding="utf-8")
+    power_legacy_page = route_target("/votes/power-rankings/").read_text(encoding="utf-8")
     picks_page = route_target("/votes/picks/").read_text(encoding="utf-8")
     if 'aria-label="Open navigation"' not in votes_page:
         errors.append("mobile navigation toggle must have an accessible name")
@@ -174,9 +180,20 @@ def main() -> None:
     for expected in ("League", "Votes", "Active Votes", "Weekly Matchup Picks", "Power Rankings", "Vote Archive"):
         if expected not in votes_page:
             errors.append(f"votes hub is missing: {expected}")
-    for expected in ("Manager Power Rankings", "Purely Manager Voted"):
+    for expected in ("2026 Power Rankings", "Manager ballots only"):
         if expected not in power_page:
             errors.append(f"Power Rankings page is missing: {expected}")
+    for expected in ("2026 League HQ", "2026 Standings", "Record Watch", "Road to Glory Wire", "Power Rankings"):
+        if expected not in live_page:
+            errors.append(f"2026 hub is missing: {expected}")
+    for expected in ("Week 1", "All Matchups", "Weekly Facts", "Record Watch"):
+        if expected not in live_week_page:
+            errors.append(f"2026 Week 1 hub is missing: {expected}")
+    for expected in ("Average manager rank", "Ranking points", "First-place votes", "Previous rank", "Movement", "power-rankings.js"):
+        if expected not in power_page:
+            errors.append(f"Power Rankings experience is missing: {expected}")
+    if "/power-rankings/" not in power_legacy_page:
+        errors.append("legacy Power Rankings route must link to the canonical route")
     for expected in ("Matchup Picks", "Weekly Matchups", "Season Picks Leaderboard", "Pick Results Archive"):
         if expected not in picks_page:
             errors.append(f"Picks page is missing: {expected}")
@@ -186,9 +203,9 @@ def main() -> None:
     recaps_data = json.loads((ROOT / "_data" / "generated" / "recaps.json").read_text(encoding="utf-8"))
     if not voting_data["active_polls"] and "No league ballots are open" not in votes_page:
         errors.append("votes hub did not render its intentional no-active-votes state")
-    if not power_data["rankings"] and "Voting opens during the season" not in power_page:
+    if not power_data["rankings"] and "Week 1 ballots have not been finalized" not in power_page:
         errors.append("Power Rankings page did not render its offseason state")
-    if power_data["rankings"] and power_page.count('class="vote-team"') != len(power_data["rankings"]):
+    if power_data["rankings"] and power_page.count('data-power-ranking-row') != len(power_data["rankings"]):
         errors.append("Power Rankings page did not render every ranked franchise")
     if picks_data["current_week"] is None and "current slate is not available yet" not in picks_page:
         errors.append("Picks page did not render its unavailable current-week state")

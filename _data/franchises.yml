@@ -16,6 +16,7 @@ franchises:
     branding:
       identity_image: /assets/img/franchises/albany-kneelers/identity.jpg
       identity_alt: Black Albany Kneelers football helmet with the team seal
+      primary_color: "#111827"
       venue_image: /assets/img/franchises/albany-kneelers/venue.jpg
       venue_alt: James R. Dick Green Field, home of the Albany Kneelers
       honors_image: /assets/img/franchises/albany-kneelers/honors.jpg
@@ -47,12 +48,13 @@ franchises:
     founded_season:
     retired_season:
     yahoo:
-      team_keys: {"2025": 461.l.103926.t.3}
-      team_ids: {"2025": 3}
-      team_names: {"2025": Ayahuasca Rush}
+      team_keys: {"2025": 461.l.103926.t.3, "2026": 470.l.26455.t.3}
+      team_ids: {"2025": 3, "2026": 3}
+      team_names: {"2025": Ayahuasca Rush, "2026": Ayahuasca Rush}
     branding:
       identity_image: /assets/img/franchises/ayahuasca-rush/identity.jpg
       identity_alt: White Ayahuasca Rush football helmet with a green leaf emblem
+      primary_color: "#2e7d32"
       venue_image: /assets/img/franchises/ayahuasca-rush/venue.jpg
       venue_alt: Lambo Field, home of the Ayahuasca Rush
       honors_image: /assets/img/franchises/ayahuasca-rush/honors.jpg
@@ -84,12 +86,13 @@ franchises:
     founded_season:
     retired_season:
     yahoo:
-      team_keys: {"2025": 461.l.103926.t.9}
-      team_ids: {"2025": 9}
-      team_names: {"2025": The Baseball Furies}
+      team_keys: {"2025": 461.l.103926.t.9, "2026": 470.l.26455.t.10}
+      team_ids: {"2025": 9, "2026": 10}
+      team_names: {"2025": The Baseball Furies, "2026": The Baseball Furies}
     branding:
       identity_image: /assets/img/franchises/baseball-furies/identity.jpg
       identity_alt: Blue Baseball Furies football helmet
+      primary_color: "#155e75"
       venue_image: /assets/img/franchises/baseball-furies/venue.jpg
       venue_alt: Fury Field, home of the Baseball Furies
     profile:
@@ -119,12 +122,13 @@ franchises:
     founded_season:
     retired_season:
     yahoo:
-      team_keys: {"2021": 406.l.12928.t.6, "2022": 414.l.527645.t.9, "2025": 461.l.103926.t.4}
-      team_ids: {"2021": 6, "2022": 9, "2025": 4}
-      team_names: {"2021": The Swagger Daggers, "2022": Dilly Dilly, "2025": Buffalo Bravados}
+      team_keys: {"2021": 406.l.12928.t.6, "2022": 414.l.527645.t.9, "2025": 461.l.103926.t.4, "2026": 470.l.26455.t.4}
+      team_ids: {"2021": 6, "2022": 9, "2025": 4, "2026": 4}
+      team_names: {"2021": The Swagger Daggers, "2022": Dilly Dilly, "2025": Buffalo Bravados, "2026": Buffalo Bravados}
     branding:
       identity_image: /assets/img/franchises/buffalo-bravado/identity.jpg
       identity_alt: Light blue Buffalo Bravado football helmet with a heraldic crest
+      primary_color: "#2563eb"
       venue_image: /assets/img/franchises/buffalo-bravado/venue.jpg
       venue_alt: The Warehouse, home of Buffalo Bravado
     profile:
@@ -154,12 +158,13 @@ franchises:
     founded_season:
     retired_season:
     yahoo:
-      team_keys: {"2025": 461.l.103926.t.5}
-      team_ids: {"2025": 5}
-      team_names: {"2025": Chris's Crazy Team}
+      team_keys: {"2025": 461.l.103926.t.5, "2026": 470.l.26455.t.5}
+      team_ids: {"2025": 5, "2026": 5}
+      team_names: {"2025": Chris's Crazy Team, "2026": Chris's Crazy Team}
     branding:
       identity_image: /assets/img/franchises/crazy-wazs-team/identity.jpg
       identity_alt: Green Crazy Waz football helmet with a collegiate crest
+      primary_color: "#15803d"
       venue_image: /assets/img/franchises/crazy-wazs-team/venue.jpg
       venue_alt: Waz Wonder Dome, home of Crazy Waz's Team
     profile:
@@ -189,12 +194,13 @@ franchises:
     founded_season:
     retired_season:
     yahoo:
-      team_keys: {"2025": 461.l.103926.t.6}
-      team_ids: {"2025": 6}
-      team_names: {"2025": Greendale Human Beings}
+      team_keys: {"2025": 461.l.103926.t.6, "2026": 470.l.26455.t.6}
+      team_ids: {"2025": 6, "2026": 6}
+      team_names: {"2025": Greendale Human Beings, "2026": Greendale Human Beings}
     branding:
       identity_image: /assets/img/franchises/greendale-human-beings/identity.jpg
       identity_alt: Blue Greendale Human Beings football helmet
+      primary_color: "#1e3a8a"
       venue_image: /assets/img/franchises/greendale-human-beings/venue.png
       venue_alt: Greendale Community College Football Field
       honors_image: /assets/img/franchises/greendale-human-beings/honors.jpg
@@ -226,12 +232,13 @@ franchises:
     founded_season:
     retired_season:
     yahoo:
-      team_keys: {"2025": 461.l.103926.t.7}
-      team_ids: {"2025": 7}
-      team_names: {"2025": Maine Moose}
+      team_keys: {"2025": 461.l.103926.t.7, "2026": 470.l.26455.t.7}
+      team_ids: {"2025": 7, "2026": 7}
+      team_names: {"2025": Maine Moose, "2026": Maine Moose}
     branding:
       identity_image: /assets/img/franchises/maine-moose/identity.jpg
       identity_alt: Black Maine Moose football helmet with a gold moose
+      primary_color: "#b45309"
       venue_image: /assets/img/franchises/maine-moose/venue.jpg
       venue_alt: Skowhegan High School Field, home of the Maine Moose
     profile:
@@ -261,12 +268,13 @@ franchises:
     founded_season:
     retired_season:
     yahoo:
-      team_keys: {"2021": 406.l.12928.t.3, "2022": 414.l.527645.t.6, "2025": 461.l.103926.t.12}
-      team_ids: {"2021": 3, "2022": 6, "2025": 12}
-      team_names: {"2021": Quahog Stripes, "2022": Quahog Stripes, "2025": New Jersey Giants}
+      team_keys: {"2021": 406.l.12928.t.3, "2022": 414.l.527645.t.6, "2025": 461.l.103926.t.12, "2026": 470.l.26455.t.8}
+      team_ids: {"2021": 3, "2022": 6, "2025": 12, "2026": 8}
+      team_names: {"2021": Quahog Stripes, "2022": Quahog Stripes, "2025": New Jersey Giants, "2026": New Jersey Giants}
     branding:
       identity_image: /assets/img/franchises/new-jersey-giants/identity.jpg
       identity_alt: Blue New Jersey Giants football helmet
+      primary_color: "#1d4ed8"
       venue_image: /assets/img/franchises/new-jersey-giants/venue.jpg
       venue_alt: Old Giants Stadium, home of the New Jersey Giants
     profile:
@@ -306,12 +314,13 @@ franchises:
     founded_season:
     retired_season:
     yahoo:
-      team_keys: {"2025": 461.l.103926.t.8}
-      team_ids: {"2025": 8}
-      team_names: {"2025": North town Ninnyhammers}
+      team_keys: {"2025": 461.l.103926.t.8, "2026": 470.l.26455.t.9}
+      team_ids: {"2025": 8, "2026": 9}
+      team_names: {"2025": North town Ninnyhammers, "2026": North town Ninnyhammers}
     branding:
       identity_image: /assets/img/franchises/north-town-ninnyhammers/identity.jpg
       identity_alt: White North Town Ninnyhammers football helmet with a red buffalo
+      primary_color: "#dc2626"
       venue_image: /assets/img/franchises/north-town-ninnyhammers/venue.jpg
       venue_alt: The Junk Yard, home of the North Town Ninnyhammers
     profile:
@@ -341,12 +350,13 @@ franchises:
     founded_season:
     retired_season:
     yahoo:
-      team_keys: {"2025": 461.l.103926.t.10}
-      team_ids: {"2025": 10}
-      team_names: {"2025": Turnbull AC’s}
+      team_keys: {"2025": 461.l.103926.t.10, "2026": 470.l.26455.t.11}
+      team_ids: {"2025": 10, "2026": 11}
+      team_names: {"2025": Turnbull AC’s, "2026": Turnbull AC’s}
     branding:
       identity_image: /assets/img/franchises/turnbull-acs/identity.jpg
       identity_alt: Silver Turnbull AC's football helmet with a purple bull
+      primary_color: "#7e22ce"
       venue_image: /assets/img/franchises/turnbull-acs/venue.jpg
       venue_alt: Guy Broman Memorial Stadium, home of Turnbull AC's
     profile:
@@ -376,12 +386,13 @@ franchises:
     founded_season:
     retired_season:
     yahoo:
-      team_keys: {"2025": 461.l.103926.t.1}
-      team_ids: {"2025": 1}
-      team_names: {"2025": Van Cortlant Rangers}
+      team_keys: {"2025": 461.l.103926.t.1, "2026": 470.l.26455.t.1}
+      team_ids: {"2025": 1, "2026": 1}
+      team_names: {"2025": Van Cortlant Rangers, "2026": Van Cortlant Rangers}
     branding:
       identity_image: /assets/img/franchises/van-cortlant-rangers/identity.jpg
       identity_alt: Blue Van Cortlant Rangers football helmet with a masked cowboy
+      primary_color: "#0f4c81"
       venue_image: /assets/img/franchises/van-cortlant-rangers/venue.jpg
       venue_alt: Star Goblin Field, home of the Van Cortlant Rangers
     profile:
@@ -411,12 +422,13 @@ franchises:
     founded_season:
     retired_season:
     yahoo:
-      team_keys: {"2021": 406.l.12928.t.9, "2022": 414.l.527645.t.5, "2023": 423.l.161807.t.4, "2025": 461.l.103926.t.11}
-      team_ids: {"2021": 9, "2022": 5, "2023": 4, "2025": 11}
-      team_names: {"2021": Matthew's Optimal Team, "2022": Broncos Country Let’s Ride, "2023": Broncos Country Let’s Ride, "2025": Vegas Vandals}
+      team_keys: {"2021": 406.l.12928.t.9, "2022": 414.l.527645.t.5, "2023": 423.l.161807.t.4, "2025": 461.l.103926.t.11, "2026": 470.l.26455.t.12}
+      team_ids: {"2021": 9, "2022": 5, "2023": 4, "2025": 11, "2026": 12}
+      team_names: {"2021": Matthew's Optimal Team, "2022": Broncos Country Let’s Ride, "2023": Broncos Country Let’s Ride, "2025": Vegas Vandals, "2026": Vegas Vandals}
     branding:
       identity_image: /assets/img/franchises/vegas-vandals/identity.jpg
       identity_alt: Black Vegas Vandals football helmet with flaming playing cards
+      primary_color: "#991b1b"
       venue_image: /assets/img/franchises/vegas-vandals/venue.jpg
       venue_alt: Allegiant Stadium, home of the Vegas Vandals
     profile:

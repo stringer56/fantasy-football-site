@@ -18,6 +18,8 @@ collections:
   drafts:
     output: true
     permalink: /drafts/:name/
+  live_weeks:
+    output: true
 defaults:
   - scope:
       path: ""
@@ -34,3 +36,8 @@ defaults:
       type: drafts
     values:
       layout: draft
+  - scope:
+      path: ""
+      type: live_weeks
+    values:
+      layout: live_week
