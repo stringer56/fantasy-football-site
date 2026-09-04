@@ -10,12 +10,16 @@ Every data file uses `schema_version: 1` or `"schema_version": 1`.
 ### `site.yml`
 
 - `current_season`: active fantasy season.
-- `yahoo.league_alias`: public alias expected in the `LEAGUE_KEY` Actions secret.
-- `yahoo.league_url`: public league link.
+- `yahoo.league_url`: canonical public league link used by every visitor-facing Yahoo call to action.
+- `yahoo.league_id`, `yahoo.league_key`, and `yahoo.game_key`: reviewed 2026 Yahoo identifiers.
+- `yahoo.alias`: public alias expected in the `LEAGUE_KEY` Actions secret.
+- `yahoo.season`: season governed by the configured Yahoo identity.
 - `generated_data_namespace`: Jekyll namespace below `site.data`.
 
-The 2026 alias is `nfl.l.26455`. Yahoo may resolve it to a season-specific game
-key; do not copy that resolved key into configuration.
+The canonical 2026 identity is season `2026`, game key `470`, league ID
+`26455`, league key `470.l.26455`, and alias `nfl.l.26455`. These values are
+human-managed and reviewed together. Templates use only `yahoo.league_url` for
+public links; API and OAuth endpoints never become visitor-facing URLs.
 
 ### `league.yml`
 

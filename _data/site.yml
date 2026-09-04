@@ -1,6 +1,10 @@
 schema_version: 1
 current_season: 2026
 yahoo:
-  league_alias: nfl.l.26455
-  league_url: https://football.fantasysports.yahoo.com/f1/26455
+  league_url: "https://football.fantasysports.yahoo.com/f1/26455"
+  league_id: "26455"
+  league_key: "470.l.26455"
+  alias: "nfl.l.26455"
+  game_key: "470"
+  season: 2026
 generated_data_namespace: generated

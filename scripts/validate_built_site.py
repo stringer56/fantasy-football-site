@@ -40,9 +40,12 @@ class LinkParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
         self.targets: list[tuple[str, str]] = []
+        self.anchors: list[dict[str, str | None]] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attributes = dict(attrs)
+        if tag == "a":
+            self.anchors.append(attributes)
         if tag in {"a", "link"} and attributes.get("href"):
             self.targets.append(("href", attributes["href"] or ""))
         if tag in {"img", "script", "source"} and attributes.get("src"):
@@ -78,6 +81,8 @@ def main() -> None:
 
     errors: list[str] = []
     pages = sorted(SITE_DIR.rglob("*.html"))
+    site_data = yaml.safe_load((ROOT / "_data" / "site.yml").read_text(encoding="utf-8"))
+    yahoo_url = site_data["yahoo"]["league_url"]
     franchise_data = yaml.safe_load((ROOT / "_data" / "franchises.yml").read_text(encoding="utf-8"))
     franchise_routes = tuple(
         f"/{'retired' if franchise['status'] == 'retired' else 'teams'}/{franchise['slug']}/"
@@ -97,6 +102,15 @@ def main() -> None:
         text = page.read_text(encoding="utf-8")
         if "{{" in text or "{%" in text:
             errors.append(f"unrendered Liquid in {page.relative_to(SITE_DIR)}")
+        for unsafe in (
+            "fantasysports.yahooapis.com",
+            "/invitation?key=",
+            "oauth2.request.auth.yahoo.com",
+        ):
+            if unsafe in text.casefold():
+                errors.append(
+                    f"unsafe Yahoo URL in {page.relative_to(SITE_DIR)}: {unsafe}"
+                )
         for landmark in ("<header", "<nav", "<main", "<footer"):
             if landmark not in text:
                 errors.append(f"missing {landmark[1:]} landmark in {page.relative_to(SITE_DIR)}")
@@ -127,6 +141,18 @@ def main() -> None:
     power_legacy_page = route_target("/votes/power-rankings/").read_text(encoding="utf-8")
     picks_page = route_target("/picks/").read_text(encoding="utf-8")
     picks_legacy_page = route_target("/votes/picks/").read_text(encoding="utf-8")
+    for label, rendered in (("homepage", home), ("2026 hub", live_page)):
+        parser = LinkParser()
+        parser.feed(rendered)
+        canonical_links = [
+            anchor for anchor in parser.anchors if anchor.get("href") == yahoo_url
+        ]
+        if not canonical_links:
+            errors.append(f"{label} must link to the canonical Yahoo league URL")
+        for anchor in canonical_links:
+            rel_tokens = str(anchor.get("rel") or "").split()
+            if anchor.get("target") != "_blank" or "noopener" not in rel_tokens:
+                errors.append(f"{label} Yahoo links must open safely in a new tab")
     if 'aria-label="Open navigation"' not in votes_page:
         errors.append("mobile navigation toggle must have an accessible name")
     if teams_page.count('class="franchise-card"') != 12:
@@ -301,7 +327,6 @@ def main() -> None:
         ):
             if expected not in profile:
                 errors.append(f"franchise profile {route} is missing: {expected}")
-    site_data = yaml.safe_load((ROOT / "_data" / "site.yml").read_text(encoding="utf-8"))
     manifest = json.loads((ROOT / "_data" / "generated" / "manifest.json").read_text(encoding="utf-8"))
     data_is_current = manifest.get("status") == "ready" and manifest.get("season") == site_data.get("current_season")
     if data_is_current:

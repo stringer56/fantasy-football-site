@@ -27,6 +27,14 @@ are never committed. Local fallback cache files remain disposable and outside
 the public data model. Yahoo OAuth, secret names, and token handling are
 unchanged.
 
+The reviewed Yahoo identity lives once in `_data/site.yml`: season `2026`, game
+key `470`, league ID `26455`, league key `470.l.26455`, public alias
+`nfl.l.26455`, and the canonical public league URL. Header, homepage, 2026 hub,
+and empty-state calls to action all read that URL from configuration and open it
+with safe external-link attributes. The public fallback also starts from this
+configured URL rather than synthesizing a visitor-facing address from API
+identifiers.
+
 The verified September 4, 2026 snapshot reports Week 1, twelve teams, six
 matchups, preseason 0–0 standings, current projections, and twelve roster
 pages. Blank preseason standings ranks remain null; they are not converted into
@@ -80,4 +88,3 @@ League Wire provenance, and corresponding snapshot/route presence. Unit tests
 cover the public-page fallback, blank preseason ranks, Record Watch thresholds,
 final-only promotion, de-duplication, deterministic weekly facts, and explicit
 stale handling.
-

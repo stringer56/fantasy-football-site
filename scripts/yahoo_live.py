@@ -241,13 +241,53 @@ def _write_json_if_changed(path: pathlib.Path, data: dict[str, Any]) -> bool:
     return True
 
 
+def canonical_current_season_record(
+    site_config: dict[str, Any], manifest: dict[str, Any]
+) -> tuple[int, dict[str, Any]]:
+    """Resolve the current Yahoo identity from reviewed human configuration."""
+    current = int(site_config["current_season"])
+    yahoo = site_config.get("yahoo") or {}
+    required = ("season", "game_key", "league_id", "league_key", "alias", "league_url")
+    missing = [field for field in required if yahoo.get(field) in (None, "")]
+    if missing:
+        raise ValueError(f"site Yahoo configuration is missing: {', '.join(missing)}")
+    if int(yahoo["season"]) != current:
+        raise ValueError("site current_season and yahoo.season must match")
+
+    game_key = str(yahoo["game_key"])
+    league_id = str(yahoo["league_id"])
+    league_key = str(yahoo["league_key"])
+    if league_key != f"{game_key}.l.{league_id}":
+        raise ValueError("configured Yahoo league_key does not match game_key and league_id")
+    if str(yahoo["alias"]) != f"nfl.l.{league_id}":
+        raise ValueError("configured Yahoo alias does not match league_id")
+
+    verified = next(
+        (row for row in manifest.get("seasons", []) if row.get("season") == current),
+        None,
+    )
+    if verified:
+        for field in ("game_key", "league_id", "league_key"):
+            if str(verified.get(field)) != str(yahoo[field]):
+                raise ValueError(
+                    f"configured Yahoo {field} conflicts with the verified history manifest"
+                )
+
+    return current, {
+        "season": current,
+        "game_key": game_key,
+        "league_id": league_id,
+        "league_key": league_key,
+        "alias": str(yahoo["alias"]),
+        "league_url": str(yahoo["league_url"]),
+        "league_name": (verified or {}).get("league_name") or "Road To Glory FFL",
+    }
+
+
 def _current_season_record() -> tuple[int, dict[str, Any]]:
-    current = int(yaml.safe_load(SITE_CONFIG.read_text(encoding="utf-8"))["current_season"])
+    site_config = yaml.safe_load(SITE_CONFIG.read_text(encoding="utf-8"))
     manifest = json.loads(HISTORY_MANIFEST.read_text(encoding="utf-8"))
-    season = next((row for row in manifest.get("seasons", []) if row.get("season") == current), None)
-    if not season:
-        raise ValueError(f"history manifest has no verified {current} league")
-    return current, season
+    return canonical_current_season_record(site_config, manifest)
 
 
 def build_public_page_payloads(
@@ -313,7 +353,7 @@ def main() -> None:
 
     season, record = _current_season_record()
     game_key, league_id = str(record["game_key"]), str(record["league_id"])
-    base_url = f"https://football.fantasysports.yahoo.com/{season}/f1/{league_id}"
+    base_url = str(record["league_url"]).rstrip("/")
     client = ArchiveClient(ROOT / ".cache" / "yahoo-live", delay_seconds=args.delay)
     page = client.get(
         f"{base_url}?module=matchups&lhst=matchups",

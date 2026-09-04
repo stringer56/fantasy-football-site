@@ -3,6 +3,6 @@
   <div>
     <h3>{{ include.title }}</h3>
     <p>{{ include.description }}</p>
-    {% if include.href and include.link_text %}<a class="text-link" href="{{ include.href | relative_url }}">{{ include.link_text }} <span aria-hidden="true">→</span></a>{% endif %}
+    {% if include.href and include.link_text %}{% if include.href contains '://' %}<a class="text-link" href="{{ include.href }}" target="_blank" rel="noopener">{{ include.link_text }} <span aria-hidden="true">↗</span></a>{% else %}<a class="text-link" href="{{ include.href | relative_url }}">{{ include.link_text }} <span aria-hidden="true">→</span></a>{% endif %}{% endif %}
   </div>
 </div>
