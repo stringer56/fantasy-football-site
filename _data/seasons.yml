@@ -63,7 +63,9 @@ seasons:
       - {rank: 12, franchise_id: baseball-furies, team_name: The Baseball Furies, wins: 2, losses: 11, ties: 0, win_percentage: 0.153846, points_for: 1370.42, points_against: 1509.90, playoff_seed: null, playoff_finish: null}
   - year: 2023
     title: 2023 Season
-    status: verified
+    status: complete
+    status_label: Complete
+    data_mode: detailed
     team_count: 12
     champion_franchise_id: greendale-human-beings
     champion_display_name: Greendale Human Beings
@@ -73,23 +75,24 @@ seasons:
     bracket_asset: /assets/img/history/2023/playoff-bracket.jpg
     championship_portrait_asset: /assets/img/history/2023/championship-recap.jpg
     championship_matchup_asset: /assets/img/history/2023/championship-matchup.jpg
+    weeks_data_path: _data/generated/history/2023/weeks.json
     source_urls:
       standings: https://sites.google.com/view/road-to-glory-ffl/league-history/past-season-standings
       playoffs: https://sites.google.com/view/road-to-glory-ffl/league-history/past-playoff-summary
       championship: https://sites.google.com/view/road-to-glory-ffl/league-history/championship-game-matchups/2023-championship-game-recap
     standings:
-      - {rank: 1, franchise_id: greendale-human-beings, team_name: Greendale Human Beings, wins: 7, losses: 6, ties: 0, points_for: 1635.68, points_against: 1481.84}
-      - {rank: 2, franchise_id: albany-kneelers, team_name: Albany Kneelers, wins: 12, losses: 1, ties: 0, points_for: 1617.40, points_against: 1393.48}
-      - {rank: 3, franchise_id: turnbull-acs, team_name: Turnbull AC's, wins: 6, losses: 7, ties: 0, points_for: 1461.22, points_against: 1404.74}
-      - {rank: 4, franchise_id: ayahuasca-rush, team_name: Ayahuasca Rush, wins: 9, losses: 4, ties: 0, points_for: 1423.98, points_against: 1303.28}
-      - {rank: 5, franchise_id: savage-huns, team_name: THE SAVAGE HUNS, wins: 8, losses: 5, ties: 0, points_for: 1466.48, points_against: 1396.66}
-      - {rank: 6, franchise_id: maine-moose, team_name: Maine Moose, wins: 6, losses: 7, ties: 0, points_for: 1549.86, points_against: 1455.36}
-      - {rank: 7, franchise_id: buffalo-bravado, team_name: Buffalo Bravados, wins: 3, losses: 10, ties: 0, points_for: 1451.88, points_against: 1609.80}
-      - {rank: 8, franchise_id: north-town-ninnyhammers, team_name: North town Ninnyhammers, wins: 6, losses: 7, ties: 0, points_for: 1351.66, points_against: 1521.68}
-      - {rank: 9, franchise_id: baseball-furies, team_name: The Baseball Furies, wins: 5, losses: 8, ties: 0, points_for: 1266.66, points_against: 1455.68}
-      - {rank: 10, franchise_id: vegas-vandals, team_name: Broncos Country Let's Ride, wins: 6, losses: 7, ties: 0, points_for: 1411.88, points_against: 1466.82}
-      - {rank: 11, franchise_id: van-cortlant-rangers, team_name: Van Cortlant Rangers, wins: 5, losses: 8, ties: 0, points_for: 1382.94, points_against: 1481.08}
-      - {rank: 12, franchise_id: crazy-wazs-team, team_name: Chris's Crazy Team, wins: 5, losses: 8, ties: 0, points_for: 1485.74, points_against: 1534.96}
+      - {rank: 1, franchise_id: greendale-human-beings, team_name: Greendale Human Beings, wins: 7, losses: 6, ties: 0, win_percentage: 0.538462, points_for: 1635.68, points_against: 1481.84, playoff_seed: 4, playoff_finish: 1}
+      - {rank: 2, franchise_id: albany-kneelers, team_name: Albany Kneelers, wins: 12, losses: 1, ties: 0, win_percentage: 0.923077, points_for: 1617.40, points_against: 1393.48, playoff_seed: 1, playoff_finish: 2}
+      - {rank: 3, franchise_id: turnbull-acs, team_name: Turnbull AC's, wins: 6, losses: 7, ties: 0, win_percentage: 0.461538, points_for: 1461.22, points_against: 1404.74, playoff_seed: 6, playoff_finish: 3}
+      - {rank: 4, franchise_id: ayahuasca-rush, team_name: Ayahuasca Rush, wins: 9, losses: 4, ties: 0, win_percentage: 0.692308, points_for: 1423.98, points_against: 1303.28, playoff_seed: 2, playoff_finish: 4}
+      - {rank: 5, franchise_id: savage-huns, team_name: THE SAVAGE HUNS, wins: 8, losses: 5, ties: 0, win_percentage: 0.615385, points_for: 1466.48, points_against: 1396.66, playoff_seed: 3, playoff_finish: 5}
+      - {rank: 6, franchise_id: maine-moose, team_name: Maine Moose, wins: 6, losses: 7, ties: 0, win_percentage: 0.461538, points_for: 1549.86, points_against: 1455.36, playoff_seed: 5, playoff_finish: 6}
+      - {rank: 7, franchise_id: buffalo-bravado, team_name: Buffalo Bravados, wins: 3, losses: 10, ties: 0, win_percentage: 0.230769, points_for: 1451.88, points_against: 1609.80, playoff_seed: null, playoff_finish: null}
+      - {rank: 8, franchise_id: north-town-ninnyhammers, team_name: North town Ninnyhammers, wins: 6, losses: 7, ties: 0, win_percentage: 0.461538, points_for: 1351.66, points_against: 1521.68, playoff_seed: null, playoff_finish: null}
+      - {rank: 9, franchise_id: baseball-furies, team_name: The Baseball Furies, wins: 5, losses: 8, ties: 0, win_percentage: 0.384615, points_for: 1266.66, points_against: 1455.68, playoff_seed: null, playoff_finish: null}
+      - {rank: 10, franchise_id: vegas-vandals, team_name: Broncos Country Let's Ride, wins: 6, losses: 7, ties: 0, win_percentage: 0.461538, points_for: 1411.88, points_against: 1466.82, playoff_seed: null, playoff_finish: null}
+      - {rank: 11, franchise_id: van-cortlant-rangers, team_name: Van Cortlant Rangers, wins: 5, losses: 8, ties: 0, win_percentage: 0.384615, points_for: 1382.94, points_against: 1481.08, playoff_seed: null, playoff_finish: null}
+      - {rank: 12, franchise_id: crazy-wazs-team, team_name: Chris's Crazy Team, wins: 5, losses: 8, ties: 0, win_percentage: 0.384615, points_for: 1485.74, points_against: 1534.96, playoff_seed: null, playoff_finish: null}
   - year: 2022
     title: 2022 Season
     status: verified

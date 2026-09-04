@@ -63,6 +63,10 @@ def ordinal(value: int) -> str:
     return f"{value}{suffix}"
 
 
+def possessive(name: str) -> str:
+    return f"{name}’" if name.rstrip().casefold().endswith("s") else f"{name}’s"
+
+
 def join_names(names: Iterable[str]) -> str:
     values = list(names)
     if len(values) < 2:
@@ -442,19 +446,19 @@ def record_reference(records: dict[str, Any], year: int) -> tuple[str | None, di
         value = holder["value"]
         if record_id == "best_win_pct":
             sentence = (
-                f"The record book lists {holder['historical_team_name']}'s {float(value):.3f} winning percentage "
+                f"The record book lists {possessive(holder['historical_team_name'])} {float(value):.3f} winning percentage "
                 f"as the best verified mark in the {period_label} archive."
             )
         elif record_id == "highest_points_for":
             sentence = (
-                f"The record book lists {holder['historical_team_name']}'s {format_points(value)} points for "
+                f"The record book lists {possessive(holder['historical_team_name'])} {format_points(value)} points for "
                 f"as the highest verified total in the {period_label} archive."
             )
             if source.get("coverage_status") == "partial":
                 sentence += " That archive category remains partial because of the documented 2024 PF/PA source conflict."
         else:
             sentence = (
-                f"The record book lists {holder['historical_team_name']}'s {int(value)} wins "
+                f"The record book lists {possessive(holder['historical_team_name'])} {int(value)} wins "
                 f"as the highest verified total in the {period_label} archive."
             )
         return sentence, {

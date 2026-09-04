@@ -183,7 +183,7 @@ def main() -> None:
             if {final.get("team_one_score"), final.get("team_two_score")} != expected_scores:
                 errors.append(f"{year}: championship scores do not match playoff final")
 
-        if year in {2024, 2025}:
+        if season.get("data_mode") == "detailed":
             source_standings = json.loads((ROOT / f"_data/generated/history/{year}/standings.json").read_text(encoding="utf-8"))
             source_rows = {row["franchise_id"]: row for row in source_standings["standings"]}
             if len(standings) != 12 or set(source_rows) != {row.get("franchise_id") for row in standings}:
@@ -207,6 +207,27 @@ def main() -> None:
                 errors.append(f"{year}: expected 92 verified matchup rows")
             if any(game.get("verified") is not True or game.get("team_a", {}).get("score") is None or game.get("team_b", {}).get("score") is None for game in matchups):
                 errors.append(f"{year}: every matchup must be verified with both final scores")
+            source_by_week_pair = {
+                (game["week"], frozenset((game["team_a"].get("franchise_id"), game["team_b"].get("franchise_id")))): game
+                for game in matchups
+            }
+            for game in games:
+                if game.get("week") is None:
+                    errors.append(f"{game.get('game_id')}: detailed playoff game requires a verified week")
+                    continue
+                pair = frozenset((game.get("team_one_franchise_id"), game.get("team_two_franchise_id")))
+                source_game = source_by_week_pair.get((game["week"], pair))
+                if not source_game:
+                    errors.append(f"{game.get('game_id')}: playoff game does not match the weekly archive")
+                    continue
+                source_scores = {
+                    source_game["team_a"]["franchise_id"]: source_game["team_a"]["score"],
+                    source_game["team_b"]["franchise_id"]: source_game["team_b"]["score"],
+                }
+                if game.get("team_one_score") != source_scores.get(game.get("team_one_franchise_id")) or game.get("team_two_score") != source_scores.get(game.get("team_two_franchise_id")):
+                    errors.append(f"{game.get('game_id')}: playoff score differs from the weekly archive")
+                if game.get("winner_franchise_id") != source_game.get("winner_franchise_id"):
+                    errors.append(f"{game.get('game_id')}: playoff winner differs from the weekly archive")
 
     if errors:
         raise SystemExit("History validation failed:\n- " + "\n- ".join(errors))

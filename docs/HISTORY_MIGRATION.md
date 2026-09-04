@@ -11,7 +11,7 @@ editorial narrative that remains unavailable.
 - Completed seasons represented: **5** (2021–2025)
 - Verified champions and runners-up: **5 of 5**
 - Final standings rows transcribed: **58**
-- Playoff games represented: **25**
+- Playoff games represented: **27**
 - Locally preserved history assets: **16**
 - Season routes: **5** (`/history/2021/` through `/history/2025/`)
 - Stable franchise joins resolved: **58 of 58 standings rows**
@@ -33,7 +33,7 @@ All four seasons use these public source hubs:
 |---|---|---|---:|---:|---:|---|
 | 2025 | Greendale Human Beings | Albany Kneelers | 107.12–106.72 | 12 rows | 6 teams / 7 scored games | Complete Yahoo standings, Weeks 1–16, classified playoff results, and local franchise identity art; no player-level recap |
 | 2024 | Turnbull AC's | Chris's Crazy Team | 148.18–140.98 | 12 rows | 6 teams / 7 scored games | Complete Yahoo standings, Weeks 1–16, classified playoff and placement results, and approved local Google Site assets; no written recap |
-| 2023 | Greendale Human Beings | Albany Kneelers | 132.82–132.74 | 12 rows | 6 teams / 5 games | Champion artwork and Yahoo matchup capture; no written recap |
+| 2023 | Greendale Human Beings | Albany Kneelers | 132.82–132.74 | 12 rows | 6 teams / 7 scored games | Complete Yahoo standings, Weeks 1–16, classified playoff and placement results, and approved local Google Site assets; no written recap |
 | 2022 | Ayahuasca Rush | Turnbull AC's | 115.20–69.16 | 12 rows | 4 teams / 3 games | Champion artwork and Yahoo matchup capture; no written recap |
 | 2021 | Albany Kneelers | Savage Huns | 121.50–118.70 | 10 rows | 4 teams / 3 games | Champion artwork and Yahoo matchup capture; no written recap |
 
@@ -111,17 +111,15 @@ is not counted as a separate franchise.
    Structured standings use the table headers: PF `1610.10`, PA `1425.58`. The
    source screenshot is preserved for commissioner review.
 2. The 2023 bracket graphic places the two quarterfinal winners in opposite
-   semifinal lanes relative to the drawn connector lines. It still identifies
-   Greendale and Turnbull as the advancing teams and Albany and Greendale as the
-   finalists. The structured games preserve those advancing identities and add
-   a source-conflict note; commissioner confirmation of lane ordering remains
-   welcome.
-3. The 2021–2023 bracket graphics do not publish quarterfinal or semifinal scores.
-   Those values are `null`, never zero. The verified 2024 Yahoo weekly archive
-   supplies all five championship-bracket scores; the separately verified 2025
-   bracket also contains all seven scored championship and placement games.
-4. No 2021–2023 third-place or consolation game result is shown. The verified
-   2024 and 2025 third- and fifth-place games are included and explicitly
+   semifinal lanes relative to the drawn connector lines. Yahoo Week 15 resolves
+   the graphic error: Albany faced Turnbull and Greendale faced Ayahuasca. The
+   structured games use those verified pairings while preserving the original
+   image unchanged.
+3. The 2021–2022 bracket graphics do not publish semifinal scores. Those
+   canonical values remain `null`, never zero. The 2023–2025 season pages use
+   independently matched Yahoo scores for every championship-bracket game.
+4. No 2021–2022 third-place or consolation result is independently shown. The
+   verified 2023–2025 third- and fifth-place games are included and explicitly
    classified as placement games.
 5. The source does not provide written overall-season, playoff-game,
    championship, or team mini-recaps. Milestone 9 now derives conservative
@@ -179,6 +177,6 @@ internal asset/link target.
 
 ## Recommended next milestone
 
-Build the 2023 Complete Season History with the same normalized structure:
+Build the 2022 Complete Season History with the same normalized structure:
 verified Weeks 1–16, independently classified playoffs, deterministic season and
 team recaps, approved local assets, and record-book regeneration.

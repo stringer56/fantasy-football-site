@@ -10,7 +10,7 @@ as all-time.
   margins, streaks, and classified playoff-game metrics use this window. The
   2021 season is excluded because no weekly scoreboard archive was recovered.
 
-The canonical five season pages now cover 2021–2025. The 2024 and 2025 pages add
+The canonical five season pages now cover 2021–2025. The 2023–2025 pages add
 their complete verified weekly archives; the broader deterministic outputs live in
 `_data/generated/records/` and retain their own source lists and coverage labels.
 
@@ -37,8 +37,9 @@ their complete verified weekly archives; the broader deterministic outputs live 
 - The 2021 commissioner draft-order crosswalk resolves The Swagger Daggers to
   Buffalo Bravado and Matthew's Optimal Team to Vegas Vandals.
 - Eighteen classified 2022–2025 championship-bracket games have independently
-  matched participants, winners, weeks, and numeric Yahoo scores. The 2021
-  bracket and remaining 2022–2023 games preserve winners with unavailable scores.
+  matched participants, winners, weeks, and numeric Yahoo scores. The 2023–2025
+  canonical season pages publish those verified playoff scores; the 2021 bracket
+  and 2022 canonical semifinals preserve winners with unavailable displayed scores.
 - The complete Yahoo draft boards contain 180 picks per year for 2022–2025.
 - Transaction archives are complete for 2022–2025, but no public record category
   currently turns raw transaction volume into a quality claim.

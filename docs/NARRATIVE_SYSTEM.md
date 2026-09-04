@@ -143,6 +143,6 @@ Narratives describe fantasy franchises and public results. The generator does
 not read owner contact data and cannot emit emails, addresses, medical details,
 Yahoo account identifiers, invitations, credentials, or private communications.
 
-The 2025 output is the first complete weekly season narrative: four season-story
-paragraphs, 16 weekly groups containing 92 final matchups, seven classified
+The 2023–2025 outputs now use the complete weekly season architecture: each has
+16 weekly groups containing 92 final matchups, independently classified
 postseason/placement recaps, and one mini recap for each of 12 franchises.
