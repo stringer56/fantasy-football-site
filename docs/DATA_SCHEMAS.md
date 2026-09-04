@@ -71,7 +71,9 @@ editorial decisions, and unresolved fields.
   source-season display name plus a stable `franchise_id` when verified; unresolved
   identities use `null`, never `0` or a guessed join.
   A season with complete weekly Yahoo coverage may set `data_mode: detailed`,
-  `status_label: Complete`, `weeks_data_path`, and a data-driven `bracket_path`.
+  `status_label: Complete`, `weeks_data_path`, `regular_season_weeks`, and a
+  data-driven `bracket_path`. The explicit regular-season boundary prevents
+  postseason weeks from entering streak calculations when formats change.
   Its standings rows may also include verified `win_percentage`, `playoff_seed`,
   and `playoff_finish` values. Seasons without these fields retain the archival
   image presentation.

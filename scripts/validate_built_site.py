@@ -79,6 +79,8 @@ def main() -> None:
     )
     season_data = yaml.safe_load((ROOT / "_data" / "seasons.yml").read_text(encoding="utf-8"))
     season_routes = tuple(f"/history/{season['year']}/" for season in season_data["seasons"])
+    playoff_data = yaml.safe_load((ROOT / "_data" / "playoffs.yml").read_text(encoding="utf-8"))
+    playoff_by_year = {item["season"]: item for item in playoff_data["playoffs"]}
     draft_data = yaml.safe_load((ROOT / "_data" / "drafts.yml").read_text(encoding="utf-8"))
     draft_routes = tuple(f"/drafts/{draft['year']}/" for draft in draft_data["drafts"])
     for route in EXPECTED_ROUTES + franchise_routes + season_routes + draft_routes:
@@ -215,8 +217,11 @@ def main() -> None:
                 errors.append(f"{season['year']} season page must render all 16 weekly accordions")
             if rendered.count('class="week-matchup"') != 92:
                 errors.append(f"{season['year']} season page must render all 92 verified matchups")
-            if rendered.count('class="playoff-field__grid"') != 1 or rendered.count("Seed #") < 6:
-                errors.append(f"{season['year']} season page must render the six-team playoff field")
+            expected_field_size = len(playoff_by_year[season["year"]].get("playoff_field") or [])
+            if rendered.count('class="playoff-field__grid"') != 1 or rendered.count("Seed #") < expected_field_size:
+                errors.append(
+                    f"{season['year']} season page must render its {expected_field_size}-team playoff field"
+                )
             if rendered.count('class="team-recap-card"') != 12:
                 errors.append(f"{season['year']} season page must render all 12 team mini-recaps")
     for draft in draft_data["drafts"]:
