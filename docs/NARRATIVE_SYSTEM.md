@@ -148,3 +148,11 @@ The 2022–2025 outputs now use the complete weekly season architecture: each ha
 postseason/placement recaps, and one mini recap for each of 12 franchises. The
 recap engine reads each season's verified regular-season boundary so 2022 uses
 Weeks 1–14 while 2023–2025 use Weeks 1–13 for streak calculations.
+
+The 2021 output uses `data_mode: season_level`. Its narrative contains three to
+five paragraphs, its ten team recaps use final standings and the displayed Yahoo
+streak-column value, and its By the Numbers cards use only season-level standings,
+playoff-field, and championship facts. `weekly_archive` remains null, team
+`weekly_metrics` remain null, and the validator rejects any weekly-derived fact
+type in 2021 output. The public page labels this boundary `Season Data — Verified
+2021`.

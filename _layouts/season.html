@@ -16,6 +16,7 @@ layout: default
 {% assign team_recaps = site.data.generated.recaps.team_recaps | where: "season", page.year %}
 {% assign weekly_archive = season_recap.weekly_archive %}
 {% assign bracket_path = season.bracket_path | default: season.bracket_asset %}
+{% assign expanded_standings = false %}{% if season.data_mode == 'detailed' or season.data_mode == 'season_level' %}{% assign expanded_standings = true %}{% endif %}
 
 <article class="season-page">
   <header class="season-hero" data-year="{{ season.year }}">
@@ -51,11 +52,12 @@ layout: default
     </div>
     <div class="narrative-copy">{% for paragraph in season_recap.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}</div>
     <p class="narrative-provenance"><span aria-hidden="true">✓</span> {{ season_recap.provenance_label }}{% if season_recap.content_source == 'editorial_override' %} Commissioner-edited.{% endif %}</p>
+    {% if season.coverage_notice %}<aside class="season-coverage-note" aria-label="{{ season.year }} data coverage"><strong>{{ season.coverage_label }}</strong><p>{{ season.coverage_notice }}</p></aside>{% endif %}
   </section>
 
   <section class="season-section season-numbers" id="numbers" aria-labelledby="numbers-heading">
     <div class="shell-content">
-      <div class="section-heading"><div><p class="eyebrow">The season at a glance</p><h2 id="numbers-heading">By the Numbers</h2><p>Only facts supported by the verified standings, bracket, and championship result appear here.</p></div></div>
+      <div class="section-heading"><div><p class="eyebrow">{{ season.coverage_label | default: "The season at a glance" }}</p><h2 id="numbers-heading">By the Numbers</h2><p>Only facts supported by the verified standings, bracket, and championship result appear here.</p></div></div>
       <div class="season-number-grid">
         {% for item in season_numbers %}<article class="season-number-card{% if item.coverage_status == 'partial' %} season-number-card--partial{% endif %}"><span>{{ item.label }}</span><strong>{{ item.display_value }}</strong>{% if item.coverage_status == 'partial' %}<small>Verified source conflict noted</small>{% endif %}</article>{% endfor %}
       </div>
@@ -71,7 +73,7 @@ layout: default
       <p class="table-scroll-note" id="standings-scroll-note">Swipe the table to see the complete record and point totals.</p>
       <div class="history-table-scroll" role="region" aria-label="{{ season.year }} final standings" aria-describedby="standings-scroll-note" tabindex="0">
         <table class="history-table">
-          <thead><tr><th scope="col">Rank</th><th scope="col">Team</th><th scope="col">W–L–T</th>{% if season.year == 2021 %}<th scope="col">Division</th>{% endif %}{% if season.data_mode == 'detailed' %}<th scope="col">Win %</th>{% endif %}<th scope="col">PF</th><th scope="col">PA</th>{% if season.data_mode == 'detailed' %}<th scope="col">Seed</th><th scope="col">Playoff finish</th>{% endif %}</tr></thead>
+          <thead><tr><th scope="col">Rank</th><th scope="col">Team</th><th scope="col">W–L–T</th>{% if season.year == 2021 %}<th scope="col">Division</th>{% endif %}{% if expanded_standings %}<th scope="col">Win %</th>{% endif %}<th scope="col">PF</th><th scope="col">PA</th>{% if season.data_mode == 'season_level' %}<th scope="col">Final streak</th>{% endif %}{% if expanded_standings %}<th scope="col">Seed</th><th scope="col">Playoff finish</th>{% endif %}</tr></thead>
           <tbody>
             {% for row in season.standings %}
               {% assign franchise = site.data.franchises.franchises | where: "franchise_id", row.franchise_id | first %}
@@ -80,9 +82,10 @@ layout: default
                 <th scope="row" data-label="Team">{% if franchise %}{% if franchise.status == 'retired' %}<a href="{{ '/retired/' | append: franchise.slug | append: '/' | relative_url }}">{% else %}<a href="{{ '/teams/' | append: franchise.slug | append: '/' | relative_url }}">{% endif %}{{ row.team_name }}</a>{% else %}{{ row.team_name }} <span class="unresolved-label">Unmapped</span>{% endif %}</th>
                 <td data-label="W–L–T">{{ row.wins }}–{{ row.losses }}–{{ row.ties }}</td>
                 {% if season.year == 2021 %}<td data-label="Division">{{ row.division_wins }}–{{ row.division_losses }}–{{ row.division_ties }}</td>{% endif %}
-                {% if season.data_mode == 'detailed' %}<td data-label="Win %">{{ row.win_percentage | times: 100 | round: 1 }}%</td>{% endif %}
+                {% if expanded_standings %}<td data-label="Win %">{{ row.win_percentage | times: 100 | round: 1 }}%</td>{% endif %}
                 <td data-label="PF">{{ row.points_for }}</td><td data-label="PA">{{ row.points_against }}</td>
-                {% if season.data_mode == 'detailed' %}<td data-label="Seed">{% if row.playoff_seed %}#{{ row.playoff_seed }}{% else %}—{% endif %}</td><td data-label="Playoff finish">{% if row.playoff_finish %}{{ row.playoff_finish }}{% else %}—{% endif %}</td>{% endif %}
+                {% if season.data_mode == 'season_level' %}<td data-label="Final streak">{{ row.streak }}</td>{% endif %}
+                {% if expanded_standings %}<td data-label="Seed">{% if row.playoff_seed %}#{{ row.playoff_seed }}{% else %}—{% endif %}</td><td data-label="Playoff finish">{% if row.playoff_finish %}{{ row.playoff_finish }}{% else %}—{% endif %}</td>{% endif %}
               </tr>
             {% endfor %}
           </tbody>
@@ -143,7 +146,7 @@ layout: default
     </div>
   </section>
 
-  {% if draft %}<section class="shell-content season-section season-draft-link" id="draft" aria-labelledby="draft-heading"><div><p class="eyebrow">Where the season began</p><h2 id="draft-heading">{{ season.year }} Draft</h2><p>{% if draft.draft_date %}The league drafted on {{ draft.draft_date | date: "%B %-d, %Y at %-I:%M %p %Z" }}. {% endif %}{% if season.year == 2025 %}Albany Kneelers selected Ja’Marr Chase with the first overall pick. {% endif %}The complete draft archive preserves {{ draft.pick_count }} verified selections across {{ draft.rounds }} rounds.</p><a class="button button--gold" href="{{ '/drafts/' | append: season.year | append: '/' | relative_url }}">Open the {{ season.year }} draft</a></div>{% if draft.order_asset %}<a class="season-draft-link__image" href="{{ '/drafts/' | append: season.year | append: '/' | relative_url }}"><img src="{{ draft.order_asset.path | relative_url }}" alt="{{ draft.order_asset.alt }}"></a>{% endif %}</section>{% endif %}
+  {% if draft %}<section class="shell-content season-section season-draft-link" id="draft" aria-labelledby="draft-heading"><div><p class="eyebrow">Where the season began</p><h2 id="draft-heading">{{ season.year }} Draft</h2><p>{% if draft.draft_date %}The league drafted on {{ draft.draft_date | date: "%B %-d, %Y at %-I:%M %p %Z" }}. {% endif %}{% if season.year == 2025 %}Albany Kneelers selected Ja’Marr Chase with the first overall pick. {% endif %}{% if draft.pick_data_status == 'verified_structured' %}The complete draft archive preserves {{ draft.pick_count }} verified selections across {{ draft.rounds }} rounds.{% else %}The approved archive preserves the verified opening order and original result captures across {{ draft.rounds }} rounds; individual selections remain image-only and are not treated as structured data.{% endif %}</p><a class="button button--gold" href="{{ '/drafts/' | append: season.year | append: '/' | relative_url }}">Open the {{ season.year }} draft</a></div>{% if draft.order_asset %}<a class="season-draft-link__image" href="{{ '/drafts/' | append: season.year | append: '/' | relative_url }}"><img src="{{ draft.order_asset.path | relative_url }}" alt="{{ draft.order_asset.alt }}"></a>{% endif %}</section>{% endif %}
 
   <section class="season-section season-section--tint" id="teams" aria-labelledby="teams-heading">
     <div class="shell-content">

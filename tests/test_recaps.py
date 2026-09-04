@@ -38,7 +38,7 @@ class RecapGenerationTests(unittest.TestCase):
         self.assertEqual(len(self.payload["team_recaps"]), 58)
         self.assertEqual(len(self.payload["playoff_recaps"]), 28)
         self.assertEqual(len(self.payload["championship_recaps"]), 5)
-        self.assertEqual(len(self.payload["by_the_numbers"]), 69)
+        self.assertEqual(len(self.payload["by_the_numbers"]), 72)
 
     def test_2025_complete_weekly_archive_and_narrative(self) -> None:
         recap = self.season_recap(2025)

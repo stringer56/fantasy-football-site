@@ -35,7 +35,7 @@ All four seasons use these public source hubs:
 | 2024 | Turnbull AC's | Chris's Crazy Team | 148.18–140.98 | 12 rows | 6 teams / 7 scored games | Complete Yahoo standings, Weeks 1–16, classified playoff and placement results, and approved local Google Site assets; no written recap |
 | 2023 | Greendale Human Beings | Albany Kneelers | 132.82–132.74 | 12 rows | 6 teams / 7 scored games | Complete Yahoo standings, Weeks 1–16, classified playoff and placement results, and approved local Google Site assets; no written recap |
 | 2022 | Ayahuasca Rush | Turnbull AC's | 115.20–69.16 | 12 rows | 4 teams / 4 scored games | Complete Yahoo standings and Weeks 1–16, scored four-team bracket plus third-place game, and approved local assets; no written recap |
-| 2021 | Albany Kneelers | Savage Huns | 121.50–118.70 | 10 rows | 4 teams / 3 games | Champion artwork and Yahoo matchup capture; no written recap |
+| 2021 | Albany Kneelers | Savage Huns | 121.50–118.70 | 10 rows | 4 teams / 3 games | Complete season-level page with resolved mappings, approved assets, deterministic recaps, and an explicit unavailable weekly archive |
 
 The year-specific championship sources are stored in `_data/seasons.yml` and
 `_data/champions.yml`. The Google pages label themselves as recaps, but the
@@ -119,6 +119,10 @@ is not counted as a separate franchise.
    remain `null`, never zero. Yahoo's official 2022 Playoffs view supplies both
    semifinal scores; the 2022–2025 detailed pages now publish independently
    matched scores for every championship-bracket game.
+   The same bracket labels Greendale as playoff seed #3 and The Swagger Daggers
+   as #4, while Yahoo's final table ranks Swagger third and Greendale fourth
+   after the postseason. Canonical data preserves playoff seed and final rank as
+   separate fields.
 4. Yahoo's official 2022 Playoffs view independently labels and scores the
    third-place game. It is included as a placement game and excluded from
    playoff-win totals. No 2021 third-place or consolation result is independently
@@ -184,7 +188,8 @@ internal asset/link target.
 
 ## Recommended next milestone
 
-Build the 2021 Complete Season History using the same season presentation while
-preserving its honest partial-data boundary: verified standings, champion and
-bracket results, approved local assets, deterministic season-level recaps, and no
-invented weekly archive.
+With all five completed league seasons normalized, build the all-time statistical
+engine across the established coverage windows: franchise career records and
+playoff history from verified 2021–2025 season outcomes, plus head-to-head,
+margins, weekly streaks, and scoring leaderboards from verified 2022–2025 weekly
+matchups. Keep every output labelled by its actual evidence window.

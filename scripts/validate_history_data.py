@@ -246,6 +246,50 @@ def main() -> None:
                     errors.append(f"{game.get('game_id')}: playoff score differs from the weekly archive")
                 if game.get("winner_franchise_id") != source_game.get("winner_franchise_id"):
                     errors.append(f"{game.get('game_id')}: playoff winner differs from the weekly archive")
+        elif season.get("data_mode") == "season_level":
+            if season.get("status_label") != "Complete":
+                errors.append(f"{year}: season-level archive must be labelled Complete")
+            if season.get("coverage_label") != f"Season Data — Verified {year}":
+                errors.append(f"{year}: season-level coverage label is missing or incorrect")
+            if season.get("weeks_data_path"):
+                errors.append(f"{year}: unavailable weekly history must not define weeks_data_path")
+            source_standings = json.loads(
+                (ROOT / f"_data/generated/history/{year}/standings.json").read_text(encoding="utf-8")
+            )
+            source_rows = {row["franchise_id"]: row for row in source_standings["standings"]}
+            if len(standings) != 10 or set(source_rows) != {row.get("franchise_id") for row in standings}:
+                errors.append(f"{year}: standings must contain the 10 verified Yahoo franchises")
+            for row in standings:
+                source = source_rows.get(row.get("franchise_id"), {})
+                for field in (
+                    "rank", "wins", "losses", "ties", "win_percentage", "points_for",
+                    "points_against", "streak", "playoff_seed", "playoff_finish",
+                ):
+                    if row.get(field) != source.get(field):
+                        errors.append(f"{year} {row.get('franchise_id')}: {field} differs from verified source")
+            field = playoff.get("playoff_field") or []
+            seeded_rows = sorted(
+                (row for row in standings if row.get("playoff_seed") is not None),
+                key=lambda row: row["playoff_seed"],
+            )
+            expected_seeds = list(range(1, len(seeded_rows) + 1))
+            if [row.get("playoff_seed") for row in seeded_rows] != expected_seeds:
+                errors.append(f"{year}: playoff seeds must be complete and sequential")
+            if [item.get("seed") for item in field] != expected_seeds:
+                errors.append(f"{year}: playoff field must preserve the verified bracket seeds")
+            elif [item.get("franchise_id") for item in field] != [row.get("franchise_id") for row in seeded_rows]:
+                errors.append(f"{year}: playoff field franchises must match the verified seed order")
+            weeks = json.loads(
+                (ROOT / f"_data/generated/history/{year}/weeks.json").read_text(encoding="utf-8")
+            )
+            if weeks.get("coverage", {}).get("complete") is not False or weeks.get("weeks") != []:
+                errors.append(f"{year}: unavailable weekly data must remain explicitly empty")
+            if len(games) != 3 or sum(game.get("round") == "Championship" for game in games) != 1:
+                errors.append(f"{year}: expected two verified semifinals and one championship")
+            if any(game.get("bracket_type") != "championship" for game in games):
+                errors.append(f"{year}: all verified playoff games belong to the championship bracket")
+            if sum(game.get("team_one_score") is not None for game in games) != 1:
+                errors.append(f"{year}: only the championship may contain a verified score")
 
     if errors:
         raise SystemExit("History validation failed:\n- " + "\n- ".join(errors))

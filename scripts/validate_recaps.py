@@ -297,6 +297,8 @@ def main() -> None:
                 "highest_weekly_score", "lowest_weekly_score", "biggest_victory",
                 "closest_game", "highest_combined_score", "longest_winning_streak",
             })
+        if season_by_year[year].get("data_mode") == "season_level":
+            expected_numbers.update({"lowest_pa", "playoff_field", "championship_margin"})
         if stat_ids != expected_numbers:
             errors.append(f"by_the_numbers/{year}: supported canonical fields are incomplete")
 
@@ -317,6 +319,31 @@ def main() -> None:
         team_recaps = [item for item in collections["team_recaps"] if item.get("season") == detailed_year]
         if len(team_recaps) != 12 or any(not item.get("weekly_metrics") for item in team_recaps):
             errors.append(f"{detailed_year}: all 12 franchises require verified weekly mini-recap metrics")
+
+    season_level_years = sorted(
+        year for year, season in season_by_year.items() if season.get("data_mode") == "season_level"
+    )
+    for season_level_year in season_level_years:
+        season_recap = next((item for item in season_recaps if item.get("season") == season_level_year), None)
+        if not season_recap:
+            continue
+        if season_recap.get("weekly_archive") is not None:
+            errors.append(f"season-{season_level_year}: unavailable weekly archive must remain null")
+        if not 3 <= len(season_recap.get("paragraphs") or []) <= 5:
+            errors.append(f"season-{season_level_year}: season narrative must contain 3-5 paragraphs")
+        team_recaps = [item for item in collections["team_recaps"] if item.get("season") == season_level_year]
+        expected_count = season_by_year[season_level_year]["team_count"]
+        if len(team_recaps) != expected_count:
+            errors.append(f"{season_level_year}: every verified franchise requires a mini-recap")
+        if any(item.get("weekly_metrics") is not None for item in team_recaps):
+            errors.append(f"{season_level_year}: weekly metrics cannot be generated without weekly results")
+        weekly_fact_types = {
+            "weekly_archive_coverage", "highest_weekly_score", "lowest_weekly_score",
+            "biggest_victory", "closest_game", "highest_combined_score", "verified_weekly_metrics",
+        }
+        for entry in [season_recap, *team_recaps, *[item for item in collections["by_the_numbers"] if item.get("season") == season_level_year]]:
+            if {fact.get("fact_type") for fact in entry.get("facts_used") or []} & weekly_fact_types:
+                errors.append(f"{season_level_year}: weekly-derived fact leaked into season-level recap output")
 
     override_keys: set[tuple[Any, ...]] = set()
     for kind in ("season_recaps", "team_recaps", "playoff_recaps", "championship_recaps"):

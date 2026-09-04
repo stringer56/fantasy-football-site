@@ -77,6 +77,12 @@ editorial decisions, and unresolved fields.
   Its standings rows may also include verified `win_percentage`, `playoff_seed`,
   and `playoff_finish` values. Seasons without these fields retain the archival
   image presentation.
+  A season with complete final standings but unavailable weekly results may use
+  `data_mode: season_level`, a reader-facing `coverage_label` and
+  `coverage_notice`, and verified `streak`, `playoff_seed`, and
+  `playoff_finish` fields without defining `weeks_data_path`. The 2021 closing
+  streak is copied from Yahoo's final table; it is not a reconstructed weekly
+  streak.
 - `playoffs.yml`: one record per season with a local bracket and structured games.
   Games include a stable game ID, actual source round, order, seeds, display names,
   optional franchise IDs, nullable scores, winner, and a source note. Unpublished

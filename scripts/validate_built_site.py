@@ -224,6 +224,19 @@ def main() -> None:
                 )
             if rendered.count('class="team-recap-card"') != 12:
                 errors.append(f"{season['year']} season page must render all 12 team mini-recaps")
+        elif season.get("data_mode") == "season_level":
+            for expected in (
+                "Complete", "Season Data — Verified 2021", "Final streak", "Playoff Field",
+                "individual selections remain image-only", "Winner verified · score unavailable",
+            ):
+                if expected not in rendered:
+                    errors.append(f"season page {route} is missing {season['year']} content: {expected}")
+            if "Week-by-Week Archive" in rendered or 'class="week-card"' in rendered:
+                errors.append(f"{season['year']} season page must not render an unavailable weekly archive")
+            if rendered.count('class="team-recap-card"') != season["team_count"]:
+                errors.append(f"{season['year']} season page must render all verified team mini-recaps")
+            if rendered.count('class="playoff-result"') != 3:
+                errors.append(f"{season['year']} season page must render exactly three verified playoff outcomes")
     for draft in draft_data["drafts"]:
         route = f"/drafts/{draft['year']}/"
         rendered = route_target(route).read_text(encoding="utf-8")

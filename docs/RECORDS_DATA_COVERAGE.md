@@ -36,6 +36,10 @@ their complete verified weekly archives; the broader deterministic outputs live 
   result is inferred.
 - The 2021 commissioner draft-order crosswalk resolves The Swagger Daggers to
   Buffalo Bravado and Matthew's Optimal Team to Vegas Vandals.
+- The 2021 page contributes all ten resolved final standings rows and its
+  verified championship to season-level aggregation. Its final-table streak
+  field is presented on the season page but never promoted into calculated
+  weekly streak records.
 - Eighteen classified 2022–2025 championship-bracket games have independently
   matched participants, winners, weeks, and numeric Yahoo scores. The 2022–2025
   canonical season pages publish those verified playoff scores; only the 2021
@@ -56,9 +60,12 @@ their complete verified weekly archives; the broader deterministic outputs live 
    relative to Yahoo's official Playoffs view. Canonical seeds follow Yahoo;
    the artwork remains preserved unchanged. Yahoo's scored third-place game is
    explicitly classified as placement and does not enter playoff-win totals.
-4. Missing values are never converted to zero. A missing input excludes the
+4. The approved 2021 bracket establishes Greendale as playoff seed #3 and The
+   Swagger Daggers as #4; Yahoo's final table separately ranks Swagger third and
+   Greendale fourth after the playoffs. Seed and final rank remain distinct.
+5. Missing values are never converted to zero. A missing input excludes the
    affected metric or downgrades its coverage.
-5. Unavailable categories carry an empty entry array and reader-facing status;
+6. Unavailable categories carry an empty entry array and reader-facing status;
    they never render a misleading empty ranking.
 
 ## Completeness path
