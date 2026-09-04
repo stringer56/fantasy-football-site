@@ -31,11 +31,20 @@
       "short_name": "Human Beings",
       "path": "/teams/greendale-human-beings/",
       "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+      "playoff_appearances": 5,
       "playoff_games": 8,
       "playoff_wins": 5,
       "playoff_losses": 3,
+      "playoff_win_percentage": 0.625,
+      "semifinal_appearances": 4,
       "championship_appearances": 2,
       "championships": 2,
+      "runner_up_finishes": 0,
+      "championship_record": {
+        "wins": 2,
+        "losses": 0,
+        "win_percentage": 1.0
+      },
       "largest_playoff_win": {
         "matchup_id": "2023-w15-03-07",
         "season": 2023,
@@ -46,41 +55,21 @@
         "team_a": {
           "franchise_id": "ayahuasca-rush",
           "display_name": "Ayahuasca Rush",
-          "short_name": "Rush",
           "path": "/teams/ayahuasca-rush/",
-          "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
           "score": 73.44
         },
         "team_b": {
           "franchise_id": "greendale-human-beings",
           "display_name": "Greendale Human Beings",
-          "short_name": "Human Beings",
           "path": "/teams/greendale-human-beings/",
-          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
           "score": 118.32
         },
-        "historical_team_a": "Ayahuasca Rush",
-        "historical_team_b": "Greendale Human Beings",
-        "team_a_score": 73.44,
-        "team_b_score": 118.32,
-        "combined_score": 191.76,
-        "margin": 44.88,
         "winner": {
           "franchise_id": "greendale-human-beings",
-          "display_name": "Greendale Human Beings",
-          "short_name": "Human Beings",
-          "path": "/teams/greendale-human-beings/",
-          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg"
+          "display_name": "Greendale Human Beings"
         },
-        "loser": {
-          "franchise_id": "ayahuasca-rush",
-          "display_name": "Ayahuasca Rush",
-          "short_name": "Rush",
-          "path": "/teams/ayahuasca-rush/",
-          "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg"
-        },
-        "winner_score": 118.32,
-        "loser_score": 73.44
+        "margin": 44.88,
+        "combined_score": 191.76
       },
       "closest_playoff_win": {
         "matchup_id": "2023-w16-02-07",
@@ -92,43 +81,24 @@
         "team_a": {
           "franchise_id": "albany-kneelers",
           "display_name": "Albany Redskins",
-          "short_name": "Redskins",
           "path": "/teams/albany-kneelers/",
-          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
           "score": 132.74
         },
         "team_b": {
           "franchise_id": "greendale-human-beings",
           "display_name": "Greendale Human Beings",
-          "short_name": "Human Beings",
           "path": "/teams/greendale-human-beings/",
-          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
           "score": 132.82
         },
-        "historical_team_a": "Albany Kneelers",
-        "historical_team_b": "Greendale Human Beings",
-        "team_a_score": 132.74,
-        "team_b_score": 132.82,
-        "combined_score": 265.56,
-        "margin": 0.08,
         "winner": {
           "franchise_id": "greendale-human-beings",
-          "display_name": "Greendale Human Beings",
-          "short_name": "Human Beings",
-          "path": "/teams/greendale-human-beings/",
-          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg"
+          "display_name": "Greendale Human Beings"
         },
-        "loser": {
-          "franchise_id": "albany-kneelers",
-          "display_name": "Albany Redskins",
-          "short_name": "Redskins",
-          "path": "/teams/albany-kneelers/",
-          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
-        },
-        "winner_score": 132.82,
-        "loser_score": 132.74
+        "margin": 0.08,
+        "combined_score": 265.56
       },
       "highest_playoff_score": 159.06,
+      "lowest_playoff_score": 80.04,
       "rank": 1
     },
     {
@@ -137,11 +107,20 @@
       "short_name": "Redskins",
       "path": "/teams/albany-kneelers/",
       "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+      "playoff_appearances": 4,
       "playoff_games": 7,
       "playoff_wins": 4,
       "playoff_losses": 3,
+      "playoff_win_percentage": 0.571429,
+      "semifinal_appearances": 3,
       "championship_appearances": 3,
       "championships": 1,
+      "runner_up_finishes": 2,
+      "championship_record": {
+        "wins": 1,
+        "losses": 2,
+        "win_percentage": 0.333333
+      },
       "largest_playoff_win": {
         "matchup_id": "2025-w15-02-03",
         "season": 2025,
@@ -152,41 +131,21 @@
         "team_a": {
           "franchise_id": "albany-kneelers",
           "display_name": "Albany Redskins",
-          "short_name": "Redskins",
           "path": "/teams/albany-kneelers/",
-          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
           "score": 159.92
         },
         "team_b": {
           "franchise_id": "ayahuasca-rush",
           "display_name": "Ayahuasca Rush",
-          "short_name": "Rush",
           "path": "/teams/ayahuasca-rush/",
-          "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
           "score": 86.84
         },
-        "historical_team_a": "Albany Kneelers",
-        "historical_team_b": "Ayahuasca Rush",
-        "team_a_score": 159.92,
-        "team_b_score": 86.84,
-        "combined_score": 246.76,
-        "margin": 73.08,
         "winner": {
           "franchise_id": "albany-kneelers",
-          "display_name": "Albany Redskins",
-          "short_name": "Redskins",
-          "path": "/teams/albany-kneelers/",
-          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
+          "display_name": "Albany Redskins"
         },
-        "loser": {
-          "franchise_id": "ayahuasca-rush",
-          "display_name": "Ayahuasca Rush",
-          "short_name": "Rush",
-          "path": "/teams/ayahuasca-rush/",
-          "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg"
-        },
-        "winner_score": 159.92,
-        "loser_score": 86.84
+        "margin": 73.08,
+        "combined_score": 246.76
       },
       "closest_playoff_win": {
         "matchup_id": "2021-w16-02-08",
@@ -198,43 +157,24 @@
         "team_a": {
           "franchise_id": "savage-huns",
           "display_name": "The Savage Huns",
-          "short_name": "Savage Huns",
           "path": "/retired/the-savage-huns/",
-          "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
           "score": 118.7
         },
         "team_b": {
           "franchise_id": "albany-kneelers",
           "display_name": "Albany Redskins",
-          "short_name": "Redskins",
           "path": "/teams/albany-kneelers/",
-          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
           "score": 121.5
         },
-        "historical_team_a": "THE SAVAGE HUNS",
-        "historical_team_b": "Albany Kneelers",
-        "team_a_score": 118.7,
-        "team_b_score": 121.5,
-        "combined_score": 240.2,
-        "margin": 2.8,
         "winner": {
           "franchise_id": "albany-kneelers",
-          "display_name": "Albany Redskins",
-          "short_name": "Redskins",
-          "path": "/teams/albany-kneelers/",
-          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
+          "display_name": "Albany Redskins"
         },
-        "loser": {
-          "franchise_id": "savage-huns",
-          "display_name": "The Savage Huns",
-          "short_name": "Savage Huns",
-          "path": "/retired/the-savage-huns/",
-          "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg"
-        },
-        "winner_score": 121.5,
-        "loser_score": 118.7
+        "margin": 2.8,
+        "combined_score": 240.2
       },
       "highest_playoff_score": 159.92,
+      "lowest_playoff_score": 103.52,
       "rank": 2
     },
     {
@@ -243,11 +183,20 @@
       "short_name": "Turnbull",
       "path": "/teams/turnbull-acs/",
       "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
+      "playoff_appearances": 3,
       "playoff_games": 6,
       "playoff_wins": 4,
       "playoff_losses": 2,
+      "playoff_win_percentage": 0.666667,
+      "semifinal_appearances": 3,
       "championship_appearances": 2,
       "championships": 1,
+      "runner_up_finishes": 1,
+      "championship_record": {
+        "wins": 1,
+        "losses": 1,
+        "win_percentage": 0.5
+      },
       "largest_playoff_win": {
         "matchup_id": "2024-w15-08-11",
         "season": 2024,
@@ -258,41 +207,21 @@
         "team_a": {
           "franchise_id": "maine-moose",
           "display_name": "Maine Moose",
-          "short_name": "Moose",
           "path": "/teams/maine-moose/",
-          "identity_image": "/assets/img/franchises/maine-moose/identity.jpg",
           "score": 106.54
         },
         "team_b": {
           "franchise_id": "turnbull-acs",
           "display_name": "Turnbull AC's",
-          "short_name": "Turnbull",
           "path": "/teams/turnbull-acs/",
-          "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
           "score": 160.3
         },
-        "historical_team_a": "Maine Moose",
-        "historical_team_b": "Turnbull AC’s",
-        "team_a_score": 106.54,
-        "team_b_score": 160.3,
-        "combined_score": 266.84,
-        "margin": 53.76,
         "winner": {
           "franchise_id": "turnbull-acs",
-          "display_name": "Turnbull AC's",
-          "short_name": "Turnbull",
-          "path": "/teams/turnbull-acs/",
-          "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg"
+          "display_name": "Turnbull AC's"
         },
-        "loser": {
-          "franchise_id": "maine-moose",
-          "display_name": "Maine Moose",
-          "short_name": "Moose",
-          "path": "/teams/maine-moose/",
-          "identity_image": "/assets/img/franchises/maine-moose/identity.jpg"
-        },
-        "winner_score": 160.3,
-        "loser_score": 106.54
+        "margin": 53.76,
+        "combined_score": 266.84
       },
       "closest_playoff_win": {
         "matchup_id": "2024-w16-05-11",
@@ -304,43 +233,24 @@
         "team_a": {
           "franchise_id": "crazy-wazs-team",
           "display_name": "Crazy Waz's Team",
-          "short_name": "Crazy Waz",
           "path": "/teams/crazy-wazs-team/",
-          "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
           "score": 140.98
         },
         "team_b": {
           "franchise_id": "turnbull-acs",
           "display_name": "Turnbull AC's",
-          "short_name": "Turnbull",
           "path": "/teams/turnbull-acs/",
-          "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
           "score": 148.18
         },
-        "historical_team_a": "Chris's Crazy Team",
-        "historical_team_b": "Turnbull AC’s",
-        "team_a_score": 140.98,
-        "team_b_score": 148.18,
-        "combined_score": 289.16,
-        "margin": 7.2,
         "winner": {
           "franchise_id": "turnbull-acs",
-          "display_name": "Turnbull AC's",
-          "short_name": "Turnbull",
-          "path": "/teams/turnbull-acs/",
-          "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg"
+          "display_name": "Turnbull AC's"
         },
-        "loser": {
-          "franchise_id": "crazy-wazs-team",
-          "display_name": "Crazy Waz's Team",
-          "short_name": "Crazy Waz",
-          "path": "/teams/crazy-wazs-team/",
-          "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg"
-        },
-        "winner_score": 148.18,
-        "loser_score": 140.98
+        "margin": 7.2,
+        "combined_score": 289.16
       },
       "highest_playoff_score": 160.3,
+      "lowest_playoff_score": 61.38,
       "rank": 3
     },
     {
@@ -349,11 +259,20 @@
       "short_name": "Rush",
       "path": "/teams/ayahuasca-rush/",
       "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+      "playoff_appearances": 4,
       "playoff_games": 6,
       "playoff_wins": 3,
       "playoff_losses": 3,
+      "playoff_win_percentage": 0.5,
+      "semifinal_appearances": 4,
       "championship_appearances": 1,
       "championships": 1,
+      "runner_up_finishes": 0,
+      "championship_record": {
+        "wins": 1,
+        "losses": 0,
+        "win_percentage": 1.0
+      },
       "largest_playoff_win": {
         "matchup_id": "2022-w15-06-11",
         "season": 2022,
@@ -364,41 +283,21 @@
         "team_a": {
           "franchise_id": "new-jersey-giants",
           "display_name": "New Jersey Giants",
-          "short_name": "Giants",
           "path": "/teams/new-jersey-giants/",
-          "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
           "score": 75.76
         },
         "team_b": {
           "franchise_id": "ayahuasca-rush",
           "display_name": "Ayahuasca Rush",
-          "short_name": "Rush",
           "path": "/teams/ayahuasca-rush/",
-          "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
           "score": 149.7
         },
-        "historical_team_a": "Quahog Stripes",
-        "historical_team_b": "Ayahuasca Rush",
-        "team_a_score": 75.76,
-        "team_b_score": 149.7,
-        "combined_score": 225.46,
-        "margin": 73.94,
         "winner": {
           "franchise_id": "ayahuasca-rush",
-          "display_name": "Ayahuasca Rush",
-          "short_name": "Rush",
-          "path": "/teams/ayahuasca-rush/",
-          "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg"
+          "display_name": "Ayahuasca Rush"
         },
-        "loser": {
-          "franchise_id": "new-jersey-giants",
-          "display_name": "New Jersey Giants",
-          "short_name": "Giants",
-          "path": "/teams/new-jersey-giants/",
-          "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
-        },
-        "winner_score": 149.7,
-        "loser_score": 75.76
+        "margin": 73.94,
+        "combined_score": 225.46
       },
       "closest_playoff_win": {
         "matchup_id": "2025-w14-03-07",
@@ -410,43 +309,24 @@
         "team_a": {
           "franchise_id": "ayahuasca-rush",
           "display_name": "Ayahuasca Rush",
-          "short_name": "Rush",
           "path": "/teams/ayahuasca-rush/",
-          "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
           "score": 75.26
         },
         "team_b": {
           "franchise_id": "maine-moose",
           "display_name": "Maine Moose",
-          "short_name": "Moose",
           "path": "/teams/maine-moose/",
-          "identity_image": "/assets/img/franchises/maine-moose/identity.jpg",
           "score": 51.92
         },
-        "historical_team_a": "Ayahuasca Rush",
-        "historical_team_b": "Maine Moose",
-        "team_a_score": 75.26,
-        "team_b_score": 51.92,
-        "combined_score": 127.18,
-        "margin": 23.34,
         "winner": {
           "franchise_id": "ayahuasca-rush",
-          "display_name": "Ayahuasca Rush",
-          "short_name": "Rush",
-          "path": "/teams/ayahuasca-rush/",
-          "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg"
+          "display_name": "Ayahuasca Rush"
         },
-        "loser": {
-          "franchise_id": "maine-moose",
-          "display_name": "Maine Moose",
-          "short_name": "Moose",
-          "path": "/teams/maine-moose/",
-          "identity_image": "/assets/img/franchises/maine-moose/identity.jpg"
-        },
-        "winner_score": 75.26,
-        "loser_score": 51.92
+        "margin": 23.34,
+        "combined_score": 127.18
       },
       "highest_playoff_score": 149.7,
+      "lowest_playoff_score": 73.44,
       "rank": 4
     },
     {
@@ -455,11 +335,20 @@
       "short_name": "Crazy Waz",
       "path": "/teams/crazy-wazs-team/",
       "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
+      "playoff_appearances": 1,
       "playoff_games": 3,
       "playoff_wins": 2,
       "playoff_losses": 1,
+      "playoff_win_percentage": 0.666667,
+      "semifinal_appearances": 1,
       "championship_appearances": 1,
       "championships": 0,
+      "runner_up_finishes": 1,
+      "championship_record": {
+        "wins": 0,
+        "losses": 1,
+        "win_percentage": 0.0
+      },
       "largest_playoff_win": {
         "matchup_id": "2024-w14-05-07",
         "season": 2024,
@@ -470,41 +359,21 @@
         "team_a": {
           "franchise_id": "crazy-wazs-team",
           "display_name": "Crazy Waz's Team",
-          "short_name": "Crazy Waz",
           "path": "/teams/crazy-wazs-team/",
-          "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
           "score": 142.96
         },
         "team_b": {
           "franchise_id": "greendale-human-beings",
           "display_name": "Greendale Human Beings",
-          "short_name": "Human Beings",
           "path": "/teams/greendale-human-beings/",
-          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
           "score": 113.12
         },
-        "historical_team_a": "Chris's Crazy Team",
-        "historical_team_b": "Greendale Human Beings",
-        "team_a_score": 142.96,
-        "team_b_score": 113.12,
-        "combined_score": 256.08,
-        "margin": 29.84,
         "winner": {
           "franchise_id": "crazy-wazs-team",
-          "display_name": "Crazy Waz's Team",
-          "short_name": "Crazy Waz",
-          "path": "/teams/crazy-wazs-team/",
-          "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg"
+          "display_name": "Crazy Waz's Team"
         },
-        "loser": {
-          "franchise_id": "greendale-human-beings",
-          "display_name": "Greendale Human Beings",
-          "short_name": "Human Beings",
-          "path": "/teams/greendale-human-beings/",
-          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg"
-        },
-        "winner_score": 142.96,
-        "loser_score": 113.12
+        "margin": 29.84,
+        "combined_score": 256.08
       },
       "closest_playoff_win": {
         "matchup_id": "2024-w15-03-05",
@@ -516,43 +385,24 @@
         "team_a": {
           "franchise_id": "ayahuasca-rush",
           "display_name": "Ayahuasca Rush",
-          "short_name": "Rush",
           "path": "/teams/ayahuasca-rush/",
-          "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
           "score": 105.96
         },
         "team_b": {
           "franchise_id": "crazy-wazs-team",
           "display_name": "Crazy Waz's Team",
-          "short_name": "Crazy Waz",
           "path": "/teams/crazy-wazs-team/",
-          "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
           "score": 117.34
         },
-        "historical_team_a": "Ayahuasca Rush",
-        "historical_team_b": "Chris's Crazy Team",
-        "team_a_score": 105.96,
-        "team_b_score": 117.34,
-        "combined_score": 223.3,
-        "margin": 11.38,
         "winner": {
           "franchise_id": "crazy-wazs-team",
-          "display_name": "Crazy Waz's Team",
-          "short_name": "Crazy Waz",
-          "path": "/teams/crazy-wazs-team/",
-          "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg"
+          "display_name": "Crazy Waz's Team"
         },
-        "loser": {
-          "franchise_id": "ayahuasca-rush",
-          "display_name": "Ayahuasca Rush",
-          "short_name": "Rush",
-          "path": "/teams/ayahuasca-rush/",
-          "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg"
-        },
-        "winner_score": 117.34,
-        "loser_score": 105.96
+        "margin": 11.38,
+        "combined_score": 223.3
       },
       "highest_playoff_score": 142.96,
+      "lowest_playoff_score": 117.34,
       "rank": 5
     },
     {
@@ -561,11 +411,20 @@
       "short_name": "Moose",
       "path": "/teams/maine-moose/",
       "identity_image": "/assets/img/franchises/maine-moose/identity.jpg",
+      "playoff_appearances": 3,
       "playoff_games": 4,
       "playoff_wins": 1,
       "playoff_losses": 3,
+      "playoff_win_percentage": 0.25,
+      "semifinal_appearances": 1,
       "championship_appearances": 0,
       "championships": 0,
+      "runner_up_finishes": 0,
+      "championship_record": {
+        "wins": 0,
+        "losses": 0,
+        "win_percentage": null
+      },
       "largest_playoff_win": {
         "matchup_id": "2024-w14-02-08",
         "season": 2024,
@@ -576,41 +435,21 @@
         "team_a": {
           "franchise_id": "albany-kneelers",
           "display_name": "Albany Redskins",
-          "short_name": "Redskins",
           "path": "/teams/albany-kneelers/",
-          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
           "score": 103.52
         },
         "team_b": {
           "franchise_id": "maine-moose",
           "display_name": "Maine Moose",
-          "short_name": "Moose",
           "path": "/teams/maine-moose/",
-          "identity_image": "/assets/img/franchises/maine-moose/identity.jpg",
           "score": 156.14
         },
-        "historical_team_a": "Albany Kneelers",
-        "historical_team_b": "Maine Moose",
-        "team_a_score": 103.52,
-        "team_b_score": 156.14,
-        "combined_score": 259.66,
-        "margin": 52.62,
         "winner": {
           "franchise_id": "maine-moose",
-          "display_name": "Maine Moose",
-          "short_name": "Moose",
-          "path": "/teams/maine-moose/",
-          "identity_image": "/assets/img/franchises/maine-moose/identity.jpg"
+          "display_name": "Maine Moose"
         },
-        "loser": {
-          "franchise_id": "albany-kneelers",
-          "display_name": "Albany Redskins",
-          "short_name": "Redskins",
-          "path": "/teams/albany-kneelers/",
-          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
-        },
-        "winner_score": 156.14,
-        "loser_score": 103.52
+        "margin": 52.62,
+        "combined_score": 259.66
       },
       "closest_playoff_win": {
         "matchup_id": "2024-w14-02-08",
@@ -622,43 +461,24 @@
         "team_a": {
           "franchise_id": "albany-kneelers",
           "display_name": "Albany Redskins",
-          "short_name": "Redskins",
           "path": "/teams/albany-kneelers/",
-          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
           "score": 103.52
         },
         "team_b": {
           "franchise_id": "maine-moose",
           "display_name": "Maine Moose",
-          "short_name": "Moose",
           "path": "/teams/maine-moose/",
-          "identity_image": "/assets/img/franchises/maine-moose/identity.jpg",
           "score": 156.14
         },
-        "historical_team_a": "Albany Kneelers",
-        "historical_team_b": "Maine Moose",
-        "team_a_score": 103.52,
-        "team_b_score": 156.14,
-        "combined_score": 259.66,
-        "margin": 52.62,
         "winner": {
           "franchise_id": "maine-moose",
-          "display_name": "Maine Moose",
-          "short_name": "Moose",
-          "path": "/teams/maine-moose/",
-          "identity_image": "/assets/img/franchises/maine-moose/identity.jpg"
+          "display_name": "Maine Moose"
         },
-        "loser": {
-          "franchise_id": "albany-kneelers",
-          "display_name": "Albany Redskins",
-          "short_name": "Redskins",
-          "path": "/teams/albany-kneelers/",
-          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
-        },
-        "winner_score": 156.14,
-        "loser_score": 103.52
+        "margin": 52.62,
+        "combined_score": 259.66
       },
       "highest_playoff_score": 156.14,
+      "lowest_playoff_score": 51.92,
       "rank": 6
     },
     {
@@ -667,11 +487,20 @@
       "short_name": "Giants",
       "path": "/teams/new-jersey-giants/",
       "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
+      "playoff_appearances": 2,
       "playoff_games": 3,
       "playoff_wins": 1,
       "playoff_losses": 2,
+      "playoff_win_percentage": 0.333333,
+      "semifinal_appearances": 2,
       "championship_appearances": 0,
       "championships": 0,
+      "runner_up_finishes": 0,
+      "championship_record": {
+        "wins": 0,
+        "losses": 0,
+        "win_percentage": null
+      },
       "largest_playoff_win": {
         "matchup_id": "2025-w14-01-12",
         "season": 2025,
@@ -682,41 +511,21 @@
         "team_a": {
           "franchise_id": "van-cortlant-rangers",
           "display_name": "Van Cortlant Rangers",
-          "short_name": "Rangers",
           "path": "/teams/van-cortlant-rangers/",
-          "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
           "score": 113.44
         },
         "team_b": {
           "franchise_id": "new-jersey-giants",
           "display_name": "New Jersey Giants",
-          "short_name": "Giants",
           "path": "/teams/new-jersey-giants/",
-          "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
           "score": 125.96
         },
-        "historical_team_a": "Van Cortlant Rangers",
-        "historical_team_b": "New Jersey Giants",
-        "team_a_score": 113.44,
-        "team_b_score": 125.96,
-        "combined_score": 239.4,
-        "margin": 12.52,
         "winner": {
           "franchise_id": "new-jersey-giants",
-          "display_name": "New Jersey Giants",
-          "short_name": "Giants",
-          "path": "/teams/new-jersey-giants/",
-          "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
+          "display_name": "New Jersey Giants"
         },
-        "loser": {
-          "franchise_id": "van-cortlant-rangers",
-          "display_name": "Van Cortlant Rangers",
-          "short_name": "Rangers",
-          "path": "/teams/van-cortlant-rangers/",
-          "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg"
-        },
-        "winner_score": 125.96,
-        "loser_score": 113.44
+        "margin": 12.52,
+        "combined_score": 239.4
       },
       "closest_playoff_win": {
         "matchup_id": "2025-w14-01-12",
@@ -728,43 +537,24 @@
         "team_a": {
           "franchise_id": "van-cortlant-rangers",
           "display_name": "Van Cortlant Rangers",
-          "short_name": "Rangers",
           "path": "/teams/van-cortlant-rangers/",
-          "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
           "score": 113.44
         },
         "team_b": {
           "franchise_id": "new-jersey-giants",
           "display_name": "New Jersey Giants",
-          "short_name": "Giants",
           "path": "/teams/new-jersey-giants/",
-          "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
           "score": 125.96
         },
-        "historical_team_a": "Van Cortlant Rangers",
-        "historical_team_b": "New Jersey Giants",
-        "team_a_score": 113.44,
-        "team_b_score": 125.96,
-        "combined_score": 239.4,
-        "margin": 12.52,
         "winner": {
           "franchise_id": "new-jersey-giants",
-          "display_name": "New Jersey Giants",
-          "short_name": "Giants",
-          "path": "/teams/new-jersey-giants/",
-          "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
+          "display_name": "New Jersey Giants"
         },
-        "loser": {
-          "franchise_id": "van-cortlant-rangers",
-          "display_name": "Van Cortlant Rangers",
-          "short_name": "Rangers",
-          "path": "/teams/van-cortlant-rangers/",
-          "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg"
-        },
-        "winner_score": 125.96,
-        "loser_score": 113.44
+        "margin": 12.52,
+        "combined_score": 239.4
       },
       "highest_playoff_score": 134.52,
+      "lowest_playoff_score": 75.76,
       "rank": 7
     },
     {
@@ -773,11 +563,20 @@
       "short_name": "Savage Huns",
       "path": "/retired/the-savage-huns/",
       "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
+      "playoff_appearances": 2,
       "playoff_games": 3,
       "playoff_wins": 1,
       "playoff_losses": 2,
+      "playoff_win_percentage": 0.333333,
+      "semifinal_appearances": 1,
       "championship_appearances": 1,
       "championships": 0,
+      "runner_up_finishes": 1,
+      "championship_record": {
+        "wins": 0,
+        "losses": 1,
+        "win_percentage": 0.0
+      },
       "largest_playoff_win": {
         "matchup_id": "2021-w15-02-04",
         "season": 2021,
@@ -788,41 +587,21 @@
         "team_a": {
           "franchise_id": "savage-huns",
           "display_name": "The Savage Huns",
-          "short_name": "Savage Huns",
           "path": "/retired/the-savage-huns/",
-          "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
           "score": 93.58
         },
         "team_b": {
           "franchise_id": "greendale-human-beings",
           "display_name": "Greendale Human Beings",
-          "short_name": "Human Beings",
           "path": "/teams/greendale-human-beings/",
-          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
           "score": 80.04
         },
-        "historical_team_a": "THE SAVAGE HUNS",
-        "historical_team_b": "Greendale Human Beings",
-        "team_a_score": 93.58,
-        "team_b_score": 80.04,
-        "combined_score": 173.62,
-        "margin": 13.54,
         "winner": {
           "franchise_id": "savage-huns",
-          "display_name": "The Savage Huns",
-          "short_name": "Savage Huns",
-          "path": "/retired/the-savage-huns/",
-          "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg"
+          "display_name": "The Savage Huns"
         },
-        "loser": {
-          "franchise_id": "greendale-human-beings",
-          "display_name": "Greendale Human Beings",
-          "short_name": "Human Beings",
-          "path": "/teams/greendale-human-beings/",
-          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg"
-        },
-        "winner_score": 93.58,
-        "loser_score": 80.04
+        "margin": 13.54,
+        "combined_score": 173.62
       },
       "closest_playoff_win": {
         "matchup_id": "2021-w15-02-04",
@@ -834,43 +613,24 @@
         "team_a": {
           "franchise_id": "savage-huns",
           "display_name": "The Savage Huns",
-          "short_name": "Savage Huns",
           "path": "/retired/the-savage-huns/",
-          "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
           "score": 93.58
         },
         "team_b": {
           "franchise_id": "greendale-human-beings",
           "display_name": "Greendale Human Beings",
-          "short_name": "Human Beings",
           "path": "/teams/greendale-human-beings/",
-          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
           "score": 80.04
         },
-        "historical_team_a": "THE SAVAGE HUNS",
-        "historical_team_b": "Greendale Human Beings",
-        "team_a_score": 93.58,
-        "team_b_score": 80.04,
-        "combined_score": 173.62,
-        "margin": 13.54,
         "winner": {
           "franchise_id": "savage-huns",
-          "display_name": "The Savage Huns",
-          "short_name": "Savage Huns",
-          "path": "/retired/the-savage-huns/",
-          "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg"
+          "display_name": "The Savage Huns"
         },
-        "loser": {
-          "franchise_id": "greendale-human-beings",
-          "display_name": "Greendale Human Beings",
-          "short_name": "Human Beings",
-          "path": "/teams/greendale-human-beings/",
-          "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg"
-        },
-        "winner_score": 93.58,
-        "loser_score": 80.04
+        "margin": 13.54,
+        "combined_score": 173.62
       },
       "highest_playoff_score": 118.7,
+      "lowest_playoff_score": 93.58,
       "rank": 8
     },
     {
@@ -879,14 +639,24 @@
       "short_name": "Bravado",
       "path": "/teams/buffalo-bravado/",
       "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+      "playoff_appearances": 1,
       "playoff_games": 1,
       "playoff_wins": 0,
       "playoff_losses": 1,
+      "playoff_win_percentage": 0.0,
+      "semifinal_appearances": 1,
       "championship_appearances": 0,
       "championships": 0,
+      "runner_up_finishes": 0,
+      "championship_record": {
+        "wins": 0,
+        "losses": 0,
+        "win_percentage": null
+      },
       "largest_playoff_win": null,
       "closest_playoff_win": null,
       "highest_playoff_score": 73.26,
+      "lowest_playoff_score": 73.26,
       "rank": 9
     },
     {
@@ -895,14 +665,24 @@
       "short_name": "Rangers",
       "path": "/teams/van-cortlant-rangers/",
       "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
+      "playoff_appearances": 1,
       "playoff_games": 1,
       "playoff_wins": 0,
       "playoff_losses": 1,
+      "playoff_win_percentage": 0.0,
+      "semifinal_appearances": 0,
       "championship_appearances": 0,
       "championships": 0,
+      "runner_up_finishes": 0,
+      "championship_record": {
+        "wins": 0,
+        "losses": 0,
+        "win_percentage": null
+      },
       "largest_playoff_win": null,
       "closest_playoff_win": null,
       "highest_playoff_score": 113.44,
+      "lowest_playoff_score": 113.44,
       "rank": 10
     }
   ],

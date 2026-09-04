@@ -42,14 +42,17 @@
     ]
   },
   "files": [
+    "franchise_career.json",
     "head_to_head.json",
     "biggest_wins.json",
     "closest_games.json",
     "weekly_scores.json",
     "streaks.json",
     "playoffs.json",
-    "franchise_summaries.json",
-    "record_thresholds.json"
+    "championships.json",
+    "season_leaders.json",
+    "record_thresholds.json",
+    "franchise_summaries.json"
   ],
   "counts": {
     "weekly_matchups_input": 446,
@@ -57,8 +60,10 @@
     "excluded_unresolved_matchups": 0,
     "head_to_head_pairs": 78,
     "classified_championship_playoff_games": 21,
-    "franchise_summaries": 13
+    "franchise_career_rows": 13,
+    "championships": 5
   },
   "unresolved_identity_policy": "Unresolved historical identities are never assigned to canonical franchises. Their games are excluded from pair and opponent-dependent records.",
+  "postseason_policy": "Placement and unclassified postseason games remain in general matchup history but are excluded from championship-bracket playoff totals.",
   "bench_records_enabled": false
 }

@@ -1,0 +1,445 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-04T00:00:00Z",
+  "coverage": {
+    "class": "season_level",
+    "label": "Verified 2021–2025",
+    "start_season": 2021,
+    "end_season": 2025,
+    "source_years": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "source_files": [
+      "_data/generated/history/2021/standings.json",
+      "_data/generated/history/2022/standings.json",
+      "_data/generated/history/2023/standings.json",
+      "_data/generated/history/2024/standings.json",
+      "_data/generated/history/2025/standings.json",
+      "_data/champions.yml"
+    ]
+  },
+  "championships": [
+    {
+      "season": 2025,
+      "season_path": "/history/2025/",
+      "champion": {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg"
+      },
+      "runner_up": {
+        "franchise_id": "albany-kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
+        "path": "/teams/albany-kneelers/",
+        "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
+      },
+      "champion_score": 107.12,
+      "runner_up_score": 106.72,
+      "margin": 0.4,
+      "combined_score": 213.84,
+      "champion_seed": 1,
+      "runner_up_seed": 2
+    },
+    {
+      "season": 2024,
+      "season_path": "/history/2024/",
+      "champion": {
+        "franchise_id": "turnbull-acs",
+        "display_name": "Turnbull AC's",
+        "short_name": "Turnbull",
+        "path": "/teams/turnbull-acs/",
+        "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg"
+      },
+      "runner_up": {
+        "franchise_id": "crazy-wazs-team",
+        "display_name": "Crazy Waz's Team",
+        "short_name": "Crazy Waz",
+        "path": "/teams/crazy-wazs-team/",
+        "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg"
+      },
+      "champion_score": 148.18,
+      "runner_up_score": 140.98,
+      "margin": 7.2,
+      "combined_score": 289.16,
+      "champion_seed": 1,
+      "runner_up_seed": 2
+    },
+    {
+      "season": 2023,
+      "season_path": "/history/2023/",
+      "champion": {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg"
+      },
+      "runner_up": {
+        "franchise_id": "albany-kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
+        "path": "/teams/albany-kneelers/",
+        "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
+      },
+      "champion_score": 132.82,
+      "runner_up_score": 132.74,
+      "margin": 0.08,
+      "combined_score": 265.56,
+      "champion_seed": 1,
+      "runner_up_seed": 2
+    },
+    {
+      "season": 2022,
+      "season_path": "/history/2022/",
+      "champion": {
+        "franchise_id": "ayahuasca-rush",
+        "display_name": "Ayahuasca Rush",
+        "short_name": "Rush",
+        "path": "/teams/ayahuasca-rush/",
+        "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg"
+      },
+      "runner_up": {
+        "franchise_id": "turnbull-acs",
+        "display_name": "Turnbull AC's",
+        "short_name": "Turnbull",
+        "path": "/teams/turnbull-acs/",
+        "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg"
+      },
+      "champion_score": 115.2,
+      "runner_up_score": 69.16,
+      "margin": 46.04,
+      "combined_score": 184.36,
+      "champion_seed": 1,
+      "runner_up_seed": 2
+    },
+    {
+      "season": 2021,
+      "season_path": "/history/2021/",
+      "champion": {
+        "franchise_id": "albany-kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
+        "path": "/teams/albany-kneelers/",
+        "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
+      },
+      "runner_up": {
+        "franchise_id": "savage-huns",
+        "display_name": "The Savage Huns",
+        "short_name": "Savage Huns",
+        "path": "/retired/the-savage-huns/",
+        "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg"
+      },
+      "champion_score": 121.5,
+      "runner_up_score": 118.7,
+      "margin": 2.8,
+      "combined_score": 240.2,
+      "champion_seed": 1,
+      "runner_up_seed": 3
+    }
+  ],
+  "leaderboards": {
+    "most_championships": [
+      {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+        "appearances": 2,
+        "championships": 2,
+        "runner_up_finishes": 0,
+        "win_percentage": 1.0,
+        "rank": 1
+      },
+      {
+        "franchise_id": "albany-kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
+        "path": "/teams/albany-kneelers/",
+        "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+        "appearances": 3,
+        "championships": 1,
+        "runner_up_finishes": 2,
+        "win_percentage": 0.333333,
+        "rank": 2
+      },
+      {
+        "franchise_id": "turnbull-acs",
+        "display_name": "Turnbull AC's",
+        "short_name": "Turnbull",
+        "path": "/teams/turnbull-acs/",
+        "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
+        "appearances": 2,
+        "championships": 1,
+        "runner_up_finishes": 1,
+        "win_percentage": 0.5,
+        "rank": 3
+      },
+      {
+        "franchise_id": "ayahuasca-rush",
+        "display_name": "Ayahuasca Rush",
+        "short_name": "Rush",
+        "path": "/teams/ayahuasca-rush/",
+        "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+        "appearances": 1,
+        "championships": 1,
+        "runner_up_finishes": 0,
+        "win_percentage": 1.0,
+        "rank": 4
+      },
+      {
+        "franchise_id": "crazy-wazs-team",
+        "display_name": "Crazy Waz's Team",
+        "short_name": "Crazy Waz",
+        "path": "/teams/crazy-wazs-team/",
+        "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
+        "appearances": 1,
+        "championships": 0,
+        "runner_up_finishes": 1,
+        "win_percentage": 0.0,
+        "rank": 5
+      },
+      {
+        "franchise_id": "savage-huns",
+        "display_name": "The Savage Huns",
+        "short_name": "Savage Huns",
+        "path": "/retired/the-savage-huns/",
+        "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
+        "appearances": 1,
+        "championships": 0,
+        "runner_up_finishes": 1,
+        "win_percentage": 0.0,
+        "rank": 6
+      }
+    ],
+    "most_appearances": [
+      {
+        "franchise_id": "albany-kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
+        "path": "/teams/albany-kneelers/",
+        "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+        "appearances": 3,
+        "championships": 1,
+        "runner_up_finishes": 2,
+        "win_percentage": 0.333333,
+        "rank": 1
+      },
+      {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+        "appearances": 2,
+        "championships": 2,
+        "runner_up_finishes": 0,
+        "win_percentage": 1.0,
+        "rank": 2
+      },
+      {
+        "franchise_id": "turnbull-acs",
+        "display_name": "Turnbull AC's",
+        "short_name": "Turnbull",
+        "path": "/teams/turnbull-acs/",
+        "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
+        "appearances": 2,
+        "championships": 1,
+        "runner_up_finishes": 1,
+        "win_percentage": 0.5,
+        "rank": 3
+      },
+      {
+        "franchise_id": "ayahuasca-rush",
+        "display_name": "Ayahuasca Rush",
+        "short_name": "Rush",
+        "path": "/teams/ayahuasca-rush/",
+        "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+        "appearances": 1,
+        "championships": 1,
+        "runner_up_finishes": 0,
+        "win_percentage": 1.0,
+        "rank": 4
+      },
+      {
+        "franchise_id": "crazy-wazs-team",
+        "display_name": "Crazy Waz's Team",
+        "short_name": "Crazy Waz",
+        "path": "/teams/crazy-wazs-team/",
+        "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
+        "appearances": 1,
+        "championships": 0,
+        "runner_up_finishes": 1,
+        "win_percentage": 0.0,
+        "rank": 5
+      },
+      {
+        "franchise_id": "savage-huns",
+        "display_name": "The Savage Huns",
+        "short_name": "Savage Huns",
+        "path": "/retired/the-savage-huns/",
+        "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
+        "appearances": 1,
+        "championships": 0,
+        "runner_up_finishes": 1,
+        "win_percentage": 0.0,
+        "rank": 6
+      }
+    ],
+    "best_championship_record": [
+      {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+        "appearances": 2,
+        "championships": 2,
+        "runner_up_finishes": 0,
+        "win_percentage": 1.0,
+        "rank": 1
+      },
+      {
+        "franchise_id": "ayahuasca-rush",
+        "display_name": "Ayahuasca Rush",
+        "short_name": "Rush",
+        "path": "/teams/ayahuasca-rush/",
+        "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+        "appearances": 1,
+        "championships": 1,
+        "runner_up_finishes": 0,
+        "win_percentage": 1.0,
+        "rank": 2
+      },
+      {
+        "franchise_id": "turnbull-acs",
+        "display_name": "Turnbull AC's",
+        "short_name": "Turnbull",
+        "path": "/teams/turnbull-acs/",
+        "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
+        "appearances": 2,
+        "championships": 1,
+        "runner_up_finishes": 1,
+        "win_percentage": 0.5,
+        "rank": 3
+      },
+      {
+        "franchise_id": "albany-kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
+        "path": "/teams/albany-kneelers/",
+        "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+        "appearances": 3,
+        "championships": 1,
+        "runner_up_finishes": 2,
+        "win_percentage": 0.333333,
+        "rank": 4
+      },
+      {
+        "franchise_id": "crazy-wazs-team",
+        "display_name": "Crazy Waz's Team",
+        "short_name": "Crazy Waz",
+        "path": "/teams/crazy-wazs-team/",
+        "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
+        "appearances": 1,
+        "championships": 0,
+        "runner_up_finishes": 1,
+        "win_percentage": 0.0,
+        "rank": 5
+      },
+      {
+        "franchise_id": "savage-huns",
+        "display_name": "The Savage Huns",
+        "short_name": "Savage Huns",
+        "path": "/retired/the-savage-huns/",
+        "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
+        "appearances": 1,
+        "championships": 0,
+        "runner_up_finishes": 1,
+        "win_percentage": 0.0,
+        "rank": 6
+      }
+    ],
+    "most_runner_up_finishes": [
+      {
+        "franchise_id": "albany-kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
+        "path": "/teams/albany-kneelers/",
+        "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+        "appearances": 3,
+        "championships": 1,
+        "runner_up_finishes": 2,
+        "win_percentage": 0.333333,
+        "rank": 1
+      },
+      {
+        "franchise_id": "turnbull-acs",
+        "display_name": "Turnbull AC's",
+        "short_name": "Turnbull",
+        "path": "/teams/turnbull-acs/",
+        "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
+        "appearances": 2,
+        "championships": 1,
+        "runner_up_finishes": 1,
+        "win_percentage": 0.5,
+        "rank": 2
+      },
+      {
+        "franchise_id": "crazy-wazs-team",
+        "display_name": "Crazy Waz's Team",
+        "short_name": "Crazy Waz",
+        "path": "/teams/crazy-wazs-team/",
+        "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
+        "appearances": 1,
+        "championships": 0,
+        "runner_up_finishes": 1,
+        "win_percentage": 0.0,
+        "rank": 3
+      },
+      {
+        "franchise_id": "savage-huns",
+        "display_name": "The Savage Huns",
+        "short_name": "Savage Huns",
+        "path": "/retired/the-savage-huns/",
+        "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
+        "appearances": 1,
+        "championships": 0,
+        "runner_up_finishes": 1,
+        "win_percentage": 0.0,
+        "rank": 4
+      },
+      {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+        "appearances": 2,
+        "championships": 2,
+        "runner_up_finishes": 0,
+        "win_percentage": 1.0,
+        "rank": 5
+      },
+      {
+        "franchise_id": "ayahuasca-rush",
+        "display_name": "Ayahuasca Rush",
+        "short_name": "Rush",
+        "path": "/teams/ayahuasca-rush/",
+        "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+        "appearances": 1,
+        "championships": 1,
+        "runner_up_finishes": 0,
+        "win_percentage": 1.0,
+        "rank": 6
+      }
+    ]
+  }
+}

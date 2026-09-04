@@ -12,7 +12,9 @@ The analytics layer consumes the coverage gates in
   margins, regular-season result streaks, and classified playoff-game metrics use
   this scope.
 
-Neither window is described as all-time.
+Public page titles may use the bounded phrase **All-Time League History —
+2021–2025**. Coverage badges and machine-readable metadata remain exactly
+`Verified 2021–2025`.
 
 ## Deterministic build
 
@@ -26,7 +28,8 @@ python scripts/validate_historical_metrics.py
 
 The builder reads normalized final Yahoo matchups, verified standings, canonical
 franchises and championship facts, and playoff classification sources. It writes
-nine schema-versioned files under `_data/generated/records/`. Repeated builds
+eleven canonical schema-versioned files under `_data/generated/records/`, plus
+the generated `franchise_summaries.json` compatibility alias. Repeated builds
 with unchanged inputs produce identical bytes.
 
 General weekly rankings use final Yahoo matchups where both canonical identities
@@ -81,6 +84,8 @@ to Vegas Vandals while preserving their historical display names.
   streaks and extend unbeaten streaks.
 - Cross-season streaks are separate and continue only across adjacent represented
   seasons for the same canonical franchise.
+- Head-to-head output includes all meetings, first/latest and high/low scoring
+  meetings, series streaks, championship meetings, and nullable rivalry editorial fields.
 - Championship totals include verified 2021–2025 season outcomes. Detailed
   playoff scoring/win-loss metrics use only independently classified 2021–2025 games.
 - Bench records remain disabled because historical roster position and player
@@ -88,7 +93,13 @@ to Vegas Vandals while preserving their historical display names.
 
 ## Record Watch readiness
 
-`record_thresholds.json` stores the current first- and tenth-place thresholds for
-weekly score and victory margin, plus high/low combined matchup scores. It is an
-input for a future live Record Watch feature; this milestone does not implement
-live monitoring.
+`record_thresholds.json` stores first-, tenth-, and twenty-fifth-place weekly
+score thresholds, first- and tenth-place victory-margin thresholds, high/low
+combined matchup scores, high losing/low winning scores, and per-franchise
+benchmarks. The records page renders a static Record Watch component; it does not
+read live Yahoo data.
+
+Exact calendar dates are not present across all normalized matchups, so the
+builder intentionally does not create `history/events.json`. Week numbers are
+never converted into guessed dates. See
+[All-Time Statistical Experience](ALL_TIME_STATISTICAL_EXPERIENCE.md).

@@ -1,0 +1,5 @@
+<a class="rivalry-summary" href="{{ include.row.share_path | relative_url }}">
+  <span>{{ include.row.opponent.display_name }}</span>
+  <strong>{{ include.row.wins }}–{{ include.row.losses }}{% if include.row.ties > 0 %}–{{ include.row.ties }}{% endif %}</strong>
+  <small>{{ include.row.meetings }} meetings{% if include.row.playoff_meetings > 0 %} · {{ include.row.playoff_meetings }} playoff{% endif %}{% if include.row.championship_meetings > 0 %} · {{ include.row.championship_meetings }} final{% endif %}</small>
+</a>

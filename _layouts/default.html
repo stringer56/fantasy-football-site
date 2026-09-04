@@ -41,7 +41,7 @@
         <a href="{{ '/history/' | relative_url }}"{% if page.url contains '/history/' or page.url contains '/seasons/' %} aria-current="page"{% endif %}>League History</a>
         <a href="{{ '/drafts/' | relative_url }}"{% if page.url contains '/drafts/' %} aria-current="page"{% endif %}>Drafts</a>
         <a href="{{ '/cup/' | relative_url }}"{% if page.url contains '/cup/' %} aria-current="page"{% endif %}>Brew Crew Cup</a>
-        <a href="{{ '/records/' | relative_url }}"{% if page.url contains '/records/' %} aria-current="page"{% endif %}>Records</a>
+        <a href="{{ '/records/' | relative_url }}"{% if page.url contains '/records/' or page.url contains '/head-to-head/' or page.url contains '/all-time-standings/' or page.url contains '/championships/' %} aria-current="page"{% endif %}>Records</a>
         <a href="{{ '/votes/' | relative_url }}"{% if page.url contains '/votes/' %} aria-current="page"{% endif %}>League Votes</a>
         <a href="{{ '/retired/' | relative_url }}"{% if page.url contains '/retired/' %} aria-current="page"{% endif %}>Retired Franchises</a>
         <a href="{{ '/rules/' | relative_url }}"{% if page.url contains '/rules/' %} aria-current="page"{% endif %}>Rules</a>

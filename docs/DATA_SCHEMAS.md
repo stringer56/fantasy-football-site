@@ -270,23 +270,33 @@ Raw HTML lives only under ignored `.cache/yahoo-history/`. See
 
 ### Historical derived metrics
 
-`_data/generated/records/` contains nine deterministic schema-versioned files:
+`_data/generated/records/` contains eleven canonical deterministic,
+schema-versioned files plus one generated compatibility alias:
 
 - `manifest.json`: coverage windows, file inventory, source/exclusion counts,
   identity-mapping policy, and the disabled bench-record flag.
-- `head_to_head.json`: resolved franchise pairs, series totals, points, averages,
-  largest/closest/highest meetings, current streak, playoff totals, and recent games.
-- `biggest_wins.json` and `closest_games.json`: Top 10 overall, regular-season,
-  and confidently classified playoff results, plus preserved ties.
-- `weekly_scores.json`: Top 10 team scores, season highs/lows, and combined-game totals.
-- `streaks.json`: single-season and separately labelled cross-season win/loss
-  streaks plus single-season unbeaten streaks.
+- `franchise_career.json`: season-level career totals, separately labelled weekly
+  performance, playoff/championship history, season rows, opponent series, and
+  season/week-only timeline events.
+- `head_to_head.json`: all 78 resolved franchise pairs, series totals, points,
+  averages, first/latest and high/low meetings, current/longest streaks, playoff
+  and championship totals, every meeting, and nullable rivalry editorial fields.
+- `biggest_wins.json` and `closest_games.json`: Top 25 overall, Top 10 regular and
+  classified playoff results, championship records, per-franchise records, and
+  separately preserved ties.
+- `weekly_scores.json`: Top 25 high/low team scores, per-franchise and per-season
+  extremes, combined games, highest losing scores, and lowest winning scores.
+- `streaks.json`: single-season and separately labelled cross-season win/loss/
+  unbeaten streaks, playoff streaks, and championship-appearance streaks.
 - `playoffs.json`: only independently classified championship-bracket games and
   per-franchise playoff metrics.
-- `franchise_summaries.json`: separate season-level and weekly-derived 2021–2025
-  modules for canonical franchise pages.
-- `record_thresholds.json`: reusable verified thresholds for future Record Watch.
+- `championships.json`: verified final games and canonical franchise leaderboards.
+- `season_leaders.json`: deterministic cross-season standings and final comparisons.
+- `record_thresholds.json`: reusable verified archive thresholds for Record Watch.
+- `franchise_summaries.json`: generated compatibility alias for
+  `franchise_career.json`; new templates do not depend on it.
 
 The pre-existing Milestone 7 output is named `_data/generated/record_book.json`
 to avoid a Jekyll data-key collision with the records directory. See
-[Historical Derived Metrics](HISTORICAL_METRICS.md).
+[Historical Derived Metrics](HISTORICAL_METRICS.md) and
+[All-Time Statistical Experience](ALL_TIME_STATISTICAL_EXPERIENCE.md).

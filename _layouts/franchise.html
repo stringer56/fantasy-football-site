@@ -7,7 +7,7 @@ layout: default
   {% if franchise.status == "retired" %}{% assign is_retired = true %}{% endif %}
   {% assign profile = franchise.profile %}
   {% assign branding = franchise.branding %}
-  {% assign historical_metrics = site.data.generated.records.franchise_summaries.franchises | where: "franchise_id", franchise.franchise_id | first %}
+  {% assign historical_metrics = site.data.generated.records.franchise_career.franchises | where: "franchise_id", franchise.franchise_id | first %}
 
   <article class="franchise-profile{% if is_retired %} franchise-profile--retired{% endif %}">
     <header class="franchise-hero">
@@ -97,14 +97,41 @@ layout: default
       <section class="content-section content-section--neutral content-section--bordered franchise-history" id="franchise-history">
         <div class="wrap">
           <div class="section-heading">
-            <div><p class="eyebrow eyebrow--dark">Verified results</p><h2>Franchise Record</h2><p>Season standings and weekly matchup performance are kept in separate verified windows.</p></div>
-            <a class="button button--outline" href="{{ '/head-to-head/' | relative_url }}">Head-to-head</a>
+            <div><p class="eyebrow eyebrow--dark">Career summary · 2021–2025</p><h2>Franchise Record</h2><p>Historical names consolidate here without changing the source-season display names below.</p></div>
+            <a class="button button--outline" href="{{ '/head-to-head/' | append: '?a=' | append: franchise.franchise_id | relative_url }}">Build a head-to-head</a>
           </div>
+          {% assign season_history = historical_metrics.season_history %}
+          {% assign weekly = historical_metrics.weekly_performance %}
+          {% assign playoff = historical_metrics.playoff_history %}
           <div class="franchise-history__grid">
-            {% assign season_history = historical_metrics.season_history %}
-            {% if season_history.season_count > 0 %}<article><span>{{ season_history.coverage.label }}</span><h3>Season History</h3><dl><div><dt>Seasons</dt><dd>{{ season_history.season_count }}</dd></div><div><dt>Record</dt><dd>{{ season_history.wins }}–{{ season_history.losses }}{% if season_history.ties > 0 %}–{{ season_history.ties }}{% endif %}</dd></div><div><dt>Points for</dt><dd>{{ season_history.points_for }}</dd></div><div><dt>Average rank</dt><dd>{{ season_history.average_final_rank | round: 2 }}</dd></div><div><dt>Championships</dt><dd>{{ season_history.championships }}</dd></div></dl></article>{% endif %}
-            {% assign weekly = historical_metrics.weekly_performance %}
-            {% if weekly.games > 0 %}<article><span>{{ weekly.coverage.label }}</span><h3>Weekly Performance</h3><dl><div><dt>Games</dt><dd>{{ weekly.games }}</dd></div><div><dt>Record</dt><dd>{{ weekly.wins }}–{{ weekly.losses }}{% if weekly.ties > 0 %}–{{ weekly.ties }}{% endif %}</dd></div><div><dt>Average score</dt><dd>{{ weekly.average_score | round: 2 }}</dd></div><div><dt>High / Low</dt><dd>{{ weekly.highest_score }} / {{ weekly.lowest_score }}</dd></div><div><dt>Best win streak</dt><dd>{% if weekly.longest_winning_streak %}{{ weekly.longest_winning_streak.games }} games{% else %}—{% endif %}</dd></div></dl></article>{% endif %}
+            {% if season_history.season_count > 0 %}<article><span>{{ season_history.coverage.label }}</span><h3>Career Summary</h3><dl><div><dt>Seasons</dt><dd>{{ season_history.season_count }}</dd></div><div><dt>Record</dt><dd>{{ season_history.wins }}–{{ season_history.losses }}–{{ season_history.ties }}</dd></div><div><dt>Win %</dt><dd>{{ season_history.win_percentage | times: 100 | round: 1 }}%</dd></div><div><dt>PF / PA</dt><dd>{{ season_history.points_for }} / {{ season_history.points_against }}</dd></div><div><dt>Finals</dt><dd>{% if playoff %}{{ playoff.championship_record.wins }}–{{ playoff.championship_record.losses }}{% else %}0–0{% endif %}</dd></div><div><dt>Titles</dt><dd>{{ season_history.championships }}</dd></div></dl></article>{% endif %}
+            {% if weekly.games > 0 %}<article><span>{{ weekly.coverage.label }}</span><h3>Weekly Performance</h3><dl><div><dt>Games</dt><dd>{{ weekly.games }}</dd></div><div><dt>Avg score</dt><dd>{{ weekly.average_score | round: 2 }}</dd></div><div><dt>Avg allowed</dt><dd>{{ weekly.average_points_allowed | round: 2 }}</dd></div><div><dt>High / Low</dt><dd>{{ weekly.highest_score }} / {{ weekly.lowest_score }}</dd></div><div><dt>Playoffs</dt><dd>{% if playoff %}{{ playoff.playoff_wins }}–{{ playoff.playoff_losses }}{% else %}0–0{% endif %}</dd></div></dl></article>{% endif %}
+          </div>
+
+          <div class="record-subhead"><div><p class="eyebrow">Franchise marks</p><h3>Records</h3></div><span class="coverage-badge coverage-badge--complete">{{ weekly.coverage.label }}</span></div>
+          <div class="franchise-record-grid">
+            <article><span>Highest score</span><strong>{{ weekly.highest_score }}</strong></article>
+            <article><span>Lowest score</span><strong>{{ weekly.lowest_score }}</strong></article>
+            <article><span>Biggest win</span><strong>{% if weekly.biggest_win %}{{ weekly.biggest_win.margin }}{% else %}—{% endif %}</strong></article>
+            <article><span>Closest win</span><strong>{% if weekly.closest_win %}{{ weekly.closest_win.margin }}{% else %}—{% endif %}</strong></article>
+            <article><span>Longest win streak</span><strong>{% if weekly.longest_winning_streak %}W{{ weekly.longest_winning_streak.games }}{% else %}—{% endif %}</strong></article>
+            <article><span>Longest loss streak</span><strong>{% if weekly.longest_losing_streak %}L{{ weekly.longest_losing_streak.games }}{% else %}—{% endif %}</strong></article>
+          </div>
+
+          <div class="record-subhead"><div><p class="eyebrow">Year by year</p><h3>Season History</h3></div></div>
+          <p class="table-scroll-note">Swipe horizontally to see every season field.</p>
+          <div class="record-table-wrap" tabindex="0" role="region" aria-label="{{ franchise.name | escape }} season history"><table class="record-table record-table--franchise-seasons"><thead><tr><th>Year</th><th>Historical Name</th><th>Record</th><th>PF</th><th>PA</th><th>Rank</th><th>Finish</th></tr></thead><tbody>
+            {% for row in season_history.seasons %}<tr><td class="record-rank"><a href="{{ row.season_path | relative_url }}">{{ row.season }}</a></td><td>{{ row.historical_team_name }}</td><td>{{ row.wins }}–{{ row.losses }}–{{ row.ties }}</td><td>{{ row.points_for }}</td><td>{{ row.points_against }}</td><td>{{ row.rank }}</td><td>{% if row.playoff_finish %}{{ row.playoff_finish }}{% else %}—{% endif %}</td></tr>{% endfor %}
+          </tbody></table></div>
+
+          <div class="franchise-history-columns">
+            <section aria-labelledby="profile-h2h-heading"><div class="record-subhead"><div><p class="eyebrow">Every opponent</p><h3 id="profile-h2h-heading">Head-to-Head</h3></div></div><div class="profile-h2h-list">
+              {% for row in historical_metrics.head_to_head %}{% include rivalry-summary.html row=row %}{% endfor %}
+            </div></section>
+            <section aria-labelledby="profile-championship-heading"><div class="record-subhead"><div><p class="eyebrow">The Cup</p><h3 id="profile-championship-heading">Championship History</h3></div></div>
+              {% if historical_metrics.championship_history.size > 0 %}<div class="profile-championship-list">{% for row in historical_metrics.championship_history %}<a href="{{ row.season_path | relative_url }}"><span>{{ row.season }}</span><strong>{{ row.result }}</strong></a>{% endfor %}</div>{% else %}<p>No verified championship appearances from 2021–2025.</p>{% endif %}
+              <div class="record-subhead"><div><p class="eyebrow">Verified milestones</p><h3>Timeline Foundation</h3></div></div><ol class="franchise-timeline">{% for event in historical_metrics.timeline_events %}<li><span>{{ event.season }}{% if event.week %} · W{{ event.week }}{% endif %}</span><strong>{{ event.label }}</strong></li>{% endfor %}</ol>
+            </section>
           </div>
         </div>
       </section>
