@@ -10,7 +10,7 @@ as all-time.
   margins, streaks, and classified playoff-game metrics use this window. The
   2021 season is excluded because no weekly scoreboard archive was recovered.
 
-The canonical five season pages now cover 2021–2025. The 2023–2025 pages add
+The canonical five season pages now cover 2021–2025. The 2022–2025 pages add
 their complete verified weekly archives; the broader deterministic outputs live in
 `_data/generated/records/` and retain their own source lists and coverage labels.
 
@@ -37,9 +37,9 @@ their complete verified weekly archives; the broader deterministic outputs live 
 - The 2021 commissioner draft-order crosswalk resolves The Swagger Daggers to
   Buffalo Bravado and Matthew's Optimal Team to Vegas Vandals.
 - Eighteen classified 2022–2025 championship-bracket games have independently
-  matched participants, winners, weeks, and numeric Yahoo scores. The 2023–2025
-  canonical season pages publish those verified playoff scores; the 2021 bracket
-  and 2022 canonical semifinals preserve winners with unavailable displayed scores.
+  matched participants, winners, weeks, and numeric Yahoo scores. The 2022–2025
+  canonical season pages publish those verified playoff scores; only the 2021
+  bracket preserves semifinal winners with unavailable displayed scores.
 - The complete Yahoo draft boards contain 180 picks per year for 2022–2025.
 - Transaction archives are complete for 2022–2025, but no public record category
   currently turns raw transaction volume into a quality claim.
@@ -52,9 +52,13 @@ their complete verified weekly archives; the broader deterministic outputs live 
 2. An earlier 2024 quarterfinal transcription named Buffalo Bravados, but the
    approved bracket and Yahoo Week 14 archive agree on Albany Kneelers. The
    corrected game now enters playoff-only calculations; placement games do not.
-3. Missing values are never converted to zero. A missing input excludes the
+3. The approved 2022 bracket reverses Greendale and Turnbull's seed labels
+   relative to Yahoo's official Playoffs view. Canonical seeds follow Yahoo;
+   the artwork remains preserved unchanged. Yahoo's scored third-place game is
+   explicitly classified as placement and does not enter playoff-win totals.
+4. Missing values are never converted to zero. A missing input excludes the
    affected metric or downgrades its coverage.
-4. Unavailable categories carry an empty entry array and reader-facing status;
+5. Unavailable categories carry an empty entry array and reader-facing status;
    they never render a misleading empty ranking.
 
 ## Completeness path

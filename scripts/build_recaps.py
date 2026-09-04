@@ -151,6 +151,10 @@ def derive_weekly_archive(
             continue
         playoff_games[(game["week"], frozenset((game["team_one_franchise_id"], game["team_two_franchise_id"])))] = game
 
+    regular_season_weeks = int(season.get("regular_season_weeks", 13))
+    if regular_season_weeks < 1 or regular_season_weeks >= 16:
+        raise ValueError(f"{season['year']}: regular_season_weeks must be between 1 and 15")
+
     team_games: dict[str, list[dict[str, Any]]] = {row["franchise_id"]: [] for row in season["standings"]}
     week_summaries: list[dict[str, Any]] = []
     all_games: list[dict[str, Any]] = []
@@ -173,9 +177,25 @@ def derive_weekly_archive(
             classification = playoff_games.get(
                 (week["week"], frozenset((one["franchise_id"], two["franchise_id"])))
             )
+            if classification and classification.get("bracket_type") == "championship":
+                game_type = "championship_playoff"
+            elif classification and classification.get("bracket_type") == "placement":
+                game_type = "placement"
+            elif raw.get("is_playoffs") is True:
+                game_type = "postseason_unclassified"
+            else:
+                game_type = "regular_season"
+            game_label = (
+                f"Final · {classification['round']}"
+                if classification
+                else ("Final · Postseason" if game_type == "postseason_unclassified" else "Final · Regular season")
+            )
             game = {
                 "matchup_id": raw["matchup_id"],
                 "week": week["week"],
+                "status": raw.get("status"),
+                "game_type": game_type,
+                "game_label": game_label,
                 "team_one": one,
                 "team_two": two,
                 "winner_franchise_id": raw.get("winner_franchise_id"),
@@ -211,6 +231,8 @@ def derive_weekly_archive(
         closest_margin = min(game["margin"] for game in normalized)
         biggest_margin = max(game["margin"] for game in normalized)
         for game in normalized:
+            if game["tie"]:
+                game["notable_labels"].append("Tie game")
             if highest_score in (game["team_one"]["score"], game["team_two"]["score"]):
                 game["notable_labels"].append("Highest score of the week")
             if game["margin"] == closest_margin:
@@ -238,7 +260,10 @@ def derive_weekly_archive(
         closest = min(games, key=lambda item: (item["margin"], item["week"]))
         biggest = max(wins, key=lambda item: (item["margin"], -item["week"])) if wins else None
         longest_win = longest_loss = current_win = current_loss = 0
-        for game in sorted((item for item in games if item["week"] <= 13), key=lambda item: item["week"]):
+        for game in sorted(
+            (item for item in games if item["week"] <= regular_season_weeks),
+            key=lambda item: item["week"],
+        ):
             if game["result"] == "W":
                 current_win += 1
                 current_loss = 0
@@ -273,6 +298,13 @@ def derive_weekly_archive(
             f"{format_points(value)} · Week {game['week']}"
         )
 
+    closest_display = (
+        f"{closest_game['team_one']['name']} vs. {closest_game['team_two']['name']} · "
+        f"Tie · Week {closest_game['week']}"
+        if closest_game["tie"]
+        else matchup_label(closest_game, closest_game["margin"])
+    )
+
     return {
         "coverage_label": "Verified Weeks 1–16",
         "week_count": len(week_summaries),
@@ -283,7 +315,7 @@ def derive_weekly_archive(
             "highest_weekly_score": {**highest_score, "display": score_label(highest_score)},
             "lowest_weekly_score": {**lowest_score, "display": score_label(lowest_score)},
             "biggest_victory": {**biggest_game, "display": matchup_label(biggest_game, biggest_game["margin"])},
-            "closest_game": {**closest_game, "display": matchup_label(closest_game, closest_game["margin"])},
+            "closest_game": {**closest_game, "display": closest_display},
             "highest_combined_score": {**combined_game, "display": matchup_label(combined_game, combined_game["combined_score"])},
             "longest_winning_streak": {
                 "games": best_streak,
@@ -535,12 +567,16 @@ def build_season_recap(
             f", with {bye_names} earning the {bye_count} first-round byes"
             if byes else ""
         )
+        closest_sentence = (
+            f"the closest game was a tie in Week {closest['week']}."
+            if closest["tie"]
+            else f"the closest game was decided by {format_points(closest['margin'])} points in Week {closest['week']}."
+        )
         paragraphs.append(
             f"Across all 16 verified weeks, {high['name']} recorded the season's highest weekly score at "
             f"{format_points(high['score'])} in Week {high['week']}, while {low['name']} posted the lowest at "
             f"{format_points(low['score'])} in Week {low['week']}. The largest victory margin was "
-            f"{format_points(biggest['margin'])} points in Week {biggest['week']}, and the closest game was decided "
-            f"by {format_points(closest['margin'])} points in Week {closest['week']}."
+            f"{format_points(biggest['margin'])} points in Week {biggest['week']}, and {closest_sentence}"
         )
         paragraphs.append(
             f"The highest combined score reached {format_points(combined['combined_score'])} in Week "
@@ -698,10 +734,15 @@ def build_team_recap(
             )
         win_streak = weekly_metrics["longest_regular_season_win_streak"]
         loss_streak = weekly_metrics["longest_regular_season_loss_streak"]
+        if closest["result"] == "T":
+            weekly_sentence += f"Its closest game was a tie with {closest['opponent_name']} in Week {closest['week']}; "
+        else:
+            weekly_sentence += (
+                f"Its closest game was a {format_points(closest['margin'])}-point decision against "
+                f"{closest['opponent_name']} in Week {closest['week']}; "
+            )
         weekly_sentence += (
-            f"Its closest game was a {format_points(closest['margin'])}-point decision against "
-            f"{closest['opponent_name']} in Week {closest['week']}; its longest regular-season streaks were "
-            f"{win_streak} {'win' if win_streak == 1 else 'wins'} and "
+            f"its longest regular-season streaks were {win_streak} {'win' if win_streak == 1 else 'wins'} and "
             f"{loss_streak} {'loss' if loss_streak == 1 else 'losses'}."
         )
         sentences.append(weekly_sentence)

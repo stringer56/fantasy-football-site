@@ -143,6 +143,8 @@ Narratives describe fantasy franchises and public results. The generator does
 not read owner contact data and cannot emit emails, addresses, medical details,
 Yahoo account identifiers, invitations, credentials, or private communications.
 
-The 2023–2025 outputs now use the complete weekly season architecture: each has
+The 2022–2025 outputs now use the complete weekly season architecture: each has
 16 weekly groups containing 92 final matchups, independently classified
-postseason/placement recaps, and one mini recap for each of 12 franchises.
+postseason/placement recaps, and one mini recap for each of 12 franchises. The
+recap engine reads each season's verified regular-season boundary so 2022 uses
+Weeks 1–14 while 2023–2025 use Weeks 1–13 for streak calculations.

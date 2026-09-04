@@ -90,6 +90,11 @@ def main() -> None:
         if season.get("data_mode") == "detailed":
             if season.get("status_label") != "Complete":
                 errors.append(f"{year}: detailed season must be labelled Complete")
+            expected_regular_season_weeks = 14 if year == 2022 else 13
+            if season.get("regular_season_weeks", 13) != expected_regular_season_weeks:
+                errors.append(
+                    f"{year}: regular-season boundary must be Week {expected_regular_season_weeks}"
+                )
             if season.get("bracket_asset"):
                 if not local_asset(season.get("bracket_asset")):
                     errors.append(f"{year}: detailed season bracket_asset is missing or invalid")
@@ -197,8 +202,19 @@ def main() -> None:
                     if row.get(field) != source.get(field):
                         errors.append(f"{year} {row.get('franchise_id')}: {field} differs from Yahoo standings")
             field = playoff.get("playoff_field") or []
-            if len(field) != 6 or [item.get("seed") for item in field] != list(range(1, 7)):
-                errors.append(f"{year}: playoff field must contain verified seeds 1-6")
+            seeded_rows = sorted(
+                (row for row in standings if row.get("playoff_seed") is not None),
+                key=lambda row: row["playoff_seed"],
+            )
+            expected_seeds = list(range(1, len(seeded_rows) + 1))
+            if not seeded_rows or [row.get("playoff_seed") for row in seeded_rows] != expected_seeds:
+                errors.append(f"{year}: standings playoff seeds must be complete and sequential")
+            if len(field) != len(seeded_rows) or [item.get("seed") for item in field] != expected_seeds:
+                errors.append(f"{year}: playoff field must match the verified seeded standings")
+            elif [item.get("franchise_id") for item in field] != [row.get("franchise_id") for row in seeded_rows]:
+                errors.append(f"{year}: playoff field franchises must match the verified seed order")
+            if any((row.get("playoff_seed") is None) != (row.get("playoff_finish") is None) for row in standings):
+                errors.append(f"{year}: playoff seed and finish must be present together")
             weeks = json.loads((ROOT / f"_data/generated/history/{year}/weeks.json").read_text(encoding="utf-8"))
             if weeks.get("coverage", {}).get("recovered_weeks") != list(range(1, 17)):
                 errors.append(f"{year}: all 16 verified weeks are required")
@@ -212,6 +228,8 @@ def main() -> None:
                 for game in matchups
             }
             for game in games:
+                if game.get("bracket_type") not in {"championship", "placement"}:
+                    errors.append(f"{game.get('game_id')}: detailed playoff game requires a bracket_type")
                 if game.get("week") is None:
                     errors.append(f"{game.get('game_id')}: detailed playoff game requires a verified week")
                     continue

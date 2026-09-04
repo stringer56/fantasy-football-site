@@ -52,6 +52,14 @@ championship-bracket games and resolves the bracket image's crossed semifinal
 connectors through Yahoo Week 15. Its verified third- and fifth-place games are
 also explicit, but remain excluded from playoff-win calculations.
 
+The complete 2022 audit adds Yahoo's authoritative scores to both semifinals,
+confirms the four-team field, and records Yahoo's separately labelled third-place
+game. The three championship-bracket games were already independently matched,
+so classified playoff coverage remains 18 games; the third-place game stays
+excluded from playoff-win calculations. Yahoo's official bracket also resolves
+the source artwork's reversed #2/#3 seed labels in favor of Greendale #2 and
+Turnbull #3.
+
 ## Historical identity coverage
 
 All 2021 season-level identities now resolve. The commissioner draft-order
