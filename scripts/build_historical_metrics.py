@@ -237,8 +237,15 @@ def build_head_to_head(games: list[dict[str, Any]], identities: dict[str, dict[s
         wins_a = sum(bool(game["winner"] and game["winner"]["franchise_id"] == a_id) for game in meetings)
         wins_b = sum(bool(game["winner"] and game["winner"]["franchise_id"] == b_id) for game in meetings)
         ties = sum(game["tie"] for game in meetings)
-        points_a = sum(game["team_a"]["score"] if game["team_a"]["franchise_id"] == a_id else game["team_b"]["score"] for game in meetings)
-        points_b = sum(game["team_a"]["score"] if game["team_a"]["franchise_id"] == b_id else game["team_b"]["score"] for game in meetings)
+        points_a = sum((
+            Decimal(str(game["team_a"]["score"] if game["team_a"]["franchise_id"] == a_id else game["team_b"]["score"]))
+            for game in meetings
+        ), Decimal("0"))
+        points_b = sum((
+            Decimal(str(game["team_a"]["score"] if game["team_a"]["franchise_id"] == b_id else game["team_b"]["score"]))
+            for game in meetings
+        ), Decimal("0"))
+        total_margin = sum((Decimal(str(game["margin"])) for game in meetings), Decimal("0"))
         wins_by_a = [game for game in meetings if game["winner"] and game["winner"]["franchise_id"] == a_id]
         wins_by_b = [game for game in meetings if game["winner"] and game["winner"]["franchise_id"] == b_id]
         decided = [game for game in meetings if not game["tie"]]
@@ -250,9 +257,9 @@ def build_head_to_head(games: list[dict[str, Any]], identities: dict[str, dict[s
             "franchise_b": compact_identity(b_id, identities),
             "meetings": len(meetings), "wins_a": wins_a, "wins_b": wins_b, "ties": ties,
             "points_a": rounded(points_a), "points_b": rounded(points_b),
-            "average_score_a": rounded(points_a / len(meetings), 3),
-            "average_score_b": rounded(points_b / len(meetings), 3),
-            "average_margin": rounded(sum(game["margin"] for game in meetings) / len(meetings), 3),
+            "average_score_a": rounded(points_a / Decimal(len(meetings)), 3),
+            "average_score_b": rounded(points_b / Decimal(len(meetings)), 3),
+            "average_margin": rounded(total_margin / Decimal(len(meetings)), 3),
             "largest_win_a": meeting_view(max(wins_by_a, key=lambda game: game["margin"])) if wins_by_a else None,
             "largest_win_b": meeting_view(max(wins_by_b, key=lambda game: game["margin"])) if wins_by_b else None,
             "closest_meeting": meeting_view(min(decided, key=lambda game: (game["margin"], game["season"], game["week"]))) if decided else None,
