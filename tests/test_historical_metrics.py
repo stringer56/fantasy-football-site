@@ -69,7 +69,7 @@ class HistoricalMetricsTests(unittest.TestCase):
 
     def test_actual_playoff_output_is_independently_classified(self) -> None:
         payload = metrics.build_payloads()["playoffs"]
-        self.assertEqual(17, len(payload["games"]))
+        self.assertEqual(18, len(payload["games"]))
         self.assertTrue(all(item["game_type"] == "championship_playoff" and item["playoff_round"] for item in payload["games"]))
 
     def test_weekly_matchups_are_fully_resolved_after_confirmed_mappings(self) -> None:

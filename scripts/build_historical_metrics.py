@@ -115,8 +115,13 @@ def classified_playoff_games(games: list[dict[str, Any]]) -> tuple[dict[str, str
         if year not in round_week:
             continue
         for item in season.get("games", []):
+            if item.get("bracket_type") == "placement":
+                continue
+            week = round_week[year].get(item["round"])
+            if week is None:
+                continue
             pair = frozenset((item.get("team_one_franchise_id"), item.get("team_two_franchise_id")))
-            game = lookup.get((year, round_week[year][item["round"]], pair))
+            game = lookup.get((year, week, pair))
             if not game or game.get("winner_franchise_id") != item.get("winner_franchise_id"):
                 # Conflicting bracket lanes stay unclassified rather than being forced.
                 continue

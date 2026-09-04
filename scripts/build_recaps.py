@@ -524,6 +524,13 @@ def build_season_recap(
         closest = metrics["closest_game"]
         combined = metrics["highest_combined_score"]
         streak = metrics["longest_winning_streak"]
+        byes = playoff.get("byes") or []
+        bye_names = join_names(bye["display_name"] for bye in byes)
+        bye_count = {1: "one", 2: "two"}.get(len(byes), str(len(byes)))
+        bye_sentence = (
+            f", with {bye_names} earning the {bye_count} first-round byes"
+            if byes else ""
+        )
         paragraphs.append(
             f"Across all 16 verified weeks, {high['name']} recorded the season's highest weekly score at "
             f"{format_points(high['score'])} in Week {high['week']}, while {low['name']} posted the lowest at "
@@ -534,9 +541,8 @@ def build_season_recap(
         paragraphs.append(
             f"The highest combined score reached {format_points(combined['combined_score'])} in Week "
             f"{combined['week']}. {join_names(item['name'] for item in streak['holders'])} produced the longest "
-            f"verified regular-season run at {streak['games']} consecutive wins. The six-team championship field "
-            "was seeded from the verified final standings, with Greendale Human Beings and Albany Kneelers earning "
-            "the two first-round byes."
+            f"verified regular-season run at {streak['games']} consecutive wins. The verified bracket confirms "
+            f"a {len(participants)}-team championship field{bye_sentence}."
         )
         facts.extend([
             {"fact_type": "weekly_archive_coverage", "weeks": weekly["week_count"], "matchups": weekly["matchup_count"]},
@@ -686,11 +692,13 @@ def build_team_recap(
                 f"Its largest win came by {format_points(biggest['margin'])} points over "
                 f"{biggest['opponent_name']} in Week {biggest['week']}. "
             )
+        win_streak = weekly_metrics["longest_regular_season_win_streak"]
+        loss_streak = weekly_metrics["longest_regular_season_loss_streak"]
         weekly_sentence += (
             f"Its closest game was a {format_points(closest['margin'])}-point decision against "
-            f"{closest['opponent_name']} in Week {closest['week']}; its longest regular-season runs were "
-            f"{weekly_metrics['longest_regular_season_win_streak']} consecutive wins and "
-            f"{weekly_metrics['longest_regular_season_loss_streak']} consecutive losses."
+            f"{closest['opponent_name']} in Week {closest['week']}; its longest regular-season streaks were "
+            f"{win_streak} {'win' if win_streak == 1 else 'wins'} and "
+            f"{loss_streak} {'loss' if loss_streak == 1 else 'losses'}."
         )
         sentences.append(weekly_sentence)
         facts.append({"fact_type": "verified_weekly_metrics", **weekly_metrics})

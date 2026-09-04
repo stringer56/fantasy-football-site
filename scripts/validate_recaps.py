@@ -292,7 +292,7 @@ def main() -> None:
     }
     for year, stat_ids in number_ids.items():
         expected_numbers = set(required_numbers)
-        if year == 2025:
+        if season_by_year[year].get("weeks_data_path"):
             expected_numbers.update({
                 "highest_weekly_score", "lowest_weekly_score", "biggest_victory",
                 "closest_game", "highest_combined_score", "longest_winning_streak",
@@ -300,18 +300,20 @@ def main() -> None:
         if stat_ids != expected_numbers:
             errors.append(f"by_the_numbers/{year}: supported canonical fields are incomplete")
 
-    season_2025 = next((item for item in season_recaps if item.get("season") == 2025), None)
-    if season_2025:
-        weekly = season_2025.get("weekly_archive") or {}
+    for detailed_year in (2024, 2025):
+        season_recap = next((item for item in season_recaps if item.get("season") == detailed_year), None)
+        if not season_recap:
+            continue
+        weekly = season_recap.get("weekly_archive") or {}
         if weekly.get("week_count") != 16 or weekly.get("matchup_count") != 92:
-            errors.append("season-2025: weekly archive must contain 16 weeks and 92 matchups")
+            errors.append(f"season-{detailed_year}: weekly archive must contain 16 weeks and 92 matchups")
         if len(weekly.get("weeks") or []) != 16:
-            errors.append("season-2025: every week must be represented")
-        if len(season_2025.get("paragraphs") or []) < 3 or len(season_2025.get("paragraphs") or []) > 6:
-            errors.append("season-2025: season narrative must contain 3-6 paragraphs")
-    recaps_2025 = [item for item in collections["team_recaps"] if item.get("season") == 2025]
-    if len(recaps_2025) != 12 or any(not item.get("weekly_metrics") for item in recaps_2025):
-        errors.append("2025: all 12 franchises require verified weekly mini-recap metrics")
+            errors.append(f"season-{detailed_year}: every week must be represented")
+        if len(season_recap.get("paragraphs") or []) < 3 or len(season_recap.get("paragraphs") or []) > 6:
+            errors.append(f"season-{detailed_year}: season narrative must contain 3-6 paragraphs")
+        team_recaps = [item for item in collections["team_recaps"] if item.get("season") == detailed_year]
+        if len(team_recaps) != 12 or any(not item.get("weekly_metrics") for item in team_recaps):
+            errors.append(f"{detailed_year}: all 12 franchises require verified weekly mini-recap metrics")
 
     override_keys: set[tuple[Any, ...]] = set()
     for kind in ("season_recaps", "team_recaps", "playoff_recaps", "championship_recaps"):

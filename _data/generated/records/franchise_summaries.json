@@ -639,9 +639,9 @@
           "short_name": "Redskins",
           "path": "/teams/albany-kneelers/",
           "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
-          "playoff_games": 4,
+          "playoff_games": 5,
           "playoff_wins": 2,
-          "playoff_losses": 2,
+          "playoff_losses": 3,
           "championship_appearances": 3,
           "championships": 1,
           "largest_playoff_win": {
@@ -2273,15 +2273,105 @@
           "short_name": "Moose",
           "path": "/teams/maine-moose/",
           "identity_image": "/assets/img/franchises/maine-moose/identity.jpg",
-          "playoff_games": 3,
-          "playoff_wins": 0,
+          "playoff_games": 4,
+          "playoff_wins": 1,
           "playoff_losses": 3,
           "championship_appearances": 0,
           "championships": 0,
-          "largest_playoff_win": null,
-          "closest_playoff_win": null,
-          "highest_playoff_score": 106.54,
-          "rank": 7
+          "largest_playoff_win": {
+            "matchup_id": "2024-w14-02-08",
+            "season": 2024,
+            "week": 14,
+            "game_type": "championship_playoff",
+            "playoff_round": "Quarterfinal",
+            "tie": false,
+            "team_a": {
+              "franchise_id": "albany-kneelers",
+              "display_name": "Albany Redskins",
+              "short_name": "Redskins",
+              "path": "/teams/albany-kneelers/",
+              "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+              "score": 103.52
+            },
+            "team_b": {
+              "franchise_id": "maine-moose",
+              "display_name": "Maine Moose",
+              "short_name": "Moose",
+              "path": "/teams/maine-moose/",
+              "identity_image": "/assets/img/franchises/maine-moose/identity.jpg",
+              "score": 156.14
+            },
+            "historical_team_a": "Albany Kneelers",
+            "historical_team_b": "Maine Moose",
+            "team_a_score": 103.52,
+            "team_b_score": 156.14,
+            "combined_score": 259.66,
+            "margin": 52.62,
+            "winner": {
+              "franchise_id": "maine-moose",
+              "display_name": "Maine Moose",
+              "short_name": "Moose",
+              "path": "/teams/maine-moose/",
+              "identity_image": "/assets/img/franchises/maine-moose/identity.jpg"
+            },
+            "loser": {
+              "franchise_id": "albany-kneelers",
+              "display_name": "Albany Redskins",
+              "short_name": "Redskins",
+              "path": "/teams/albany-kneelers/",
+              "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
+            },
+            "winner_score": 156.14,
+            "loser_score": 103.52
+          },
+          "closest_playoff_win": {
+            "matchup_id": "2024-w14-02-08",
+            "season": 2024,
+            "week": 14,
+            "game_type": "championship_playoff",
+            "playoff_round": "Quarterfinal",
+            "tie": false,
+            "team_a": {
+              "franchise_id": "albany-kneelers",
+              "display_name": "Albany Redskins",
+              "short_name": "Redskins",
+              "path": "/teams/albany-kneelers/",
+              "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+              "score": 103.52
+            },
+            "team_b": {
+              "franchise_id": "maine-moose",
+              "display_name": "Maine Moose",
+              "short_name": "Moose",
+              "path": "/teams/maine-moose/",
+              "identity_image": "/assets/img/franchises/maine-moose/identity.jpg",
+              "score": 156.14
+            },
+            "historical_team_a": "Albany Kneelers",
+            "historical_team_b": "Maine Moose",
+            "team_a_score": 103.52,
+            "team_b_score": 156.14,
+            "combined_score": 259.66,
+            "margin": 52.62,
+            "winner": {
+              "franchise_id": "maine-moose",
+              "display_name": "Maine Moose",
+              "short_name": "Moose",
+              "path": "/teams/maine-moose/",
+              "identity_image": "/assets/img/franchises/maine-moose/identity.jpg"
+            },
+            "loser": {
+              "franchise_id": "albany-kneelers",
+              "display_name": "Albany Redskins",
+              "short_name": "Redskins",
+              "path": "/teams/albany-kneelers/",
+              "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
+            },
+            "winner_score": 156.14,
+            "loser_score": 103.52
+          },
+          "highest_playoff_score": 156.14,
+          "rank": 6
         },
         "head_to_head_available": true
       }
@@ -3587,7 +3677,7 @@
             "loser_score": 113.44
           },
           "highest_playoff_score": 134.52,
-          "rank": 6
+          "rank": 7
         },
         "head_to_head_available": true
       }

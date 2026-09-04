@@ -41,7 +41,7 @@ layout: default
 
   <nav class="season-subnav" aria-label="Season page sections">
     <div class="wrap">
-      <a href="#recap">Recap</a><a href="#numbers">Numbers</a><a href="#standings">Standings</a><a href="#bracket">Bracket</a><a href="#playoffs">Playoffs</a>{% if weekly_archive %}<a href="#weeks">Weeks 1–16</a>{% endif %}<a href="#championship">Championship</a><a href="#teams">Teams</a>{% if draft %}<a href="#draft">Draft</a>{% endif %}
+      <a href="#recap">Recap</a><a href="#numbers">Numbers</a><a href="#standings">Standings</a><a href="#bracket">Bracket</a><a href="#playoffs">Playoffs</a>{% if weekly_archive %}<a href="#weeks">Weekly archive</a>{% endif %}<a href="#championship">Championship</a><a href="#teams">Teams</a>{% if draft %}<a href="#draft">Draft</a>{% endif %}
     </div>
   </nav>
 
@@ -108,26 +108,18 @@ layout: default
         </div>
       </div>
     {% endif %}
-    {% if playoff.playoff_field %}<div class="playoff-field" aria-labelledby="playoff-field-heading"><div><p class="eyebrow">Six teams entered</p><h3 id="playoff-field-heading">Playoff Field</h3></div><div class="playoff-field__grid">{% for entry in playoff.playoff_field %}{% assign field_team = site.data.franchises.franchises | where: "franchise_id", entry.franchise_id | first %}<article><span>Seed #{{ entry.seed }} · {{ entry.wins }}–{{ entry.losses }}–{{ entry.ties }}</span><h4><a href="{{ '/teams/' | append: field_team.slug | append: '/' | relative_url }}">{{ entry.display_name }}</a></h4><strong>{{ entry.result }}</strong></article>{% endfor %}</div></div>{% endif %}
+    {% if playoff.playoff_field %}<div class="playoff-field" aria-labelledby="playoff-field-heading"><div><p class="eyebrow">{{ playoff.playoff_field.size }} teams entered</p><h3 id="playoff-field-heading">Playoff Field</h3></div><div class="playoff-field__grid">{% for entry in playoff.playoff_field %}{% assign field_team = site.data.franchises.franchises | where: "franchise_id", entry.franchise_id | first %}{% assign field_root = '/teams/' %}{% if field_team.status == 'retired' %}{% assign field_root = '/retired/' %}{% endif %}<article><span>Seed #{{ entry.seed }} · {{ entry.wins }}–{{ entry.losses }}–{{ entry.ties }}</span><h4><a href="{{ field_root | append: field_team.slug | append: '/' | relative_url }}">{{ entry.display_name }}</a></h4><strong>{{ entry.result }}</strong></article>{% endfor %}</div></div>{% endif %}
   </section>
 
   <section class="season-section season-section--dark" id="playoffs" aria-labelledby="playoffs-heading">
     <div class="shell-content">
       <div class="section-heading section-heading--light"><div><p class="eyebrow">Game by game</p><h2 id="playoffs-heading">Playoff Results</h2></div></div>
-      <div class="playoff-results">
-        {% for game in playoff.games %}
-          {% assign game_team_one = site.data.franchises.franchises | where: "franchise_id", game.team_one_franchise_id | first %}
-          {% assign game_team_two = site.data.franchises.franchises | where: "franchise_id", game.team_two_franchise_id | first %}
-          {% assign game_team_one_root = '/teams/' %}{% if game_team_one.status == 'retired' %}{% assign game_team_one_root = '/retired/' %}{% endif %}
-          {% assign game_team_two_root = '/teams/' %}{% if game_team_two.status == 'retired' %}{% assign game_team_two_root = '/retired/' %}{% endif %}
-          <article class="playoff-result{% if game.round == 'Championship' %} playoff-result--final{% endif %}">
-            <div class="playoff-result__top"><span>{{ game.round }}</span><span>{% if game.week %}Week {{ game.week }}{% else %}Game {{ game.order }}{% endif %}</span></div>
-            <div class="playoff-result__team{% if game.winner_display_name == game.team_one_display_name %} is-winner{% endif %}"><span><small>#{{ game.team_one_seed }}</small><a href="{{ game_team_one_root | append: game_team_one.slug | append: '/' | relative_url }}">{{ game.team_one_display_name }}</a>{% if game.winner_display_name == game.team_one_display_name %}<em>Winner</em>{% endif %}</span><strong>{% if game.team_one_score != nil %}{{ game.team_one_score }}{% else %}—{% endif %}</strong></div>
-            <div class="playoff-result__team{% if game.winner_display_name == game.team_two_display_name %} is-winner{% endif %}"><span><small>#{{ game.team_two_seed }}</small><a href="{{ game_team_two_root | append: game_team_two.slug | append: '/' | relative_url }}">{{ game.team_two_display_name }}</a>{% if game.winner_display_name == game.team_two_display_name %}<em>Winner</em>{% endif %}</span><strong>{% if game.team_two_score != nil %}{{ game.team_two_score }}{% else %}—{% endif %}</strong></div>
-            {% if game.team_one_score == nil %}<p>Winner verified from bracket; score not published.</p>{% endif %}
-          </article>
-        {% endfor %}
-      </div>
+      {% assign championship_games = playoff.games | where: "bracket_type", "championship" %}
+      {% assign placement_games = playoff.games | where: "bracket_type", "placement" %}
+      {% if championship_games.size == 0 %}{% assign championship_games = playoff.games %}{% endif %}
+      <h3 class="playoff-results__heading">Championship bracket</h3>
+      <div class="playoff-results">{% for game in championship_games %}{% include playoff-result-card.html game=game %}{% endfor %}</div>
+      {% if placement_games.size > 0 %}<h3 class="playoff-results__heading">Placement games</h3><p class="season-section__intro season-section__intro--light">These verified results determined final placement and are separate from the championship bracket.</p><div class="playoff-results playoff-results--placement">{% for game in placement_games %}{% include playoff-result-card.html game=game %}{% endfor %}</div>{% endif %}
       <div class="playoff-narratives" aria-labelledby="playoff-recaps-heading">
         <div><p class="eyebrow">The bracket in words</p><h3 id="playoff-recaps-heading">Playoff Round Recaps</h3></div>
         <div class="playoff-recap-grid">
@@ -151,7 +143,7 @@ layout: default
     </div>
   </section>
 
-  {% if draft %}<section class="shell-content season-section season-draft-link" id="draft" aria-labelledby="draft-heading"><div><p class="eyebrow">Where the season began</p><h2 id="draft-heading">{{ season.year }} Draft</h2><p>{% if draft.draft_date %}The league drafted on {{ draft.draft_date | date: "%B %-d, %Y at %-I:%M %p %Z" }}. {% endif %}{% if season.year == 2025 %}Albany Kneelers selected Ja’Marr Chase with the first overall pick. {% endif %}The complete draft archive preserves the order and all verified selections.</p><a class="button button--gold" href="{{ '/drafts/' | append: season.year | append: '/' | relative_url }}">Open the {{ season.year }} draft</a></div>{% if draft.order_asset %}<a class="season-draft-link__image" href="{{ '/drafts/' | append: season.year | append: '/' | relative_url }}"><img src="{{ draft.order_asset.path | relative_url }}" alt="{{ draft.order_asset.alt }}"></a>{% endif %}</section>{% endif %}
+  {% if draft %}<section class="shell-content season-section season-draft-link" id="draft" aria-labelledby="draft-heading"><div><p class="eyebrow">Where the season began</p><h2 id="draft-heading">{{ season.year }} Draft</h2><p>{% if draft.draft_date %}The league drafted on {{ draft.draft_date | date: "%B %-d, %Y at %-I:%M %p %Z" }}. {% endif %}{% if season.year == 2025 %}Albany Kneelers selected Ja’Marr Chase with the first overall pick. {% endif %}The complete draft archive preserves {{ draft.pick_count }} verified selections across {{ draft.rounds }} rounds.</p><a class="button button--gold" href="{{ '/drafts/' | append: season.year | append: '/' | relative_url }}">Open the {{ season.year }} draft</a></div>{% if draft.order_asset %}<a class="season-draft-link__image" href="{{ '/drafts/' | append: season.year | append: '/' | relative_url }}"><img src="{{ draft.order_asset.path | relative_url }}" alt="{{ draft.order_asset.alt }}"></a>{% endif %}</section>{% endif %}
 
   <section class="season-section season-section--tint" id="teams" aria-labelledby="teams-heading">
     <div class="shell-content">
