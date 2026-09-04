@@ -11,12 +11,18 @@ import sys
 from typing import Any
 
 import requests
+import yaml
 
-from yahoo_normalize import build_public_payloads, normalize_matchups, normalize_teams
+try:
+    from .yahoo_normalize import build_public_payloads, normalize_matchups, normalize_teams
+except ImportError:
+    from yahoo_normalize import build_public_payloads, normalize_matchups, normalize_teams
 
 
 API = "https://fantasysports.yahooapis.com/fantasy/v2"
-OUTPUT_DIRECTORY = pathlib.Path("_data/generated")
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+OUTPUT_DIRECTORY = ROOT / "_data" / "generated"
+SITE_CONFIG = ROOT / "_data" / "site.yml"
 
 
 class YahooApiError(RuntimeError):
@@ -130,6 +136,37 @@ def required_environment() -> dict[str, str]:
     return {name: os.environ[name] for name in names}
 
 
+def configured_yahoo_identity() -> dict[str, Any]:
+    config = yaml.safe_load(SITE_CONFIG.read_text(encoding="utf-8"))
+    yahoo = config.get("yahoo") or {}
+    required = ("season", "game_key", "league_id", "league_key", "alias")
+    missing = [field for field in required if yahoo.get(field) in (None, "")]
+    if missing:
+        raise RuntimeError("Canonical Yahoo configuration is incomplete")
+    return yahoo
+
+
+def validate_requested_and_normalized_identity(
+    configured: dict[str, Any], requested_alias: str, league_payload: dict[str, Any]
+) -> None:
+    """Fail safely if the secret or Yahoo response points at another league."""
+    if requested_alias != str(configured["alias"]):
+        raise RuntimeError("LEAGUE_KEY does not match the reviewed Yahoo configuration")
+    league = league_payload.get("league") or {}
+    expected = {
+        "season": int(configured["season"]),
+        "league_key": str(configured["league_key"]),
+        "league_id": str(configured["league_id"]),
+    }
+    actual = {
+        "season": league.get("season"),
+        "league_key": str(league.get("league_key") or ""),
+        "league_id": str(league.get("league_id") or ""),
+    }
+    if actual != expected:
+        raise RuntimeError("Yahoo response identity does not match the reviewed configuration")
+
+
 def fetch_rosters(
     *,
     token: str,
@@ -157,12 +194,15 @@ def fetch_rosters(
 
 def main() -> None:
     environment = required_environment()
+    configured = configured_yahoo_identity()
+    league_alias = environment["LEAGUE_KEY"]
+    if league_alias != str(configured["alias"]):
+        raise RuntimeError("LEAGUE_KEY does not match the reviewed Yahoo configuration")
     token = refresh_access_token(
         environment["YAHOO_CLIENT_ID"],
         environment["YAHOO_CLIENT_SECRET"],
         environment["YAHOO_REFRESH_TOKEN"],
     )
-    league_alias = environment["LEAGUE_KEY"]
     print("Yahoo authentication succeeded; fetching public league data")
 
     league_data = get_json(f"{API}/league/{league_alias}?format=json", token)
@@ -183,6 +223,9 @@ def main() -> None:
         standings_data=standings_data,
         scoreboard_data=scoreboard_data,
         roster_payloads=roster_payloads,
+    )
+    validate_requested_and_normalized_identity(
+        configured, league_alias, public_payloads["league.json"]
     )
 
     changed = 0

@@ -1,0 +1,6 @@
+{% assign alerts = include.alerts %}
+{% if alerts and alerts.size > 0 %}
+  <div class="record-watch-list">{% for alert in alerts %}<article class="record-watch-alert{% if alert.final %} is-final{% endif %}"><span>{{ alert.level }}</span><p>{{ alert.message }}</p><small>{% if alert.final %}Final score · verified placement{% else %}Current score · placement not final{% endif %}</small></article>{% endfor %}</div>
+{% else %}
+  <div class="live-empty-inline"><strong>No active record alerts</strong><p>Record Watch appears only when a live score is near a verified 2021–2025 benchmark or a final score earns a place.</p></div>
+{% endif %}

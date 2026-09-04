@@ -172,9 +172,7 @@ def main() -> None:
             mapped_team_keys.add(team_key)
             generated_team = generated_by_key.get(team_key)
             historical_team = historical_by_key.get(team_key)
-            if season == "2025" and not generated_team:
-                errors.append(f"{label}: 2025 team key is absent from generated teams: {team_key}")
-            elif generated_team:
+            if generated_team:
                 if generated_team.get("team_id") != id_map.get(season):
                     errors.append(f"{label}: Yahoo team_id mismatch for {season}")
                 if generated_team.get("team_name") != name_map.get(season):

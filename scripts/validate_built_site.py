@@ -24,7 +24,11 @@ EXPECTED_ROUTES = (
     "/head-to-head/",
     "/all-time-standings/",
     "/championships/",
+    "/2026/",
+    "/2026/week/1/",
     "/votes/",
+    "/power-rankings/",
+    "/picks/",
     "/votes/power-rankings/",
     "/votes/picks/",
     "/retired/",
@@ -36,9 +40,12 @@ class LinkParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
         self.targets: list[tuple[str, str]] = []
+        self.anchors: list[dict[str, str | None]] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attributes = dict(attrs)
+        if tag == "a":
+            self.anchors.append(attributes)
         if tag in {"a", "link"} and attributes.get("href"):
             self.targets.append(("href", attributes["href"] or ""))
         if tag in {"img", "script", "source"} and attributes.get("src"):
@@ -74,6 +81,8 @@ def main() -> None:
 
     errors: list[str] = []
     pages = sorted(SITE_DIR.rglob("*.html"))
+    site_data = yaml.safe_load((ROOT / "_data" / "site.yml").read_text(encoding="utf-8"))
+    yahoo_url = site_data["yahoo"]["league_url"]
     franchise_data = yaml.safe_load((ROOT / "_data" / "franchises.yml").read_text(encoding="utf-8"))
     franchise_routes = tuple(
         f"/{'retired' if franchise['status'] == 'retired' else 'teams'}/{franchise['slug']}/"
@@ -93,6 +102,15 @@ def main() -> None:
         text = page.read_text(encoding="utf-8")
         if "{{" in text or "{%" in text:
             errors.append(f"unrendered Liquid in {page.relative_to(SITE_DIR)}")
+        for unsafe in (
+            "fantasysports.yahooapis.com",
+            "/invitation?key=",
+            "oauth2.request.auth.yahoo.com",
+        ):
+            if unsafe in text.casefold():
+                errors.append(
+                    f"unsafe Yahoo URL in {page.relative_to(SITE_DIR)}: {unsafe}"
+                )
         for landmark in ("<header", "<nav", "<main", "<footer"):
             if landmark not in text:
                 errors.append(f"missing {landmark[1:]} landmark in {page.relative_to(SITE_DIR)}")
@@ -117,8 +135,24 @@ def main() -> None:
     all_time_page = route_target("/all-time-standings/").read_text(encoding="utf-8")
     championships_page = route_target("/championships/").read_text(encoding="utf-8")
     votes_page = route_target("/votes/").read_text(encoding="utf-8")
-    power_page = route_target("/votes/power-rankings/").read_text(encoding="utf-8")
-    picks_page = route_target("/votes/picks/").read_text(encoding="utf-8")
+    live_page = route_target("/2026/").read_text(encoding="utf-8")
+    live_week_page = route_target("/2026/week/1/").read_text(encoding="utf-8")
+    power_page = route_target("/power-rankings/").read_text(encoding="utf-8")
+    power_legacy_page = route_target("/votes/power-rankings/").read_text(encoding="utf-8")
+    picks_page = route_target("/picks/").read_text(encoding="utf-8")
+    picks_legacy_page = route_target("/votes/picks/").read_text(encoding="utf-8")
+    for label, rendered in (("homepage", home), ("2026 hub", live_page)):
+        parser = LinkParser()
+        parser.feed(rendered)
+        canonical_links = [
+            anchor for anchor in parser.anchors if anchor.get("href") == yahoo_url
+        ]
+        if not canonical_links:
+            errors.append(f"{label} must link to the canonical Yahoo league URL")
+        for anchor in canonical_links:
+            rel_tokens = str(anchor.get("rel") or "").split()
+            if anchor.get("target") != "_blank" or "noopener" not in rel_tokens:
+                errors.append(f"{label} Yahoo links must open safely in a new tab")
     if 'aria-label="Open navigation"' not in votes_page:
         errors.append("mobile navigation toggle must have an accessible name")
     if teams_page.count('class="franchise-card"') != 12:
@@ -174,9 +208,22 @@ def main() -> None:
     for expected in ("League", "Votes", "Active Votes", "Weekly Matchup Picks", "Power Rankings", "Vote Archive"):
         if expected not in votes_page:
             errors.append(f"votes hub is missing: {expected}")
-    for expected in ("Manager Power Rankings", "Purely Manager Voted"):
+    for expected in ("2026 Power Rankings", "Manager ballots only"):
         if expected not in power_page:
             errors.append(f"Power Rankings page is missing: {expected}")
+    for expected in ("2026 League HQ", "2026 Standings", "Record Watch", "Road to Glory Wire", "Power Rankings"):
+        if expected not in live_page:
+            errors.append(f"2026 hub is missing: {expected}")
+    for expected in ("Week 1", "All Matchups", "Weekly Facts", "Record Watch"):
+        if expected not in live_week_page:
+            errors.append(f"2026 Week 1 hub is missing: {expected}")
+    for expected in ("Average manager rank", "Ranking points", "First-place votes", "Previous rank", "Movement", "power-rankings.js"):
+        if expected not in power_page:
+            errors.append(f"Power Rankings experience is missing: {expected}")
+    if "/power-rankings/" not in power_legacy_page:
+        errors.append("legacy Power Rankings route must link to the canonical route")
+    if "/picks/" not in picks_legacy_page:
+        errors.append("legacy Picks route must link to the canonical route")
     for expected in ("Matchup Picks", "Weekly Matchups", "Season Picks Leaderboard", "Pick Results Archive"):
         if expected not in picks_page:
             errors.append(f"Picks page is missing: {expected}")
@@ -186,9 +233,9 @@ def main() -> None:
     recaps_data = json.loads((ROOT / "_data" / "generated" / "recaps.json").read_text(encoding="utf-8"))
     if not voting_data["active_polls"] and "No league ballots are open" not in votes_page:
         errors.append("votes hub did not render its intentional no-active-votes state")
-    if not power_data["rankings"] and "Voting opens during the season" not in power_page:
+    if not power_data["rankings"] and "Week 1 ballots have not been finalized" not in power_page:
         errors.append("Power Rankings page did not render its offseason state")
-    if power_data["rankings"] and power_page.count('class="vote-team"') != len(power_data["rankings"]):
+    if power_data["rankings"] and power_page.count('data-power-ranking-row') != len(power_data["rankings"]):
         errors.append("Power Rankings page did not render every ranked franchise")
     if picks_data["current_week"] is None and "current slate is not available yet" not in picks_page:
         errors.append("Picks page did not render its unavailable current-week state")
@@ -280,11 +327,10 @@ def main() -> None:
         ):
             if expected not in profile:
                 errors.append(f"franchise profile {route} is missing: {expected}")
-    site_data = yaml.safe_load((ROOT / "_data" / "site.yml").read_text(encoding="utf-8"))
     manifest = json.loads((ROOT / "_data" / "generated" / "manifest.json").read_text(encoding="utf-8"))
     data_is_current = manifest.get("status") == "ready" and manifest.get("season") == site_data.get("current_season")
     if data_is_current:
-        if "standings-table" not in home or "matchup-card" not in home:
+        if "home-standings-top" not in home or "home-featured-matchup" not in home:
             errors.append("current generated data did not render standings and matchup components")
     else:
         for expected in ("Draft Date TBA", "Standings arrive with the season", "The next slate is taking shape"):

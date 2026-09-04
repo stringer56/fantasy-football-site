@@ -119,24 +119,14 @@ override the permalink to `/retired/:slug/`. Internal rival links use
 
 ## Yahoo mapping policy
 
-The live site points to public 2026 league alias `nfl.l.26455`, while the main
-generated snapshot still represents the 2025 league. Consequently:
-
-- 2025 team keys, IDs, and exact Yahoo names are preserved where the source team
-  link and generated snapshot agree.
-- No 2025 key is presented as a 2026 key.
-- Albany Redskins is joined to stable ID `albany-kneelers` through the
-  commissioner-confirmed 2026 key `470.l.26455.t.2`. The stable ID and existing
-  route do not change with the display name.
-- The other 11 current-season mappings remain uncommitted until independently
-  verified; no 2025 key is reused as a 2026 key.
-- Credentials, tokens, manager account identifiers, and invitation links are not
-  stored in franchise data or documentation.
-
-After the current Yahoo refresh succeeds, compare the remaining returned team
-names and public manager display names against aliases, then add a `"2026"`
-entry to each confirmed franchise's `team_keys`, `team_ids`, and `team_names`
-maps.
+The live site points to public 2026 league alias `nfl.l.26455`. The verified
+2026 discovery record and official current league page now resolve all twelve
+team keys (`470.l.26455.t.1` through `.t.12`) to the existing stable franchise
+IDs. Exact 2026 display names remain season-scoped; Albany's current `Albany
+Redskins` name, for example, does not change stable ID `albany-kneelers` or its
+canonical route. No 2025 key is presented as a 2026 key. Credentials, tokens,
+manager account identifiers, and invitation links are not stored in franchise
+data or documentation.
 
 ## Remaining migration gaps
 
@@ -146,7 +136,6 @@ or deferred instead of being guessed:
 - franchise founding seasons and retired seasons;
 - full owner tenure and succession history;
 - historical Yahoo keys for The Savage Huns;
-- the remaining 11 2026 team-key mappings;
 - whether all public nicknames remain preferred in 2026;
 - source-approved fight-song audio files;
 - full championship verification against season recaps and bracket records;
@@ -181,6 +170,6 @@ landmarks.
 
 ## Recommended follow-up
 
-Run the 2026 Yahoo refresh with the repository secret `LEAGUE_KEY` set to the
-public alias already documented in `_data/site.yml`. Once the data is current,
-verify the remaining 11 current-team joins without redesigning the profiles.
+Finalize the Week 1 Power Ranking and Pick’em ballots after commissioner review,
+then let the verified weekly Yahoo snapshots accumulate without changing stable
+franchise joins.

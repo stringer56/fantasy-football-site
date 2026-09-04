@@ -1,0 +1,19 @@
+{% assign matchup = include.matchup %}
+<article class="live-matchup-card" id="{{ matchup.matchup_id }}">
+  <header class="live-matchup-card__header"><span>Week {{ matchup.week }}</span><strong>{{ matchup.status_label }}</strong></header>
+  <div class="live-matchup-card__teams">
+    {% for team in matchup.teams %}
+      <div class="live-matchup-team{% if matchup.winner_franchise_id == team.franchise_id %} is-winner{% endif %}">
+        <a href="{{ team.path | relative_url }}"><img src="{{ team.identity_image | relative_url }}" alt=""><span><strong>{{ team.display_name }}</strong><small>{{ team.record }}</small></span></a>
+        <div class="live-matchup-team__numbers"><strong><span class="score-label">Current</span>{{ team.score | round: 2 }}</strong>{% if team.projected_score != null %}<small><span>Projected</span>{{ team.projected_score | round: 2 }}</small>{% endif %}</div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="live-matchup-card__footer">
+    <div class="matchup-roster-grid">
+      {% for team in matchup.teams %}<details><summary>{{ team.short_name }} roster <span aria-hidden="true">+</span></summary>{% if team.roster.size > 0 %}<div class="live-roster-table-wrap"><table><thead><tr><th scope="col">Player</th><th scope="col">Slot</th></tr></thead><tbody>{% for player in team.roster %}<tr><td>{{ player.player_name }}</td><td>{{ player.selected_position | default: player.primary_position | default: '—' }}</td></tr>{% endfor %}</tbody></table></div>{% else %}<p>Roster details are unavailable in this snapshot.</p>{% endif %}</details>{% endfor %}
+    </div>
+    {% if matchup.historical_context %}<details class="matchup-history"><summary>Series context <span aria-hidden="true">+</span></summary><p>{{ matchup.historical_context.meetings }} verified meetings through 2025. {% if matchup.historical_context.current_series_streak %}Current series streak: {{ matchup.historical_context.current_series_streak.wins }} wins.{% endif %}</p><a href="{{ matchup.historical_context.series_path | relative_url }}">Open head-to-head history</a></details>{% endif %}
+    <a class="text-link" href="{{ '/picks/' | relative_url }}">Matchup picks <span aria-hidden="true">→</span></a>
+  </div>
+</article>

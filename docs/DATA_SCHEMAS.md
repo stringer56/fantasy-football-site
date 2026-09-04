@@ -10,12 +10,16 @@ Every data file uses `schema_version: 1` or `"schema_version": 1`.
 ### `site.yml`
 
 - `current_season`: active fantasy season.
-- `yahoo.league_alias`: public alias expected in the `LEAGUE_KEY` Actions secret.
-- `yahoo.league_url`: public league link.
+- `yahoo.league_url`: canonical public league link used by every visitor-facing Yahoo call to action.
+- `yahoo.league_id`, `yahoo.league_key`, and `yahoo.game_key`: reviewed 2026 Yahoo identifiers.
+- `yahoo.alias`: public alias expected in the `LEAGUE_KEY` Actions secret.
+- `yahoo.season`: season governed by the configured Yahoo identity.
 - `generated_data_namespace`: Jekyll namespace below `site.data`.
 
-The 2026 alias is `nfl.l.26455`. Yahoo may resolve it to a season-specific game
-key; do not copy that resolved key into configuration.
+The canonical 2026 identity is season `2026`, game key `470`, league ID
+`26455`, league key `470.l.26455`, and alias `nfl.l.26455`. These values are
+human-managed and reviewed together. Templates use only `yahoo.league_url` for
+public links; API and OAuth endpoints never become visitor-facing URLs.
 
 ### `league.yml`
 
@@ -184,6 +188,24 @@ All three include `season`, nullable `week`, nullable `generated_at`, and a
 source/coverage object with accepted, rejected, and superseded ballot counts.
 Empty preseason data uses explicit unavailable states.
 See [Voting Architecture](VOTING_ARCHITECTURE.md) for private export handling.
+
+Finalized weekly Power Rankings live under
+`_data/power_rankings/{season}/week-{week}.json`; the files are immutable public
+aggregates, never ballots. `_data/generated/power_rankings_history.json` contains
+ordered finalized weeks, explicit missing weeks, franchise chart series and
+season facts. See [2026 Power Rankings](POWER_RANKINGS.md).
+
+### 2026 live outputs
+
+- `live_season.json`: current 2026 freshness, canonical franchise joins,
+  standings, six-matchup slate, rosters, weekly facts, Record Watch, League
+  Wire, franchise summaries, and clearly separated voting/picks/playoff states.
+- `league_wire.json`: deterministic league-only headline items with source and
+  internal path provenance.
+- `live/2026/week-{week}.json`: one normalized weekly snapshot for each route
+  actually created.
+
+See [2026 Live Season Hub](2026_LIVE_SEASON_HUB.md).
 
 ### `recaps.json`
 

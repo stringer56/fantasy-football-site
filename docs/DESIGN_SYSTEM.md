@@ -97,6 +97,23 @@ Number cards use three columns on desktop, two below 900px, and one below
 560px. Team recaps use two columns before stacking at 560px. The sticky season
 subnavigation remains horizontally scrollable rather than shrinking labels.
 
+### Live season and Power Ranking patterns
+
+- `.live-season-hero`, `.live-matchup-card`, and `.live-status-card` establish
+  the 2026 scoreboard hierarchy while preserving explicit current/stale labels.
+- Matchup scores and projections are separately labelled; roster tables remain
+  collapsed in native disclosures.
+- `.record-watch-alert` is reserved for deterministic verified-history
+  comparisons, while `.league-wire-list` is separate from external NFL news.
+- `.power-chart` progressively enhances immutable weekly HTML tables with a
+  keyboard-filterable SVG. Rank 1 is always visually above rank 12, and line
+  identity is never communicated by color alone.
+
+Live cards move from two columns to one at 768px. Homepage grids reduce from
+three to two columns at 1024px and to one at 560px. The Power Ranking legend can
+scroll inside its own region at narrow widths; chart controls wrap without
+creating body-level overflow.
+
 ## Accessibility and interaction
 
 - Layouts use semantic header, navigation, main, and footer landmarks.

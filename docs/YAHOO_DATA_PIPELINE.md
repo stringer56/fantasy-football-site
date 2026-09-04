@@ -13,6 +13,12 @@ Yahoo Fantasy API
   -> GitHub Pages/Jekyll render
 ```
 
+If the authenticated current-season request fails, the scheduled workflow uses
+`scripts/yahoo_live.py` against the official public Yahoo league pages and emits
+the same allowlisted files. If both sources fail, the last valid current-season
+snapshot is retained and labelled stale. Raw public-page HTML is not committed.
+The API remains primary and OAuth handling is unchanged.
+
 Raw Yahoo responses are not written to the repository. The Action keeps them in
 memory only long enough to create sanitized public data.
 
@@ -27,9 +33,10 @@ Configure these under **Repository Settings → Secrets and variables → Action
 
 Do not place values in repository files, logs, issues, or pull requests.
 
-For 2026, `LEAGUE_KEY` should contain the alias `nfl.l.26455`. Yahoo may resolve
-that alias to a season-specific game key. The code uses the API response as the
-source of truth and does not hardcode a resolved game key.
+For 2026, `LEAGUE_KEY` should contain the alias `nfl.l.26455`. Before publishing,
+the updater verifies that the secret-selected alias and Yahoo's normalized
+response match the reviewed season `2026`, game key `470`, league ID `26455`,
+and league key `470.l.26455`. Validation errors never print secret values.
 
 ## Manual Action run
 
@@ -40,14 +47,16 @@ source of truth and does not hardcode a resolved game key.
 5. Review the normalizer tests, Yahoo fetch, news fetch, public-data validation,
    and commit steps.
 
-The Action commits only `_data/generated/*.json` and `_data/news.json`, and only
-when their normalized content changed.
+The Action commits only public generated data, normalized live-week routes,
+finalized Power Ranking aggregates, and `_data/news.json`, and only when their
+normalized content changed.
 
 ## Moving to a new Yahoo season
 
 1. Renew/create the Yahoo league and obtain its public league ID.
-2. Change `_data/site.yml` `current_season`, `yahoo.league_alias`, and public
-   league URL in a reviewed pull request.
+2. Change `_data/site.yml` `current_season` and the complete human-managed
+   `yahoo` identity (`season`, `game_key`, `league_id`, `league_key`, `alias`,
+   and canonical public `league_url`) in a reviewed pull request.
 3. Update the `LEAGUE_KEY` Actions secret to `nfl.l.<league-id>` without exposing
    the value in logs or source files.
 4. Manually run the Action.
@@ -55,7 +64,9 @@ when their normalized content changed.
 6. Confirm team, standings, matchup, and roster outputs before merging any
    season-facing site changes.
 
-Do not copy Yahoo's resolved season game key into site configuration.
+Public-facing links must read `yahoo.league_url`; never construct them from API
+endpoints or expose invitation, commissioner, team-management, OAuth, or
+account-specific URLs.
 
 ## Local tests
 
