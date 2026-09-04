@@ -24,9 +24,145 @@
   "thresholds": {
     "highest_weekly_score": 237.18,
     "tenth_highest_weekly_score": 173.82,
+    "twenty_fifth_highest_weekly_score": 162.2,
     "largest_margin": 113.66,
     "tenth_largest_margin": 74.5,
     "highest_combined_matchup_score": 376.72,
-    "lowest_combined_matchup_score": 127.18
-  }
+    "lowest_combined_matchup_score": 127.18,
+    "highest_losing_score": 173.82,
+    "lowest_winning_score": 74.64
+  },
+  "franchises": [
+    {
+      "franchise_id": "albany-kneelers",
+      "display_name": "Albany Redskins",
+      "short_name": "Redskins",
+      "path": "/teams/albany-kneelers/",
+      "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+      "highest_weekly_score": 202.9,
+      "largest_win_margin": 81.48,
+      "highest_combined_matchup_score": 376.72
+    },
+    {
+      "franchise_id": "ayahuasca-rush",
+      "display_name": "Ayahuasca Rush",
+      "short_name": "Rush",
+      "path": "/teams/ayahuasca-rush/",
+      "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+      "highest_weekly_score": 177.78,
+      "largest_win_margin": 95.94,
+      "highest_combined_matchup_score": 342.56
+    },
+    {
+      "franchise_id": "baseball-furies",
+      "display_name": "The Baseball Furies",
+      "short_name": "Furies",
+      "path": "/teams/baseball-furies/",
+      "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
+      "highest_weekly_score": 177.88,
+      "largest_win_margin": 94.08,
+      "highest_combined_matchup_score": 294.02
+    },
+    {
+      "franchise_id": "buffalo-bravado",
+      "display_name": "Buffalo Bravado",
+      "short_name": "Bravado",
+      "path": "/teams/buffalo-bravado/",
+      "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+      "highest_weekly_score": 170.82,
+      "largest_win_margin": 58.96,
+      "highest_combined_matchup_score": 323.52
+    },
+    {
+      "franchise_id": "crazy-wazs-team",
+      "display_name": "Crazy Waz's Team",
+      "short_name": "Crazy Waz",
+      "path": "/teams/crazy-wazs-team/",
+      "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
+      "highest_weekly_score": 164.78,
+      "largest_win_margin": 65.66,
+      "highest_combined_matchup_score": 342.56
+    },
+    {
+      "franchise_id": "greendale-human-beings",
+      "display_name": "Greendale Human Beings",
+      "short_name": "Human Beings",
+      "path": "/teams/greendale-human-beings/",
+      "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+      "highest_weekly_score": 178.02,
+      "largest_win_margin": 92.24,
+      "highest_combined_matchup_score": 307.78
+    },
+    {
+      "franchise_id": "maine-moose",
+      "display_name": "Maine Moose",
+      "short_name": "Moose",
+      "path": "/teams/maine-moose/",
+      "identity_image": "/assets/img/franchises/maine-moose/identity.jpg",
+      "highest_weekly_score": 237.18,
+      "largest_win_margin": 113.66,
+      "highest_combined_matchup_score": 360.7
+    },
+    {
+      "franchise_id": "new-jersey-giants",
+      "display_name": "New Jersey Giants",
+      "short_name": "Giants",
+      "path": "/teams/new-jersey-giants/",
+      "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
+      "highest_weekly_score": 173.66,
+      "largest_win_margin": 49.8,
+      "highest_combined_matchup_score": 323.52
+    },
+    {
+      "franchise_id": "north-town-ninnyhammers",
+      "display_name": "North Town Ninnyhammers",
+      "short_name": "Ninnyhammers",
+      "path": "/teams/north-town-ninnyhammers/",
+      "identity_image": "/assets/img/franchises/north-town-ninnyhammers/identity.jpg",
+      "highest_weekly_score": 162.1,
+      "largest_win_margin": 64.6,
+      "highest_combined_matchup_score": 360.7
+    },
+    {
+      "franchise_id": "savage-huns",
+      "display_name": "The Savage Huns",
+      "short_name": "Savage Huns",
+      "path": "/retired/the-savage-huns/",
+      "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
+      "highest_weekly_score": 166.6,
+      "largest_win_margin": 74.5,
+      "highest_combined_matchup_score": 296.84
+    },
+    {
+      "franchise_id": "turnbull-acs",
+      "display_name": "Turnbull AC's",
+      "short_name": "Turnbull",
+      "path": "/teams/turnbull-acs/",
+      "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
+      "highest_weekly_score": 172.76,
+      "largest_win_margin": 71.72,
+      "highest_combined_matchup_score": 366.24
+    },
+    {
+      "franchise_id": "van-cortlant-rangers",
+      "display_name": "Van Cortlant Rangers",
+      "short_name": "Rangers",
+      "path": "/teams/van-cortlant-rangers/",
+      "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
+      "highest_weekly_score": 176.8,
+      "largest_win_margin": 66.24,
+      "highest_combined_matchup_score": 376.72
+    },
+    {
+      "franchise_id": "vegas-vandals",
+      "display_name": "Vegas Vandals",
+      "short_name": "Vandals",
+      "path": "/teams/vegas-vandals/",
+      "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
+      "highest_weekly_score": 153.8,
+      "largest_win_margin": 52.16,
+      "highest_combined_matchup_score": 318.44
+    }
+  ],
+  "live_data_dependency": false
 }

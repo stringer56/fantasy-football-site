@@ -491,6 +491,711 @@
       },
       "winner_score": 128.18,
       "loser_score": 127.46
+    },
+    {
+      "rank": 11,
+      "matchup_id": "2021-w10-06-10",
+      "season": 2021,
+      "week": 10,
+      "game_type": "regular_season",
+      "playoff_round": null,
+      "tie": false,
+      "team_a": {
+        "franchise_id": "buffalo-bravado",
+        "display_name": "Buffalo Bravado",
+        "short_name": "Bravado",
+        "path": "/teams/buffalo-bravado/",
+        "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+        "score": 108.2
+      },
+      "team_b": {
+        "franchise_id": "baseball-furies",
+        "display_name": "The Baseball Furies",
+        "short_name": "Furies",
+        "path": "/teams/baseball-furies/",
+        "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
+        "score": 108.94
+      },
+      "historical_team_a": "The Swagger Daggers",
+      "historical_team_b": "The Baseball Furies",
+      "team_a_score": 108.2,
+      "team_b_score": 108.94,
+      "combined_score": 217.14,
+      "margin": 0.74,
+      "winner": {
+        "franchise_id": "baseball-furies",
+        "display_name": "The Baseball Furies",
+        "short_name": "Furies",
+        "path": "/teams/baseball-furies/",
+        "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "buffalo-bravado",
+        "display_name": "Buffalo Bravado",
+        "short_name": "Bravado",
+        "path": "/teams/buffalo-bravado/",
+        "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg"
+      },
+      "winner_score": 108.94,
+      "loser_score": 108.2
+    },
+    {
+      "rank": 12,
+      "matchup_id": "2021-w14-07-10",
+      "season": 2021,
+      "week": 14,
+      "game_type": "regular_season",
+      "playoff_round": null,
+      "tie": false,
+      "team_a": {
+        "franchise_id": "turnbull-acs",
+        "display_name": "Turnbull AC's",
+        "short_name": "Turnbull",
+        "path": "/teams/turnbull-acs/",
+        "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
+        "score": 120.04
+      },
+      "team_b": {
+        "franchise_id": "baseball-furies",
+        "display_name": "The Baseball Furies",
+        "short_name": "Furies",
+        "path": "/teams/baseball-furies/",
+        "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
+        "score": 120.92
+      },
+      "historical_team_a": "Turnbull AC’s",
+      "historical_team_b": "The Baseball Furies",
+      "team_a_score": 120.04,
+      "team_b_score": 120.92,
+      "combined_score": 240.96,
+      "margin": 0.88,
+      "winner": {
+        "franchise_id": "baseball-furies",
+        "display_name": "The Baseball Furies",
+        "short_name": "Furies",
+        "path": "/teams/baseball-furies/",
+        "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "turnbull-acs",
+        "display_name": "Turnbull AC's",
+        "short_name": "Turnbull",
+        "path": "/teams/turnbull-acs/",
+        "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg"
+      },
+      "winner_score": 120.92,
+      "loser_score": 120.04
+    },
+    {
+      "rank": 13,
+      "matchup_id": "2023-w06-03-07",
+      "season": 2023,
+      "week": 6,
+      "game_type": "regular_season",
+      "playoff_round": null,
+      "tie": false,
+      "team_a": {
+        "franchise_id": "ayahuasca-rush",
+        "display_name": "Ayahuasca Rush",
+        "short_name": "Rush",
+        "path": "/teams/ayahuasca-rush/",
+        "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+        "score": 121.82
+      },
+      "team_b": {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+        "score": 120.9
+      },
+      "historical_team_a": "Ayahuasca Rush",
+      "historical_team_b": "Greendale Human Beings",
+      "team_a_score": 121.82,
+      "team_b_score": 120.9,
+      "combined_score": 242.72,
+      "margin": 0.92,
+      "winner": {
+        "franchise_id": "ayahuasca-rush",
+        "display_name": "Ayahuasca Rush",
+        "short_name": "Rush",
+        "path": "/teams/ayahuasca-rush/",
+        "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg"
+      },
+      "winner_score": 121.82,
+      "loser_score": 120.9
+    },
+    {
+      "rank": 14,
+      "matchup_id": "2022-w03-06-09",
+      "season": 2022,
+      "week": 3,
+      "game_type": "regular_season",
+      "playoff_round": null,
+      "tie": false,
+      "team_a": {
+        "franchise_id": "new-jersey-giants",
+        "display_name": "New Jersey Giants",
+        "short_name": "Giants",
+        "path": "/teams/new-jersey-giants/",
+        "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
+        "score": 96.7
+      },
+      "team_b": {
+        "franchise_id": "buffalo-bravado",
+        "display_name": "Buffalo Bravado",
+        "short_name": "Bravado",
+        "path": "/teams/buffalo-bravado/",
+        "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+        "score": 95.74
+      },
+      "historical_team_a": "Quahog Stripes",
+      "historical_team_b": "Dilly Dilly",
+      "team_a_score": 96.7,
+      "team_b_score": 95.74,
+      "combined_score": 192.44,
+      "margin": 0.96,
+      "winner": {
+        "franchise_id": "new-jersey-giants",
+        "display_name": "New Jersey Giants",
+        "short_name": "Giants",
+        "path": "/teams/new-jersey-giants/",
+        "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "buffalo-bravado",
+        "display_name": "Buffalo Bravado",
+        "short_name": "Bravado",
+        "path": "/teams/buffalo-bravado/",
+        "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg"
+      },
+      "winner_score": 96.7,
+      "loser_score": 95.74
+    },
+    {
+      "rank": 14,
+      "matchup_id": "2023-w11-06-09",
+      "season": 2023,
+      "week": 11,
+      "game_type": "regular_season",
+      "playoff_round": null,
+      "tie": false,
+      "team_a": {
+        "franchise_id": "buffalo-bravado",
+        "display_name": "Buffalo Bravado",
+        "short_name": "Bravado",
+        "path": "/teams/buffalo-bravado/",
+        "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+        "score": 111.44
+      },
+      "team_b": {
+        "franchise_id": "north-town-ninnyhammers",
+        "display_name": "North Town Ninnyhammers",
+        "short_name": "Ninnyhammers",
+        "path": "/teams/north-town-ninnyhammers/",
+        "identity_image": "/assets/img/franchises/north-town-ninnyhammers/identity.jpg",
+        "score": 112.4
+      },
+      "historical_team_a": "Buffalo Bravados",
+      "historical_team_b": "North town Ninnyhammers",
+      "team_a_score": 111.44,
+      "team_b_score": 112.4,
+      "combined_score": 223.84,
+      "margin": 0.96,
+      "winner": {
+        "franchise_id": "north-town-ninnyhammers",
+        "display_name": "North Town Ninnyhammers",
+        "short_name": "Ninnyhammers",
+        "path": "/teams/north-town-ninnyhammers/",
+        "identity_image": "/assets/img/franchises/north-town-ninnyhammers/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "buffalo-bravado",
+        "display_name": "Buffalo Bravado",
+        "short_name": "Bravado",
+        "path": "/teams/buffalo-bravado/",
+        "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg"
+      },
+      "winner_score": 112.4,
+      "loser_score": 111.44
+    },
+    {
+      "rank": 16,
+      "matchup_id": "2023-w12-09-11",
+      "season": 2023,
+      "week": 12,
+      "game_type": "regular_season",
+      "playoff_round": null,
+      "tie": false,
+      "team_a": {
+        "franchise_id": "north-town-ninnyhammers",
+        "display_name": "North Town Ninnyhammers",
+        "short_name": "Ninnyhammers",
+        "path": "/teams/north-town-ninnyhammers/",
+        "identity_image": "/assets/img/franchises/north-town-ninnyhammers/identity.jpg",
+        "score": 102.58
+      },
+      "team_b": {
+        "franchise_id": "savage-huns",
+        "display_name": "The Savage Huns",
+        "short_name": "Savage Huns",
+        "path": "/retired/the-savage-huns/",
+        "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
+        "score": 101.46
+      },
+      "historical_team_a": "North town Ninnyhammers",
+      "historical_team_b": "THE SAVAGE HUNS",
+      "team_a_score": 102.58,
+      "team_b_score": 101.46,
+      "combined_score": 204.04,
+      "margin": 1.12,
+      "winner": {
+        "franchise_id": "north-town-ninnyhammers",
+        "display_name": "North Town Ninnyhammers",
+        "short_name": "Ninnyhammers",
+        "path": "/teams/north-town-ninnyhammers/",
+        "identity_image": "/assets/img/franchises/north-town-ninnyhammers/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "savage-huns",
+        "display_name": "The Savage Huns",
+        "short_name": "Savage Huns",
+        "path": "/retired/the-savage-huns/",
+        "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg"
+      },
+      "winner_score": 102.58,
+      "loser_score": 101.46
+    },
+    {
+      "rank": 17,
+      "matchup_id": "2025-w08-09-11",
+      "season": 2025,
+      "week": 8,
+      "game_type": "regular_season",
+      "playoff_round": null,
+      "tie": false,
+      "team_a": {
+        "franchise_id": "baseball-furies",
+        "display_name": "The Baseball Furies",
+        "short_name": "Furies",
+        "path": "/teams/baseball-furies/",
+        "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
+        "score": 108.86
+      },
+      "team_b": {
+        "franchise_id": "vegas-vandals",
+        "display_name": "Vegas Vandals",
+        "short_name": "Vandals",
+        "path": "/teams/vegas-vandals/",
+        "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
+        "score": 110.06
+      },
+      "historical_team_a": "The Baseball Furies",
+      "historical_team_b": "Vegas Vandals",
+      "team_a_score": 108.86,
+      "team_b_score": 110.06,
+      "combined_score": 218.92,
+      "margin": 1.2,
+      "winner": {
+        "franchise_id": "vegas-vandals",
+        "display_name": "Vegas Vandals",
+        "short_name": "Vandals",
+        "path": "/teams/vegas-vandals/",
+        "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "baseball-furies",
+        "display_name": "The Baseball Furies",
+        "short_name": "Furies",
+        "path": "/teams/baseball-furies/",
+        "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg"
+      },
+      "winner_score": 110.06,
+      "loser_score": 108.86
+    },
+    {
+      "rank": 18,
+      "matchup_id": "2025-w07-02-11",
+      "season": 2025,
+      "week": 7,
+      "game_type": "regular_season",
+      "playoff_round": null,
+      "tie": false,
+      "team_a": {
+        "franchise_id": "albany-kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
+        "path": "/teams/albany-kneelers/",
+        "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+        "score": 109.64
+      },
+      "team_b": {
+        "franchise_id": "vegas-vandals",
+        "display_name": "Vegas Vandals",
+        "short_name": "Vandals",
+        "path": "/teams/vegas-vandals/",
+        "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
+        "score": 108.34
+      },
+      "historical_team_a": "Albany Kneelers",
+      "historical_team_b": "Vegas Vandals",
+      "team_a_score": 109.64,
+      "team_b_score": 108.34,
+      "combined_score": 217.98,
+      "margin": 1.3,
+      "winner": {
+        "franchise_id": "albany-kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
+        "path": "/teams/albany-kneelers/",
+        "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "vegas-vandals",
+        "display_name": "Vegas Vandals",
+        "short_name": "Vandals",
+        "path": "/teams/vegas-vandals/",
+        "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg"
+      },
+      "winner_score": 109.64,
+      "loser_score": 108.34
+    },
+    {
+      "rank": 19,
+      "matchup_id": "2024-w02-03-05",
+      "season": 2024,
+      "week": 2,
+      "game_type": "regular_season",
+      "playoff_round": null,
+      "tie": false,
+      "team_a": {
+        "franchise_id": "ayahuasca-rush",
+        "display_name": "Ayahuasca Rush",
+        "short_name": "Rush",
+        "path": "/teams/ayahuasca-rush/",
+        "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+        "score": 127.04
+      },
+      "team_b": {
+        "franchise_id": "crazy-wazs-team",
+        "display_name": "Crazy Waz's Team",
+        "short_name": "Crazy Waz",
+        "path": "/teams/crazy-wazs-team/",
+        "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
+        "score": 125.62
+      },
+      "historical_team_a": "Ayahuasca Rush",
+      "historical_team_b": "Chris's Crazy Team",
+      "team_a_score": 127.04,
+      "team_b_score": 125.62,
+      "combined_score": 252.66,
+      "margin": 1.42,
+      "winner": {
+        "franchise_id": "ayahuasca-rush",
+        "display_name": "Ayahuasca Rush",
+        "short_name": "Rush",
+        "path": "/teams/ayahuasca-rush/",
+        "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "crazy-wazs-team",
+        "display_name": "Crazy Waz's Team",
+        "short_name": "Crazy Waz",
+        "path": "/teams/crazy-wazs-team/",
+        "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg"
+      },
+      "winner_score": 127.04,
+      "loser_score": 125.62
+    },
+    {
+      "rank": 20,
+      "matchup_id": "2024-w13-03-05",
+      "season": 2024,
+      "week": 13,
+      "game_type": "regular_season",
+      "playoff_round": null,
+      "tie": false,
+      "team_a": {
+        "franchise_id": "ayahuasca-rush",
+        "display_name": "Ayahuasca Rush",
+        "short_name": "Rush",
+        "path": "/teams/ayahuasca-rush/",
+        "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+        "score": 99.86
+      },
+      "team_b": {
+        "franchise_id": "crazy-wazs-team",
+        "display_name": "Crazy Waz's Team",
+        "short_name": "Crazy Waz",
+        "path": "/teams/crazy-wazs-team/",
+        "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
+        "score": 101.46
+      },
+      "historical_team_a": "Ayahuasca Rush",
+      "historical_team_b": "Chris's Crazy Team",
+      "team_a_score": 99.86,
+      "team_b_score": 101.46,
+      "combined_score": 201.32,
+      "margin": 1.6,
+      "winner": {
+        "franchise_id": "crazy-wazs-team",
+        "display_name": "Crazy Waz's Team",
+        "short_name": "Crazy Waz",
+        "path": "/teams/crazy-wazs-team/",
+        "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "ayahuasca-rush",
+        "display_name": "Ayahuasca Rush",
+        "short_name": "Rush",
+        "path": "/teams/ayahuasca-rush/",
+        "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg"
+      },
+      "winner_score": 101.46,
+      "loser_score": 99.86
+    },
+    {
+      "rank": 21,
+      "matchup_id": "2022-w06-06-08",
+      "season": 2022,
+      "week": 6,
+      "game_type": "regular_season",
+      "playoff_round": null,
+      "tie": false,
+      "team_a": {
+        "franchise_id": "new-jersey-giants",
+        "display_name": "New Jersey Giants",
+        "short_name": "Giants",
+        "path": "/teams/new-jersey-giants/",
+        "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
+        "score": 74.64
+      },
+      "team_b": {
+        "franchise_id": "savage-huns",
+        "display_name": "The Savage Huns",
+        "short_name": "Savage Huns",
+        "path": "/retired/the-savage-huns/",
+        "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
+        "score": 72.96
+      },
+      "historical_team_a": "Quahog Stripes",
+      "historical_team_b": "THE SAVAGE HUNS",
+      "team_a_score": 74.64,
+      "team_b_score": 72.96,
+      "combined_score": 147.6,
+      "margin": 1.68,
+      "winner": {
+        "franchise_id": "new-jersey-giants",
+        "display_name": "New Jersey Giants",
+        "short_name": "Giants",
+        "path": "/teams/new-jersey-giants/",
+        "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "savage-huns",
+        "display_name": "The Savage Huns",
+        "short_name": "Savage Huns",
+        "path": "/retired/the-savage-huns/",
+        "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg"
+      },
+      "winner_score": 74.64,
+      "loser_score": 72.96
+    },
+    {
+      "rank": 22,
+      "matchup_id": "2024-w04-05-07",
+      "season": 2024,
+      "week": 4,
+      "game_type": "regular_season",
+      "playoff_round": null,
+      "tie": false,
+      "team_a": {
+        "franchise_id": "crazy-wazs-team",
+        "display_name": "Crazy Waz's Team",
+        "short_name": "Crazy Waz",
+        "path": "/teams/crazy-wazs-team/",
+        "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
+        "score": 116.78
+      },
+      "team_b": {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+        "score": 118.6
+      },
+      "historical_team_a": "Chris's Crazy Team",
+      "historical_team_b": "Greendale Human Beings",
+      "team_a_score": 116.78,
+      "team_b_score": 118.6,
+      "combined_score": 235.38,
+      "margin": 1.82,
+      "winner": {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "crazy-wazs-team",
+        "display_name": "Crazy Waz's Team",
+        "short_name": "Crazy Waz",
+        "path": "/teams/crazy-wazs-team/",
+        "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg"
+      },
+      "winner_score": 118.6,
+      "loser_score": 116.78
+    },
+    {
+      "rank": 22,
+      "matchup_id": "2025-w12-01-09",
+      "season": 2025,
+      "week": 12,
+      "game_type": "regular_season",
+      "playoff_round": null,
+      "tie": false,
+      "team_a": {
+        "franchise_id": "van-cortlant-rangers",
+        "display_name": "Van Cortlant Rangers",
+        "short_name": "Rangers",
+        "path": "/teams/van-cortlant-rangers/",
+        "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
+        "score": 123.26
+      },
+      "team_b": {
+        "franchise_id": "baseball-furies",
+        "display_name": "The Baseball Furies",
+        "short_name": "Furies",
+        "path": "/teams/baseball-furies/",
+        "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
+        "score": 125.08
+      },
+      "historical_team_a": "Van Cortlant Rangers",
+      "historical_team_b": "The Baseball Furies",
+      "team_a_score": 123.26,
+      "team_b_score": 125.08,
+      "combined_score": 248.34,
+      "margin": 1.82,
+      "winner": {
+        "franchise_id": "baseball-furies",
+        "display_name": "The Baseball Furies",
+        "short_name": "Furies",
+        "path": "/teams/baseball-furies/",
+        "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "van-cortlant-rangers",
+        "display_name": "Van Cortlant Rangers",
+        "short_name": "Rangers",
+        "path": "/teams/van-cortlant-rangers/",
+        "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg"
+      },
+      "winner_score": 125.08,
+      "loser_score": 123.26
+    },
+    {
+      "rank": 24,
+      "matchup_id": "2022-w01-04-05",
+      "season": 2022,
+      "week": 1,
+      "game_type": "regular_season",
+      "playoff_round": null,
+      "tie": false,
+      "team_a": {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+        "score": 99.0
+      },
+      "team_b": {
+        "franchise_id": "vegas-vandals",
+        "display_name": "Vegas Vandals",
+        "short_name": "Vandals",
+        "path": "/teams/vegas-vandals/",
+        "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
+        "score": 100.9
+      },
+      "historical_team_a": "Greendale Human Beings",
+      "historical_team_b": "Broncos Country Let’s Ride",
+      "team_a_score": 99.0,
+      "team_b_score": 100.9,
+      "combined_score": 199.9,
+      "margin": 1.9,
+      "winner": {
+        "franchise_id": "vegas-vandals",
+        "display_name": "Vegas Vandals",
+        "short_name": "Vandals",
+        "path": "/teams/vegas-vandals/",
+        "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg"
+      },
+      "winner_score": 100.9,
+      "loser_score": 99.0
+    },
+    {
+      "rank": 25,
+      "matchup_id": "2024-w02-09-10",
+      "season": 2024,
+      "week": 2,
+      "game_type": "regular_season",
+      "playoff_round": null,
+      "tie": false,
+      "team_a": {
+        "franchise_id": "baseball-furies",
+        "display_name": "The Baseball Furies",
+        "short_name": "Furies",
+        "path": "/teams/baseball-furies/",
+        "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
+        "score": 102.42
+      },
+      "team_b": {
+        "franchise_id": "savage-huns",
+        "display_name": "The Savage Huns",
+        "short_name": "Savage Huns",
+        "path": "/retired/the-savage-huns/",
+        "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
+        "score": 104.34
+      },
+      "historical_team_a": "The Baseball Furies",
+      "historical_team_b": "THE SAVAGE HUNS",
+      "team_a_score": 102.42,
+      "team_b_score": 104.34,
+      "combined_score": 206.76,
+      "margin": 1.92,
+      "winner": {
+        "franchise_id": "savage-huns",
+        "display_name": "The Savage Huns",
+        "short_name": "Savage Huns",
+        "path": "/retired/the-savage-huns/",
+        "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "baseball-furies",
+        "display_name": "The Baseball Furies",
+        "short_name": "Furies",
+        "path": "/teams/baseball-furies/",
+        "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg"
+      },
+      "winner_score": 104.34,
+      "loser_score": 102.42
     }
   ],
   "championship_playoffs": [
@@ -963,6 +1668,674 @@
       },
       "winner_score": 75.26,
       "loser_score": 51.92
+    }
+  ],
+  "championships": [
+    {
+      "rank": 1,
+      "matchup_id": "2023-w16-02-07",
+      "season": 2023,
+      "week": 16,
+      "game_type": "championship_playoff",
+      "playoff_round": "Championship",
+      "tie": false,
+      "team_a": {
+        "franchise_id": "albany-kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
+        "path": "/teams/albany-kneelers/",
+        "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+        "score": 132.74
+      },
+      "team_b": {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+        "score": 132.82
+      },
+      "historical_team_a": "Albany Kneelers",
+      "historical_team_b": "Greendale Human Beings",
+      "team_a_score": 132.74,
+      "team_b_score": 132.82,
+      "combined_score": 265.56,
+      "margin": 0.08,
+      "winner": {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "albany-kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
+        "path": "/teams/albany-kneelers/",
+        "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
+      },
+      "winner_score": 132.82,
+      "loser_score": 132.74
+    },
+    {
+      "rank": 2,
+      "matchup_id": "2025-w16-02-06",
+      "season": 2025,
+      "week": 16,
+      "game_type": "championship_playoff",
+      "playoff_round": "Championship",
+      "tie": false,
+      "team_a": {
+        "franchise_id": "albany-kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
+        "path": "/teams/albany-kneelers/",
+        "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+        "score": 106.72
+      },
+      "team_b": {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+        "score": 107.12
+      },
+      "historical_team_a": "Albany Kneelers",
+      "historical_team_b": "Greendale Human Beings",
+      "team_a_score": 106.72,
+      "team_b_score": 107.12,
+      "combined_score": 213.84,
+      "margin": 0.4,
+      "winner": {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "albany-kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
+        "path": "/teams/albany-kneelers/",
+        "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
+      },
+      "winner_score": 107.12,
+      "loser_score": 106.72
+    },
+    {
+      "rank": 3,
+      "matchup_id": "2021-w16-02-08",
+      "season": 2021,
+      "week": 16,
+      "game_type": "championship_playoff",
+      "playoff_round": "Championship",
+      "tie": false,
+      "team_a": {
+        "franchise_id": "savage-huns",
+        "display_name": "The Savage Huns",
+        "short_name": "Savage Huns",
+        "path": "/retired/the-savage-huns/",
+        "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
+        "score": 118.7
+      },
+      "team_b": {
+        "franchise_id": "albany-kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
+        "path": "/teams/albany-kneelers/",
+        "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+        "score": 121.5
+      },
+      "historical_team_a": "THE SAVAGE HUNS",
+      "historical_team_b": "Albany Kneelers",
+      "team_a_score": 118.7,
+      "team_b_score": 121.5,
+      "combined_score": 240.2,
+      "margin": 2.8,
+      "winner": {
+        "franchise_id": "albany-kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
+        "path": "/teams/albany-kneelers/",
+        "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "savage-huns",
+        "display_name": "The Savage Huns",
+        "short_name": "Savage Huns",
+        "path": "/retired/the-savage-huns/",
+        "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg"
+      },
+      "winner_score": 121.5,
+      "loser_score": 118.7
+    },
+    {
+      "rank": 4,
+      "matchup_id": "2024-w16-05-11",
+      "season": 2024,
+      "week": 16,
+      "game_type": "championship_playoff",
+      "playoff_round": "Championship",
+      "tie": false,
+      "team_a": {
+        "franchise_id": "crazy-wazs-team",
+        "display_name": "Crazy Waz's Team",
+        "short_name": "Crazy Waz",
+        "path": "/teams/crazy-wazs-team/",
+        "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
+        "score": 140.98
+      },
+      "team_b": {
+        "franchise_id": "turnbull-acs",
+        "display_name": "Turnbull AC's",
+        "short_name": "Turnbull",
+        "path": "/teams/turnbull-acs/",
+        "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
+        "score": 148.18
+      },
+      "historical_team_a": "Chris's Crazy Team",
+      "historical_team_b": "Turnbull AC’s",
+      "team_a_score": 140.98,
+      "team_b_score": 148.18,
+      "combined_score": 289.16,
+      "margin": 7.2,
+      "winner": {
+        "franchise_id": "turnbull-acs",
+        "display_name": "Turnbull AC's",
+        "short_name": "Turnbull",
+        "path": "/teams/turnbull-acs/",
+        "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "crazy-wazs-team",
+        "display_name": "Crazy Waz's Team",
+        "short_name": "Crazy Waz",
+        "path": "/teams/crazy-wazs-team/",
+        "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg"
+      },
+      "winner_score": 148.18,
+      "loser_score": 140.98
+    },
+    {
+      "rank": 5,
+      "matchup_id": "2022-w16-10-11",
+      "season": 2022,
+      "week": 16,
+      "game_type": "championship_playoff",
+      "playoff_round": "Championship",
+      "tie": false,
+      "team_a": {
+        "franchise_id": "turnbull-acs",
+        "display_name": "Turnbull AC's",
+        "short_name": "Turnbull",
+        "path": "/teams/turnbull-acs/",
+        "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
+        "score": 69.16
+      },
+      "team_b": {
+        "franchise_id": "ayahuasca-rush",
+        "display_name": "Ayahuasca Rush",
+        "short_name": "Rush",
+        "path": "/teams/ayahuasca-rush/",
+        "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+        "score": 115.2
+      },
+      "historical_team_a": "Turnbull AC’s",
+      "historical_team_b": "Ayahuasca Rush",
+      "team_a_score": 69.16,
+      "team_b_score": 115.2,
+      "combined_score": 184.36,
+      "margin": 46.04,
+      "winner": {
+        "franchise_id": "ayahuasca-rush",
+        "display_name": "Ayahuasca Rush",
+        "short_name": "Rush",
+        "path": "/teams/ayahuasca-rush/",
+        "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "turnbull-acs",
+        "display_name": "Turnbull AC's",
+        "short_name": "Turnbull",
+        "path": "/teams/turnbull-acs/",
+        "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg"
+      },
+      "winner_score": 115.2,
+      "loser_score": 69.16
+    }
+  ],
+  "by_franchise": [
+    {
+      "franchise_id": "albany-kneelers",
+      "display_name": "Albany Redskins",
+      "short_name": "Redskins",
+      "path": "/teams/albany-kneelers/",
+      "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+      "game": {
+        "matchup_id": "2025-w07-02-11",
+        "season": 2025,
+        "week": 7,
+        "game_type": "regular_season",
+        "playoff_round": null,
+        "tie": false,
+        "team_a": {
+          "franchise_id": "albany-kneelers",
+          "display_name": "Albany Redskins",
+          "path": "/teams/albany-kneelers/",
+          "score": 109.64
+        },
+        "team_b": {
+          "franchise_id": "vegas-vandals",
+          "display_name": "Vegas Vandals",
+          "path": "/teams/vegas-vandals/",
+          "score": 108.34
+        },
+        "winner": {
+          "franchise_id": "albany-kneelers",
+          "display_name": "Albany Redskins"
+        },
+        "margin": 1.3,
+        "combined_score": 217.98
+      }
+    },
+    {
+      "franchise_id": "ayahuasca-rush",
+      "display_name": "Ayahuasca Rush",
+      "short_name": "Rush",
+      "path": "/teams/ayahuasca-rush/",
+      "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+      "game": {
+        "matchup_id": "2023-w06-03-07",
+        "season": 2023,
+        "week": 6,
+        "game_type": "regular_season",
+        "playoff_round": null,
+        "tie": false,
+        "team_a": {
+          "franchise_id": "ayahuasca-rush",
+          "display_name": "Ayahuasca Rush",
+          "path": "/teams/ayahuasca-rush/",
+          "score": 121.82
+        },
+        "team_b": {
+          "franchise_id": "greendale-human-beings",
+          "display_name": "Greendale Human Beings",
+          "path": "/teams/greendale-human-beings/",
+          "score": 120.9
+        },
+        "winner": {
+          "franchise_id": "ayahuasca-rush",
+          "display_name": "Ayahuasca Rush"
+        },
+        "margin": 0.92,
+        "combined_score": 242.72
+      }
+    },
+    {
+      "franchise_id": "baseball-furies",
+      "display_name": "The Baseball Furies",
+      "short_name": "Furies",
+      "path": "/teams/baseball-furies/",
+      "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
+      "game": {
+        "matchup_id": "2021-w10-06-10",
+        "season": 2021,
+        "week": 10,
+        "game_type": "regular_season",
+        "playoff_round": null,
+        "tie": false,
+        "team_a": {
+          "franchise_id": "buffalo-bravado",
+          "display_name": "Buffalo Bravado",
+          "path": "/teams/buffalo-bravado/",
+          "score": 108.2
+        },
+        "team_b": {
+          "franchise_id": "baseball-furies",
+          "display_name": "The Baseball Furies",
+          "path": "/teams/baseball-furies/",
+          "score": 108.94
+        },
+        "winner": {
+          "franchise_id": "baseball-furies",
+          "display_name": "The Baseball Furies"
+        },
+        "margin": 0.74,
+        "combined_score": 217.14
+      }
+    },
+    {
+      "franchise_id": "buffalo-bravado",
+      "display_name": "Buffalo Bravado",
+      "short_name": "Bravado",
+      "path": "/teams/buffalo-bravado/",
+      "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+      "game": {
+        "matchup_id": "2021-w06-02-06",
+        "season": 2021,
+        "week": 6,
+        "game_type": "regular_season",
+        "playoff_round": null,
+        "tie": false,
+        "team_a": {
+          "franchise_id": "savage-huns",
+          "display_name": "The Savage Huns",
+          "path": "/retired/the-savage-huns/",
+          "score": 127.46
+        },
+        "team_b": {
+          "franchise_id": "buffalo-bravado",
+          "display_name": "Buffalo Bravado",
+          "path": "/teams/buffalo-bravado/",
+          "score": 128.18
+        },
+        "winner": {
+          "franchise_id": "buffalo-bravado",
+          "display_name": "Buffalo Bravado"
+        },
+        "margin": 0.72,
+        "combined_score": 255.64
+      }
+    },
+    {
+      "franchise_id": "crazy-wazs-team",
+      "display_name": "Crazy Waz's Team",
+      "short_name": "Crazy Waz",
+      "path": "/teams/crazy-wazs-team/",
+      "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
+      "game": {
+        "matchup_id": "2025-w15-05-10",
+        "season": 2025,
+        "week": 15,
+        "game_type": "postseason_unclassified",
+        "playoff_round": null,
+        "tie": false,
+        "team_a": {
+          "franchise_id": "crazy-wazs-team",
+          "display_name": "Crazy Waz's Team",
+          "path": "/teams/crazy-wazs-team/",
+          "score": 83.2
+        },
+        "team_b": {
+          "franchise_id": "turnbull-acs",
+          "display_name": "Turnbull AC's",
+          "path": "/teams/turnbull-acs/",
+          "score": 83.0
+        },
+        "winner": {
+          "franchise_id": "crazy-wazs-team",
+          "display_name": "Crazy Waz's Team"
+        },
+        "margin": 0.2,
+        "combined_score": 166.2
+      }
+    },
+    {
+      "franchise_id": "greendale-human-beings",
+      "display_name": "Greendale Human Beings",
+      "short_name": "Human Beings",
+      "path": "/teams/greendale-human-beings/",
+      "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+      "game": {
+        "matchup_id": "2023-w16-02-07",
+        "season": 2023,
+        "week": 16,
+        "game_type": "championship_playoff",
+        "playoff_round": "Championship",
+        "tie": false,
+        "team_a": {
+          "franchise_id": "albany-kneelers",
+          "display_name": "Albany Redskins",
+          "path": "/teams/albany-kneelers/",
+          "score": 132.74
+        },
+        "team_b": {
+          "franchise_id": "greendale-human-beings",
+          "display_name": "Greendale Human Beings",
+          "path": "/teams/greendale-human-beings/",
+          "score": 132.82
+        },
+        "winner": {
+          "franchise_id": "greendale-human-beings",
+          "display_name": "Greendale Human Beings"
+        },
+        "margin": 0.08,
+        "combined_score": 265.56
+      }
+    },
+    {
+      "franchise_id": "maine-moose",
+      "display_name": "Maine Moose",
+      "short_name": "Moose",
+      "path": "/teams/maine-moose/",
+      "identity_image": "/assets/img/franchises/maine-moose/identity.jpg",
+      "game": {
+        "matchup_id": "2024-w13-02-08",
+        "season": 2024,
+        "week": 13,
+        "game_type": "regular_season",
+        "playoff_round": null,
+        "tie": false,
+        "team_a": {
+          "franchise_id": "albany-kneelers",
+          "display_name": "Albany Redskins",
+          "path": "/teams/albany-kneelers/",
+          "score": 132.68
+        },
+        "team_b": {
+          "franchise_id": "maine-moose",
+          "display_name": "Maine Moose",
+          "path": "/teams/maine-moose/",
+          "score": 135.0
+        },
+        "winner": {
+          "franchise_id": "maine-moose",
+          "display_name": "Maine Moose"
+        },
+        "margin": 2.32,
+        "combined_score": 267.68
+      }
+    },
+    {
+      "franchise_id": "new-jersey-giants",
+      "display_name": "New Jersey Giants",
+      "short_name": "Giants",
+      "path": "/teams/new-jersey-giants/",
+      "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
+      "game": {
+        "matchup_id": "2022-w03-06-09",
+        "season": 2022,
+        "week": 3,
+        "game_type": "regular_season",
+        "playoff_round": null,
+        "tie": false,
+        "team_a": {
+          "franchise_id": "new-jersey-giants",
+          "display_name": "New Jersey Giants",
+          "path": "/teams/new-jersey-giants/",
+          "score": 96.7
+        },
+        "team_b": {
+          "franchise_id": "buffalo-bravado",
+          "display_name": "Buffalo Bravado",
+          "path": "/teams/buffalo-bravado/",
+          "score": 95.74
+        },
+        "winner": {
+          "franchise_id": "new-jersey-giants",
+          "display_name": "New Jersey Giants"
+        },
+        "margin": 0.96,
+        "combined_score": 192.44
+      }
+    },
+    {
+      "franchise_id": "north-town-ninnyhammers",
+      "display_name": "North Town Ninnyhammers",
+      "short_name": "Ninnyhammers",
+      "path": "/teams/north-town-ninnyhammers/",
+      "identity_image": "/assets/img/franchises/north-town-ninnyhammers/identity.jpg",
+      "game": {
+        "matchup_id": "2023-w11-06-09",
+        "season": 2023,
+        "week": 11,
+        "game_type": "regular_season",
+        "playoff_round": null,
+        "tie": false,
+        "team_a": {
+          "franchise_id": "buffalo-bravado",
+          "display_name": "Buffalo Bravado",
+          "path": "/teams/buffalo-bravado/",
+          "score": 111.44
+        },
+        "team_b": {
+          "franchise_id": "north-town-ninnyhammers",
+          "display_name": "North Town Ninnyhammers",
+          "path": "/teams/north-town-ninnyhammers/",
+          "score": 112.4
+        },
+        "winner": {
+          "franchise_id": "north-town-ninnyhammers",
+          "display_name": "North Town Ninnyhammers"
+        },
+        "margin": 0.96,
+        "combined_score": 223.84
+      }
+    },
+    {
+      "franchise_id": "savage-huns",
+      "display_name": "The Savage Huns",
+      "short_name": "Savage Huns",
+      "path": "/retired/the-savage-huns/",
+      "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
+      "game": {
+        "matchup_id": "2024-w02-09-10",
+        "season": 2024,
+        "week": 2,
+        "game_type": "regular_season",
+        "playoff_round": null,
+        "tie": false,
+        "team_a": {
+          "franchise_id": "baseball-furies",
+          "display_name": "The Baseball Furies",
+          "path": "/teams/baseball-furies/",
+          "score": 102.42
+        },
+        "team_b": {
+          "franchise_id": "savage-huns",
+          "display_name": "The Savage Huns",
+          "path": "/retired/the-savage-huns/",
+          "score": 104.34
+        },
+        "winner": {
+          "franchise_id": "savage-huns",
+          "display_name": "The Savage Huns"
+        },
+        "margin": 1.92,
+        "combined_score": 206.76
+      }
+    },
+    {
+      "franchise_id": "turnbull-acs",
+      "display_name": "Turnbull AC's",
+      "short_name": "Turnbull",
+      "path": "/teams/turnbull-acs/",
+      "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
+      "game": {
+        "matchup_id": "2024-w04-02-11",
+        "season": 2024,
+        "week": 4,
+        "game_type": "regular_season",
+        "playoff_round": null,
+        "tie": false,
+        "team_a": {
+          "franchise_id": "albany-kneelers",
+          "display_name": "Albany Redskins",
+          "path": "/teams/albany-kneelers/",
+          "score": 137.44
+        },
+        "team_b": {
+          "franchise_id": "turnbull-acs",
+          "display_name": "Turnbull AC's",
+          "path": "/teams/turnbull-acs/",
+          "score": 137.54
+        },
+        "winner": {
+          "franchise_id": "turnbull-acs",
+          "display_name": "Turnbull AC's"
+        },
+        "margin": 0.1,
+        "combined_score": 274.98
+      }
+    },
+    {
+      "franchise_id": "van-cortlant-rangers",
+      "display_name": "Van Cortlant Rangers",
+      "short_name": "Rangers",
+      "path": "/teams/van-cortlant-rangers/",
+      "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
+      "game": {
+        "matchup_id": "2024-w10-01-09",
+        "season": 2024,
+        "week": 10,
+        "game_type": "regular_season",
+        "playoff_round": null,
+        "tie": false,
+        "team_a": {
+          "franchise_id": "van-cortlant-rangers",
+          "display_name": "Van Cortlant Rangers",
+          "path": "/teams/van-cortlant-rangers/",
+          "score": 87.64
+        },
+        "team_b": {
+          "franchise_id": "baseball-furies",
+          "display_name": "The Baseball Furies",
+          "path": "/teams/baseball-furies/",
+          "score": 84.68
+        },
+        "winner": {
+          "franchise_id": "van-cortlant-rangers",
+          "display_name": "Van Cortlant Rangers"
+        },
+        "margin": 2.96,
+        "combined_score": 172.32
+      }
+    },
+    {
+      "franchise_id": "vegas-vandals",
+      "display_name": "Vegas Vandals",
+      "short_name": "Vandals",
+      "path": "/teams/vegas-vandals/",
+      "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
+      "game": {
+        "matchup_id": "2022-w09-05-10",
+        "season": 2022,
+        "week": 9,
+        "game_type": "regular_season",
+        "playoff_round": null,
+        "tie": false,
+        "team_a": {
+          "franchise_id": "vegas-vandals",
+          "display_name": "Vegas Vandals",
+          "path": "/teams/vegas-vandals/",
+          "score": 82.16
+        },
+        "team_b": {
+          "franchise_id": "turnbull-acs",
+          "display_name": "Turnbull AC's",
+          "path": "/teams/turnbull-acs/",
+          "score": 81.82
+        },
+        "winner": {
+          "franchise_id": "vegas-vandals",
+          "display_name": "Vegas Vandals"
+        },
+        "margin": 0.34,
+        "combined_score": 163.98
+      }
     }
   ],
   "ties": [

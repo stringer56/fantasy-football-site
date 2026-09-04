@@ -36,6 +36,10 @@ def game(matchup_id: str, season: int, week: int, a: str, b: str, a_score: float
 
 
 class HistoricalMetricsTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.payloads = metrics.build_payloads()
+
     def setUp(self) -> None:
         self.identities = {name: identity(name) for name in ("alpha", "beta", "gamma")}
 
@@ -44,6 +48,12 @@ class HistoricalMetricsTests(unittest.TestCase):
         pair = metrics.build_head_to_head(games, self.identities)[0]
         self.assertEqual((pair["meetings"], pair["wins_a"], pair["wins_b"], pair["ties"]), (2, 1, 0, 1))
         self.assertEqual((pair["points_a"], pair["points_b"]), (200.0, 190.0))
+        self.assertEqual(pair["first_meeting"]["matchup_id"], "g1")
+        self.assertEqual(pair["most_recent_meeting"]["matchup_id"], "g2")
+        self.assertIsNone(pair["current_series_streak"])
+        self.assertEqual(pair["longest_series_streak"]["wins"], 1)
+        self.assertIsNone(pair["rivalry_title"])
+        self.assertIsNone(pair["editorial_history"])
 
     def test_biggest_and_closest_sorting(self) -> None:
         games = [game("g1", 2022, 1, "alpha", "beta", 120, 100), game("g2", 2022, 2, "alpha", "beta", 101, 100)]
@@ -62,31 +72,86 @@ class HistoricalMetricsTests(unittest.TestCase):
         self.assertEqual(1, metrics.best_streak(sequence, {"W"}, cross_season=False)["games"])
         self.assertEqual(2, metrics.best_streak(sequence, {"W"}, cross_season=True)["games"])
 
+    def test_cross_season_streak_rejects_unrepresented_gap(self) -> None:
+        sequence = [(2022, 13, "W"), (2024, 1, "W")]
+        self.assertEqual(1, metrics.best_streak(sequence, {"W"}, cross_season=True)["games"])
+
     def test_tie_breaks_win_streak_but_extends_unbeaten_streak(self) -> None:
         sequence = [(2022, 1, "W"), (2022, 2, "T"), (2022, 3, "W")]
         self.assertEqual(1, metrics.best_streak(sequence, {"W"}, cross_season=False)["games"])
         self.assertEqual(3, metrics.best_streak(sequence, {"W", "T"}, cross_season=False)["games"])
 
     def test_actual_playoff_output_is_independently_classified(self) -> None:
-        payload = metrics.build_payloads()["playoffs"]
+        payload = self.payloads["playoffs"]
         self.assertEqual(21, len(payload["games"]))
         self.assertTrue(all(item["game_type"] == "championship_playoff" and item["playoff_round"] for item in payload["games"]))
+        self.assertNotIn("placement", {str(item["playoff_round"]).casefold() for item in payload["games"]})
+        self.assertEqual(21, sum(row["playoff_wins"] for row in payload["franchises"]))
+        self.assertEqual(21, sum(row["playoff_losses"] for row in payload["franchises"]))
 
     def test_weekly_matchups_are_fully_resolved_after_confirmed_mappings(self) -> None:
-        manifest = metrics.build_payloads()["manifest"]
+        manifest = self.payloads["manifest"]
         self.assertEqual(446, manifest["counts"]["weekly_matchups_input"])
         self.assertEqual(0, manifest["counts"]["excluded_unresolved_matchups"])
         self.assertEqual(78, manifest["counts"]["head_to_head_pairs"])
 
     def test_2021_is_included_in_weekly_outputs(self) -> None:
-        payloads = metrics.build_payloads()
-        encoded = " ".join(str(payloads[name]) for name in ("head_to_head", "biggest_wins", "closest_games", "weekly_scores", "streaks", "playoffs"))
+        encoded = " ".join(str(self.payloads[name]) for name in ("head_to_head", "biggest_wins", "closest_games", "weekly_scores", "streaks", "playoffs"))
         self.assertIn("'season': 2021", encoded)
 
     def test_coverage_labels_remain_separate(self) -> None:
-        payloads = metrics.build_payloads()
-        self.assertEqual("Verified 2021–2025", payloads["franchise_summaries"]["season_level_coverage"]["label"])
-        self.assertEqual("Verified 2021–2025", payloads["head_to_head"]["coverage"]["label"])
+        self.assertEqual("Verified 2021–2025", self.payloads["franchise_career"]["season_level_coverage"]["label"])
+        self.assertEqual("Verified 2021–2025", self.payloads["head_to_head"]["coverage"]["label"])
+
+    def test_franchise_career_aggregation_and_name_continuity(self) -> None:
+        career = self.payloads["franchise_career"]["franchises"]
+        self.assertEqual(13, len(career))
+        self.assertEqual(len(career), len({row["franchise_id"] for row in career}))
+        buffalo = next(row for row in career if row["franchise_id"] == "buffalo-bravado")
+        self.assertIn("The Swagger Daggers", {row["historical_team_name"] for row in buffalo["season_history"]["seasons"]})
+        self.assertEqual((25, 41, 1), (buffalo["season_history"]["wins"], buffalo["season_history"]["losses"], buffalo["season_history"]["ties"]))
+        self.assertIn("playoff_appearance", {event["event_type"] for event in buffalo["timeline_events"]})
+
+    def test_all_matchups_appear_once_across_head_to_head_pairs(self) -> None:
+        matchup_ids = [
+            game["matchup_id"]
+            for pair in self.payloads["head_to_head"]["pairs"]
+            for game in pair["all_meetings"]
+        ]
+        self.assertEqual(446, len(matchup_ids))
+        self.assertEqual(446, len(set(matchup_ids)))
+
+    def test_highest_losing_and_lowest_winning_scores(self) -> None:
+        scores = self.payloads["weekly_scores"]
+        self.assertEqual((173.82, "van-cortlant-rangers"), (scores["highest_losing_scores"][0]["score"], scores["highest_losing_scores"][0]["franchise_id"]))
+        self.assertEqual((74.64, "new-jersey-giants"), (scores["lowest_winning_scores"][0]["score"], scores["lowest_winning_scores"][0]["franchise_id"]))
+        self.assertEqual(25, len(scores["highest_team_scores"]))
+        self.assertEqual(25, len(scores["lowest_team_scores"]))
+
+    def test_championship_aggregation(self) -> None:
+        championships = self.payloads["championships"]
+        self.assertEqual([2025, 2024, 2023, 2022, 2021], [row["season"] for row in championships["championships"]])
+        greendale = next(row for row in championships["leaderboards"]["most_championships"] if row["franchise_id"] == "greendale-human-beings")
+        self.assertEqual((2, 2), (greendale["championships"], greendale["appearances"]))
+
+    def test_season_comparison_records(self) -> None:
+        comparisons = self.payloads["season_leaders"]["comparisons"]
+        self.assertEqual((2023, "albany-kneelers"), (comparisons["best_single_season_records"][0]["season"], comparisons["best_single_season_records"][0]["franchise_id"]))
+        self.assertEqual(2022, comparisons["most_dominant_champions"][0]["season"])
+        self.assertEqual(2023, comparisons["closest_championships"][0]["season"])
+
+    def test_record_watch_thresholds_match_rankings(self) -> None:
+        thresholds = self.payloads["record_thresholds"]["thresholds"]
+        scores = self.payloads["weekly_scores"]
+        wins = self.payloads["biggest_wins"]
+        self.assertEqual(scores["highest_team_scores"][0]["score"], thresholds["highest_weekly_score"])
+        self.assertEqual(scores["highest_team_scores"][9]["score"], thresholds["tenth_highest_weekly_score"])
+        self.assertEqual(scores["highest_team_scores"][24]["score"], thresholds["twenty_fifth_highest_weekly_score"])
+        self.assertEqual(wins["overall"][9]["margin"], thresholds["tenth_largest_margin"])
+        self.assertFalse(self.payloads["record_thresholds"]["live_data_dependency"])
+
+    def test_championship_appearance_streak_is_omitted_when_not_meaningful(self) -> None:
+        self.assertEqual([], self.payloads["streaks"]["championship_appearance_streaks"])
 
     def test_canonical_championship_is_not_duplicated_by_archive_fallback(self) -> None:
         facts = metrics.championship_facts()
@@ -106,7 +171,7 @@ class HistoricalMetricsTests(unittest.TestCase):
                 metrics.load_weekly_games()
 
     def test_generation_is_deterministic(self) -> None:
-        self.assertEqual(metrics.build_payloads(), copy.deepcopy(metrics.build_payloads()))
+        self.assertEqual(metrics.build_payloads(), copy.deepcopy(self.payloads))
 
 
 if __name__ == "__main__":

@@ -104,42 +104,42 @@ categories:
 
   - category_id: playoff_scoring
     domain: playoffs
-    output_type: unavailable
+    output_type: records
     label: Playoff Scoring Records
-    coverage_status: unavailable
-    public_calculation_allowed: false
-    source_type: incomplete_playoff_scores
+    coverage_status: complete
+    public_calculation_allowed: true
+    source_type: verified_classified_playoff_scores
     source_years: [2021, 2022, 2023, 2024, 2025]
-    source_files: [_data/playoffs.yml]
-    public_message: Non-final playoff scores are still being imported.
+    source_files: [_data/playoffs.yml, _data/generated/records/playoffs.json]
     notes:
-      - Twelve 2021–2024 non-final playoff games have verified winners but no published scores; 2025 is complete.
+      - All 21 independently classified championship-bracket games have verified numeric scores.
+      - Placement and ambiguous postseason games are excluded from playoff records.
 
   - category_id: game_margin
     domain: games
-    output_type: unavailable
+    output_type: records
     label: Game & Margin Records
-    coverage_status: unavailable
-    public_calculation_allowed: false
-    source_type: missing_weekly_matchups
-    source_years: []
-    source_files: []
-    public_message: Weekly matchup history is still being imported.
+    coverage_status: complete
+    public_calculation_allowed: true
+    source_type: verified_final_weekly_matchups
+    source_years: [2021, 2022, 2023, 2024, 2025]
+    source_files: [_data/generated/records/biggest_wins.json, _data/generated/records/closest_games.json]
     notes:
-      - Final standings cannot establish single-game scores or margins.
+      - All 446 final matchups are available to general score and margin records.
+      - Ties are preserved separately and excluded from victory rankings.
 
   - category_id: regular_season_streaks
     domain: streaks
-    output_type: unavailable
+    output_type: records
     label: Regular-Season Streaks
-    coverage_status: unavailable
-    public_calculation_allowed: false
-    source_type: missing_weekly_matchups
-    source_years: []
-    source_files: []
-    public_message: Win and loss streaks await complete weekly matchup history.
+    coverage_status: complete
+    public_calculation_allowed: true
+    source_type: verified_final_weekly_matchups
+    source_years: [2021, 2022, 2023, 2024, 2025]
+    source_files: [_data/generated/records/streaks.json]
     notes:
-      - Final records do not preserve game sequence.
+      - Single-season streaks reset at the season boundary.
+      - Cross-season streaks continue only into an immediately adjacent represented season.
 
   - category_id: playoff_droughts
     domain: streaks

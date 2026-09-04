@@ -22,6 +22,8 @@ EXPECTED_ROUTES = (
     "/cup/",
     "/records/",
     "/head-to-head/",
+    "/all-time-standings/",
+    "/championships/",
     "/votes/",
     "/votes/power-rankings/",
     "/votes/picks/",
@@ -112,6 +114,8 @@ def main() -> None:
     cup_page = route_target("/cup/").read_text(encoding="utf-8")
     records_page = route_target("/records/").read_text(encoding="utf-8")
     head_to_head_page = route_target("/head-to-head/").read_text(encoding="utf-8")
+    all_time_page = route_target("/all-time-standings/").read_text(encoding="utf-8")
+    championships_page = route_target("/championships/").read_text(encoding="utf-8")
     votes_page = route_target("/votes/").read_text(encoding="utf-8")
     power_page = route_target("/votes/power-rankings/").read_text(encoding="utf-8")
     picks_page = route_target("/votes/picks/").read_text(encoding="utf-8")
@@ -132,32 +136,41 @@ def main() -> None:
     for expected in (
         "Road to Glory",
         "Record Book",
-        "Franchise Leaders",
-        "Season Records",
-        "Weekly Records",
-        "Biggest Wins",
-        "Closest Games",
+        "Franchise Career Leaders",
+        "Weekly Scoring Records",
+        "Biggest Wins &amp; Closest Games",
         "Winning &amp; Losing Streaks",
-        "Playoff Records",
-        "Still Being Built",
+        "Playoff &amp; Championship Records",
+        "Cross-Season Comparisons",
+        "Record Watch",
+        "Not Yet Published",
         "Bench Blunders",
     ):
         if expected not in records_page:
             errors.append(f"records page is missing: {expected}")
     record_book = json.loads((ROOT / "_data" / "generated" / "record_book.json").read_text(encoding="utf-8"))
-    historical_summaries = json.loads((ROOT / "_data" / "generated" / "records" / "franchise_summaries.json").read_text(encoding="utf-8"))
-    historical_playoffs = json.loads((ROOT / "_data" / "generated" / "records" / "playoffs.json").read_text(encoding="utf-8"))
+    historical_summaries = json.loads((ROOT / "_data" / "generated" / "records" / "franchise_career.json").read_text(encoding="utf-8"))
     career_count = len(historical_summaries["franchises"])
-    playoff_count = len(historical_playoffs["franchises"])
-    if records_page.count('class="record-team"') < career_count + playoff_count:
-        errors.append("records page did not render every career and playoff franchise reference")
-    if records_page.count('class="record-card"') != 7:
-        errors.append("records page must render exactly 7 verified single-season record cards")
+    if records_page.count('class="record-team"') != min(10, career_count):
+        errors.append("records page did not render the expected career leader rows")
+    if records_page.count('class="record-card"') != 10:
+        errors.append("records page must render four weekly and six season-comparison record cards")
     if records_page.count('class="unavailable-card') != 2:
         errors.append("records page must render only playoff drought and bench unavailable states")
     for expected in ('id="franchise-a"', 'id="franchise-b"', 'id="h2h-data"', "Verified 2021–2025"):
         if expected not in head_to_head_page:
             errors.append(f"head-to-head page is missing: {expected}")
+    for expected in ("All-Time Franchise Standings", "2021–2025 Leaderboard", "data-all-time-table", "data-sort=\"pct\""):
+        if expected not in all_time_page:
+            errors.append(f"all-time standings page is missing: {expected}")
+    if all_time_page.count("data-name=") != career_count:
+        errors.append("all-time standings page did not render every canonical franchise")
+    for expected in ("Championship History", "Championship Results", "Championship Leaders", "Brew Crew Cup"):
+        if expected not in championships_page:
+            errors.append(f"championship history page is missing: {expected}")
+    championship_data = json.loads((ROOT / "_data" / "generated" / "records" / "championships.json").read_text(encoding="utf-8"))
+    if championships_page.count('class="record-rank"') != len(championship_data["championships"]):
+        errors.append("championship history page did not render every verified final")
     for expected in ("League", "Votes", "Active Votes", "Weekly Matchup Picks", "Power Rankings", "Vote Archive"):
         if expected not in votes_page:
             errors.append(f"votes hub is missing: {expected}")
@@ -260,7 +273,11 @@ def main() -> None:
     for franchise in franchise_data["franchises"]:
         route = f"/{'retired' if franchise['status'] == 'retired' else 'teams'}/{franchise['slug']}/"
         profile = route_target(route).read_text(encoding="utf-8")
-        for expected in (franchise["name"], "Team information", "Home turf", "Migration record"):
+        for expected in (
+            franchise["name"], "Team information", "Home turf", "Migration record",
+            "Franchise Record", "Season History", "Head-to-Head",
+            "Championship History", "Timeline Foundation",
+        ):
             if expected not in profile:
                 errors.append(f"franchise profile {route} is missing: {expected}")
     site_data = yaml.safe_load((ROOT / "_data" / "site.yml").read_text(encoding="utf-8"))

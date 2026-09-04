@@ -1,7 +1,8 @@
 # Records Data Coverage
 
-Road to Glory records use two explicit evidence windows. Neither is described
-as all-time.
+Road to Glory records use two explicit evidence windows. Public headings may say
+**All-Time League History — 2021–2025**; coverage labels never imply data outside
+the known 2021–2025 league archive.
 
 - **Season-level metrics — Verified 2021–2025.** Final standings, W-L-T, PF/PA,
   rank, championships, and franchise season summaries may use this window. All
@@ -23,7 +24,7 @@ verified weekly archive. The broader deterministic outputs live in
 | Highest and lowest weekly scores | 2021–2025 weekly scoreboards | COMPLETE for stated window | Published |
 | Biggest and closest victories | 2021–2025 weekly scoreboards | COMPLETE for stated window | Published |
 | Win, loss, and unbeaten streaks | 2021–2025 weekly scoreboards | COMPLETE for stated window | Published |
-| Classified playoff records | 2021–2025 brackets plus weekly results | PARTIAL | Published only for independently classified games |
+| Classified playoff records | 2021–2025 brackets plus weekly results | COMPLETE for the independently classified championship bracket | Published; placement/ambiguous games excluded |
 | Playoff droughts | Franchise tenure dates unavailable | UNAVAILABLE | Not published |
 | Top 10 bench misses | Complete weekly roster/bench scoring unavailable | UNAVAILABLE | Schema only |
 | Draft value, ADP, steals, and busts | 720 verified picks for 2022–2025 | PARTIAL INPUTS | Not calculated without an approved ADP/value method |
@@ -71,3 +72,7 @@ The next record categories require commissioner-approved weekly roster/bench
 exports, franchise tenure dates, and an explicit draft-value methodology. Each
 new source must retain season/week provenance and pass the records validator
 before any coverage label changes.
+
+Reliable calendar dates are not available across the normalized matchup archive,
+so no On This Day event file is published. Season/week references remain factual;
+they are not transformed into approximate dates.

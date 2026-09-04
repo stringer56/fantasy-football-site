@@ -1032,62 +1032,6 @@
   },
   "unavailable_categories": [
     {
-      "category_id": "playoff_scoring",
-      "label": "Playoff Scoring Records",
-      "message": "Non-final playoff scores are still being imported.",
-      "provenance": {
-        "source_type": "incomplete_playoff_scores",
-        "source_years": [
-          2021,
-          2022,
-          2023,
-          2024,
-          2025
-        ],
-        "source_files": [
-          "_data/playoffs.yml"
-        ],
-        "coverage_status": "unavailable",
-        "last_generated": "2026-08-31T00:00:00Z",
-        "notes": [
-          "Twelve 2021–2024 non-final playoff games have verified winners but no published scores; 2025 is complete."
-        ]
-      },
-      "entries": []
-    },
-    {
-      "category_id": "game_margin",
-      "label": "Game & Margin Records",
-      "message": "Weekly matchup history is still being imported.",
-      "provenance": {
-        "source_type": "missing_weekly_matchups",
-        "source_years": [],
-        "source_files": [],
-        "coverage_status": "unavailable",
-        "last_generated": "2026-08-31T00:00:00Z",
-        "notes": [
-          "Final standings cannot establish single-game scores or margins."
-        ]
-      },
-      "entries": []
-    },
-    {
-      "category_id": "regular_season_streaks",
-      "label": "Regular-Season Streaks",
-      "message": "Win and loss streaks await complete weekly matchup history.",
-      "provenance": {
-        "source_type": "missing_weekly_matchups",
-        "source_years": [],
-        "source_files": [],
-        "coverage_status": "unavailable",
-        "last_generated": "2026-08-31T00:00:00Z",
-        "notes": [
-          "Final records do not preserve game sequence."
-        ]
-      },
-      "entries": []
-    },
-    {
       "category_id": "playoff_droughts",
       "label": "Playoff Droughts",
       "message": "Franchise tenure history is needed before playoff droughts can be ranked.",

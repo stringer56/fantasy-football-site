@@ -150,7 +150,12 @@ or deferred instead of being guessed:
 - whether all public nicknames remain preferred in 2026;
 - source-approved fight-song audio files;
 - full championship verification against season recaps and bracket records;
-- season-by-season records, playoff appearances, and franchise milestones.
+- exact founding dates before the first verified 2021 participation season.
+
+Verified 2021–2025 season records, weekly performance, opponent series, playoff
+history, championship history, and season/week milestone events now render from
+`_data/generated/records/franchise_career.json`. Historical name changes remain
+season-scoped and do not create duplicate career identities.
 
 These gaps should be filled from commissioner records, Yahoo historical exports,
 and the later season-history migration—not inferred from current profile prose.
