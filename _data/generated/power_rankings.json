@@ -19,10 +19,15 @@
     "tie_breakers": [
       "total_points",
       "first_place_votes",
-      "average_rank",
-      "franchise_id"
-    ]
+      "average_rank"
+    ],
+    "unresolved_tie_policy": "shared_competition_rank"
   },
   "ballots_counted": 0,
-  "rankings": []
+  "rankings": [],
+  "voting": {
+    "status": "upcoming",
+    "form_url": null,
+    "closes_at": null
+  }
 }

@@ -75,6 +75,10 @@ than shrinking numeric content past legibility.
   labelled keyboard-focusable horizontal scroll region.
 - `.vote-empty` is the canonical no-ballot, stale-matchup, or no-results state;
   it never fills the UI with example votes.
+- `.community-status` labels upcoming/open/locked/final states without relying
+  on color, while `.pick-week-archive` uses native accessible disclosures.
+- `.poll-embed` is optional progressive enhancement; every embedded Google Form
+  retains a normal external responder link.
 
 Voting grids collapse from two columns to one by 768px. Tables keep deliberate
 horizontal scrolling, buttons retain touch-size targets, and matchup identities

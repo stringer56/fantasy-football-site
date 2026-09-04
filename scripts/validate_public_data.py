@@ -44,6 +44,15 @@ FORBIDDEN_KEYS = {
     "account_id",
     "auth_token",
     "edit_url",
+    "form_edit_url",
+    "invitation_url",
+    "prefilled_url",
+    "response_id",
+    "response_url",
+    "sheet_id",
+    "sheet_url",
+    "spreadsheet_id",
+    "spreadsheet_url",
 }
 FORBIDDEN_TEXT = ("/invitation?key=", "&ikey=")
 

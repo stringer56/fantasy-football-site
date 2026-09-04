@@ -50,6 +50,8 @@ def rows_to_ballots(imported: dict[str, Any], team_count: int) -> list[dict[str,
             {
                 "owner_id": row.get("owner_id"),
                 "submitted_at": row.get("submitted_at"),
+                "season": row.get("season"),
+                "week": row.get("week"),
                 "rankings": [row.get(f"rank_{rank}") for rank in range(1, team_count + 1)],
             }
         )
@@ -116,12 +118,25 @@ def aggregate_rankings(
                 item["franchise_id"],
             )
         )
-        for rank, item in enumerate(entries, start=1):
+        prior_key = None
+        prior_rank = None
+        for position, item in enumerate(entries, start=1):
+            tie_key = (
+                item["total_points"],
+                item["first_place_votes"],
+                item["average_rank"],
+            )
+            rank = prior_rank if tie_key == prior_key else position
             item["rank"] = rank
             item["previous_rank"] = previous.get(item["franchise_id"])
             item["movement"] = previous[item["franchise_id"]] - rank if item["franchise_id"] in previous else None
             item["ranking_points"] = item["total_points"]
             item["votes_received"] = item["ballots_counted"]
+            prior_key = tie_key
+            prior_rank = rank
+        rank_counts = {rank: sum(row["rank"] == rank for row in entries) for rank in {row["rank"] for row in entries}}
+        for item in entries:
+            item["is_tied"] = rank_counts[item["rank"]] > 1
     else:
         entries = []
     return entries, len(selected), rejected
@@ -134,6 +149,7 @@ def build_output(
     *,
     deadline: object = None,
     previous: dict[str, Any] | None = None,
+    community_data: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     imported = imported or {}
     franchises = active_franchises(franchises_data)
@@ -146,6 +162,7 @@ def build_output(
         deadline=deadline,
         previous_rankings=(previous or {}).get("rankings") or [],
     )
+    voting = (community_data or {}).get("power_rankings") or {}
     return {
         "schema_version": 1,
         "season": int(imported.get("season") or 2026),
@@ -164,14 +181,22 @@ def build_output(
             "team_count": len(franchises),
             "first_place_points": len(franchises),
             "last_place_points": 1,
-            "tie_breakers": ["total_points", "first_place_votes", "average_rank", "franchise_id"],
+            "tie_breakers": ["total_points", "first_place_votes", "average_rank"],
+            "unresolved_tie_policy": "shared_competition_rank",
         },
         "ballots_counted": accepted,
         "rankings": rankings,
+        "voting": {
+            "status": voting.get("status") or "upcoming",
+            "form_url": voting.get("form_url"),
+            "closes_at": deadline or voting.get("closes_at"),
+        },
     }
 
 
-def finalized_week_payload(payload: dict[str, Any]) -> dict[str, Any]:
+def finalized_week_payload(
+    payload: dict[str, Any], standings_by_id: dict[str, int | None] | None = None
+) -> dict[str, Any]:
     if not isinstance(payload.get("week"), int) or not payload.get("rankings"):
         raise ValueError("a finalized Power Ranking requires a week and published rankings")
     return {
@@ -198,6 +223,8 @@ def finalized_week_payload(payload: dict[str, Any]) -> dict[str, Any]:
                 "ranking_points": row["ranking_points"],
                 "first_place_votes": row["first_place_votes"],
                 "votes_received": row["votes_received"],
+                "is_tied": bool(row.get("is_tied")),
+                "yahoo_standings_rank": (standings_by_id or {}).get(row["franchise_id"]),
             }
             for row in payload["rankings"]
         ],
@@ -208,14 +235,19 @@ def archive_path(season: int, week: int, root: Path = ARCHIVE_ROOT) -> Path:
     return root / str(season) / f"week-{week:02d}.json"
 
 
-def persist_finalized_week(payload: dict[str, Any], root: Path = ARCHIVE_ROOT) -> Path:
-    final = finalized_week_payload(payload)
+def persist_finalized_week(
+    payload: dict[str, Any], root: Path = ARCHIVE_ROOT, *, override: bool = False,
+    standings_by_id: dict[str, int | None] | None = None,
+) -> Path:
+    final = finalized_week_payload(payload, standings_by_id)
     path = archive_path(final["season"], final["week"], root)
     serialized = json.dumps(final, ensure_ascii=False, indent=2) + "\n"
     if path.exists():
         existing = path.read_text(encoding="utf-8")
-        if existing != serialized:
+        if existing != serialized and not override:
             raise ValueError(f"refusing to overwrite finalized Power Rankings: {path}")
+        if existing != serialized:
+            path.write_text(serialized, encoding="utf-8")
         return path
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(serialized, encoding="utf-8")
@@ -264,6 +296,7 @@ def build_history(season: int, franchises: list[dict[str, Any]], weeks: list[dic
                         "average_rank": row["average_rank"],
                         "ranking_points": row["ranking_points"],
                         "first_place_votes": row["first_place_votes"],
+                        "yahoo_standings_rank": row.get("yahoo_standings_rank"),
                     }
                 )
 
@@ -346,21 +379,20 @@ def main() -> None:
     parser.add_argument("--previous", type=Path, help="Previous generated ranking JSON")
     parser.add_argument("--deadline", help="ISO-8601 voting deadline override")
     parser.add_argument("--output", type=Path, default=OUTPUT_PATH)
-    parser.add_argument("--finalize", action="store_true", help="Persist this week as an immutable finalized result")
-    parser.add_argument("--archive-root", type=Path, default=ARCHIVE_ROOT)
-    parser.add_argument("--history-output", type=Path, default=HISTORY_OUTPUT_PATH)
     args = parser.parse_args()
     imported = load_import(args.input) if args.input else None
     season = int((imported or {}).get("season") or 2026)
     week = int(imported["week"]) if imported and imported.get("week") not in (None, "") else None
-    previous = json.loads(args.previous.read_text(encoding="utf-8")) if args.previous else previous_finalized(season, week, args.archive_root)
-    payload = build_output(imported, load_yaml("franchises.yml"), load_yaml("owners.yml"), deadline=args.deadline, previous=previous)
+    previous = json.loads(args.previous.read_text(encoding="utf-8")) if args.previous else previous_finalized(season, week)
+    payload = build_output(
+        imported,
+        load_yaml("franchises.yml"),
+        load_yaml("owners.yml"),
+        deadline=args.deadline,
+        previous=previous,
+        community_data=load_yaml("community.yml"),
+    )
     write_json(args.output, payload)
-    if args.finalize:
-        path = persist_finalized_week(payload, args.archive_root)
-        history = build_history(payload["season"], active_franchises(load_yaml("franchises.yml")), load_finalized_weeks(payload["season"], args.archive_root))
-        write_json(args.history_output, history)
-        print(f"Finalized immutable weekly result at {path}")
     print(f"Wrote {args.output}: {payload['ballots_counted']} accepted manager ballots")
 
 

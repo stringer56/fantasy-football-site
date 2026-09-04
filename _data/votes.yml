@@ -14,22 +14,27 @@ submission_architecture:
 
 poll_types:
   - league_rule
-  - power_ranking
-  - matchup_pick
+  - draft_date
+  - scoring_change
   - award
+  - hall_of_fame
+  - rivalry_name
+  - commissioner_proposal
   - custom
 
 poll_schema:
-  required_fields: [id, season, week, title, description, type, status, opens_at, closes_at, options, submission_url, results_status, results_source, notes]
-  valid_statuses: [scheduled, open, closed, archived]
-  valid_results_statuses: [unavailable, hidden, provisional, final]
+  required_fields: [vote_id, season, title, description, type, status, open_date, close_date, options, results_visibility, anonymous_or_named, form_url, embed_url, result_summary, results_source, notes]
+  valid_statuses: [upcoming, open, closed]
+  valid_results_visibility: [hidden, after_close, public]
+  valid_identity_modes: [anonymous, named]
   option_fields: [id, label, description]
 
 power_ranking_schema:
   ballot_fields: [owner_id, submitted_at, rankings]
   ranking_method: descending_points
   scoring_rule: "For N active teams, rank 1 receives N points and rank N receives 1 point."
-  tie_breakers: [total_points, first_place_votes, average_rank, franchise_id]
+  tie_breakers: [total_points, first_place_votes, average_rank]
+  unresolved_tie_policy: shared_competition_rank
   public_fields: [rank, movement, franchise_id, total_points, average_rank, first_place_votes, ballots_counted]
 
 matchup_pick_schema:
@@ -38,5 +43,8 @@ matchup_pick_schema:
   scoring: {correct: 1, incorrect: 0, confidence_points: false}
   leaderboard_sort: [correct, accuracy, display_name]
   weekly_result_fields: [season, week, matchups, manager_results]
+  lock_policy: single_commissioner_defined_weekly_deadline
+  default_results_visibility: after_lock
+  default_manager_picks_visibility: private
 
 polls: []

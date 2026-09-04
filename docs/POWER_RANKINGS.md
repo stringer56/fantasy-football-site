@@ -1,64 +1,48 @@
 # 2026 Power Rankings
 
-## Canonical calculation
-
-Power Rankings are manager opinion, not Yahoo standings. Each valid ballot
+Power Rankings are manager opinion, never Yahoo standings. Each valid ballot
 ranks all twelve active franchises exactly once. First place earns 12 points,
-second earns 11, through twelfth earning 1. The public table includes rank,
-average submitted rank, ranking points, first-place votes, prior rank, and
-movement. Ties resolve by ranking points, first-place votes, average rank, then
-stable franchise ID.
+second earns 11, through twelfth earning 1. Results sort by ranking points,
+first-place votes, and better average submitted rank. An exact mathematical
+tie receives a shared competition rank and displays with `T-`; franchise ID is
+used only for stable presentation order.
 
-The duplicate policy remains `latest_valid_submission_before_deadline`: one
-manager cannot count twice in a week, and an invalid or late replacement does
-not erase an earlier valid ballot. Only team aggregates are public.
+One manager counts once per week. The latest valid submission at or before the
+deadline wins, while an invalid replacement cannot erase an earlier valid
+ballot. Individual ballots never enter public output.
 
-## Finalization and persistence
-
-Use a sanitized private export and explicitly finalize the reviewed result:
+## Preview and finalize
 
 ```powershell
-python scripts/build_power_rankings.py `
-  --input private-vote-imports/power-rankings-week-01.csv `
-  --finalize
+python scripts/import_power_rankings.py private-vote-imports/power-week-01.csv --season 2026 --week 1 --deadline 2026-09-10T19:00:00-04:00
+python scripts/finalize_power_rankings.py private-vote-imports/power-week-01.csv --season 2026 --week 1 --deadline 2026-09-10T19:00:00-04:00
 ```
 
-Finalization writes an immutable weekly aggregate to
-`_data/power_rankings/2026/week-01.json` and regenerates
-`_data/generated/power_rankings_history.json`. A second attempt with different
-content refuses to overwrite the finalized week. Later weeks automatically use
-the latest earlier finalized week for prior rank and movement.
+Preview writes nothing and reports row-level rejections, duplicates, and
+missing managers. Finalize writes
+`_data/power_rankings/2026/week-01.json`, refuses a different overwrite, and
+regenerates the current aggregate plus history. A reviewed correction requires
+`--override-finalized`; rejected rows require separate `--allow-rejected`
+acknowledgement.
 
-After review, run `python scripts/build_live_season.py` so the matching Yahoo
-week snapshot receives that week's finalized aggregate. Weekly hubs never show
-a different week's rankings merely because it is the latest available result.
-
-Every archived ranking row contains `season`, `week`, `franchise_id`, `rank`,
-`previous_rank`, `movement`, `average_rank`, `ranking_points`,
-`first_place_votes`, and `votes_received`. Missing weeks remain explicit in the
-history output and line segments do not bridge those gaps.
+Later weeks use the latest earlier finalized week for previous rank and
+movement. Each archive row includes season/week, franchise identity, rank,
+tie state, prior rank, movement, average rank, ranking points, first-place
+votes, votes received, and an optional Yahoo standings rank captured from that
+week’s preserved live snapshot. Missing weeks remain explicit and chart lines
+do not bridge them.
 
 ## Public experience
 
-`/power-rankings/` is the canonical route. The old
-`/votes/power-rankings/` route remains as a compatibility link. The page keeps
-the current accessible HTML table even if JavaScript fails, then adds a vanilla
-SVG history chart when finalized weeks exist.
+`/power-rankings/` keeps a complete accessible HTML table without JavaScript
+and adds a lightweight vanilla SVG history chart when finalized weeks exist.
+Rank 1 is at the top. Desktop can show all franchises; narrow screens begin
+with a focused selection and retain keyboard-accessible filters. Labels,
+movement symbols, points, and focus states ensure color is never the only cue.
+Reduced-motion preferences disable chart transitions.
 
-Rank 1 is at the top of the chart. Desktop starts with all franchises; narrow
-screens start with the current Top 3 and provide show-all, clear, single-team,
-and multi-team controls. Legend buttons and chart points are keyboard
-accessible. Focus or hover identifies the week, rank, previous rank, movement,
-average manager rank, and first-place votes. Color is paired with team labels,
-points, and focus treatment, and reduced-motion preferences disable chart
-transitions.
-
-Season facts are deterministic: weeks at #1, average rank, peak/low rank,
-Top-3 weeks, biggest rise/fall, and population-standard-deviation
-stability/volatility. Franchise pages receive current, peak, low, average,
-weeks-at-#1, and Top-3 summaries. Weekly hubs and the homepage show compact
-Top-3 and movement modules only after a finalized aggregate exists.
-
-No 2026 ballots are committed at this milestone, so the current page correctly
-renders an unavailable state. It does not manufacture sample rankings merely
-to populate the visualization.
+Season facts cover weeks at #1, average/peak/low rank, Top-3 weeks, biggest
+rise/fall, and statistical stability/volatility. Franchise and weekly pages use
+the same finalized archive. The Power-vs-standings comparison hook is present
+only where a weekly Yahoo standings snapshot exists; the full comparison chart
+is intentionally deferred until enough weekly snapshots accumulate.

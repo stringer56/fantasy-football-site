@@ -9,6 +9,260 @@
     "source_updated_at": "2026-09-04T21:30:24Z",
     "label": "Updated from Yahoo"
   },
+  "standings": [
+    {
+      "franchise_id": "albany-kneelers",
+      "display_name": "Albany Redskins",
+      "canonical_name": "Albany Redskins",
+      "short_name": "Redskins",
+      "path": "/teams/albany-kneelers/",
+      "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+      "identity_alt": "Black Albany Kneelers football helmet with the team seal",
+      "primary_color": "#111827",
+      "team_key": "470.l.26455.t.2",
+      "team_id": 2,
+      "rank": null,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "winning_percentage": null,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "streak": null,
+      "playoff_seed": null
+    },
+    {
+      "franchise_id": "ayahuasca-rush",
+      "display_name": "Ayahuasca Rush",
+      "canonical_name": "Ayahuasca Rush",
+      "short_name": "Rush",
+      "path": "/teams/ayahuasca-rush/",
+      "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
+      "identity_alt": "White Ayahuasca Rush football helmet with a green leaf emblem",
+      "primary_color": "#2e7d32",
+      "team_key": "470.l.26455.t.3",
+      "team_id": 3,
+      "rank": null,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "winning_percentage": null,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "streak": null,
+      "playoff_seed": null
+    },
+    {
+      "franchise_id": "baseball-furies",
+      "display_name": "The Baseball Furies",
+      "canonical_name": "The Baseball Furies",
+      "short_name": "Furies",
+      "path": "/teams/baseball-furies/",
+      "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
+      "identity_alt": "Blue Baseball Furies football helmet",
+      "primary_color": "#155e75",
+      "team_key": "470.l.26455.t.10",
+      "team_id": 10,
+      "rank": null,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "winning_percentage": null,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "streak": null,
+      "playoff_seed": null
+    },
+    {
+      "franchise_id": "buffalo-bravado",
+      "display_name": "Buffalo Bravados",
+      "canonical_name": "Buffalo Bravado",
+      "short_name": "Bravado",
+      "path": "/teams/buffalo-bravado/",
+      "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+      "identity_alt": "Light blue Buffalo Bravado football helmet with a heraldic crest",
+      "primary_color": "#2563eb",
+      "team_key": "470.l.26455.t.4",
+      "team_id": 4,
+      "rank": null,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "winning_percentage": null,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "streak": null,
+      "playoff_seed": null
+    },
+    {
+      "franchise_id": "crazy-wazs-team",
+      "display_name": "Chris's Crazy Team",
+      "canonical_name": "Crazy Waz's Team",
+      "short_name": "Crazy Waz",
+      "path": "/teams/crazy-wazs-team/",
+      "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
+      "identity_alt": "Green Crazy Waz football helmet with a collegiate crest",
+      "primary_color": "#15803d",
+      "team_key": "470.l.26455.t.5",
+      "team_id": 5,
+      "rank": null,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "winning_percentage": null,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "streak": null,
+      "playoff_seed": null
+    },
+    {
+      "franchise_id": "greendale-human-beings",
+      "display_name": "Greendale Human Beings",
+      "canonical_name": "Greendale Human Beings",
+      "short_name": "Human Beings",
+      "path": "/teams/greendale-human-beings/",
+      "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+      "identity_alt": "Blue Greendale Human Beings football helmet",
+      "primary_color": "#1e3a8a",
+      "team_key": "470.l.26455.t.6",
+      "team_id": 6,
+      "rank": null,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "winning_percentage": null,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "streak": null,
+      "playoff_seed": null
+    },
+    {
+      "franchise_id": "maine-moose",
+      "display_name": "Maine Moose",
+      "canonical_name": "Maine Moose",
+      "short_name": "Moose",
+      "path": "/teams/maine-moose/",
+      "identity_image": "/assets/img/franchises/maine-moose/identity.jpg",
+      "identity_alt": "Black Maine Moose football helmet with a gold moose",
+      "primary_color": "#b45309",
+      "team_key": "470.l.26455.t.7",
+      "team_id": 7,
+      "rank": null,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "winning_percentage": null,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "streak": null,
+      "playoff_seed": null
+    },
+    {
+      "franchise_id": "new-jersey-giants",
+      "display_name": "New Jersey Giants",
+      "canonical_name": "New Jersey Giants",
+      "short_name": "Giants",
+      "path": "/teams/new-jersey-giants/",
+      "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
+      "identity_alt": "Blue New Jersey Giants football helmet",
+      "primary_color": "#1d4ed8",
+      "team_key": "470.l.26455.t.8",
+      "team_id": 8,
+      "rank": null,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "winning_percentage": null,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "streak": null,
+      "playoff_seed": null
+    },
+    {
+      "franchise_id": "north-town-ninnyhammers",
+      "display_name": "North town Ninnyhammers",
+      "canonical_name": "North Town Ninnyhammers",
+      "short_name": "Ninnyhammers",
+      "path": "/teams/north-town-ninnyhammers/",
+      "identity_image": "/assets/img/franchises/north-town-ninnyhammers/identity.jpg",
+      "identity_alt": "White North Town Ninnyhammers football helmet with a red buffalo",
+      "primary_color": "#dc2626",
+      "team_key": "470.l.26455.t.9",
+      "team_id": 9,
+      "rank": null,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "winning_percentage": null,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "streak": null,
+      "playoff_seed": null
+    },
+    {
+      "franchise_id": "turnbull-acs",
+      "display_name": "Turnbull AC’s",
+      "canonical_name": "Turnbull AC's",
+      "short_name": "Turnbull",
+      "path": "/teams/turnbull-acs/",
+      "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
+      "identity_alt": "Silver Turnbull AC's football helmet with a purple bull",
+      "primary_color": "#7e22ce",
+      "team_key": "470.l.26455.t.11",
+      "team_id": 11,
+      "rank": null,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "winning_percentage": null,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "streak": null,
+      "playoff_seed": null
+    },
+    {
+      "franchise_id": "van-cortlant-rangers",
+      "display_name": "Van Cortlant Rangers",
+      "canonical_name": "Van Cortlant Rangers",
+      "short_name": "Rangers",
+      "path": "/teams/van-cortlant-rangers/",
+      "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
+      "identity_alt": "Blue Van Cortlant Rangers football helmet with a masked cowboy",
+      "primary_color": "#0f4c81",
+      "team_key": "470.l.26455.t.1",
+      "team_id": 1,
+      "rank": null,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "winning_percentage": null,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "streak": null,
+      "playoff_seed": null
+    },
+    {
+      "franchise_id": "vegas-vandals",
+      "display_name": "Vegas Vandals",
+      "canonical_name": "Vegas Vandals",
+      "short_name": "Vandals",
+      "path": "/teams/vegas-vandals/",
+      "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg",
+      "identity_alt": "Black Vegas Vandals football helmet with flaming playing cards",
+      "primary_color": "#991b1b",
+      "team_key": "470.l.26455.t.12",
+      "team_id": 12,
+      "rank": null,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "winning_percentage": null,
+      "points_for": 0.0,
+      "points_against": 0.0,
+      "streak": null,
+      "playoff_seed": null
+    }
+  ],
   "matchups": [
     {
       "matchup_id": "2026-w01-albany-kneelers--turnbull-acs",
@@ -1989,9 +2243,168 @@
   "record_watch": [],
   "power_rankings": {
     "status": "unavailable",
+    "voting_status": "upcoming",
+    "form_url": null,
+    "closes_at": null,
     "week": null,
     "top_three": [],
     "biggest_riser": null,
     "biggest_faller": null
+  },
+  "picks": {
+    "status": "ready",
+    "state": "upcoming",
+    "week": 1,
+    "form_url": null,
+    "lock_at": null,
+    "matchups": [
+      {
+        "matchup_id": "2026-week-01-buffalo-bravado-vs-van-cortlant-rangers",
+        "season": 2026,
+        "week": 1,
+        "status": "preevent",
+        "participants": [
+          {
+            "franchise_id": "van-cortlant-rangers",
+            "display_name": "Van Cortlant Rangers",
+            "path": "/teams/van-cortlant-rangers/",
+            "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg"
+          },
+          {
+            "franchise_id": "buffalo-bravado",
+            "display_name": "Buffalo Bravado",
+            "path": "/teams/buffalo-bravado/",
+            "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg"
+          }
+        ],
+        "winner_franchise_id": null,
+        "winner_status": "pending",
+        "pick_results": [],
+        "ballots_counted": 0
+      },
+      {
+        "matchup_id": "2026-week-01-albany-kneelers-vs-turnbull-acs",
+        "season": 2026,
+        "week": 1,
+        "status": "preevent",
+        "participants": [
+          {
+            "franchise_id": "albany-kneelers",
+            "display_name": "Albany Redskins",
+            "path": "/teams/albany-kneelers/",
+            "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
+          },
+          {
+            "franchise_id": "turnbull-acs",
+            "display_name": "Turnbull AC's",
+            "path": "/teams/turnbull-acs/",
+            "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg"
+          }
+        ],
+        "winner_franchise_id": null,
+        "winner_status": "pending",
+        "pick_results": [],
+        "ballots_counted": 0
+      },
+      {
+        "matchup_id": "2026-week-01-ayahuasca-rush-vs-vegas-vandals",
+        "season": 2026,
+        "week": 1,
+        "status": "preevent",
+        "participants": [
+          {
+            "franchise_id": "ayahuasca-rush",
+            "display_name": "Ayahuasca Rush",
+            "path": "/teams/ayahuasca-rush/",
+            "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg"
+          },
+          {
+            "franchise_id": "vegas-vandals",
+            "display_name": "Vegas Vandals",
+            "path": "/teams/vegas-vandals/",
+            "identity_image": "/assets/img/franchises/vegas-vandals/identity.jpg"
+          }
+        ],
+        "winner_franchise_id": null,
+        "winner_status": "pending",
+        "pick_results": [],
+        "ballots_counted": 0
+      },
+      {
+        "matchup_id": "2026-week-01-crazy-wazs-team-vs-north-town-ninnyhammers",
+        "season": 2026,
+        "week": 1,
+        "status": "preevent",
+        "participants": [
+          {
+            "franchise_id": "crazy-wazs-team",
+            "display_name": "Crazy Waz's Team",
+            "path": "/teams/crazy-wazs-team/",
+            "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg"
+          },
+          {
+            "franchise_id": "north-town-ninnyhammers",
+            "display_name": "North Town Ninnyhammers",
+            "path": "/teams/north-town-ninnyhammers/",
+            "identity_image": "/assets/img/franchises/north-town-ninnyhammers/identity.jpg"
+          }
+        ],
+        "winner_franchise_id": null,
+        "winner_status": "pending",
+        "pick_results": [],
+        "ballots_counted": 0
+      },
+      {
+        "matchup_id": "2026-week-01-greendale-human-beings-vs-new-jersey-giants",
+        "season": 2026,
+        "week": 1,
+        "status": "preevent",
+        "participants": [
+          {
+            "franchise_id": "greendale-human-beings",
+            "display_name": "Greendale Human Beings",
+            "path": "/teams/greendale-human-beings/",
+            "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg"
+          },
+          {
+            "franchise_id": "new-jersey-giants",
+            "display_name": "New Jersey Giants",
+            "path": "/teams/new-jersey-giants/",
+            "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
+          }
+        ],
+        "winner_franchise_id": null,
+        "winner_status": "pending",
+        "pick_results": [],
+        "ballots_counted": 0
+      },
+      {
+        "matchup_id": "2026-week-01-baseball-furies-vs-maine-moose",
+        "season": 2026,
+        "week": 1,
+        "status": "preevent",
+        "participants": [
+          {
+            "franchise_id": "maine-moose",
+            "display_name": "Maine Moose",
+            "path": "/teams/maine-moose/",
+            "identity_image": "/assets/img/franchises/maine-moose/identity.jpg"
+          },
+          {
+            "franchise_id": "baseball-furies",
+            "display_name": "The Baseball Furies",
+            "path": "/teams/baseball-furies/",
+            "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg"
+          }
+        ],
+        "winner_franchise_id": null,
+        "winner_status": "pending",
+        "pick_results": [],
+        "ballots_counted": 0
+      }
+    ],
+    "weekly_winners": [],
+    "season_leader": null,
+    "last_week_winners": []
   }
 }
