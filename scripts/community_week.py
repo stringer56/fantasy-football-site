@@ -28,9 +28,10 @@ def main() -> None:
     picks_path = ROOT / "_data" / "picks" / str(args.season) / f"week-{args.week:02d}.json"
     matchups = load_json(ROOT / "_data" / "generated" / "matchups.json")
     yahoo_week = matchups.get("week")
+    yahoo_label = "current" if yahoo_week == args.week else f"week {yahoo_week or 'unavailable'}"
 
     print(f"COMMUNITY WEEK · {args.season} WEEK {args.week}")
-    print(f"Yahoo matchup snapshot: {'current' if yahoo_week == args.week else f'week {yahoo_week or "unavailable"}'}")
+    print(f"Yahoo matchup snapshot: {yahoo_label}")
     print(f"Power Rankings: {'finalized' if power_path.exists() else (community.get('power_rankings') or {}).get('status', 'unconfigured')}")
     if power_path.exists():
         power = load_json(power_path)
