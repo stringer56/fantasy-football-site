@@ -99,7 +99,7 @@ team_recaps:
 
 playoff_recaps:
   - season: 2024
-    game_id: 2024-final
+    game_id: 2024-w16-final
     status: approved
     text: >-
       Commissioner-approved championship-game copy.

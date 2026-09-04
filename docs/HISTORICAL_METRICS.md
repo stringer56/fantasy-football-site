@@ -42,9 +42,10 @@ verified 2025 playoff archive. Placement and ambiguous postseason games remain
 available to general matchup history but do not count as championship-playoff
 wins.
 
-One 2024 quarterfinal conflict remains intentionally unclassified: the canonical
-bracket lists Buffalo Bravado against Maine Moose, while Yahoo Week 14 records
-Albany Kneelers against Maine Moose. No side is selected by assumption.
+The approved 2024 bracket and Yahoo Week 14 archive independently identify
+Albany Kneelers against Maine Moose. Correcting the earlier Buffalo transcription
+allows that quarterfinal to enter the classified playoff metrics. The 2024 and
+2025 placement games remain explicitly excluded from playoff-win calculations.
 
 ## Historical identity coverage
 

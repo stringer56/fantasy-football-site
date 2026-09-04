@@ -1608,8 +1608,8 @@
         "matchup_id": "2024-w14-02-08",
         "season": 2024,
         "week": 14,
-        "game_type": "postseason_unclassified",
-        "playoff_round": null,
+        "game_type": "championship_playoff",
+        "playoff_round": "Quarterfinal",
         "tie": false,
         "team_a": {
           "franchise_id": "albany-kneelers",
@@ -1713,9 +1713,9 @@
         "wins": 2,
         "against_franchise_id": "maine-moose"
       },
-      "playoff_meetings": 0,
+      "playoff_meetings": 1,
       "playoff_wins_a": 0,
-      "playoff_wins_b": 0,
+      "playoff_wins_b": 1,
       "recent_meetings": [
         {
           "matchup_id": "2025-w13-02-07",
@@ -1773,8 +1773,8 @@
           "matchup_id": "2024-w14-02-08",
           "season": 2024,
           "week": 14,
-          "game_type": "postseason_unclassified",
-          "playoff_round": null,
+          "game_type": "championship_playoff",
+          "playoff_round": "Quarterfinal",
           "tie": false,
           "team_a": {
             "franchise_id": "albany-kneelers",

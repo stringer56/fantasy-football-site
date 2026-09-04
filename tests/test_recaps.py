@@ -36,9 +36,9 @@ class RecapGenerationTests(unittest.TestCase):
     def test_expected_recap_counts(self) -> None:
         self.assertEqual(len(self.payload["seasons"]), 5)
         self.assertEqual(len(self.payload["team_recaps"]), 58)
-        self.assertEqual(len(self.payload["playoff_recaps"]), 23)
+        self.assertEqual(len(self.payload["playoff_recaps"]), 25)
         self.assertEqual(len(self.payload["championship_recaps"]), 5)
-        self.assertEqual(len(self.payload["by_the_numbers"]), 51)
+        self.assertEqual(len(self.payload["by_the_numbers"]), 57)
 
     def test_2025_complete_weekly_archive_and_narrative(self) -> None:
         recap = self.season_recap(2025)
@@ -55,6 +55,14 @@ class RecapGenerationTests(unittest.TestCase):
         self.assertEqual(metrics["biggest_victory"]["margin"], 92.24)
         self.assertEqual(metrics["closest_game"]["margin"], 0.20)
         self.assertEqual(metrics["highest_combined_score"]["combined_score"], 307.78)
+
+    def test_2024_complete_weekly_archive_and_narrative(self) -> None:
+        recap = self.season_recap(2024)
+        weekly = recap["weekly_archive"]
+        self.assertEqual(weekly["week_count"], 16)
+        self.assertEqual(weekly["matchup_count"], 92)
+        self.assertEqual([item["week"] for item in weekly["weeks"]], list(range(1, 17)))
+        self.assertIn("Turnbull AC's and Ayahuasca Rush earning the two first-round byes", recap["generated_text"])
 
     def test_all_2025_franchises_have_weekly_mini_recap_metrics(self) -> None:
         recaps = [item for item in self.payload["team_recaps"] if item["season"] == 2025]
@@ -89,10 +97,10 @@ class RecapGenerationTests(unittest.TestCase):
         self.assertIn("1,421.10 points against", recap["generated_text"])
 
     def test_playoff_winner_is_correct(self) -> None:
-        recap = self.playoff_recap("2024-sf-1")
+        recap = self.playoff_recap("2024-w15-semifinal-1")
         self.assertEqual(recap["winner_display_name"], "Turnbull AC's")
         self.assertEqual(recap["loser_display_name"], "Maine Moose")
-        self.assertIn("Turnbull AC's advanced past Maine Moose", recap["generated_text"])
+        self.assertIn("Turnbull AC's defeated Maine Moose 160.30–106.54", recap["generated_text"])
 
     def test_championship_score_is_correct_and_recap_is_rich(self) -> None:
         recap = self.championship_recap(2023)

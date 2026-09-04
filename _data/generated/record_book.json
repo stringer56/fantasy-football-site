@@ -532,6 +532,23 @@
         },
         {
           "rank": 2,
+          "franchise_id": "albany-kneelers",
+          "display_name": "Albany Redskins",
+          "short_name": "Redskins",
+          "path": "/teams/albany-kneelers/",
+          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+          "seasons": [
+            2021,
+            2023,
+            2024,
+            2025
+          ],
+          "wins": 4,
+          "losses": 3,
+          "appearances": 4
+        },
+        {
+          "rank": 3,
           "franchise_id": "turnbull-acs",
           "display_name": "Turnbull AC's",
           "short_name": "Turnbull",
@@ -541,22 +558,6 @@
             2022,
             2023,
             2024
-          ],
-          "wins": 4,
-          "losses": 2,
-          "appearances": 3
-        },
-        {
-          "rank": 2,
-          "franchise_id": "albany-kneelers",
-          "display_name": "Albany Redskins",
-          "short_name": "Redskins",
-          "path": "/teams/albany-kneelers/",
-          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
-          "seasons": [
-            2021,
-            2023,
-            2025
           ],
           "wins": 4,
           "losses": 2,
@@ -641,21 +642,6 @@
         },
         {
           "rank": 9,
-          "franchise_id": "buffalo-bravado",
-          "display_name": "Buffalo Bravado",
-          "short_name": "Bravado",
-          "path": "/teams/buffalo-bravado/",
-          "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
-          "seasons": [
-            2021,
-            2024
-          ],
-          "wins": 0,
-          "losses": 2,
-          "appearances": 2
-        },
-        {
-          "rank": 10,
           "franchise_id": "van-cortlant-rangers",
           "display_name": "Van Cortlant Rangers",
           "short_name": "Rangers",
@@ -663,6 +649,20 @@
           "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
           "seasons": [
             2025
+          ],
+          "wins": 0,
+          "losses": 1,
+          "appearances": 1
+        },
+        {
+          "rank": 9,
+          "franchise_id": "buffalo-bravado",
+          "display_name": "Buffalo Bravado",
+          "short_name": "Bravado",
+          "path": "/teams/buffalo-bravado/",
+          "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+          "seasons": [
+            2021
           ],
           "wins": 0,
           "losses": 1,
@@ -739,7 +739,18 @@
           "end_year": 2025
         },
         {
-          "rank": 5,
+          "rank": 3,
+          "franchise_id": "albany-kneelers",
+          "display_name": "Albany Redskins",
+          "short_name": "Redskins",
+          "path": "/teams/albany-kneelers/",
+          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+          "streak": 3,
+          "start_year": 2023,
+          "end_year": 2025
+        },
+        {
+          "rank": 6,
           "franchise_id": "van-cortlant-rangers",
           "display_name": "Van Cortlant Rangers",
           "short_name": "Rangers",
@@ -750,7 +761,7 @@
           "end_year": 2025
         },
         {
-          "rank": 5,
+          "rank": 6,
           "franchise_id": "savage-huns",
           "display_name": "The Savage Huns",
           "short_name": "Savage Huns",
@@ -761,7 +772,7 @@
           "end_year": 2021
         },
         {
-          "rank": 5,
+          "rank": 6,
           "franchise_id": "new-jersey-giants",
           "display_name": "New Jersey Giants",
           "short_name": "Giants",
@@ -772,7 +783,7 @@
           "end_year": 2022
         },
         {
-          "rank": 5,
+          "rank": 6,
           "franchise_id": "crazy-wazs-team",
           "display_name": "Crazy Waz's Team",
           "short_name": "Crazy Waz",
@@ -783,23 +794,12 @@
           "end_year": 2024
         },
         {
-          "rank": 5,
+          "rank": 6,
           "franchise_id": "buffalo-bravado",
           "display_name": "Buffalo Bravado",
           "short_name": "Bravado",
           "path": "/teams/buffalo-bravado/",
           "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
-          "streak": 1,
-          "start_year": 2021,
-          "end_year": 2021
-        },
-        {
-          "rank": 5,
-          "franchise_id": "albany-kneelers",
-          "display_name": "Albany Redskins",
-          "short_name": "Redskins",
-          "path": "/teams/albany-kneelers/",
-          "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
           "streak": 1,
           "start_year": 2021,
           "end_year": 2021

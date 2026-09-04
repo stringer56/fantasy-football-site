@@ -202,18 +202,23 @@ def main() -> None:
             errors.append(f"season page {route} does not link to its draft")
         if "/cup/" not in rendered:
             errors.append(f"season page {route} does not link to the Brew Crew Cup")
-        if season["year"] == 2025:
-            for expected in ("Complete", "Week-by-Week Archive", "Playoff Field", "Verified Yahoo results", "Albany Kneelers selected Ja’Marr Chase"):
+        if season["year"] in (2024, 2025):
+            expected_content = ["Complete", "Week-by-Week Archive", "Playoff Field"]
+            if season["year"] == 2025:
+                expected_content.extend(["Verified Yahoo results", "Albany Kneelers selected Ja’Marr Chase"])
+            else:
+                expected_content.extend(["Select to view full size", "Placement games", "180 verified selections across 15 rounds"])
+            for expected in expected_content:
                 if expected not in rendered:
-                    errors.append(f"season page {route} is missing 2025 content: {expected}")
+                    errors.append(f"season page {route} is missing {season['year']} content: {expected}")
             if rendered.count('class="week-card"') != 16:
-                errors.append("2025 season page must render all 16 weekly accordions")
+                errors.append(f"{season['year']} season page must render all 16 weekly accordions")
             if rendered.count('class="week-matchup"') != 92:
-                errors.append("2025 season page must render all 92 verified matchups")
+                errors.append(f"{season['year']} season page must render all 92 verified matchups")
             if rendered.count('class="playoff-field__grid"') != 1 or rendered.count("Seed #") < 6:
-                errors.append("2025 season page must render the six-team playoff field")
+                errors.append(f"{season['year']} season page must render the six-team playoff field")
             if rendered.count('class="team-recap-card"') != 12:
-                errors.append("2025 season page must render all 12 team mini-recaps")
+                errors.append(f"{season['year']} season page must render all 12 team mini-recaps")
     for draft in draft_data["drafts"]:
         route = f"/drafts/{draft['year']}/"
         rendered = route_target(route).read_text(encoding="utf-8")

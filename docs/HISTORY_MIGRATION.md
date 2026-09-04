@@ -11,7 +11,7 @@ editorial narrative that remains unavailable.
 - Completed seasons represented: **5** (2021–2025)
 - Verified champions and runners-up: **5 of 5**
 - Final standings rows transcribed: **58**
-- Playoff games represented: **23**
+- Playoff games represented: **25**
 - Locally preserved history assets: **16**
 - Season routes: **5** (`/history/2021/` through `/history/2025/`)
 - Stable franchise joins resolved: **58 of 58 standings rows**
@@ -32,7 +32,7 @@ All four seasons use these public source hubs:
 | Season | Champion | Runner-up | Final | Standings | Playoff field | Source recap content |
 |---|---|---|---:|---:|---:|---|
 | 2025 | Greendale Human Beings | Albany Kneelers | 107.12–106.72 | 12 rows | 6 teams / 7 scored games | Complete Yahoo standings, Weeks 1–16, classified playoff results, and local franchise identity art; no player-level recap |
-| 2024 | Turnbull AC's | Chris's Crazy Team | 148.18–140.98 | 12 rows | 6 teams / 5 games | Champion artwork and Yahoo matchup capture; no written recap |
+| 2024 | Turnbull AC's | Chris's Crazy Team | 148.18–140.98 | 12 rows | 6 teams / 7 scored games | Complete Yahoo standings, Weeks 1–16, classified playoff and placement results, and approved local Google Site assets; no written recap |
 | 2023 | Greendale Human Beings | Albany Kneelers | 132.82–132.74 | 12 rows | 6 teams / 5 games | Champion artwork and Yahoo matchup capture; no written recap |
 | 2022 | Ayahuasca Rush | Turnbull AC's | 115.20–69.16 | 12 rows | 4 teams / 3 games | Champion artwork and Yahoo matchup capture; no written recap |
 | 2021 | Albany Kneelers | Savage Huns | 121.50–118.70 | 10 rows | 4 teams / 3 games | Champion artwork and Yahoo matchup capture; no written recap |
@@ -116,18 +116,20 @@ is not counted as a separate franchise.
    finalists. The structured games preserve those advancing identities and add
    a source-conflict note; commissioner confirmation of lane ordering remains
    welcome.
-3. The 2021–2024 bracket graphics do not publish quarterfinal or semifinal scores. Those
-   values are `null`, never zero. Only championship scores visible in the public
-   matchup captures are structured. The separately verified 2025 bracket contains
-   all seven scores.
-4. No 2021–2024 third-place or consolation game result is shown. The 2025 third-
-   and fifth-place games are included and explicitly classified as placement games.
+3. The 2021–2023 bracket graphics do not publish quarterfinal or semifinal scores.
+   Those values are `null`, never zero. The verified 2024 Yahoo weekly archive
+   supplies all five championship-bracket scores; the separately verified 2025
+   bracket also contains all seven scored championship and placement games.
+4. No 2021–2023 third-place or consolation game result is shown. The verified
+   2024 and 2025 third- and fifth-place games are included and explicitly
+   classified as placement games.
 5. The source does not provide written overall-season, playoff-game,
    championship, or team mini-recaps. Milestone 9 now derives conservative
    narrative from the verified structured results; it does not present those
    generated passages as migrated source prose.
-6. The committed generated Yahoo fallback is from 2025 and is not used as proof
-   for any 2021–2024 historical result.
+6. Complete committed Yahoo weekly archives cover 2022–2025. Each canonical
+   playoff classification still requires agreement with an independent bracket
+   or commissioner playoff source.
 
 ## Editorial and privacy decisions
 
@@ -172,12 +174,11 @@ internal asset/link target.
   source graphic.
 - Resolve the 2024 champion PF/PA label conflict if another authoritative export
   differs from the final-standings capture.
-- Supply approved regular-playoff scores, third-place results, season narratives,
-  championship prose, and team mini-recaps if those records exist elsewhere.
+- Supply approved source-written season or championship prose if it exists
+  outside the audited archive.
 
 ## Recommended next milestone
 
-Milestone 6 should migrate the draft archive: audit every public draft recap and
-result, create canonical season-scoped draft data keyed by stable franchise IDs,
-import local draft-board assets, build `/drafts/` and year routes, document
-unresolved historical names, and validate picks, rounds, routes, and assets.
+Build the 2023 Complete Season History with the same normalized structure:
+verified Weeks 1–16, independently classified playoffs, deterministic season and
+team recaps, approved local assets, and record-book regeneration.

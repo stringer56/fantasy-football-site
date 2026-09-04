@@ -10,8 +10,8 @@ as all-time.
   margins, streaks, and classified playoff-game metrics use this window. The
   2021 season is excluded because no weekly scoreboard archive was recovered.
 
-The canonical five season pages now cover 2021–2025. The 2025 page adds the
-complete verified weekly archive; the broader deterministic outputs live in
+The canonical five season pages now cover 2021–2025. The 2024 and 2025 pages add
+their complete verified weekly archives; the broader deterministic outputs live in
 `_data/generated/records/` and retain their own source lists and coverage labels.
 
 ## Coverage matrix
@@ -36,8 +36,9 @@ complete verified weekly archive; the broader deterministic outputs live in
   result is inferred.
 - The 2021 commissioner draft-order crosswalk resolves The Swagger Daggers to
   Buffalo Bravado and Matthew's Optimal Team to Vegas Vandals.
-- Sixteen canonical 2021–2024 playoff games preserve all participants and
-  winners, but twelve non-final games lack scores.
+- Eighteen classified 2022–2025 championship-bracket games have independently
+  matched participants, winners, weeks, and numeric Yahoo scores. The 2021
+  bracket and remaining 2022–2023 games preserve winners with unavailable scores.
 - The complete Yahoo draft boards contain 180 picks per year for 2022–2025.
 - Transaction archives are complete for 2022–2025, but no public record category
   currently turns raw transaction volume into a quality claim.
@@ -47,8 +48,9 @@ complete verified weekly archive; the broader deterministic outputs live in
 1. The 2024 final-standings table lists Turnbull AC’s PF as `1610.10` and PA as
    `1425.58`; the champions view reverses those labels. Season-level PF/PA uses
    the canonical final-standings table and keeps the conflict documented.
-2. One 2024 quarterfinal pairing conflicts between the canonical bracket and
-   Yahoo Week 14. That game remains unclassified in playoff-only calculations.
+2. An earlier 2024 quarterfinal transcription named Buffalo Bravados, but the
+   approved bracket and Yahoo Week 14 archive agree on Albany Kneelers. The
+   corrected game now enters playoff-only calculations; placement games do not.
 3. Missing values are never converted to zero. A missing input excludes the
    affected metric or downgrades its coverage.
 4. Unavailable categories carry an empty entry array and reader-facing status;

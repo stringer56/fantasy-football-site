@@ -484,6 +484,10 @@ a:hover { color: var(--navy-900); }
 .playoff-field__grid h4 a { color: var(--navy-900); }
 .playoff-field__grid strong { color: var(--gold-700); font-size: .72rem; text-transform: uppercase; }
 .playoff-results { display: grid; gap: var(--space-4); grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.playoff-results__heading { margin: var(--space-6) 0 var(--space-3); color: var(--white); font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.25rem); letter-spacing: .03em; text-transform: uppercase; }
+.playoff-results__heading:first-of-type { margin-top: 0; }
+.playoff-results--placement { margin-top: var(--space-3); }
+.season-section__intro--light { margin-top: calc(var(--space-2) * -1); color: var(--slate-300); }
 .playoff-result { padding: var(--space-4); border: 1px solid rgba(255, 255, 255, .15); background: var(--navy-850); }
 .playoff-result--final { border-color: var(--gold-500); background: linear-gradient(140deg, rgba(235, 196, 95, .12), var(--navy-850)); }
 .playoff-result__top { display: flex; justify-content: space-between; margin-bottom: var(--space-3); color: var(--gold-300); font-size: .6rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
@@ -996,6 +1000,8 @@ a:hover { color: var(--navy-900); }
   .season-archive-card__image { min-height: auto; aspect-ratio: 1.25; }
   .season-number-grid, .playoff-results, .playoff-recap-grid, .team-recap-grid { grid-template-columns: 1fr; }
   .playoff-field__grid { grid-template-columns: 1fr; }
+  .bracket-frame { overflow-x: auto; overscroll-behavior-inline: contain; }
+  .bracket-frame img { width: 48rem; max-width: none; }
   .week-card summary { align-items: flex-start; flex-direction: column; gap: var(--space-1); }
   .championship-scorecard { grid-template-columns: 1fr; }
   .championship-scorecard > div + div { border-top: 1px solid rgba(255, 255, 255, .16); border-left: 0; }
