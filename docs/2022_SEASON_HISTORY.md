@@ -168,7 +168,7 @@ canonical season page now publishes the authoritative Yahoo semifinal scores
 and the labelled third-place game without changing the coverage scopes:
 
 - Season-level: Verified 2021–2025
-- Weekly-derived: Verified 2022–2025
+- Weekly-derived: Verified 2021–2025
 
 ## Corrections, unresolved values, and limitations
 

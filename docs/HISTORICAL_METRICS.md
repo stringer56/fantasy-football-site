@@ -8,9 +8,9 @@ The analytics layer consumes the coverage gates in
 - **Season-level metrics — Verified 2021–2025.** Final standings, W-L-T, PF/PA,
   final rank, playoff seed, verified championships, and mapped franchise season
   summaries use this scope.
-- **Weekly-derived metrics — Verified 2022–2025.** Head-to-head, weekly scoring,
+- **Weekly-derived metrics — Verified 2021–2025.** Head-to-head, weekly scoring,
   margins, regular-season result streaks, and classified playoff-game metrics use
-  this scope. No 2021 weekly result enters these files.
+  this scope.
 
 Neither window is described as all-time.
 
@@ -30,7 +30,7 @@ nine schema-versioned files under `_data/generated/records/`. Repeated builds
 with unchanged inputs produce identical bytes.
 
 General weekly rankings use final Yahoo matchups where both canonical identities
-resolve. All 368 recovered 2022–2025 matchups now have both identities, producing
+resolve. All 446 recovered 2021–2025 matchups now have both identities, producing
 78 franchise-pair series without an unresolved-matchup exclusion.
 
 ## Playoff classification
@@ -60,13 +60,17 @@ excluded from playoff-win calculations. Yahoo's official bracket also resolves
 the source artwork's reversed #2/#3 seed labels in favor of Greendale #2 and
 Turnbull #3.
 
+The authenticated 2021 audit adds all 78 weekly results and independently
+classifies its three championship-bracket games. Five consolation/placement
+games remain available to general matchup history but stay outside
+championship-playoff win totals. Structured seeds follow Yahoo where the
+preserved bracket image reverses seeds #2 and #3.
+
 ## Historical identity coverage
 
-All 2021 season-level identities now resolve. The commissioner draft-order
+All 2021 identities now resolve. The commissioner draft-order
 crosswalk maps The Swagger Daggers to Buffalo Bravado and Matthew's Optimal Team
-to Vegas Vandals while preserving their historical display names. The lack of
-2021 weekly scoreboards—not identity ambiguity—is why 2021 remains excluded
-from weekly-derived metrics.
+to Vegas Vandals while preserving their historical display names.
 
 ## Definitions
 
@@ -78,7 +82,7 @@ from weekly-derived metrics.
 - Cross-season streaks are separate and continue only across adjacent represented
   seasons for the same canonical franchise.
 - Championship totals include verified 2021–2025 season outcomes. Detailed
-  playoff scoring/win-loss metrics use only classified 2022–2025 games.
+  playoff scoring/win-loss metrics use only independently classified 2021–2025 games.
 - Bench records remain disabled because historical roster position and player
   scoring coverage is insufficient.
 

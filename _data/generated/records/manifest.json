@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-03T19:50:58Z",
+  "generated_at": "2026-09-04T00:00:00Z",
   "season_level_coverage": {
     "class": "season_level",
     "label": "Verified 2021–2025",
@@ -23,16 +23,18 @@
   },
   "weekly_coverage": {
     "class": "weekly_derived",
-    "label": "Verified 2022–2025",
-    "start_season": 2022,
+    "label": "Verified 2021–2025",
+    "start_season": 2021,
     "end_season": 2025,
     "source_years": [
+      2021,
       2022,
       2023,
       2024,
       2025
     ],
     "source_files": [
+      "_data/generated/history/2021/weeks.json",
       "_data/generated/history/2022/weeks.json",
       "_data/generated/history/2023/weeks.json",
       "_data/generated/history/2024/weeks.json",
@@ -50,11 +52,11 @@
     "record_thresholds.json"
   ],
   "counts": {
-    "weekly_matchups_input": 368,
-    "resolved_matchups": 368,
+    "weekly_matchups_input": 446,
+    "resolved_matchups": 446,
     "excluded_unresolved_matchups": 0,
     "head_to_head_pairs": 78,
-    "classified_championship_playoff_games": 18,
+    "classified_championship_playoff_games": 21,
     "franchise_summaries": 13
   },
   "unresolved_identity_policy": "Unresolved historical identities are never assigned to canonical franchises. Their games are excluded from pair and opponent-dependent records.",

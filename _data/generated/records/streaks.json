@@ -1,18 +1,20 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-03T19:50:58Z",
+  "generated_at": "2026-09-04T00:00:00Z",
   "coverage": {
     "class": "weekly_derived",
-    "label": "Verified 2022–2025",
-    "start_season": 2022,
+    "label": "Verified 2021–2025",
+    "start_season": 2021,
     "end_season": 2025,
     "source_years": [
+      2021,
       2022,
       2023,
       2024,
       2025
     ],
     "source_files": [
+      "_data/generated/history/2021/weeks.json",
       "_data/generated/history/2022/weeks.json",
       "_data/generated/history/2023/weeks.json",
       "_data/generated/history/2024/weeks.json",
@@ -145,10 +147,10 @@
       "path": "/teams/baseball-furies/",
       "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
       "games": 3,
-      "start_season": 2022,
-      "start_week": 1,
-      "end_season": 2022,
-      "end_week": 3,
+      "start_season": 2021,
+      "start_week": 3,
+      "end_season": 2021,
+      "end_week": 5,
       "rank": 10
     },
     {
@@ -158,10 +160,10 @@
       "path": "/teams/buffalo-bravado/",
       "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
       "games": 3,
-      "start_season": 2025,
-      "start_week": 9,
-      "end_season": 2025,
-      "end_week": 11,
+      "start_season": 2021,
+      "start_week": 1,
+      "end_season": 2021,
+      "end_week": 3,
       "rank": 11
     },
     {
@@ -487,10 +489,10 @@
       "path": "/teams/baseball-furies/",
       "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
       "games": 3,
-      "start_season": 2022,
-      "start_week": 1,
-      "end_season": 2022,
-      "end_week": 3,
+      "start_season": 2021,
+      "start_week": 3,
+      "end_season": 2021,
+      "end_week": 5,
       "rank": 10
     },
     {
@@ -500,10 +502,10 @@
       "path": "/teams/buffalo-bravado/",
       "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
       "games": 3,
-      "start_season": 2025,
-      "start_week": 9,
-      "end_season": 2025,
-      "end_week": 11,
+      "start_season": 2021,
+      "start_week": 1,
+      "end_season": 2021,
+      "end_week": 3,
       "rank": 11
     },
     {
@@ -626,6 +628,19 @@
       "rank": 7
     },
     {
+      "franchise_id": "baseball-furies",
+      "display_name": "The Baseball Furies",
+      "short_name": "Furies",
+      "path": "/teams/baseball-furies/",
+      "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
+      "games": 4,
+      "start_season": 2021,
+      "start_week": 14,
+      "end_season": 2022,
+      "end_week": 3,
+      "rank": 8
+    },
+    {
       "franchise_id": "maine-moose",
       "display_name": "Maine Moose",
       "short_name": "Moose",
@@ -636,7 +651,7 @@
       "start_week": 3,
       "end_season": 2023,
       "end_week": 6,
-      "rank": 8
+      "rank": 9
     },
     {
       "franchise_id": "vegas-vandals",
@@ -649,19 +664,6 @@
       "start_week": 2,
       "end_season": 2023,
       "end_week": 5,
-      "rank": 9
-    },
-    {
-      "franchise_id": "baseball-furies",
-      "display_name": "The Baseball Furies",
-      "short_name": "Furies",
-      "path": "/teams/baseball-furies/",
-      "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
-      "games": 3,
-      "start_season": 2022,
-      "start_week": 1,
-      "end_season": 2022,
-      "end_week": 3,
       "rank": 10
     },
     {
@@ -671,10 +673,10 @@
       "path": "/teams/buffalo-bravado/",
       "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
       "games": 3,
-      "start_season": 2025,
-      "start_week": 9,
-      "end_season": 2025,
-      "end_week": 11,
+      "start_season": 2021,
+      "start_week": 1,
+      "end_season": 2021,
+      "end_week": 3,
       "rank": 11
     },
     {

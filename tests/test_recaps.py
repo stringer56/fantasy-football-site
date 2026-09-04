@@ -36,9 +36,9 @@ class RecapGenerationTests(unittest.TestCase):
     def test_expected_recap_counts(self) -> None:
         self.assertEqual(len(self.payload["seasons"]), 5)
         self.assertEqual(len(self.payload["team_recaps"]), 58)
-        self.assertEqual(len(self.payload["playoff_recaps"]), 28)
+        self.assertEqual(len(self.payload["playoff_recaps"]), 33)
         self.assertEqual(len(self.payload["championship_recaps"]), 5)
-        self.assertEqual(len(self.payload["by_the_numbers"]), 69)
+        self.assertEqual(len(self.payload["by_the_numbers"]), 75)
 
     def test_2025_complete_weekly_archive_and_narrative(self) -> None:
         recap = self.season_recap(2025)
@@ -109,12 +109,11 @@ class RecapGenerationTests(unittest.TestCase):
         self.assertGreaterEqual(len(recap["generated_text"].split()), 100)
         self.assertLessEqual(len(recap["generated_text"].split()), 200)
 
-    def test_missing_playoff_score_is_not_invented(self) -> None:
-        recap = self.playoff_recap("2021-sf-1")
-        self.assertIsNone(recap["winner_score"])
-        self.assertIsNone(recap["loser_score"])
-        self.assertIn("does not publish a score", recap["generated_text"])
-        self.assertNotRegex(recap["generated_text"], r"\d+\.\d{2}–\d+\.\d{2}")
+    def test_authenticated_2021_playoff_score_is_preserved(self) -> None:
+        recap = self.playoff_recap("2021-w15-semifinal-1")
+        self.assertEqual(recap["winner_score"], 128.48)
+        self.assertEqual(recap["loser_score"], 73.26)
+        self.assertIn("128.48–73.26", recap["generated_text"])
 
     def test_commissioner_confirmed_legacy_franchise_is_linked(self) -> None:
         recap = self.team_recap(2021, "The Swagger Daggers")

@@ -34,8 +34,6 @@ def validate_coverage(value: Any, expected_label: str, expected_start: int, erro
 def validate_game(game: dict[str, Any], franchise_ids: set[str], errors: list[str], location: str) -> None:
     if game.get("season") not in builder.WEEKLY_YEARS:
         errors.append(f"{location}: weekly metric contains non-weekly season")
-    if game.get("season") == 2021:
-        errors.append(f"{location}: 2021 weekly contamination")
     if game.get("team_a") and game["team_a"].get("franchise_id") not in franchise_ids:
         errors.append(f"{location}: invalid team_a franchise")
     if game.get("team_b") and game["team_b"].get("franchise_id") not in franchise_ids:
@@ -78,13 +76,13 @@ def main() -> None:
     franchise_ids = {item["franchise_id"] for item in franchises["franchises"]}
     manifest = payloads.get("manifest", {})
     validate_coverage(manifest.get("season_level_coverage"), builder.SEASON_LABEL, 2021, errors, "manifest season")
-    validate_coverage(manifest.get("weekly_coverage"), builder.WEEKLY_LABEL, 2022, errors, "manifest weekly")
+    validate_coverage(manifest.get("weekly_coverage"), builder.WEEKLY_LABEL, 2021, errors, "manifest weekly")
     if manifest.get("bench_records_enabled") is not False:
         errors.append("manifest: bench records must be disabled")
 
     for name in ("head_to_head", "biggest_wins", "closest_games", "weekly_scores", "streaks", "playoffs", "record_thresholds"):
         if name in payloads:
-            validate_coverage(payloads[name].get("coverage"), builder.WEEKLY_LABEL, 2022, errors, name)
+            validate_coverage(payloads[name].get("coverage"), builder.WEEKLY_LABEL, 2021, errors, name)
 
     biggest = payloads.get("biggest_wins", {})
     for group_name in ("overall", "regular_season", "championship_playoffs"):
@@ -136,7 +134,7 @@ def main() -> None:
 
     summaries = payloads.get("franchise_summaries", {})
     validate_coverage(summaries.get("season_level_coverage"), builder.SEASON_LABEL, 2021, errors, "franchise summaries season")
-    validate_coverage(summaries.get("weekly_coverage"), builder.WEEKLY_LABEL, 2022, errors, "franchise summaries weekly")
+    validate_coverage(summaries.get("weekly_coverage"), builder.WEEKLY_LABEL, 2021, errors, "franchise summaries weekly")
     for summary in summaries.get("franchises", []):
         if summary.get("franchise_id") not in franchise_ids:
             errors.append("franchise_summaries: invalid franchise reference")

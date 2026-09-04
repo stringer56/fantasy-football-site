@@ -11,19 +11,20 @@ editorial narrative that remains unavailable.
 - Completed seasons represented: **5** (2021–2025)
 - Verified champions and runners-up: **5 of 5**
 - Final standings rows transcribed: **58**
-- Playoff games represented: **28**
+- Playoff games represented: **33**
 - Locally preserved history assets: **16**
 - Season routes: **5** (`/history/2021/` through `/history/2025/`)
 - Stable franchise joins resolved: **58 of 58 standings rows**
 - Unique historical display names still unresolved: **0**
 
 The final rank in the Yahoo captures reflects the completed season, including
-playoff placement. It is not assumed to be the playoff seed. Seeds come from the
-separate bracket graphics.
+playoff placement. It is not assumed to be the playoff seed. Structured seeds
+follow Yahoo's playoff views; approved bracket images remain preserved even when
+their printed seed labels conflict.
 
 ## Source inventory and per-season migration
 
-All four seasons use these public source hubs:
+All five seasons use these public source hubs:
 
 - [Past Season Standings](https://sites.google.com/view/road-to-glory-ffl/league-history/past-season-standings)
 - [Past Playoff Summary](https://sites.google.com/view/road-to-glory-ffl/league-history/past-playoff-summary)
@@ -35,7 +36,7 @@ All four seasons use these public source hubs:
 | 2024 | Turnbull AC's | Chris's Crazy Team | 148.18–140.98 | 12 rows | 6 teams / 7 scored games | Complete Yahoo standings, Weeks 1–16, classified playoff and placement results, and approved local Google Site assets; no written recap |
 | 2023 | Greendale Human Beings | Albany Kneelers | 132.82–132.74 | 12 rows | 6 teams / 7 scored games | Complete Yahoo standings, Weeks 1–16, classified playoff and placement results, and approved local Google Site assets; no written recap |
 | 2022 | Ayahuasca Rush | Turnbull AC's | 115.20–69.16 | 12 rows | 4 teams / 4 scored games | Complete Yahoo standings and Weeks 1–16, scored four-team bracket plus third-place game, and approved local assets; no written recap |
-| 2021 | Albany Kneelers | Savage Huns | 121.50–118.70 | 10 rows | 4 teams / 3 games | Champion artwork and Yahoo matchup capture; no written recap |
+| 2021 | Albany Kneelers | Savage Huns | 121.50–118.70 | 10 rows | 4-team title bracket / 8 scored postseason games | Authenticated Yahoo standings and Weeks 1–16, scored championship and consolation brackets, resolved mappings, and approved local assets |
 
 The year-specific championship sources are stored in `_data/seasons.yml` and
 `_data/champions.yml`. The Google pages label themselves as recaps, but the
@@ -115,14 +116,13 @@ is not counted as a separate franchise.
    the graphic error: Albany faced Turnbull and Greendale faced Ayahuasca. The
    structured games use those verified pairings while preserving the original
    image unchanged.
-3. The 2021 bracket graphic does not publish semifinal scores, so those values
-   remain `null`, never zero. Yahoo's official 2022 Playoffs view supplies both
-   semifinal scores; the 2022–2025 detailed pages now publish independently
-   matched scores for every championship-bracket game.
-4. Yahoo's official 2022 Playoffs view independently labels and scores the
-   third-place game. It is included as a placement game and excluded from
-   playoff-win totals. No 2021 third-place or consolation result is independently
-   shown.
+3. The 2021 bracket graphic does not print semifinal scores, but the authenticated
+   Yahoo archive supplies both. The image reverses Yahoo's #2/#3 seeds;
+   structured data follows Yahoo—Greendale #2 and THE SAVAGE HUNS #3—while the
+   approved image remains unaltered.
+4. Yahoo independently labels and scores the 2021 and 2022 third-place games.
+   The authenticated 2021 archive also verifies its four-team consolation
+   bracket. Placement results remain excluded from championship-playoff totals.
 5. The approved 2022 bracket image reverses the #2 and #3 seed labels relative
    to Yahoo's official Playoffs view. Structured data follows Yahoo: Greendale
    was #2 and Turnbull #3. The archival image remains unaltered.
@@ -130,7 +130,7 @@ is not counted as a separate franchise.
    championship, or team mini-recaps. Milestone 9 now derives conservative
    narrative from the verified structured results; it does not present those
    generated passages as migrated source prose.
-7. Complete committed Yahoo weekly archives cover 2022–2025. Each canonical
+7. Complete committed Yahoo weekly archives cover 2021–2025. Each canonical
    playoff classification still requires agreement with an independent bracket
    or commissioner playoff source.
 
@@ -184,7 +184,8 @@ internal asset/link target.
 
 ## Recommended next milestone
 
-Build the 2021 Complete Season History using the same season presentation while
-preserving its honest partial-data boundary: verified standings, champion and
-bracket results, approved local assets, deterministic season-level recaps, and no
-invented weekly archive.
+With all five completed league seasons normalized, build the all-time statistical
+engine across the established coverage windows: franchise career records and
+playoff history from verified 2021–2025 season outcomes, plus head-to-head,
+margins, weekly streaks, and scoring leaderboards from verified 2022–2025 weekly
+matchups. Keep every output labelled by its actual evidence window.

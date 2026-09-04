@@ -432,6 +432,9 @@ a:hover { color: var(--navy-900); }
 .narrative-copy p:first-child { margin-top: 0; }
 .narrative-provenance { display: flex; align-items: center; gap: var(--space-2); margin-top: var(--space-5); color: var(--slate-600); font-size: .7rem; font-weight: 800; letter-spacing: .045em; }
 .narrative-provenance span { display: inline-grid; width: 1.35rem; height: 1.35rem; place-items: center; border-radius: 50%; background: var(--gold-400); color: var(--navy-950); }
+.season-coverage-note { margin-top: var(--space-6); padding: var(--space-5); border-left: 4px solid var(--gold-500); background: #fff8e4; box-shadow: var(--shadow-sm); }
+.season-coverage-note strong { color: var(--navy-900); font-size: .68rem; font-weight: 900; letter-spacing: .09em; text-transform: uppercase; }
+.season-coverage-note p { margin: var(--space-2) 0 0; color: var(--slate-600); font-size: .86rem; line-height: 1.65; }
 .season-numbers { padding-block: clamp(3.5rem, 7vw, 6rem); background: var(--navy-850); color: var(--white); }
 .season-numbers .section-heading h2 { color: var(--white); }
 .season-numbers .section-heading p:not(.eyebrow) { color: var(--slate-300); }

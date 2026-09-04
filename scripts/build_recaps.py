@@ -25,7 +25,9 @@ SOURCE_FILES = [
 ROUND_ORDER = {
     "Quarterfinal": 1,
     "Semifinal": 2,
+    "Consolation Semifinal": 2,
     "Fifth Place Game": 3,
+    "Seventh Place Game": 3,
     "Championship": 4,
     "Third Place Game": 4,
 }
@@ -421,9 +423,20 @@ def playoff_status(row: dict[str, Any], playoff: dict[str, Any]) -> tuple[str, d
     name = row["team_name"]
     finish = row.get("playoff_finish")
     if finish is not None:
+        placement_win = next(
+            (
+                game for game in games
+                if game.get("bracket_type") == "placement"
+                and game.get("winner_franchise_id") == row.get("franchise_id")
+            ),
+            None,
+        )
         labels = {1: "won the Brew Crew Cup", 2: "finished as the Brew Crew Cup runner-up",
-                  3: "won the third-place game", 4: "finished fourth",
-                  5: "won the fifth-place game", 6: "finished sixth"}
+                  3: "finished third", 4: "finished fourth",
+                  5: "finished fifth", 6: "finished sixth",
+                  7: "finished seventh", 8: "finished eighth"}
+        if placement_win:
+            labels[finish] = f"won the {placement_win['round'].lower()}"
         return (
             f"{name} reached the postseason and {labels[finish]}.",
             {"fact_type": "playoff_status", "status": f"finished_{finish}",
@@ -514,6 +527,7 @@ def build_season_recap(
     best = best_record_rows(season)
     highest_pf = tied_extreme(rows, "points_for") if standings_complete(season, ("points_for",)) else []
     participants = playoff_participants(playoff)
+    championship_field = playoff.get("playoff_field") or []
     facts: list[dict[str, Any]] = [
         {
             "fact_type": "championship_result",
@@ -524,7 +538,7 @@ def build_season_recap(
             "champion_score": champion["champion_score"],
             "runner_up_score": champion["runner_up_score"],
         },
-        {"fact_type": "playoff_field_size", "value": len(participants)},
+        {"fact_type": "playoff_field_size", "value": len(championship_field)},
     ]
     opening = (
         f"The {year} Road to Glory season ended with {champion['champion_display_name']} defeating "
@@ -546,7 +560,13 @@ def build_season_recap(
             "fact_type": "highest_points_for", "team_names": [row["team_name"] for row in highest_pf],
             "value": highest_pf[0]["points_for"],
         })
-    details.append(f"The verified bracket contains {len(participants)} postseason participants and preserves every advancing team.")
+    if len(participants) > len(championship_field):
+        details.append(
+            f"The verified championship and consolation brackets contain {len(participants)} postseason participants, "
+            f"including a {len(championship_field)}-team championship field."
+        )
+    else:
+        details.append(f"The verified bracket contains {len(participants)} postseason participants and preserves every advancing team.")
     record_sentence, record_fact = record_reference(records, year)
     if record_sentence and record_fact:
         facts.append(record_fact)
@@ -582,7 +602,7 @@ def build_season_recap(
             f"The highest combined score reached {format_points(combined['combined_score'])} in Week "
             f"{combined['week']}. {join_names(item['name'] for item in streak['holders'])} produced the longest "
             f"verified regular-season run at {streak['games']} consecutive wins. The verified bracket confirms "
-            f"a {len(participants)}-team championship field{bye_sentence}."
+            f"a {len(championship_field)}-team championship field{bye_sentence}."
         )
         facts.extend([
             {"fact_type": "weekly_archive_coverage", "weeks": weekly["week_count"], "matchups": weekly["matchup_count"]},
@@ -593,7 +613,35 @@ def build_season_recap(
             {"fact_type": "highest_combined_score", "matchup_id": combined["matchup_id"], "value": combined["combined_score"]},
         ])
     else:
-        paragraphs[0] += " " + " ".join(details)
+        final_margin = round(abs(champion["champion_score"] - champion["runner_up_score"]), 2)
+        paragraphs[0] += (
+            f" The {format_points(final_margin)}-point margin is the only published numeric playoff margin for the season; "
+            "the semifinal scores remain unavailable."
+        )
+        facts.append({"fact_type": "championship_margin", "value": final_margin})
+        season_details = [detail for detail in details if not detail.startswith("The verified bracket")]
+        bracket_details = [detail for detail in details if detail.startswith("The verified bracket")]
+        if season_details:
+            paragraphs.append(" ".join(season_details))
+        if bracket_details:
+            advancement_parts: list[str] = []
+            advancement_games: list[str] = []
+            for game in playoff.get("games") or []:
+                if game.get("round") == "Championship":
+                    continue
+                one, two = game_participants(game)
+                winner = one if one["franchise_id"] == game.get("winner_franchise_id") else two
+                loser = two if winner is one else one
+                advancement_parts.append(f"{winner['name']} advanced past {loser['name']}")
+                advancement_games.append(game["game_id"])
+            advancement_sentence = f" The semifinal results show {join_names(advancement_parts)}." if advancement_parts else ""
+            paragraphs.append(
+                " ".join(bracket_details)
+                + advancement_sentence
+                + " The semifinal winners and championship result are retained without filling the unavailable weekly score archive."
+            )
+            if advancement_games:
+                facts.append({"fact_type": "verified_playoff_advancement", "games": advancement_games})
     if record_sentence:
         paragraphs.append(record_sentence)
     summary = (
@@ -627,6 +675,7 @@ def build_by_the_numbers(
     lowest_pf = tied_extreme(rows, "points_for", highest=False)
     most_wins = tied_extreme(rows, "wins")
     fewest_wins = tied_extreme(rows, "wins", highest=False)
+    lowest_pa = tied_extreme(rows, "points_against", highest=False)
     point_warnings = ["2024_pf_pa_source_conflict"] if year == 2024 else []
     point_coverage = "partial" if point_warnings else "complete"
 
@@ -656,6 +705,28 @@ def build_by_the_numbers(
         point_cards.append(card("lowest_pf", "Lowest PF", f"{join_names(row['team_name'] for row in lowest_pf)} · {format_points(lowest_pf[0]['points_for'])}", [{"fact_type": "lowest_points_for", "team_names": [row["team_name"] for row in lowest_pf], "value": lowest_pf[0]["points_for"]}], coverage=point_coverage, warnings=point_warnings))
     insertion = 3 if best else 2
     cards[insertion:insertion] = point_cards
+    if season.get("data_mode") == "season_level":
+        seeded_rows = [row for row in rows if row.get("playoff_seed") is not None]
+        cards.extend([
+            card(
+                "lowest_pa",
+                "Fewest Points Against",
+                f"{join_names(row['team_name'] for row in lowest_pa)} · {format_points(lowest_pa[0]['points_against'])}",
+                [{"fact_type": "lowest_points_against", "team_names": [row["team_name"] for row in lowest_pa], "value": lowest_pa[0]["points_against"]}],
+            ),
+            card(
+                "playoff_field",
+                "Playoff Field",
+                f"{len(seeded_rows)} teams",
+                [{"fact_type": "playoff_field_size", "value": len(seeded_rows)}],
+            ),
+            card(
+                "championship_margin",
+                "Championship Margin",
+                f"{format_points(abs(champion['champion_score'] - champion['runner_up_score']))} points",
+                [{"fact_type": "championship_margin", "value": round(abs(champion["champion_score"] - champion["runner_up_score"]), 2)}],
+            ),
+        ])
     if weekly:
         metrics = weekly["season_metrics"]
         weekly_source = [str(season["weeks_data_path"])]
@@ -719,6 +790,9 @@ def build_team_recap(
     status_sentence, status_fact = playoff_status(row, playoff)
     sentences.append(status_sentence)
     facts.append(status_fact)
+    if row.get("streak"):
+        sentences.append(f"Yahoo's final table displays {row['streak']} in its streak column.")
+        facts.append({"fact_type": "final_standings_streak", "value": row["streak"]})
     weekly_metrics = weekly["team_metrics"].get(row.get("franchise_id")) if weekly and row.get("franchise_id") else None
     if weekly_metrics:
         high = weekly_metrics["highest_score"]
@@ -910,9 +984,10 @@ def build_championship_recap(
     path_parts = [item for item in (champion_path, runner_path) if item]
     third = " ".join(path_parts)
     archive_start = min(item["year"] for item in all_champions)
+    archive_label = str(year) if archive_start == year else f"{archive_start}–{year}"
     fourth = (
         f"The victory marked championship No. {title_count} for {champion['champion_display_name']} within the verified "
-        f"{archive_start}–{year} archive through that season. The available sources do not establish player-level events, "
+        f"{archive_label} archive through that season. The available sources do not establish player-level events, "
         "so this recap is limited to verified standings, playoff results, and the final score."
     )
     paragraphs = [first + " " + second, " ".join(part for part in (third, fourth) if part)]

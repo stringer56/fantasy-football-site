@@ -1,18 +1,20 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-03T19:50:58Z",
+  "generated_at": "2026-09-04T00:00:00Z",
   "coverage": {
     "class": "weekly_derived",
-    "label": "Verified 2022–2025",
-    "start_season": 2022,
+    "label": "Verified 2021–2025",
+    "start_season": 2021,
     "end_season": 2025,
     "source_years": [
+      2021,
       2022,
       2023,
       2024,
       2025
     ],
     "source_files": [
+      "_data/generated/history/2021/weeks.json",
       "_data/generated/history/2022/weeks.json",
       "_data/generated/history/2023/weeks.json",
       "_data/generated/history/2024/weeks.json",
@@ -257,6 +259,53 @@
     },
     {
       "rank": 6,
+      "matchup_id": "2021-w14-03-04",
+      "season": 2021,
+      "week": 14,
+      "game_type": "regular_season",
+      "playoff_round": null,
+      "tie": false,
+      "team_a": {
+        "franchise_id": "new-jersey-giants",
+        "display_name": "New Jersey Giants",
+        "short_name": "Giants",
+        "path": "/teams/new-jersey-giants/",
+        "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
+        "score": 80.14
+      },
+      "team_b": {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+        "score": 162.2
+      },
+      "historical_team_a": "Quahog Stripes",
+      "historical_team_b": "Greendale Human Beings",
+      "team_a_score": 80.14,
+      "team_b_score": 162.2,
+      "combined_score": 242.34,
+      "margin": 82.06,
+      "winner": {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "new-jersey-giants",
+        "display_name": "New Jersey Giants",
+        "short_name": "Giants",
+        "path": "/teams/new-jersey-giants/",
+        "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
+      },
+      "winner_score": 162.2,
+      "loser_score": 80.14
+    },
+    {
+      "rank": 7,
       "matchup_id": "2022-w08-02-09",
       "season": 2022,
       "week": 8,
@@ -303,7 +352,7 @@
       "loser_score": 87.0
     },
     {
-      "rank": 7,
+      "rank": 8,
       "matchup_id": "2024-w05-04-08",
       "season": 2024,
       "week": 5,
@@ -350,7 +399,7 @@
       "loser_score": 77.16
     },
     {
-      "rank": 8,
+      "rank": 9,
       "matchup_id": "2023-w04-08-10",
       "season": 2023,
       "week": 4,
@@ -397,7 +446,7 @@
       "loser_score": 56.02
     },
     {
-      "rank": 9,
+      "rank": 10,
       "matchup_id": "2022-w08-05-08",
       "season": 2022,
       "week": 8,
@@ -442,53 +491,6 @@
       },
       "winner_score": 138.34,
       "loser_score": 63.84
-    },
-    {
-      "rank": 10,
-      "matchup_id": "2022-w15-06-11",
-      "season": 2022,
-      "week": 15,
-      "game_type": "championship_playoff",
-      "playoff_round": "Semifinal",
-      "tie": false,
-      "team_a": {
-        "franchise_id": "new-jersey-giants",
-        "display_name": "New Jersey Giants",
-        "short_name": "Giants",
-        "path": "/teams/new-jersey-giants/",
-        "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
-        "score": 75.76
-      },
-      "team_b": {
-        "franchise_id": "ayahuasca-rush",
-        "display_name": "Ayahuasca Rush",
-        "short_name": "Rush",
-        "path": "/teams/ayahuasca-rush/",
-        "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg",
-        "score": 149.7
-      },
-      "historical_team_a": "Quahog Stripes",
-      "historical_team_b": "Ayahuasca Rush",
-      "team_a_score": 75.76,
-      "team_b_score": 149.7,
-      "combined_score": 225.46,
-      "margin": 73.94,
-      "winner": {
-        "franchise_id": "ayahuasca-rush",
-        "display_name": "Ayahuasca Rush",
-        "short_name": "Rush",
-        "path": "/teams/ayahuasca-rush/",
-        "identity_image": "/assets/img/franchises/ayahuasca-rush/identity.jpg"
-      },
-      "loser": {
-        "franchise_id": "new-jersey-giants",
-        "display_name": "New Jersey Giants",
-        "short_name": "Giants",
-        "path": "/teams/new-jersey-giants/",
-        "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
-      },
-      "winner_score": 149.7,
-      "loser_score": 75.76
     }
   ],
   "regular_season": [
@@ -729,6 +731,53 @@
     },
     {
       "rank": 6,
+      "matchup_id": "2021-w14-03-04",
+      "season": 2021,
+      "week": 14,
+      "game_type": "regular_season",
+      "playoff_round": null,
+      "tie": false,
+      "team_a": {
+        "franchise_id": "new-jersey-giants",
+        "display_name": "New Jersey Giants",
+        "short_name": "Giants",
+        "path": "/teams/new-jersey-giants/",
+        "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
+        "score": 80.14
+      },
+      "team_b": {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
+        "score": 162.2
+      },
+      "historical_team_a": "Quahog Stripes",
+      "historical_team_b": "Greendale Human Beings",
+      "team_a_score": 80.14,
+      "team_b_score": 162.2,
+      "combined_score": 242.34,
+      "margin": 82.06,
+      "winner": {
+        "franchise_id": "greendale-human-beings",
+        "display_name": "Greendale Human Beings",
+        "short_name": "Human Beings",
+        "path": "/teams/greendale-human-beings/",
+        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "new-jersey-giants",
+        "display_name": "New Jersey Giants",
+        "short_name": "Giants",
+        "path": "/teams/new-jersey-giants/",
+        "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
+      },
+      "winner_score": 162.2,
+      "loser_score": 80.14
+    },
+    {
+      "rank": 7,
       "matchup_id": "2022-w08-02-09",
       "season": 2022,
       "week": 8,
@@ -775,7 +824,7 @@
       "loser_score": 87.0
     },
     {
-      "rank": 7,
+      "rank": 8,
       "matchup_id": "2024-w05-04-08",
       "season": 2024,
       "week": 5,
@@ -822,7 +871,7 @@
       "loser_score": 77.16
     },
     {
-      "rank": 8,
+      "rank": 9,
       "matchup_id": "2023-w04-08-10",
       "season": 2023,
       "week": 4,
@@ -869,7 +918,7 @@
       "loser_score": 56.02
     },
     {
-      "rank": 9,
+      "rank": 10,
       "matchup_id": "2022-w08-05-08",
       "season": 2022,
       "week": 8,
@@ -914,53 +963,6 @@
       },
       "winner_score": 138.34,
       "loser_score": 63.84
-    },
-    {
-      "rank": 10,
-      "matchup_id": "2023-w04-07-12",
-      "season": 2023,
-      "week": 4,
-      "game_type": "regular_season",
-      "playoff_round": null,
-      "tie": false,
-      "team_a": {
-        "franchise_id": "greendale-human-beings",
-        "display_name": "Greendale Human Beings",
-        "short_name": "Human Beings",
-        "path": "/teams/greendale-human-beings/",
-        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
-        "score": 79.1
-      },
-      "team_b": {
-        "franchise_id": "turnbull-acs",
-        "display_name": "Turnbull AC's",
-        "short_name": "Turnbull",
-        "path": "/teams/turnbull-acs/",
-        "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
-        "score": 150.82
-      },
-      "historical_team_a": "Greendale Human Beings",
-      "historical_team_b": "Turnbull AC’s",
-      "team_a_score": 79.1,
-      "team_b_score": 150.82,
-      "combined_score": 229.92,
-      "margin": 71.72,
-      "winner": {
-        "franchise_id": "turnbull-acs",
-        "display_name": "Turnbull AC's",
-        "short_name": "Turnbull",
-        "path": "/teams/turnbull-acs/",
-        "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg"
-      },
-      "loser": {
-        "franchise_id": "greendale-human-beings",
-        "display_name": "Greendale Human Beings",
-        "short_name": "Human Beings",
-        "path": "/teams/greendale-human-beings/",
-        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg"
-      },
-      "winner_score": 150.82,
-      "loser_score": 79.1
     }
   ],
   "championship_playoffs": [
@@ -1060,6 +1062,53 @@
     },
     {
       "rank": 3,
+      "matchup_id": "2021-w15-06-08",
+      "season": 2021,
+      "week": 15,
+      "game_type": "championship_playoff",
+      "playoff_round": "Semifinal",
+      "tie": false,
+      "team_a": {
+        "franchise_id": "buffalo-bravado",
+        "display_name": "Buffalo Bravado",
+        "short_name": "Bravado",
+        "path": "/teams/buffalo-bravado/",
+        "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg",
+        "score": 73.26
+      },
+      "team_b": {
+        "franchise_id": "albany-kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
+        "path": "/teams/albany-kneelers/",
+        "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg",
+        "score": 128.48
+      },
+      "historical_team_a": "The Swagger Daggers",
+      "historical_team_b": "Albany Kneelers",
+      "team_a_score": 73.26,
+      "team_b_score": 128.48,
+      "combined_score": 201.74,
+      "margin": 55.22,
+      "winner": {
+        "franchise_id": "albany-kneelers",
+        "display_name": "Albany Redskins",
+        "short_name": "Redskins",
+        "path": "/teams/albany-kneelers/",
+        "identity_image": "/assets/img/franchises/albany-kneelers/identity.jpg"
+      },
+      "loser": {
+        "franchise_id": "buffalo-bravado",
+        "display_name": "Buffalo Bravado",
+        "short_name": "Bravado",
+        "path": "/teams/buffalo-bravado/",
+        "identity_image": "/assets/img/franchises/buffalo-bravado/identity.jpg"
+      },
+      "winner_score": 128.48,
+      "loser_score": 73.26
+    },
+    {
+      "rank": 4,
       "matchup_id": "2024-w15-08-11",
       "season": 2024,
       "week": 15,
@@ -1106,7 +1155,7 @@
       "loser_score": 106.54
     },
     {
-      "rank": 4,
+      "rank": 5,
       "matchup_id": "2023-w15-02-12",
       "season": 2023,
       "week": 15,
@@ -1153,7 +1202,7 @@
       "loser_score": 61.38
     },
     {
-      "rank": 5,
+      "rank": 6,
       "matchup_id": "2024-w14-02-08",
       "season": 2024,
       "week": 14,
@@ -1200,7 +1249,7 @@
       "loser_score": 103.52
     },
     {
-      "rank": 6,
+      "rank": 7,
       "matchup_id": "2022-w16-10-11",
       "season": 2022,
       "week": 16,
@@ -1247,7 +1296,7 @@
       "loser_score": 69.16
     },
     {
-      "rank": 7,
+      "rank": 8,
       "matchup_id": "2023-w15-03-07",
       "season": 2023,
       "week": 15,
@@ -1294,7 +1343,7 @@
       "loser_score": 73.44
     },
     {
-      "rank": 8,
+      "rank": 9,
       "matchup_id": "2023-w14-07-08",
       "season": 2023,
       "week": 14,
@@ -1341,7 +1390,7 @@
       "loser_score": 101.62
     },
     {
-      "rank": 9,
+      "rank": 10,
       "matchup_id": "2024-w14-05-07",
       "season": 2024,
       "week": 14,
@@ -1386,53 +1435,6 @@
       },
       "winner_score": 142.96,
       "loser_score": 113.12
-    },
-    {
-      "rank": 10,
-      "matchup_id": "2025-w15-06-12",
-      "season": 2025,
-      "week": 15,
-      "game_type": "championship_playoff",
-      "playoff_round": "Semifinal",
-      "tie": false,
-      "team_a": {
-        "franchise_id": "greendale-human-beings",
-        "display_name": "Greendale Human Beings",
-        "short_name": "Human Beings",
-        "path": "/teams/greendale-human-beings/",
-        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg",
-        "score": 159.06
-      },
-      "team_b": {
-        "franchise_id": "new-jersey-giants",
-        "display_name": "New Jersey Giants",
-        "short_name": "Giants",
-        "path": "/teams/new-jersey-giants/",
-        "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg",
-        "score": 134.52
-      },
-      "historical_team_a": "Greendale Human Beings",
-      "historical_team_b": "New Jersey Giants",
-      "team_a_score": 159.06,
-      "team_b_score": 134.52,
-      "combined_score": 293.58,
-      "margin": 24.54,
-      "winner": {
-        "franchise_id": "greendale-human-beings",
-        "display_name": "Greendale Human Beings",
-        "short_name": "Human Beings",
-        "path": "/teams/greendale-human-beings/",
-        "identity_image": "/assets/img/franchises/greendale-human-beings/identity.jpg"
-      },
-      "loser": {
-        "franchise_id": "new-jersey-giants",
-        "display_name": "New Jersey Giants",
-        "short_name": "Giants",
-        "path": "/teams/new-jersey-giants/",
-        "identity_image": "/assets/img/franchises/new-jersey-giants/identity.jpg"
-      },
-      "winner_score": 159.06,
-      "loser_score": 134.52
     }
   ]
 }

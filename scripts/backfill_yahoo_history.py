@@ -62,8 +62,8 @@ def coverage_scopes() -> dict[str, dict[str, Any]]:
             ),
         },
         "weekly_derived_metrics": {
-            "label": "Verified 2022–2025",
-            "source_years": [2022, 2023, 2024, 2025],
+            "label": "Verified 2021–2025",
+            "source_years": [2021, 2022, 2023, 2024, 2025],
             "coverage_status": "complete_weekly_results_for_listed_years",
             "allowed_metrics": [
                 "head_to_head",
@@ -74,8 +74,8 @@ def coverage_scopes() -> dict[str, dict[str, Any]]:
                 "weekly_win_loss_streaks",
                 "detailed_playoff_matchup_metrics",
             ],
-            "excluded_years": [2021],
-            "exclusion_reason": "No 2021 Yahoo weekly matchup results were recovered.",
+            "excluded_years": [],
+            "exclusion_reason": None,
         },
     }
 
@@ -179,6 +179,22 @@ def remap_committed_history(selected: list[int]) -> int:
     completeness_path = OUTPUT_ROOT / "completeness.json"
     completeness = json.loads(completeness_path.read_text(encoding="utf-8"))
     completeness_changed = False
+    if 2021 in selected:
+        summary_2021 = next(
+            item for item in completeness.get("seasons", []) if item.get("season") == 2021
+        )
+        source_2021 = yaml.safe_load(YAHOO_2021_SOURCE_PATH.read_text(encoding="utf-8"))
+        generated_at_2021 = f"{source_2021['verified_on']}T00:00:00Z"
+        apply_2021_canonical_fallback(
+            summary_2021,
+            generated_at_2021,
+        )
+        completeness["generated_at"] = max(
+            str(completeness.get("generated_at") or generated_at_2021), generated_at_2021
+        )
+        completeness["coverage_scopes"] = coverage_scopes()
+        completeness_changed = True
+        changed_files += 3
     for summary in completeness.get("seasons", []):
         year = int(summary["season"])
         if year not in selected:
@@ -206,11 +222,7 @@ def remap_committed_history(selected: list[int]) -> int:
         if summary.get("unresolved_franchise_mappings") != unresolved:
             summary["unresolved_franchise_mappings"] = unresolved
             completeness_changed = True
-        confidence = (
-            "partial_mixed_verified_sources" if year == 2021
-            else "high_results_partial_identity" if unresolved
-            else "high_results_complete_identity"
-        )
+        confidence = "high_results_partial_identity" if unresolved else "high_results_complete_identity"
         if summary.get("confidence") != confidence:
             summary["confidence"] = confidence
             completeness_changed = True
@@ -239,6 +251,82 @@ def safe_failure(season: int, section: str, error: Exception) -> dict[str, Any]:
     if "http" in message.lower():
         message = message.split("(", 1)[0].strip()
     return {"season": season, "section": section, "error_type": type(error).__name__, "message": message[:160]}
+
+
+def build_2021_weeks(yahoo_source: dict[str, Any], standings: list[dict[str, Any]],
+                     generated_at: str) -> dict[str, Any]:
+    """Normalize the commissioner-authenticated Yahoo schedule transcription."""
+    by_id = {row["yahoo_team_id"]: row for row in standings}
+    weeks: dict[int, list[dict[str, Any]]] = {week: [] for week in range(1, 17)}
+    seen: set[tuple[int, int, int]] = set()
+    for raw in yahoo_source.get("matchups", []):
+        week = int(raw["week"])
+        team_a_id = int(raw["team_a_id"])
+        team_b_id = int(raw["team_b_id"])
+        pair = tuple(sorted((team_a_id, team_b_id)))
+        key = (week, *pair)
+        if key in seen:
+            raise ValueError(f"2021 duplicate matchup: {key}")
+        seen.add(key)
+        if week not in weeks or team_a_id not in by_id or team_b_id not in by_id:
+            raise ValueError(f"2021 invalid matchup reference: {key}")
+        score_a = float(raw["team_a_score"])
+        score_b = float(raw["team_b_score"])
+        team_a = by_id[team_a_id]
+        team_b = by_id[team_b_id]
+        tie = score_a == score_b
+        winner = None if tie else (team_a if score_a > score_b else team_b)
+
+        def side(row: dict[str, Any], score: float) -> dict[str, Any]:
+            return {
+                "yahoo_team_key": row["yahoo_team_key"],
+                "franchise_id": row["franchise_id"],
+                "historical_team_name": row["historical_team_name"],
+                "mapping_status": row["mapping_status"],
+                "score": score,
+            }
+
+        bracket_type = raw.get("bracket_type")
+        weeks[week].append({
+            "season": 2021,
+            "week": week,
+            "matchup_id": f"2021-w{week:02d}-{pair[0]:02d}-{pair[1]:02d}",
+            "status": "final",
+            "is_playoffs": week >= PLAYOFF_START[2021],
+            "is_consolation": (bracket_type == "placement") if week >= PLAYOFF_START[2021] else None,
+            "team_a": side(team_a, score_a),
+            "team_b": side(team_b, score_b),
+            "winner_franchise_id": winner["franchise_id"] if winner else None,
+            "winner_historical_name": winner["historical_team_name"] if winner else None,
+            "tie": tie,
+            "margin": round(abs(score_a - score_b), 2),
+            "source": yahoo_source["source_type"],
+            "verified": True,
+        })
+    recovered = [week for week, matchups in weeks.items() if matchups]
+    if recovered != list(range(1, 17)) or len(seen) != 78:
+        raise ValueError(f"2021 authenticated archive must contain 78 matchups across Weeks 1-16; got {len(seen)}")
+    return {
+        "schema_version": 1,
+        "season": 2021,
+        "league_key": "406.l.12928",
+        "generated_at": generated_at,
+        "source": {
+            "type": yahoo_source["source_type"],
+            "url": yahoo_source["source_url"],
+            "coverage_status": "verified_complete_authenticated_archive",
+            "verified_on": str(yahoo_source["verified_on"]),
+        },
+        "coverage": {
+            "available_weeks": recovered,
+            "recovered_weeks": recovered,
+            "complete": True,
+        },
+        "weeks": [
+            {"week": week, "matchups": sorted(matchups, key=lambda game: game["matchup_id"])}
+            for week, matchups in weeks.items()
+        ],
+    }
 
 
 def apply_2021_canonical_fallback(summary: dict[str, Any], generated_at: str,
@@ -288,9 +376,7 @@ def apply_2021_canonical_fallback(summary: dict[str, Any], generated_at: str,
                 raise ValueError(f"2021 Yahoo standings conflict at rank {source_row['rank']}: {field}")
         standings.append(row)
     unresolved = sorted(row["historical_team_name"] for row in standings if not row.get("franchise_id"))
-    regular_games = max(row["wins"] + row["losses"] + row.get("ties", 0) for row in standings)
-    playoff_rounds = len({game["round"] for game in playoffs["games"]})
-    expected_weeks = regular_games + playoff_rounds
+    expected_weeks = 16
     scored_playoff_games = sum(
         game.get("team_one_score") is not None and game.get("team_two_score") is not None
         for game in playoffs["games"]
@@ -323,9 +409,11 @@ def apply_2021_canonical_fallback(summary: dict[str, Any], generated_at: str,
             for row in sorted(standings, key=lambda item: item["yahoo_team_id"])
         ],
     }
+    weeks_payload = build_2021_weeks(yahoo_source, standings, generated_at)
     if write_outputs:
         write_json(OUTPUT_ROOT / "2021" / "standings.json", standings_payload)
         write_json(OUTPUT_ROOT / "2021" / "teams.json", teams_payload)
+        write_json(OUTPUT_ROOT / "2021" / "weeks.json", weeks_payload)
 
     summary["sections"].update({
         "standings": {
@@ -345,21 +433,23 @@ def apply_2021_canonical_fallback(summary: dict[str, Any], generated_at: str,
             "source_files": ["_data/yahoo_history/2021.yml", "_data/franchises.yml"],
         },
         "weekly_matchups": {
-            "status": "unavailable",
-            "weeks": 0,
+            "status": "complete",
+            "coverage_type": "commissioner_authenticated_yahoo_archive",
+            "weeks": 16,
             "expected_weeks": expected_weeks,
-            "games": 0,
-            "all_scores_present": False,
+            "games": 78,
+            "all_scores_present": True,
             "expected_weeks_basis": "14 verified regular-season games plus two verified playoff rounds",
+            "source_files": ["_data/yahoo_history/2021.yml"],
         },
         "playoffs": {
-            "status": "partial",
-            "coverage_type": "google_site_verified_canonical",
+            "status": "complete",
+            "coverage_type": "commissioner_authenticated_yahoo_archive",
             "games": len(playoffs["games"]),
             "scored_games": scored_playoff_games,
             "all_scores_present": scored_playoff_games == len(playoffs["games"]),
-            "source_files": ["_data/playoffs.yml", "_data/champions.yml"],
-            "classification_note": "Semifinal winners and the scored championship are verified; semifinal scores are unavailable.",
+            "source_files": ["_data/yahoo_history/2021.yml", "_data/playoffs.yml", "_data/champions.yml"],
+            "classification_note": "Yahoo verifies the championship and consolation brackets; structured seeds follow Yahoo where the preserved bracket image conflicts.",
         },
         "draft": {
             "status": "partial",
@@ -380,21 +470,21 @@ def apply_2021_canonical_fallback(summary: dict[str, Any], generated_at: str,
     }
     summary.update({
         "weeks_expected": expected_weeks,
-        "weeks_fetched": 0,
-        "matchups_expected": None,
-        "matchups_fetched": 0,
+        "weeks_fetched": 16,
+        "matchups_expected": 78,
+        "matchups_fetched": 78,
         "roster_weeks_fetched": 0,
         "unresolved_franchise_mappings": unresolved,
-        "confidence": "partial_mixed_verified_sources",
-        "recovery_level": "C",
-        "yahoo_route_status": "authentication_required",
+        "confidence": "high_results_complete_identity",
+        "recovery_level": "A",
+        "yahoo_route_status": "authenticated_archive_recovered",
         "routes_checked": [
             "https://football.fantasysports.yahoo.com/league/rtgffl264552026/2021",
             "https://football.fantasysports.yahoo.com/2021/f1/12928",
             "https://football.fantasysports.yahoo.com/2021/f1/12928/standings",
             "https://football.fantasysports.yahoo.com/archive/nfl/2021/12928",
         ],
-        "route_observation": "The public history routes redirect to Yahoo sign-in; the legacy route redirects to the explicit 2021 route.",
+        "route_observation": "The public route requires Yahoo authentication; the commissioner-authenticated archive supplied complete Weeks 1-16 results.",
     })
     return summary
 

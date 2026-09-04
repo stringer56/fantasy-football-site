@@ -163,7 +163,8 @@ runner-up profiles, and every mapped franchise page.
 The historical records generator already matched all five 2023 championship-
 bracket games to the complete Yahoo archive. Adding source scores and explicit
 placement rows to the canonical season page does not broaden the coverage
-windows or change the 18 classified championship-bracket games. The two
+windows. The later authenticated 2021 migration brings the current total to 21
+classified championship-bracket games. The two 2023
 placement games remain excluded from playoff-only records.
 
 ## Conflicts, corrections, and limitations

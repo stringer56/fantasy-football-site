@@ -1,18 +1,20 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-03T19:50:58Z",
+  "generated_at": "2026-09-04T00:00:00Z",
   "coverage": {
     "class": "weekly_derived",
-    "label": "Verified 2022–2025",
-    "start_season": 2022,
+    "label": "Verified 2021–2025",
+    "start_season": 2021,
     "end_season": 2025,
     "source_years": [
+      2021,
       2022,
       2023,
       2024,
       2025
     ],
     "source_files": [
+      "_data/generated/history/2021/weeks.json",
       "_data/generated/history/2022/weeks.json",
       "_data/generated/history/2023/weeks.json",
       "_data/generated/history/2024/weeks.json",
@@ -21,9 +23,9 @@
   },
   "thresholds": {
     "highest_weekly_score": 237.18,
-    "tenth_highest_weekly_score": 170.82,
+    "tenth_highest_weekly_score": 173.82,
     "largest_margin": 113.66,
-    "tenth_largest_margin": 73.94,
+    "tenth_largest_margin": 74.5,
     "highest_combined_matchup_score": 376.72,
     "lowest_combined_matchup_score": 127.18
   }

@@ -77,6 +77,10 @@ editorial decisions, and unresolved fields.
   Its standings rows may also include verified `win_percentage`, `playoff_seed`,
   and `playoff_finish` values. Seasons without these fields retain the archival
   image presentation.
+  A season with complete final standings but unavailable weekly results may use
+  `data_mode: season_level`, a reader-facing `coverage_label` and
+  `coverage_notice`, and verified `streak`, `playoff_seed`, and
+  `playoff_finish` fields without defining `weeks_data_path`.
 - `playoffs.yml`: one record per season with a local bracket and structured games.
   Games include a stable game ID, actual source round, order, seeds, display names,
   optional franchise IDs, nullable scores, winner, and a source note. Unpublished
@@ -224,18 +228,18 @@ Its `coverage_scopes` object separates source windows by metric type:
   standings, W-L-T, PF/PA, final rank, playoff seed, verified championships, and
   resolved franchise season summaries. All currently represented identities
   resolve; the null mapping policy remains fail-closed for future unknown names.
-- `weekly_derived_metrics` is labelled `Verified 2022–2025` and allows only
+- `weekly_derived_metrics` is labelled `Verified 2021–2025` and allows only
   results derived from complete weekly matchups, including head-to-head, weekly
   scoring and margins, season-bounded result streaks, and detailed playoff games.
-  It explicitly excludes 2021.
+  All completed seasons from 2021 through 2025 are included.
 
 These scopes must never be collapsed into a single all-time label.
 
 The 2021 entry additionally records `recovery_level`, `yahoo_route_status`,
-sanitized public `routes_checked`, and source-labelled fallbacks. Commissioner-
-supplied Yahoo standings provide all ten team keys and final rows; the Google
-Site playoff bracket and draft images remain partial. Zero Yahoo weekly
-matchups were fetched, so these sources cannot unlock weekly-derived metrics.
+sanitized public `routes_checked`, and source-labelled fallbacks. The
+commissioner-authenticated Yahoo archive provides all ten team keys, final rows,
+and 78 matchup results across Weeks 1–16. The Google Site playoff bracket and
+draft images remain approved archival sources.
 
 Per-season backfill files use these shapes:
 
@@ -256,9 +260,10 @@ Per-season backfill files use these shapes:
   public historical roster identity is trustworthy.
 
 `_data/yahoo_history/2021.yml` is the commissioner-supplied source transcription
-for the authenticated 2021 Yahoo standings page. It contains only public fantasy
-team IDs/names, final standings values, playoff seeds/known finishes, provenance,
-and canonical franchise joins. It contains no account or authentication data.
+for the authenticated 2021 Yahoo archive. It contains only public fantasy team
+IDs/names, final standings values, playoff seeds/finishes, 78 matchup scores,
+provenance, and canonical franchise joins. It contains no account or
+authentication data.
 
 Raw HTML lives only under ignored `.cache/yahoo-history/`. See
 [Yahoo Historical Backfill](YAHOO_HISTORY_BACKFILL.md).
@@ -278,8 +283,8 @@ Raw HTML lives only under ignored `.cache/yahoo-history/`. See
   streaks plus single-season unbeaten streaks.
 - `playoffs.json`: only independently classified championship-bracket games and
   per-franchise playoff metrics.
-- `franchise_summaries.json`: separate season-level 2021–2025 and weekly-derived
-  2022–2025 modules for canonical franchise pages.
+- `franchise_summaries.json`: separate season-level and weekly-derived 2021–2025
+  modules for canonical franchise pages.
 - `record_thresholds.json`: reusable verified thresholds for future Record Watch.
 
 The pre-existing Milestone 7 output is named `_data/generated/record_book.json`

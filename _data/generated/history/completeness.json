@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-03T19:50:58Z",
+  "generated_at": "2026-09-04T00:00:00Z",
   "source": "official_yahoo_public_archive",
   "scope": {
     "league_started": 2021,
@@ -35,8 +35,9 @@
       "mapping_policy": "Unresolved historical identities remain season-level rows but are excluded from franchise-level aggregation."
     },
     "weekly_derived_metrics": {
-      "label": "Verified 2022–2025",
+      "label": "Verified 2021–2025",
       "source_years": [
+        2021,
         2022,
         2023,
         2024,
@@ -52,10 +53,8 @@
         "weekly_win_loss_streaks",
         "detailed_playoff_matchup_metrics"
       ],
-      "excluded_years": [
-        2021
-      ],
-      "exclusion_reason": "No 2021 Yahoo weekly matchup results were recovered."
+      "excluded_years": [],
+      "exclusion_reason": null
     }
   },
   "seasons": [
@@ -84,31 +83,36 @@
           "coverage_type": "commissioner_supplied_yahoo_archive",
           "rows": 10,
           "expected": 10,
-          "resolved_franchises": 8,
+          "resolved_franchises": 10,
           "source_files": [
             "_data/yahoo_history/2021.yml",
             "_data/franchises.yml"
           ]
         },
         "weekly_matchups": {
-          "status": "unavailable",
-          "weeks": 0,
+          "status": "complete",
+          "coverage_type": "commissioner_authenticated_yahoo_archive",
+          "weeks": 16,
           "expected_weeks": 16,
-          "games": 0,
-          "all_scores_present": false,
-          "expected_weeks_basis": "14 verified regular-season games plus two verified playoff rounds"
+          "games": 78,
+          "all_scores_present": true,
+          "expected_weeks_basis": "14 verified regular-season games plus two verified playoff rounds",
+          "source_files": [
+            "_data/yahoo_history/2021.yml"
+          ]
         },
         "playoffs": {
-          "status": "partial",
-          "coverage_type": "google_site_verified_canonical",
-          "games": 3,
-          "scored_games": 1,
-          "all_scores_present": false,
+          "status": "complete",
+          "coverage_type": "commissioner_authenticated_yahoo_archive",
+          "games": 8,
+          "scored_games": 8,
+          "all_scores_present": true,
           "source_files": [
+            "_data/yahoo_history/2021.yml",
             "_data/playoffs.yml",
             "_data/champions.yml"
           ],
-          "classification_note": "Semifinal winners and the scored championship are verified; semifinal scores are unavailable."
+          "classification_note": "Yahoo verifies the championship and consolation brackets; structured seeds follow Yahoo where the preserved bracket image conflicts."
         },
         "draft": {
           "status": "partial",
@@ -144,21 +148,21 @@
         "yahoo_team_keys_recovered": 10
       },
       "weeks_expected": 16,
-      "weeks_fetched": 0,
-      "matchups_expected": null,
-      "matchups_fetched": 0,
+      "weeks_fetched": 16,
+      "matchups_expected": 78,
+      "matchups_fetched": 78,
       "roster_weeks_fetched": 0,
       "unresolved_franchise_mappings": [],
-      "confidence": "partial_mixed_verified_sources",
-      "recovery_level": "C",
-      "yahoo_route_status": "authentication_required",
+      "confidence": "high_results_complete_identity",
+      "recovery_level": "A",
+      "yahoo_route_status": "authenticated_archive_recovered",
       "routes_checked": [
         "https://football.fantasysports.yahoo.com/league/rtgffl264552026/2021",
         "https://football.fantasysports.yahoo.com/2021/f1/12928",
         "https://football.fantasysports.yahoo.com/2021/f1/12928/standings",
         "https://football.fantasysports.yahoo.com/archive/nfl/2021/12928"
       ],
-      "route_observation": "The public history routes redirect to Yahoo sign-in; the legacy route redirects to the explicit 2021 route."
+      "route_observation": "The public route requires Yahoo authentication; the commissioner-authenticated archive supplied complete Weeks 1-16 results."
     },
     {
       "season": 2022,

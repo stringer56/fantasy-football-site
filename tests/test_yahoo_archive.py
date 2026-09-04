@@ -187,17 +187,18 @@ class YahooArchiveParserTests(unittest.TestCase):
                 )
             self.assertFalse((pathlib.Path(directory) / "2021" / "page.html").exists())
 
-    def test_2021_canonical_fallback_remains_partial(self) -> None:
+    def test_2021_authenticated_fallback_is_complete(self) -> None:
         result = apply_2021_canonical_fallback(
             {"sections": {}}, "2026-09-03T00:00:00Z", write_outputs=False
         )
-        self.assertEqual("C", result["recovery_level"])
+        self.assertEqual("A", result["recovery_level"])
         self.assertEqual(16, result["weeks_expected"])
-        self.assertEqual(0, result["weeks_fetched"])
+        self.assertEqual(16, result["weeks_fetched"])
         self.assertEqual(10, result["sections"]["standings"]["rows"])
         self.assertEqual(10, result["sections"]["standings"]["yahoo_rows"])
         self.assertEqual(10, result["franchise_mapping"]["yahoo_team_keys_recovered"])
-        self.assertEqual(1, result["sections"]["playoffs"]["scored_games"])
+        self.assertEqual(8, result["sections"]["playoffs"]["scored_games"])
+        self.assertEqual(78, result["sections"]["weekly_matchups"]["games"])
         self.assertEqual(0, result["sections"]["draft"]["picks"])
         self.assertEqual([], result["unresolved_franchise_mappings"])
         self.assertEqual(10, result["franchise_mapping"]["resolved"])
@@ -208,9 +209,9 @@ class YahooArchiveParserTests(unittest.TestCase):
         weekly_scope = scopes["weekly_derived_metrics"]
         self.assertEqual("Verified 2021–2025", season_scope["label"])
         self.assertEqual([2021, 2022, 2023, 2024, 2025], season_scope["source_years"])
-        self.assertEqual("Verified 2022–2025", weekly_scope["label"])
-        self.assertEqual([2022, 2023, 2024, 2025], weekly_scope["source_years"])
-        self.assertEqual([2021], weekly_scope["excluded_years"])
+        self.assertEqual("Verified 2021–2025", weekly_scope["label"])
+        self.assertEqual([2021, 2022, 2023, 2024, 2025], weekly_scope["source_years"])
+        self.assertEqual([], weekly_scope["excluded_years"])
         self.assertNotIn("all-time", " ".join(scope["label"] for scope in scopes.values()).casefold())
 
     def test_remap_payload_applies_only_approved_aliases(self) -> None:
