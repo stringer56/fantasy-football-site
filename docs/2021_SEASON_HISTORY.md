@@ -2,76 +2,84 @@
 
 ## Publication status
 
-The `/history/2021/` route is complete at the season level. It publishes ten
-verified final standings rows, ten resolved historical franchise identities, a
-four-team championship bracket, two verified semifinal winners, the verified
-championship score, twelve season-level fact cards, one conservative recap for
-every team, and approved local history and draft images.
-
-Weekly Yahoo matchup results were not recovered. The page therefore does not
-publish a week-by-week archive or derive weekly scores, margins, head-to-head
-results, matchup streaks, or player-level claims for 2021.
+The `/history/2021/` route is complete. It publishes ten verified standings
+rows, ten resolved historical identities, 78 final matchups across Weeks 1–16,
+the four-team championship bracket, the four-team consolation bracket, eight
+scored postseason games, fifteen deterministic By the Numbers cards, and one
+weekly-data-backed mini-recap for every franchise.
 
 ## Source hierarchy
 
-1. `_data/yahoo_history/2021.yml`, a commissioner-supplied transcription of the
-   authenticated Yahoo final standings page, supplies Yahoo team IDs, historical
-   names, W-L-T, PF/PA, final rank, and the closing streak displayed by Yahoo.
-2. `_data/seasons.yml` preserves the Google Site division records and the same
-   verified final standings values.
-3. `assets/img/history/2021/playoff-bracket.jpg` supplies the original playoff
-   seeds, semifinal participants, and semifinal winners.
-4. `_data/champions.yml` and
+1. `_data/yahoo_history/2021.yml` records the commissioner-authenticated Yahoo
+   archive transcription: team IDs, historical names, W-L-T, PF/PA, final rank,
+   closing streak, playoff seeds/finishes, and all Weeks 1–16 scores.
+2. `_data/seasons.yml` preserves the Google Site division records and agrees
+   with Yahoo's final standings values.
+3. Yahoo's authenticated Playoffs view verifies the championship seeds, both
+   semifinals, final, third-place game, and consolation structure.
+4. `_data/champions.yml`, Yahoo Week 16, and
    `assets/img/history/2021/championship-matchup.jpg` agree that Albany Kneelers
    defeated Savage Huns 121.50–118.70.
-5. The commissioner draft-order crosswalk and the committed franchise aliases
-   establish the remaining historical identity joins.
+5. `assets/img/history/2021/playoff-bracket.jpg` remains the approved archival
+   bracket image. Its documented #2/#3 seed conflict is not silently copied
+   into structured data.
 
-The original Google Site did not provide reusable written season, playoff, team,
-or championship prose. No human-written recap was overwritten.
+The reviewed Google Site material contains historical images and result labels,
+not reusable written recap prose. No human-authored narrative was overwritten.
 
 ## Final standings and franchise mappings
 
-All ten standings rows retain their 2021 display names and resolve to stable
-franchise IDs. The two continuity joins that do not follow from exact names are:
+All ten historical display names resolve to stable franchise IDs. The notable
+continuity joins are:
 
 - The Swagger Daggers → `buffalo-bravado`
 - Matthew's Optimal Team → `vegas-vandals`
+- Quahog Stripes → `new-jersey-giants`
 
-Quahog Stripes resolves to `new-jersey-giants`, and The Savage Huns links to its
-retired-franchise profile. There are no unresolved 2021 mappings.
+The Savage Huns links to its retired-franchise profile. There are no unresolved
+2021 mappings.
 
-Yahoo's final table and the approved bracket describe two different orderings.
-The final table ranks The Swagger Daggers third and Greendale Human Beings
-fourth after the postseason. The bracket labels Greendale as the No. 3 playoff
-seed and The Swagger Daggers as No. 4. Canonical data preserves final rank and
-playoff seed as separate fields rather than forcing one ordering onto the other.
+## Weekly archive
+
+The authenticated Yahoo Schedule view supplies 70 regular-season games across
+Weeks 1–14. Yahoo's league-wide matchup views supply four Week 15 games and four
+Week 16 games. The resulting 78-game archive is complete for the ten-team 2021
+format; Yahoo did not schedule ninth- and tenth-place teams after Week 14.
+
+Every normalized matchup includes numeric scores, winner/tie state, margin,
+historical display names, stable franchise IDs, and regular/postseason status.
+The committed source contains no roster or player-performance assertions.
 
 ## Playoffs and championship
 
-The verified four-team field was Albany Kneelers (1), The Savage Huns (2),
-Greendale Human Beings (3), and The Swagger Daggers (4). Albany advanced past
-The Swagger Daggers, and The Savage Huns advanced past Greendale. The approved
-bracket does not publish either semifinal score, so both score pairs remain
-`null`, never zero. No third-place or consolation game is represented because
-no independent source verifies one.
+Yahoo verifies the championship seeds as Albany Kneelers (1), Greendale Human
+Beings (2), THE SAVAGE HUNS (3), and The Swagger Daggers (4). The approved
+bracket image reverses seeds 2 and 3. The image is preserved unchanged, while
+canonical structured data follows the authenticated Yahoo archive.
 
-The final is the only scored 2021 playoff game: Albany Kneelers 121.50, Savage
-Huns 118.70. Champion, runner-up, winner, and score agree across champions data,
-playoff data, the bracket, and the championship matchup capture.
+The scored championship bracket is:
+
+- Albany Kneelers 128.48, The Swagger Daggers 73.26
+- THE SAVAGE HUNS 93.58, Greendale Human Beings 80.04
+- Albany Kneelers 121.50, THE SAVAGE HUNS 118.70
+
+Yahoo also verifies The Swagger Daggers' 142.98–123.14 third-place win and two
+rounds of consolation results determining places five through eight. Those five
+games are explicitly classified as placement results and do not count as
+championship-bracket wins.
 
 ## Recap and records methodology
 
-`scripts/build_recaps.py` produces a three-to-five-paragraph season narrative,
-ten team mini-recaps, three playoff recaps, one championship recap, and twelve
-By the Numbers cards. The public fact label is `Season Data — Verified 2021`.
-All narrative inputs are season-level standings, displayed closing streaks,
-verified playoff advancement, and the championship result.
+`scripts/build_recaps.py` deterministically produces four season-narrative
+paragraphs, ten team mini-recaps, eight playoff/placement recaps, one
+championship recap, and fifteen By the Numbers cards. Weekly facts include the
+highest and lowest scores, largest and closest margins, highest combined score,
+and longest regular-season winning run.
 
-2021 contributes to the `Verified 2021–2025` season-level records window. It
-does not enter the `Verified 2022–2025` weekly-derived window. The displayed
-Yahoo closing streak is a final-table field and is not treated as a calculated
-weekly streak record.
+The full 2021 archive expands weekly-derived records coverage to `Verified
+2021–2025`. `scripts/build_historical_metrics.py` now incorporates all 446
+verified matchups across those five seasons, while keeping placement games out
+of championship-playoff totals.
 
 ## Draft and approved assets
 
@@ -87,26 +95,24 @@ Approved local history assets:
 - `assets/img/history/2021/championship-recap.jpg`
 - `assets/img/history/2021/championship-matchup.jpg`
 
-Approved local draft assets remain under `assets/img/drafts/2021/`. No image is
+Approved draft assets remain under `assets/img/drafts/2021/`. No image is
 hotlinked and no new league artwork was generated.
 
-## Known limitations
+## Known limitations and conflicts
 
-- No 2021 weekly matchup scoreboard archive was recovered.
-- Both semifinal scores are unavailable.
-- No verified third-place or other placement game is available.
-- Draft selections are preserved as source images, not structured pick rows.
-- No authoritative player-level or transaction narrative is available.
-
-These gaps remain explicit in canonical data, generated prose, validators, and
-the rendered page.
+- The approved bracket image reverses Yahoo's verified #2/#3 seeds; structured
+  data follows Yahoo and the image remains an unaltered historical artifact.
+- Draft selections remain image-only rather than structured pick rows.
+- No authoritative roster, player-week, or transaction narrative was recovered.
+- The Yahoo archive requires commissioner authentication; sanitized canonical
+  results are committed locally so the public site never requires login.
 
 ## Validation coverage
 
-`tests/test_2021_season_history.py` verifies the ten standings rows, source
-agreement, all franchise mappings, final-rank/seed separation, empty weekly
-coverage, the four-team field, the three playoff outcomes, the sole numeric
-playoff score, champion consistency, recap boundaries, local assets, draft
-status, and canonical routes. Repository validators additionally enforce null
-unknowns, deterministic regeneration, internal links, and Jekyll rendering.
-
+`tests/test_2021_season_history.py` verifies ten standings rows, all franchise
+mappings, 16 weeks, 78 numeric matchup scores, margins and winners, the Yahoo
+seed order, eight scored postseason games, champion consistency, ten weekly
+mini-recaps, fifteen metrics, local assets, draft status, and routes. Repository,
+history, recap, records, Yahoo-history, rendered-site, and Jekyll validators
+enforce deterministic regeneration, null handling, local assets, and internal
+links.

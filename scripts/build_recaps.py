@@ -25,7 +25,9 @@ SOURCE_FILES = [
 ROUND_ORDER = {
     "Quarterfinal": 1,
     "Semifinal": 2,
+    "Consolation Semifinal": 2,
     "Fifth Place Game": 3,
+    "Seventh Place Game": 3,
     "Championship": 4,
     "Third Place Game": 4,
 }
@@ -431,7 +433,8 @@ def playoff_status(row: dict[str, Any], playoff: dict[str, Any]) -> tuple[str, d
         )
         labels = {1: "won the Brew Crew Cup", 2: "finished as the Brew Crew Cup runner-up",
                   3: "finished third", 4: "finished fourth",
-                  5: "finished fifth", 6: "finished sixth"}
+                  5: "finished fifth", 6: "finished sixth",
+                  7: "finished seventh", 8: "finished eighth"}
         if placement_win:
             labels[finish] = f"won the {placement_win['round'].lower()}"
         return (
@@ -524,6 +527,7 @@ def build_season_recap(
     best = best_record_rows(season)
     highest_pf = tied_extreme(rows, "points_for") if standings_complete(season, ("points_for",)) else []
     participants = playoff_participants(playoff)
+    championship_field = playoff.get("playoff_field") or []
     facts: list[dict[str, Any]] = [
         {
             "fact_type": "championship_result",
@@ -534,7 +538,7 @@ def build_season_recap(
             "champion_score": champion["champion_score"],
             "runner_up_score": champion["runner_up_score"],
         },
-        {"fact_type": "playoff_field_size", "value": len(participants)},
+        {"fact_type": "playoff_field_size", "value": len(championship_field)},
     ]
     opening = (
         f"The {year} Road to Glory season ended with {champion['champion_display_name']} defeating "
@@ -556,7 +560,13 @@ def build_season_recap(
             "fact_type": "highest_points_for", "team_names": [row["team_name"] for row in highest_pf],
             "value": highest_pf[0]["points_for"],
         })
-    details.append(f"The verified bracket contains {len(participants)} postseason participants and preserves every advancing team.")
+    if len(participants) > len(championship_field):
+        details.append(
+            f"The verified championship and consolation brackets contain {len(participants)} postseason participants, "
+            f"including a {len(championship_field)}-team championship field."
+        )
+    else:
+        details.append(f"The verified bracket contains {len(participants)} postseason participants and preserves every advancing team.")
     record_sentence, record_fact = record_reference(records, year)
     if record_sentence and record_fact:
         facts.append(record_fact)
@@ -592,7 +602,7 @@ def build_season_recap(
             f"The highest combined score reached {format_points(combined['combined_score'])} in Week "
             f"{combined['week']}. {join_names(item['name'] for item in streak['holders'])} produced the longest "
             f"verified regular-season run at {streak['games']} consecutive wins. The verified bracket confirms "
-            f"a {len(participants)}-team championship field{bye_sentence}."
+            f"a {len(championship_field)}-team championship field{bye_sentence}."
         )
         facts.extend([
             {"fact_type": "weekly_archive_coverage", "weeks": weekly["week_count"], "matchups": weekly["matchup_count"]},

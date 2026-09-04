@@ -17,9 +17,9 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 HISTORY_ROOT = ROOT / "_data" / "generated" / "history"
 OUTPUT_ROOT = ROOT / "_data" / "generated" / "records"
-WEEKLY_YEARS = [2022, 2023, 2024, 2025]
+WEEKLY_YEARS = [2021, 2022, 2023, 2024, 2025]
 SEASON_YEARS = [2021, 2022, 2023, 2024, 2025]
-WEEKLY_LABEL = "Verified 2022–2025"
+WEEKLY_LABEL = "Verified 2021–2025"
 SEASON_LABEL = "Verified 2021–2025"
 OUTPUT_NAMES = (
     "manifest", "head_to_head", "biggest_wins", "closest_games", "weekly_scores",
@@ -106,6 +106,7 @@ def classified_playoff_games(games: list[dict[str, Any]]) -> tuple[dict[str, str
     source_files = ["_data/playoffs.yml", "_data/generated/history/2025/playoffs.json"]
     canonical = load_yaml(ROOT / "_data" / "playoffs.yml")
     round_week = {
+        2021: {"Semifinal": 15, "Championship": 16},
         2022: {"Semifinal": 15, "Championship": 16},
         2023: {"Quarterfinal": 14, "Semifinal": 15, "Championship": 16},
         2024: {"Quarterfinal": 14, "Semifinal": 15, "Championship": 16},

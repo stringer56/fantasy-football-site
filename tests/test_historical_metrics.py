@@ -69,23 +69,24 @@ class HistoricalMetricsTests(unittest.TestCase):
 
     def test_actual_playoff_output_is_independently_classified(self) -> None:
         payload = metrics.build_payloads()["playoffs"]
-        self.assertEqual(18, len(payload["games"]))
+        self.assertEqual(21, len(payload["games"]))
         self.assertTrue(all(item["game_type"] == "championship_playoff" and item["playoff_round"] for item in payload["games"]))
 
     def test_weekly_matchups_are_fully_resolved_after_confirmed_mappings(self) -> None:
         manifest = metrics.build_payloads()["manifest"]
+        self.assertEqual(446, manifest["counts"]["weekly_matchups_input"])
         self.assertEqual(0, manifest["counts"]["excluded_unresolved_matchups"])
         self.assertEqual(78, manifest["counts"]["head_to_head_pairs"])
 
-    def test_2021_is_excluded_from_every_weekly_output(self) -> None:
+    def test_2021_is_included_in_weekly_outputs(self) -> None:
         payloads = metrics.build_payloads()
         encoded = " ".join(str(payloads[name]) for name in ("head_to_head", "biggest_wins", "closest_games", "weekly_scores", "streaks", "playoffs"))
-        self.assertNotIn("'season': 2021", encoded)
+        self.assertIn("'season': 2021", encoded)
 
     def test_coverage_labels_remain_separate(self) -> None:
         payloads = metrics.build_payloads()
         self.assertEqual("Verified 2021–2025", payloads["franchise_summaries"]["season_level_coverage"]["label"])
-        self.assertEqual("Verified 2022–2025", payloads["head_to_head"]["coverage"]["label"])
+        self.assertEqual("Verified 2021–2025", payloads["head_to_head"]["coverage"]["label"])
 
     def test_canonical_championship_is_not_duplicated_by_archive_fallback(self) -> None:
         facts = metrics.championship_facts()

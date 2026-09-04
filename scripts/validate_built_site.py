@@ -155,7 +155,7 @@ def main() -> None:
         errors.append("records page must render exactly 7 verified single-season record cards")
     if records_page.count('class="unavailable-card') != 2:
         errors.append("records page must render only playoff drought and bench unavailable states")
-    for expected in ('id="franchise-a"', 'id="franchise-b"', 'id="h2h-data"', "Verified 2022–2025"):
+    for expected in ('id="franchise-a"', 'id="franchise-b"', 'id="h2h-data"', "Verified 2021–2025"):
         if expected not in head_to_head_page:
             errors.append(f"head-to-head page is missing: {expected}")
     for expected in ("League", "Votes", "Active Votes", "Weekly Matchup Picks", "Power Rankings", "Vote Archive"):
@@ -208,6 +208,8 @@ def main() -> None:
             expected_content = ["Complete", "Week-by-Week Archive", "Playoff Field"]
             if season["year"] == 2025:
                 expected_content.extend(["Verified Yahoo results", "Albany Kneelers selected Ja’Marr Chase"])
+            elif season["year"] == 2021:
+                expected_content.extend(["Select to view full size", "Placement games", "individual selections remain image-only"])
             else:
                 expected_content.extend(["Select to view full size", "Placement games", "180 verified selections across 15 rounds"])
             for expected in expected_content:
@@ -215,15 +217,16 @@ def main() -> None:
                     errors.append(f"season page {route} is missing {season['year']} content: {expected}")
             if rendered.count('class="week-card"') != 16:
                 errors.append(f"{season['year']} season page must render all 16 weekly accordions")
-            if rendered.count('class="week-matchup"') != 92:
-                errors.append(f"{season['year']} season page must render all 92 verified matchups")
+            expected_matchups = 78 if season["year"] == 2021 else 92
+            if rendered.count('class="week-matchup"') != expected_matchups:
+                errors.append(f"{season['year']} season page must render all {expected_matchups} verified matchups")
             expected_field_size = len(playoff_by_year[season["year"]].get("playoff_field") or [])
             if rendered.count('class="playoff-field__grid"') != 1 or rendered.count("Seed #") < expected_field_size:
                 errors.append(
                     f"{season['year']} season page must render its {expected_field_size}-team playoff field"
                 )
-            if rendered.count('class="team-recap-card"') != 12:
-                errors.append(f"{season['year']} season page must render all 12 team mini-recaps")
+            if rendered.count('class="team-recap-card"') != season["team_count"]:
+                errors.append(f"{season['year']} season page must render all verified team mini-recaps")
         elif season.get("data_mode") == "season_level":
             for expected in (
                 "Complete", "Season Data — Verified 2021", "Final streak", "Playoff Field",

@@ -707,6 +707,17 @@
         },
         {
           "rank": 2,
+          "franchise_id": "turnbull-acs",
+          "display_name": "Turnbull AC's",
+          "short_name": "Turnbull",
+          "path": "/teams/turnbull-acs/",
+          "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
+          "streak": 4,
+          "start_year": 2021,
+          "end_year": 2024
+        },
+        {
+          "rank": 2,
           "franchise_id": "ayahuasca-rush",
           "display_name": "Ayahuasca Rush",
           "short_name": "Rush",
@@ -717,18 +728,7 @@
           "end_year": 2025
         },
         {
-          "rank": 3,
-          "franchise_id": "turnbull-acs",
-          "display_name": "Turnbull AC's",
-          "short_name": "Turnbull",
-          "path": "/teams/turnbull-acs/",
-          "identity_image": "/assets/img/franchises/turnbull-acs/identity.jpg",
-          "streak": 3,
-          "start_year": 2022,
-          "end_year": 2024
-        },
-        {
-          "rank": 3,
+          "rank": 4,
           "franchise_id": "maine-moose",
           "display_name": "Maine Moose",
           "short_name": "Moose",
@@ -739,7 +739,7 @@
           "end_year": 2025
         },
         {
-          "rank": 3,
+          "rank": 4,
           "franchise_id": "albany-kneelers",
           "display_name": "Albany Redskins",
           "short_name": "Redskins",
@@ -757,8 +757,8 @@
           "path": "/teams/van-cortlant-rangers/",
           "identity_image": "/assets/img/franchises/van-cortlant-rangers/identity.jpg",
           "streak": 1,
-          "start_year": 2025,
-          "end_year": 2025
+          "start_year": 2021,
+          "end_year": 2021
         },
         {
           "rank": 6,
@@ -767,6 +767,17 @@
           "short_name": "Savage Huns",
           "path": "/retired/the-savage-huns/",
           "identity_image": "/assets/img/franchises/the-savage-huns/identity.jpg",
+          "streak": 1,
+          "start_year": 2021,
+          "end_year": 2021
+        },
+        {
+          "rank": 6,
+          "franchise_id": "baseball-furies",
+          "display_name": "The Baseball Furies",
+          "short_name": "Furies",
+          "path": "/teams/baseball-furies/",
+          "identity_image": "/assets/img/franchises/baseball-furies/identity.jpg",
           "streak": 1,
           "start_year": 2021,
           "end_year": 2021
@@ -790,8 +801,8 @@
           "path": "/teams/crazy-wazs-team/",
           "identity_image": "/assets/img/franchises/crazy-wazs-team/identity.jpg",
           "streak": 1,
-          "start_year": 2024,
-          "end_year": 2024
+          "start_year": 2021,
+          "end_year": 2021
         },
         {
           "rank": 6,

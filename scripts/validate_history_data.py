@@ -11,7 +11,10 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 EXPECTED_YEARS = {2021, 2022, 2023, 2024, 2025}
-VALID_ROUNDS = {"Quarterfinal", "Semifinal", "Championship", "Third Place Game", "Fifth Place Game"}
+VALID_ROUNDS = {
+    "Quarterfinal", "Semifinal", "Consolation Semifinal", "Championship",
+    "Third Place Game", "Fifth Place Game", "Seventh Place Game",
+}
 
 
 def load(name: str) -> dict:
@@ -90,7 +93,7 @@ def main() -> None:
         if season.get("data_mode") == "detailed":
             if season.get("status_label") != "Complete":
                 errors.append(f"{year}: detailed season must be labelled Complete")
-            expected_regular_season_weeks = 14 if year == 2022 else 13
+            expected_regular_season_weeks = 14 if year in {2021, 2022} else 13
             if season.get("regular_season_weeks", 13) != expected_regular_season_weeks:
                 errors.append(
                     f"{year}: regular-season boundary must be Week {expected_regular_season_weeks}"
@@ -191,8 +194,8 @@ def main() -> None:
         if season.get("data_mode") == "detailed":
             source_standings = json.loads((ROOT / f"_data/generated/history/{year}/standings.json").read_text(encoding="utf-8"))
             source_rows = {row["franchise_id"]: row for row in source_standings["standings"]}
-            if len(standings) != 12 or set(source_rows) != {row.get("franchise_id") for row in standings}:
-                errors.append(f"{year}: standings must contain the 12 verified Yahoo franchises")
+            if len(standings) != season.get("team_count") or set(source_rows) != {row.get("franchise_id") for row in standings}:
+                errors.append(f"{year}: standings must contain every verified Yahoo franchise")
             for row in standings:
                 source = source_rows.get(row.get("franchise_id"), {})
                 fields = ("rank", "wins", "losses", "ties", "win_percentage", "points_for", "points_against")
@@ -213,14 +216,13 @@ def main() -> None:
                 errors.append(f"{year}: playoff field must match the verified seeded standings")
             elif [item.get("franchise_id") for item in field] != [row.get("franchise_id") for row in seeded_rows]:
                 errors.append(f"{year}: playoff field franchises must match the verified seed order")
-            if any((row.get("playoff_seed") is None) != (row.get("playoff_finish") is None) for row in standings):
-                errors.append(f"{year}: playoff seed and finish must be present together")
             weeks = json.loads((ROOT / f"_data/generated/history/{year}/weeks.json").read_text(encoding="utf-8"))
             if weeks.get("coverage", {}).get("recovered_weeks") != list(range(1, 17)):
                 errors.append(f"{year}: all 16 verified weeks are required")
             matchups = [game for week in weeks.get("weeks") or [] for game in week.get("matchups") or []]
-            if len(matchups) != 92:
-                errors.append(f"{year}: expected 92 verified matchup rows")
+            expected_matchups = 78 if year == 2021 else 92
+            if len(matchups) != expected_matchups:
+                errors.append(f"{year}: expected {expected_matchups} verified matchup rows")
             if any(game.get("verified") is not True or game.get("team_a", {}).get("score") is None or game.get("team_b", {}).get("score") is None for game in matchups):
                 errors.append(f"{year}: every matchup must be verified with both final scores")
             source_by_week_pair = {

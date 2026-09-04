@@ -222,14 +222,14 @@ def main() -> None:
         errors.append("completeness.json: season-level metric allowlist is incomplete")
     if not season_scope.get("mapping_policy"):
         errors.append("completeness.json: season-level mapping exclusions must be documented")
-    if weekly_scope.get("label") != "Verified 2022–2025":
-        errors.append("completeness.json: weekly-derived coverage label must be Verified 2022–2025")
-    if weekly_scope.get("source_years") != [2022, 2023, 2024, 2025]:
-        errors.append("completeness.json: weekly-derived coverage must span 2022–2025")
+    if weekly_scope.get("label") != "Verified 2021–2025":
+        errors.append("completeness.json: weekly-derived coverage label must be Verified 2021–2025")
+    if weekly_scope.get("source_years") != [2021, 2022, 2023, 2024, 2025]:
+        errors.append("completeness.json: weekly-derived coverage must span 2021–2025")
     if set(weekly_scope.get("allowed_metrics", [])) != WEEKLY_DERIVED_METRICS:
         errors.append("completeness.json: weekly-derived metric allowlist is incomplete")
-    if weekly_scope.get("excluded_years") != [2021] or not weekly_scope.get("exclusion_reason"):
-        errors.append("completeness.json: weekly-derived coverage must explicitly exclude 2021")
+    if weekly_scope.get("excluded_years") != [] or weekly_scope.get("exclusion_reason") is not None:
+        errors.append("completeness.json: weekly-derived coverage must include every 2021-2025 season")
     for scope_name, scope in coverage_scopes.items():
         if "all-time" in str(scope.get("label", "")).casefold():
             errors.append(f"completeness.json: {scope_name} cannot use an all-time label")
@@ -270,12 +270,12 @@ def main() -> None:
         }:
             errors.append(f"{year}: invalid confidence label")
         if year == 2021:
-            if summary.get("recovery_level") != "C":
-                errors.append("2021: focused recovery must remain Level C while weekly Yahoo data is unavailable")
-            if summary.get("yahoo_route_status") != "authentication_required":
-                errors.append("2021: Yahoo route status must record the authentication gate")
-            if declared_matchups.get("status") != "unavailable" or summary.get("weeks_fetched") != 0:
-                errors.append("2021: unavailable Yahoo weekly data cannot be presented as recovered")
+            if summary.get("recovery_level") != "A":
+                errors.append("2021: authenticated complete recovery must be Level A")
+            if summary.get("yahoo_route_status") != "authenticated_archive_recovered":
+                errors.append("2021: Yahoo route status must record authenticated recovery")
+            if declared_matchups.get("status") != "complete" or summary.get("weeks_fetched") != 16:
+                errors.append("2021: authenticated Yahoo weekly data must be complete")
             if summary.get("sections", {}).get("standings", {}).get("coverage_type") != "commissioner_supplied_yahoo_archive":
                 errors.append("2021: standings must retain their commissioner-supplied Yahoo provenance")
             if summary.get("sections", {}).get("standings", {}).get("yahoo_rows") != 10:

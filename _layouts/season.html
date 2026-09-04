@@ -57,7 +57,7 @@ layout: default
 
   <section class="season-section season-numbers" id="numbers" aria-labelledby="numbers-heading">
     <div class="shell-content">
-      <div class="section-heading"><div><p class="eyebrow">{{ season.coverage_label | default: "The season at a glance" }}</p><h2 id="numbers-heading">By the Numbers</h2><p>Only facts supported by the verified standings, bracket, and championship result appear here.</p></div></div>
+      <div class="section-heading"><div><p class="eyebrow">{{ season.coverage_label | default: "The season at a glance" }}</p><h2 id="numbers-heading">By the Numbers</h2><p>Only facts supported by verified standings, weekly matchups, playoff data, and the championship result appear here.</p></div></div>
       <div class="season-number-grid">
         {% for item in season_numbers %}<article class="season-number-card{% if item.coverage_status == 'partial' %} season-number-card--partial{% endif %}"><span>{{ item.label }}</span><strong>{{ item.display_value }}</strong>{% if item.coverage_status == 'partial' %}<small>Verified source conflict noted</small>{% endif %}</article>{% endfor %}
       </div>

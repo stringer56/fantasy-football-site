@@ -2,12 +2,12 @@
   "schema_version": 1,
   "season": 2021,
   "league_key": "406.l.12928",
-  "generated_at": "2026-09-03T19:50:58Z",
+  "generated_at": "2026-09-04T00:00:00Z",
   "source": {
-    "type": "commissioner_supplied_yahoo_archive_transcription",
+    "type": "commissioner_authenticated_yahoo_archive_transcription",
     "url": "https://football.fantasysports.yahoo.com/league/rtgffl264552026/2021",
     "coverage_status": "complete_final_standings",
-    "verified_on": "2026-09-03"
+    "verified_on": "2026-09-04"
   },
   "standings": [
     {
@@ -41,7 +41,7 @@
       "points_for": 1747.1,
       "points_against": 1674.52,
       "streak": "W-3",
-      "playoff_seed": 2,
+      "playoff_seed": 3,
       "playoff_finish": 2
     },
     {
@@ -75,8 +75,8 @@
       "points_for": 1754.54,
       "points_against": 1581.88,
       "streak": "W-2",
-      "playoff_seed": 3,
-      "playoff_finish": null
+      "playoff_seed": 2,
+      "playoff_finish": 4
     },
     {
       "rank": 5,
@@ -93,7 +93,7 @@
       "points_against": 1732.48,
       "streak": "W-1",
       "playoff_seed": null,
-      "playoff_finish": null
+      "playoff_finish": 5
     },
     {
       "rank": 6,
@@ -110,7 +110,7 @@
       "points_against": 1566.52,
       "streak": "L-1",
       "playoff_seed": null,
-      "playoff_finish": null
+      "playoff_finish": 6
     },
     {
       "rank": 7,
@@ -127,7 +127,7 @@
       "points_against": 1522.78,
       "streak": "L-1",
       "playoff_seed": null,
-      "playoff_finish": null
+      "playoff_finish": 7
     },
     {
       "rank": 8,
@@ -144,7 +144,7 @@
       "points_against": 1712.0,
       "streak": "L-3",
       "playoff_seed": null,
-      "playoff_finish": null
+      "playoff_finish": 8
     },
     {
       "rank": 9,
