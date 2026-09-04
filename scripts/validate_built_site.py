@@ -235,7 +235,7 @@ def main() -> None:
                 errors.append(f"{season['year']} season page must not render an unavailable weekly archive")
             if rendered.count('class="team-recap-card"') != season["team_count"]:
                 errors.append(f"{season['year']} season page must render all verified team mini-recaps")
-            if rendered.count('class="playoff-result"') != 3:
+            if rendered.count('class="playoff-result') != 3:
                 errors.append(f"{season['year']} season page must render exactly three verified playoff outcomes")
     for draft in draft_data["drafts"]:
         route = f"/drafts/{draft['year']}/"
