@@ -28,6 +28,7 @@ EXPECTED_ROUTES = (
     "/2026/week/1/",
     "/votes/",
     "/power-rankings/",
+    "/picks/",
     "/votes/power-rankings/",
     "/votes/picks/",
     "/retired/",
@@ -124,7 +125,8 @@ def main() -> None:
     live_week_page = route_target("/2026/week/1/").read_text(encoding="utf-8")
     power_page = route_target("/power-rankings/").read_text(encoding="utf-8")
     power_legacy_page = route_target("/votes/power-rankings/").read_text(encoding="utf-8")
-    picks_page = route_target("/votes/picks/").read_text(encoding="utf-8")
+    picks_page = route_target("/picks/").read_text(encoding="utf-8")
+    picks_legacy_page = route_target("/votes/picks/").read_text(encoding="utf-8")
     if 'aria-label="Open navigation"' not in votes_page:
         errors.append("mobile navigation toggle must have an accessible name")
     if teams_page.count('class="franchise-card"') != 12:
@@ -194,6 +196,8 @@ def main() -> None:
             errors.append(f"Power Rankings experience is missing: {expected}")
     if "/power-rankings/" not in power_legacy_page:
         errors.append("legacy Power Rankings route must link to the canonical route")
+    if "/picks/" not in picks_legacy_page:
+        errors.append("legacy Picks route must link to the canonical route")
     for expected in ("Matchup Picks", "Weekly Matchups", "Season Picks Leaderboard", "Pick Results Archive"):
         if expected not in picks_page:
             errors.append(f"Picks page is missing: {expected}")

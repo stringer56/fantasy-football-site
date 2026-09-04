@@ -18,7 +18,7 @@ body_class: home-page
     <article class="home-live-card"><div class="home-live-card__heading"><span>Record Watch</span><a href="{{ '/2026/#record-watch' | relative_url }}">Open watch</a></div>{% include record-watch.html alerts=live.record_watch %}</article>
     <article class="home-live-card"><div class="home-live-card__heading"><span>Road to Glory Wire</span><a href="{{ '/2026/#league-wire' | relative_url }}">All headlines</a></div>{% if live.league_wire.size > 0 %}{% assign headline = live.league_wire[0] %}<h3>{{ headline.headline }}</h3><p>{{ headline.detail }}</p>{% else %}<div class="live-empty-inline"><strong>The league wire is quiet.</strong></div>{% endif %}</article>
     <article class="home-live-card"><div class="home-live-card__heading"><span>Power Rankings</span><a href="{{ '/power-rankings/' | relative_url }}">Full history</a></div>{% include live-power-preview.html power=live.power_rankings %}</article>
-    <article class="home-live-card"><div class="home-live-card__heading"><span>Pick’em</span><a href="{{ '/votes/picks/' | relative_url }}">Picks center</a></div><h3>Call the Week {{ live.current_week | default: 1 }} winners</h3><p>Manager picks remain separate from Yahoo results and score only after a final winner is verified.</p></article>
+    <article class="home-live-card"><div class="home-live-card__heading"><span>Pick’em</span><a href="{{ '/picks/' | relative_url }}">Picks center</a></div><h3>Call the Week {{ live.current_week | default: 1 }} winners</h3><p>Manager picks remain separate from Yahoo results and score only after a final winner is verified.</p></article>
   </div>
 </div></section>
 
