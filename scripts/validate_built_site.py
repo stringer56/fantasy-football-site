@@ -301,7 +301,7 @@ def main() -> None:
     manifest = json.loads((ROOT / "_data" / "generated" / "manifest.json").read_text(encoding="utf-8"))
     data_is_current = manifest.get("status") == "ready" and manifest.get("season") == site_data.get("current_season")
     if data_is_current:
-        if "standings-table" not in home or "matchup-card" not in home:
+        if "home-standings-top" not in home or "home-featured-matchup" not in home:
             errors.append("current generated data did not render standings and matchup components")
     else:
         for expected in ("Draft Date TBA", "Standings arrive with the season", "The next slate is taking shape"):
