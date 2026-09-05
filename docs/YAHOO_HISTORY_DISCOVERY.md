@@ -2,6 +2,22 @@
 
 ## Status
 
+### Post-merge updater boundary correction (September 5, 2026)
+
+Manual `Update Yahoo Data` run 33983509111 successfully published the public
+2026 fallback snapshot as `da272f9`, but also replaced the deterministic
+`history_manifest.json` with a timestamped diagnostic report. Main validation
+33983663299 then failed its offline manifest reproducibility check.
+
+The updater's diagnostic probe now writes only to the runner's temporary
+directory and uploads the sanitized `yahoo-history-live-discovery` artifact
+(three-day retention). It does not stage or publish that report. The committed
+baseline is restored from the same verified evidence, and a pre-publication
+offline check guards that boundary. No 2026 snapshot, community configuration,
+credentials, OAuth behavior, historical scores or franchise mapping is changed.
+This correction applies to the routine updater; the separate historical
+discovery workflow remains a deliberate historical-maintenance operation.
+
 Milestone 4.5 now has two deliberately separate discovery paths: the existing
 credential-safe Yahoo API probe and the commissioner-linked public Yahoo League
 History archive. Neither path changes OAuth, publishes raw Yahoo responses, or

@@ -41,18 +41,23 @@ jobs:
           LEAGUE_KEY: ${{ secrets.LEAGUE_KEY }}
         run: >-
           python scripts/discover_yahoo_history.py
-          --output _data/generated/history_manifest.json
+          --output "${{ runner.temp }}/yahoo-history-live-discovery.json"
 
       - name: Validate and retain sanitized discovery report
         if: ${{ github.event_name == 'workflow_dispatch' }}
-        run: python scripts/validate_public_data.py
+        run: |
+          # The live probe validates its sanitized output before writing it.
+          # Its diagnostic timestamp must not replace the reproducible baseline.
+          python scripts/validate_public_data.py
+          python scripts/discover_yahoo_history.py --dry-run --check
 
       - name: Upload sanitized discovery report
         if: ${{ github.event_name == 'workflow_dispatch' }}
         uses: actions/upload-artifact@v4
         with:
           name: yahoo-history-live-discovery
-          path: _data/generated/history_manifest.json
+          path: ${{ runner.temp }}/yahoo-history-live-discovery.json
+          if-no-files-found: error
           retention-days: 3
 
       - name: Pull Yahoo data
