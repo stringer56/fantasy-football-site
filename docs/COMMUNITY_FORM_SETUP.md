@@ -4,17 +4,26 @@ September 2026: no real Forms or ballots exist. Blank responder URLs in
 `_data/community.yml` are intentional. Google Forms is free external collection;
 GitHub Pages never accepts submissions or accesses private Google data.
 
-## Optional automatic creation (manual instructions below remain supported)
+## Option A — Recommended: create all three with Apps Script
 
-1. Open `script.google.com` in Joe's Google account. Click **New project**.
+1. Open [Google Apps Script](https://script.google.com) in Joe's Google account.
+   Click **New project**. No Cloud billing or repository credentials are needed.
 2. Name it **Road to Glory Community Forms**. Replace **Code.gs** with the entire
    repository file `tools/create_community_forms.gs`. Save.
-3. Select **createCommunityForms**, then **Run**. Review Google's permissions.
+3. Click **Save project** (disk icon or Ctrl+S). In the function dropdown beside
+   **Run**, select **createCommunityForms**, then click **Run**. Review permissions.
    This personal script uses Forms, its own script properties, and Drive for
    optional private CSV exports. Authorize only the reviewed copy in your account;
-   Google may display an unverified-personal-script warning.
-4. **Execution log** prints only PUBLIC RESPONDER URLs. No editor/Sheet links.
-   The three Forms stay unpublished/closed. Find editable Forms in Google Forms home.
+   Expected services are Google Forms and Drive (private CSV export), not Gmail,
+   contacts, GitHub or external networking. Google may display an
+   unverified-personal-script warning; proceed only for your own reviewed copy.
+   Stop if permissions or the project/account are unexpected.
+4. Open **Execution log** in the editor (or **Executions → latest run → Logs**).
+   Wait for completion. Copy the three lines labeled **PUBLIC RESPONDER URL**,
+   keeping each feature title beside its URL. These are the only links to give Codex.
+   New Forms are unpublished/closed; the log also reports whether each accepts
+   responses. A rerun reuses existing Forms without changing their open/closed state.
+   Find editable Forms at [Google Forms home](https://forms.google.com).
 5. League Votes intentionally has no poll choices. Populate `vote_id` and
    `option_id` from one real poll in `_data/votes.yml` before publishing.
    Do not publish the empty shell or invent placeholder choices.
@@ -23,7 +32,15 @@ GitHub Pages never accepts submissions or accesses private Google data.
    that Form manually. Creating another script project would create duplicates.
 7. Optionally select **Responses → Link to Sheets → Create a new spreadsheet**.
    Keep Sheet sharing **Restricted**. Never paste a Sheet URL into GitHub.
-8. Review all questions and privacy settings below, then publish deliberately.
+8. **Stop here with all three new Forms closed.** Send only the responder URLs to
+   Codex, choose the Power Rankings deadline, and review the schema below. An
+   unpublished responder link may not open yet; do not publish merely to obtain it.
+   Never send the editor address ending `/edit` or linked `docs.google.com/spreadsheets/`
+   URL for site configuration. A responder URL is not proof that access is enabled.
+9. Only after review, publish the intended Forms with appropriate responder access.
+   **Publishing can reset accepting-responses state**, so verify the Responses
+   control immediately. Leave League Votes unpublished until a real poll exists.
+   Test signed out without submitting a fake response before sharing with managers.
 
 This helper is generated locally with `python scripts/build_community_forms.py`
 from canonical owners/franchises and the verified current slate. Regenerate and
@@ -31,7 +48,14 @@ review before later weeks; there is no automatic rollover. It contains no secret
 network forwarding, repository access, billing setup or deployed server. It has
 not been run in Joe's Google account; an account-policy smoke test is still required.
 
-## Manual setup and common settings
+If Apps Script fails: do not repeatedly create new script projects. Existing saved
+Form IDs are retained to prevent duplicates, but a partial Form is not automatically
+repaired. Inspect it in Google Forms home, keep it unpublished with Responses →
+Accepting responses OFF, and complete its exact questions with Option B. If an
+account blocks public access or authorization, stop and resolve the account policy;
+do not bypass it or grant broader sharing permissions.
+
+## Option B — Manual fallback and common settings
 
 1. Open Google Forms and click **Blank form**. Use the exact feature title below.
 2. In **Settings → Responses**, turn email collection OFF and **Limit to 1 response**
@@ -98,6 +122,11 @@ The importer enforces all franchises exactly once; Forms cannot enforce uniquene
 across dropdowns. Do not substitute a grid: its exported columns differ.
 Scoring is 12 through 1; exact aggregate ties share competition rank.
 Week 1 has no previous rank/movement. Joe must choose the ranking deadline.
+After Joe chooses it, set **`power_rankings.closes_at` in `_data/community.yml`**
+to the approved timezone-aware ISO timestamp and put the same deadline in the
+Form description/league announcement. A consistent weekly deadline before the
+first kickoff is a sensible operating pattern, not a configured requirement or
+an approved time. It need not equal Pick’em's lock. No value is saved by this helper.
 
 English linked-Sheet headers in question order:
 `Timestamp,owner_id,season,week,rank_1,rank_2,rank_3,rank_4,rank_5,rank_6,rank_7,rank_8,rank_9,rank_10,rank_11,rank_12`.
@@ -122,6 +151,27 @@ Then these required **Multiple choice** questions:
 Linked-Sheet headers: `Timestamp,owner_id,season,week`, then these six exact IDs.
 Safe importer headers replace Timestamp with `submitted_at` and convert values.
 Confirm the canonical Yahoo slate still reports Week 1 and six matchups.
+
+### Next week: regenerate a reviewed weekly copy
+
+The checked-in helper is a **Week 1 snapshot generated from canonical data**, not
+a permanent generic matchup list. For Week 2 and later, first refresh/verify that
+week's Yahoo slate and configure its commissioner-approved Pick’em lock with the
+matching `lock_week`. Then have Codex run `python scripts/build_community_forms.py`
+and `python scripts/build_community_forms.py --check`, review the exact new questions,
+and provide the regenerated helper. Generation rejects a lock from another week.
+
+Recommended: use a new named Apps Script project for the new week, run the same
+`createCommunityForms` function, and keep the old project, Forms and private exports
+intact. This creates a fresh weekly set of three closed Forms; the unused League
+Votes shell can remain closed. Give Codex the new intended responder URLs.
+Export each week from **its original script project**. Never replace old Pick’em
+questions while responses or grading are pending, and never mix weeks in one CSV.
+
+For manually created Forms, create a separate weekly copy and replace `week` and
+all matchup-ID questions using that week's reviewed list. The old list above must
+not be reused as a later week's slate. Google Sheet exports still need the documented
+timestamp conversion. There is no automatic Form rollover or silent question update.
 
 ### Verified whole-slate lock
 

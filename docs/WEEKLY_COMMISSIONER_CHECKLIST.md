@@ -5,7 +5,8 @@ All raw exports stay in ignored `private-vote-imports/`. Replace Week 1 and time
 ## Monday / Tuesday
 
 - Confirm Yahoo freshness and feature states: `python scripts/community_week.py --season 2026 --week 1`
-- Verify the slate, then update the Pick’em Form’s stable matchup-ID questions.
+- Verify the slate and matching `lock_week`, then create that week's reviewed Form
+  copy using the setup guide. Preserve prior Forms/script projects for exports and grading.
 - Open only the intended Forms; set lowercase `open` status and public responder URLs in `_data/community.yml`.
 - Announce the whole-slate Pick’em lock in `America/New_York` with an explicit offset.
 

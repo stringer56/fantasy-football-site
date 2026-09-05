@@ -4,10 +4,10 @@ import json
 from pathlib import Path
 
 try:
-    from .voting_common import ROOT, load_yaml, active_franchises, owner_index
+    from .voting_common import ROOT, load_yaml, active_franchises, owner_index, parse_deadline
     from .build_picks_leaderboard import canonical_matchups_from_yahoo
 except ImportError:
-    from voting_common import ROOT, load_yaml, active_franchises, owner_index
+    from voting_common import ROOT, load_yaml, active_franchises, owner_index, parse_deadline
     from build_picks_leaderboard import canonical_matchups_from_yahoo
 
 
@@ -21,6 +21,11 @@ def build_config():
     if status != 'ready' or not matchups:
         raise ValueError('Verified canonical Yahoo slate is required to create Pick’em questions')
     week = data['week']
+    pickem = community['pickem']
+    if community['season'] != season or pickem.get('lock_week') != week:
+        raise ValueError('Configure the verified Pick’em lock for this season/week before generating Forms')
+    if pickem.get('lock_timezone') != 'America/New_York' or not parse_deadline(pickem.get('lock_at')):
+        raise ValueError('A timezone-aware verified Pick’em lock in America/New_York is required')
     owners = owner_index(load_yaml('owners.yml'))
     teams = active_franchises(franchises)
     def question(title, choices, type='dropdown', help=''):

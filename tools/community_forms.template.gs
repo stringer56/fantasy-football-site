@@ -11,6 +11,8 @@ function createCommunityForms() {
       const form = FormApp.create(spec.title, false);
       // Save immediately so reruns never silently create duplicate Forms.
       props.setProperty(key, form.getId());
+      // Keep it closed even if question setup fails partway.
+      form.setAcceptingResponses(false);
       form.setCollectEmail(false).setLimitOneResponsePerUser(false)
         .setPublishingSummary(false).setAllowResponseEdits(false)
         .setDescription(spec.description);
@@ -20,13 +22,13 @@ function createCommunityForms() {
         if (q.choices.length) item.setChoiceValues(q.choices);
         if (q.help) item.setHelpText(q.help);
       });
-      form.setAcceptingResponses(false);
       id = form.getId();
     }
     const form = FormApp.openById(id);
-    console.log(spec.title + ' — PUBLIC RESPONDER URL (not active until reviewed/published): ' + form.getPublishedUrl());
+    console.log(spec.title + ' — PUBLIC RESPONDER URL: ' + form.getPublishedUrl());
+    console.log('Accepting responses: ' + (form.isAcceptingResponses() ? 'YES — existing Form; review manually' : 'NO'));
   });
-  console.log('Forms remain unpublished/closed. Open them from Google Forms home; never share editor or Sheet links.');
+  console.log('New Forms start unpublished/closed. Existing Forms are reused without changing their state. Review in Google Forms home; never share editor or Sheet links.');
 }
 
 function exportPowerCsv() { exportCommunityCsv_('power'); }

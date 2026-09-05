@@ -1,5 +1,44 @@
 # Production Readiness Reconciliation — September 5, 2026
 
+## Current post-fix status — supersedes the original audit below
+
+PR #24 is merged. PR #25 was merged at
+`8f989952719f124b8d62cb28948d0fc90efc9e1b` on September 5, 2026.
+Manual [Yahoo update 33988217973](https://github.com/stringer56/fantasy-football-site/actions/runs/33988217973)
+then succeeded and published main `e0e82acb6bf27c75035ac8da6b9a7a8de520ca72`.
+The canonical history manifest is byte-for-byte unchanged by that update; the
+timestamped diagnostic remained a separate temporary artifact. Post-update
+[main validation 33988310265](https://github.com/stringer56/fantasy-football-site/actions/runs/33988310265)
+passed all 194 tests, deterministic checks, validators, Jekyll and rendered/privacy
+checks. This verifies the regression fix after real publishing, not only in a PR.
+
+[Production Pages deployment 33988248843](https://github.com/stringer56/fantasy-football-site/actions/runs/33988248843)
+successfully serves that same main commit. Yahoo API still returned HTTP 403;
+the official public fallback supplies 12 teams, 12 standings rows, six Week 1
+matchups and 122 available roster players, timestamp `2026-09-05T19:49:01Z`.
+This is fallback-fed data, not authenticated API recovery. OAuth is unchanged.
+The actual deployed Pages artifact passed the 44-page and privacy validators;
+the live site passed 80 responsive checks across 16 routes at
+1440/1024/768/390/360, with no broken assets, body overflow or synthetic content.
+
+Community remains dormant: three blank Form URLs, no imports/previews/results,
+no active poll, Pick’em lock `2026-09-09T20:20:00-04:00` in America/New_York,
+Power Rankings deadline unset. No real Forms have been created by Codex.
+
+The separate Forms-creation polish reviews the helper against importer fields,
+tests three-Form creation using local Google-service doubles (no live Google calls),
+guards against a mismatched weekly lock, and clarifies responder-only output,
+closed defaults, safe reuse, manual fallback and weekly copies. Google-account
+permissions/publication still require Joe's first-run review. See `NEXT_STEPS.md`.
+The polish branch passes 198 tests (four helper-specific regressions added),
+all current validators and helper/JavaScript syntax checks. No production
+configuration or importer was changed.
+
+## Original pre-merge audit record
+
+The sections below preserve the earlier evidence as recorded; their pending-merge
+and old-snapshot descriptions are historical, not current operating instructions.
+
 ## Repository evidence
 
 Main: `db6af82626a28f0eee4a9e71e72f3f5419cdedcb` (merged PR #23).
