@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-09-05T18:16:25Z",
+  "generated_at": "2026-09-05T19:49:01Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-05T18:16:25Z",
+    "source_updated_at": "2026-09-05T19:49:01Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-09-05T18:16:25Z"
+    "source_update_timestamp": "2026-09-05T19:49:01Z"
   },
   "standings": [
     {
@@ -1134,6 +1134,14 @@
             {
               "player_key": "470.p.42696",
               "player_name": "Malachi Fields",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42796",
+              "player_name": "Emmett Johnson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
