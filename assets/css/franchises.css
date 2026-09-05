@@ -68,6 +68,8 @@
 .venue-feature figcaption strong, .honors-feature figcaption strong { display: block; margin-top: .25rem; }
 .franchise-source-note { margin: 1.25rem 0 0; color: #586577; font-size: .8rem; }
 .franchise-history__grid article, .franchise-live__grid article { border-radius: .15rem; box-shadow: none; }
+.franchise-live__grid > article { color: var(--navy-900); }
+.franchise-live__grid .text-link { color: var(--navy-700); }
 .franchise-record-grid strong { font-variant-numeric: tabular-nums; }
 .franchise-history-columns { gap: 2rem; }
 .profile-back-nav { padding-block: 1.5rem; border-top: var(--rule); background: white; }
