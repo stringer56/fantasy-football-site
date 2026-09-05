@@ -24,7 +24,12 @@ main [id] { scroll-margin-top: 12rem; }
 .wrap { width: min(calc(100% - 3rem), var(--content-width)); }
 .content-section { padding-block: clamp(2.5rem, 5vw, 4.5rem); }
 .content-section--tight { padding-block: clamp(2rem, 4vw, 3.5rem); }
-.eyebrow { font-size: .75rem; letter-spacing: .14em; }
+.eyebrow { font-size: .75rem; letter-spacing: .14em; color: #76540d; }
+.home-hero .eyebrow, .page-hero .eyebrow, .directory-hero .eyebrow,
+.franchise-hero .eyebrow, .franchise-facts .eyebrow, .season-hero .eyebrow,
+.draft-hero .eyebrow, .records-hero .eyebrow, .vote-hero .eyebrow,
+.live-season-hero .eyebrow, .live-week-hero .eyebrow,
+.content-section--navy .eyebrow, .cup-feature .eyebrow { color: var(--gold-400); }
 .eyebrow--dark { color: #76540d; }
 .button { border-radius: .15rem; text-transform: none; letter-spacing: .01em; font-size: .9rem; }
 .button:hover { transform: none; }
@@ -69,6 +74,8 @@ main [id] { scroll-margin-top: 12rem; }
 .page-hero { padding-block: clamp(2.5rem, 5vw, 4.5rem); }
 .page-hero h1 { font-size: var(--type-display); line-height: 1.04; letter-spacing: -.05em; text-transform: none; }
 .page-hero__inner, .page-hero--compact .page-hero__inner { min-height: 0; padding-block: 0; }
+.page-hero { background: var(--navy-950); }
+.page-hero::before, .page-hero::after { display: none; }
 .season-hero h1, .draft-hero h1, .records-hero h1, .vote-hero h1,
 .live-season-hero h1, .live-week-hero h1 { font-size: var(--type-display); font-weight: 900; line-height: 1.04; letter-spacing: -.045em; text-transform: none; }
 .season-hero__grid, .draft-hero__grid, .records-hero__grid, .vote-hero__grid { min-height: 0; padding-block: 3rem; }
