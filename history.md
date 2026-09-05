@@ -12,14 +12,6 @@ description: Road to Glory FFL seasons, standings, playoffs, championships, and 
 
   {% assign seasons = site.data.seasons.seasons | sort: "year" | reverse %}
   <div class="season-archive-grid">
-    {% for season in seasons %}
-      {% assign champion = site.data.franchises.franchises | where: "franchise_id", season.champion_franchise_id | first %}
-      {% assign final = site.data.champions.champions | where: "year", season.year | first %}
-      {% assign story = site.data.generated.recaps.seasons | where: "season", season.year | first %}
-      <article class="season-archive-card">
-        <a class="season-archive-card__image" href="{{ '/history/' | append: season.year | append: '/' | relative_url }}"><img src="{{ champion.branding.identity_image | relative_url }}" alt="{{ champion.branding.identity_alt }}"></a>
-        <div class="season-archive-card__body"><p class="eyebrow">{{ season.year }} champion</p><h2><a href="{{ '/history/' | append: season.year | append: '/' | relative_url }}">{{ season.champion_display_name }}</a></h2><p>{{ story.summary }}</p>{% if story.best_record_display %}<p class="season-archive-card__best"><strong>Best record</strong> {{ story.best_record_display }}</p>{% endif %}<div><span>{{ season.team_count }} teams</span><a class="text-link" href="{{ '/history/' | append: season.year | append: '/' | relative_url }}">Full season story <span aria-hidden="true">→</span></a></div></div>
-      </article>
-    {% endfor %}
+    {% for archive_season in seasons %}{% include champion-card.html season=archive_season %}{% endfor %}
   </div>
 </section>

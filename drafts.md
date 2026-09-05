@@ -10,7 +10,7 @@ description: Verified Road to Glory FFL draft orders, original results, and reca
 <section class="shell-content draft-archive" aria-labelledby="draft-archive-heading">
   <div class="history-intro">
     <div><p class="eyebrow">On the clock</p><h2 id="draft-archive-heading">Built pick by pick</h2></div>
-    <p>Each archive page preserves the historical team names shown that season, while resolved identities connect back to the franchise record. Select any result image to inspect it at full size.</p>
+    <p>Each archive page preserves the historical team names shown that season, with links back to each franchise’s full record. Select any result image to inspect it at full size.</p>
   </div>
 
   <div class="draft-archive-grid">
@@ -19,7 +19,7 @@ description: Verified Road to Glory FFL draft orders, original results, and reca
       <article class="draft-season-card">
         <a class="draft-season-card__image" href="{{ '/drafts/' | append: draft.year | append: '/' | relative_url }}">
           {% if draft.order_asset %}{% assign draft_preview = draft.order_asset %}{% else %}{% assign draft_preview = draft.results_assets[0] %}{% endif %}
-          <img src="{{ draft_preview.path | relative_url }}" alt="{{ draft_preview.alt | default: 'Preview of Road to Glory draft results' }}">
+          <img src="{{ draft_preview.path | relative_url }}" alt="{{ draft_preview.alt | default: 'Preview of Road to Glory draft results' }}" loading="lazy">
           <span>{{ draft.year }}</span>
         </a>
         <div class="draft-season-card__body">
