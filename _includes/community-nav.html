@@ -1,0 +1,5 @@
+<nav class="community-nav" aria-label="Community features"><div class="wrap">
+  <a href="{{ '/votes/' | relative_url }}"{% if page.url == '/votes/' %} aria-current="page"{% endif %}>League Votes</a>
+  <a href="{{ '/power-rankings/' | relative_url }}"{% if page.url contains '/power-rankings/' %} aria-current="page"{% endif %}>Power Rankings</a>
+  <a href="{{ '/picks/' | relative_url }}"{% if page.url contains '/picks/' or page.url contains '/pickem/' %} aria-current="page"{% endif %}>Pick’em</a>
+</div></nav>

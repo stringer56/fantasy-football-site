@@ -14,6 +14,6 @@ description: The official rules and governance archive for Road to Glory FFL.
       <p>The current commissioner-approved rules will be published here with a visible version and effective date.</p>
       <p>Until that source is reviewed, Yahoo remains the operational home for active league settings.</p>
     </div>
-    <aside class="migration-card"><h2>Rules Status</h2><p>The authoritative rulebook is awaiting commissioner review before publication.</p></aside>
+    <aside class="migration-card"><p class="eyebrow">League governance</p><h2>The official settings</h2><p>The rulebook is under commissioner review. Current season settings remain available on Yahoo.</p><a class="button button--gold" href="{{ site.data.site.yahoo.league_url }}" target="_blank" rel="noopener noreferrer">View League on Yahoo ↗</a></aside>
   </div>
 </section>

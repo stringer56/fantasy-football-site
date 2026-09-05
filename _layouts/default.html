@@ -25,7 +25,7 @@
       </a>
 
       <div class="site-header__tools">
-        <span class="season-chip"><span class="season-chip__dot" aria-hidden="true"></span>{{ site.data.site.current_season }} Season</span>
+        <a class="season-chip" href="{{ '/2026/' | relative_url }}"{% if page.url contains '/2026/' %} aria-current="page"{% endif %}><span class="season-chip__dot" aria-hidden="true"></span>{{ site.data.site.current_season }} Season ↗</a>
         <a class="button button--gold button--compact desktop-yahoo-link" href="{{ site.data.site.yahoo.league_url }}" target="_blank" rel="noopener">
           Yahoo League <span aria-hidden="true">↗</span>
         </a>
@@ -39,16 +39,13 @@
     <div class="site-nav-shell">
       <nav class="site-nav wrap" id="primary-navigation" aria-label="Primary navigation">
         <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
-        <a href="{{ '/2026/' | relative_url }}"{% if page.url contains '/2026/' %} aria-current="page"{% endif %}>2026 HQ</a>
-        <a href="{{ '/teams/' | relative_url }}"{% if page.url contains '/teams/' %} aria-current="page"{% endif %}>Teams &amp; Owners</a>
-        <a href="{{ '/history/' | relative_url }}"{% if page.url contains '/history/' or page.url contains '/seasons/' %} aria-current="page"{% endif %}>League History</a>
+        <a href="{{ '/teams/' | relative_url }}"{% if page.url contains '/teams/' %} aria-current="page"{% endif %}>Teams</a>
+        <a href="{{ '/history/' | relative_url }}"{% if page.url contains '/history/' or page.url contains '/seasons/' %} aria-current="page"{% endif %}>History</a>
         <a href="{{ '/drafts/' | relative_url }}"{% if page.url contains '/drafts/' %} aria-current="page"{% endif %}>Drafts</a>
         <a href="{{ '/cup/' | relative_url }}"{% if page.url contains '/cup/' %} aria-current="page"{% endif %}>Brew Crew Cup</a>
         <a href="{{ '/records/' | relative_url }}"{% if page.url contains '/records/' or page.url contains '/head-to-head/' or page.url contains '/all-time-standings/' or page.url contains '/championships/' %} aria-current="page"{% endif %}>Records</a>
-        <a href="{{ '/power-rankings/' | relative_url }}"{% if page.url contains '/power-rankings/' %} aria-current="page"{% endif %}>Power Rankings</a>
-        <a href="{{ '/picks/' | relative_url }}"{% if page.url contains '/picks/' or page.url contains '/pickem/' %} aria-current="page"{% endif %}>Pick’em</a>
-        <a href="{{ '/votes/' | relative_url }}"{% if page.url contains '/votes/' %} aria-current="page"{% endif %}>League Votes</a>
-        <a href="{{ '/retired/' | relative_url }}"{% if page.url contains '/retired/' %} aria-current="page"{% endif %}>Retired Franchises</a>
+        <a href="{{ '/votes/' | relative_url }}"{% if page.url contains '/votes/' or page.url contains '/power-rankings/' or page.url contains '/picks/' or page.url contains '/pickem/' %} aria-current="page"{% endif %}>Community</a>
+        <a href="{{ '/retired/' | relative_url }}"{% if page.url contains '/retired/' %} aria-current="page"{% endif %}>Retired</a>
         <a href="{{ '/rules/' | relative_url }}"{% if page.url contains '/rules/' %} aria-current="page"{% endif %}>Rules</a>
         <a class="mobile-yahoo-link" href="{{ site.data.site.yahoo.league_url }}" target="_blank" rel="noopener">Yahoo League <span aria-hidden="true">↗</span></a>
       </nav>
@@ -56,6 +53,7 @@
   </header>
 
   <main id="main-content">
+    {% if page.url contains '/votes/' or page.url contains '/power-rankings/' or page.url contains '/picks/' or page.url contains '/pickem/' %}{% include community-nav.html %}{% endif %}
     {{ content }}
   </main>
 
@@ -69,7 +67,7 @@
         <a href="{{ '/rules/' | relative_url }}">League Rules</a>
         <a href="{{ site.data.site.yahoo.league_url }}" target="_blank" rel="noopener">Yahoo League <span aria-hidden="true">↗</span></a>
       </div>
-      <p class="site-footer__meta">© {{ site.time | date: '%Y' }} Road to Glory FFL<br><span>Hosted on GitHub Pages</span></p>
+      <p class="site-footer__meta">© {{ site.time | date: '%Y' }} Road to Glory FFL<br><span>Rivalries since {{ site.data.league.founded_season }}</span></p>
     </div>
   </footer>
 

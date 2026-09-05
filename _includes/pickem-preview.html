@@ -8,7 +8,7 @@
   {% elsif pickem.state == 'final' %}
     {% if pickem.weekly_winners.size > 0 %}<p><strong>Week {{ pickem.week }} winner{% if pickem.weekly_winners.size > 1 %}s{% endif %}:</strong> {% for manager in pickem.weekly_winners %}{{ manager.display_name }} ({{ manager.correct }}–{{ manager.incorrect }}){% unless forloop.last %}, {% endunless %}{% endfor %}</p>{% endif %}
   {% else %}
-    <p><strong>{% if pickem.state == 'unconfigured' %}Week {{ pickem.week }} ballot setup is pending.{% else %}Week {{ pickem.week }} Pick’em opens soon.{% endif %}</strong> The commissioner will publish the Google Form when voting begins.</p>
+    <p><strong>{% if pickem.state == 'unconfigured' %}Week {{ pickem.week }} Pick’em opens soon.{% else %}Week {{ pickem.week }} Pick’em opens soon.{% endif %}</strong> Call every winner and follow the season-long race.</p>
   {% endif %}
   {% if pickem.season_leader %}<p class="community-stat"><span>Season leader</span><strong>{{ pickem.season_leader.display_name }}</strong><small>{{ pickem.season_leader.accuracy | times: 100 | round: 1 }}% · {{ pickem.season_leader.correct }} correct</small></p>{% endif %}
 {% else %}

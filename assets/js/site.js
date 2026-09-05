@@ -24,6 +24,12 @@
     if (event.target.closest('a')) setMenuState(false);
   });
 
+  // A disclosure, not a modal: Tab remains in document order and closes it
+  // when keyboard focus leaves the masthead.
+  header.addEventListener('focusout', (event) => {
+    if (event.relatedTarget && !header.contains(event.relatedTarget)) setMenuState(false);
+  });
+
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
       setMenuState(false);

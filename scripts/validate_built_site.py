@@ -305,7 +305,7 @@ def main() -> None:
     for draft in draft_data["drafts"]:
         route = f"/drafts/{draft['year']}/"
         rendered = route_target(route).read_text(encoding="utf-8")
-        for expected in ("Draft Order", "Draft Board &amp; Results", "Draft recap", "Verified Notes", "Future Draft Analysis"):
+        for expected in ("Draft Order", "Draft Board &amp; Results", "Draft recap", "Verified Notes", 'aria-label="Draft years"'):
             if expected not in rendered:
                 errors.append(f"draft page {route} is missing: {expected}")
         if rendered.count('class="draft-order-entry"') != draft["team_count"]:
@@ -325,7 +325,7 @@ def main() -> None:
         for expected in (
             franchise["name"], "Coach &amp; identity", "Home turf", "View source page",
             "Franchise Record", "Season History", "Head-to-Head",
-            "Championship History", "Timeline Foundation",
+            "Championship History", "Franchise Timeline",
         ):
             if expected not in profile:
                 errors.append(f"franchise profile {route} is missing: {expected}")
