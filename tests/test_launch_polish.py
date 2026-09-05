@@ -74,6 +74,10 @@ class LaunchPolishTests(unittest.TestCase):
         text = (ROOT / 'assets/css/publication.css').read_text(encoding='utf-8')
         self.assertIn('.rules-page .prose h2, .rules-page .migration-card h2', text)
 
+    def test_footer_metadata_uses_light_text_on_navy(self):
+        text = (ROOT / 'assets/css/style.css').read_text(encoding='utf-8')
+        self.assertIn('.site-footer__meta span { color: var(--slate-300); }', text)
+
 
 if __name__ == '__main__':
     unittest.main()

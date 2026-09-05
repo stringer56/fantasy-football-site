@@ -1178,7 +1178,7 @@ a:hover { color: var(--navy-900); }
 .site-footer__links a { color: var(--slate-300); font-size: .78rem; font-weight: 800; text-decoration: none; }
 .site-footer__links a:hover { color: var(--gold-300); }
 .site-footer__meta { text-align: right; }
-.site-footer__meta span { color: var(--slate-600); }
+.site-footer__meta span { color: var(--slate-300); }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; margin: -1px; padding: 0; border: 0; clip: rect(0, 0, 0, 0); white-space: nowrap; }
 
 /* Responsive layout */
