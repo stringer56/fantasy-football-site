@@ -43,11 +43,17 @@ class LinkParser(HTMLParser):
         super().__init__()
         self.targets: list[tuple[str, str]] = []
         self.anchors: list[dict[str, str | None]] = []
+        self.links = []
+        self.meta = {}
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attributes = dict(attrs)
         if tag == "a":
             self.anchors.append(attributes)
+        if tag == 'link':
+            self.links.append(attributes)
+        if tag == 'meta':
+            self.meta[attributes.get('property') or attributes.get('name')] = attributes.get('content')
         if tag in {"a", "link"} and attributes.get("href"):
             self.targets.append(("href", attributes["href"] or ""))
         if tag in {"img", "script", "source"} and attributes.get("src"):
@@ -77,12 +83,35 @@ def local_target(source_file: Path, raw_url: str) -> Path | None:
     return target.resolve()
 
 
+def metadata_errors(parser: LinkParser, expected_url: str, origin: str) -> list[str]:
+    errors = []
+    canonical = [link.get('href') for link in parser.links if link.get('rel') == 'canonical']
+    if canonical != [expected_url]:
+        errors.append('canonical URL must resolve to the configured public route')
+    for key in ('description', 'og:title', 'og:description', 'og:site_name', 'og:image:alt'):
+        if not parser.meta.get(key):
+            errors.append(f'missing {key}')
+    if parser.meta.get('og:url') != expected_url or parser.meta.get('og:type') != 'website':
+        errors.append('Open Graph URL/type must match the canonical page')
+    if not str(parser.meta.get('og:image', '')).startswith(origin + BASE_URL + '/assets/img/'):
+        errors.append('Open Graph image must use approved local artwork')
+    if not any(link.get('rel') == 'icon' for link in parser.links):
+        errors.append('missing favicon')
+    for anchor in parser.anchors:
+        if anchor.get('target') == '_blank' and 'noopener' not in str(anchor.get('rel', '')).split():
+            errors.append('new-tab link is missing noopener')
+    return errors
+
+
 def main() -> None:
     if not SITE_DIR.is_dir():
         raise SystemExit("_site is missing; run bundle exec jekyll build first")
 
     errors: list[str] = []
     pages = sorted(SITE_DIR.rglob("*.html"))
+    config = yaml.safe_load((ROOT / '_config.yml').read_text(encoding='utf-8'))
+    origin = config['url'].rstrip('/')
+    aliases = {'/pickem/': '/picks/', '/votes/picks/': '/picks/', '/votes/power-rankings/': '/power-rankings/', '/seasons/': '/history/'}
     site_data = yaml.safe_load((ROOT / "_data" / "site.yml").read_text(encoding="utf-8"))
     yahoo_url = site_data["yahoo"]["league_url"]
     franchise_data = yaml.safe_load((ROOT / "_data" / "franchises.yml").read_text(encoding="utf-8"))
@@ -119,6 +148,12 @@ def main() -> None:
 
         parser = LinkParser()
         parser.feed(text)
+        route = '/' + page.relative_to(SITE_DIR).as_posix().removesuffix('index.html')
+        expected_url = origin + config['baseurl'] + aliases.get(route, route)
+        errors.extend(f'{page.relative_to(SITE_DIR)}: {issue}' for issue in metadata_errors(parser, expected_url, origin))
+        image_url = parser.meta.get('og:image')
+        if image_url and not (SITE_DIR / unquote(urlsplit(image_url).path).removeprefix(config['baseurl']).lstrip('/')).is_file():
+            errors.append(f'missing Open Graph image in {page.relative_to(SITE_DIR)}')
         for attribute, raw_url in parser.targets:
             target = local_target(page, raw_url)
             if target is not None and not target.is_file():

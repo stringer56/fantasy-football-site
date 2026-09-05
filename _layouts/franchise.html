@@ -28,9 +28,11 @@ layout: default
             {% endfor %}
           </div>
           {% if verified_titles.size > 0 %}<div class="franchise-honors" aria-label="Verified championships">{% for title in verified_titles %}<a href="{{ title.season_path | relative_url }}">{{ title.year }} Champion <span aria-hidden="true">↗</span></a>{% endfor %}</div>{% endif %}
+          {% if verified_titles.size > 0 %}<a class="text-link" href="{{ '/cup/' | relative_url }}">Brew Crew Cup history →</a>{% endif %}
+          {% if franchise.franchise_id == 'albany-kneelers' %}<p class="franchise-art-note" id="archived-helmet-note">Featuring the archived Albany Kneelers helmet.</p>{% endif %}
         </div>
         <figure class="franchise-identity">
-          <img src="{{ branding.identity_image | relative_url }}" alt="{{ branding.identity_alt | escape }}" fetchpriority="high">
+          <img src="{{ branding.identity_image | relative_url }}" alt="{{ branding.identity_alt | escape }}"{% if franchise.franchise_id == 'albany-kneelers' %} aria-describedby="archived-helmet-note"{% endif %} fetchpriority="high">
         </figure>
       </div>
     </header>

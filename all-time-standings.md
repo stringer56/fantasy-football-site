@@ -2,18 +2,18 @@
 layout: default
 title: All-Time Franchise Standings
 permalink: /all-time-standings/
-description: Canonical Road to Glory franchise standings for the verified 2021–2025 league archive.
+description: Road to Glory franchise standings across the verified 2021–2025 league archive.
 ---
 
 {% assign career = site.data.generated.records.franchise_career %}
 
-{% include page-hero.html eyebrow="Verified League History — 2021–2025" title="All-Time Franchise Standings" description="Every historical team name rolls into one canonical franchise record. The default order is win percentage, then wins, then points for." compact=true %}
+{% include page-hero.html eyebrow="Verified League History — 2021–2025" title="All-Time Franchise Standings" description="Five seasons of franchise results. Former names stay with the same team's record." compact=true %}
 
 <nav class="records-jump" aria-label="Historical statistics sections"><div class="wrap"><a href="{{ '/all-time-standings/' | relative_url }}" aria-current="page">Standings</a><a href="{{ '/head-to-head/' | relative_url }}">Head-to-Head</a><a href="{{ '/records/' | relative_url }}">Record Book</a><a href="{{ '/championships/' | relative_url }}">Championships</a></div></nav>
 
 <section class="shell-content records-section all-time-standings" aria-labelledby="all-time-heading">
   <div class="section-heading">
-    <div><p class="eyebrow">Canonical franchise totals</p><h2 id="all-time-heading">2021–2025 Leaderboard</h2><p>{{ career.ranking_rule }}</p></div>
+    <div><p class="eyebrow">Franchise totals</p><h2 id="all-time-heading">2021–2025 Leaderboard</h2><p>{{ career.ranking_rule }}</p></div>
     <span class="coverage-badge coverage-badge--complete">{{ career.season_level_coverage.label }}</span>
   </div>
   <p class="table-scroll-note">Swipe horizontally to see every category. Select a column heading to reorder the table.</p>

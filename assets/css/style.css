@@ -895,11 +895,6 @@ a:hover { color: var(--navy-900); }
 .draft-notes-grid { display: grid; align-items: start; gap: var(--space-7); grid-template-columns: minmax(17rem, .7fr) minmax(0, 1.3fr); }
 .draft-notes-grid h2 { color: var(--white); }
 .draft-notes-grid ul { display: grid; gap: var(--space-3); margin: 0; padding-left: 1.2rem; color: var(--slate-300); }
-.draft-analysis-hooks { display: grid; gap: var(--space-3); grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.draft-analysis-hooks div { display: grid; min-width: 0; min-height: 8rem; align-content: center; gap: var(--space-1); padding: var(--space-4); border: 1px dashed var(--slate-300); background: var(--slate-100); }
-.draft-analysis-hooks div > span { color: var(--gold-600); font-family: var(--font-display); font-size: 1.5rem; }
-.draft-analysis-hooks strong { color: var(--navy-900); overflow-wrap: anywhere; }
-.draft-analysis-hooks small { color: var(--slate-600); font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; }
 .draft-back-links { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); }
 
 /* Records and leaderboards */
@@ -1183,7 +1178,7 @@ a:hover { color: var(--navy-900); }
 .site-footer__links a { color: var(--slate-300); font-size: .78rem; font-weight: 800; text-decoration: none; }
 .site-footer__links a:hover { color: var(--gold-300); }
 .site-footer__meta { text-align: right; }
-.site-footer__meta span { color: var(--slate-600); }
+.site-footer__meta span { color: var(--slate-300); }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; margin: -1px; padding: 0; border: 0; clip: rect(0, 0, 0, 0); white-space: nowrap; }
 
 /* Responsive layout */
@@ -1239,7 +1234,6 @@ a:hover { color: var(--navy-900); }
   .draft-hero__grid { min-height: auto; grid-template-columns: 1fr; }
   .draft-hero__preview { width: min(100%, 38rem); }
   .draft-order-grid { grid-template-columns: 1fr; }
-  .draft-analysis-hooks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .records-hero__grid { min-height: auto; padding-block: var(--space-7); grid-template-columns: 1fr; }
   .coverage-scorecard { max-width: 40rem; }
   .honor-board-grid { grid-template-columns: 1fr; }
@@ -1328,7 +1322,6 @@ a:hover { color: var(--navy-900); }
   .draft-order-entry__slot { font-size: 2rem; }
   .draft-order-entry img, .draft-order-entry__placeholder { width: 4.75rem; height: 4.75rem; }
   .draft-order-entry > div { padding: var(--space-3); }
-  .draft-analysis-hooks { grid-template-columns: 1fr; }
   .draft-back-links { align-items: start; flex-direction: column; }
   .records-hero h1 { font-size: clamp(3.2rem, 17vw, 5.25rem); }
   .coverage-scorecard { padding: var(--space-5); }

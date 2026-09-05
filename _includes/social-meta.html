@@ -1,0 +1,17 @@
+{%- assign canonical_path = page.canonical_path | default: page.url | replace: 'index.html', '' -%}
+{%- assign social_title = page.title | append: ' | ' | append: site.title -%}
+{%- if page.title == 'Home' -%}{%- assign social_title = site.title -%}{%- endif -%}
+{%- assign social_image = '/assets/img/cup/brew-crew-cup.jpg' -%}
+{%- assign social_alt = 'The Road to Glory FFL Brew Crew Cup trophy' -%}
+{%- if page.franchise_id -%}
+  {%- assign social_franchise = site.data.franchises.franchises | where: 'franchise_id', page.franchise_id | first -%}
+  {%- if social_franchise -%}{%- assign social_image = social_franchise.branding.identity_image -%}{%- assign social_alt = social_franchise.branding.identity_alt -%}{%- endif -%}
+{%- endif -%}
+<link rel="canonical" href="{{ canonical_path | absolute_url }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.title | escape }}">
+<meta property="og:title" content="{{ social_title | escape }}">
+<meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+<meta property="og:url" content="{{ canonical_path | absolute_url }}">
+<meta property="og:image" content="{{ social_image | absolute_url }}">
+<meta property="og:image:alt" content="{{ social_alt | escape }}">

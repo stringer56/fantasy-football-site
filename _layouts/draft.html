@@ -74,7 +74,7 @@ layout: default
           {% for round in round_groups %}
             <details class="draft-round"{% if forloop.first %} open{% endif %}>
               <summary><span>Round {{ round.name }}</span><small>{{ round.items | size }} picks</small></summary>
-              <div class="table-scroll"><table><thead><tr><th scope="col">Pick</th><th scope="col">Player</th><th scope="col">Team</th></tr></thead><tbody>
+              <div class="table-scroll" tabindex="0" role="region" aria-label="{{ draft.year }} round {{ round.name }} picks"><table aria-label="{{ draft.year }} round {{ round.name }} draft picks"><thead><tr><th scope="col">Pick</th><th scope="col">Player</th><th scope="col">Team</th></tr></thead><tbody>
                 {% for pick in round.items %}<tr><td>{{ pick.overall_pick }}</td><td><strong>{{ pick.player_name }}</strong></td><td>{{ pick.historical_team_name }}</td></tr>{% endfor %}
               </tbody></table></div>
             </details>

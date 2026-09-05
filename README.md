@@ -18,9 +18,11 @@ GitHub Pages/Jekyll website for the Road to Glory Fantasy Football League.
 Run the offline parser/news tests:
 
 ```powershell
+python -m compileall -q scripts tests
 python -m unittest discover -s tests -v
 python scripts/validate_public_data.py
 python scripts/validate_repository.py
+python scripts/validate_site_config.py
 python scripts/validate_franchise_data.py
 python scripts/validate_history_data.py
 python scripts/validate_draft_data.py
@@ -33,6 +35,10 @@ python scripts/discover_yahoo_history.py --dry-run --check
 python scripts/validate_yahoo_history_backfill.py
 python scripts/build_historical_metrics.py --check
 python scripts/validate_historical_metrics.py
+python scripts/validate_live_season.py
+python scripts/validate_privacy.py
+python -m pip check
+git diff --check
 ```
 
 Run a GitHub Pages-compatible build when Ruby and Bundler are installed:
@@ -41,10 +47,16 @@ Run a GitHub Pages-compatible build when Ruby and Bundler are installed:
 bundle install
 bundle exec jekyll build
 python scripts/validate_built_site.py
+python scripts/validate_privacy.py --site _site
 ```
 
 The pull-request validation workflow also uploads the rendered `_site` output
 as a short-retention artifact for browser testing before merge.
+
+The final launch-polish review and bounded screenshot procedure are recorded in
+[Launch Review](docs/FINAL_LAUNCH_REVIEW.md). Source image dimensions, page-weight
+limits, and approved-art requests are in the
+[Asset Replacement Wishlist](docs/ASSET_REPLACEMENT_WISHLIST.md).
 
 See [Yahoo Data Pipeline](docs/YAHOO_DATA_PIPELINE.md),
 [Data Schemas](docs/DATA_SCHEMAS.md), and

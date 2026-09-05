@@ -2,8 +2,9 @@
 layout: default
 title: Matchup Picks Have Moved
 permalink: /votes/picks/
-description: Compatibility route for the Road to Glory weekly Matchup Picks.
+canonical_path: /picks/
+description: Find Road to Glory weekly matchup picks and the season leaderboard.
 ---
 
-{% include page-hero.html eyebrow="League votes" title="Matchup Picks Have Moved" description="The weekly picks center now has a shorter league-level address." compact=true %}
+{% include page-hero.html eyebrow="Make the call" title="Weekly Pick’em" description="Find this week's matchups and follow the season-long prediction race." compact=true %}
 <section class="shell-content vote-section"><a class="button button--gold" href="{{ '/picks/' | relative_url }}">Open Matchup Picks</a></section>

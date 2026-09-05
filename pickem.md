@@ -2,6 +2,7 @@
 layout: default
 title: Pick’em
 permalink: /pickem/
+canonical_path: /picks/
 description: Find the weekly Road to Glory matchup picks and leaderboard.
 ---
 

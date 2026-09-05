@@ -114,6 +114,8 @@
 /* Stadium-led covers retain the complete identity artwork in a separate image panel. */
 .franchise-hero { isolation: isolate; overflow: hidden; }
 .franchise-hero__venue { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .22; z-index: -2; }
+.franchise-hero .text-link { display: inline-block; color: #f0cf74; margin-top: 1rem; }
+.franchise-art-note { color: #c8d3df; font-size: .8rem; margin: 1rem 0 0; }
 .franchise-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #071426 10%, rgb(7 20 38 / 75%) 50%, rgb(7 20 38 / 15%)); pointer-events: none; }
 .franchise-hero__grid { padding-block: 3.5rem; }
 .franchise-identity { height: 25rem; box-shadow: none; padding: 1rem; border: 0; background: #fbfaf6; border-bottom: 6px solid var(--team-accent, var(--gold-500)); }

@@ -8,7 +8,7 @@ description: Compare verified Road to Glory franchise matchup history from 2021 
 {% assign h2h = site.data.generated.records.head_to_head %}
 {% assign summaries = site.data.generated.records.franchise_career.franchises %}
 
-{% include page-hero.html eyebrow="Verified League History — 2021–2025" title="Head-to-Head" description="Choose two franchises to open the complete verified series. Historical aliases stay consolidated under their canonical teams." compact=true %}
+{% include page-hero.html eyebrow="Verified League History — 2021–2025" title="Head-to-Head" description="Choose two franchises to explore their rivalry, from the first meeting to the latest result." compact=true %}
 
 <nav class="records-jump" aria-label="Historical statistics sections"><div class="wrap"><a href="{{ '/all-time-standings/' | relative_url }}">Standings</a><a href="{{ '/head-to-head/' | relative_url }}" aria-current="page">Head-to-Head</a><a href="{{ '/records/' | relative_url }}">Record Book</a><a href="{{ '/championships/' | relative_url }}">Championships</a></div></nav>
 
