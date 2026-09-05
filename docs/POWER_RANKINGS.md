@@ -18,11 +18,11 @@ ballot. Individual ballots never enter public output.
 ## Preview and finalize
 
 ```powershell
-python scripts/import_power_rankings.py private-vote-imports/power-week-01.csv --season 2026 --week 1 --deadline 2026-09-10T19:00:00-04:00
-python scripts/finalize_power_rankings.py private-vote-imports/power-week-01.csv --season 2026 --week 1 --deadline 2026-09-10T19:00:00-04:00
+python scripts/import_power_rankings.py private-vote-imports/power-week-01.csv --season 2026 --week 1 --deadline <ANNOUNCED-ISO-DEADLINE>
+python scripts/finalize_power_rankings.py private-vote-imports/power-week-01.csv --season 2026 --week 1 --deadline <ANNOUNCED-ISO-DEADLINE> --published-at <ACTUAL-ISO-TIME>
 ```
 
-Preview writes nothing and reports row-level rejections, duplicates, and
+Preview writes only an ignored private context-bound receipt and reports row-level rejections, duplicates, and
 missing managers. Finalize writes
 `_data/power_rankings/2026/week-01.json`, refuses a different overwrite, and
 regenerates the current aggregate plus history. A reviewed correction requires

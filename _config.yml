@@ -8,6 +8,14 @@ timezone: America/New_York
 exclude:
   - tests
   - vendor
+  - private-vote-imports
+  - scripts
+  - tools
+  - docs
+  - AGENTS.md
+  - README.md
+  - requirements.txt
+  - requirements-dev.txt
 collections:
   franchises:
     output: true

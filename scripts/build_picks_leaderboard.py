@@ -421,6 +421,9 @@ def persist_finalized_week(
             and week.get("state") == "final"
             and existing.get("aggregate_fingerprint") == week.get("aggregate_fingerprint")
             and existing.get("ballots_counted") == week.get("ballots_counted")
+            and existing.get("lock_at") == week.get("lock_at")
+            and existing.get("results_visibility") == week.get("results_visibility")
+            and existing.get("manager_picks_visibility") == week.get("manager_picks_visibility")
         )
         if not scoring_update and not override:
             raise ValueError(f"refusing to overwrite finalized Pick'em selections: {path}")
@@ -476,6 +479,8 @@ def main() -> None:
     parser.add_argument("--deadline", help="ISO-8601 voting deadline override")
     parser.add_argument("--output", type=Path, default=OUTPUT_PATH)
     args = parser.parse_args()
+    if args.input:
+        raise SystemExit("Raw imports cannot publish here; use import_pickem.py then finalize_pickem.py")
     imported = load_import(args.input) if args.input else None
     site_data = load_yaml("site.yml")
     season = int((imported or {}).get("season") or site_data["current_season"])
@@ -497,6 +502,8 @@ def main() -> None:
         deadline=args.deadline,
         community_data=load_yaml("community.yml"),
     )
+    if payload.get("current_week"):
+        payload["current_week"].pop("selection_totals", None)
     write_json(args.output, payload)
     print(f"Wrote {args.output}: {len(payload['leaderboard'])} managers in the Picks Leaderboard")
 

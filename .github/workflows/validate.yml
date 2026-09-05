@@ -62,6 +62,8 @@ jobs:
           python scripts/validate_recaps.py
           python scripts/validate_yahoo_history_backfill.py
           python scripts/validate_historical_metrics.py
+          python scripts/validate_live_season.py
+          python scripts/validate_privacy.py
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -73,7 +75,10 @@ jobs:
         run: bundle exec jekyll build
 
       - name: Validate rendered site
-        run: python scripts/validate_built_site.py
+        run: |
+          python scripts/validate_built_site.py
+          python scripts/validate_privacy.py --site _site
+          for path in assets/js/*.js; do node --check "$path"; done
 
       - name: Upload rendered site preview
         uses: actions/upload-artifact@v4

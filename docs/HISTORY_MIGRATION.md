@@ -184,8 +184,6 @@ internal asset/link target.
 
 ## Recommended next milestone
 
-With all five completed league seasons normalized, build the all-time statistical
-engine across the established coverage windows: franchise career records and
-playoff history from verified 2021–2025 season outcomes, plus head-to-head,
-margins, weekly streaks, and scoring leaderboards from verified 2022–2025 weekly
-matchups. Keep every output labelled by its actual evidence window.
+The all-time engine is implemented in PR #21, including all 2021–2025 weekly
+archives. Do not rebuild it as a new milestone. See `docs/ROADMAP.md` for the
+reconciled backlog; immediate priority is safe Week 1 community activation.

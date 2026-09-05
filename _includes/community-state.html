@@ -1,0 +1,7 @@
+{%- case include.state -%}
+{%- when 'open' -%}Open
+{%- when 'locked' -%}Locked
+{%- when 'final', 'finalized' -%}Finalized
+{%- when 'archived', 'closed' -%}Archived
+{%- else -%}Opens soon
+{%- endcase -%}

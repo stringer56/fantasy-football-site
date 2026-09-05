@@ -7,11 +7,11 @@ import json
 from pathlib import Path
 
 try:
-    from . import build_power_rankings
+    from . import build_power_rankings, voting_common
     from .import_power_rankings import preview_import, print_preview
     from .voting_common import active_franchises, file_fingerprint, load_import, load_preview_receipt, load_yaml, write_json
 except ImportError:
-    import build_power_rankings
+    import build_power_rankings, voting_common
     from import_power_rankings import preview_import, print_preview
     from voting_common import active_franchises, file_fingerprint, load_import, load_preview_receipt, load_yaml, write_json
 
@@ -28,9 +28,12 @@ def main() -> None:
     parser.add_argument("--override-reason", help="Required audit reason with --override-finalized")
     args = parser.parse_args()
 
-    receipt = load_preview_receipt("power-rankings", args.season, args.week)
-    if not receipt or receipt.get("input_sha256") != file_fingerprint(args.input):
-        raise SystemExit("Nothing finalized: run the preview command for this exact import first")
+    if args.deadline is None:
+        args.deadline = (load_yaml("community.yml").get("power_rankings") or {}).get("closes_at")
+    if not args.deadline:
+        raise SystemExit("A ranking deadline is required")
+    voting_common.require_review("power-rankings", args.season, args.week, args.input, args.deadline)
+    voting_common.require_lock_reached(args.deadline, args.published_at)
 
     payload, report = preview_import(
         load_import(args.input), season=args.season, week=args.week, deadline=args.deadline

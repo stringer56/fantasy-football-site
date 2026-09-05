@@ -6,11 +6,11 @@ import argparse
 from pathlib import Path
 
 try:
-    from . import build_picks_leaderboard
+    from . import build_picks_leaderboard, voting_common
     from .import_pickem import load_current_sources, preview_import, print_preview
     from .voting_common import file_fingerprint, load_import, load_preview_receipt, load_yaml, owner_index, write_json
 except ImportError:
-    import build_picks_leaderboard
+    import build_picks_leaderboard, voting_common
     from import_pickem import load_current_sources, preview_import, print_preview
     from voting_common import file_fingerprint, load_import, load_preview_receipt, load_yaml, owner_index, write_json
 
@@ -29,9 +29,19 @@ def main() -> None:
     parser.add_argument("--override-reason", help="Required audit reason with --override-finalized")
     args = parser.parse_args()
 
-    receipt = load_preview_receipt("pickem", args.season, args.week)
-    if not receipt or receipt.get("input_sha256") != file_fingerprint(args.input):
-        raise SystemExit("Nothing finalized: run the preview command for this exact import first")
+    config = (load_yaml("community.yml").get("pickem") or {})
+    if config.get("lock_at") != args.lock_at or config.get("lock_week") != args.week:
+        raise SystemExit("Nothing finalized: lock/week must match canonical community configuration")
+    voting_common.require_review("pickem", args.season, args.week, args.input, args.lock_at)
+    voting_common.require_lock_reached(args.lock_at, args.published_at)
+    # Keep the private source binding out of public archives (even hashes of ballots).
+    binding_path = voting_common.PRIVATE_STATE_ROOT / f"{args.season}-week-{args.week:02d}-pickem-locked.json"
+    archive_path = build_picks_leaderboard.pick_archive_path(args.season, args.week)
+    if archive_path.exists() and not args.override_finalized:
+        import json
+        binding = json.loads(binding_path.read_text(encoding="utf-8")) if binding_path.exists() else {}
+        if binding.get("input_sha256") != file_fingerprint(args.input):
+            raise SystemExit("Nothing finalized: locked private export changed or binding missing; reviewed override required")
 
     imported = load_import(args.input)
     preview, report = preview_import(
@@ -79,6 +89,7 @@ def main() -> None:
     path = build_picks_leaderboard.persist_finalized_week(
         week_payload, override=args.override_finalized, override_reason=args.override_reason
     )
+    write_json(binding_path, {"input_sha256": file_fingerprint(args.input)})
     week_payload = next(
         item for item in build_picks_leaderboard.load_finalized_weeks(args.season)
         if item["week"] == args.week

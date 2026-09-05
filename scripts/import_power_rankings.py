@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any
 
 try:
-    from . import build_power_rankings
+    from . import build_power_rankings, voting_common
     from .voting_common import (
         BallotError,
         active_franchises,
@@ -19,7 +19,7 @@ try:
         write_preview_receipt,
     )
 except ImportError:
-    import build_power_rankings
+    import build_power_rankings, voting_common
     from voting_common import (
         BallotError,
         active_franchises,
@@ -130,6 +130,10 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+    if args.deadline is None:
+        args.deadline = (load_yaml("community.yml").get("power_rankings") or {}).get("closes_at")
+    if not args.deadline:
+        raise SystemExit("Configure the ranking deadline or supply --deadline before preview")
     payload, report = preview_import(
         load_import(args.input), season=args.season, week=args.week, deadline=args.deadline
     )
@@ -145,6 +149,8 @@ def main() -> None:
         rejected=len(report["rejected_ballots"]),
         superseded=len(report["superseded_ballots"]),
         missing=len(report["missing_managers"]), warnings=warnings,
+        context_sha256=voting_common.review_context("power-rankings", args.season, args.week, args.deadline),
+        deadline=args.deadline,
     )
     print(f"Private preview receipt: {receipt.relative_to(build_power_rankings.ROOT)}")
 

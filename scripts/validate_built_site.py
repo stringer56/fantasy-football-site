@@ -29,6 +29,7 @@ EXPECTED_ROUTES = (
     "/votes/",
     "/power-rankings/",
     "/picks/",
+    "/pickem/",
     "/votes/power-rankings/",
     "/votes/picks/",
     "/retired/",

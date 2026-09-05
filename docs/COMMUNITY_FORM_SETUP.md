@@ -1,162 +1,211 @@
 # Community Google Forms Setup
 
-This guide prepares the three free public Google Forms used by Road to Glory. The forms collect responses; GitHub Pages remains the website. The linked Sheets and raw CSV files stay private.
+September 2026: no real Forms or ballots exist. Blank responder URLs in
+`_data/community.yml` are intentional. Google Forms is free external collection;
+GitHub Pages never accepts submissions or accesses private Google data.
 
-No live form URLs have been supplied. The blank values in `_data/community.yml` are therefore intentional. Never invent a Form ID.
+## Optional automatic creation (manual instructions below remain supported)
 
-## Before you begin
+1. Open `script.google.com` in Joe's Google account. Click **New project**.
+2. Name it **Road to Glory Community Forms**. Replace **Code.gs** with the entire
+   repository file `tools/create_community_forms.gs`. Save.
+3. Select **createCommunityForms**, then **Run**. Review Google's permissions.
+   This personal script uses Forms, its own script properties, and Drive for
+   optional private CSV exports. Authorize only the reviewed copy in your account;
+   Google may display an unverified-personal-script warning.
+4. **Execution log** prints only PUBLIC RESPONDER URLs. No editor/Sheet links.
+   The three Forms stay unpublished/closed. Find editable Forms in Google Forms home.
+5. League Votes intentionally has no poll choices. Populate `vote_id` and
+   `option_id` from one real poll in `_data/votes.yml` before publishing.
+   Do not publish the empty shell or invent placeholder choices.
+6. Reruns in the same script project reuse saved Form IDs; they do not change
+   existing questions/responses. If setup fails partway, inspect and complete
+   that Form manually. Creating another script project would create duplicates.
+7. Optionally select **Responses → Link to Sheets → Create a new spreadsheet**.
+   Keep Sheet sharing **Restricted**. Never paste a Sheet URL into GitHub.
+8. Review all questions and privacy settings below, then publish deliberately.
 
-1. Sign in to the commissioner Google account and open Google Forms.
-2. Create a blank form. In **Settings**, turn off email collection and any option that exposes response summaries.
-3. Do not require sign-in. Do not ask for email, Yahoo account, or any personal data.
-4. Use the exact question titles below. Make every listed question required.
-5. On **Responses**, choose **Link to Sheets** → **Create a new spreadsheet**. Keep that Sheet private.
-6. Use public responder links only (`https://docs.google.com/forms/d/e/.../viewform`). Never commit edit, prefilled, Sheet, or response-edit links.
+This helper is generated locally with `python scripts/build_community_forms.py`
+from canonical owners/franchises and the verified current slate. Regenerate and
+review before later weeks; there is no automatic rollover. It contains no secrets,
+network forwarding, repository access, billing setup or deployed server. It has
+not been run in Joe's Google account; an account-policy smoke test is still required.
 
-## 1. Weekly Power Rankings
+## Manual setup and common settings
 
-Title the form `Road to Glory — Weekly Power Rankings`.
+1. Open Google Forms and click **Blank form**. Use the exact feature title below.
+2. In **Settings → Responses**, turn email collection OFF and **Limit to 1 response**
+   OFF (that setting requires Google sign-in). Disable response editing and
+   respondent result summaries. Do not ask for any other personal information.
+3. Use **+** to add each question. Enter the exact lowercase title, choose the
+   specified type, enter choices, and turn **Required** ON.
+4. For the `owner_id` dropdown use these exact canonical choices:
 
-Add these questions in order:
+| Choice | Manager |
+|---|---|
+| `james-beast` | James “Beast” |
+| `mccall` | McCall |
+| `forrest-f` | Forrest F. |
+| `nate` | Nate “Dogg” |
+| `waz` | Waz |
+| `ryan-d` | Ryan D. |
+| `finn-d` | Finn D. |
+| `jack-d` | Jack D. |
+| `tj` | TJ |
+| `terry` | Terry |
+| `joe` | Joe |
+| `coles` | Coles |
 
-| Exact question title | Type | Required | Validation |
-|---|---|---:|---|
-| `Manager ID` | Dropdown | Yes | The 12 canonical `owner_id` values from `_data/owners.yml` |
-| `Season` | Dropdown | Yes | `2026` only |
-| `Week` | Dropdown | Yes | Open week only |
-| `Rank 1` through `Rank 12` | Dropdown | Yes | The 12 canonical `franchise_id` values from `_data/franchises.yml` |
+Manager IDs are self-asserted, not authenticated. Latest valid response per ID
+at or before the deadline counts once. A later invalid response does not replace
+it. Joe must resolve disputed/impersonated identities privately.
 
-Google Forms cannot enforce that every franchise is used once across 12 dropdowns. The importer rejects duplicates, omissions, unknown teams, wrong weeks, unknown managers, malformed timestamps, and responses after the deadline.
+5. Keep each Form unpublished during setup. After review, **Publish** with
+   responder access **Anyone with the link**, if account policy permits.
+6. Test the responder link signed out/in a private browser WITHOUT submitting a
+   fake ballot. Copy the responder link, not the address bar's `/edit` link.
+   Expanded `https://docs.google.com/forms/d/e/.../viewform` links are preferred.
+7. Manually stop accepting responses at the announced deadline. A static website
+   cannot close Google Forms.
 
-Download the response Sheet as CSV. Make a private working copy and rename the columns exactly:
+## 1. Road to Glory FFL — Weekly Power Rankings
 
-```text
-owner_id,submitted_at,season,week,rank_1,rank_2,rank_3,rank_4,rank_5,rank_6,rank_7,rank_8,rank_9,rank_10,rank_11,rank_12
-```
+Every question is required:
 
-Save it as `private-vote-imports/power-week-01.csv`. Preview:
-
-```powershell
-python scripts/import_power_rankings.py private-vote-imports/power-week-01.csv --season 2026 --week 1 --deadline 2026-09-10T20:15:00-04:00
-python scripts/community_week.py --season 2026 --week 1
-```
-
-After review, finalize with a real commissioner publication time:
-
-```powershell
-python scripts/finalize_power_rankings.py private-vote-imports/power-week-01.csv --season 2026 --week 1 --deadline 2026-09-10T20:15:00-04:00 --published-at 2026-09-10T20:20:00-04:00
-```
-
-Paste the public responder link into `power_rankings.form_url` in `_data/community.yml`, and set the status and close time when the window opens. Week 1 has no previous rank or movement. Those fields begin only after a second finalized snapshot.
-
-## 2. Weekly Matchup Pick’em
-
-Title the form `Road to Glory — Weekly Matchup Pick’em`.
-
-Add:
-
-| Exact question title | Type | Required | Validation |
-|---|---|---:|---|
-| `Manager ID` | Dropdown | Yes | Canonical active `owner_id` values |
-| `Season` | Dropdown | Yes | `2026` only |
-| `Week` | Dropdown | Yes | Open week only |
-| One question per matchup | Multiple choice | Yes | The two participating canonical `franchise_id` values |
-
-The exact Week 1 matchup question titles/CSV headers are:
-
-```text
-2026-week-01-buffalo-bravado-vs-van-cortlant-rangers
-2026-week-01-albany-kneelers-vs-turnbull-acs
-2026-week-01-ayahuasca-rush-vs-vegas-vandals
-2026-week-01-crazy-wazs-team-vs-north-town-ninnyhammers
-2026-week-01-greendale-human-beings-vs-new-jersey-giants
-2026-week-01-baseball-furies-vs-maine-moose
-```
-
-Confirm the current canonical slate with a preview before opening the Form. The sanitized CSV begins:
-
-```text
-owner_id,submitted_at,season,week,<one stable matchup_id column for every matchup>
-```
-
-Save it as `private-vote-imports/picks-week-01.csv`. Preview and check status:
-
-```powershell
-python scripts/import_pickem.py private-vote-imports/picks-week-01.csv --season 2026 --week 1 --deadline 2026-09-10T20:15:00-04:00
-python scripts/community_week.py --season 2026 --week 1
-```
-
-Finalize after the announced whole-slate lock:
-
-```powershell
-python scripts/finalize_pickem.py private-vote-imports/picks-week-01.csv --season 2026 --week 1 --lock-at 2026-09-10T20:15:00-04:00 --published-at 2026-09-10T20:20:00-04:00
-```
-
-The timestamp shown is an example of command shape, not the real Week 1 kickoff. Verify the NFL/Yahoo schedule before using it. Paste the public responder link into `pickem.form_url` in `_data/community.yml`.
-
-### Lock policy
-
-- `America/New_York` is authoritative. Every timestamp must include its UTC offset.
-- One whole-slate deadline is set before the earliest NFL kickoff for that fantasy week. Thursday, Sunday, and Monday selections all close together.
-- If kickoff moves before the lock, update the public time, Form description, and command deadline. Stable fantasy matchup IDs do not change merely because kickoff moves.
-- If a game changes after lock, the archive stays locked. Reopening requires an explicit reviewed override.
-- If Yahoo data is unavailable, close the Form manually at the announced time, retain the private export, and wait. Do not finalize or grade against guessed matchups or winners.
-- Before lock, neither individual picks nor aggregate counts are public. After lock, aggregate counts may be published. Individual picks remain private unless the commissioner deliberately uses the existing `--publish-manager-picks` policy.
-- A tied, canceled, or no-contest game is graded only from verified Yahoo status and never becomes an incorrect pick by assumption.
-
-## 3. General League Votes
-
-Title the reusable form `Road to Glory — League Vote`.
-
-Add:
-
-| Exact question title | Type | Required | Validation |
-|---|---|---:|---|
-| `Manager ID` | Dropdown | Yes | Canonical active `owner_id` values |
-| `Poll ID` | Dropdown | Yes | The exact open `vote_id` from `_data/votes.yml` |
-| `Selection` | Multiple choice | Yes | Exact option IDs configured for that poll |
-
-The importer does not support publishing free-text comments. Do not add a comments question to the exported schema. The sanitized CSV headers are exactly:
+| Exact title | Type | Choices |
+|---|---|---|
+| `owner_id` | Dropdown | Manager IDs above |
+| `season` | Dropdown | `2026` only |
+| `week` | Dropdown | `1` only for Week 1 |
+| `rank_1` through `rank_12` | 12 separate Dropdowns | All franchise IDs below |
 
 ```text
-vote_id,owner_id,submitted_at,option_id
+albany-kneelers
+ayahuasca-rush
+baseball-furies
+buffalo-bravado
+crazy-wazs-team
+greendale-human-beings
+maine-moose
+new-jersey-giants
+north-town-ninnyhammers
+turnbull-acs
+van-cortlant-rangers
+vegas-vandals
 ```
 
-Save it as `private-vote-imports/votes-week-01.csv`. Preview first:
+The importer enforces all franchises exactly once; Forms cannot enforce uniqueness
+across dropdowns. Do not substitute a grid: its exported columns differ.
+Scoring is 12 through 1; exact aggregate ties share competition rank.
+Week 1 has no previous rank/movement. Joe must choose the ranking deadline.
+
+English linked-Sheet headers in question order:
+`Timestamp,owner_id,season,week,rank_1,rank_2,rank_3,rank_4,rank_5,rank_6,rank_7,rank_8,rank_9,rank_10,rank_11,rank_12`.
+Google may localize Timestamp. Safe importer headers replace it with
+`submitted_at` **and convert its values to timezone-aware ISO-8601**.
+Column order is immaterial.
+
+## 2. Road to Glory FFL — Weekly Pick'em
+
+Required dropdowns: `owner_id`, `season` (`2026`), `week` (`1`).
+Then these required **Multiple choice** questions:
+
+| Exact question title / CSV header | Exactly two choices |
+|---|---|
+| `2026-week-01-buffalo-bravado-vs-van-cortlant-rangers` | `buffalo-bravado`, `van-cortlant-rangers` |
+| `2026-week-01-albany-kneelers-vs-turnbull-acs` | `albany-kneelers`, `turnbull-acs` |
+| `2026-week-01-ayahuasca-rush-vs-vegas-vandals` | `ayahuasca-rush`, `vegas-vandals` |
+| `2026-week-01-crazy-wazs-team-vs-north-town-ninnyhammers` | `crazy-wazs-team`, `north-town-ninnyhammers` |
+| `2026-week-01-greendale-human-beings-vs-new-jersey-giants` | `greendale-human-beings`, `new-jersey-giants` |
+| `2026-week-01-baseball-furies-vs-maine-moose` | `baseball-furies`, `maine-moose` |
+
+Linked-Sheet headers: `Timestamp,owner_id,season,week`, then these six exact IDs.
+Safe importer headers replace Timestamp with `submitted_at` and convert values.
+Confirm the canonical Yahoo slate still reports Week 1 and six matchups.
+
+### Verified whole-slate lock
+
+`2026-09-09T20:20:00-04:00`, America/New_York. Patriots at Seahawks begins
+Wednesday September 9 at 8:20 PM EDT. Reverified September 5 against the
+[official NFL schedule](https://www.nfl.com/schedules/2026/by-week/week-1) and
+[Patriots broadcast guide](https://www.patriots.com/news/how-to-watch-listen-patriots-at-seahawks-week1).
+Configuration: `pickem.lock_at`, `lock_week: 1`, `lock_timezone: America/New_York`.
+
+All Wednesday/Thursday/Sunday/Monday selections close together at kickoff.
+The established importer accepts timestamps at or before lock. Close the Form
+at that instant. If earliest kickoff moves before lock, update configuration and
+Form description, announce it, and preview again. Fantasy matchup IDs do not
+change with NFL times. After lock, corrections/reopening require explicit review.
+There is no automated postponement/rescheduling model.
+
+No aggregates or private selections publish before lock. After lock only aggregates
+publish by default. Keep individual selections private. Pending games stay ungraded;
+verified tied/no-contest results never become losses. Keep the exact locked CSV
+and private `.community-state` binding for later grading. If Yahoo is unavailable,
+retain the private export and wait; never guess games/winners.
+
+## 3. Road to Glory FFL — League Votes
+
+All required: `owner_id` (**Dropdown**), `vote_id` (**Dropdown**, exact real poll
+ID in `_data/votes.yml`), `option_id` (**Multiple choice**, real option IDs for
+that poll). No comments question and no invented poll.
+
+Configure one poll per reusable Form at a time. Concurrent polls with different
+options need separate Forms and poll-specific URLs.
+Linked-Sheet headers: `Timestamp,owner_id,vote_id,option_id`.
+Safe headers: `submitted_at,owner_id,vote_id,option_id`.
+
+General votes finalize only when YAML status is `closed`, the deadline has passed,
+and a fresh preview is reviewed. Use `after_close` or `hidden` visibility.
+Close both the Form and YAML poll; one does not change the other.
+
+## Safe private CSV export
+
+For helper-created Forms, run **exportPowerCsv**, **exportPicksCsv**, or
+**exportVotesCsv** in the same script project. It reads actual responses,
+uses Google's submission timestamp converted to ISO UTC (`Z`), and creates a
+private Drive CSV. It never logs/shares responses or imports results into the site.
+Download that file to ignored `private-vote-imports/`.
+
+For manual Forms: **Responses → linked Sheet → File → Download → CSV**. Make a
+private working copy, rename Timestamp to `submitted_at`, and convert values
+from the Sheet's declared timezone to ISO-8601, e.g. `2026-09-08T18:30:00-04:00`.
+Do not guess timezone or replace submission time with export time. Ask for help
+with private conversion if uncertain. Other headers already match the importer.
+
+Files: `power-week-01.csv`, `picks-week-01.csv`, `votes-week-01.csv`.
+Never copy raw CSV, email, Sheet/editor URLs or comments into public `_data`.
+No input is needed before real managers respond.
+
+## Configuration, review and archive
+
+Paste real responder URLs into `power_rankings.form_url`, `pickem.form_url`,
+`league_votes.form_url` in `_data/community.yml`. Poll-specific `form_url`
+overrides the reusable general-vote URL. Use lowercase configuration states:
+`unconfigured`, `upcoming`, `open`, `closed`; Pick’em also uses `locked`/`final`.
+Public labels are Opens soon/Open/Locked/Finalized/Archived.
 
 ```powershell
-python scripts/import_vote_results.py --input private-vote-imports/votes-week-01.csv
-```
-
-Only after review, publish the configured public aggregates:
-
-```powershell
-python scripts/import_vote_results.py --input private-vote-imports/votes-week-01.csv --publish
-```
-
-Paste the reusable public responder link into `league_votes.form_url` in `_data/community.yml`. Each poll may instead use its own public `form_url` in `_data/votes.yml`.
-
-## Safe weekly export and archive
-
-1. In the private linked Sheet, choose **File → Download → Comma-separated values (.csv)**.
-2. Remove the Google-generated display headers and use the exact safe headers above. Do not add email, Sheet URL, response ID, edit URL, IP address, or comments.
-3. Save only under ignored `private-vote-imports/`.
-4. Run the importer. It does not publish; it writes a content-hash-only preview receipt under the ignored `.community-state` folder.
-5. Resolve every rejected row. Missing managers are reported as a participation warning.
-6. Run `community_week.py`. A receipt is current only when its SHA-256 matches the current private import.
-7. Finalize explicitly. The public archive contains aggregates and audit metadata, not raw Google responses.
-8. Commit only public generated output and finalized archives. Never force-add `private-vote-imports/`.
-
-Finalized Power Rankings and Pick’em selections cannot be silently replaced. A correction requires `--override-finalized --override-reason "specific reviewed reason"` and a new `--published-at`; the archive records the reason and the fingerprint of the replaced version.
-
-## Configuration check
-
-Run:
-
-```powershell
+python scripts/refresh_community.py
 python scripts/community_week.py --season 2026 --week 1
 python scripts/validate_votes_data.py
-python scripts/validate_public_data.py
+python scripts/validate_privacy.py
 ```
 
-The status command prints only yes/no configuration and operational metadata. It never prints Form URLs, responses, or manager choices.
+See [Weekly Commissioner Checklist](WEEKLY_COMMISSIONER_CHECKLIST.md) for exact
+preview/finalization commands. Previews report accepted/rejected/superseded rows,
+missing managers and aggregate results, writing only an ignored private receipt.
+Changing input, rules, identities, deadline or slate invalidates review. Finalizers
+repeat validation and check publication time. Rejected rows need explicit
+`--allow-rejected` for Power/Pick’em; general polls require zero rejected rows.
+
+Archives: `_data/power_rankings/2026/week-NN.json`,
+`_data/picks/2026/week-NN.json`, `_data/league_votes/2026/POLL-ID.json`.
+Corrections require `--override-finalized --override-reason "public-safe reason"`
+and actual `--published-at`. Audit metadata retains prior public fingerprints;
+Git retains prior versions. CLI guards do not prevent an administrator manually
+editing repository files. Keep private locked inputs backed up for grading.
+
+Google APIs: [FormApp](https://developers.google.com/apps-script/reference/forms/form-app),
+[Form](https://developers.google.com/apps-script/reference/forms/form),
+[FormResponse](https://developers.google.com/apps-script/reference/forms/form-response).

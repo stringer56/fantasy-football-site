@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any
 
 try:
-    from . import build_picks_leaderboard
+    from . import build_picks_leaderboard, voting_common
     from .voting_common import (
         BallotError,
         ROOT,
@@ -20,7 +20,7 @@ try:
         write_preview_receipt,
     )
 except ImportError:
-    import build_picks_leaderboard
+    import build_picks_leaderboard, voting_common
     from voting_common import (
         BallotError,
         ROOT,
@@ -162,6 +162,10 @@ def main() -> None:
     parser.add_argument("--week", type=int, required=True)
     parser.add_argument("--deadline", help="ISO-8601 weekly lock time")
     args = parser.parse_args()
+    if args.deadline is None:
+        args.deadline = (load_yaml("community.yml").get("pickem") or {}).get("lock_at")
+    if not args.deadline:
+        raise SystemExit("Configure the canonical lock or supply --deadline before preview")
     payload, report = preview_import(
         load_import(args.input), season=args.season, week=args.week, deadline=args.deadline
     )
@@ -177,6 +181,8 @@ def main() -> None:
         rejected=len(report["rejected_ballots"]),
         superseded=len(report["superseded_ballots"]),
         missing=len(report["missing_managers"]), warnings=warnings,
+        context_sha256=voting_common.review_context("pickem", args.season, args.week, args.deadline),
+        deadline=args.deadline,
     )
     print(f"Private preview receipt: {receipt.relative_to(ROOT)}")
 

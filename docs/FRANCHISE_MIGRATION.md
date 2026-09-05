@@ -13,7 +13,7 @@ deferred, or intentionally omitted.
 - Local source assets: **31 imported** (14 identities, 14 venues, 3 honors)
 - Individual routes: **14 collection-backed profiles**
 - 2025 Yahoo mappings: **12 verified**
-- 2026 Yahoo mappings: **1 commissioner-confirmed; 11 pending verification**
+- 2026 Yahoo mappings: **12 verified**, as documented in the later Yahoo mapping section below
 
 The canonical `franchise_id` is the durable join key. Slugs, display names,
 aliases, owner names, and Yahoo team keys may change without changing that ID.

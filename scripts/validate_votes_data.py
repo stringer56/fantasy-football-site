@@ -3,9 +3,10 @@
 from __future__ import annotations
 
 import json
+import re
 from numbers import Real
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, parse_qsl
 
 import yaml
 
@@ -43,11 +44,12 @@ def valid_public_form_url(value: object) -> bool:
     if not isinstance(value, str):
         return False
     parsed = urlsplit(value)
-    if parsed.scheme != "https" or "/edit" in parsed.path or "usp=pp_url" in parsed.query:
+    if parsed.scheme != "https" or parsed.fragment:
         return False
-    return parsed.netloc == "forms.gle" or (
-        parsed.netloc == "docs.google.com" and "/forms/" in parsed.path
-    )
+    if any((key, val) not in {("usp", "sf_link"), ("usp", "sharing"), ("usp", "header"), ("embedded", "true")} for key, val in parse_qsl(parsed.query, keep_blank_values=True)):
+        return False
+    return bool((parsed.netloc == "forms.gle" and re.fullmatch(r"/[A-Za-z0-9_-]+", parsed.path) and not parsed.query)
+                or (parsed.netloc == "docs.google.com" and re.fullmatch(r"/forms/d/(?:e/)?[A-Za-z0-9_-]+/viewform", parsed.path)))
 
 
 def main() -> None:
@@ -134,6 +136,16 @@ def main() -> None:
             errors.append(f"{name}: accepted ballots require generated_at provenance")
 
     votes = datasets["votes.json"]
+    archived_polls = {poll["vote_id"]: poll for poll in votes.get("archived_polls", [])}
+    for path in sorted((ROOT / "_data" / "league_votes").glob("*/*.json")):
+        archived_poll = json.loads(path.read_text(encoding="utf-8"))
+        if archived_polls.get(archived_poll.get("vote_id")) != archived_poll:
+            errors.append(f"{path}: finalized poll differs from generated archive")
+        if archived_poll.get("status") != "closed" or not archived_poll.get("audit"):
+            errors.append(f"{path}: finalized poll requires closed status and audit")
+        for event in archived_poll.get("audit") or []:
+            if event.get("action") == "override" and (not event.get("reason") or not event.get("previous_fingerprint")):
+                errors.append(f"{path}: poll override requires reason and prior fingerprint")
     for poll in [*(votes.get("active_polls") or []), *(votes.get("upcoming_polls") or []), *(votes.get("archived_polls") or [])]:
         if poll.get("vote_id") not in poll_ids:
             errors.append(f"votes.json: unknown poll {poll.get('vote_id')!r}")
@@ -158,9 +170,9 @@ def main() -> None:
     for item in rankings:
         if item.get("franchise_id") not in active_franchise_ids:
             errors.append("power_rankings.json: unknown franchise ID")
-        if item.get("ballots_counted") != power.get("ballots_counted"):
+        if item.get("votes_received", item.get("ballots_counted")) != power.get("ballots_counted"):
             errors.append("power_rankings.json: ballot counts disagree")
-        for field in ("rank", "total_points", "first_place_votes", "ballots_counted"):
+        for field in ("rank", "ranking_points", "first_place_votes", "votes_received"):
             if not isinstance(item.get(field), int) or item[field] < 0:
                 errors.append(f"power_rankings.json: {field} must be a non-negative integer")
         if not numeric(item.get("average_rank")):

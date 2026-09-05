@@ -403,8 +403,10 @@ def main() -> None:
     parser.add_argument("--deadline", help="ISO-8601 voting deadline override")
     parser.add_argument("--output", type=Path, default=OUTPUT_PATH)
     args = parser.parse_args()
+    if args.input:
+        raise SystemExit("Raw imports cannot publish here; use import_power_rankings.py then finalize_power_rankings.py")
     imported = load_import(args.input) if args.input else None
-    season = int((imported or {}).get("season") or 2026)
+    season = int((imported or {}).get("season") or load_yaml("site.yml")["current_season"])
     week = int(imported["week"]) if imported and imported.get("week") not in (None, "") else None
     previous = json.loads(args.previous.read_text(encoding="utf-8")) if args.previous else previous_finalized(season, week)
     payload = build_output(
@@ -415,7 +417,11 @@ def main() -> None:
         previous=previous,
         community_data=load_yaml("community.yml"),
     )
+    archives = load_finalized_weeks(season)
+    if archives:
+        payload = {**archives[-1], "voting": payload["voting"]}
     write_json(args.output, payload)
+    write_json(HISTORY_OUTPUT_PATH, build_history(season, active_franchises(load_yaml("franchises.yml")), archives))
     print(f"Wrote {args.output}: {payload['ballots_counted']} accepted manager ballots")
 
 

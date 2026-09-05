@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import copy
+from datetime import datetime, timezone
 import json
 import tempfile
 import unittest
@@ -155,7 +156,7 @@ class CommunityOperationsTests(unittest.TestCase):
             (root / "_data" / "votes.yml").write_text("schema_version: 1\npolls: []\n", encoding="utf-8")
             (root / "_data" / "generated" / "matchups.json").write_text('{"week": 1}\n', encoding="utf-8")
             (root / "_data" / "generated" / "manifest.json").write_text('{"status":"ready","season":2026,"source_update_timestamp":"2026-09-01T10:00:00-04:00"}\n', encoding="utf-8")
-            status = community_week.build_status(root=root, season=2026, week=1)
+            status = community_week.build_status(root=root, season=2026, week=1, now=datetime(2026, 9, 1, 15, tzinfo=timezone.utc))
             self.assertFalse(status["features"]["power-rankings"]["form_configured"])
             self.assertTrue(status["features"]["pickem"]["form_configured"])
             self.assertFalse(status["features"]["league-votes"]["form_configured"])

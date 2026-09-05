@@ -6,7 +6,7 @@ All raw exports stay in ignored `private-vote-imports/`. Replace Week 1 and time
 
 - Confirm Yahoo freshness and feature states: `python scripts/community_week.py --season 2026 --week 1`
 - Verify the slate, then update the Pick’em Form’s stable matchup-ID questions.
-- Open only the intended Forms; set polished `OPEN` status and public responder URLs in `_data/community.yml`.
+- Open only the intended Forms; set lowercase `open` status and public responder URLs in `_data/community.yml`.
 - Announce the whole-slate Pick’em lock in `America/New_York` with an explicit offset.
 
 ## Before games
@@ -26,11 +26,18 @@ All raw exports stay in ignored `private-vote-imports/`. Replace Week 1 and time
 ## Power Rankings / league polls
 
 - Finalize Power Rankings: `python scripts/finalize_power_rankings.py private-vote-imports/power-week-01.csv --season 2026 --week 1 --deadline <ISO-TIME> --published-at <ISO-TIME>`
-- Publish reviewed general-vote aggregates: `python scripts/import_vote_results.py --input private-vote-imports/votes-week-01.csv --publish`
+- Close the real poll in `_data/votes.yml`, preview again, then publish: `python scripts/import_vote_results.py --input private-vote-imports/votes-week-01.csv --publish --published-at <ISO-TIME>`
 
 ## After Yahoo results finalize
 
 - Refresh Yahoo data, confirm all winners are verified, then run the same Pick’em finalization command to grade the locked archive.
-- Confirm weekly winners and season leaderboard, then mark the public state `FINALIZED`/`ARCHIVED` as appropriate.
+- Confirm weekly winners and season leaderboard; generated `final` results display as Finalized. Do not manually rewrite archives.
+- Refresh public modules: `python scripts/refresh_community.py`, then run `python scripts/validate_privacy.py`.
 - Run the full validators and Jekyll build before pushing.
 - If a finalized archive truly needs correction, use `--override-finalized --override-reason "specific reviewed reason"` and a new publication time. Never edit it silently.
+
+Week 1 lock is **Wednesday September 9, 2026, 8:20 PM Eastern**:
+`2026-09-09T20:20:00-04:00`. Use it for Pick’em preview and `--lock-at`.
+Replace `<ISO-TIME>` publication values with the actual current timezone-aware
+time, not a future timestamp. Power Rankings needs Joe's separately chosen deadline.
+Keep the exact locked private CSV and `.community-state` binding backed up for grading.

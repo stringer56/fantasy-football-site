@@ -10,7 +10,9 @@ power_rankings:
 pickem:
   status: unconfigured
   form_url:
-  lock_at:
+  lock_at: "2026-09-09T20:20:00-04:00"
+  lock_timezone: America/New_York
+  lock_week: 1
   results_visibility: after_lock
   manager_picks_visibility: private
 
@@ -19,6 +21,7 @@ league_votes:
   form_url:
 
 notes:
+  - Week 1 whole-slate lock verified September 5, 2026 against the NFL Week 1 schedule and Patriots broadcast guide; Patriots at Seahawks starts Wednesday September 9 at 8:20 PM EDT.
   - Only public Google Forms responder URLs belong in this file.
   - Private Sheet, form-editor, response-edit, account, and credential values are prohibited.
   - A blank form_url is an intentional unconfigured state; never invent a Google Form ID.
