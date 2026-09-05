@@ -3,8 +3,10 @@ from __future__ import annotations
 import json
 import pathlib
 import sys
+import tempfile
 import unittest
 from unittest.mock import Mock, patch
+import yaml
 
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -39,6 +41,37 @@ def fixture() -> dict:
 
 
 class YahooHistoryDiscoveryTests(unittest.TestCase):
+    def test_updater_keeps_live_diagnostics_outside_committed_baseline(self):
+        workflow = yaml.safe_load((ROOT / '.github/workflows/update.yml').read_text(encoding='utf-8'))
+        steps = workflow['jobs']['update']['steps']
+        probe_step = next(step for step in steps if step['name'] == 'Run sanitized historical discovery probe')
+        upload = next(step for step in steps if step['name'] == 'Upload sanitized discovery report')
+        target = '${{ runner.temp }}/yahoo-history-live-discovery.json'
+        self.assertIn('--output "' + target + '"', probe_step['run'])
+        self.assertNotIn('_data/generated', probe_step['run'])
+        self.assertEqual(upload['with']['path'], target)
+        self.assertEqual(upload['with']['if-no-files-found'], 'error')
+        check = next(step for step in steps if step['name'] == 'Validate and retain sanitized discovery report')
+        self.assertIn('discover_yahoo_history.py --dry-run --check', check['run'])
+
+    def test_live_diagnostic_output_does_not_modify_canonical_manifest(self):
+        import discover_yahoo_history as discovery
+        baseline_before = discovery.OUTPUT.read_bytes()
+        diagnostic = discovery.stopped_authorization_manifest(
+            probes=[{'operation': 'authenticated_user_fantasy_resource', 'success': False,
+                     'http_status': 403, 'error_code': None}],
+            access_status={'authenticated_user_fantasy_resource': 'http_403'},
+            failed_operation='authenticated_user_fantasy_resource',
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            output = pathlib.Path(directory) / 'yahoo-history-live-discovery.json'
+            with patch.object(sys, 'argv', ['discover_yahoo_history.py', '--output', str(output)]), \
+                 patch.object(discovery, 'discover_live', return_value=diagnostic):
+                discovery.main()
+            self.assertEqual(json.loads(output.read_text(encoding='utf-8')), diagnostic)
+            self.assertEqual(validate_safe_output(diagnostic), [])
+        self.assertEqual(discovery.OUTPUT.read_bytes(), baseline_before)
+
     def test_multi_season_game_and_league_discovery(self):
         payload = fixture()
         games = extract_games(payload["games"])

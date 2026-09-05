@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-05T18:16:08Z",
+  "generated_at": "2026-09-03T18:15:00Z",
   "discovery_status": "public_history_verified_api_authorization_blocked",
   "access_status": {
     "oauth_refresh": "succeeded",
@@ -798,9 +798,10 @@
   "missing_renewal_links": [],
   "notes": [
     "Live retest stopped after authenticated_user_fantasy_resource failed, as required by the authorization stop rule.",
-    "No later Yahoo Fantasy resources or historical leagues were enumerated in this run.",
-    "Only HTTP status and an allowlisted Yahoo error code, when available, were retained.",
-    "Official public Yahoo league-history routes independently verify the 2021 through 2026 league identities.",
-    "Public capability probes are preserved separately from the blocked authenticated API probes."
+    "Official public Yahoo league-history routes verify the linked 2021 through 2026 league identities.",
+    "The renew_chain field retains only relationships verified from Yahoo renewal metadata; linked_history_chain records commissioner-linked seasons.",
+    "Public capability values prove representative pages are available, not that every historical row has been imported.",
+    "The 2021 identity is verified, but detailed public routes redirect to Yahoo sign-in; followed requests may then return HTTP 429.",
+    "Only HTTP status and an allowlisted Yahoo error code, when available, were retained."
   ]
 }
