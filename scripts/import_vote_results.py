@@ -11,24 +11,30 @@ try:
     from .voting_common import (
         BallotError,
         ROOT,
+        file_fingerprint,
         generated_at_from_rows,
         load_import,
+        load_preview_receipt,
         load_yaml,
         owner_index,
         parse_deadline,
         select_latest_valid_report,
+        write_preview_receipt,
         write_json,
     )
 except ImportError:
     from voting_common import (
         BallotError,
         ROOT,
+        file_fingerprint,
         generated_at_from_rows,
         load_import,
+        load_preview_receipt,
         load_yaml,
         owner_index,
         parse_deadline,
         select_latest_valid_report,
+        write_preview_receipt,
         write_json,
     )
 
@@ -181,9 +187,36 @@ def main() -> None:
                 print(f"  Row {item['row']}: {item['reason']}")
             missing = [owners[owner_id]["display_name"] for owner_id in report["missing_owner_ids"]]
             print("  Missing managers: " + (", ".join(missing) or "None"))
+        known_ids = {poll["vote_id"] for poll in load_yaml("votes.yml").get("polls") or []}
+        unknown = [row for row in rows if isinstance(row, dict) and row.get("vote_id") not in known_ids]
+        for row in unknown:
+            print(f"  Unknown poll ID rejected: {row.get('vote_id')!r}")
+        missing_count = sum(
+            len(poll_selection_report(poll, [row for row in rows if isinstance(row, dict) and row.get("vote_id") == poll.get("vote_id")], set(owners))["missing_owner_ids"])
+            for poll in load_yaml("votes.yml").get("polls") or []
+            if any(isinstance(row, dict) and row.get("vote_id") == poll.get("vote_id") for row in rows)
+        )
+        warnings = ["rejected rows require review"] if source["rejected_ballots"] else []
+        receipt = None
+        if args.publish:
+            receipt_data = load_preview_receipt("league-votes", int(imported.get("season") or 2026), None)
+            if not receipt_data or receipt_data.get("input_sha256") != file_fingerprint(args.input):
+                raise SystemExit("Nothing published: run the preview command for this exact import first")
+        else:
+            receipt = write_preview_receipt(
+                kind="league-votes", season=int(imported.get("season") or 2026), week=None,
+                input_path=args.input, accepted=source["accepted_ballots"],
+                rejected=source["rejected_ballots"], superseded=source["superseded_ballots"],
+                missing=missing_count, warnings=warnings,
+            )
+        print(f"Finalization permitted: {'YES' if source['accepted_ballots'] and not source['rejected_ballots'] else 'NO'}")
+        if receipt:
+            print(f"Private preview receipt: {receipt.relative_to(ROOT)}")
     if not args.publish:
         print("No files changed. Re-run with --publish after reviewing this summary.")
         return
+    if not source["accepted_ballots"] or source["rejected_ballots"]:
+        raise SystemExit("Nothing published: preview must contain accepted ballots and no rejected rows")
     write_json(args.output, payload)
     print(f"Published {args.output}")
 

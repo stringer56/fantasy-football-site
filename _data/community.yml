@@ -2,18 +2,23 @@ schema_version: 1
 season: 2026
 
 power_rankings:
-  status: upcoming
+  status: unconfigured
   form_url:
   closes_at:
   expected_manager_count: 12
 
 pickem:
-  status: upcoming
+  status: unconfigured
   form_url:
   lock_at:
   results_visibility: after_lock
   manager_picks_visibility: private
 
+league_votes:
+  status: unconfigured
+  form_url:
+
 notes:
   - Only public Google Forms responder URLs belong in this file.
   - Private Sheet, form-editor, response-edit, account, and credential values are prohibited.
+  - A blank form_url is an intentional unconfigured state; never invent a Google Form ID.

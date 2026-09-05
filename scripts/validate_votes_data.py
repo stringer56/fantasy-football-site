@@ -64,10 +64,13 @@ def main() -> None:
         community = community if isinstance(community, dict) else {}
     power_config = community.get("power_rankings") or {}
     pick_config = community.get("pickem") or {}
-    if power_config.get("status") not in {"upcoming", "open", "closed"}:
+    league_vote_config = community.get("league_votes") or {}
+    if power_config.get("status") not in {"unconfigured", "upcoming", "open", "closed"}:
         errors.append("community Power Rankings status is invalid")
-    if pick_config.get("status") not in {"upcoming", "open", "locked", "final", "closed"}:
+    if pick_config.get("status") not in {"unconfigured", "upcoming", "open", "locked", "final", "closed"}:
         errors.append("community Pick’em status is invalid")
+    if league_vote_config.get("status") not in {"unconfigured", "upcoming", "open", "closed"}:
+        errors.append("community League Votes status is invalid")
     if power_config.get("expected_manager_count") != len(owner_ids):
         errors.append("community manager count must match active owners")
     if pick_config.get("results_visibility") not in {"hidden", "after_lock", "public"}:
@@ -77,6 +80,7 @@ def main() -> None:
     for label, value in (
         ("Power Rankings form_url", power_config.get("form_url")),
         ("Pick’em form_url", pick_config.get("form_url")),
+        ("League Votes form_url", league_vote_config.get("form_url")),
     ):
         if not valid_public_form_url(value):
             errors.append(f"community {label} must be a public Google Forms URL")
@@ -209,6 +213,11 @@ def main() -> None:
     for path, expected in zip(archive_paths, archived):
         if json.loads(path.read_text(encoding="utf-8")) != expected:
             errors.append(f"{path}: immutable result differs from generated history")
+        if not expected.get("audit"):
+            errors.append(f"{path}: finalized Power Rankings require audit metadata")
+        for event in expected.get("audit") or []:
+            if event.get("action") == "override" and (not event.get("reason") or not event.get("previous_fingerprint")):
+                errors.append(f"{path}: override audit requires reason and previous fingerprint")
 
     picks = datasets["picks.json"]
     for week in picks.get("weekly_results") or []:
@@ -243,8 +252,9 @@ def main() -> None:
                 if pick.get("result") in {"correct", "incorrect"} and winner_status.get(pick.get("matchup_id")) != "verified":
                     errors.append("picks.json: a pick was scored without a verified Yahoo winner")
     leaderboard = picks.get("leaderboard") or []
-    if [item.get("rank") for item in leaderboard] != list(range(1, len(leaderboard) + 1)):
-        errors.append("picks.json: leaderboard ranks must be unique and ordered")
+    ranks = [item.get("rank") for item in leaderboard]
+    if ranks != sorted(ranks) or any(not isinstance(rank, int) or rank < 1 for rank in ranks):
+        errors.append("picks.json: leaderboard competition ranks must be ordered")
     for item in leaderboard:
         if item.get("owner_id") not in owner_ids:
             errors.append("picks.json: leaderboard contains an unknown manager")
@@ -271,6 +281,11 @@ def main() -> None:
             errors.append(f"{path}: finalized Pick’em week requires ballots")
         if archived_week.get("state") == "locked" and archived_week.get("manager_results"):
             errors.append(f"{path}: locked Pick’em week must not publish manager results")
+        if not archived_week.get("audit"):
+            errors.append(f"{path}: finalized Pick’em week requires audit metadata")
+        for event in archived_week.get("audit") or []:
+            if event.get("action") == "override" and (not event.get("reason") or not event.get("previous_fingerprint")):
+                errors.append(f"{path}: override audit requires reason and previous fingerprint")
 
     if errors:
         raise SystemExit("Voting validation failed:\n- " + "\n- ".join(errors))

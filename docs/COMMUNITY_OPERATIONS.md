@@ -1,5 +1,20 @@
 # 2026 Community Operations
 
+For first-time Google Forms creation and exact response headers, use `docs/COMMUNITY_FORM_SETUP.md`. For the short recurring routine, use `docs/WEEKLY_COMMISSIONER_CHECKLIST.md`.
+
+The status command reports the current Yahoo week and freshness, all three Form configuration states, pending private imports, content-matched preview receipts, finalization permission, archive states, and open league polls. It never prints Form URLs or response contents.
+
+Preview commands write only a SHA-256 and counts to ignored `private-vote-imports/.community-state/`. Changing a source file makes its receipt stale. Finalization requires `--published-at`; a correction requires `--override-finalized --override-reason "reviewed explanation"` and records the previous archive fingerprint.
+
+## Privacy go-live review
+
+- Public configuration contains responder links only; Google Sheet, editor, prefilled, response-edit, and account links are rejected.
+- Forms do not require email addresses or Google sign-in.
+- Raw CSV exports and preview receipts stay in ignored `private-vote-imports/`, never public `_data`.
+- Pick choices and aggregates remain private before lock. Individual picks remain private after lock unless the existing explicit publication option is deliberately selected.
+- Free-text comments are outside the supported import schema and cannot be published accidentally.
+- Community output contains no credentials, OAuth values, Yahoo account identifiers, or private response contents.
+
 This is the commissioner runbook for Power Rankings, weekly Pick’em, and
 general league polls. All commands run from the repository root. Raw Form and
 Sheet data stays private and ignored by Git.

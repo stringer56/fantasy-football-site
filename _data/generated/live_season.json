@@ -2893,7 +2893,7 @@
   },
   "power_rankings": {
     "status": "unavailable",
-    "voting_status": "upcoming",
+    "voting_status": "unconfigured",
     "form_url": null,
     "closes_at": null,
     "week": null,
@@ -2903,7 +2903,7 @@
   },
   "picks": {
     "status": "ready",
-    "state": "upcoming",
+    "state": "unconfigured",
     "week": 1,
     "form_url": null,
     "lock_at": null,

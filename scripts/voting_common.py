@@ -13,8 +13,9 @@ import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
+PRIVATE_STATE_ROOT = ROOT / "private-vote-imports" / ".community-state"
 FORBIDDEN_VOTE_KEYS = {
-    "account_id", "auth_token", "edit_url", "email", "email_address",
+    "account_id", "auth_token", "comment", "comments", "edit_url", "email", "email_address",
     "form_edit_url", "google_user_id", "ip", "ip_address", "invitation_url",
     "prefilled_url", "response_id", "response_url", "sheet_id", "sheet_url",
     "spreadsheet_id", "spreadsheet_url",
@@ -134,6 +135,56 @@ def public_aggregate_fingerprint(value: Any) -> str:
     """Hash only a public aggregate, never individual private selections."""
     encoded = json.dumps(value, sort_keys=True, separators=(",", ":")).encode("utf-8")
     return hashlib.sha256(encoded).hexdigest()
+
+
+def file_fingerprint(path: Path) -> str:
+    """Hash a private import without retaining or exposing its contents."""
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def preview_receipt_path(kind: str, season: int, week: int | None) -> Path:
+    suffix = f"week-{week:02d}" if isinstance(week, int) else "general"
+    return PRIVATE_STATE_ROOT / f"{season}-{suffix}-{kind}.json"
+
+
+def write_preview_receipt(
+    *, kind: str, season: int, week: int | None, input_path: Path,
+    accepted: int, rejected: int, superseded: int, missing: int,
+    warnings: list[str] | None = None,
+) -> Path:
+    """Persist privacy-safe preview metadata beside ignored commissioner imports."""
+    permitted = accepted > 0 and rejected == 0
+    payload = {
+        "schema_version": 1,
+        "kind": kind,
+        "season": season,
+        "week": week,
+        "input_name": input_path.name,
+        "input_sha256": file_fingerprint(input_path),
+        "accepted": accepted,
+        "rejected": rejected,
+        "superseded": superseded,
+        "missing_managers": missing,
+        "warnings": warnings or [],
+        "finalization_permitted": permitted,
+        "review_required": bool(accepted and rejected),
+    }
+    path = preview_receipt_path(kind, season, week)
+    write_json(path, payload)
+    return path
+
+
+def load_preview_receipt(kind: str, season: int, week: int | None) -> dict[str, Any]:
+    path = preview_receipt_path(kind, season, week)
+    if not path.exists():
+        return {}
+    value = json.loads(path.read_text(encoding="utf-8"))
+    return value if isinstance(value, dict) else {}
+
+
+def audit_fingerprint(value: Any) -> str:
+    """Create an audit hash of the previous public archive."""
+    return public_aggregate_fingerprint(value)
 
 
 def write_json(path: Path, payload: dict[str, Any]) -> None:

@@ -505,6 +505,7 @@ def persist_week(payload: dict[str, Any]) -> Path | None:
         "record_watch": payload.get("record_watch", []),
         "power_rankings": payload.get("power_rankings"),
         "picks": payload.get("picks"),
+        "active_vote": payload.get("active_vote"),
     }
     path = GENERATED / "live" / str(payload["season"]) / f"week-{week:02d}.json"
     write_json(path, snapshot)

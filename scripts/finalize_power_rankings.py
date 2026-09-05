@@ -9,11 +9,11 @@ from pathlib import Path
 try:
     from . import build_power_rankings
     from .import_power_rankings import preview_import, print_preview
-    from .voting_common import active_franchises, load_import, load_yaml, write_json
+    from .voting_common import active_franchises, file_fingerprint, load_import, load_preview_receipt, load_yaml, write_json
 except ImportError:
     import build_power_rankings
     from import_power_rankings import preview_import, print_preview
-    from voting_common import active_franchises, load_import, load_yaml, write_json
+    from voting_common import active_franchises, file_fingerprint, load_import, load_preview_receipt, load_yaml, write_json
 
 
 def main() -> None:
@@ -22,9 +22,15 @@ def main() -> None:
     parser.add_argument("--season", type=int, required=True)
     parser.add_argument("--week", type=int, required=True)
     parser.add_argument("--deadline", help="ISO-8601 deadline")
+    parser.add_argument("--published-at", required=True, help="ISO-8601 commissioner publication time")
     parser.add_argument("--allow-rejected", action="store_true")
     parser.add_argument("--override-finalized", action="store_true")
+    parser.add_argument("--override-reason", help="Required audit reason with --override-finalized")
     args = parser.parse_args()
+
+    receipt = load_preview_receipt("power-rankings", args.season, args.week)
+    if not receipt or receipt.get("input_sha256") != file_fingerprint(args.input):
+        raise SystemExit("Nothing finalized: run the preview command for this exact import first")
 
     payload, report = preview_import(
         load_import(args.input), season=args.season, week=args.week, deadline=args.deadline
@@ -51,8 +57,10 @@ def main() -> None:
         payload,
         override=args.override_finalized,
         standings_by_id=standings_by_id,
+        published_at=args.published_at,
+        override_reason=args.override_reason,
     )
-    final = build_power_rankings.finalized_week_payload(payload, standings_by_id)
+    final = json.loads(final_path.read_text(encoding="utf-8"))
     final["voting"] = payload.get("voting") or {}
     write_json(build_power_rankings.OUTPUT_PATH, final)
     history = build_power_rankings.build_history(

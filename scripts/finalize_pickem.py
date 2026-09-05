@@ -8,11 +8,11 @@ from pathlib import Path
 try:
     from . import build_picks_leaderboard
     from .import_pickem import load_current_sources, preview_import, print_preview
-    from .voting_common import load_import, load_yaml, owner_index, write_json
+    from .voting_common import file_fingerprint, load_import, load_preview_receipt, load_yaml, owner_index, write_json
 except ImportError:
     import build_picks_leaderboard
     from import_pickem import load_current_sources, preview_import, print_preview
-    from voting_common import load_import, load_yaml, owner_index, write_json
+    from voting_common import file_fingerprint, load_import, load_preview_receipt, load_yaml, owner_index, write_json
 
 
 def main() -> None:
@@ -21,11 +21,17 @@ def main() -> None:
     parser.add_argument("--season", type=int, required=True)
     parser.add_argument("--week", type=int, required=True)
     parser.add_argument("--lock-at", required=True, help="ISO-8601 weekly lock time")
+    parser.add_argument("--published-at", required=True, help="ISO-8601 commissioner publication time")
     parser.add_argument("--allow-rejected", action="store_true")
     parser.add_argument("--publish-manager-picks", action="store_true")
     parser.add_argument("--hide-aggregates", action="store_true")
     parser.add_argument("--override-finalized", action="store_true")
+    parser.add_argument("--override-reason", help="Required audit reason with --override-finalized")
     args = parser.parse_args()
+
+    receipt = load_preview_receipt("pickem", args.season, args.week)
+    if not receipt or receipt.get("input_sha256") != file_fingerprint(args.input):
+        raise SystemExit("Nothing finalized: run the preview command for this exact import first")
 
     imported = load_import(args.input)
     preview, report = preview_import(
@@ -68,10 +74,14 @@ def main() -> None:
     current["results_visibility"] = "hidden" if args.hide_aggregates else "public_after_lock"
     current["manager_picks_visibility"] = "public" if args.publish_manager_picks else "private"
     week_payload = build_picks_leaderboard.finalized_week_payload(
-        payload, generated_at=payload.get("generated_at"), state=state
+        payload, generated_at=args.published_at, state=state
     )
     path = build_picks_leaderboard.persist_finalized_week(
-        week_payload, override=args.override_finalized
+        week_payload, override=args.override_finalized, override_reason=args.override_reason
+    )
+    week_payload = next(
+        item for item in build_picks_leaderboard.load_finalized_weeks(args.season)
+        if item["week"] == args.week
     )
     archive = build_picks_leaderboard.load_finalized_weeks(args.season)
     owners = owner_index(load_yaml("owners.yml"))

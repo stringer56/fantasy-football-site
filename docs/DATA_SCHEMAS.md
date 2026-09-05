@@ -1,5 +1,12 @@
 # Road to Glory FFL Data Schemas
 
+## Community operations additions
+
+- `_data/community.yml` has safe public responder URL slots for `power_rankings`, `pickem`, and `league_votes`; null means intentionally unconfigured.
+- Ignored preview receipts contain only the import filename, SHA-256, counts, warnings, and finalization readiness. They never contain ballot rows.
+- Finalized Power Rankings and Pick’em weeks include a meaningful `published_at` and an `audit` array. Overrides require a reason and previous archive fingerprint.
+- Picks Leaderboard ranks may repeat for exact ties and use competition ranking; `is_tied` makes the tie explicit.
+
 All committed data is public. Never add credentials, Yahoo account identifiers,
 private invitation data, email addresses, or private league communications.
 

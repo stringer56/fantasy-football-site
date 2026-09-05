@@ -1,5 +1,7 @@
 # 2026 Live Season Hub
 
+Persisted weekly snapshots include the currently relevant public league poll when one exists. Community modules use intentional public states—Upcoming, Open, Locked, Finalized, and Archived—and remain empty instead of fabricating results when Forms or Yahoo are unavailable.
+
 ## Scope and routes
 
 The 2026 experience is the current-season layer above the normalized Yahoo

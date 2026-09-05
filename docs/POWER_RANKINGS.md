@@ -1,5 +1,9 @@
 # 2026 Power Rankings
 
+Week 1 intentionally has no previous rank or movement. Exact aggregate ties use shared competition ranking. A history chart remains optional until more than one finalized weekly snapshot exists.
+
+Commissioner publication requires `--published-at`; overrides require `--override-finalized` plus `--override-reason`. See `docs/COMMUNITY_FORM_SETUP.md` for the exact Form schema.
+
 Power Rankings are manager opinion, never Yahoo standings. Each valid ballot
 ranks all twelve active franchises exactly once. First place earns 12 points,
 second earns 11, through twelfth earning 1. Results sort by ranking points,

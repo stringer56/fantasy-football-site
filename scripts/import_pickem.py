@@ -17,6 +17,7 @@ try:
         owner_index,
         parse_deadline,
         select_latest_valid_report,
+        write_preview_receipt,
     )
 except ImportError:
     import build_picks_leaderboard
@@ -28,6 +29,7 @@ except ImportError:
         owner_index,
         parse_deadline,
         select_latest_valid_report,
+        write_preview_receipt,
     )
 
 
@@ -127,6 +129,25 @@ def print_preview(payload: dict[str, Any], report: dict[str, Any]) -> None:
         print(f"  Row {item['row']}: {item['reason']}")
     print(f"Superseded duplicates: {len(report['superseded_ballots'])}")
     print("Missing managers: " + (", ".join(report["missing_managers"]) or "None"))
+    warnings = []
+    if report["missing_managers"]:
+        warnings.append("manager participation is incomplete")
+    if report["rejected_ballots"]:
+        warnings.append("rejected rows require review")
+    print("Validation warnings: " + ("; ".join(warnings) or "None"))
+    print(f"Finalization permitted: {'YES' if report['valid_ballots'] and not report['rejected_ballots'] else 'NO'}")
+    print("\nPrivate aggregate preview:")
+    for matchup in report["matchups"]:
+        totals = []
+        for participant in matchup["participants"]:
+            count = sum(
+                pick["franchise_id"] == participant["franchise_id"]
+                for ballot in report["_selected_ballots"]
+                for pick in ballot["picks"]
+                if pick["matchup_id"] == matchup["matchup_id"]
+            )
+            totals.append(f"{participant['display_name']}: {count}")
+        print(f"  {matchup['matchup_id']}: " + " · ".join(totals))
     print("\nRequired Google Form response columns:")
     print("  owner_id, submitted_at, season, week")
     for matchup in report["matchups"]:
@@ -145,6 +166,19 @@ def main() -> None:
         load_import(args.input), season=args.season, week=args.week, deadline=args.deadline
     )
     print_preview(payload, report)
+    warnings = []
+    if report["missing_managers"]:
+        warnings.append("manager participation is incomplete")
+    if report["rejected_ballots"]:
+        warnings.append("rejected rows require review")
+    receipt = write_preview_receipt(
+        kind="pickem", season=args.season, week=args.week,
+        input_path=args.input, accepted=report["valid_ballots"],
+        rejected=len(report["rejected_ballots"]),
+        superseded=len(report["superseded_ballots"]),
+        missing=len(report["missing_managers"]), warnings=warnings,
+    )
+    print(f"Private preview receipt: {receipt.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

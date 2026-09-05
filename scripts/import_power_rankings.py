@@ -16,6 +16,7 @@ try:
         owner_index,
         parse_deadline,
         select_latest_valid_report,
+        write_preview_receipt,
     )
 except ImportError:
     import build_power_rankings
@@ -27,6 +28,7 @@ except ImportError:
         owner_index,
         parse_deadline,
         select_latest_valid_report,
+        write_preview_receipt,
     )
 
 
@@ -99,6 +101,14 @@ def print_preview(payload: dict[str, Any], report: dict[str, Any]) -> None:
         print(f"  Row {item['row']}: {item['reason']}")
     print(f"Superseded duplicates: {len(report['superseded_ballots'])}")
     print("Missing managers: " + (", ".join(report["missing_managers"]) or "None"))
+    warnings = []
+    if report["missing_managers"]:
+        warnings.append("manager participation is incomplete")
+    if report["rejected_ballots"]:
+        warnings.append("rejected rows require review")
+    print("Validation warnings: " + ("; ".join(warnings) or "None"))
+    permitted = bool(report["valid_ballots"] and not report["rejected_ballots"])
+    print(f"Finalization permitted: {'YES' if permitted else 'NO'}")
     print("\nPreview ranking:")
     for row in payload["rankings"]:
         tied = "T-" if sum(item["rank"] == row["rank"] for item in payload["rankings"]) > 1 else ""
@@ -124,6 +134,19 @@ def main() -> None:
         load_import(args.input), season=args.season, week=args.week, deadline=args.deadline
     )
     print_preview(payload, report)
+    warnings = []
+    if report["missing_managers"]:
+        warnings.append("manager participation is incomplete")
+    if report["rejected_ballots"]:
+        warnings.append("rejected rows require review")
+    receipt = write_preview_receipt(
+        kind="power-rankings", season=args.season, week=args.week,
+        input_path=args.input, accepted=report["valid_ballots"],
+        rejected=len(report["rejected_ballots"]),
+        superseded=len(report["superseded_ballots"]),
+        missing=len(report["missing_managers"]), warnings=warnings,
+    )
+    print(f"Private preview receipt: {receipt.relative_to(build_power_rankings.ROOT)}")
 
 
 if __name__ == "__main__":
