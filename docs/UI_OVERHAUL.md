@@ -140,4 +140,72 @@ Jekyll is built with the project's pinned Ruby/Bundler setup in GitHub Actions,
 not an unavailable local Ruby installation. The rendered artifact passed the
 44-page link/landmark/data validator and rendered privacy validator.
 
-Final CI and responsive evidence is recorded below after the last review pass.
+## Review inventory and reproducibility
+
+Branch: `codex/ui-overhaul-team-pages`.
+Draft PR: https://github.com/stringer56/fantasy-football-site/pull/27 (do not merge).
+Base after PR #26: `c14d42547f0e1d716323ad9ce24eda898405e0c5`.
+
+Created (6): `_includes/franchise-card.html`, `_includes/franchise-gallery.html`,
+`assets/css/publication.css`, `assets/css/franchises.css`, `docs/UI_OVERHAUL.md`,
+`tests/test_ui_contract.py`.
+
+Modified (9): `_layouts/default.html`, `_layouts/franchise.html`,
+`assets/css/style.css`, `docs/DESIGN_SYSTEM.md`, `index.md`,
+`retired/quahog-stripes.md`, `scripts/audit_browser.py`,
+`scripts/validate_built_site.py`, `teams.md`. No files removed; no images changed.
+
+Six new unit contracts cover explicit community navigation, single preserved
+profile story/gallery, canonical championship badges, approved local assets/colors,
+CSS module loading/unused crest removal, and Quahog franchise continuity.
+Rendered checks additionally enforce original story preservation, all approved
+profile media, gallery anchors and every canonical championship badge.
+
+Reproduce the browser pass with Playwright and an installed Chromium executable:
+
+```text
+python scripts/audit_browser.py --site _site --browser <chromium-executable> --output .cache/reconciliation-ui/review --all-franchises
+```
+
+Screenshots and JSON are local QA evidence only, under the ignored
+`.cache/reconciliation-ui/` tree; not copied to public assets or committed.
+`before/` contains production/Google reference captures. `release-review/` contains
+the final five-width matrix and desktop/390/360 full-page and cover screenshots.
+`interactions/` contains detailed galleries, live cards, career sections, brackets,
+homepage modules and mobile menu captures, including 1024/768 tablet views.
+
+The next UI/content task is a commissioner review of approved current-name identity
+art, starting with Albany's historical Kneelers helmet. Obtain approved replacement
+art only if desired, then make a separate small asset-only update. Dedicated owner
+portraits/biographies also require commissioner-supplied, approved material.
+
+## Final results — September 5, 2026
+
+- UI build: `0a2f852c583388f67fa83044af3b892665da2d3b`.
+- Green CI/Jekyll artifact: https://github.com/stringer56/fantasy-football-site/actions/runs/33990929046
+- Final responsive matrix: **145 checks, zero failures** (29 routes each at
+  1440, 1024, 768, 390 and 360 pixels). Includes all 12 active franchises and both
+  archive profiles (Savage Huns retired franchise; Quahog historical identity).
+- No body overflow, failed internal requests, missing images/alt attributes,
+  stretched/escaped identity images, missing in-page anchors, duplicate H1s,
+  unreadable live-card messages, synthetic content or debug-state leaks detected.
+- **19 additional section/no-JavaScript checks passed**: keyboard Enter/Escape and
+  focus return, all navigation destinations visible without JS on four routes,
+  native weekly disclosure open/close, and detailed section views at all five widths.
+- Every franchise cover was visually reviewed. Desktop/mobile directory, home,
+  community, history, season, records, draft, Cup, gallery and archive screenshots
+  were inspected; tablet story/live-card views were inspected at 1024 and 768.
+- **204 tests passed**, including six new presentation contracts. Complete CI
+  validation, all 13 source validators, generator checks, Python compilation,
+  JavaScript syntax, `pip check`, rendered 44-page link/landmark validation,
+  rendered privacy checks and `git diff --check` passed.
+- All approved helmet/logo images resolve and remain contained without stretching.
+  No Google image hotlinks, historical facts, community/Yahoo logic, OAuth changes,
+  new secrets or private data were introduced. GitHub Pages/Jekyll remains the host
+  and renderer. No new frameworks or runtime service dependencies.
+- Source data, generated data, workflow and JavaScript paths are unchanged.
+  Final documentation-only updates do not alter the reviewed public artifact.
+
+No known blocking rendering defects remain. This is Chromium responsive and
+keyboard QA, not a full assistive-technology or cross-engine certification.
+The redesign remains in a draft PR; production still uses main until approved.
