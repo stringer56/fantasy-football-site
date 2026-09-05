@@ -10,8 +10,48 @@ ROOT = Path(__file__).resolve().parents[1]
 class PublicationContractTests(unittest.TestCase):
     def test_navigation_has_all_community_destinations(self):
         text = (ROOT / '_layouts/default.html').read_text(encoding='utf-8')
+        text += (ROOT / '_includes/community-nav.html').read_text(encoding='utf-8')
         for route in ('/power-rankings/', '/picks/', '/votes/', '/retired/'):
             self.assertIn(f'href="{{{{ \'{route}\' | relative_url }}}}"', text)
+
+    def test_home_reuses_scoreboard_and_canonical_archive_components(self):
+        text = (ROOT / 'index.md').read_text(encoding='utf-8')
+        for component in ('live-matchup-card', 'champion-card', 'record-spotlights'):
+            self.assertIn(f'include {component}.html', text)
+        for section in ('weekly-matchups', 'home-franchises-heading', 'home-history-heading',
+                        'home-records-heading', 'home-draft-heading', 'home-community-heading'):
+            self.assertIn(section, text)
+        self.assertIn('official_yahoo_public_page_fallback', text)
+        self.assertIn('site.data.league.draft_datetime', text)
+
+    def test_archive_cards_preserve_art_and_verified_final(self):
+        text = (ROOT / '_includes/champion-card.html').read_text(encoding='utf-8')
+        for field in ('season.year', 'final.champion_score', 'final.runner_up_score',
+                      'champion.branding.identity_image'):
+            self.assertIn(field, text)
+        self.assertIn('loading="lazy"', text)
+        self.assertIn('include champion-card.html', (ROOT / 'history.md').read_text(encoding='utf-8'))
+
+    def test_no_visitor_facing_setup_or_future_data_hooks(self):
+        paths = ('index.md', 'votes.md', '2026.md', '_layouts/draft.html',
+                 '_includes/live-power-preview.html', '_includes/pickem-preview.html')
+        for path in paths:
+            text = (ROOT / path).read_text(encoding='utf-8')
+            for prohibited in ('Ballot setup is pending', 'ballot setup is pending',
+                               'Data hook reserved', 'Built for a static league site',
+                               'Foundation Ready'):
+                self.assertNotIn(prohibited, text, path)
+
+    def test_responsive_review_includes_six_widths_and_all_routes(self):
+        text = (ROOT / 'scripts/audit_browser.py').read_text(encoding='utf-8')
+        self.assertIn('1440, 1024, 768, 430, 390, 360', text)
+        self.assertIn('--all-routes', text)
+
+    def test_stadium_is_decorative_while_identity_remains_accessible(self):
+        text = (ROOT / '_layouts/franchise.html').read_text(encoding='utf-8')
+        self.assertIn('class="franchise-hero__venue"', text)
+        self.assertIn('alt="{{ branding.identity_alt | escape }}"', text)
+        self.assertIn('Franchise Timeline', text)
 
     def test_profile_story_is_not_duplicated(self):
         text = (ROOT / '_layouts/franchise.html').read_text(encoding='utf-8')

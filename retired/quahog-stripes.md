@@ -5,7 +5,7 @@ permalink: /retired/quahog-stripes/
 description: Preserved profile of the New Jersey Giants franchise's Quahog Stripes identity.
 ---
 
-<header class="franchise-hero"><div class="wrap franchise-hero__grid">
+<header class="franchise-hero"><img class="franchise-hero__venue" src="{{ '/assets/img/franchises/quahog-stripes/venue.jpg' | relative_url }}" alt=""><div class="wrap franchise-hero__grid">
   <div class="franchise-hero__copy"><p class="eyebrow">Historical identity · 2021–2022</p><h1>Quahog Stripes</h1><p class="franchise-hero__lede">The original identity of the franchise now known as the New Jersey Giants.</p><div class="franchise-hero__owners"><span>Coach</span><strong>Jack D.</strong></div><div class="franchise-honors"><a href="{{ '/teams/new-jersey-giants/' | relative_url }}">Follow the franchise to New Jersey →</a></div></div>
   <figure class="franchise-identity"><img src="{{ '/assets/img/franchises/quahog-stripes/identity.jpg' | relative_url }}" alt="White Quahog Stripes football helmet with an orange animal emblem" fetchpriority="high"></figure>
 </div></header>

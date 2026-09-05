@@ -1,11 +1,12 @@
 {% assign card = include.franchise %}
 {% assign card_titles = site.data.champions.champions | where: "champion_franchise_id", card.franchise_id %}
 <article class="franchise-card" style="--team-accent: {{ card.branding.primary_color | default: '#d8aa3d' }}">
+  {% if card.branding.venue_image %}<div class="franchise-card__venue"><img src="{{ card.branding.venue_image | relative_url }}" alt="" loading="lazy"><span>{{ card.profile.home_field }}</span></div>{% endif %}
   <a class="franchise-card__image" href="{{ '/teams/' | append: card.slug | append: '/' | relative_url }}">
     <img src="{{ card.branding.identity_image | relative_url }}" alt="{{ card.branding.identity_alt | escape }}" loading="lazy">
   </a>
   <div class="franchise-card__body">
-    <p class="franchise-card__status">Road to Glory · Active franchise</p>
+    <p class="franchise-card__status">{{ card.profile.location }}</p>
     <h2><a href="{{ '/teams/' | append: card.slug | append: '/' | relative_url }}">{{ card.name }}</a></h2>
     <p class="franchise-card__owner">Coach <strong>{% for owner_id in card.owner_ids %}{% assign owner = site.data.owners.owners | where: "owner_id", owner_id | first %}{% if owner %}{{ owner.display_name }}{% unless forloop.last %}, {% endunless %}{% endif %}{% endfor %}</strong></p>
     <p>{{ card.profile.summary | truncate: 165 }}</p>

@@ -146,7 +146,40 @@ creating body-level overflow.
 - 561–768px: single-column matchup and Cup layouts.
 - 560px and below: compact brand, full-width hero actions, and one-column cards.
 
-The supported verification widths are 1440, 1024, 768, 390, and 360 pixels.
+The supported verification widths are 1440, 1024, 768, 430, 390, and 360 pixels.
+
+## Full UI design overhaul
+
+The shared publication layer now treats the site as a league media guide.
+Nine compact primary destinations occupy one desktop row; the current-season
+utility links to the live HQ. Community tools share a secondary navigation bar.
+Mobile navigation is a disclosure, not a modal: Escape returns focus to the
+toggle, Tab follows document order, and leaving the masthead closes the menu.
+
+Homepage hierarchy is trophy cover, external news wire, current-season pulse,
+complete weekly slate, Cup feature, franchise strip, recent champions, selected
+record holders, draft desk, and a restrained community desk. The franchise strip
+uses native horizontal scrolling with a keyboard-focusable labelled region.
+
+Franchise covers use existing venue photography as a darkened decorative
+background while keeping the complete identity image in its own light panel.
+Directory cards pair venue, helmet, location, coach, story, and canonical titles.
+Former identities and retired franchises retain their full source artwork.
+
+The reusable champion-card include owns year, complete helmet image, historical
+champion name, final score, and season link for both home and history.
+Record spotlights reuse existing verified records, not new calculations.
+Season scoreboards, native weekly disclosures, serif recap copy, and restrained
+number panels form the season-media-guide vocabulary. Draft years have their own
+navigation; speculative analysis hooks no longer occupy public page space.
+
+Existing local images are reused without file conversion or artwork changes.
+Helmets, brackets, draft graphics and honors use contain sizing; only decorative
+venue backgrounds use cover. Below-fold additions lazy-load. No fonts, UI
+frameworks, chart libraries, or external asset requests are introduced.
+
+Unconfigured community features are deliberate upcoming states. No form URL,
+ballot, deadline, poll, or result is changed by presentation work.
 
 ## Asset policy
 

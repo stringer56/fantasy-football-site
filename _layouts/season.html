@@ -34,8 +34,9 @@ layout: default
         </div>
       </div>
       <figure class="season-hero__identity">
-        <img src="{{ champion.branding.identity_image | relative_url }}" alt="{{ champion.branding.identity_alt }}">
+        <img src="{{ champion.branding.identity_image | relative_url }}" alt="{{ champion.branding.identity_alt }}" fetchpriority="high">
         <figcaption>{{ season.year }} Brew Crew Cup champion</figcaption>
+        <div class="season-final-score"><span>Championship · Final</span><strong>{{ championship.champion_score }} <small>–</small> {{ championship.runner_up_score }}</strong><small>{{ championship.runner_up_display_name }} · Runner-up</small></div>
       </figure>
     </div>
   </header>
@@ -57,7 +58,7 @@ layout: default
 
   <section class="season-section season-numbers" id="numbers" aria-labelledby="numbers-heading">
     <div class="shell-content">
-      <div class="section-heading"><div><p class="eyebrow">{{ season.coverage_label | default: "The season at a glance" }}</p><h2 id="numbers-heading">By the Numbers</h2><p>Only facts supported by verified standings, weekly matchups, playoff data, and the championship result appear here.</p></div></div>
+      <div class="section-heading"><div><p class="eyebrow">{{ season.coverage_label | default: "The season at a glance" }}</p><h2 id="numbers-heading">By the Numbers</h2><p>The records, results, and performances that defined {{ season.year }}.</p></div></div>
       <div class="season-number-grid">
         {% for item in season_numbers %}<article class="season-number-card{% if item.coverage_status == 'partial' %} season-number-card--partial{% endif %}"><span>{{ item.label }}</span><strong>{{ item.display_value }}</strong>{% if item.coverage_status == 'partial' %}<small>Verified source conflict noted</small>{% endif %}</article>{% endfor %}
       </div>
@@ -91,14 +92,14 @@ layout: default
           </tbody>
         </table>
       </div>
-      {% if season.standings_asset %}<details class="source-capture"><summary>Compare the original standings capture</summary><a href="{{ season.standings_asset | relative_url }}"><img src="{{ season.standings_asset | relative_url }}" alt="Original {{ season.year }} final standings capture"></a></details>{% endif %}
+      {% if season.standings_asset %}<details class="source-capture"><summary>Compare the original standings capture</summary><a href="{{ season.standings_asset | relative_url }}"><img src="{{ season.standings_asset | relative_url }}" alt="Original {{ season.year }} final standings capture" loading="lazy"></a></details>{% endif %}
     </div>
   </section>
 
   <section class="shell-content season-section" id="bracket" aria-labelledby="bracket-heading">
     <div class="section-heading"><div><p class="eyebrow">The road to the Cup</p><h2 id="bracket-heading">Playoff Bracket</h2></div>{% if season.bracket_asset %}<span class="section-note">Select to view full size</span>{% else %}<span class="section-note">Verified Yahoo results</span>{% endif %}</div>
     {% if season.bracket_asset %}
-      <a class="bracket-frame" href="{{ season.bracket_asset | relative_url }}"><img src="{{ season.bracket_asset | relative_url }}" alt="{{ season.year }} Road to Glory FFL playoff bracket"></a>
+      <a class="bracket-frame" aria-label="View full-size {{ season.year }} playoff bracket" href="{{ season.bracket_asset | relative_url }}"><img src="{{ season.bracket_asset | relative_url }}" alt="{{ season.year }} Road to Glory FFL playoff bracket" loading="lazy"></a>
     {% else %}
       <div class="data-bracket-scroll" role="region" aria-label="{{ season.year }} Road to Glory FFL playoff bracket" tabindex="0">
         <div class="data-bracket">
@@ -151,10 +152,10 @@ layout: default
   <section class="season-section season-section--tint" id="teams" aria-labelledby="teams-heading">
     <div class="shell-content">
       <div class="section-heading"><div><p class="eyebrow">Team by team</p><h2 id="teams-heading">Season Recaps</h2></div></div>
-      <p class="season-section__intro">Every team receives a concise recap assembled from its final record, point totals, and verified playoff outcome.</p>
+      <p class="season-section__intro">The season from every sideline.</p>
       <div class="team-recap-grid">
         {% for recap in team_recaps %}<article class="team-recap-card">
-          <div class="team-recap-card__header">{% if recap.identity_image %}<img src="{{ recap.identity_image | relative_url }}" alt="{{ recap.identity_alt }}">{% else %}<span class="team-recap-card__unresolved" aria-hidden="true">?</span>{% endif %}<div><span>Finished {{ recap.rank }} · {{ recap.record.wins }}–{{ recap.record.losses }}–{{ recap.record.ties }}</span><h3>{{ recap.historical_team_name }}</h3></div></div>
+          <div class="team-recap-card__header">{% if recap.identity_image %}<img src="{{ recap.identity_image | relative_url }}" alt="{{ recap.identity_alt }}" loading="lazy">{% else %}<span class="team-recap-card__unresolved" aria-hidden="true">?</span>{% endif %}<div><span>Finished {{ recap.rank }} · {{ recap.record.wins }}–{{ recap.record.losses }}–{{ recap.record.ties }}</span><h3>{{ recap.historical_team_name }}</h3></div></div>
           {% for paragraph in recap.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
           <div class="team-recap-card__footer">{% if recap.path %}<a class="text-link" href="{{ recap.path | relative_url }}">Franchise profile <span aria-hidden="true">→</span></a>{% else %}<span class="unresolved-label">Unmapped historical identity</span>{% endif %}<small>{{ recap.provenance_label }}</small></div>
         </article>{% endfor %}

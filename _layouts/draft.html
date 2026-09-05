@@ -33,8 +33,9 @@ layout: default
     </div>
   </header>
 
+  <nav class="archive-editions" aria-label="Draft years"><div class="wrap">{% assign draft_editions = site.data.drafts.drafts | sort: 'year' | reverse %}{% for edition in draft_editions %}<a href="{{ '/drafts/' | append: edition.year | append: '/' | relative_url }}"{% if edition.year == page.year %} aria-current="page"{% endif %}>{{ edition.year }}</a>{% endfor %}</div></nav>
   <nav class="season-subnav" aria-label="Draft page sections">
-    <div class="wrap"><a href="#order">Order</a><a href="#results">Results</a><a href="#recap">Recap</a><a href="#notes">Notes</a><a href="#analysis">Future analysis</a></div>
+    <div class="wrap"><a href="#order">Order</a><a href="#results">Results</a><a href="#recap">Recap</a><a href="#notes">Notes</a><a href="{{ '/history/' | append: draft.year | append: '/' | relative_url }}">Season story ↗</a></div>
   </nav>
 
   <section class="shell-content season-section" id="order" aria-labelledby="draft-order-heading">
@@ -49,7 +50,7 @@ layout: default
           <span class="draft-order-entry__slot" aria-label="Draft slot {{ entry.slot }}">{{ entry.slot }}</span>
           {% if franchise %}
             {% if franchise.status == 'retired' %}{% assign franchise_path = '/retired/' | append: franchise.slug | append: '/' %}{% else %}{% assign franchise_path = '/teams/' | append: franchise.slug | append: '/' %}{% endif %}
-            <img src="{{ franchise.branding.identity_image | relative_url }}" alt="">
+            <img src="{{ franchise.branding.identity_image | relative_url }}" alt="" loading="lazy">
             <div><a href="{{ franchise_path | relative_url }}">{{ entry.display_name_that_year }}</a><span>{{ franchise.name }}</span></div>
           {% else %}
             <span class="draft-order-entry__placeholder" aria-hidden="true">?</span>
@@ -95,9 +96,9 @@ layout: default
   </section>
 
   <section class="shell-content season-section draft-recap" id="recap" aria-labelledby="draft-recap-heading">
-    <div><p class="eyebrow">Draft recap</p><h2 id="draft-recap-heading">The source is the recap</h2></div>
+    <div><p class="eyebrow">Draft recap</p><h2 id="draft-recap-heading">How the teams were built</h2></div>
     {% if draft.status == 'source_verified_structured' %}
-      <p>The commissioner archive verifies the draft date and order; Yahoo independently preserves the complete 180-pick board. No grades, steals, busts, or reconstructed commentary have been added.</p>
+      <p>The commissioner archive verifies the draft date and order; Yahoo independently preserves the complete 180-pick board. The selections are preserved as they happened.</p>
     {% elsif draft.pick_data_status == 'verified_structured' %}
       <p>The original {{ draft.year }} recap preserves the result captures above, and Yahoo independently preserves the complete 180-pick board. The source contains no written recap, so no grades, steals, busts, or reconstructed commentary have been added.</p>
     {% else %}
@@ -113,14 +114,6 @@ layout: default
     </div>
   </section>
 
-  <section class="shell-content season-section" id="analysis" aria-labelledby="draft-analysis-heading">
-    <div class="section-heading"><div><p class="eyebrow">Foundation only</p><h2 id="draft-analysis-heading">Future Draft Analysis</h2></div><span class="section-note">Not yet calculated</span></div>
-    <p class="season-section__intro">The archive is structured to support commissioner-approved analysis after authoritative pick data is verified.</p>
-    <div class="draft-analysis-hooks" aria-label="Planned draft analysis modules">
-      {% assign analysis_modules = "Best value picks,Draft steals,Draft busts,Team-by-team grades,ADP value,Draft-slot performance" | split: "," %}
-      {% for module in analysis_modules %}<div><span aria-hidden="true">+</span><strong>{{ module }}</strong><small>Data hook reserved</small></div>{% endfor %}
-    </div>
-  </section>
 
   {% assign season_record = site.data.seasons.seasons | where: "year", draft.year | first %}
   <nav class="profile-back-nav"><div class="wrap draft-back-links"><a class="text-link" href="{{ '/drafts/' | relative_url }}"><span aria-hidden="true">←</span> Back to Draft Archive</a>{% if season_record %}<a class="text-link" href="{{ '/history/' | append: draft.year | append: '/' | relative_url }}">View {{ draft.year }} season <span aria-hidden="true">→</span></a>{% endif %}</div></nav>

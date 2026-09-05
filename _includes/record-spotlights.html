@@ -1,0 +1,8 @@
+{% assign highest = site.data.generated.records.weekly_scores.highest_team_scores | first %}
+{% assign widest = site.data.generated.records.biggest_wins.overall | first %}
+{% assign closest = site.data.generated.records.closest_games.overall | first %}
+<div class="record-spotlights" aria-label="Selected verified records, 2021–2025">
+  <article><span>Highest weekly score</span><strong>{{ highest.score }}</strong><a href="{{ highest.path | relative_url }}"><img src="{{ highest.identity_image | relative_url }}" alt="" loading="lazy">{{ highest.display_name }}</a><small>{{ highest.season }} · Week {{ highest.week }}</small></article>
+  <article><span>Biggest victory</span><strong>{{ widest.margin }} <small>pts</small></strong><a href="{{ widest.winner.path | relative_url }}"><img src="{{ widest.winner.identity_image | relative_url }}" alt="" loading="lazy">{{ widest.winner.display_name }}</a><small>{{ widest.season }} · Week {{ widest.week }}</small></article>
+  <article><span>Closest decided game</span><strong>{{ closest.margin }} <small>pts</small></strong><a href="{{ closest.winner.path | relative_url }}"><img src="{{ closest.winner.identity_image | relative_url }}" alt="" loading="lazy">{{ closest.winner.display_name }}</a><small>{{ closest.season }} · Week {{ closest.week }}</small></article>
+</div>
