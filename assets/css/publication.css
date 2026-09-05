@@ -201,7 +201,10 @@ p { line-height: 1.7; }
 .pulse-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, .85fr); gap: 1.5rem; align-items: start; }
 .pulse-grid > * { min-width: 0; }
 .pulse-grid .home-live-card { grid-column: auto; padding: 1.25rem; }
-.home-featured-matchup > div > a { color: inherit; text-decoration: none; display: grid; justify-items: center; }
+.home-featured-matchup { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: .8rem; }
+.home-featured-matchup > div, .home-featured-matchup > div:last-child { grid-template-columns: minmax(0, 1fr); justify-items: center; direction: ltr; text-align: center; gap: .35rem; }
+.home-featured-matchup > div > a { color: inherit; text-decoration: none; display: grid; justify-items: center; gap: .6rem; }
+.home-featured-matchup small, .home-featured-matchup > div:last-child small { grid-column: 1; font-size: .8rem; }
 .home-featured-matchup img { width: 6.5rem; height: 6rem; border-radius: 0; }
 .home-featured-matchup strong { font-size: 1rem; }
 .home-featured-matchup span { margin-top: .6rem; }
@@ -263,15 +266,17 @@ p { line-height: 1.7; }
 .community-desk .live-empty-inline { padding: 0; border: 0; background: none; }
 .community-desk p { font-size: .95rem; }
 .community-desk .text-link { font-size: .85rem; }
-.cup-feature { border: 0; }
+.cup-feature { border: 0; box-shadow: none; }
+.page-hero__number { font-size: 4rem; color: #c1ab79; font-weight: 800; text-align: right; line-height: 1; letter-spacing: -.04em; }
+.page-hero__number span { display: block; font-size: .75rem; text-transform: uppercase; letter-spacing: .12em; margin-bottom: .75rem; color: #b9c5d5; }
 .cup-banner img { object-fit: contain; width: 100%; height: 30rem; max-height: none; border: 0; box-shadow: none; }
 .champion-roll article { grid-template-columns: 4.5rem 5.5rem minmax(0, 1fr) auto; padding: 1.2rem; box-shadow: none; border-bottom: var(--rule); }
 .champion-roll__identity img { width: 5.5rem; height: 5rem; object-fit: contain; }
 .champion-roll h3 a { color: var(--navy-900); text-decoration: none; font-size: 1.2rem; }
 .champion-roll h3 a:hover { text-decoration: underline; }
-.season-hero__identity { background: #f7f5ef; color: var(--navy-900); padding: 1.5rem; border-radius: 0; transform: none; }
+.season-hero__identity { background: #f7f5ef; color: var(--navy-900); padding: 1.5rem; border-radius: 0; transform: none; aspect-ratio: auto; box-shadow: none; }
 .season-hero__identity img { height: 15rem; width: 100%; object-fit: contain; }
-.season-hero__identity figcaption { color: #536172; font-size: .8rem; }
+.season-hero__identity figcaption { position: static; padding: .75rem 0 0; background: transparent; color: #536172; font-size: .8rem; text-align: center; }
 .season-final-score { padding-top: 1rem; border-top: 1px solid #c7c9cc; text-align: center; margin-top: 1rem; }
 .season-final-score span, .season-final-score > small { display: block; font-size: .8rem; color: #445367; }
 .season-final-score strong { display: block; font-size: 2.3rem; color: var(--navy-900); font-variant-numeric: tabular-nums; }

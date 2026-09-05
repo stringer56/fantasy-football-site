@@ -68,12 +68,20 @@ def main():
                 page.evaluate("document.querySelectorAll('img[loading=lazy]').forEach(i => i.loading = 'eager')")
                 page.wait_for_function("[...document.images].every(i => i.complete)")
                 menu_ok = True
+                expanded_overflow = False
                 if page.locator('.nav-toggle').is_visible():
                     page.locator('.nav-toggle').click()
                     menu_ok = page.locator('.nav-toggle').get_attribute('aria-expanded') == 'true'
                     menu_ok = menu_ok and page.locator('#primary-navigation a').first.is_visible()
                     page.keyboard.press('Escape')
                     menu_ok = menu_ok and page.locator('.nav-toggle').get_attribute('aria-expanded') == 'false'
+                    menu_ok = menu_ok and page.locator('.nav-toggle').evaluate("(el) => el === document.activeElement")
+                disclosure = page.locator('main details:not([open]) > summary').first
+                if disclosure.count():
+                    disclosure.click()
+                    expanded_overflow = page.evaluate("document.documentElement.scrollWidth > innerWidth + 1")
+                    disclosure.click()
+                    page.evaluate("scrollTo(0, 0)")
                 checks = page.evaluate("""() => ({
                     overflow: document.documentElement.scrollWidth > innerWidth + 1,
                     brokenImages: [...document.images].filter(i => !i.complete || !i.naturalWidth).length,
@@ -87,8 +95,9 @@ def main():
                     ,escapedTeamImages: [...document.querySelectorAll('.franchise-identity img, .franchise-card__image img')].filter(i => { const r=i.getBoundingClientRect(), p=i.parentElement.getBoundingClientRect(); return r.top < p.top-1 || r.bottom > p.bottom+1 || r.left < p.left-1 || r.right > p.right+1; }).length
                     ,missingPageAnchors: [...document.querySelectorAll('a[href^="#"]')].filter(a => a.hash.length > 1 && !document.getElementById(decodeURIComponent(a.hash.slice(1)))).length
                     ,unreadableLiveCards: [...document.querySelectorAll('.franchise-live__grid > article > p')].filter(n => getComputedStyle(n).color === getComputedStyle(n.parentElement).backgroundColor).length
+                    ,overlappingSeasonCaption: [...document.querySelectorAll('.season-final-score')].filter(n => { const caption=n.parentElement.querySelector('figcaption'); return caption && caption.getBoundingClientRect().bottom > n.getBoundingClientRect().top + 1; }).length
                 })""")
-                checks.update({"width": width, "route": route, "status": response.status, "failedInternal": list(failed), "mobileMenu": menu_ok})
+                checks.update({"width": width, "route": route, "status": response.status, "failedInternal": list(failed), "mobileMenu": menu_ok, "expandedOverflow": expanded_overflow})
                 results.append(checks)
                 if args.all_routes or args.all_franchises or route in {"", "picks/", "power-rankings/", "votes/", "2026/week/1/"}:
                     page.screenshot(path=str(args.output / f"{route.replace('/', '-') or 'home'}-{width}.png"), full_page=True)
@@ -99,7 +108,7 @@ def main():
     if server:
         server.shutdown()
     (args.output / "results.json").write_text(json.dumps(results, indent=2), encoding="utf-8")
-    problems = [r for r in results if r["overflow"] or r["brokenImages"] or r["missingAlt"] or r["synthetic"] or r["debugState"] or r["status"] != 200 or r["failedInternal"] or not r["mobileMenu"] or r["h1"] != 1 or r["distortedTeamImages"] or r["escapedTeamImages"] or r["missingPageAnchors"] or r["unreadableLiveCards"]]
+    problems = [r for r in results if r["overflow"] or r["expandedOverflow"] or r["overlappingSeasonCaption"] or r["brokenImages"] or r["missingAlt"] or r["synthetic"] or r["debugState"] or r["status"] != 200 or r["failedInternal"] or not r["mobileMenu"] or r["h1"] != 1 or r["distortedTeamImages"] or r["escapedTeamImages"] or r["missingPageAnchors"] or r["unreadableLiveCards"]]
     print(json.dumps({"checks": len(results), "problems": problems}, indent=2))
     if problems:
         raise SystemExit(1)

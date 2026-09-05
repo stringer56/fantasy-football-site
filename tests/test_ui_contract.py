@@ -53,6 +53,12 @@ class PublicationContractTests(unittest.TestCase):
         self.assertIn('alt="{{ branding.identity_alt | escape }}"', text)
         self.assertIn('Franchise Timeline', text)
 
+    def test_championship_cover_caption_cannot_overlay_the_score(self):
+        text = (ROOT / 'assets/css/publication.css').read_text(encoding='utf-8')
+        self.assertIn('.season-hero__identity figcaption { position: static;', text)
+        self.assertIn('aspect-ratio: auto', text)
+        self.assertIn('overlappingSeasonCaption', (ROOT / 'scripts/audit_browser.py').read_text(encoding='utf-8'))
+
     def test_profile_story_is_not_duplicated(self):
         text = (ROOT / '_layouts/franchise.html').read_text(encoding='utf-8')
         self.assertEqual(text.count('{{ profile.summary }}'), 1)
