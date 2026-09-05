@@ -10,7 +10,7 @@
 .franchise-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
 .franchise-card { display: flex; flex-direction: column; min-width: 0; border: var(--rule); border-top: 6px solid var(--team-accent, var(--gold-500)); background: white; transition: box-shadow 160ms; }
 .franchise-card:hover, .franchise-card:focus-within { box-shadow: var(--shadow-md); }
-.franchise-card__image { display: grid; place-items: center; height: 15rem; padding: 1rem; background: #f9f9f7; border-bottom: var(--rule); }
+.franchise-card__image { display: flex; align-items: center; justify-content: center; flex: 0 0 15rem; min-height: 0; height: 15rem; padding: 1rem; background: #f9f9f7; border-bottom: var(--rule); }
 .franchise-card__image img { width: 100%; height: 100%; object-fit: contain; }
 .franchise-card__body { display: flex; flex: 1; flex-direction: column; min-width: 0; padding: 1.4rem; }
 .franchise-card__status { margin: 0; font-size: .65rem; text-transform: uppercase; letter-spacing: .08em; color: #536172; font-weight: 800; }
@@ -31,7 +31,7 @@
 .franchise-hero__owners { display: flex; align-items: baseline; flex-wrap: wrap; gap: .65rem; margin-top: 1.5rem; }
 .franchise-hero__owners span { color: var(--gold-300); font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .franchise-hero__owners strong { font-size: 1.15rem; }
-.franchise-identity { display: grid; place-items: center; width: 100%; height: 23rem; padding: 1.25rem; margin: 0; border-top: 6px solid var(--team-accent, var(--gold-500)); background: #fff; box-shadow: 10px 10px 0 #1a293b; }
+.franchise-identity { display: flex; align-items: center; justify-content: center; min-height: 0; width: 100%; height: 23rem; padding: 1.25rem; margin: 0; border-top: 6px solid var(--team-accent, var(--gold-500)); background: #fff; box-shadow: 10px 10px 0 #1a293b; }
 .franchise-identity img { width: 100%; height: 100%; object-fit: contain; }
 .franchise-honors { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.4rem; }
 .franchise-honors a { border-bottom: 1px solid #9d813e; padding-bottom: .35rem; color: var(--gold-300); font-size: .8rem; font-weight: 800; text-decoration: none; }
@@ -96,7 +96,7 @@
   .directory-hero__edition span, .directory-hero__edition a { margin: 0; }
   .directory-hero__edition a { flex-basis: 100%; }
   .franchise-card-grid, .franchise-gallery, .franchise-gallery--two, .retired-grid { grid-template-columns: minmax(0, 1fr); }
-  .franchise-card__image { height: 14rem; }
+  .franchise-card__image { height: 14rem; flex-basis: 14rem; }
   .franchise-hero__grid { grid-template-columns: minmax(0, 1fr); padding-block: 2rem; gap: 1.8rem; }
   .franchise-hero h1 { font-size: clamp(2.6rem, 10vw, 3.5rem); }
   .franchise-identity { max-width: 23rem; height: 17rem; justify-self: center; box-shadow: 5px 5px 0 #1a293b; }

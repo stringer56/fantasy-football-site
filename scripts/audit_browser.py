@@ -75,6 +75,7 @@ def main():
                     debugState: /\\bunconfigured\\b|missing JSON|importer unavailable/.test(document.querySelector('main')?.innerText || ''),
                     h1: document.querySelectorAll('h1').length
                     ,distortedTeamImages: [...document.querySelectorAll('.franchise-identity img, .franchise-card__image img, .retired-card__image img')].filter(i => getComputedStyle(i).objectFit !== 'contain').length
+                    ,escapedTeamImages: [...document.querySelectorAll('.franchise-identity img, .franchise-card__image img')].filter(i => { const r=i.getBoundingClientRect(), p=i.parentElement.getBoundingClientRect(); return r.top < p.top-1 || r.bottom > p.bottom+1 || r.left < p.left-1 || r.right > p.right+1; }).length
                     ,missingPageAnchors: [...document.querySelectorAll('a[href^="#"]')].filter(a => a.hash.length > 1 && !document.getElementById(decodeURIComponent(a.hash.slice(1)))).length
                 })""")
                 checks.update({"width": width, "route": route, "status": response.status, "failedInternal": list(failed), "mobileMenu": menu_ok})
@@ -87,7 +88,7 @@ def main():
     if server:
         server.shutdown()
     (args.output / "results.json").write_text(json.dumps(results, indent=2), encoding="utf-8")
-    problems = [r for r in results if r["overflow"] or r["brokenImages"] or r["missingAlt"] or r["synthetic"] or r["debugState"] or r["status"] != 200 or r["failedInternal"] or not r["mobileMenu"] or r["h1"] != 1 or r["distortedTeamImages"] or r["missingPageAnchors"]]
+    problems = [r for r in results if r["overflow"] or r["brokenImages"] or r["missingAlt"] or r["synthetic"] or r["debugState"] or r["status"] != 200 or r["failedInternal"] or not r["mobileMenu"] or r["h1"] != 1 or r["distortedTeamImages"] or r["escapedTeamImages"] or r["missingPageAnchors"]]
     print(json.dumps({"checks": len(results), "problems": problems}, indent=2))
     if problems:
         raise SystemExit(1)
