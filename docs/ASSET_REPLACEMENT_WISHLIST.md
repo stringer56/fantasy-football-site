@@ -54,6 +54,22 @@ than silently lowering their quality. Native lazy loading defers below-fold art,
 but it does not shrink the bytes when readers scroll to it. Page scripts remain
 local; the countdown now loads only on the homepage that uses it.
 
+### Measured display and page weight
+
+At the reviewed widths, non-decorative enlargements included the 2022 standings
+capture at 1.46× intrinsic size, Baseball Furies' venue at 1.41×, the 2021/2022
+brackets at 1.37×/1.35×, and Van Cortlant's venue at 1.30×. These are replacement
+priorities, not sharpened/upscaled deliverables. Approved helmets stayed within
+their intrinsic dimensions at the measured CSS sizes; high-density screens still
+benefit from better originals. Decorative venue heroes can enlarge/crop further.
+
+Uncompressed full-visit estimates (HTML plus each referenced local image/script/
+stylesheet once, including below-fold images) are approximately 1.47 MiB for home,
+3.50 MiB for Teams, 4.08 MiB for Draft Archive, and 3.85 MiB for the 2025 draft.
+These are not initial-load transfers, Lighthouse scores, or promises about server
+compression. The largest draft PNG dominates its pages. No runtime dependencies
+were added to chase a synthetic performance score.
+
 ## Complete local inventory
 
 Dimensions are intrinsic pixels; sizes are KiB. This inventory includes unused or
@@ -125,4 +141,3 @@ franchise/history/draft migration documentation.
 | `assets/img/franchises/ayahuasca-rush/identity.jpg` | 559 × 520 | 29.3 |
 | `assets/img/franchises/north-town-ninnyhammers/identity.jpg` | 475 × 434 | 24.6 |
 | `assets/img/favicon.svg` | SVG | 0.3 |
-
