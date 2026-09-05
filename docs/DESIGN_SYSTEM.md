@@ -35,15 +35,13 @@ such as the homepage hero and Brew Crew Cup feature, stay in the page template.
 
 ### Draft archive patterns
 
-- `.draft-season-card` pairs a cropped source-result preview with compact year,
+- `.draft-season-card` pairs an uncropped source-result preview with compact year,
   team-count, and round-count metadata on the newest-first archive.
 - `.draft-order-entry` uses a large opening slot, canonical identity art, the
   exact historical team name, and a quieter canonical-name line. Unresolved
   identities replace the image with a neutral marker and never create a link.
 - `.draft-results-gallery` preserves dense source images at full width and links
   every capture to its original-size local file.
-- `.draft-analysis-hooks` reserves future analysis regions without presenting
-  unavailable calculations as content.
 
 At mobile widths, archive cards and draft-order entries collapse to one column;
 long historical names may wrap, and dense result images remain available through
@@ -70,7 +68,7 @@ than shrinking numeric content past legibility.
 
 ### Voting patterns
 
-- `.vote-principles` explains the free static architecture without exposing
+- `.vote-principles` introduces the three community features without exposing
   commissioner controls or raw form data.
 - `.poll-card` supports a real ballot question, public deadline, result bars,
   and a finger-friendly external Google Form action.
@@ -157,7 +155,7 @@ Mobile navigation is a disclosure, not a modal: Escape returns focus to the
 toggle, Tab follows document order, and leaving the masthead closes the menu.
 
 Homepage hierarchy is trophy cover, external news wire, current-season pulse,
-complete weekly slate, Cup feature, franchise strip, recent champions, selected
+complete weekly slate, franchise strip, Cup feature, recent champions, selected
 record holders, draft desk, and a restrained community desk. The franchise strip
 uses native horizontal scrolling with a keyboard-focusable labelled region.
 

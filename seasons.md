@@ -2,6 +2,7 @@
 layout: default
 title: Seasons
 permalink: /seasons/
+canonical_path: /history/
 description: Road to Glory FFL season archive.
 ---
 
@@ -9,8 +10,8 @@ description: Road to Glory FFL season archive.
 
 <section class="shell-content">
   <div class="prose">
-    <h2>The Road Through Every Season</h2>
-    <p>This established route remains available as a doorway to the complete, verified League History archive.</p>
+    <h2>Every season. Every champion.</h2>
+    <p>Explore the standings, title games, and stories that shaped the league.</p>
     <p><a class="button button--gold" href="{{ '/history/' | relative_url }}">Open League History</a></p>
   </div>
 </section>

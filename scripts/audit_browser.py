@@ -13,6 +13,14 @@ import yaml
 ROUTES = ["", "2026/", "2026/week/1/", "power-rankings/", "picks/", "pickem/", "votes/", "teams/",
           "teams/van-cortlant-rangers/", "history/", "history/2024/", "records/", "drafts/", "cup/", "retired/", "rules/"]
 WIDTHS = [1440, 1024, 768, 430, 390, 360]
+LAUNCH_SHOTS = {
+    (1440, ''), (1024, ''), (430, ''), (390, ''), (360, ''),
+    (1440, 'teams/'), (360, 'teams/'),
+    (1024, 'teams/albany-kneelers/'), (390, 'teams/greendale-human-beings/'),
+    (430, 'retired/'), (1440, 'history/2024/'), (360, 'history/2024/'),
+    (430, 'cup/'), (1024, 'records/'), (390, 'drafts/2025/'),
+    (360, 'votes/'), (1440, 'rules/'),
+}
 
 
 def review_routes(all_franchises=False):
@@ -32,7 +40,15 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--all-franchises", action="store_true", help="Review every active/retired franchise and Quahog identity")
     parser.add_argument("--all-routes", action="store_true", help="Review every HTML route in --site, including compatibility routes")
+    parser.add_argument("--widths", default=','.join(map(str, WIDTHS)), help="Comma-separated viewport widths")
+    parser.add_argument("--screenshots", choices=('all', 'representative', 'none'), default='all', help="Capture all views or only the launch-review selections")
     args = parser.parse_args()
+    try:
+        widths = [int(value) for value in args.widths.split(',')]
+        if not widths or any(width < 320 for width in widths):
+            raise ValueError
+    except ValueError:
+        parser.error('--widths must contain integer widths of at least 320 pixels')
     if args.all_routes and not args.site:
         parser.error("--all-routes requires the built --site artifact")
     routes = review_routes(args.all_franchises)
@@ -57,13 +73,16 @@ def main():
     with sync_playwright() as p:
         browser = p.chromium.launch(executable_path=args.browser, headless=True,
                                     ignore_default_args=["--headless=old"], args=["--headless=new"])
-        for width in WIDTHS:
+        for width in widths:
             page = browser.new_page(viewport={"width": width, "height": 900})
             failed = []
+            script_errors = []
+            page.on('pageerror', lambda error: script_errors.append(str(error)))
             page.on("response", lambda response: failed.append(response.url) if response.status >= 400 and urlsplit(response.url).netloc == urlsplit(args.url).netloc else None)
             page.on("requestfailed", lambda request: failed.append(request.url) if urlsplit(request.url).netloc == urlsplit(args.url).netloc else None)
             for route in routes:
                 failed.clear()
+                script_errors.clear()
                 response = page.goto(args.url + route, wait_until="networkidle")
                 page.evaluate("document.querySelectorAll('img[loading=lazy]').forEach(i => i.loading = 'eager')")
                 page.wait_for_function("[...document.images].every(i => i.complete)")
@@ -99,9 +118,15 @@ def main():
                     ,unreadableLiveCards: [...document.querySelectorAll('.franchise-live__grid > article > p')].filter(n => getComputedStyle(n).color === getComputedStyle(n.parentElement).backgroundColor).length
                     ,overlappingSeasonCaption: [...document.querySelectorAll('.season-final-score')].filter(n => { const caption=n.parentElement.querySelector('figcaption'); return caption && caption.getBoundingClientRect().bottom > n.getBoundingClientRect().top + 1; }).length
                 })""")
-                checks.update({"width": width, "route": route, "status": response.status, "failedInternal": list(failed), "mobileMenu": menu_ok, "expandedOverflow": expanded_overflow})
+                checks.update({"width": width, "route": route, "status": response.status, "failedInternal": list(failed), "scriptErrors": list(script_errors), "mobileMenu": menu_ok, "expandedOverflow": expanded_overflow})
+                checks['imageUsage'] = page.evaluate("""() => [...document.images].map(i => {
+                    const box=i.getBoundingClientRect(), fit=getComputedStyle(i).objectFit;
+                    const ratios=[box.width/i.naturalWidth, box.height/i.naturalHeight];
+                    return {path:new URL(i.currentSrc).pathname, natural:[i.naturalWidth,i.naturalHeight], box:[Math.round(box.width),Math.round(box.height)], scale:fit==='contain'?Math.min(...ratios):Math.max(...ratios), fit, decorative:!i.alt, loading:i.loading};
+                })""")
                 results.append(checks)
-                if args.all_routes or args.all_franchises or route in {"", "picks/", "power-rankings/", "votes/", "2026/week/1/"}:
+                capture = args.screenshots == 'all' or (args.screenshots == 'representative' and (width, route) in LAUNCH_SHOTS)
+                if capture:
                     page.screenshot(path=str(args.output / f"{route.replace('/', '-') or 'home'}-{width}.png"), full_page=True)
                     page.screenshot(path=str(args.output / f"{route.replace('/', '-') or 'home'}-{width}-cover.png"))
             page.close()
@@ -110,7 +135,7 @@ def main():
     if server:
         server.shutdown()
     (args.output / "results.json").write_text(json.dumps(results, indent=2), encoding="utf-8")
-    problems = [r for r in results if r["overflow"] or r["expandedOverflow"] or r["overlappingSeasonCaption"] or r["brokenImages"] or r["missingAlt"] or r["synthetic"] or r["debugState"] or r["status"] != 200 or r["failedInternal"] or not r["mobileMenu"] or r["h1"] != 1 or r["distortedTeamImages"] or r["escapedTeamImages"] or r["missingPageAnchors"] or r["unreadableLiveCards"]]
+    problems = [r for r in results if r["overflow"] or r["expandedOverflow"] or r["overlappingSeasonCaption"] or r["brokenImages"] or r["missingAlt"] or r["synthetic"] or r["debugState"] or r["status"] != 200 or r["failedInternal"] or r["scriptErrors"] or not r["mobileMenu"] or r["h1"] != 1 or r["distortedTeamImages"] or r["escapedTeamImages"] or r["missingPageAnchors"] or r["unreadableLiveCards"]]
     print(json.dumps({"checks": len(results), "problems": problems}, indent=2))
     if problems:
         raise SystemExit(1)
