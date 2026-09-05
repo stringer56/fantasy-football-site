@@ -305,8 +305,10 @@ p { line-height: 1.7; }
 .bracket-frame { box-shadow: none; }
 .bracket-frame img { object-fit: contain; }
 .draft-season-card { border-radius: 0; box-shadow: none; border: var(--rule); }
-.draft-season-card__image { background: #e6e4de; }
-.draft-season-card__image img { object-fit: contain; }
+.draft-season-card__image { background: #e6e4de; height: 20rem; min-height: 0; }
+.draft-season-card__image::after { display: none; }
+.draft-season-card__image img { object-fit: contain; object-position: center; }
+.draft-season-card__image > span { bottom: .75rem; left: .75rem; padding: .5rem .7rem; background: var(--navy-950); font-size: 2rem; }
 .draft-hero__preview img { object-fit: contain; }
 .draft-season-card__image > span { font-family: var(--font-display); font-weight: 900; }
 .draft-order-entry { box-shadow: none; border-radius: 0; padding: 1rem; }
@@ -322,6 +324,11 @@ p { line-height: 1.7; }
 .pick-card, .poll-card, .community-feature, .vote-matchup-card { border-radius: 0; box-shadow: none; }
 .pick-card__teams img, .vote-matchup-card img { object-fit: contain; border-radius: 0; }
 .ranking-method { border-radius: 0; box-shadow: none; }
+.ranking-method h2 { font-size: var(--type-section); text-transform: none; line-height: 1.15; letter-spacing: -.035em; }
+.ranking-method dl { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ranking-method dt { font-size: .75rem; }
+.ranking-method dd { font-size: 1.4rem; overflow-wrap: anywhere; }
+.ranking-method dl div { padding: 1rem .75rem; }
 .record-card, .honor-board, .unavailable-card, .migration-card { border-radius: 0; box-shadow: none; }
 .record-card > strong { font-family: var(--font-display); font-variant-numeric: tabular-nums; }
 .prose { max-width: 68ch; }
