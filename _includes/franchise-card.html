@@ -1,0 +1,17 @@
+{% assign card = include.franchise %}
+{% assign card_titles = site.data.champions.champions | where: "champion_franchise_id", card.franchise_id %}
+<article class="franchise-card" style="--team-accent: {{ card.branding.primary_color | default: '#d8aa3d' }}">
+  <a class="franchise-card__image" href="{{ '/teams/' | append: card.slug | append: '/' | relative_url }}">
+    <img src="{{ card.branding.identity_image | relative_url }}" alt="{{ card.branding.identity_alt | escape }}" loading="lazy">
+  </a>
+  <div class="franchise-card__body">
+    <p class="franchise-card__status">Road to Glory · Active franchise</p>
+    <h2><a href="{{ '/teams/' | append: card.slug | append: '/' | relative_url }}">{{ card.name }}</a></h2>
+    <p class="franchise-card__owner">Coach <strong>{% for owner_id in card.owner_ids %}{% assign owner = site.data.owners.owners | where: "owner_id", owner_id | first %}{% if owner %}{{ owner.display_name }}{% unless forloop.last %}, {% endunless %}{% endif %}{% endfor %}</strong></p>
+    <p>{{ card.profile.summary | truncate: 165 }}</p>
+    <div class="franchise-card__footer">
+      <span>{% if card_titles.size > 0 %}{{ card_titles.size }} verified title{% if card_titles.size > 1 %}s{% endif %} · {{ card_titles | map: 'year' | sort | join: ', ' }}{% else %}Chasing the Cup{% endif %}</span>
+      <a class="text-link" href="{{ '/teams/' | append: card.slug | append: '/' | relative_url }}" aria-label="Explore {{ card.name | escape }} profile">Team profile <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</article>

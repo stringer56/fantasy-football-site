@@ -1,0 +1,16 @@
+<section class="content-section content-section--neutral content-section--bordered" id="home-turf">
+  <div class="wrap">
+    <div class="section-heading"><div><p class="eyebrow eyebrow--dark">A sense of place</p><h2>Home turf &amp; honors</h2></div></div>
+    <div class="franchise-gallery{% unless branding.honors_image %} franchise-gallery--two{% endunless %}">
+      {% if branding.venue_image %}<figure class="venue-feature">
+        <a href="{{ branding.venue_image | relative_url }}" aria-label="View full-size {{ profile.home_field | escape }} image"><img src="{{ branding.venue_image | relative_url }}" alt="{{ branding.venue_alt | escape }}" loading="lazy"></a>
+        <figcaption><span>Home field · View image to enlarge</span><strong>{{ profile.home_field }}</strong></figcaption>
+      </figure>{% endif %}
+      {% if branding.honors_image %}<figure class="honors-feature">
+        <a href="{{ branding.honors_image | relative_url }}"><img src="{{ branding.honors_image | relative_url }}" alt="{{ branding.honors_alt | escape }}" loading="lazy"></a>
+        <figcaption><span>From the archive</span><strong>{{ branding.honors_alt }}</strong></figcaption>
+      </figure>{% endif %}
+    </div>
+    <p class="franchise-source-note">Story and artwork preserved from the original league archive. <a href="{{ franchise.source.google_site_url }}" target="_blank" rel="noopener noreferrer">View source page ↗</a></p>
+  </div>
+</section>

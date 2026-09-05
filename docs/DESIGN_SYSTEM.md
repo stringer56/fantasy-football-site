@@ -7,8 +7,13 @@ accents, off-white editorial surfaces, condensed system display type, and
 highly readable system body type. It should feel like an established league
 headquarters rather than a generic dashboard or Jekyll theme.
 
-All design tokens live at the top of `assets/css/style.css`. Components use the
-same color, spacing, radius, shadow, typography, and content-width variables.
+Base/data tokens live at the top of `assets/css/style.css`; publication tokens
+and the shared editorial layer live in `assets/css/publication.css`. Franchise
+identity components and their responsive rules live in `assets/css/franchises.css`.
+These three files load in that order. Components share color, spacing, radius,
+shadow, typography, and content-width variables. System display headings now use
+bold, closely tracked sentence case rather than Impact's compressed all-caps.
+Team accents come from canonical branding data and never determine text contrast.
 Minima remains in the Gemfile for GitHub Pages compatibility but does not
 control the custom page presentation.
 
@@ -20,6 +25,8 @@ control the custom page presentation.
 - `_includes/empty-state.html`: intentional unavailable/migration state.
 - `_includes/roster.html`: collapsed native `details` roster table connected to
   normalized Yahoo data.
+- `_includes/franchise-card.html`: helmet, coach, story excerpt and canonical title count.
+- `_includes/franchise-gallery.html`: preserved full-size venue/honors media and source attribution.
 - `.button`, `.panel`, `.standings-table`, `.matchup-card`, `.explore-card`, and
   `.migration-card`: CSS component patterns for present and future templates.
 

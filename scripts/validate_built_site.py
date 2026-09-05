@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -322,12 +323,26 @@ def main() -> None:
         route = f"/{'retired' if franchise['status'] == 'retired' else 'teams'}/{franchise['slug']}/"
         profile = route_target(route).read_text(encoding="utf-8")
         for expected in (
-            franchise["name"], "Team information", "Home turf", "Migration record",
+            franchise["name"], "Coach &amp; identity", "Home turf", "View source page",
             "Franchise Record", "Season History", "Head-to-Head",
             "Championship History", "Timeline Foundation",
         ):
             if expected not in profile:
                 errors.append(f"franchise profile {route} is missing: {expected}")
+        if unescape(profile).count(franchise['profile']['summary']) != 1:
+            errors.append(f"franchise profile {route} must preserve its full story exactly once")
+        for key in ('identity_image', 'venue_image', 'honors_image'):
+            asset = franchise['branding'].get(key)
+            if asset and asset not in profile:
+                errors.append(f"franchise profile {route} is missing approved {key}")
+        if 'class="franchise-identity"' not in profile or 'id="home-turf"' not in profile:
+            errors.append(f"franchise profile {route} is missing its identity/gallery structure")
+    champions = yaml.safe_load((ROOT / '_data/champions.yml').read_text(encoding='utf-8'))['champions']
+    for row in champions:
+        franchise = next(f for f in franchise_data['franchises'] if f['franchise_id'] == row['champion_franchise_id'])
+        route = f"/{'retired' if franchise['status'] == 'retired' else 'teams'}/{franchise['slug']}/"
+        if f"{row['year']} Champion" not in route_target(route).read_text(encoding='utf-8'):
+            errors.append(f"{route} is missing its canonical {row['year']} championship badge")
     manifest = json.loads((ROOT / "_data" / "generated" / "manifest.json").read_text(encoding="utf-8"))
     data_is_current = manifest.get("status") == "ready" and manifest.get("season") == site_data.get("current_season")
     if data_is_current:
