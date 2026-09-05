@@ -78,9 +78,11 @@ def main():
                     menu_ok = menu_ok and page.locator('.nav-toggle').evaluate("(el) => el === document.activeElement")
                 disclosure = page.locator('main details:not([open]) > summary').first
                 if disclosure.count():
-                    disclosure.click()
+                    disclosure_handle = disclosure.element_handle()
+                    disclosure_handle.click()
+                    disclosure_handle.evaluate("el => new Promise(resolve => requestAnimationFrame(() => resolve(el.parentElement.open)))")
                     expanded_overflow = page.evaluate("document.documentElement.scrollWidth > innerWidth + 1")
-                    disclosure.click()
+                    disclosure_handle.click()
                     page.evaluate("scrollTo(0, 0)")
                 checks = page.evaluate("""() => ({
                     overflow: document.documentElement.scrollWidth > innerWidth + 1,

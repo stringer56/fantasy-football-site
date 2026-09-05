@@ -65,6 +65,11 @@ class PublicationContractTests(unittest.TestCase):
         self.assertEqual(text.count('include franchise-gallery.html'), 1)
         self.assertNotIn('width="680" height="630"', text)
 
+    def test_community_card_headings_fit_small_mobile(self):
+        text = (ROOT / 'assets/css/publication.css').read_text(encoding='utf-8')
+        self.assertIn('.community-feature h2 { font-size: clamp(1.5rem, 4vw, 2rem);', text)
+        self.assertIn('overflow-wrap: anywhere;', text)
+
     def test_badges_read_canonical_champions(self):
         for path in ('_layouts/franchise.html', '_includes/franchise-card.html'):
             text = (ROOT / path).read_text(encoding='utf-8')
