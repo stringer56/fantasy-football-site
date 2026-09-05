@@ -183,6 +183,7 @@ ballot, deadline, poll, or result is changed by presentation work.
 
 ## Asset policy
 
-The text-based RTG crest is an explicit placeholder, not official league art.
-Future imported helmets, logos, trophy images, and photography should be stored
-locally, optimized, and referenced through Jekyll's `relative_url` filter.
+The RTG masthead is a typographic monogram, not a newly created official crest.
+Approved helmets, logos, trophy images, and photography remain local and are
+referenced through Jekyll's `relative_url` filter. Future replacements require
+commissioner-approved source artwork; the UI pass does not replace league art.
