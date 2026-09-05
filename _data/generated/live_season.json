@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "generated_at": "2026-09-04T21:30:24Z",
-  "data_status": "ready",
+  "data_status": "stale",
   "freshness": {
-    "status": "current",
+    "status": "stale",
     "source_updated_at": "2026-09-04T21:30:24Z",
-    "label": "Updated from Yahoo"
+    "label": "Last valid Yahoo snapshot"
   },
   "source": {
     "type": "official_yahoo_public_page_fallback",
@@ -2893,7 +2893,7 @@
   },
   "power_rankings": {
     "status": "unavailable",
-    "voting_status": "upcoming",
+    "voting_status": "unconfigured",
     "form_url": null,
     "closes_at": null,
     "week": null,
@@ -2903,10 +2903,10 @@
   },
   "picks": {
     "status": "ready",
-    "state": "upcoming",
+    "state": "unconfigured",
     "week": 1,
     "form_url": null,
-    "lock_at": null,
+    "lock_at": "2026-09-09T20:20:00-04:00",
     "matchups": [
       {
         "matchup_id": "2026-week-01-buffalo-bravado-vs-van-cortlant-rangers",

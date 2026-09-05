@@ -79,7 +79,7 @@ jobs:
 
       - name: Build fresh 2026 live hub data
         if: ${{ steps.yahoo_api.outcome == 'success' || steps.yahoo_public.outcome == 'success' }}
-        run: python scripts/build_live_season.py
+        run: python scripts/refresh_community.py
 
       - name: Preserve last valid live snapshot as stale
         if: ${{ steps.yahoo_api.outcome == 'failure' && steps.yahoo_public.outcome == 'failure' }}
@@ -95,11 +95,15 @@ jobs:
           python scripts/validate_live_season.py
           python scripts/validate_votes_data.py
           python scripts/validate_recaps.py
+          python scripts/validate_privacy.py
 
       - name: Commit and push changed public data
         shell: bash
         run: |
-          git add _data/generated _data/power_rankings _live_weeks _data/news.json
+          # Empty community archives intentionally do not exist before first publication.
+          for path in _data/generated _live_weeks _data/news.json; do
+            if [ -e "$path" ]; then git add -- "$path"; fi
+          done
           if git diff --cached --quiet; then
             echo "No public data changes."
             exit 0

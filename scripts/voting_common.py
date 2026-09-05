@@ -5,7 +5,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable, Iterable
 
@@ -13,8 +13,9 @@ import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
+PRIVATE_STATE_ROOT = ROOT / "private-vote-imports" / ".community-state"
 FORBIDDEN_VOTE_KEYS = {
-    "account_id", "auth_token", "edit_url", "email", "email_address",
+    "account_id", "auth_token", "comment", "comments", "edit_url", "email", "email_address",
     "form_edit_url", "google_user_id", "ip", "ip_address", "invitation_url",
     "prefilled_url", "response_id", "response_url", "sheet_id", "sheet_url",
     "spreadsheet_id", "spreadsheet_url",
@@ -41,7 +42,13 @@ def load_import(path: Path) -> dict[str, Any]:
         return value
     if path.suffix.casefold() == ".csv":
         with path.open(encoding="utf-8-sig", newline="") as handle:
-            rows = list(csv.DictReader(handle))
+            reader = csv.DictReader(handle, strict=True)
+            headers = reader.fieldnames or []
+            if not headers or len(set(headers)) != len(headers) or any(not key for key in headers):
+                raise BallotError("CSV requires unique nonempty column headers")
+            rows = list(reader)
+            if any(None in row or any(value is None for value in row.values()) for row in rows):
+                raise BallotError("CSV row width does not match its headers")
         value = {"rows": rows}
         reject_private_fields(value)
         return value
@@ -117,7 +124,7 @@ def select_latest_valid_report(
             if deadline is not None and submitted > deadline:
                 raise BallotError("submission is after the deadline")
             validator(ballot)
-        except (BallotError, TypeError) as error:
+        except (BallotError, TypeError, AttributeError) as error:
             rejected.append({"row": row_number, "reason": str(error)})
             continue
         current = selected.get(owner_id)
@@ -134,6 +141,89 @@ def public_aggregate_fingerprint(value: Any) -> str:
     """Hash only a public aggregate, never individual private selections."""
     encoded = json.dumps(value, sort_keys=True, separators=(",", ":")).encode("utf-8")
     return hashlib.sha256(encoded).hexdigest()
+
+
+def file_fingerprint(path: Path) -> str:
+    """Hash a private import without retaining or exposing its contents."""
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def preview_receipt_path(kind: str, season: int, week: int | None) -> Path:
+    suffix = f"week-{week:02d}" if isinstance(week, int) else "general"
+    return PRIVATE_STATE_ROOT / f"{season}-{suffix}-{kind}.json"
+
+
+def write_preview_receipt(
+    *, kind: str, season: int, week: int | None, input_path: Path,
+    accepted: int, rejected: int, superseded: int, missing: int,
+    warnings: list[str] | None = None, context_sha256: str | None = None, deadline: object = None,
+) -> Path:
+    """Persist privacy-safe preview metadata beside ignored commissioner imports."""
+    permitted = accepted > 0 and rejected == 0
+    payload = {
+        "schema_version": 1,
+        "kind": kind,
+        "season": season,
+        "week": week,
+        "input_name": input_path.name,
+        "input_sha256": file_fingerprint(input_path),
+        "context_sha256": context_sha256,
+        "deadline": deadline,
+        "accepted": accepted,
+        "rejected": rejected,
+        "superseded": superseded,
+        "missing_managers": missing,
+        "warnings": warnings or [],
+        "finalization_permitted": permitted,
+        "review_required": bool(accepted and rejected),
+    }
+    path = preview_receipt_path(kind, season, week)
+    write_json(path, payload)
+    return path
+
+
+def load_preview_receipt(kind: str, season: int, week: int | None) -> dict[str, Any]:
+    path = preview_receipt_path(kind, season, week)
+    if not path.exists():
+        return {}
+    value = json.loads(path.read_text(encoding="utf-8"))
+    return value if isinstance(value, dict) else {}
+
+
+def audit_fingerprint(value: Any) -> str:
+    """Create an audit hash of the previous public archive."""
+    return public_aggregate_fingerprint(value)
+
+
+def review_context(kind: str, season: int, week: int | None, deadline: object = None, *, root: Path = ROOT) -> str:
+    """Bind review to rules/identities/slate, but not changing Yahoo scores."""
+    context = {"kind": kind, "season": season, "week": week, "deadline": deadline}
+    for name in ("community.yml", "owners.yml", "franchises.yml", "votes.yml"):
+        path = root / "_data" / name
+        context[name] = file_fingerprint(path) if path.exists() else None
+    if kind == "pickem":
+        path = root / "_data" / "generated" / "matchups.json"
+        data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+        context["slate"] = {
+            "week": data.get("week"),
+            "teams": sorted(sorted(team.get("team_key", "") for team in game.get("teams", [])) for game in data.get("matchups", [])),
+        }
+    return public_aggregate_fingerprint(context)
+
+
+def require_review(kind: str, season: int, week: int | None, path: Path, deadline: object = None) -> None:
+    receipt = load_preview_receipt(kind, season, week)
+    if (not receipt or receipt.get("input_sha256") != file_fingerprint(path)
+            or receipt.get("context_sha256") != review_context(kind, season, week, deadline)):
+        raise SystemExit("Nothing finalized: preview this exact import, deadline, configuration and slate first")
+
+
+def require_lock_reached(lock_at: object, published_at: object, *, now: datetime | None = None) -> None:
+    lock = parse_timestamp(lock_at)
+    published = parse_timestamp(published_at)
+    current = now or datetime.now(timezone.utc)
+    if current < lock or published < lock or published > current:
+        raise ValueError("Nothing finalized: lock must have passed; publication time must be between lock and now")
 
 
 def write_json(path: Path, payload: dict[str, Any]) -> None:

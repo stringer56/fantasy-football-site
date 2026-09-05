@@ -1,5 +1,9 @@
 # Voting Architecture
 
+Operational configuration lives in `_data/community.yml`: `power_rankings.form_url`, `pickem.form_url`, and `league_votes.form_url`. Blank values are valid, explicit unconfigured states. Only public Google Forms responder URLs are allowed.
+
+Raw responses and private preview receipts remain under ignored `private-vote-imports/`. Publication follows import → validate → preview → human review → finalize → archive. Public output never contains raw response rows, emails, Sheet URLs, OAuth values, or private comments.
+
 ## Decision and trust boundary
 
 Road to Glory uses public Google Forms backed by commissioner-owned private

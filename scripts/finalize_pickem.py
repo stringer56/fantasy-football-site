@@ -6,13 +6,13 @@ import argparse
 from pathlib import Path
 
 try:
-    from . import build_picks_leaderboard
+    from . import build_picks_leaderboard, voting_common
     from .import_pickem import load_current_sources, preview_import, print_preview
-    from .voting_common import load_import, load_yaml, owner_index, write_json
+    from .voting_common import file_fingerprint, load_import, load_preview_receipt, load_yaml, owner_index, write_json
 except ImportError:
-    import build_picks_leaderboard
+    import build_picks_leaderboard, voting_common
     from import_pickem import load_current_sources, preview_import, print_preview
-    from voting_common import load_import, load_yaml, owner_index, write_json
+    from voting_common import file_fingerprint, load_import, load_preview_receipt, load_yaml, owner_index, write_json
 
 
 def main() -> None:
@@ -21,11 +21,27 @@ def main() -> None:
     parser.add_argument("--season", type=int, required=True)
     parser.add_argument("--week", type=int, required=True)
     parser.add_argument("--lock-at", required=True, help="ISO-8601 weekly lock time")
+    parser.add_argument("--published-at", required=True, help="ISO-8601 commissioner publication time")
     parser.add_argument("--allow-rejected", action="store_true")
     parser.add_argument("--publish-manager-picks", action="store_true")
     parser.add_argument("--hide-aggregates", action="store_true")
     parser.add_argument("--override-finalized", action="store_true")
+    parser.add_argument("--override-reason", help="Required audit reason with --override-finalized")
     args = parser.parse_args()
+
+    config = (load_yaml("community.yml").get("pickem") or {})
+    if config.get("lock_at") != args.lock_at or config.get("lock_week") != args.week:
+        raise SystemExit("Nothing finalized: lock/week must match canonical community configuration")
+    voting_common.require_review("pickem", args.season, args.week, args.input, args.lock_at)
+    voting_common.require_lock_reached(args.lock_at, args.published_at)
+    # Keep the private source binding out of public archives (even hashes of ballots).
+    binding_path = voting_common.PRIVATE_STATE_ROOT / f"{args.season}-week-{args.week:02d}-pickem-locked.json"
+    archive_path = build_picks_leaderboard.pick_archive_path(args.season, args.week)
+    if archive_path.exists() and not args.override_finalized:
+        import json
+        binding = json.loads(binding_path.read_text(encoding="utf-8")) if binding_path.exists() else {}
+        if binding.get("input_sha256") != file_fingerprint(args.input):
+            raise SystemExit("Nothing finalized: locked private export changed or binding missing; reviewed override required")
 
     imported = load_import(args.input)
     preview, report = preview_import(
@@ -68,10 +84,15 @@ def main() -> None:
     current["results_visibility"] = "hidden" if args.hide_aggregates else "public_after_lock"
     current["manager_picks_visibility"] = "public" if args.publish_manager_picks else "private"
     week_payload = build_picks_leaderboard.finalized_week_payload(
-        payload, generated_at=payload.get("generated_at"), state=state
+        payload, generated_at=args.published_at, state=state
     )
     path = build_picks_leaderboard.persist_finalized_week(
-        week_payload, override=args.override_finalized
+        week_payload, override=args.override_finalized, override_reason=args.override_reason
+    )
+    write_json(binding_path, {"input_sha256": file_fingerprint(args.input)})
+    week_payload = next(
+        item for item in build_picks_leaderboard.load_finalized_weeks(args.season)
+        if item["week"] == args.week
     )
     archive = build_picks_leaderboard.load_finalized_weeks(args.season)
     owners = owner_index(load_yaml("owners.yml"))

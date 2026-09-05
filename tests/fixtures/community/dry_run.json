@@ -1,0 +1,23 @@
+{
+  "fixture_notice": "SYNTHETIC TEST DATA - NEVER PUBLISH",
+  "owners": ["test-owner-a", "test-owner-b"],
+  "franchises": ["test-alpha", "test-beta"],
+  "matchup_id": "2099-week-01-test-alpha-vs-test-beta",
+  "power_rankings": {
+    "complete": ["test-alpha", "test-beta"],
+    "duplicate_rank": ["test-alpha", "test-alpha"],
+    "missing_franchise": ["test-alpha"],
+    "invalid_franchise": ["test-alpha", "test-unknown"]
+  },
+  "pickem": {
+    "valid_choice": "test-alpha",
+    "invalid_choice": "test-unknown",
+    "unknown_matchup": "2099-week-01-test-unknown-vs-test-none"
+  },
+  "general_vote": {
+    "poll_id": "test-poll",
+    "valid_option": "test-yes",
+    "invalid_option": "test-maybe",
+    "unknown_poll": "test-unknown-poll"
+  }
+}

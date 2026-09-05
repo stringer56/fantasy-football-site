@@ -396,6 +396,9 @@ def build_live_payload(*, stale: bool = False) -> tuple[dict[str, Any], dict[str
     manifest = load_json(GENERATED / "manifest.json")
     source_current = manifest.get("status") == "ready" and manifest.get("season") == season
     source_timestamp = iso_timestamp(manifest.get("source_update_timestamp"))
+    if source_timestamp:
+        age = (datetime.now(timezone.utc) - datetime.fromisoformat(source_timestamp.replace("Z", "+00:00"))).total_seconds()
+        stale = stale or age > 12 * 3600 or age < 0
     base = {
         "schema_version": 1,
         "season": season,
@@ -481,7 +484,7 @@ def build_live_payload(*, stale: bool = False) -> tuple[dict[str, Any], dict[str
         "franchise_summaries": franchise_summaries(by_id, standings, matchups),
         "power_rankings": power_rankings,
         "picks": picks_summary,
-        "active_vote": (votes.get("active_polls") or [None])[0],
+        "active_vote": next((poll for poll in votes.get("active_polls", []) if poll.get("season") == season), None),
         "season_milestones": ([{"milestone_id": f"week-{week}-opened", "label": f"Week {week} slate published", "week": week}] if week else []) + [{"milestone_id": event["event_id"], "label": event["level"], "week": week} for event in events if event["final"]],
     })
     wire_payload = {"schema_version": 1, "season": season, "week": week, "generated_at": source_timestamp, "coverage_status": "ready" if wire else "unavailable", "items": wire}
@@ -505,6 +508,7 @@ def persist_week(payload: dict[str, Any]) -> Path | None:
         "record_watch": payload.get("record_watch", []),
         "power_rankings": payload.get("power_rankings"),
         "picks": payload.get("picks"),
+        "active_vote": payload.get("active_vote"),
     }
     path = GENERATED / "live" / str(payload["season"]) / f"week-{week:02d}.json"
     write_json(path, snapshot)

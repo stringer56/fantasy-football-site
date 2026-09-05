@@ -12,11 +12,13 @@ try:
     from .voting_common import (
         BallotError,
         ROOT,
+        audit_fingerprint,
         generated_at_from_rows,
         load_import,
         load_yaml,
         owner_index,
         parse_deadline,
+        parse_timestamp,
         public_aggregate_fingerprint,
         select_latest_valid,
         write_json,
@@ -25,11 +27,13 @@ except ImportError:
     from voting_common import (
         BallotError,
         ROOT,
+        audit_fingerprint,
         generated_at_from_rows,
         load_import,
         load_yaml,
         owner_index,
         parse_deadline,
+        parse_timestamp,
         public_aggregate_fingerprint,
         select_latest_valid,
         write_json,
@@ -263,8 +267,15 @@ def build_leaderboard(weekly_results: list[dict[str, Any]], owners: dict[str, di
         total["accuracy"] = round(total["correct"] / total["total_picks"], 3) if total["total_picks"] else None
         entries.append(total)
     entries.sort(key=lambda item: (-item["correct"], -(item["accuracy"] or 0), item["display_name"].casefold()))
-    for rank, item in enumerate(entries, start=1):
-        item["rank"] = rank
+    previous_key = None
+    previous_rank = None
+    for index, item in enumerate(entries, start=1):
+        tie_key = (item["correct"], item["accuracy"])
+        item["rank"] = previous_rank if tie_key == previous_key else index
+        previous_key, previous_rank = tie_key, item["rank"]
+    rank_counts = {rank: sum(row["rank"] == rank for row in entries) for rank in {row["rank"] for row in entries}}
+    for item in entries:
+        item["is_tied"] = rank_counts[item["rank"]] > 1
     return entries
 
 
@@ -351,7 +362,8 @@ def pick_archive_path(season: int, week: int, root: Path = ARCHIVE_ROOT) -> Path
 
 
 def finalized_week_payload(
-    payload: dict[str, Any], *, generated_at: str | None, state: str
+    payload: dict[str, Any], *, generated_at: str | None, state: str,
+    audit: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
     current = payload.get("current_week") or {}
     if state not in {"locked", "final"}:
@@ -370,6 +382,7 @@ def finalized_week_payload(
         "week": current["week"],
         "published_at": generated_at,
         "state": state,
+        "audit": audit or [],
         "lock_at": current.get("lock_at"),
         "results_visibility": current.get("results_visibility"),
         "manager_picks_visibility": current.get("manager_picks_visibility"),
@@ -395,25 +408,56 @@ def finalized_week_payload(
 
 
 def persist_finalized_week(
-    week: dict[str, Any], root: Path = ARCHIVE_ROOT, *, override: bool = False
+    week: dict[str, Any], root: Path = ARCHIVE_ROOT, *, override: bool = False,
+    override_reason: str | None = None,
 ) -> Path:
     path = pick_archive_path(week["season"], week["week"], root)
-    serialized = json.dumps(week, ensure_ascii=False, indent=2) + "\n"
     if path.exists():
         existing = json.loads(path.read_text(encoding="utf-8"))
         if existing == week:
             return path
         scoring_update = (
-            existing.get("state") == "locked"
+            not override
+            and existing.get("state") == "locked"
             and week.get("state") == "final"
             and existing.get("aggregate_fingerprint") == week.get("aggregate_fingerprint")
             and existing.get("ballots_counted") == week.get("ballots_counted")
+            and existing.get("lock_at") == week.get("lock_at")
+            and existing.get("results_visibility") == week.get("results_visibility")
+            and existing.get("manager_picks_visibility") == week.get("manager_picks_visibility")
         )
         if not scoring_update and not override:
             raise ValueError(f"refusing to overwrite finalized Pick'em selections: {path}")
         if existing.get("state") == "final" and not override:
             raise ValueError(f"refusing to overwrite finalized Pick'em results: {path}")
+        published_at = week.get("published_at")
+        if not published_at:
+            raise ValueError("published_at is required for Pick'em finalization")
+        parse_timestamp(published_at)
+        if scoring_update:
+            week["audit"] = list(existing.get("audit") or []) + [{
+                "action": "graded", "effective_at": published_at,
+                "reason": None, "previous_fingerprint": audit_fingerprint(existing),
+            }]
+        elif override:
+            if not (override_reason or "").strip():
+                raise ValueError("override_reason is required when overriding finalized Pick'em")
+            week["audit"] = list(existing.get("audit") or []) + [{
+                "action": "override", "effective_at": published_at,
+                "reason": override_reason.strip(),
+                "previous_fingerprint": audit_fingerprint(existing),
+            }]
+    else:
+        published_at = week.get("published_at")
+        if not published_at:
+            raise ValueError("published_at is required for Pick'em finalization")
+        parse_timestamp(published_at)
+        week["audit"] = [{
+            "action": "locked" if week.get("state") == "locked" else "finalized",
+            "effective_at": published_at, "reason": None, "previous_fingerprint": None,
+        }]
     path.parent.mkdir(parents=True, exist_ok=True)
+    serialized = json.dumps(week, ensure_ascii=False, indent=2) + "\n"
     path.write_text(serialized, encoding="utf-8")
     return path
 
@@ -436,6 +480,8 @@ def main() -> None:
     parser.add_argument("--deadline", help="ISO-8601 voting deadline override")
     parser.add_argument("--output", type=Path, default=OUTPUT_PATH)
     args = parser.parse_args()
+    if args.input:
+        raise SystemExit("Raw imports cannot publish here; use import_pickem.py then finalize_pickem.py")
     imported = load_import(args.input) if args.input else None
     site_data = load_yaml("site.yml")
     season = int((imported or {}).get("season") or site_data["current_season"])
@@ -457,6 +503,8 @@ def main() -> None:
         deadline=args.deadline,
         community_data=load_yaml("community.yml"),
     )
+    if payload.get("current_week"):
+        payload["current_week"].pop("selection_totals", None)
     write_json(args.output, payload)
     print(f"Wrote {args.output}: {len(payload['leaderboard'])} managers in the Picks Leaderboard")
 

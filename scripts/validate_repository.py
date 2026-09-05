@@ -10,7 +10,7 @@ import yaml
 
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-SKIPPED_DIRECTORIES = {".git", ".venv", "_site", "vendor"}
+SKIPPED_DIRECTORIES = {".git", ".venv", "_site", "vendor", ".cache", "private-vote-imports"}
 
 
 def repository_files(pattern: str):

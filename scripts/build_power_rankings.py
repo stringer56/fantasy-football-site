@@ -13,11 +13,13 @@ try:
         BallotError,
         ROOT,
         active_franchises,
+        audit_fingerprint,
         generated_at_from_rows,
         load_import,
         load_yaml,
         owner_index,
         parse_deadline,
+        parse_timestamp,
         select_latest_valid,
         write_json,
     )
@@ -26,11 +28,13 @@ except ImportError:
         BallotError,
         ROOT,
         active_franchises,
+        audit_fingerprint,
         generated_at_from_rows,
         load_import,
         load_yaml,
         owner_index,
         parse_deadline,
+        parse_timestamp,
         select_latest_valid,
         write_json,
     )
@@ -195,7 +199,8 @@ def build_output(
 
 
 def finalized_week_payload(
-    payload: dict[str, Any], standings_by_id: dict[str, int | None] | None = None
+    payload: dict[str, Any], standings_by_id: dict[str, int | None] | None = None,
+    *, published_at: str | None = None, audit: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
     if not isinstance(payload.get("week"), int) or not payload.get("rankings"):
         raise ValueError("a finalized Power Ranking requires a week and published rankings")
@@ -204,7 +209,9 @@ def finalized_week_payload(
         "season": payload["season"],
         "week": payload["week"],
         "generated_at": payload.get("generated_at"),
+        "published_at": published_at or payload.get("published_at") or payload.get("generated_at"),
         "results_status": "final",
+        "audit": audit or [],
         "source": payload["source"],
         "scoring": payload["scoring"],
         "ballots_counted": payload["ballots_counted"],
@@ -238,17 +245,33 @@ def archive_path(season: int, week: int, root: Path = ARCHIVE_ROOT) -> Path:
 def persist_finalized_week(
     payload: dict[str, Any], root: Path = ARCHIVE_ROOT, *, override: bool = False,
     standings_by_id: dict[str, int | None] | None = None,
+    published_at: str | None = None, override_reason: str | None = None,
 ) -> Path:
-    final = finalized_week_payload(payload, standings_by_id)
+    effective_at = published_at or payload.get("generated_at")
+    if not effective_at:
+        raise ValueError("published_at is required for finalization")
+    parse_timestamp(effective_at)
+    final = finalized_week_payload(payload, standings_by_id, published_at=effective_at)
     path = archive_path(final["season"], final["week"], root)
-    serialized = json.dumps(final, ensure_ascii=False, indent=2) + "\n"
     if path.exists():
-        existing = path.read_text(encoding="utf-8")
-        if existing != serialized and not override:
+        existing_value = json.loads(path.read_text(encoding="utf-8"))
+        comparable = {key: value for key, value in final.items() if key != "audit"}
+        existing_comparable = {key: value for key, value in existing_value.items() if key != "audit"}
+        if existing_comparable != comparable and not override:
             raise ValueError(f"refusing to overwrite finalized Power Rankings: {path}")
-        if existing != serialized:
-            path.write_text(serialized, encoding="utf-8")
-        return path
+        if existing_comparable != comparable:
+            if not (override_reason or "").strip():
+                raise ValueError("override_reason is required when overriding finalized Power Rankings")
+            final["audit"] = list(existing_value.get("audit") or []) + [{
+                "action": "override", "effective_at": effective_at,
+                "reason": override_reason.strip(),
+                "previous_fingerprint": audit_fingerprint(existing_value),
+            }]
+        else:
+            return path
+    else:
+        final["audit"] = [{"action": "finalized", "effective_at": effective_at, "reason": None, "previous_fingerprint": None}]
+    serialized = json.dumps(final, ensure_ascii=False, indent=2) + "\n"
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(serialized, encoding="utf-8")
     return path
@@ -380,8 +403,10 @@ def main() -> None:
     parser.add_argument("--deadline", help="ISO-8601 voting deadline override")
     parser.add_argument("--output", type=Path, default=OUTPUT_PATH)
     args = parser.parse_args()
+    if args.input:
+        raise SystemExit("Raw imports cannot publish here; use import_power_rankings.py then finalize_power_rankings.py")
     imported = load_import(args.input) if args.input else None
-    season = int((imported or {}).get("season") or 2026)
+    season = int((imported or {}).get("season") or load_yaml("site.yml")["current_season"])
     week = int(imported["week"]) if imported and imported.get("week") not in (None, "") else None
     previous = json.loads(args.previous.read_text(encoding="utf-8")) if args.previous else previous_finalized(season, week)
     payload = build_output(
@@ -392,7 +417,11 @@ def main() -> None:
         previous=previous,
         community_data=load_yaml("community.yml"),
     )
+    archives = load_finalized_weeks(season)
+    if archives:
+        payload = {**archives[-1], "voting": payload["voting"]}
     write_json(args.output, payload)
+    write_json(HISTORY_OUTPUT_PATH, build_history(season, active_franchises(load_yaml("franchises.yml")), archives))
     print(f"Wrote {args.output}: {payload['ballots_counted']} accepted manager ballots")
 
 
