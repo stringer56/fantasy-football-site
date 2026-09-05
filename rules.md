@@ -3,6 +3,7 @@ layout: default
 title: League Rules
 permalink: /rules/
 description: The official rules and governance archive for Road to Glory FFL.
+body_class: rules-page
 ---
 
 {% include page-hero.html eyebrow="The standard" title="League Rules" description="The official home for league structure, scoring, roster, draft, and governance rules." compact=true %}

@@ -63,6 +63,17 @@ class LaunchPolishTests(unittest.TestCase):
         self.assertLess(text.index('home-franchises-heading'), text.index('class="cup-feature"'))
         self.assertIn('width="961" height="1366"', text)
 
+    def test_draft_and_roster_scroll_regions_are_named_and_focusable(self):
+        for filename, marker in [('_layouts/draft.html', 'table-scroll'),
+                                 ('_includes/live-matchup-card.html', 'live-roster-table-wrap')]:
+            text = (ROOT / filename).read_text(encoding='utf-8')
+            self.assertIn(f'class="{marker}" tabindex="0" role="region" aria-label=', text)
+            self.assertIn('<table aria-label=', text)
+
+    def test_rules_use_canonical_sentence_case_typography(self):
+        text = (ROOT / 'assets/css/publication.css').read_text(encoding='utf-8')
+        self.assertIn('.rules-page .prose h2, .rules-page .migration-card h2', text)
+
 
 if __name__ == '__main__':
     unittest.main()
