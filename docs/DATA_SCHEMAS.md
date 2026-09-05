@@ -184,10 +184,19 @@ record values.
   cumulative season Picks Leaderboard. Correctness is recorded only after Yahoo
   reports a completed matchup winner.
 
+`_data/community.yml` stores human-managed 2026 public Form URLs, statuses,
+weekly lock times, and Pick’em visibility policy. Its `owner_id` references use
+the stable manager identity in `owners.yml`; no separate manager registry is
+maintained. Finalized Pick’em weeks live under
+`_data/picks/{season}/week-{week}.json` with immutable aggregate selections,
+lock/final state, verified Yahoo winners, and manager results only at the
+configured public detail level.
+
 All three include `season`, nullable `week`, nullable `generated_at`, and a
 source/coverage object with accepted, rejected, and superseded ballot counts.
 Empty preseason data uses explicit unavailable states.
-See [Voting Architecture](VOTING_ARCHITECTURE.md) for private export handling.
+See [Voting Architecture](VOTING_ARCHITECTURE.md) and
+[Community Operations](COMMUNITY_OPERATIONS.md) for private export handling.
 
 Finalized weekly Power Rankings live under
 `_data/power_rankings/{season}/week-{week}.json`; the files are immutable public

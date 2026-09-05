@@ -54,7 +54,7 @@ class VotingTests(unittest.TestCase):
         self.assertEqual((alpha["first_place_votes"], beta["first_place_votes"]), (1, 1))
         self.assertEqual(alpha["average_rank"], 1.5)
 
-    def test_power_ranking_exact_tie_uses_franchise_id(self) -> None:
+    def test_power_ranking_exact_tie_shares_competition_rank(self) -> None:
         franchises = self.franchises[:2]
         ballots = [
             self.power_ballot("owner-a", "2026-09-01T10:00:00Z", ["alpha", "beta"]),
@@ -62,7 +62,8 @@ class VotingTests(unittest.TestCase):
         ]
         rankings, _, _ = build_power_rankings.aggregate_rankings(ballots, franchises, self.owners)
         self.assertEqual([item["franchise_id"] for item in rankings], ["alpha", "beta"])
-        self.assertEqual([item["rank"] for item in rankings], [1, 2])
+        self.assertEqual([item["rank"] for item in rankings], [1, 1])
+        self.assertTrue(all(item["is_tied"] for item in rankings))
 
     def test_duplicate_or_missing_power_team_is_rejected(self) -> None:
         duplicate = self.power_ballot("owner-a", "2026-09-01T10:00:00Z", ["alpha", "alpha", "gamma"])
@@ -92,6 +93,34 @@ class VotingTests(unittest.TestCase):
         week, accepted, rejected = build_picks_leaderboard.aggregate_week([unknown, outsider], self.matchups, self.owners)
         self.assertEqual((accepted, rejected), (0, 2))
         self.assertEqual(week["manager_results"], [])
+
+    def test_matchup_pick_requires_the_complete_weekly_slate(self) -> None:
+        second = {
+            **self.matchups[0],
+            "matchup_id": "2026-week-01-beta-vs-gamma",
+            "participants": [
+                {"franchise_id": "beta", "display_name": "Beta"},
+                {"franchise_id": "gamma", "display_name": "Gamma"},
+            ],
+        }
+        week, accepted, rejected = build_picks_leaderboard.aggregate_week(
+            [self.pick_ballot("owner-a", "2026-09-01T10:00:00Z", "alpha")],
+            [*self.matchups, second],
+            self.owners,
+        )
+        self.assertEqual((accepted, rejected), (0, 1))
+        self.assertEqual(week["manager_results"], [])
+
+    def test_pick_percentages_remain_hidden_until_publication(self) -> None:
+        ballot = self.pick_ballot("owner-a", "2026-09-01T10:00:00Z", "alpha")
+        hidden, _, _ = build_picks_leaderboard.aggregate_week(
+            [ballot], self.matchups, self.owners, results_visible=False
+        )
+        visible, _, _ = build_picks_leaderboard.aggregate_week(
+            [ballot], self.matchups, self.owners, results_visible=True
+        )
+        self.assertEqual(hidden["matchups"][0]["pick_results"], [])
+        self.assertEqual(visible["matchups"][0]["pick_results"][0]["percentage"], 1.0)
 
     def test_matchup_pick_totals_and_accuracy(self) -> None:
         ballots = [
@@ -146,14 +175,15 @@ class VotingTests(unittest.TestCase):
 
     def test_general_vote_aggregates_without_voter_identity(self) -> None:
         poll = {
-            "id": "award-1", "season": 2026, "week": None, "title": "Award", "description": "Choose",
-            "type": "award", "status": "closed", "opens_at": "2026-09-01T00:00:00Z",
-            "closes_at": "2026-09-02T00:00:00Z", "options": [{"id": "a", "label": "A"}, {"id": "b", "label": "B"}],
-            "submission_url": None, "results_status": "final", "results_source": "sanitized", "notes": [],
+            "vote_id": "award-1", "season": 2026, "title": "Award", "description": "Choose",
+            "type": "award", "status": "closed", "open_date": "2026-09-01T00:00:00Z",
+            "close_date": "2026-09-02T00:00:00Z", "options": [{"id": "a", "label": "A"}, {"id": "b", "label": "B"}],
+            "results_visibility": "public", "anonymous_or_named": "anonymous", "form_url": None,
+            "embed_url": None, "result_summary": None, "results_source": "sanitized", "notes": [],
         }
         rows = [
-            {"poll_id": "award-1", "owner_id": "owner-a", "submitted_at": "2026-09-01T10:00:00Z", "option_id": "a"},
-            {"poll_id": "award-1", "owner_id": "owner-b", "submitted_at": "2026-09-01T11:00:00Z", "option_id": "b"},
+            {"vote_id": "award-1", "owner_id": "owner-a", "submitted_at": "2026-09-01T10:00:00Z", "option_id": "a"},
+            {"vote_id": "award-1", "owner_id": "owner-b", "submitted_at": "2026-09-01T11:00:00Z", "option_id": "b"},
         ]
         result, accepted, rejected = import_vote_results.aggregate_poll(poll, rows, set(self.owners))
         self.assertEqual((accepted, rejected, result["ballots_counted"]), (2, 0, 2))

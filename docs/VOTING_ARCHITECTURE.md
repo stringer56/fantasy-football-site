@@ -1,146 +1,90 @@
 # Voting Architecture
 
-## Decision
+## Decision and trust boundary
 
-Road to Glory uses **Google Forms with a commissioner-owned private Google
-Sheet** for ballot collection. GitHub Pages remains the public presentation
-layer, and validated aggregate JSON remains the only voting data committed to
-the repository. This costs nothing, requires no always-on server, adds no member
-accounts, and does not change Yahoo authentication.
-
-The site never writes votes. A public button opens a configured Google Form;
-the commissioner closes and exports that form, sanitizes the export locally,
-runs the deterministic importer, reviews the diff, and commits only the public
-result snapshot.
+Road to Glory uses public Google Forms backed by commissioner-owned private
+Sheets. GitHub Pages is presentation only: it does not accept ballots, enforce
+locks, authenticate managers, or write to Yahoo. A commissioner exports and
+sanitizes responses locally, previews validation, explicitly finalizes, and
+commits only approved public aggregates.
 
 ```text
 manager -> public Google Form -> private commissioner Sheet
-        -> private CSV/JSON export -> local validation/aggregation
-        -> _data/generated/{votes,power_rankings,picks}.json
-        -> reviewed commit -> GitHub Pages
+        -> ignored sanitized CSV/JSON -> local preview -> explicit finalize
+        -> immutable weekly aggregate -> generated public views -> GitHub Pages
 ```
 
-## Privacy boundary
+`owner_id` in `_data/owners.yml` is the canonical stable manager ID. It is used
+as `manager_id` by importers so a second manager identity registry is neither
+needed nor permitted. Approved manager display names may appear in Pick’em
+scoreboards; submission timestamps and account identifiers never do.
 
-- Disable **Collect email addresses** in every Form.
-- Use a required dropdown containing approved manager display names. During
-  sanitization, replace the choice with its canonical `_data/owners.yml`
-  `owner_id`.
-- Keep raw exports under the ignored `private-vote-imports/` directory or
-  outside the repository entirely.
-- Remove spreadsheet response IDs and every email, IP address, Google account
-  identifier, edit link, or authentication field before import.
-- Power Ranking output publishes team aggregates only. Individual ranking
-  ballots are never written to `_data/generated/`.
-- Weekly picks may publish an approved manager display name and the manager's
-  football picks/results. They never include private submission metadata.
-- General league votes default to anonymous aggregate totals.
+## Privacy rules
 
-The public-data validator rejects `email`, `email_address`, `ip`, `ip_address`,
-`google_user_id`, `account_id`, `auth_token`, `edit_url`, and the existing Yahoo
-private-field denylist anywhere in generated output.
+- Disable email collection and Google sign-in requirements in every Form.
+- Use a required manager dropdown and map it to `owner_id` during sanitization.
+- Keep exports in ignored `private-vote-imports/` or outside the repository.
+- Remove emails, response IDs, IPs, account IDs, edit links, prefilled links,
+  authentication values, and all Sheet metadata before previewing.
+- Commit only public Form responder URLs. Never commit Form editor, Sheet,
+  individual response-edit, invitation, or private commissioner URLs.
+- Power Rankings publish franchise aggregates only; individual ballots remain
+  private.
+- Pick’em publishes aggregate percentages after lock by default. Individual
+  manager selections remain private unless the commissioner deliberately uses
+  `--publish-manager-picks`.
+- General votes publish configured poll metadata and aggregate option totals.
 
-## Form templates
+The public-data and voting validators reject known private keys recursively.
 
-### Weekly Power Rankings
+## Deterministic ballot policy
 
-1. Create a Form titled `RTG 2026 Week {week} Power Rankings`.
-2. Add a required manager dropdown using approved display names.
-3. Add one required ranking grid containing all 12 active franchises and ranks
-   1–12; enable the setting that requires one response per column.
-4. Do not collect email addresses and do not require Google sign-in.
-5. Link responses to a private Sheet.
-6. Put only the public responder URL in the corresponding poll's
-   `submission_url`; never commit the editor URL.
+The latest valid submission from each manager at or before the announced
+deadline counts. A later invalid or late row does not erase an earlier valid
+row. Preview output identifies rejected row numbers/reasons, superseded rows,
+and managers with no valid submission without writing public files.
 
-Sanitized CSV columns are `owner_id`, `submitted_at`, then `rank_1` through
-`rank_12`, where each rank cell contains a canonical franchise ID.
+Power ballots must rank every active franchise exactly once. With 12 teams,
+first earns 12 points through twelfth earning 1. Sort order is points,
+first-place votes, then lower average rank. Exact mathematical ties share a
+competition rank; franchise ID only makes the display order deterministic.
+Yahoo standings never affect the vote calculation.
 
-### Weekly Matchup Picks
+Pick’em ballots must select every current Yahoo matchup exactly once using its
+stable canonical matchup ID. One commissioner-defined weekly time locks the
+entire slate. A correct verified Yahoo winner earns one point; an incorrect
+pick earns zero. Pending or no-contest games do not become losses. The public
+percentage layer is hidden before lock.
 
-1. Create a Form titled `RTG 2026 Week {week} Matchup Picks`.
-2. Add the required manager dropdown.
-3. Add one required multiple-choice question per current Yahoo matchup. Each
-   choice is one of the two participating franchises.
-4. Export columns as `owner_id`, `submitted_at`, followed by one column named
-   for each canonical `matchup_id`; its value is the selected `franchise_id`.
-5. Publish aggregate percentages only when the commissioner intends results to
-   be visible.
+## General league polls
 
-### General League Vote
+`_data/votes.yml` is the human-managed registry. Each poll contains:
+`vote_id`, title, description, season, type, options, open/close dates, status,
+results visibility, named/anonymous mode, public Form/embed URLs, result
+summary/source, and notes. Status is `upcoming`, `open`, or `closed`; visibility
+is `hidden`, `after_close`, or `public`.
 
-1. Create a Form using the canonical poll title and choices.
-2. Add the manager dropdown, without collecting email.
-3. Export the sanitized columns `poll_id`, `owner_id`, `submitted_at`, and
-   `option_id`.
-4. Do not create production proposals in `_data/votes.yml` until the
-   commissioner supplies the actual question, choices, window, and form URL.
+An optional public Google Forms iframe is progressively enhanced only. Every
+embedded poll also needs a normal external Form link, and the page remains
+usable when the iframe or JavaScript fails.
 
-## Deadlines and locking
+## Deadlines and finalization
 
-GitHub Pages cannot enforce a transactional deadline. The poll's `closes_at`
-is a public notice, not a security control. The commissioner must manually stop
-Form responses before the applicable games begin (or use a separately reviewed
-free Google Workspace automation later). Importers reject submissions after the
-configured deadline, but they cannot prevent the Form from accepting them.
+A timestamp printed on a static page is not a security lock. The commissioner
+must stop Form responses at the announced time. Importers additionally reject
+late rows. Finalized Power weeks are immutable. Pick’em selections become
+immutable at `locked`; the same aggregate may later advance to `final` after
+Yahoo verifies every winner. Any material correction requires the explicit
+`--override-finalized` flag and a documented review.
 
-Never describe a browser clock, disabled button, or JavaScript-only state as a
-secure lock.
+Exact commissioner commands and Form field definitions are in
+[Community Operations](COMMUNITY_OPERATIONS.md). Power-specific persistence and
+chart behavior are in [2026 Power Rankings](POWER_RANKINGS.md).
 
-## Validation and duplicate policy
+## Public separation
 
-The deterministic duplicate rule is:
-
-> The latest valid submission from each manager at or before the deadline wins.
-
-Invalid submissions do not replace an earlier valid submission. Importers
-reject unknown owners, timestamps without a timezone, late ballots, unknown
-franchises/matchups/options, duplicate ranking teams, missing ranking teams,
-duplicate ranks, and picks for teams outside their matchup. Rejection counts are
-published only as moderation totals, without identities or private row data.
-Valid earlier duplicates are counted separately as `superseded_ballots`, so the
-latest-submission rule is visible rather than silently merging rows.
-
-Power Rankings use manager votes only. In a 12-team league, rank 1 earns 12
-points through rank 12 earning 1. Sorting uses total points, first-place votes,
-better average rank, then franchise ID as the deterministic final fallback.
-Yahoo standings are never used as a ranking input.
-
-Picks score one point for a correct selection and zero for an incorrect one.
-Pending games do not affect totals. Actual winners are accepted only from the
-current-season normalized Yahoo matchup output after Yahoo marks the matchup
-complete. Picks never write to or modify Yahoo.
-
-## Import and moderation procedure
-
-1. Close the Form manually at the announced deadline.
-2. Duplicate the private response Sheet as a moderation copy.
-3. Remove disallowed/private columns and map display choices to canonical IDs.
-4. Save the sanitized export under `private-vote-imports/`.
-5. Run the matching command:
-
-   ```powershell
-   python scripts/import_vote_results.py --input private-vote-imports/general.csv
-   python scripts/build_power_rankings.py --input private-vote-imports/power-rankings.csv --finalize
-   python scripts/build_picks_leaderboard.py --input private-vote-imports/matchup-picks.csv
-   ```
-
-6. Review accepted/rejected counts and inspect the generated JSON diff.
-7. Run voting, privacy, repository, and Jekyll validation.
-8. Commit only generated JSON and any reviewed poll-status change.
-
-Generated timestamps come from the sanitized export, not the local clock, so
-re-running the same import produces identical output.
-
-`--finalize` preserves the reviewed weekly aggregate under
-`_data/power_rankings/{season}/week-{week}.json`, refuses a different overwrite,
-and regenerates the ordered chart/facts model. See
-[2026 Power Rankings](POWER_RANKINGS.md).
-
-## Archive process
-
-After results are final, set the poll to `closed` and then `archived`, set
-`results_status: final`, record the public generated file as `results_source`,
-and remove the public submission URL if the form should no longer accept visits.
-Retain the private Sheet according to the commissioner's league policy. The
-public archive keeps only sanitized aggregates and approved display names.
+`/power-rankings/`, `/picks/`, and `/votes/` are separate systems even though
+they share identity and privacy helpers. Homepage and weekly-hub modules remain
+compact and link to their canonical pages. Community headlines are generated
+only from finalized weekly archives; previews and open ballots never become
+news.

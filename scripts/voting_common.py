@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 from datetime import datetime
 from pathlib import Path
@@ -12,7 +13,12 @@ import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
-FORBIDDEN_VOTE_KEYS = {"account_id", "auth_token", "edit_url", "email", "email_address", "google_user_id", "ip", "ip_address"}
+FORBIDDEN_VOTE_KEYS = {
+    "account_id", "auth_token", "edit_url", "email", "email_address",
+    "form_edit_url", "google_user_id", "ip", "ip_address", "invitation_url",
+    "prefilled_url", "response_id", "response_url", "sheet_id", "sheet_url",
+    "spreadsheet_id", "spreadsheet_url",
+}
 
 
 class BallotError(ValueError):
@@ -86,9 +92,23 @@ def select_latest_valid(
     validator: Callable[[dict[str, Any]], None],
     deadline: datetime | None = None,
 ) -> tuple[list[dict[str, Any]], int]:
-    selected: dict[str, tuple[datetime, dict[str, Any]]] = {}
-    rejected = 0
-    for ballot in ballots:
+    selected, rejected_rows, _ = select_latest_valid_report(
+        ballots, owner_ids, validator, deadline
+    )
+    return selected, len(rejected_rows)
+
+
+def select_latest_valid_report(
+    ballots: Iterable[dict[str, Any]],
+    owner_ids: set[str],
+    validator: Callable[[dict[str, Any]], None],
+    deadline: datetime | None = None,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
+    """Select one latest valid ballot per manager with private preview details."""
+    selected: dict[str, tuple[datetime, int, dict[str, Any]]] = {}
+    rejected: list[dict[str, Any]] = []
+    superseded: list[dict[str, Any]] = []
+    for row_number, ballot in enumerate(ballots, start=2):
         try:
             owner_id = ballot.get("owner_id")
             if owner_id not in owner_ids:
@@ -97,13 +117,23 @@ def select_latest_valid(
             if deadline is not None and submitted > deadline:
                 raise BallotError("submission is after the deadline")
             validator(ballot)
-        except (BallotError, TypeError):
-            rejected += 1
+        except (BallotError, TypeError) as error:
+            rejected.append({"row": row_number, "reason": str(error)})
             continue
         current = selected.get(owner_id)
         if current is None or submitted > current[0]:
-            selected[owner_id] = (submitted, ballot)
-    return [selected[key][1] for key in sorted(selected)], rejected
+            if current is not None:
+                superseded.append({"row": current[1], "owner_id": owner_id})
+            selected[owner_id] = (submitted, row_number, ballot)
+        else:
+            superseded.append({"row": row_number, "owner_id": owner_id})
+    return [selected[key][2] for key in sorted(selected)], rejected, superseded
+
+
+def public_aggregate_fingerprint(value: Any) -> str:
+    """Hash only a public aggregate, never individual private selections."""
+    encoded = json.dumps(value, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
 
 
 def write_json(path: Path, payload: dict[str, Any]) -> None:

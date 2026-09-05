@@ -17,6 +17,7 @@ try:
         load_yaml,
         owner_index,
         parse_deadline,
+        public_aggregate_fingerprint,
         select_latest_valid,
         write_json,
     )
@@ -29,12 +30,14 @@ except ImportError:
         load_yaml,
         owner_index,
         parse_deadline,
+        public_aggregate_fingerprint,
         select_latest_valid,
         write_json,
     )
 
 
 OUTPUT_PATH = ROOT / "_data" / "generated" / "picks.json"
+ARCHIVE_ROOT = ROOT / "_data" / "picks"
 
 
 def canonical_matchups_from_yahoo(
@@ -102,17 +105,27 @@ def rows_to_ballots(imported: dict[str, Any], matchup_ids: set[str]) -> list[dic
             for key, value in row.items()
             if key not in metadata and value not in (None, "")
         ]
-        ballots.append({"owner_id": row.get("owner_id"), "submitted_at": row.get("submitted_at"), "picks": picks})
+        ballots.append(
+            {
+                "owner_id": row.get("owner_id"),
+                "submitted_at": row.get("submitted_at"),
+                "season": row.get("season"),
+                "week": row.get("week"),
+                "picks": picks,
+            }
+        )
     return ballots
 
 
 def validate_pick_ballot(ballot: dict[str, Any], matchup_by_id: dict[str, dict[str, Any]]) -> None:
     picks = ballot.get("picks")
-    if not isinstance(picks, list) or not picks:
-        raise BallotError("matchup ballot must contain at least one pick")
+    if not isinstance(picks, list):
+        raise BallotError("matchup ballot must contain picks")
     matchup_ids = [pick.get("matchup_id") for pick in picks if isinstance(pick, dict)]
     if len(matchup_ids) != len(picks) or len(set(matchup_ids)) != len(matchup_ids):
         raise BallotError("matchup ballot contains duplicate or malformed picks")
+    if set(matchup_ids) != set(matchup_by_id):
+        raise BallotError("matchup ballot must select every required matchup exactly once")
     for pick in picks:
         matchup = matchup_by_id.get(pick.get("matchup_id"))
         if matchup is None:
@@ -199,8 +212,27 @@ def aggregate_week(
         rendered_matchups.append(item)
     week = matchups[0]["week"] if matchups else None
     season = matchups[0]["season"] if matchups else None
+    selection_totals = [
+        {
+            "matchup_id": matchup["matchup_id"],
+            "picks": [
+                {
+                    "franchise_id": participant["franchise_id"],
+                    "vote_count": votes[matchup["matchup_id"]][participant["franchise_id"]],
+                }
+                for participant in matchup["participants"]
+            ],
+        }
+        for matchup in matchups
+    ]
     return (
-        {"season": season, "week": week, "matchups": rendered_matchups, "manager_results": manager_results},
+        {
+            "season": season,
+            "week": week,
+            "matchups": rendered_matchups,
+            "manager_results": manager_results,
+            "selection_totals": selection_totals,
+        },
         len(selected),
         rejected,
     )
@@ -246,6 +278,7 @@ def build_output(
     *,
     existing: dict[str, Any] | None = None,
     deadline: object = None,
+    community_data: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     imported = imported or {}
     season = int(imported.get("season") or site_data["current_season"])
@@ -263,15 +296,33 @@ def build_output(
             results_visible=bool(imported.get("results_visible")),
             publish_manager_picks=bool(imported.get("publish_manager_picks")),
         )
+        pick_config = (community_data or {}).get("pickem") or {}
+        current.update(
+            {
+                "state": imported.get("state") or pick_config.get("status") or "upcoming",
+                "form_url": imported.get("form_url") or pick_config.get("form_url"),
+                "lock_at": deadline or imported.get("closes_at") or pick_config.get("lock_at"),
+                "results_visibility": (
+                    "public" if imported.get("results_visible") else "hidden_before_lock"
+                ),
+                "manager_picks_visibility": (
+                    "public" if imported.get("publish_manager_picks") else "private"
+                ),
+            }
+        )
     elif ballots:
         rejected = len(ballots)
-    weekly_results = [
-        item for item in (existing or {}).get("weekly_results") or []
-        if not current or (item.get("season"), item.get("week")) != (current.get("season"), current.get("week"))
-    ]
-    if current and (accepted or any(item["winner_status"] == "verified" for item in current["matchups"])):
-        weekly_results.append(current)
+    weekly_results = list((existing or {}).get("weekly_results") or [])
     weekly_results.sort(key=lambda item: (item["season"], item["week"]))
+    archived_current = next(
+        (
+            item for item in weekly_results
+            if current and (item.get("season"), item.get("week")) == (current.get("season"), current.get("week"))
+        ),
+        None,
+    )
+    if archived_current and not accepted:
+        current = archived_current
     leaderboard = build_leaderboard(weekly_results, owners)
     return {
         "schema_version": 1,
@@ -280,7 +331,7 @@ def build_output(
         "generated_at": generated_at_from_rows(imported, ballots),
         "source": {
             "type": "sanitized_google_forms_export_and_normalized_yahoo" if ballots else "normalized_yahoo",
-            "coverage_status": "published" if accepted else ("ready_for_ballots" if matchups else "unavailable"),
+            "coverage_status": "published" if accepted or archived_current else ("ready_for_ballots" if matchups else "unavailable"),
             "matchup_status": matchup_status,
             "accepted_ballots": accepted,
             "rejected_ballots": rejected,
@@ -295,6 +346,89 @@ def build_output(
     }
 
 
+def pick_archive_path(season: int, week: int, root: Path = ARCHIVE_ROOT) -> Path:
+    return root / str(season) / f"week-{week:02d}.json"
+
+
+def finalized_week_payload(
+    payload: dict[str, Any], *, generated_at: str | None, state: str
+) -> dict[str, Any]:
+    current = payload.get("current_week") or {}
+    if state not in {"locked", "final"}:
+        raise ValueError("Pick'em archive state must be locked or final")
+    if not isinstance(current.get("week"), int) or not current.get("matchups"):
+        raise ValueError("Pick'em finalization requires a canonical matchup week")
+    if payload.get("source", {}).get("accepted_ballots", 0) < 1:
+        raise ValueError("Pick'em finalization requires at least one valid ballot")
+    manager_results = current.get("manager_results") or []
+    if state != "final":
+        manager_results = []
+    aggregate = current.get("selection_totals") or []
+    return {
+        "schema_version": 1,
+        "season": current["season"],
+        "week": current["week"],
+        "published_at": generated_at,
+        "state": state,
+        "lock_at": current.get("lock_at"),
+        "results_visibility": current.get("results_visibility"),
+        "manager_picks_visibility": current.get("manager_picks_visibility"),
+        "ballots_counted": payload["source"]["accepted_ballots"],
+        "aggregate_fingerprint": public_aggregate_fingerprint(aggregate),
+        "matchups": current["matchups"],
+        "manager_results": manager_results,
+        "weekly_winners": [
+            {
+                "owner_id": row["owner_id"],
+                "display_name": row["display_name"],
+                "correct": row["correct"],
+                "incorrect": row["incorrect"],
+            }
+            for row in manager_results
+            if row.get("weekly_win")
+        ],
+        "source": {
+            "type": "sanitized_google_forms_export_and_normalized_yahoo",
+            "winner_source": "verified_completed_yahoo_matchups_only",
+        },
+    }
+
+
+def persist_finalized_week(
+    week: dict[str, Any], root: Path = ARCHIVE_ROOT, *, override: bool = False
+) -> Path:
+    path = pick_archive_path(week["season"], week["week"], root)
+    serialized = json.dumps(week, ensure_ascii=False, indent=2) + "\n"
+    if path.exists():
+        existing = json.loads(path.read_text(encoding="utf-8"))
+        if existing == week:
+            return path
+        scoring_update = (
+            existing.get("state") == "locked"
+            and week.get("state") == "final"
+            and existing.get("aggregate_fingerprint") == week.get("aggregate_fingerprint")
+            and existing.get("ballots_counted") == week.get("ballots_counted")
+        )
+        if not scoring_update and not override:
+            raise ValueError(f"refusing to overwrite finalized Pick'em selections: {path}")
+        if existing.get("state") == "final" and not override:
+            raise ValueError(f"refusing to overwrite finalized Pick'em results: {path}")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(serialized, encoding="utf-8")
+    return path
+
+
+def load_finalized_weeks(
+    season: int, root: Path = ARCHIVE_ROOT
+) -> list[dict[str, Any]]:
+    weeks = []
+    for path in sorted((root / str(season)).glob("week-*.json")):
+        value = json.loads(path.read_text(encoding="utf-8"))
+        if value.get("season") == season and value.get("state") in {"locked", "final"}:
+            weeks.append(value)
+    return sorted(weeks, key=lambda item: item["week"])
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", type=Path, help="Sanitized CSV or JSON export")
@@ -303,18 +437,25 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=OUTPUT_PATH)
     args = parser.parse_args()
     imported = load_import(args.input) if args.input else None
-    existing = json.loads(args.existing.read_text(encoding="utf-8")) if args.existing else None
+    site_data = load_yaml("site.yml")
+    season = int((imported or {}).get("season") or site_data["current_season"])
+    existing = (
+        json.loads(args.existing.read_text(encoding="utf-8"))
+        if args.existing
+        else {"weekly_results": load_finalized_weeks(season)}
+    )
     matchups = json.loads((ROOT / "_data" / "generated" / "matchups.json").read_text(encoding="utf-8"))
     manifest = json.loads((ROOT / "_data" / "generated" / "manifest.json").read_text(encoding="utf-8"))
     payload = build_output(
         imported,
         matchups,
         manifest,
-        load_yaml("site.yml"),
+        site_data,
         load_yaml("franchises.yml"),
         load_yaml("owners.yml"),
         existing=existing,
         deadline=args.deadline,
+        community_data=load_yaml("community.yml"),
     )
     write_json(args.output, payload)
     print(f"Wrote {args.output}: {len(payload['leaderboard'])} managers in the Picks Leaderboard")

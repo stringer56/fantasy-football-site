@@ -10,6 +10,8 @@ files. `/2026/` is the league headquarters; a weekly route is created only when
 The homepage contains compact modules for the featured matchup, standings,
 Record Watch, the Road to Glory Wire, Power Rankings, and Pick’em. Active
 franchise profiles receive a 2026 summary from the same generated source.
+Only finalized Power Rankings and locked/final Pick’em aggregates can produce
+community modules or League Wire headlines; importer previews never do.
 
 ## Data sources and fallback
 
@@ -51,6 +53,11 @@ franchise IDs and writes:
 - `_data/generated/league_wire.json`: deterministic league-only headlines;
 - `_data/generated/live/2026/week-{week}.json`: the normalized weekly view;
 - `_live_weeks/2026-week-{week}.md`: a small generated route document.
+
+New weekly snapshots also preserve that week’s standings array. Finalized
+Power Rankings may attach the matching Yahoo rank as a comparison hook. A full
+rankings-versus-standings history chart remains deferred until enough weekly
+standings snapshots exist for an honest comparison.
 
 The external NFL/fantasy news ticker remains separate and is labelled
 `NFL + Fantasy Wire`. League Wire headlines are sourced only from current

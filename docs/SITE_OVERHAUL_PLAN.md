@@ -580,17 +580,22 @@ Recommended file: `_data/votes.yml`, with one file per season if volume grows.
 
 ```yaml
 polls:
-  - poll_id: 2026-week-01-winners
+  - vote_id: 2026-rule-example
     season: 2026
-    week: 1
-    type: matchup_winners
-    status: scheduled
-    opens_at:
-    closes_at:
-    ballot_url:
+    title:
+    description:
+    type: league_rule
+    status: upcoming
+    open_date:
+    close_date:
+    results_visibility: after_close
+    anonymous_or_named: anonymous
+    form_url:
+    embed_url:
     options: []
-    results: []
-    updated_at:
+    result_summary:
+    results_source:
+    notes: []
 ```
 
 GitHub Pages cannot accept authenticated votes because it is a static host. The site can display polls and committed result snapshots, but ballot collection requires a separate free service such as a commissioner-owned form, or a manual repository workflow. No client-side code should pretend to save authoritative votes locally. Power rankings and picks should follow the same pattern: external/manual input, validated committed output, static rendering.

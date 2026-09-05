@@ -270,8 +270,30 @@ def record_watch_events(matchups: list[dict[str, Any]], thresholds_data: dict[st
     return sorted(events, key=lambda event: (not event["final"], event["event_id"]))
 
 
-def build_league_wire(week: int | None, matchups: list[dict[str, Any]], facts: list[dict[str, Any]], record_events: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def build_league_wire(
+    week: int | None,
+    matchups: list[dict[str, Any]],
+    facts: list[dict[str, Any]],
+    record_events: list[dict[str, Any]],
+    power: dict[str, Any] | None = None,
+    picks: dict[str, Any] | None = None,
+) -> list[dict[str, Any]]:
     items: list[dict[str, Any]] = []
+    power = power or {}
+    picks = picks or {}
+    if power.get("status") == "ready" and power.get("week") == week:
+        leader = next((row for row in power.get("top_three", []) if row.get("rank") == 1), None)
+        if leader and leader.get("previous_rank") not in (None, 1):
+            items.append({"headline_id": f"power-week-{week}:new-number-one", "category": "Power Rankings", "headline": f"{leader['display_name']} takes over the #1 Power Ranking", "detail": f"The manager vote moved {leader['display_name']} from #{leader['previous_rank']} to #1.", "week": week, "source": "finalized_manager_power_rankings", "path": "/power-rankings/"})
+        riser = power.get("biggest_riser")
+        if riser and riser.get("movement", 0) > 0:
+            items.append({"headline_id": f"power-week-{week}:biggest-riser", "category": "Power Rankings", "headline": f"{riser['display_name']} jumps {riser['movement']} spots", "detail": f"The finalized Week {week} manager ballot moved {riser['display_name']} to #{riser['rank']}.", "week": week, "source": "finalized_manager_power_rankings", "path": "/power-rankings/"})
+    if picks.get("state") == "final" and picks.get("week") == week:
+        winners = picks.get("weekly_winners") or []
+        if winners:
+            names = " and ".join(item["display_name"] for item in winners)
+            record = f"{winners[0]['correct']}–{winners[0]['incorrect']}" if len(winners) == 1 else "a tied top score"
+            items.append({"headline_id": f"pickem-week-{week}:winner", "category": "Pick’em", "headline": f"{names} wins Week {week} Pick’em", "detail": f"The finalized weekly result was {record}.", "week": week, "source": "finalized_pickem_and_verified_yahoo", "path": "/picks/"})
     for event in record_events[:2]:
         items.append({"headline_id": f"record:{event['event_id']}", "category": "Record Watch", "headline": event["level"], "detail": event["message"], "week": week, "source": "normalized_yahoo_and_verified_history", "path": "/records/"})
     fact_by_id = {row["fact_id"]: row for row in facts}
@@ -325,12 +347,15 @@ def power_ranking_summary(
         ),
         None,
     )
-    if not finalized and current.get("season") == season and current.get("week") == week and current.get("rankings"):
+    if not finalized and current.get("results_status") == "final" and current.get("season") == season and current.get("week") == week and current.get("rankings"):
         finalized = current
     summary = {
         "status": "ready" if finalized else "unavailable",
+        "voting_status": (current.get("voting") or {}).get("status") or "upcoming",
+        "form_url": (current.get("voting") or {}).get("form_url"),
+        "closes_at": (current.get("voting") or {}).get("closes_at"),
         "week": finalized.get("week") if finalized else None,
-        "top_three": (finalized.get("rankings") or [])[:3] if finalized else [],
+        "top_three": [row for row in (finalized.get("rankings") or []) if row.get("rank", 99) <= 3] if finalized else [],
         "biggest_riser": None,
         "biggest_faller": None,
     }
@@ -340,6 +365,29 @@ def power_ranking_summary(
             summary["biggest_riser"] = max(movements, key=lambda row: (row["movement"], row["franchise_id"]))
             summary["biggest_faller"] = min(movements, key=lambda row: (row["movement"], row["franchise_id"]))
     return summary
+
+
+def pickem_summary(season: int, week: int | None, picks: dict[str, Any]) -> dict[str, Any]:
+    current = picks.get("current_week") or {}
+    if current.get("season") != season or current.get("week") != week:
+        current = {}
+    finished = [
+        row for row in picks.get("weekly_results", [])
+        if row.get("season") == season and row.get("state") == "final"
+    ]
+    latest = max(finished, key=lambda row: row.get("week", 0), default={})
+    leader = (picks.get("leaderboard") or [None])[0]
+    return {
+        "status": "ready" if current else "unavailable",
+        "state": current.get("state") or "upcoming",
+        "week": current.get("week"),
+        "form_url": current.get("form_url"),
+        "lock_at": current.get("lock_at"),
+        "matchups": current.get("matchups") or [],
+        "weekly_winners": current.get("weekly_winners") or [],
+        "season_leader": leader,
+        "last_week_winners": latest.get("weekly_winners") or [],
+    }
 
 
 def build_live_payload(*, stale: bool = False) -> tuple[dict[str, Any], dict[str, Any]]:
@@ -375,7 +423,8 @@ def build_live_payload(*, stale: bool = False) -> tuple[dict[str, Any], dict[str
         "franchise_summaries": [],
         "playoff_race": {"status": "not_calculated", "teams": [], "reason": "League tiebreakers and clinching rules are not yet fully deterministic."},
         "power_rankings": {"status": "unavailable", "week": None, "top_three": [], "biggest_riser": None, "biggest_faller": None},
-        "picks": {"status": "unavailable", "week": None},
+        "picks": {"status": "unavailable", "state": "upcoming", "week": None, "matchups": [], "weekly_winners": [], "season_leader": None, "last_week_winners": []},
+        "active_vote": None,
         "season_milestones": [],
     }
     if not source_current:
@@ -391,6 +440,7 @@ def build_live_payload(*, stale: bool = False) -> tuple[dict[str, Any], dict[str
     power = load_json(GENERATED / "power_rankings.json")
     power_history = load_json(GENERATED / "power_rankings_history.json")
     picks = load_json(GENERATED / "picks.json")
+    votes = load_json(GENERATED / "votes.json")
     by_id, by_key = franchise_indexes(franchises_data, season)
     if len(by_id) != 12 or len(by_key) != 12:
         raise ValueError("all 12 active franchises require verified 2026 Yahoo team keys")
@@ -409,11 +459,12 @@ def build_live_payload(*, stale: bool = False) -> tuple[dict[str, Any], dict[str
     facts = weekly_facts(matchups, standings)
     events = record_watch_events(matchups, thresholds)
     week = int(matchups_data.get("week") or (league_data.get("league") or {}).get("current_week") or 0) or None
-    wire = build_league_wire(week, matchups, facts, events)
     projected_matchups = [game for game in matchups if all(isinstance(team.get("projected_score"), (int, float)) for team in game["teams"])]
     featured_matchup = min(projected_matchups, key=lambda game: (abs(game["teams"][0]["projected_score"] - game["teams"][1]["projected_score"]), game["matchup_id"])) if projected_matchups else (matchups[0] if matchups else None)
 
     power_rankings = power_ranking_summary(season, week, power, power_history)
+    picks_summary = pickem_summary(season, week, picks)
+    wire = build_league_wire(week, matchups, facts, events, power_rankings, picks_summary)
 
     league = league_data.get("league") or {}
     end_week = league.get("end_week")
@@ -429,7 +480,8 @@ def build_live_payload(*, stale: bool = False) -> tuple[dict[str, Any], dict[str
         "league_wire": wire,
         "franchise_summaries": franchise_summaries(by_id, standings, matchups),
         "power_rankings": power_rankings,
-        "picks": {"status": "ready" if picks.get("season") == season and picks.get("current_week") else "unavailable", "week": (picks.get("current_week") or {}).get("week")},
+        "picks": picks_summary,
+        "active_vote": (votes.get("active_polls") or [None])[0],
         "season_milestones": ([{"milestone_id": f"week-{week}-opened", "label": f"Week {week} slate published", "week": week}] if week else []) + [{"milestone_id": event["event_id"], "label": event["level"], "week": week} for event in events if event["final"]],
     })
     wire_payload = {"schema_version": 1, "season": season, "week": week, "generated_at": source_timestamp, "coverage_status": "ready" if wire else "unavailable", "items": wire}
@@ -447,10 +499,12 @@ def persist_week(payload: dict[str, Any]) -> Path | None:
         "generated_at": payload.get("generated_at"),
         "data_status": payload.get("data_status"),
         "freshness": payload.get("freshness"),
+        "standings": payload.get("standings", []),
         "matchups": payload.get("matchups", []),
         "weekly_facts": payload.get("weekly_facts", []),
         "record_watch": payload.get("record_watch", []),
         "power_rankings": payload.get("power_rankings"),
+        "picks": payload.get("picks"),
     }
     path = GENERATED / "live" / str(payload["season"]) / f"week-{week:02d}.json"
     write_json(path, snapshot)

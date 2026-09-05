@@ -1,0 +1,19 @@
+schema_version: 1
+season: 2026
+
+power_rankings:
+  status: upcoming
+  form_url:
+  closes_at:
+  expected_manager_count: 12
+
+pickem:
+  status: upcoming
+  form_url:
+  lock_at:
+  results_visibility: after_lock
+  manager_picks_visibility: private
+
+notes:
+  - Only public Google Forms responder URLs belong in this file.
+  - Private Sheet, form-editor, response-edit, account, and credential values are prohibited.
