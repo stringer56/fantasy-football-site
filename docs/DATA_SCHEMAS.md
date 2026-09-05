@@ -3,9 +3,12 @@
 ## Community operations additions
 
 - `_data/community.yml` has safe public responder URL slots for `power_rankings`, `pickem`, and `league_votes`; null means intentionally unconfigured.
-- Ignored preview receipts contain only the import filename, SHA-256, counts, warnings, and finalization readiness. They never contain ballot rows.
+- Ignored preview receipts contain the import filename/hash, reviewed configuration/identity/slate hash, deadline, counts, warnings, and finalization readiness. They never contain ballot rows.
 - Finalized Power Rankings and Pick’em weeks include a meaningful `published_at` and an `audit` array. Overrides require a reason and previous archive fingerprint.
 - Picks Leaderboard ranks may repeat for exact ties and use competition ranking; `is_tied` makes the tie explicit.
+- `community.pickem.lock_at`, `lock_week`, and `lock_timezone` bind the canonical whole-slate lock. Week 1 is September 9, 2026 at 20:20 America/New_York.
+- Closed general polls persist at `_data/league_votes/{season}/{vote_id}.json`, with aggregate counts, public metadata, `published_at` and audited overrides. Generated views preserve these exact archives.
+- Pick’em's locked private CSV hash binding remains in ignored `.community-state`, never in public archives. Grading needs that unchanged input; corrections require review.
 
 All committed data is public. Never add credentials, Yahoo account identifiers,
 private invitation data, email addresses, or private league communications.

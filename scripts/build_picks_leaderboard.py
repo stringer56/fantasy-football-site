@@ -417,7 +417,8 @@ def persist_finalized_week(
         if existing == week:
             return path
         scoring_update = (
-            existing.get("state") == "locked"
+            not override
+            and existing.get("state") == "locked"
             and week.get("state") == "final"
             and existing.get("aggregate_fingerprint") == week.get("aggregate_fingerprint")
             and existing.get("ballots_counted") == week.get("ballots_counted")

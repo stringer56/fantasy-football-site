@@ -111,12 +111,12 @@ must handle impersonation privately. Do not claim Google sign-in or secure ident
 
 ## Validation and review record
 
-Local suite: 190 tests passed at initial reconciliation validation, including eight
+Local suite: 192 tests passed at reconciliation validation, including ten
 new tests and isolated CLI dry runs for all three flows. Compilation, pip check,
 all 14 non-rendered validator entrypoints, deterministic records/recap/metrics and
 Yahoo discovery checks, JavaScript syntax checks and diff whitespace checks passed.
 Local Bundler is unavailable; the exact GitHub Actions Jekyll/rendered/privacy
-build is required on this PR. Final CI and artifact review evidence is recorded below.
+build passed on this PR. CI and artifact review evidence is recorded below.
 
 Synthetic tests cover complete/partial ballots, duplicates, invalid IDs/options,
 deadline rejection, Yahoo-unavailable behavior, ranking ties, missing previews,
@@ -129,7 +129,11 @@ is invented. Tests use simulated final Yahoo-shaped inputs only inside temp repo
 Largest images are approved archival originals: 2025 draft-order PNG ~3.34 MB and
 2022 championship PNG ~1.72 MB. Preserve originals; future thumbnail/WebP variants
 are a low-priority optimization, not a launch blocker. No oversized new art added.
-No legacy root debug/diagnostic/duplicate script files remain. Compatibility
+No legacy root debug/diagnostic/duplicate script files remain. `_includes/roster.html`
+has no static consumer in the current templates; retained pending deliberate cleanup
+because live rosters use their newer presentation. Canonical/OG SEO metadata is a
+future low-risk improvement; titles, descriptions and language metadata already exist.
+Compatibility
 `franchise_summaries.json` is intentionally retained; later cleanup needs consumers checked.
 External ticker has three source adapters but no committed articles; ESPN feed
 returned 403 in the latest job. Feed errors are not public headlines.
@@ -141,5 +145,17 @@ See `ROADMAP.md` for deferred enhancements and `NEXT_STEPS.md` for Joe's exact a
 
 ## Final build evidence
 
-Pending latest PR checks and responsive artifact review; do not infer success from
-the older PR #24 CI run. No production merge is performed by this pass.
+[CI run 33982767324](https://github.com/stringer56/fantasy-football-site/actions/runs/33982767324)
+passed for implementation commit `723cd8082333d347739714a90114e9e8aec4cc69`, including
+192 tests, Jekyll and the rendered/privacy checks. Its downloaded artifact passed
+the existing validator for **44 rendered pages** and the new privacy scan locally.
+Browser review of that exact artifact passed **80/80 combinations** (16 routes at
+1440, 1024, 768, 390, 360): no body overflow, broken images, missing alt attributes,
+failed internal requests, debug states or synthetic data; mobile menu/Escape worked.
+Desktop and mobile screenshots of home, weekly hub and community pages were reviewed.
+Local screenshots/results remain ignored under `.cache/reconciliation-*`.
+
+No merge/deployment is performed by this pass. The code is suitable for commissioner
+review/merge when the latest PR check stays green; production still runs main #23.
+The site is not operationally activated until real Forms, ranking deadline and a
+real poll are configured and Joe verifies the repaired updater on merged main.

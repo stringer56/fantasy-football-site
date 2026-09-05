@@ -126,6 +126,12 @@ class CommunityCliDryRun(unittest.TestCase):
         rebuilt = json.loads((self.data / 'generated/picks.json').read_text())
         self.assertEqual(rebuilt['leaderboard'][0]['correct'], 1)
         self.cli('build_picks_leaderboard.py', '--input', path, ok=False)
+        self.csv('picks', [{**self.row(), self.mid: 'test-beta'}, {**self.row('test-owner-b'), self.mid: 'test-alpha'}])
+        self.cli('import_pickem.py', *opts)
+        self.cli('finalize_pickem.py', *final, '--override-finalized', ok=False)
+        self.cli('finalize_pickem.py', *final, '--override-finalized', '--override-reason', 'Synthetic reviewed correction')
+        corrected = json.loads(archive.read_text())
+        self.assertEqual(corrected['audit'][-1]['action'], 'override')
 
     def test_general_csv_preview_finalize_archive_and_later_poll_preservation(self):
         path = self.csv('votes', [{'submitted_at': self.row()['submitted_at'], 'owner_id': 'test-owner-a', 'vote_id': 'synthetic-poll', 'option_id': 'yes'}])
@@ -187,8 +193,10 @@ class LaunchBoundaryTests(unittest.TestCase):
         power, picks, votes = config['forms']
         self.assertEqual(len(power['questions']), 15)
         self.assertEqual(len(picks['questions']), 9)
-        self.assertEqual(votes['questions'][1]['choices'], [])
-        self.assertEqual(votes['questions'][2]['choices'], [])
+        polls = [poll for poll in voting_common.load_yaml('votes.yml')['polls'] if poll['status'] == 'open' and poll['season'] == config['season']]
+        expected = polls[0] if len(polls) == 1 else None
+        self.assertEqual(votes['questions'][1]['choices'], [expected['vote_id']] if expected else [])
+        self.assertEqual(votes['questions'][2]['choices'], [option['id'] for option in expected['options']] if expected else [])
         self.assertEqual(len(power['questions'][0]['choices']), 12)
 
     def test_only_safe_responder_url_shapes_are_accepted(self):
