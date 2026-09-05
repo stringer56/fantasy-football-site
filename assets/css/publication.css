@@ -1,0 +1,138 @@
+/* Publication layer: shared tokens, masthead, editorial rhythm, and league modules.
+   Data-specific mechanics remain in style.css; franchise components are isolated. */
+:root {
+  --font-body: "Segoe UI", "Aptos", system-ui, sans-serif;
+  --font-display: "Aptos Display", "Arial Narrow", "Segoe UI", sans-serif;
+  --cream-100: #fcfaf5;
+  --cream-200: #f2f0e9;
+  --radius-sm: .15rem;
+  --radius-md: .3rem;
+  --shadow-sm: 0 2px 4px rgb(7 20 38 / 4%);
+  --shadow-md: 0 10px 28px rgb(7 20 38 / 9%);
+  --type-display: clamp(2.5rem, 5.5vw, 5rem);
+  --type-section: clamp(1.8rem, 3.5vw, 3rem);
+  --rule: 1px solid #d6d9dc;
+}
+body { overflow-x: visible; }
+img { height: auto; }
+h1, h2, h3 { text-wrap: balance; }
+main { min-width: 0; }
+main [id] { scroll-margin-top: 12rem; }
+:focus-visible { outline: 3px solid #3276cf; outline-offset: 4px; }
+.site-header :focus-visible, .content-section--navy :focus-visible,
+.franchise-hero :focus-visible, .home-hero :focus-visible { outline-color: #ebc45f; }
+.wrap { width: min(calc(100% - 3rem), var(--content-width)); }
+.content-section { padding-block: clamp(2.5rem, 5vw, 4.5rem); }
+.content-section--tight { padding-block: clamp(2rem, 4vw, 3.5rem); }
+.eyebrow { font-size: .75rem; letter-spacing: .14em; }
+.eyebrow--dark { color: #76540d; }
+.button { border-radius: .15rem; text-transform: none; letter-spacing: .01em; font-size: .9rem; }
+.button:hover { transform: none; }
+.text-link { letter-spacing: .025em; font-size: .8rem; }
+
+/* Masthead: six destinations per row, no concealed desktop destinations. */
+.site-header { box-shadow: none; border-bottom: 3px solid var(--gold-500); }
+.site-header__bar { min-height: 5.4rem; }
+.brand__mark { transform: none; width: 3.4rem; height: 3.4rem; background: var(--gold-400); color: var(--navy-950); font-weight: 950; letter-spacing: -.04em; font-size: 1.3rem; }
+.brand__name { font-size: 1.8rem; font-weight: 900; letter-spacing: -.045em; text-transform: none; }
+.brand__league { font-size: .67rem; letter-spacing: .12em; line-height: 1.4; }
+.site-nav { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0; padding-block: .25rem; }
+.site-nav a { min-height: 2.55rem; justify-content: center; font-size: .78rem; letter-spacing: .01em; text-transform: none; white-space: normal; text-align: center; padding: .3rem .4rem; }
+.site-nav a::after { inset-inline: 1rem; bottom: .15rem; height: 2px; }
+.site-nav a[aria-current=page] { background: rgb(255 255 255 / 5%); }
+.site-footer { border-top: 4px solid var(--gold-500); }
+.footer-brand { font-weight: 900; letter-spacing: -.03em; text-transform: none; }
+
+/* Cover story: real league trophy, not a placeholder crest. */
+.home-hero { min-height: 0; background: var(--navy-950); }
+.home-hero::before { display: none; }
+.home-hero::after { background: var(--gold-500); height: 1px; }
+.home-hero__inner { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 4rem; padding-block: 3rem; }
+.home-hero h1 { font-size: clamp(3.5rem, 7.5vw, 6.6rem); line-height: .95; font-weight: 950; letter-spacing: -.06em; text-transform: none; }
+.home-hero h1 span { font-family: var(--font-body); font-size: .17em; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; line-height: 1.4; margin-top: 1.25rem; }
+.home-hero__lede { max-width: 34rem; font-size: 1.1rem; }
+.home-hero__meta { font-size: .73rem; letter-spacing: .07em; }
+.home-yahoo-link { display: inline-block; margin-top: 1.25rem; color: #c4cfde; font-size: .85rem; }
+.home-yahoo-link:hover { color: white; }
+.home-trophy { position: relative; margin: 0; padding: .6rem; border: 1px solid #3e4550; background: #111a26; }
+.home-trophy img { width: 100%; height: 27rem; object-fit: contain; background: #0b0e15; }
+.home-trophy figcaption { padding: 1rem; background: var(--navy-850); }
+.home-trophy figcaption span { display: block; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-300); }
+.home-trophy figcaption strong { display: block; font-size: 1.6rem; letter-spacing: -.03em; }
+.home-trophy figcaption a { display: block; margin-top: .4rem; color: #d2dbe5; font-size: .82rem; }
+.news-strip__title { color: #fff; background: var(--navy-800); padding-inline: 1rem; font-size: .7rem; }
+.news-strip { border-bottom: var(--rule); }
+.section-heading { align-items: center; gap: 1.5rem; margin-bottom: 1.8rem; padding-bottom: 1.2rem; border-bottom: 2px solid var(--navy-900); }
+.section-heading h2, .history-intro h2, .cup-feature h2, .record-subhead h3,
+.draft-section-heading h2 { font-size: var(--type-section); line-height: 1.1; letter-spacing: -.04em; text-transform: none; font-weight: 900; }
+.section-heading--light, .content-section--navy .section-heading { border-bottom-color: #405064; }
+.page-hero { padding-block: clamp(2.5rem, 5vw, 4.5rem); }
+.page-hero h1 { font-size: var(--type-display); line-height: 1.04; letter-spacing: -.05em; text-transform: none; }
+.page-hero p:not(.eyebrow) { max-width: 50rem; font-size: 1.05rem; }
+.home-live-grid { gap: 1rem; }
+.home-live-card { border-radius: .15rem; box-shadow: none; border-top: 3px solid var(--navy-700); }
+.home-live-card--featured { border-top-color: var(--gold-500); }
+.home-live-card h3 { font-size: 1.5rem; line-height: 1.2; letter-spacing: -.03em; text-transform: none; }
+.home-live-card__heading { font-size: .75rem; gap: 1rem; }
+.home-featured-matchup img { width: 5.5rem; height: 5rem; object-fit: contain; }
+.home-featured-matchup strong { line-height: 1.3; }
+.home-featured-matchup span { font-size: 2rem; font-weight: 900; font-variant-numeric: tabular-nums; }
+.home-standings-top li > span { font-size: 1.2rem; font-weight: 900; }
+.cup-feature { grid-template-columns: minmax(0, .55fr) minmax(0, 1fr); padding: 2rem; gap: 3rem; border: 1px solid #4b4c41; }
+.cup-feature__art { width: 100%; max-height: 20rem; object-fit: contain; }
+.cup-feature h2 span { color: var(--gold-400); }
+.explore-grid { gap: 0; border-top: var(--rule); border-left: var(--rule); }
+.explore-card { border: 0; border-right: var(--rule); border-bottom: var(--rule); box-shadow: none; border-radius: 0; }
+.explore-card h3 { font-size: 1.45rem; line-height: 1.15; text-transform: none; letter-spacing: -.025em; }
+.explore-card:hover { transform: none; background: #f1ede2; }
+
+/* Archive, scoreboard and community components share the publication hierarchy. */
+.season-archive-card, .draft-archive-card { box-shadow: none; border-radius: .15rem; }
+.season-archive-card h2, .draft-archive-card h2 { font-size: 2rem; line-height: 1.1; letter-spacing: -.03em; text-transform: none; }
+.record-table, .standings-table, .season-standings { font-variant-numeric: tabular-nums; }
+.record-table th, .standings-table th { background: var(--navy-900); color: white; letter-spacing: .04em; }
+.record-rank { font-weight: 900; font-size: 1.15rem; }
+.record-table tbody tr:nth-child(even) { background: #f3f4f2; }
+.record-table-wrap, .table-scroll { border: var(--rule); }
+.record-subhead { margin-block: 2rem 1rem; }
+.weekly-archive details, .season-week, .matchup-card, .team-recap { border-radius: .15rem; box-shadow: none; }
+summary { min-height: 2.8rem; }
+.community-empty, .live-empty-inline { border-radius: .15rem; border-left: 3px solid #9b7b30; background: #f4f1e8; }
+.content-section--navy .live-empty-inline { background: #14263c; color: white; }
+
+/* Responsive shell: menu behavior and JS breakpoint intentionally match at 900px. */
+@media (max-width: 900px) {
+  .site-header__bar { min-height: 4.7rem; }
+  .site-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); max-height: calc(100dvh - 5rem); overflow-y: auto; }
+  .site-nav a { min-height: 2.8rem; justify-content: flex-start; padding-inline: .7rem; }
+  .nav-is-ready:not(.nav-is-open) .site-nav { display: none; }
+  .nav-is-open .site-nav { display: grid; }
+  .home-hero__inner { gap: 2rem; }
+  .home-trophy img { height: 20rem; }
+}
+@media (max-width: 600px) {
+  .wrap { width: calc(100% - 2rem); }
+  .site-header { position: relative; }
+  .brand__name { font-size: 1.4rem; }
+  .brand__mark { width: 2.6rem; height: 2.6rem; font-size: 1rem; }
+  .brand__league { font-size: .52rem; letter-spacing: .06em; }
+  .site-header__bar { gap: .5rem; }
+  .site-header__tools { gap: .4rem; }
+  .home-hero__inner { grid-template-columns: minmax(0, 1fr); padding-block: 2.5rem; }
+  .home-hero h1 { font-size: 4.1rem; }
+  .home-hero h1 span { font-size: .18em; }
+  .home-trophy { display: grid; grid-template-columns: minmax(0, .65fr) minmax(0, 1fr); }
+  .home-trophy img { height: 12rem; }
+  .home-trophy figcaption { display: flex; flex-direction: column; justify-content: center; padding: .8rem; }
+  .home-trophy figcaption strong { font-size: 1.4rem; line-height: 1.2; margin-block: .4rem; }
+  .home-trophy figcaption a { font-size: .75rem; }
+  .hero-actions { gap: .6rem; }
+  .hero-actions .button { flex: 1 1 9rem; padding-inline: .6rem; }
+  .cup-feature { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; padding: 1.5rem; }
+  .cup-feature__art { max-height: 13rem; }
+  .section-heading { align-items: start; }
+  main [id] { scroll-margin-top: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

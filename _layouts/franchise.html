@@ -7,17 +7,18 @@ layout: default
   {% if franchise.status == "retired" %}{% assign is_retired = true %}{% endif %}
   {% assign profile = franchise.profile %}
   {% assign branding = franchise.branding %}
+  {% assign verified_titles = site.data.champions.champions | where: "champion_franchise_id", franchise.franchise_id %}
   {% assign historical_metrics = site.data.generated.records.franchise_career.franchises | where: "franchise_id", franchise.franchise_id | first %}
   {% assign live_metrics = site.data.generated.live_season.franchise_summaries | where: "franchise_id", franchise.franchise_id | first %}
   {% assign power_metrics = site.data.generated.power_rankings_history.franchises | where: "franchise_id", franchise.franchise_id | first %}
 
-  <article class="franchise-profile{% if is_retired %} franchise-profile--retired{% endif %}">
+  <article class="franchise-profile{% if is_retired %} franchise-profile--retired{% endif %}" style="--team-accent: {{ branding.primary_color | default: '#d8aa3d' }}">
     <header class="franchise-hero">
       <div class="wrap franchise-hero__grid">
         <div class="franchise-hero__copy">
           <p class="eyebrow">{% if is_retired %}Retired franchise{% else %}Active franchise{% endif %}</p>
           <h1>{{ franchise.name }}</h1>
-          <p class="franchise-hero__lede">{{ profile.summary }}</p>
+          <p class="franchise-hero__lede">{{ profile.slogan }}</p>
           <div class="franchise-hero__owners" aria-label="Franchise ownership">
             <span>Coach</span>
             {% for owner_id in franchise.owner_ids %}
@@ -25,18 +26,20 @@ layout: default
               {% if owner %}<strong>{{ owner.display_name }}</strong>{% endif %}
             {% endfor %}
           </div>
+          {% if verified_titles.size > 0 %}<div class="franchise-honors" aria-label="Verified championships">{% for title in verified_titles %}<a href="{{ title.season_path | relative_url }}">{{ title.year }} Champion <span aria-hidden="true">↗</span></a>{% endfor %}</div>{% endif %}
         </div>
         <figure class="franchise-identity">
-          <img src="{{ branding.identity_image | relative_url }}" alt="{{ branding.identity_alt | escape }}" width="680" height="630">
+          <img src="{{ branding.identity_image | relative_url }}" alt="{{ branding.identity_alt | escape }}" fetchpriority="high">
         </figure>
       </div>
     </header>
+    <nav class="franchise-jump-nav" aria-label="On this franchise page"><div class="wrap"><a href="#team-story">The story</a><a href="#team-facts-title">Coach &amp; identity</a><a href="#home-turf">Home turf</a>{% unless is_retired %}<a href="#franchise-live-2026">2026 season</a>{% endunless %}{% if historical_metrics %}<a href="#franchise-history">Career &amp; seasons</a>{% endif %}<a href="{{ '/drafts/' | relative_url }}">Draft archive ↗</a></div></nav>
 
-    <section class="content-section content-section--tight">
+    <section class="content-section content-section--tight" id="team-story">
       <div class="wrap franchise-story-grid">
         <div>
           <p class="eyebrow eyebrow--dark">Team story</p>
-          <h2 class="franchise-section-title">Built for the road</h2>
+          <h2 class="franchise-section-title">The franchise story</h2>
           <p class="franchise-story">{{ profile.summary }}</p>
 
           {% if franchise.aliases and franchise.aliases.size > 0 %}
@@ -81,19 +84,22 @@ layout: default
         </div>
 
         <aside class="franchise-facts" aria-labelledby="team-facts-title">
-          <h2 id="team-facts-title">Team information</h2>
+          <p class="eyebrow">On the sideline</p>
+          <h2 id="team-facts-title">Coach &amp; identity</h2>
           <dl>
             <div><dt>Coach</dt><dd>{% for owner_id in franchise.owner_ids %}{% assign owner = site.data.owners.owners | where: "owner_id", owner_id | first %}{% if owner %}{{ owner.display_name }}{% unless forloop.last %}, {% endunless %}{% endif %}{% endfor %}</dd></div>
             <div><dt>Location</dt><dd>{{ profile.location }}</dd></div>
             <div><dt>Home field</dt><dd>{{ profile.home_field }}</dd></div>
             <div><dt>Capacity</dt><dd>{{ profile.capacity }}</dd></div>
-            <div><dt>Championships</dt><dd>{% if profile.championship_seasons.size > 0 %}{{ profile.championship_seasons | join: ', ' }}{% else %}Still chasing glory{% endif %}</dd></div>
+            <div><dt>Verified championships</dt><dd>{% if verified_titles.size > 0 %}{{ verified_titles | map: 'year' | sort | join: ', ' }}{% else %}No title in the verified 2021–2025 archive{% endif %}</dd></div>
             <div><dt>Fight song</dt><dd>{{ profile.fight_song }}</dd></div>
           </dl>
           <blockquote>“{{ profile.slogan }}”</blockquote>
         </aside>
       </div>
     </section>
+
+    {% include franchise-gallery.html %}
 
     {% unless is_retired %}
       <section class="content-section content-section--navy franchise-live" id="franchise-live-2026">
@@ -151,26 +157,7 @@ layout: default
       </section>
     {% endif %}
 
-    <section class="content-section content-section--neutral content-section--bordered">
-      <div class="wrap franchise-gallery{% unless branding.honors_image %} franchise-gallery--two{% endunless %}">
-        <figure class="venue-feature">
-          <img src="{{ branding.venue_image | relative_url }}" alt="{{ branding.venue_alt | escape }}" loading="lazy">
-          <figcaption><span>Home turf</span><strong>{{ profile.home_field }}</strong></figcaption>
-        </figure>
-        {% if branding.honors_image %}
-          <figure class="honors-feature">
-            <img src="{{ branding.honors_image | relative_url }}" alt="{{ branding.honors_alt | escape }}" loading="lazy">
-            <figcaption><span>League honors</span><strong>{{ profile.championship_seasons | join: ', ' }} Champion{% if profile.championship_seasons.size > 1 %}s{% endif %}</strong></figcaption>
-          </figure>
-        {% endif %}
-        <div class="franchise-source-card">
-          <p class="eyebrow">Migration record</p>
-          <h2>Preserved from the league archive</h2>
-          <p>This profile uses the public story and artwork reviewed from the original Road to Glory Google Site.</p>
-          <a class="text-link" href="{{ franchise.source.google_site_url }}" target="_blank" rel="noopener">View source page <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </section>
+
 
     <nav class="profile-back-nav" aria-label="Franchise profiles">
       <div class="wrap">
