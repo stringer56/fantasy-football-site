@@ -102,7 +102,7 @@ layout: default
           <dl>
             <div><dt>Coach</dt><dd>{% for owner_id in franchise.owner_ids %}{% assign owner = site.data.owners.owners | where: "owner_id", owner_id | first %}{% if owner %}{{ owner.display_name }}{% unless forloop.last %}, {% endunless %}{% endif %}{% endfor %}</dd></div>
             <div><dt>Location</dt><dd>{{ profile.location }}</dd></div>
-            <div><dt>Home field</dt><dd>{{ profile.home_field }}</dd></div>
+            <div><dt>Home Field</dt><dd>{{ profile.home_field }}</dd></div>
             <div><dt>Capacity</dt><dd>{{ profile.capacity }}</dd></div>
             <div><dt>Verified championships</dt><dd>{% if verified_titles.size > 0 %}{{ verified_titles | map: 'year' | sort | join: ', ' }}{% else %}No title in the verified 2021–2025 archive{% endif %}</dd></div>
             <div><dt>Fight song</dt><dd>{{ profile.fight_song }}</dd></div>

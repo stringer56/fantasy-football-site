@@ -20,7 +20,7 @@ class DraftDataValidationTests(unittest.TestCase):
         output = io.StringIO()
         with contextlib.redirect_stdout(output):
             validate_draft_data.main()
-        self.assertIn("Validated 5 drafts", output.getvalue())
+        self.assertIn("Validated 6 drafts", output.getvalue())
 
     def test_duplicate_draft_slot_is_rejected(self) -> None:
         datasets = copy.deepcopy(self.datasets)

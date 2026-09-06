@@ -200,8 +200,8 @@ def main() -> None:
         errors.append("franchise archive must render exactly 1 historical identity card")
     if history_page.count('class="season-archive-card"') != 5:
         errors.append("history archive must render exactly 5 season cards")
-    if drafts_page.count('class="draft-season-card"') != 5:
-        errors.append("draft archive must render exactly 5 draft cards")
+    if drafts_page.count('class="draft-season-card"') != len(draft_data['drafts']):
+        errors.append("draft archive must render every canonical draft card")
     if cup_page.count("<article>") != 5:
         errors.append("Brew Crew Cup page must render exactly 5 champion entries")
     for expected in (
@@ -343,7 +343,7 @@ def main() -> None:
         for expected in ("Draft Order", "Draft Board &amp; Results", "Draft recap", "Verified Notes", 'aria-label="Draft years"'):
             if expected not in rendered:
                 errors.append(f"draft page {route} is missing: {expected}")
-        if rendered.count('class="draft-order-entry"') != draft["team_count"]:
+        if rendered.count('class="draft-order-entry"') != len(draft["draft_order"]):
             errors.append(f"draft page {route} did not render every order entry")
         if rendered.count("Open full size") != len(draft["results_assets"]):
             errors.append(f"draft page {route} did not render every result asset")
@@ -357,7 +357,7 @@ def main() -> None:
     for franchise in franchise_data["franchises"]:
         route = f"/{'retired' if franchise['status'] == 'retired' else 'teams'}/{franchise['slug']}/"
         profile = route_target(route).read_text(encoding="utf-8")
-        field_caption = f"Field: {franchise['profile']['home_field']}"
+        field_caption = f"Home Field: {franchise['profile']['home_field']}"
         if field_caption not in unescape(profile):
             errors.append(f"franchise profile {route} is missing its labelled field caption")
         if franchise['status'] == 'active' and field_caption not in unescape(route_target('/teams/').read_text(encoding='utf-8')):

@@ -39,6 +39,9 @@ drafts:
       - All 180 selections are independently preserved in the complete official Yahoo public draft board.
 
   - year: 2024
+    order_asset:
+      path: /assets/img/drafts/2024/draft-order.jpg
+      alt: Original 2024 draft order on a starry blue background
     status: source_verified_images_and_structured
     source_url: https://sites.google.com/view/road-to-glory-ffl/league-draft-recaps/2024-draft-recap
     verified_on: 2026-08-31
@@ -82,6 +85,9 @@ drafts:
       - Draft date and location are not published on the source page.
 
   - year: 2023
+    order_asset:
+      path: /assets/img/drafts/2023/draft-order.jpg
+      alt: Original 2023 draft order on a beach background
     status: source_verified_images_and_structured
     source_url: https://sites.google.com/view/road-to-glory-ffl/league-draft-recaps/2023-draft-recap
     verified_on: 2026-08-31
@@ -125,6 +131,9 @@ drafts:
       - Draft date and location are not published on the source page.
 
   - year: 2022
+    order_asset:
+      path: /assets/img/drafts/2022/draft-order.webp
+      alt: Original 2022 draft order on a classical parchment design
     status: source_verified_images_and_structured
     source_url: https://sites.google.com/view/road-to-glory-ffl/league-draft-recaps/2022-draft-recap
     verified_on: 2026-08-31
@@ -168,6 +177,9 @@ drafts:
       - Draft date and location are not published on the source page.
 
   - year: 2021
+    order_asset:
+      path: /assets/img/drafts/2021/draft-order.webp
+      alt: Original 2021 draft order on parchment with ten franchises
     status: source_verified_images
     source_url: https://sites.google.com/view/road-to-glory-ffl/league-draft-recaps/2021-draft-recap
     verified_on: 2026-08-31
@@ -206,3 +218,31 @@ drafts:
       - The public recap contains three image captures of Yahoo results and no written recap.
       - Draft date and location are not published on the source page.
       - The commissioner-provided 2021 draft order confirms Matthew's Optimal Team as Vegas Vandals and The Swagger Daggers as Buffalo Bravado.
+
+  - year: 2026
+    status: commissioner_confirmed_completed
+    source_url: https://football.fantasysports.yahoo.com/f1/26455
+    source_label: Open the current Yahoo league
+    verified_on: 2026-09-06
+    draft_date: "2026-09-02 21:00:00 -0400"
+    date_label: Wednesday, September 2, 2026
+    time_label: 9:00 PM ET
+    timezone: America/New_York
+    location:
+    draft_type:
+    draft_type_note: The commissioner confirms the draft occurred; draft format has not been independently imported.
+    rounds:
+    team_count: 12
+    order_asset:
+    board_asset:
+    recap_asset:
+    pick_data_status: unavailable
+    pick_data_path:
+    pick_count:
+    picks:
+    results_assets: []
+    draft_order: []
+    notes:
+      - Date, time and completion are authoritative commissioner input received September 6, 2026.
+      - Current repository snapshots include teams and rosters but no verified 2026 draft board or opening order.
+      - Current rosters are not used to reconstruct draft picks. Results and order remain unresolved, not zero.

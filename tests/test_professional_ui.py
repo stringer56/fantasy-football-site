@@ -30,9 +30,9 @@ class ProfessionalIdentityTests(unittest.TestCase):
         card = (ROOT / '_includes/franchise-card.html').read_text(encoding='utf-8')
         gallery = (ROOT / '_includes/franchise-gallery.html').read_text(encoding='utf-8')
         archive = (ROOT / 'retired/quahog-stripes.md').read_text(encoding='utf-8')
-        self.assertIn('Field: {{ card.profile.home_field | escape }}', card)
-        self.assertIn('Field: {{ profile.home_field | escape }}', gallery)
-        self.assertIn('Field: Quahog Dome', archive)
+        self.assertIn('Home Field: {{ card.profile.home_field | escape }}', card)
+        self.assertIn('Home Field: {{ profile.home_field | escape }}', gallery)
+        self.assertIn('Home Field: Quahog Dome', archive)
 
     def test_directory_groups_venue_and_identity(self):
         text = (ROOT / '_includes/franchise-card.html').read_text(encoding='utf-8')

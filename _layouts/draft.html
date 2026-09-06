@@ -13,11 +13,11 @@ layout: default
       <div>
         <p class="eyebrow">Road to Glory draft archive</p>
         <p class="draft-hero__year">{{ draft.year }}</p>
-        <h1>The Draft</h1>
-        <p class="draft-hero__lede">The verified opening order{% if draft.pick_data_status == 'verified_structured' %} and all {{ draft.pick_count }} selections from the official Yahoo draft board{% else %} and all {{ draft.rounds }} rounds of the original published results{% endif %}.</p>
+        <h1>{% if draft.year == 2026 %}Road to Glory Draft{% else %}The Draft{% endif %}</h1>
+        {% if draft.status == 'commissioner_confirmed_completed' %}<p class="draft-hero__lede">{{ draft.date_label }}<br><strong>{{ draft.time_label }}</strong> · Draft completed</p>{% else %}<p class="draft-hero__lede">The verified opening order{% if draft.pick_data_status == 'verified_structured' %} and all {{ draft.pick_count }} selections from the official Yahoo draft board{% else %} and all {{ draft.rounds }} rounds of the original published results{% endif %}.</p>{% endif %}
         <div class="draft-hero__facts" aria-label="Draft facts">
           <span><strong>{{ draft.team_count }}</strong> teams</span>
-          <span><strong>{{ draft.rounds }}</strong> rounds</span>
+          {% if draft.rounds %}<span><strong>{{ draft.rounds }}</strong> rounds</span>{% endif %}
           {% if draft.draft_date %}<span><strong>{{ draft.draft_date | date: "%b %-d" }}</strong> draft date</span>{% endif %}
           {% if draft.location %}<span><strong>{{ draft.location }}</strong> location</span>{% endif %}
         </div>
@@ -26,16 +26,16 @@ layout: default
           <a class="button button--outline-light" href="#results">{% if draft.pick_data_status == 'verified_structured' %}Draft board{% else %}Original results{% endif %}</a>
         </div>
       </div>
-      <a class="draft-hero__preview" href="{{ preview_asset.path | relative_url }}">
+      {% if preview_asset %}<a class="draft-hero__preview" href="{{ preview_asset.path | relative_url }}">
         <img src="{{ preview_asset.path | relative_url }}" alt="{{ preview_asset.alt }}">
         <span>{% if preview_asset.rounds %}Open rounds {{ preview_asset.rounds }}{% else %}Open draft-order graphic{% endif %} full size <span aria-hidden="true">↗</span></span>
-      </a>
+      </a>{% else %}<div class="draft-season-card__image--pending" aria-label="2026 draft completed"><strong>2026</strong><p>THE NEXT CHAPTER IS DRAFTED.</p></div>{% endif %}
     </div>
   </header>
 
   <nav class="archive-editions" aria-label="Draft years"><div class="wrap">{% assign draft_editions = site.data.drafts.drafts | sort: 'year' | reverse %}{% for edition in draft_editions %}<a href="{{ '/drafts/' | append: edition.year | append: '/' | relative_url }}"{% if edition.year == page.year %} aria-current="page"{% endif %}>{{ edition.year }}</a>{% endfor %}</div></nav>
   <nav class="season-subnav" aria-label="Draft page sections">
-    <div class="wrap"><a href="#order">Order</a><a href="#results">Results</a><a href="#recap">Recap</a><a href="#notes">Notes</a><a href="{{ '/history/' | append: draft.year | append: '/' | relative_url }}">Season story ↗</a></div>
+    <div class="wrap"><a href="#order">Order</a><a href="#results">Results</a><a href="#recap">Recap</a><a href="#notes">Notes</a>{% if draft.year == site.data.site.current_season %}<a href="{{ '/2026/' | relative_url }}">Season HQ ↗</a>{% else %}<a href="{{ '/history/' | append: draft.year | append: '/' | relative_url }}">Season story ↗</a>{% endif %}</div>
   </nav>
 
   <section class="shell-content season-section" id="order" aria-labelledby="draft-order-heading">
@@ -43,6 +43,7 @@ layout: default
       <div><p class="eyebrow">Opening sequence</p><h2 id="draft-order-heading">{{ draft.year }} Draft Order</h2></div>
       <span class="section-note">Historical names preserved</span>
     </div>
+    {% if draft.draft_order.size == 0 %}<p>The draft is complete. The verified opening order has not yet been added to this archive.</p>{% endif %}
     <ol class="draft-order-grid">
       {% for entry in draft.draft_order %}
         {% assign franchise = site.data.franchises.franchises | where: "franchise_id", entry.franchise_id | first %}
@@ -67,6 +68,7 @@ layout: default
         <div><p class="eyebrow">Original source captures</p><h2 id="draft-results-heading">Draft Board &amp; Results</h2></div>
         <span class="section-note">Select an image to view full size</span>
       </div>
+      {% if draft.pick_data_status == 'unavailable' %}<p>The 2026 draft results are awaiting a verified draft-board import. Current rosters are available in the <a href="{{ '/2026/' | relative_url }}">2026 season hub</a>.</p>{% endif %}
       {% if structured_board and draft.pick_data_status == 'verified_structured' %}
         <p class="season-section__intro">Every selection below comes from the complete official Yahoo public draft board. Expand a round to see its picks in order.</p>
         <div class="draft-board">
@@ -97,7 +99,9 @@ layout: default
 
   <section class="shell-content season-section draft-recap" id="recap" aria-labelledby="draft-recap-heading">
     <div><p class="eyebrow">Draft recap</p><h2 id="draft-recap-heading">How the teams were built</h2></div>
-    {% if draft.status == 'source_verified_structured' %}
+    {% if draft.status == 'commissioner_confirmed_completed' %}
+      <p>The league drafted on {{ draft.date_label }} at {{ draft.time_label }}. The completed draft opens the 2026 campaign; the pick-by-pick archive will follow when the original results are available.</p>
+    {% elsif draft.status == 'source_verified_structured' %}
       <p>The commissioner archive verifies the draft date and order; Yahoo independently preserves the complete 180-pick board. The selections are preserved as they happened.</p>
     {% elsif draft.pick_data_status == 'verified_structured' %}
       <p>The original {{ draft.year }} recap preserves the result captures above, and Yahoo independently preserves the complete 180-pick board. The source contains no written recap, so no grades, steals, busts, or reconstructed commentary have been added.</p>

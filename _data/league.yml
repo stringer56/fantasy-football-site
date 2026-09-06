@@ -1,4 +1,4 @@
 schema_version: 1
 founded_season: 2021
-# Set an ISO-8601 timestamp after the commissioner confirms the draft date.
-draft_datetime:
+# Commissioner-confirmed completed draft, September 2 at 9 PM America/New_York.
+draft_datetime: "2026-09-02T21:00:00-04:00"

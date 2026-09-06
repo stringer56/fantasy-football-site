@@ -4,7 +4,7 @@
     <div class="franchise-gallery{% unless branding.honors_image %} franchise-gallery--two{% endunless %}">
       {% if branding.venue_image %}<figure class="venue-feature">
         <a href="{{ branding.venue_image | relative_url }}" aria-label="View full-size {{ profile.home_field | escape }} image"><img src="{{ branding.venue_image | relative_url }}" alt="{{ branding.venue_alt | escape }}" loading="lazy"></a>
-        <figcaption><span>View image to enlarge</span><strong>Field: {{ profile.home_field | escape }}</strong></figcaption>
+        <figcaption><span>View image to enlarge</span><strong>Home Field: {{ profile.home_field | escape }}</strong></figcaption>
       </figure>{% endif %}
       {% if branding.honors_image %}<figure class="honors-feature">
         <a href="{{ branding.honors_image | relative_url }}"><img src="{{ branding.honors_image | relative_url }}" alt="{{ branding.honors_alt | escape }}" loading="lazy"></a>

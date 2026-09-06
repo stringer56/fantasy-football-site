@@ -3,6 +3,7 @@ layout: default
 title: Brew Crew Cup
 permalink: /cup/
 description: The history and championship tradition of the Road to Glory FFL Brew Crew Cup.
+body_class: cup-page
 ---
 
 {% include page-hero.html eyebrow="League immortality" title="Brew Crew Cup" description="The trophy, the title games, and the championship runs at the heart of Road to Glory." compact=true %}
@@ -25,8 +26,27 @@ description: The history and championship tradition of the Road to Glory FFL Bre
   </div>
 </section>
 
-<section class="cup-banner" aria-label="Brew Crew Cup history artwork">
-  <div class="shell-content"><img src="{{ '/assets/img/cup/brew-crew-history.jpg' | relative_url }}" alt="Brew Crew History artwork featuring a navy football helmet, beer tap, mug, crown, and hops"></div>
+<section class="cup-origin" aria-labelledby="olivers-heading"><div class="shell-content cup-origin__grid">
+  <div><p class="eyebrow">The people behind the tradition</p><h2 id="olivers-heading">Oliver’s Beverage<br>&amp; the Brew Crew</h2>
+    <p><em>From the league’s original Cup archive:</em></p>
+    <p>Oliver’s Beverage has been a cornerstone of the Capital Region’s beer scene for decades, earning a reputation as a pioneer in variety and service. Originally established long ago and relocating to its current home on Colvin Avenue in 1987, Oliver’s quickly grew from a modest selection to more than 5,000 varieties of beer from around the world. It was the first in the area to introduce brands like Corona, and at various points carried local favorites like Yuengling Beer and Newman’s Albany Amber.</p>
+    <p>In 1989, Oliver’s expanded its reach by acquiring Westmere Beverage on Western Avenue in Guilderland, and together the two stores became known as “The Brew Crew,” a name cemented by their catchy advertising jingle. Over the years, they’ve continued to innovate with offerings like 28 rotating draft lines, crowler machines, growler rewards, keg sales, CO₂ refills, and draft equipment support.</p>
+    <p>Their influence on Albany’s beer culture is unmatched, and for 30 years straight they’ve been voted the Best Beer Store in Albany, with Oliver’s often taking the top spot and Westmere right behind. Today, they remain not just retailers, but institutions that have helped shape the region’s love for craft and imported beers.</p>
+    <p><strong>Many of the Road To Glory Fantasy Football league members have been integral members of the Brew Crew staff.</strong></p>
+    <p><a href="{{ site.data.cup_gallery.source_url }}" target="_blank" rel="noopener noreferrer">Original league history ↗</a> · <a href="https://www.youtube.com/watch?v=scHeJqj9ItU" target="_blank" rel="noopener noreferrer">Watch the archived Brew Crew video ↗</a></p>
+  </div>
+  <figure><a href="{{ '/assets/img/cup/brew-crew-history.jpg' | relative_url }}"><img src="{{ '/assets/img/cup/brew-crew-history.jpg' | relative_url }}" width="961" height="1366" alt="Brew Crew History artwork featuring a navy football helmet, beer tap, mug, crown, and hops" loading="lazy"></a><figcaption>League history artwork · Open full size</figcaption></figure>
+</div></section>
+
+<section class="cup-gallery-section" aria-labelledby="cup-gallery-heading"><div class="shell-content">
+  <p class="eyebrow">From the original league photo album</p><h2 id="cup-gallery-heading">Inside the Brew Crew</h2><p>The storefronts, the aisles, and the familiar corners. Select a photograph to view its complete original.</p>
+  <div class="cup-gallery">{% for photo in site.data.cup_gallery.images %}<figure><a href="{{ '/assets/img/cup/' | append: photo.file | relative_url }}"><img src="{{ '/assets/img/cup/' | append: photo.file | relative_url }}" alt="{{ photo.alt | escape }}" loading="lazy"></a><figcaption>{{ photo.alt | escape }}</figcaption></figure>{% endfor %}</div>
+</div></section>
+
+<section class="shell-content season-section" aria-labelledby="cup-original-heading"><p class="eyebrow">Preserved, not rewritten</p><h2 id="cup-original-heading">The original Cup story</h2>
+  <p>“The Cup isn’t just a trophy; it’s a tradition, a piece of league lore, and the ultimate reminder that in the Brew Crew, anyone can be king… for a year.”</p>
+  <p class="cup-archive-note">The original poster below records the league through 2024. Its “no one has managed to repeat” line predates Greendale’s second title in 2025; the current Roll of Champions remains authoritative. The inaugural 2021 season had ten teams, rather than the twelve described in the poster.</p>
+  <div class="franchise-gallery"><figure class="honors-feature"><a href="{{ '/assets/img/cup/cup-tradition-2024.jpg' | relative_url }}"><img src="{{ '/assets/img/cup/cup-tradition-2024.jpg' | relative_url }}" alt="Original Cup tradition poster and winners list through 2024; historical context explained above" loading="lazy"></a><figcaption>Original championship tradition poster · Open full size</figcaption></figure><figure class="honors-feature"><a href="{{ '/assets/img/cup/brew-crew-wordmark.jpg' | relative_url }}"><img src="{{ '/assets/img/cup/brew-crew-wordmark.jpg' | relative_url }}" alt="Original yellow Brew Crew Cup lettering on a blue background" loading="lazy"></a><figcaption>The original Brew Crew Cup wordmark</figcaption></figure></div>
 </section>
 
 <section class="shell-content cup-roll" aria-labelledby="cup-roll-heading">

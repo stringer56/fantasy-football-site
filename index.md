@@ -21,7 +21,7 @@ body_class: home-page
   </figure>
 </div></section>
 
-<aside class="news-strip" aria-label="NFL and fantasy news"><div class="wrap news-strip__inner"><div class="news-strip__title">NFL + Fantasy Wire</div><div class="ticker-viewport">{% if site.data.news.items.size > 0 %}<div class="ticker">{% for item in site.data.news.items %}<span class="ticker__item"><span class="ticker__source">{{ item.source }}</span><a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a></span>{% endfor %}<span aria-hidden="true">{% for item in site.data.news.items %}<span class="ticker__item"><span class="ticker__source">{{ item.source }}</span><a href="{{ item.link }}" tabindex="-1" target="_blank" rel="noopener noreferrer">{{ item.title }}</a></span>{% endfor %}</span></div>{% else %}<div class="news-empty">NFL and fantasy headlines return with the next update.</div>{% endif %}</div></div></aside>
+{% include news-wire.html %}
 
 <section class="content-section home-live" aria-labelledby="home-live-heading"><div class="wrap">
   <div class="section-heading"><div><p class="eyebrow">The current season</p><h2 id="home-live-heading">2026 League Pulse</h2></div><div class="home-live__freshness"><span class="data-state{% if live.data_status == 'stale' %} data-state--stale{% endif %}">{% if live.data_status == 'ready' %}Current{% elsif live.data_status == 'stale' %}Last available snapshot{% else %}Unavailable{% endif %}</span>{% if live.freshness.source_updated_at %}<time datetime="{{ live.freshness.source_updated_at }}" data-freshness="{{ live.freshness.source_updated_at }}">{{ live.freshness.source_updated_at | date: '%b %-d · %-I:%M %p' }}</time>{% endif %}</div></div>
@@ -64,7 +64,7 @@ body_class: home-page
 <section class="content-section" aria-labelledby="home-draft-heading"><div class="wrap draft-desk">
   {% assign latest_draft = site.data.drafts.drafts | sort: 'year' | last %}
   <div><p class="eyebrow">On the clock</p><h2 id="home-draft-heading">Every season starts here.</h2><p>Revisit the opening order and the picks that built each franchise’s roster.</p><a class="button button--gold" href="{{ '/drafts/' | relative_url }}">Draft archive →</a></div>
-  <div id="draft-countdown" data-season="{{ site.data.site.current_season }}" data-datetime="{{ site.data.league.draft_datetime }}" data-complete-message="The scheduled draft time has passed. Visit Yahoo for the latest results."><p class="eyebrow">{{ site.data.site.current_season }} draft</p><strong data-countdown-status>{% if site.data.league.draft_datetime %}{{ site.data.league.draft_datetime | date: '%B %-d, %Y' }}{% else %}Date to be announced{% endif %}</strong>{% if latest_draft %}<a class="text-link" href="{{ '/drafts/' | append: latest_draft.year | append: '/' | relative_url }}">Latest archived draft · {{ latest_draft.year }} →</a>{% endif %}</div>
+  <div id="draft-countdown" data-season="{{ site.data.site.current_season }}" data-datetime="{{ site.data.league.draft_datetime }}" data-complete-message="Draft completed · September 2, 2026 · 9 PM ET"><p class="eyebrow">{{ site.data.site.current_season }} draft</p><strong data-countdown-status>Draft completed · September 2, 2026 · 9 PM ET</strong>{% if latest_draft %}<a class="text-link" href="{{ '/drafts/' | append: latest_draft.year | append: '/' | relative_url }}">Latest archived draft · {{ latest_draft.year }} →</a>{% endif %}</div>
 </div></section>
 
 <section class="content-section content-section--neutral" aria-labelledby="home-community-heading"><div class="wrap">

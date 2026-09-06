@@ -6,15 +6,19 @@ import json
 import pathlib
 import sys
 import time
+import re
+from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
+from urllib.parse import urlsplit
 import xml.etree.ElementTree as ET
 from typing import Any, Iterable
 
 
 FEEDS = [
-    ("NFL.com", "https://www.nfl.com/rss/rsslanding?searchCategory=news"),
-    ("ESPN NFL", "https://www.espn.com/espn/rss/nfl/news"),
-    ("FantasyPros", "https://www.fantasypros.com/rss/nfl-news.xml"),
+    ("CBS Sports NFL", "https://www.cbssports.com/rss/headlines/nfl/"),
+    ("RotoWire NFL", "https://www.rotowire.com/rss/news.php?sport=NFL"),
 ]
+CATEGORIES = {"CBS Sports NFL": "nfl", "RotoWire NFL": "fantasy"}
 MAX_ITEMS_PER_FEED = 8
 OUTPUT_PATH = pathlib.Path("_data/news.json")
 SCHEMA_VERSION = 1
@@ -72,8 +76,13 @@ def valid_items(payload: Any) -> list[dict[str, str]]:
             continue
         title = str(item.get("title") or "").strip()
         link = str(item.get("link") or "").strip()
-        if title and link.startswith(("https://", "http://")):
-            valid.append(item)
+        parsed = urlsplit(link)
+        if title and parsed.scheme in {"https", "http"} and parsed.hostname and not parsed.username and not parsed.password and 'feed error' not in title.lower():
+            # Explicit allowlist: never retain RSS description/content or unknown keys.
+            valid.append({"source": str(item.get("source") or ""),
+                          "title": re.sub(r'<[^>]*>', '', title)[:300], "link": link,
+                          "published_at": str(item.get("published_at") or ""),
+                          "category": CATEGORIES.get(item.get("source"), item.get("category", "nfl"))})
     return valid
 
 
@@ -92,11 +101,32 @@ def build_news_payload(
     updated_at: int | None = None,
 ) -> tuple[dict[str, Any], bool]:
     items: list[dict[str, str]] = []
-    for _, feed_items in feed_results:
-        items.extend(feed_items[:MAX_ITEMS_PER_FEED])
+    previous = valid_items(existing)
+    any_fresh = False
+    for source, feed_items in feed_results:
+        safe = valid_items({"items": feed_items})
+        any_fresh = any_fresh or bool(safe)
+        items.extend((safe or [i for i in previous if i['source'] == source])[:MAX_ITEMS_PER_FEED])
+
+    if not any_fresh and previous:
+        # Preserve safe legacy snapshots byte-for-byte; scrub unexpected private/body fields.
+        allowed = {"source", "title", "link", "published_at", "category"}
+        if all(set(i) <= allowed for i in existing['items']) and len(previous) == len(existing['items']):
+            return existing, False
+        items = previous
+
+    for item in items:
+        raw = item['published_at']
+        try:
+            stamp = datetime.fromisoformat(raw.replace('Z', '+00:00')) if re.match(r'^\d{4}-\d{2}-\d{2}T', raw) else parsedate_to_datetime(raw)
+            item['published_at'] = stamp.replace(tzinfo=stamp.tzinfo or timezone.utc).astimezone(timezone.utc).isoformat().replace('+00:00', 'Z')
+        except (ValueError, TypeError, OverflowError):
+            item['published_at'] = ''
+    items.sort(key=lambda i: (i['published_at'], i['link']), reverse=True)
+    items = list({item['link']: item for item in items}.values())
 
     if items:
-        previous_items = valid_items(existing)
+        previous_items = existing.get('items', []) if existing else []
         if previous_items == items and existing is not None:
             return existing, False
         return {

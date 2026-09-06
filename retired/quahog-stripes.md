@@ -27,7 +27,7 @@ description: Preserved profile of the New Jersey Giants franchise's Quahog Strip
         <div><dt>Identity used</dt><dd>2021–2022</dd></div>
         <div><dt>Coach</dt><dd>Jack D.</dd></div>
         <div><dt>Location</dt><dd>Quahog, Rhode Island</dd></div>
-        <div><dt>Home field</dt><dd>Quahog Dome</dd></div>
+        <div><dt>Home Field</dt><dd>Quahog Dome</dd></div>
         <div><dt>Capacity</dt><dd>65,000</dd></div>
         <div><dt>Fight song</dt><dd>Head Coach Jack's Theme Song</dd></div>
       </dl>
@@ -44,7 +44,7 @@ description: Preserved profile of the New Jersey Giants franchise's Quahog Strip
     </figure>
     <figure class="venue-feature">
       <a href="{{ '/assets/img/franchises/quahog-stripes/venue.jpg' | relative_url }}" aria-label="View full-size Quahog Dome image"><img src="{{ '/assets/img/franchises/quahog-stripes/venue.jpg' | relative_url }}" alt="Quahog Dome, former home of the Quahog Stripes identity" loading="lazy"></a>
-      <figcaption><span>Former home turf</span><strong>Field: Quahog Dome</strong></figcaption>
+      <figcaption><span>Former home turf</span><strong>Home Field: Quahog Dome</strong></figcaption>
     </figure>
   </div>
 </section>
