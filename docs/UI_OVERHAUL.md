@@ -1,5 +1,60 @@
 # UI Overhaul — League publication and franchise profiles
 
+## Broader second-pass refinement — September 6, 2026
+
+Continued the requested visual review on `codex/ui-overhaul-team-pages`, draft
+PR #30. This is the substantive follow-up to the field-caption pass below, not
+another redesign. No merge, new branch, data changes or new features.
+
+Additional implementation files: `_includes/franchise-card.html`,
+`assets/css/franchises.css`, `assets/css/publication.css`, and
+`tests/test_professional_ui.py`. Updated this report and `docs/DESIGN_SYSTEM.md`.
+No new production assets/files or obsolete infrastructure removed.
+
+| Area | Observed finding and refinement |
+| --- | --- |
+| Mobile covers | Tightened hero, owner, honors and CTA spacing. At 390px, the home hero decreases from 773 to 729px, Greendale from 739 to 659px, Albany from 709 to 621px. Helmets remain prominent and contained. |
+| Team directory | Stack each editorial panel at 1100px; consistent 22rem portrait rows align tablet captions. Keep two directory columns until 600px. Excerpts now end on word boundaries instead of clipping words. |
+| Typography | Soften secondary navigation, card headings and jump links; slightly enlarge small identity labels. Preserve full original profile writing and league personality. |
+| Record tables | Fixed a genuine inherited hover defect: sort labels became navy on a navy header. Hover and keyboard focus now remain white; keyboard sorting and `aria-sort` verified. |
+| Text enlargement | At 200% root text size, found and fixed overflow in the homepage news label, archive images/footer, long matchup names and franchise championship subheads. Home, directory, Greendale and North Town now reflow at 390px. |
+| Interaction | Whole-card hover/focus also underlines the franchise name. Existing outlines, reduced-motion behavior, navigation and accessible scroll containers remain. |
+| Other routes | History, season, Cup, records, drafts, community, rules and both archive pages retain the canonical publication design. No gratuitous redesign or copy rewrite. |
+
+Actual Jekyll artifact reviewed: commit
+`a9105763b0ca8ffbd10c2fdda3309d53d830e46a`, successful build
+https://github.com/stringer56/fantasy-football-site/actions/runs/34052737559.
+Four new regression tests bring the suite to **234 passing tests**. All 13
+canonical validators, compileall, pip check, three generator check modes,
+Yahoo discovery dry-run check and git diff check passed. CI also passed the
+pinned Jekyll build, rendered-site/privacy validation and JavaScript syntax checks.
+The downloaded artifact independently passed 44-route link/landmark validation
+and the public privacy scan. Local Ruby is unavailable; build evidence is the
+actual GitHub Actions output, not a substituted local renderer.
+
+All 44 public routes were reviewed at 1440/1024/768/390/360, with representative
+screenshots: **220 checks passed, zero problems**. The focused profile/archive
+review passed **101 checks**, covering
+all 12 active franchises and both archive destinations at those widths. The
+additional no-JS, keyboard/Escape, reduced-motion, roster and bracket interaction
+checks passed. Four enlarged-text scenarios passed without body overflow.
+Screenshot comparisons include mobile home/Greendale/Albany, aligned tablet
+directory portraits, the focused record header and the preserved archive covers.
+
+Evidence is ignored and not published: `.cache/professional-ui/refined-review/`,
+`refined-details/`, and `polish-comparison/`. No identity image distortion,
+source image edits, broken assets or private data were introduced. Field captions
+still use **Field: [canonical home field]**. Historical narratives/calculations,
+Yahoo OAuth/fallback, community configuration and all canonical data are unchanged.
+No secrets, frameworks, external dependencies or extra asset requests were added.
+Google Forms remain optional; dormant community pages remain intentional.
+
+**Ready for commissioner visual sign-off; PR remains a draft and is not merged.**
+Remaining limits are approved-source image resolution, missing approved
+current-name Albany artwork, and Chromium-only browser coverage. Next step:
+commissioner review of the home page, Teams directory and representative franchise
+covers on desktop and phone, followed by explicit approval or specific visual notes.
+
 ## Second-pass sign-off and field captions — September 6, 2026
 
 Continued on draft PR #30; no new branch and no merge. Requested portrait titles

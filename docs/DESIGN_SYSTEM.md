@@ -185,7 +185,8 @@ ballot, deadline, poll, or result is changed by presentation work.
 
 The directory uses two editorial columns on desktop, each pairing a contained
 helmet over a decorative venue with the coach, story excerpt and canonical Cup
-titles. Below 900px the individual panel stacks; below 600px the directory is
+titles. At 1100px and below the individual panel stacks with a shared 22rem
+portrait row so adjacent captions align; below 600px the directory is
 one column. No team accent is used as a text color. Venue labels have an opaque
 navy backing instead of relying on the photograph for contrast.
 
@@ -194,6 +195,13 @@ on the right; mobile reads title then artwork in document order. The cream recor
 strip is explicitly labelled 2021–2025 and reuses existing career metrics only.
 It is omitted without verified season coverage. Mobile record tiles use two
 columns; public labels never shrink below the existing secondary-metadata scale.
+
+The second pass tightens mobile cover spacing without reducing the helmet below
+its 17rem contained frame. Directory excerpts truncate at word boundaries. Small
+navigation and identity labels use a lighter hierarchy than display headlines.
+Sortable dark-table headings stay white on hover and keyboard focus. Editorial
+subheads, news labels and archive footers wrap at enlarged text sizes; archive
+artwork cannot set the page's minimum width. Preserve these reflow contracts.
 
 The homepage trophy and canonical defending champion share one editorial feature.
 Only the direct trophy image receives photographic dimensions; the champion's
