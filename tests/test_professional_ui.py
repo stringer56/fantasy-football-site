@@ -6,6 +6,20 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class ProfessionalIdentityTests(unittest.TestCase):
+    def test_directory_excerpt_ends_on_word_boundaries(self):
+        text = (ROOT / '_includes/franchise-card.html').read_text(encoding='utf-8')
+        self.assertIn('truncatewords: 24', text)
+        self.assertNotIn('truncate: 165', text)
+
+    def test_sortable_dark_table_header_keeps_interaction_contrast(self):
+        text = (ROOT / 'assets/css/publication.css').read_text(encoding='utf-8')
+        self.assertIn('.record-table th button:hover, .record-table th button:focus-visible { color: #fff;', text)
+
+    def test_mobile_profile_spacing_is_explicit(self):
+        text = (ROOT / 'assets/css/franchises.css').read_text(encoding='utf-8')
+        self.assertIn('.franchise-hero__grid { padding-block: 1.5rem; gap: 1.25rem;', text)
+        self.assertIn('.franchise-identity { height: 17rem; width: 100%;', text)
+
     def test_portrait_and_venue_captions_label_the_canonical_field(self):
         card = (ROOT / '_includes/franchise-card.html').read_text(encoding='utf-8')
         gallery = (ROOT / '_includes/franchise-gallery.html').read_text(encoding='utf-8')

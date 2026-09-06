@@ -181,7 +181,8 @@ p { line-height: 1.7; }
 .button:hover { box-shadow: inset 0 -3px 0 rgb(0 0 0 / 18%); }
 .season-chip { text-decoration: none; min-height: 2.75rem; }
 .season-chip:hover { color: white; }
-.site-nav a { font-size: .875rem; min-height: 2.75rem; }
+.site-nav a { font-size: .875rem; min-height: 2.75rem; font-weight: 650; }
+.button, .text-link { font-weight: 700; }
 .community-nav, .archive-editions { background: var(--cream-200); border-bottom: var(--rule); }
 .community-nav > .wrap, .archive-editions > .wrap { display: flex; gap: 1.8rem; overflow-x: auto; overscroll-behavior-inline: contain; }
 .community-nav a, .archive-editions a { display: flex; flex-shrink: 0; align-items: center; min-height: 3rem; font-size: .875rem; font-weight: 750; color: var(--navy-900); text-decoration: none; border-bottom: 3px solid transparent; }
@@ -341,6 +342,7 @@ p { line-height: 1.7; }
 .record-card > strong { font-family: var(--font-display); font-variant-numeric: tabular-nums; }
 .record-card { border-top: 3px solid var(--navy-900); }
 .record-table tbody .record-rank { color: #73510b; }
+.record-table th button:hover, .record-table th button:focus-visible { color: #fff; text-decoration-color: var(--gold-400); }
 .draft-season-card { border-top: 4px solid var(--navy-900); }
 .vote-empty { border-left: 4px solid #9b7b30; }
 .prose { max-width: 68ch; }
@@ -373,6 +375,9 @@ p { line-height: 1.7; }
   .site-header__bar { min-height: 4.5rem; }
   .home-hero__inner { padding-block: 2rem; gap: 2rem; grid-template-columns: minmax(0, 1fr); }
   .home-hero h1 { font-size: clamp(3.8rem, 16vw, 5rem); }
+  .home-hero__lede { margin-top: 1rem; }
+  .home-hero .hero-actions { margin-top: 1.25rem; }
+  .home-yahoo-link { margin-top: .75rem; }
   .home-trophy { grid-template-columns: minmax(0, .7fr) minmax(0, 1fr); }
   .home-trophy > img { height: auto; aspect-ratio: 3 / 4; align-self: center; background: transparent; }
   .home-trophy .defending-champion { grid-template-columns: minmax(0, 1fr); gap: .4rem; }

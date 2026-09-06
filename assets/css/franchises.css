@@ -14,7 +14,7 @@
 .franchise-card__image img { width: 100%; height: 100%; object-fit: contain; }
 .franchise-card__body { display: flex; flex: 1; flex-direction: column; min-width: 0; padding: 1.4rem; }
 .franchise-card__status { margin: 0; font-size: .65rem; text-transform: uppercase; letter-spacing: .08em; color: #536172; font-weight: 800; }
-.franchise-card h2 { margin: .65rem 0; font-size: 1.65rem; font-weight: 900; line-height: 1.12; letter-spacing: -.035em; }
+.franchise-card h2 { margin: .65rem 0; font-size: 1.65rem; font-weight: 800; line-height: 1.15; letter-spacing: -.035em; }
 .franchise-card h2 a { color: var(--navy-900); text-decoration: none; }
 .franchise-card h2 a:hover { text-decoration: underline; }
 .franchise-card__owner { margin: 0; font-size: .85rem; color: #536172; }
@@ -39,17 +39,17 @@
 .franchise-honors a { border-bottom: 1px solid #9d813e; padding-bottom: .35rem; color: var(--gold-300); font-size: .8rem; font-weight: 800; text-decoration: none; }
 .franchise-jump-nav { background: white; border-bottom: var(--rule); }
 .franchise-jump-nav > .wrap { display: flex; flex-wrap: wrap; gap: .3rem 1.5rem; padding-block: .7rem; }
-.franchise-jump-nav a { display: inline-flex; align-items: center; min-height: 2.25rem; font-weight: 750; font-size: .83rem; text-decoration: none; }
+.franchise-jump-nav a { display: inline-flex; align-items: center; min-height: 2.25rem; font-weight: 650; font-size: .875rem; text-decoration: none; }
 .franchise-jump-nav a:hover { text-decoration: underline; }
 
 /* Preserved editorial story and distinct coach dossier. */
 .franchise-story-grid { display: grid; align-items: start; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); }
 .franchise-section-title { margin: 0; color: var(--navy-900); font-size: var(--type-section); line-height: 1.1; letter-spacing: -.04em; font-weight: 900; }
-.franchise-story { margin: 1.4rem 0 0; color: #344154; font-size: 1.12rem; line-height: 1.85; max-width: 65ch; }
+.franchise-story { margin: 1.1rem 0 0; color: #344154; font-size: 1.12rem; line-height: 1.85; max-width: 62ch; }
 .alias-block { margin-top: 1.5rem; padding-top: 1.2rem; border-top: var(--rule); }
 .alias-block h3 { margin: 0 0 .75rem; color: var(--navy-900); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; }
 .tag-list, .rival-links { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; margin: 0; padding: 0; }
-.tag-list li, .rival-links a { display: inline-flex; padding: .35rem .6rem; color: #354357; border: var(--rule); font-size: .8rem; }
+.tag-list li, .rival-links a { display: inline-flex; padding: .35rem .6rem; color: #354357; border: var(--rule); font-size: .875rem; }
 .rival-links a:hover { background: var(--navy-900); color: white; }
 .franchise-facts { background: var(--navy-900); color: white; border-top: 5px solid var(--team-accent, var(--gold-500)); }
 .franchise-facts > .eyebrow { margin: 0; padding: 1.5rem 1.5rem 0; }
@@ -146,6 +146,7 @@
 .franchise-card__body > p:not([class]) { font-size: 1rem; }
 .franchise-card__footer > span { font-size: .8rem; }
 .franchise-card:hover, .franchise-card:focus-within { box-shadow: none; }
+.franchise-card:hover h2 a, .franchise-card:focus-within h2 a { text-decoration: underline; text-underline-offset: .2em; text-decoration-thickness: 1px; }
 .franchise-card h2 { font-size: clamp(1.4rem, 2vw, 1.9rem); }
 .franchise-story { font-family: Georgia, serif; }
 .franchise-facts dt { font-size: .85rem; }
@@ -157,16 +158,23 @@
 .franchise-profile--retired .franchise-hero .eyebrow { letter-spacing: .2em; }
 .retired-card { border-top: 4px solid #af965e; }
 .retired-card__image { height: 19rem; background: #eeede7; }
-@media (max-width: 900px) {
-  .franchise-identity { height: 21rem; }
+@media (max-width: 1100px) {
   .franchise-card { grid-template-columns: minmax(0, 1fr); }
   .franchise-card__body { padding: 1.25rem 0; }
   .franchise-card__image { margin: 1rem 2rem 3.5rem; height: 16rem; }
 }
+@media (max-width: 900px) {
+  .franchise-identity { height: 21rem; }
+}
 @media (max-width: 600px) {
-  .franchise-hero__grid { padding-block: 2rem; }
+  .franchise-hero__grid { padding-block: 1.5rem; gap: 1.25rem; }
+  .franchise-hero__lede { margin-top: .75rem; }
+  .franchise-hero__owners { margin-top: .9rem; }
+  .franchise-honors { margin-top: .75rem; gap: .5rem 1rem; }
+  .franchise-hero .text-link { margin-top: .35rem; }
+  .franchise-art-note { margin-top: .5rem; }
   .franchise-hero__venue { opacity: .35; }
-  .franchise-identity { height: 18rem; width: 100%; box-shadow: none; }
+  .franchise-identity { height: 17rem; width: 100%; box-shadow: none; }
   .franchise-card__image { height: 17rem; margin-inline: 2rem; }
   .franchise-ledger > .wrap { display: block; padding-block: 1rem; }
   .franchise-ledger p { display: flex; justify-content: space-between; border: 0; padding: 0 0 .75rem; }
