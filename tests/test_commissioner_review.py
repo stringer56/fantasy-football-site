@@ -1,4 +1,3 @@
-import copy
 from pathlib import Path
 import unittest
 from unittest.mock import patch
@@ -43,6 +42,16 @@ class CommissionerReviewTests(unittest.TestCase):
         self.assertIn('data-wire-toggle',text)
         self.assertIn('noopener noreferrer',text)
         self.assertNotIn('item.description',text)
+
+    def test_malformed_news_url_is_rejected_without_crashing(self):
+        self.assertEqual(pull_news.valid_items({'items':[{'title':'Bad','link':'https://['}]}),[])
+
+    def test_newest_items_are_chosen_before_source_limit(self):
+        items=[{'source':'Test','title':str(i),'link':f'https://example.com/{i}','published_at':f'2026-09-{i:02d}T12:00:00Z'} for i in range(1,11)]
+        payload,_=pull_news.build_news_payload([('Test',items)])
+        self.assertEqual(len(payload['items']),8)
+        self.assertEqual(payload['items'][0]['title'],'10')
+        self.assertNotIn('1',[i['title'] for i in payload['items']])
 
     def test_cup_gallery_is_local_and_complete(self):
         data=yaml.safe_load((ROOT/'_data/cup_gallery.yml').read_text(encoding='utf-8'))

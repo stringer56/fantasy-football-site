@@ -4,6 +4,7 @@
 .league-mark { width: 3.6rem; height: 4rem; flex: 0 0 auto; }
 .brand__name { text-transform: uppercase; font-size: 1.65rem; letter-spacing: -.045em; line-height: 1.05; }
 .brand__league { color: var(--league-gold); letter-spacing: .15em; margin-top: .4rem; }
+.brand__league-short { display: none; }
 .site-header { background: #07172b; }
 .site-nav-shell { background: #102b48; }
 .home-hero { background: radial-gradient(ellipse at 75% 30%, #1c527a 0, #0c2949 38%, #061426 80%); border-bottom: 6px solid var(--league-gold); }
@@ -25,6 +26,7 @@
 .franchise-card { background: #112c49; border-bottom: 4px solid var(--team-accent); box-shadow: 0 10px 25px #06182b26; }
 .franchise-card__body { padding: 1.5rem; }
 .franchise-card h2 a, .franchise-card__owner, .franchise-card__owner strong { color: #fff; }
+.franchise-card h2 { overflow-wrap: anywhere; }
 .franchise-card__body > p:not([class]), .franchise-card__footer > span { color: #cfdeeb; }
 .franchise-card__status, .franchise-card .text-link { color: #f2cd72; }
 .franchise-card__footer { border-color: #47617d; }
@@ -105,4 +107,13 @@
 @media(max-width:768px) { .cup-origin__grid { grid-template-columns: minmax(0,1fr); } .cup-gallery { grid-template-columns: repeat(2,minmax(0,1fr)); } .news-strip__inner { grid-template-columns: minmax(0,1fr) auto; } .news-strip__title { grid-column: 1 / -1; min-height: 2.5rem; } }
 @media(max-width:600px) { .league-mark { width: 2.5rem; height: 2.8rem; } .brand { gap: .5rem; } .brand__name { font-size: 1.12rem; } .brand__league { font-size: .55rem; letter-spacing: .08em; } .home-hero h1 { padding-left: .8rem; font-size: clamp(3.25rem,14vw,4.8rem); } .cup-gallery { grid-template-columns: minmax(0,1fr); } .cup-gallery figure:first-child { grid-column: auto; } .cup-gallery img, .cup-gallery figure:first-child img { height: auto; max-height: 26rem; } .franchise-identity { padding: .75rem; } }
 @media(max-width:600px) { .draft-hero .draft-season-card__image--pending { display: none; } .cup-origin, .cup-gallery-section { padding-block: 2.5rem; } }
+@media(max-width:600px) { .brand__league { font-size: .75rem; letter-spacing: .02em; font-weight: 650; } .brand__league-full { display: none; } .brand__league-short { display: inline; } }
+@media(max-width:600px) {
+  .cup-page .champion-roll article { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+  .cup-page .champion-roll article > div, .cup-page .champion-roll .text-link { grid-column: 1 / -1; }
+  .cup-page .champion-roll article > div { overflow-wrap: anywhere; }
+  .draft-notes-grid { grid-template-columns: minmax(0,1fr); }
+  .draft-notes-grid > * { min-width: 0; }
+  .draft-notes-grid h2 { overflow-wrap: anywhere; }
+}
 @media(prefers-reduced-motion:reduce) { .ticker { animation: none; flex-wrap: wrap; width: auto; white-space: normal; } .ticker > [aria-hidden=true] { display: none; } .ticker__group { flex-direction: column; width: 100%; } .ticker__item { display: block; padding-block: .7rem; } .ticker__source { display: block; } }
