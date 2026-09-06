@@ -213,3 +213,19 @@ The RTG masthead is a typographic monogram, not a newly created official crest.
 Approved helmets, logos, trophy images, and photography remain local and are
 referenced through Jekyll's `relative_url` filter. Future replacements require
 commissioner-approved source artwork; the UI pass does not replace league art.
+
+### Commissioner brand/content refinement (September 2026)
+
+`league-brand.css` is the final, shared presentation layer. A crisp RTG shield
+and uppercase wordmark establish league identity; the compact mobile subtitle
+stays readable. Navy/blue editorial bands, gold rules, team-color backplates and
+contained helmet shadows alternate with light reading and data surfaces. Team
+colors are accents, not low-contrast body text. Venue labels are **Home Field**.
+
+The Cup uses a canonical champion panel, attributed Oliver's narrative and a
+navy photo album with full-original links. Draft previews contain the complete
+order graphic, never crop its text. Unknown 2026 order/results remain unavailable.
+The wire uses safe publisher headlines with an explicit pause toggle, static
+keyboard/reduced-motion presentation and no third-party browser dependency.
+Card names, score links and compact grids must reflow with enlarged text.
+See [Commissioner review](COMMISSIONER_VISUAL_REVIEW.md) for source and QA evidence.

@@ -61,7 +61,7 @@
 .cup-page .cup-trophy-feature__story h2 { color: #0b2342; }
 .cup-holder { display: flex; gap: 1rem; align-items: center; padding: 1rem; margin-block: 1.5rem; background: #0b2947; color: #f0cd77; text-decoration: none; border-left: 4px solid #be984a; }
 .cup-holder img { width: 6rem; height: 6rem; object-fit: contain; }
-.cup-holder span { min-width: 0; font-size: .875rem; }
+.cup-holder span { min-width: 0; font-size: .875rem; overflow-wrap: anywhere; }
 .cup-holder strong { display: block; color: #fff; font-size: 1.3rem; line-height: 1.25; margin-block: .3rem; }
 .cup-holder small { color: #d4e0ee; }
 .cup-origin { background: #0c2946; color: #e1e9f1; padding-block: 4rem; }

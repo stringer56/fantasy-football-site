@@ -341,3 +341,18 @@ The pre-existing Milestone 7 output is named `_data/generated/record_book.json`
 to avoid a Jekyll data-key collision with the records directory. See
 [Historical Derived Metrics](HISTORICAL_METRICS.md) and
 [All-Time Statistical Experience](ALL_TIME_STATISTICAL_EXPERIENCE.md).
+
+### Commissioner content additions
+
+- `_data/cup_gallery.yml` version 1 contains `source_url`, `verified_on`, and
+  `images` rows (`file`, `source_position`, `alt`). Files resolve only beneath
+  `assets/img/cup/`; repeated source frames are documented in the migration report.
+- `_data/news.json` retains version 1. Public items allow only `source`, `title`,
+  `link`, `published_at`, `category`. Categories currently emitted are `nfl` and
+  `fantasy`; dates normalize to UTC ISO when available. Article bodies and unsafe
+  links are excluded. Failed feeds preserve sanitized previous headlines.
+- `_data/drafts.yml` supports `commissioner_confirmed_completed` for 2026's
+  verified date/status without a pick board. Unknown rounds/type/counts/assets
+  stay null and unavailable result/order collections stay empty, not fabricated.
+  `order_asset` now references local approved graphics for every 2021–2025 draft.
+  See [Commissioner review](COMMISSIONER_VISUAL_REVIEW.md) for provenance.
