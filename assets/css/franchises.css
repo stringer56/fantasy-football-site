@@ -159,7 +159,7 @@
 .retired-card { border-top: 4px solid #af965e; }
 .retired-card__image { height: 19rem; background: #eeede7; }
 @media (max-width: 1100px) {
-  .franchise-card { grid-template-columns: minmax(0, 1fr); }
+  .franchise-card { grid-template-columns: minmax(0, 1fr); grid-template-rows: 22rem 1fr; }
   .franchise-card__body { padding: 1.25rem 0; }
   .franchise-card__image { margin: 1rem 2rem 3.5rem; height: 16rem; }
 }

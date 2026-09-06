@@ -116,6 +116,8 @@ main [id] { scroll-margin-top: 12rem; }
 .record-table tbody tr:nth-child(even) { background: #f3f4f2; }
 .record-table-wrap, .table-scroll { border: var(--rule); }
 .record-subhead { margin-block: 2rem 1rem; }
+.record-subhead > div { min-width: 0; max-width: 100%; }
+.record-subhead h3 { overflow-wrap: anywhere; }
 .weekly-archive details, .season-week, .matchup-card, .team-recap { border-radius: .15rem; box-shadow: none; }
 summary { min-height: 2.8rem; }
 .community-empty, .live-empty-inline { border-radius: .15rem; border-left: 3px solid #9b7b30; background: #f4f1e8; }
@@ -241,13 +243,14 @@ p { line-height: 1.7; }
 .recent-champions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
 .season-archive-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .season-archive-card { grid-template-columns: minmax(0, 1fr); border: 0; border-bottom: 2px solid #c9c8c0; background: transparent; overflow: visible; }
-.season-archive-card__image { position: relative; display: flex; justify-content: flex-end; align-items: center; min-height: 0; height: 15rem; background: var(--navy-950); border-bottom: 4px solid #af8731; padding: 1.5rem; text-decoration: none; }
+.season-archive-card__image { position: relative; display: flex; justify-content: flex-end; align-items: center; min-width: 0; width: 100%; aspect-ratio: auto; min-height: 0; height: 15rem; background: var(--navy-950); border-bottom: 4px solid #af8731; padding: 1.5rem; text-decoration: none; }
 .season-archive-card__image img { position: relative; width: 52%; height: 100%; object-fit: contain; }
 .archive-year { position: absolute; top: 1.5rem; left: 1.5rem; font-size: clamp(3rem, 5.8vw, 5rem); font-weight: 900; color: #ebc45f; line-height: 1; letter-spacing: -.06em; }
 .season-archive-card__body { padding: 1.5rem 0; }
 .season-archive-card h2 { font-size: 1.9rem; }
 .season-archive-card__body > .archive-final { color: #334359; font-size: .95rem; }
 .archive-final strong { display: block; color: var(--navy-900); font-size: 1.5rem; font-variant-numeric: tabular-nums; }
+.season-archive-card__body > div { flex-wrap: wrap; }
 .recent-champions .season-archive-card__image { height: 12rem; padding: 1rem; }
 .recent-champions .archive-year { font-size: 3.25rem; top: 1rem; left: 1rem; }
 .recent-champions h2 { font-size: 1.65rem; }
@@ -378,6 +381,9 @@ p { line-height: 1.7; }
   .home-hero__lede { margin-top: 1rem; }
   .home-hero .hero-actions { margin-top: 1.25rem; }
   .home-yahoo-link { margin-top: .75rem; }
+  .news-strip__inner { grid-template-columns: minmax(0, 1fr); }
+  .news-strip__title { white-space: normal; }
+  .live-matchup-team > a strong { overflow-wrap: anywhere; }
   .home-trophy { grid-template-columns: minmax(0, .7fr) minmax(0, 1fr); }
   .home-trophy > img { height: auto; aspect-ratio: 3 / 4; align-self: center; background: transparent; }
   .home-trophy .defending-champion { grid-template-columns: minmax(0, 1fr); gap: .4rem; }

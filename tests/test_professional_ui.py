@@ -20,6 +20,12 @@ class ProfessionalIdentityTests(unittest.TestCase):
         self.assertIn('.franchise-hero__grid { padding-block: 1.5rem; gap: 1.25rem;', text)
         self.assertIn('.franchise-identity { height: 17rem; width: 100%;', text)
 
+    def test_enlarged_text_can_reflow_in_editorial_components(self):
+        text = (ROOT / 'assets/css/publication.css').read_text(encoding='utf-8')
+        self.assertIn('.record-subhead > div { min-width: 0; max-width: 100%;', text)
+        self.assertIn('.news-strip__title { white-space: normal;', text)
+        self.assertIn('.season-archive-card__body > div { flex-wrap: wrap;', text)
+
     def test_portrait_and_venue_captions_label_the_canonical_field(self):
         card = (ROOT / '_includes/franchise-card.html').read_text(encoding='utf-8')
         gallery = (ROOT / '_includes/franchise-gallery.html').read_text(encoding='utf-8')
