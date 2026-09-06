@@ -117,6 +117,7 @@ def main():
                     ,missingPageAnchors: [...document.querySelectorAll('a[href^="#"]')].filter(a => a.hash.length > 1 && !document.getElementById(decodeURIComponent(a.hash.slice(1)))).length
                     ,unreadableLiveCards: [...document.querySelectorAll('.franchise-live__grid > article > p')].filter(n => getComputedStyle(n).color === getComputedStyle(n.parentElement).backgroundColor).length
                     ,overlappingSeasonCaption: [...document.querySelectorAll('.season-final-score')].filter(n => { const caption=n.parentElement.querySelector('figcaption'); return caption && caption.getBoundingClientRect().bottom > n.getBoundingClientRect().top + 1; }).length
+                    ,overlappingFieldCaption: [...document.querySelectorAll('.franchise-card__visual')].filter(n => { const caption=n.querySelector('.franchise-card__venue span'), art=n.querySelector('.franchise-card__image'); return caption && art && caption.getBoundingClientRect().top < art.getBoundingClientRect().bottom - 1; }).length
                 })""")
                 checks.update({"width": width, "route": route, "status": response.status, "failedInternal": list(failed), "scriptErrors": list(script_errors), "mobileMenu": menu_ok, "expandedOverflow": expanded_overflow})
                 checks['imageUsage'] = page.evaluate("""() => [...document.images].map(i => {
@@ -135,7 +136,7 @@ def main():
     if server:
         server.shutdown()
     (args.output / "results.json").write_text(json.dumps(results, indent=2), encoding="utf-8")
-    problems = [r for r in results if r["overflow"] or r["expandedOverflow"] or r["overlappingSeasonCaption"] or r["brokenImages"] or r["missingAlt"] or r["synthetic"] or r["debugState"] or r["status"] != 200 or r["failedInternal"] or r["scriptErrors"] or not r["mobileMenu"] or r["h1"] != 1 or r["distortedTeamImages"] or r["escapedTeamImages"] or r["missingPageAnchors"] or r["unreadableLiveCards"]]
+    problems = [r for r in results if r["overflow"] or r["expandedOverflow"] or r["overlappingSeasonCaption"] or r["overlappingFieldCaption"] or r["brokenImages"] or r["missingAlt"] or r["synthetic"] or r["debugState"] or r["status"] != 200 or r["failedInternal"] or r["scriptErrors"] or not r["mobileMenu"] or r["h1"] != 1 or r["distortedTeamImages"] or r["escapedTeamImages"] or r["missingPageAnchors"] or r["unreadableLiveCards"]]
     print(json.dumps({"checks": len(results), "problems": problems}, indent=2))
     if problems:
         raise SystemExit(1)

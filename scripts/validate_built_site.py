@@ -357,6 +357,11 @@ def main() -> None:
     for franchise in franchise_data["franchises"]:
         route = f"/{'retired' if franchise['status'] == 'retired' else 'teams'}/{franchise['slug']}/"
         profile = route_target(route).read_text(encoding="utf-8")
+        field_caption = f"Field: {franchise['profile']['home_field']}"
+        if field_caption not in unescape(profile):
+            errors.append(f"franchise profile {route} is missing its labelled field caption")
+        if franchise['status'] == 'active' and field_caption not in unescape(route_target('/teams/').read_text(encoding='utf-8')):
+            errors.append(f"team directory is missing the field caption for {franchise['name']}")
         for expected in (
             franchise["name"], "Coach &amp; identity", "Home turf", "View source page",
             "Franchise Record", "Season History", "Head-to-Head",

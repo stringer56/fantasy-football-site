@@ -44,7 +44,7 @@ description: Preserved profile of the New Jersey Giants franchise's Quahog Strip
     </figure>
     <figure class="venue-feature">
       <a href="{{ '/assets/img/franchises/quahog-stripes/venue.jpg' | relative_url }}" aria-label="View full-size Quahog Dome image"><img src="{{ '/assets/img/franchises/quahog-stripes/venue.jpg' | relative_url }}" alt="Quahog Dome, former home of the Quahog Stripes identity" loading="lazy"></a>
-      <figcaption><span>Former home turf</span><strong>Quahog Dome</strong></figcaption>
+      <figcaption><span>Former home turf</span><strong>Field: Quahog Dome</strong></figcaption>
     </figure>
   </div>
 </section>
