@@ -3,7 +3,8 @@
   <header class="live-matchup-card__header"><span>Week {{ matchup.week }}</span><strong>{{ matchup.status_label }}</strong></header>
   <div class="live-matchup-card__teams">
     {% for team in matchup.teams %}
-      <div class="live-matchup-team{% if matchup.winner_franchise_id == team.franchise_id %} is-winner{% endif %}">
+      {% assign identity = site.data.franchises.franchises | where: 'franchise_id', team.franchise_id | first %}
+      <div class="live-matchup-team{% if matchup.winner_franchise_id == team.franchise_id %} is-winner{% endif %}" style="--team-accent: {{ identity.branding.primary_color | default: '#123a62' }}">
         <a href="{{ team.path | relative_url }}"><img src="{{ team.identity_image | relative_url }}" alt="" loading="lazy"><span><strong>{{ team.display_name }}</strong><small>{{ team.record }}</small></span></a>
         <div class="live-matchup-team__numbers"><strong><span class="score-label">Current</span>{{ team.score | round: 2 }}</strong>{% if team.projected_score != null %}<small><span>Projected</span>{{ team.projected_score | round: 2 }}</small>{% endif %}</div>
       </div>

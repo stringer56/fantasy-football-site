@@ -1,0 +1,17 @@
+<aside class="news-strip" aria-label="NFL and fantasy news" data-news-wire>
+  <div class="wrap news-strip__inner">
+    <div class="news-strip__title">NFL + Fantasy Wire</div>
+    <div class="ticker-viewport">
+      {% if site.data.news.items.size > 0 %}
+      <div class="ticker">
+        {% capture headlines %}<span class="ticker__group">
+        {% for item in site.data.news.items %}
+          <span class="ticker__item"><span class="ticker__source">{{ item.category | default: 'nfl' | upcase | escape }} · {{ item.source | escape }}</span><a href="{{ item.link | escape }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }} ↗</a>{% if item.published_at != '' %}<time datetime="{{ item.published_at | escape }}">{{ item.published_at | date: '%b %-d, %H:%M' }} UTC</time>{% endif %}</span>
+        {% endfor %}
+        </span>{% endcapture %}{{ headlines }}<span aria-hidden="true">{{ headlines | replace: '<a ', '<a tabindex="-1" ' }}</span>
+      </div>
+      {% else %}<div class="news-empty">NFL and fantasy headlines return with the next update.</div>{% endif %}
+    </div>
+    {% if site.data.news.items.size > 0 %}<button class="wire-toggle" type="button" data-wire-toggle aria-pressed="false" hidden>Pause wire</button>{% endif %}
+  </div>
+</aside>

@@ -19,7 +19,7 @@ description: Verified Road to Glory FFL draft orders, original results, and reca
       <article class="draft-season-card">
         <a class="draft-season-card__image" href="{{ '/drafts/' | append: draft.year | append: '/' | relative_url }}">
           {% if draft.order_asset %}{% assign draft_preview = draft.order_asset %}{% else %}{% assign draft_preview = draft.results_assets[0] %}{% endif %}
-          <img src="{{ draft_preview.path | relative_url }}" alt="{{ draft_preview.alt | default: 'Preview of Road to Glory draft results' }}" loading="lazy">
+          {% if draft_preview %}<img src="{{ draft_preview.path | relative_url }}" alt="{{ draft_preview.alt | default: 'Preview of Road to Glory draft results' }}" loading="lazy">{% else %}<div class="draft-season-card__image--pending"><strong>{{ draft.year }}</strong></div>{% endif %}
           <span>{{ draft.year }}</span>
         </a>
         <div class="draft-season-card__body">
@@ -27,7 +27,7 @@ description: Verified Road to Glory FFL draft orders, original results, and reca
           <h2><a href="{{ '/drafts/' | append: draft.year | append: '/' | relative_url }}">{{ draft.year }} Draft</a></h2>
           <dl>
             <div><dt>Teams</dt><dd>{{ draft.team_count }}</dd></div>
-            <div><dt>Rounds</dt><dd>{{ draft.rounds }}</dd></div>
+            {% if draft.rounds %}<div><dt>Rounds</dt><dd>{{ draft.rounds }}</dd></div>{% else %}<div><dt>Status</dt><dd>Draft completed</dd></div>{% endif %}
             {% if draft.draft_date %}<div><dt>Date</dt><dd>{{ draft.draft_date | date: "%B %-d, %Y" }}</dd></div>{% endif %}
           </dl>
           <a class="text-link" href="{{ '/drafts/' | append: draft.year | append: '/' | relative_url }}">Open draft archive <span aria-hidden="true">→</span></a>

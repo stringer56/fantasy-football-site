@@ -6,16 +6,17 @@ Only data attributable to Road to Glory is published.
 
 ## Current coverage
 
-- Draft years: **5** (2021–2025)
+- Draft years: **6** (2021–2026; 2026 date/status only)
 - Draft-order slots: **58 of 58 resolved to stable franchises**
 - Original result captures: **12** (three per season for 2021–2024)
-- Commissioner order graphics: **1** (2025)
+- Local order graphics: **5** (2021–2025)
 - Verified structured selections: **720** (180 per season for 2022–2025)
 - Image-only selections: **2021**
-- Commissioner-confirmed draft dates: **1** (August 28, 2025 at 8:00 p.m. EDT)
-- Draft routes: **5** (`/drafts/2021/` through `/drafts/2025/`)
+- Commissioner-confirmed draft dates: **2** (August 28, 2025 at 8:00 p.m. EDT;
+  September 2, 2026 at 9:00 p.m. ET)
+- Draft routes: **6** (`/drafts/2021/` through `/drafts/2026/`)
 
-All five drafts use a snake format. For 2022–2025, the alternating order is
+The five historical drafts use a snake format. For 2022–2025, the alternating order is
 verified by the complete Yahoo boards. The 2021 format remains an observation
 from the published result captures.
 
@@ -23,6 +24,7 @@ from the published result captures.
 
 | Year | Opening order | Results | Structured picks | Mapping |
 |---:|---|---|---:|---:|
+| 2026 | Unavailable | Commissioner confirms draft completed; no verified board supplied | Unavailable | Not inferred |
 | 2025 | Commissioner text and graphic | Official Yahoo public board | 180 | 12/12 |
 | 2024 | Google Site recap | 3 captures plus official Yahoo board | 180 | 12/12 |
 | 2023 | Google Site recap | 3 captures plus official Yahoo board | 180 | 12/12 |
@@ -78,14 +80,21 @@ image-only until an authoritative machine-readable source is supplied.
 
 ## Validation
 
-`scripts/validate_draft_data.py` checks all five years, unique slots, stable
+`scripts/validate_draft_data.py` checks all six years, unique slots, stable
 franchise links, source URLs, local assets, complete Yahoo board status, exact
-pick counts, and collection routes. The rendered-site validator checks all five
+pick counts, and collection routes. The rendered-site validator checks all six
 archive cards, each draft route, all 15 structured rounds where available, and
 every local source link.
+
+The September 2026 source audit recovered all five order graphics from the
+original draft index. Four newly migrated graphics join the existing 2025 image.
+Full year/source/destination mappings and lossless optimization evidence are in
+[Commissioner review](COMMISSIONER_VISUAL_REVIEW.md#draft-artwork-audit).
+The completed 2026 draft retains null unknown counts and no fabricated selections.
 
 ## Remaining commissioner inputs
 
 1. Draft dates and locations for 2021–2024, if they are approved public facts.
 2. A machine-readable 2021 Yahoo draft export, if one exists.
 3. Any written season-specific draft recap copy intended for publication.
+4. An authoritative 2026 draft-results export; current rosters are not a draft board.

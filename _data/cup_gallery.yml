@@ -1,0 +1,18 @@
+schema_version: 1
+source_url: https://sites.google.com/view/road-to-glory-ffl/league-trophy-page
+verified_on: 2026-09-06
+# Original Cup page: ordinary images followed by carousel order. Repeated aisle
+# photographs (source positions 15 and 18) are represented once, not discarded.
+images:
+  - {file: olivers-street.jpg, source_position: 6, alt: "Oliver’s Beverage and the Brew Crew storefronts viewed from across the street"}
+  - {file: brew-crew-entrance.jpg, source_position: 7, alt: "The blue Brew Crew awning above the store entrance"}
+  - {file: olivers-storefront.jpg, source_position: 8, alt: "Oliver’s Beverage storefront with blue awning and parking area"}
+  - {file: bottle-aisle.jpg, source_position: 9, alt: "Bottle-lined aisle beneath blue beams and fluorescent lights"}
+  - {file: blue-floor-aisle.jpg, source_position: 10, alt: "Blue-floor aisle with stacked beer cases and overhead store signs"}
+  - {file: cooler-aisle.jpg, source_position: 11, alt: "Refrigerated cases beside a long aisle of bottles and boxes"}
+  - {file: bottle-return.jpg, source_position: 12, alt: "Blue garage door and bottle-and-can return entrance in winter"}
+  - {file: craft-beer-display.jpg, source_position: 13, alt: "Craft beer display beneath brewery signs and a blue ceiling"}
+  - {file: keg-wall.jpg, source_position: 14, alt: "Rows of kegs beneath the Sierra Nevada mountain mural"}
+  - {file: yellow-step-aisle.jpg, source_position: 16, alt: "Bottle shelves and a yellow step stool in a blue-floor aisle"}
+  - {file: stockroom-aisle.jpg, source_position: 17, alt: "Stockroom-style shelving with bottles, cartons and shopping baskets"}
+  - {file: brew-crew-forklift.jpg, source_position: 19, alt: "Brewery-sticker-covered forklift outside the store"}

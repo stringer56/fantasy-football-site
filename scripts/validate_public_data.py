@@ -105,6 +105,10 @@ def validate_news(payload: Any) -> list[str]:
         if not isinstance(item, dict):
             errors.append(f"{NEWS_PATH}: item {index} must be an object")
             continue
+        if set(item) - {"source", "title", "link", "published_at", "category"}:
+            errors.append(f"{NEWS_PATH}: item {index} contains unsupported fields or article content")
+        if item.get('category', 'nfl') not in {'nfl', 'fantasy', 'injury', 'analysis'}:
+            errors.append(f"{NEWS_PATH}: item {index} has an invalid category")
         title = str(item.get("title") or "").strip()
         link = str(item.get("link") or "").strip()
         if not title or not link.startswith(("https://", "http://")):

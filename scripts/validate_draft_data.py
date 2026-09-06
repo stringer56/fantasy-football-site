@@ -9,12 +9,13 @@ import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPECTED_YEARS = {2021, 2022, 2023, 2024, 2025}
+EXPECTED_YEARS = {2021, 2022, 2023, 2024, 2025, 2026}
 VALID_MAPPING_STATUSES = {"resolved", "unresolved"}
 VALID_STATUSES = {
     "source_verified_images",
     "source_verified_structured",
     "source_verified_images_and_structured",
+    "commissioner_confirmed_completed",
 }
 
 
@@ -48,7 +49,7 @@ def main() -> None:
     season_years = {item.get("year") for item in seasons}
     years = [item.get("year") for item in drafts]
     if set(years) != EXPECTED_YEARS or len(years) != len(set(years)):
-        errors.append("draft years must contain 2021-2025 exactly once")
+        errors.append("draft years must contain 2021-2026 exactly once")
 
     resolved_count = 0
     unresolved_count = 0
@@ -59,7 +60,7 @@ def main() -> None:
         if not isinstance(year, int):
             errors.append(f"{label}: year must be an integer")
             continue
-        if year not in season_years and draft.get("status") != "source_verified_structured":
+        if year not in season_years and draft.get("status") not in {"source_verified_structured", "commissioner_confirmed_completed"}:
             errors.append(f"{year}: corresponding season record is missing")
         route = ROOT / "_drafts" / f"{year}.md"
         if not route.is_file() or f"permalink: /drafts/{year}/" not in route.read_text(encoding="utf-8"):
@@ -74,6 +75,14 @@ def main() -> None:
             errors.append(f"{year}: approved public source URL is required")
         if draft.get("draft_date") == "" or draft.get("location") == "":
             errors.append(f"{year}: unknown date/location must be null, never an empty string")
+        if draft.get('status') == 'commissioner_confirmed_completed':
+            if year != 2026 or draft.get('draft_date') != '2026-09-02 21:00:00 -0400' or draft.get('timezone') != 'America/New_York':
+                errors.append(f"{year}: commissioner-confirmed draft date/time must be preserved")
+            if draft.get('pick_data_status') != 'unavailable' or any(draft.get(key) is not None for key in ('rounds', 'draft_type', 'picks', 'pick_count', 'pick_data_path', 'order_asset')):
+                errors.append(f"{year}: unresolved draft data must remain null, never invented or zero")
+            if draft.get('draft_order') != [] or draft.get('results_assets') != [] or draft.get('team_count') != 12 or not draft.get('notes'):
+                errors.append(f"{year}: commissioner-completed coverage is invalid")
+            continue
         if draft.get("draft_type") != "snake" or not str(draft.get("draft_type_note") or "").strip():
             errors.append(f"{year}: observed snake format and its provenance note are required")
         rounds = draft.get("rounds")
@@ -130,6 +139,12 @@ def main() -> None:
             if not str(asset.get("rounds") or "").strip() or not str(asset.get("alt") or "").strip():
                 errors.append(f"{year}: every result asset needs rounds and descriptive alt text")
             asset_count += 1
+        order_art = draft.get('order_asset')
+        if order_art:
+            if not local_asset(order_art.get('path'), year) or not order_art.get('alt'):
+                errors.append(f"{year}: invalid draft-order artwork or alt text")
+            elif draft.get('status') != 'source_verified_structured':
+                asset_count += 1
         for optional_asset in ("board_asset", "recap_asset"):
             value = draft.get(optional_asset)
             if value == "":
