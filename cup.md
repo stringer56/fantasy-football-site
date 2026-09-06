@@ -15,6 +15,8 @@ body_class: cup-page
   </figure>
   <div class="cup-trophy-feature__story">
     <p class="eyebrow">One cup. One year of bragging rights.</p>
+    {% assign current_champion = site.data.champions.champions | sort: 'year' | last %}{% assign current_holder = site.data.franchises.franchises | where: 'franchise_id', current_champion.champion_franchise_id | first %}
+    <a class="cup-holder" href="{{ current_champion.season_path | relative_url }}"><img src="{{ current_holder.branding.identity_image | relative_url }}" alt="{{ current_holder.branding.identity_alt | escape }}"><span>{{ current_champion.year }} defending champion<strong>{{ current_champion.champion_display_name }}</strong><small>{{ current_champion.champion_score }}–{{ current_champion.runner_up_score }} · Championship story ↗</small></span></a>
     <h2 id="cup-story-heading">The prize at the end of the road</h2>
     <p>The Brew Crew Cup is the league’s symbol of fantasy-football supremacy. After the regular season and playoff bracket, one franchise earns the right to put its name into league history.</p>
     <p>The champion’s name and team are engraved on the trophy before the Cup travels to its new home. It stays with the winner until the next champion claims it, turning every season into another chapter of the same league tradition.</p>

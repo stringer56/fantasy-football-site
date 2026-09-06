@@ -57,9 +57,16 @@
 .cup-page { background: #e3eaf0; }
 .cup-page .cup-trophy-feature { padding-block: 3rem; }
 .cup-page .cup-trophy-feature__story h2 { color: #0b2342; }
+.cup-holder { display: flex; gap: 1rem; align-items: center; padding: 1rem; margin-block: 1.5rem; background: #0b2947; color: #f0cd77; text-decoration: none; border-left: 4px solid #be984a; }
+.cup-holder img { width: 6rem; height: 6rem; object-fit: contain; }
+.cup-holder span { min-width: 0; font-size: .875rem; }
+.cup-holder strong { display: block; color: #fff; font-size: 1.3rem; line-height: 1.25; margin-block: .3rem; }
+.cup-holder small { color: #d4e0ee; }
 .cup-origin { background: #0c2946; color: #e1e9f1; padding-block: 4rem; }
 .cup-origin .eyebrow { color: var(--league-gold); }
 .cup-origin__grid { display: grid; grid-template-columns: minmax(0,1.5fr) minmax(0,1fr); gap: 3rem; align-items: start; }
+.cup-origin > .shell-content, .cup-gallery-section > .shell-content { padding-block: 0; }
+.cup-gallery-section h2, #cup-original-heading { font-size: var(--type-section); letter-spacing: -.04em; line-height: 1.15; }
 .cup-origin h2 { color: #fff; font-size: var(--type-section); }
 .cup-origin p { line-height: 1.8; }
 .cup-origin a { color: #f2cf78; }
@@ -74,6 +81,9 @@
 .cup-gallery figcaption { padding: 1rem; font-size: .875rem; color: #e3edf5; }
 .cup-gallery figure:first-child { grid-column: span 2; }
 .cup-gallery figure:first-child img { height: 24rem; }
+.draft-season-card .draft-season-card__image--pending strong { font-size: clamp(3rem,4.5vw,5rem); }
+.draft-hero .draft-season-card__image--pending { padding: 2rem; border-top: 4px solid #eac15a; text-align: center; }
+.live-matchup-team { border-left: 4px solid var(--team-accent, #b99136); background: linear-gradient(90deg, color-mix(in srgb, var(--team-accent, #123a62) 9%, #fff), #fff 75%); }
 .cup-archive-note { padding: 1rem; border-left: 4px solid #b58b32; background: #f9f5e7; color: #192d42; }
 .news-strip { background: #112f4d; color: white; border-bottom: 3px solid #b99136; }
 .news-strip__inner { grid-template-columns: auto minmax(0,1fr) auto; }
@@ -94,4 +104,5 @@
 @media(max-width:1100px) { .franchise-card__body { padding: 1.4rem; } }
 @media(max-width:768px) { .cup-origin__grid { grid-template-columns: minmax(0,1fr); } .cup-gallery { grid-template-columns: repeat(2,minmax(0,1fr)); } .news-strip__inner { grid-template-columns: minmax(0,1fr) auto; } .news-strip__title { grid-column: 1 / -1; min-height: 2.5rem; } }
 @media(max-width:600px) { .league-mark { width: 2.5rem; height: 2.8rem; } .brand { gap: .5rem; } .brand__name { font-size: 1.12rem; } .brand__league { font-size: .55rem; letter-spacing: .08em; } .home-hero h1 { padding-left: .8rem; font-size: clamp(3.25rem,14vw,4.8rem); } .cup-gallery { grid-template-columns: minmax(0,1fr); } .cup-gallery figure:first-child { grid-column: auto; } .cup-gallery img, .cup-gallery figure:first-child img { height: auto; max-height: 26rem; } .franchise-identity { padding: .75rem; } }
+@media(max-width:600px) { .draft-hero .draft-season-card__image--pending { display: none; } .cup-origin, .cup-gallery-section { padding-block: 2.5rem; } }
 @media(prefers-reduced-motion:reduce) { .ticker { animation: none; flex-wrap: wrap; width: auto; white-space: normal; } .ticker > [aria-hidden=true] { display: none; } .ticker__group { flex-direction: column; width: 100%; } .ticker__item { display: block; padding-block: .7rem; } .ticker__source { display: block; } }

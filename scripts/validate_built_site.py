@@ -340,6 +340,10 @@ def main() -> None:
     for draft in draft_data["drafts"]:
         route = f"/drafts/{draft['year']}/"
         rendered = route_target(route).read_text(encoding="utf-8")
+        if draft['year'] == 2026:
+            for expected in ('Wednesday, September 2, 2026', '9:00 PM ET', 'Draft completed', 'awaiting a verified draft-board import'):
+                if expected not in rendered:
+                    errors.append(f"2026 draft must render commissioner-confirmed state: {expected}")
         for expected in ("Draft Order", "Draft Board &amp; Results", "Draft recap", "Verified Notes", 'aria-label="Draft years"'):
             if expected not in rendered:
                 errors.append(f"draft page {route} is missing: {expected}")

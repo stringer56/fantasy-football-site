@@ -76,7 +76,10 @@ def valid_items(payload: Any) -> list[dict[str, str]]:
             continue
         title = str(item.get("title") or "").strip()
         link = str(item.get("link") or "").strip()
-        parsed = urlsplit(link)
+        try:
+            parsed = urlsplit(link)
+        except ValueError:
+            continue
         if title and parsed.scheme in {"https", "http"} and parsed.hostname and not parsed.username and not parsed.password and 'feed error' not in title.lower():
             # Explicit allowlist: never retain RSS description/content or unknown keys.
             valid.append({"source": str(item.get("source") or ""),
@@ -106,7 +109,7 @@ def build_news_payload(
     for source, feed_items in feed_results:
         safe = valid_items({"items": feed_items})
         any_fresh = any_fresh or bool(safe)
-        items.extend((safe or [i for i in previous if i['source'] == source])[:MAX_ITEMS_PER_FEED])
+        items.extend(safe or [i for i in previous if i['source'] == source])
 
     if not any_fresh and previous:
         # Preserve safe legacy snapshots byte-for-byte; scrub unexpected private/body fields.
@@ -124,6 +127,14 @@ def build_news_payload(
             item['published_at'] = ''
     items.sort(key=lambda i: (i['published_at'], i['link']), reverse=True)
     items = list({item['link']: item for item in items}.values())
+    counts: dict[str, int] = {}
+    limited = []
+    for item in items:
+        source = item['source']
+        counts[source] = counts.get(source, 0) + 1
+        if counts[source] <= MAX_ITEMS_PER_FEED:
+            limited.append(item)
+    items = limited
 
     if items:
         previous_items = existing.get('items', []) if existing else []
