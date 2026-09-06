@@ -38,6 +38,10 @@ class ProfessionalIdentityTests(unittest.TestCase):
         self.assertIn('.franchise-ledger dl { gap: .5rem;', text)
         self.assertIn('.franchise-record-grid { grid-template-columns: repeat(2, minmax(0, 1fr));', text)
 
+    def test_mobile_ranking_source_has_full_width(self):
+        text = (ROOT / 'assets/css/publication.css').read_text(encoding='utf-8')
+        self.assertIn('.ranking-method dl div:last-child { grid-column: 1 / -1;', text)
+
 
 if __name__ == '__main__':
     unittest.main()
