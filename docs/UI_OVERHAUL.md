@@ -1,5 +1,55 @@
 # UI Overhaul — League publication and franchise profiles
 
+## Second-pass sign-off and field captions — September 6, 2026
+
+Continued on draft PR #30; no new branch and no merge. Requested portrait titles
+now read **Field: [canonical home field]** on all twelve directory cards and the
+full-size venue galleries. Quahog's historical venue reads **Field: Quahog Dome**.
+Team names, coach names, historical writing and field-name data are unchanged.
+
+Additional files modified: `_includes/franchise-card.html`,
+`_includes/franchise-gallery.html`, `retired/quahog-stripes.md`,
+`tests/test_professional_ui.py`, `scripts/validate_built_site.py`,
+`scripts/audit_browser.py`, and this report. No files or artwork removed.
+
+| Review area | Finding / action |
+| --- | --- |
+| Team pages | Venue captions needed explicit context; prefixed them with `Field:` using escaped canonical names. Retained the complete helmet, readable coach/story treatment and dated career ledger. |
+| Team index | All twelve portraits reviewed together. Explicit field labels clarify the venue text; added a geometric caption/helmet overlap check for long names. |
+| Homepage | Cup/champion composition, wire, matchups, standings and subdued community sections remain coherent; no additional change needed. |
+| History / Records / Drafts / Cup | Existing chronology, numerical hierarchy, accessible tables and full-size artwork remain consistent; no additional change needed. |
+| Community | Dormant states remain intentional. No forms, responses, results or workflows changed. |
+| Mobile / typography | Long field names wrap without overlapping helmets or causing page overflow; retained current heading, body and metadata sizes. |
+| Image composition | All source artwork remains unchanged and contained. Venue crops are decorative; uncropped originals remain available through gallery links. |
+| Accessibility | No-JS content, keyboard menu/Escape, reduced motion, roster controls, bracket scrolling and 200% directory text sizing passed. |
+| Performance | No new asset requests, dependencies, scripts or image re-encoding. Existing lazy loading and fixed image frames retained. |
+
+Validated actual CI artifact for `62adb082f4ed7be89c67fde71bcfd54292099cfc`:
+https://github.com/stringer56/fantasy-football-site/actions/runs/34051837479.
+All 230 unit tests, 13 canonical validators, generator check modes, Python compile,
+dependency consistency, JavaScript syntax, Git diff, Jekyll build, rendered links
+and privacy checks passed. Added one unit test, canonical rendered-caption checks
+and a browser geometry regression check. All 44 public pages build.
+
+Browser review: 44 routes × 1440/1024/768/390/360 = **220 passing checks, zero
+problems**. A separate focused pass covered every active franchise and both archive
+pages plus history/drafts/Cup/community at the same widths: **101 checks passed**,
+including 200% text sizing. Manual screenshot inspection covered all twelve active
+identities; six-plus representative profiles received desktop/mobile comparison.
+Both Savage Huns and Quahog retained full archive presentation. Home, directory,
+2024 season, records and shared navigation also received the all-route review.
+
+Evidence stays outside production in ignored `.cache/professional-ui/caption-review/`
+and `caption-details/`. No body overflow, distorted identity images, broken local
+assets, failed internal requests, script errors or overlapping field labels were
+detected. No logic/data, Yahoo OAuth, community configuration, historical facts or
+calculations changed. No secrets/private data introduced. GitHub Pages/Jekyll passes.
+
+**Ready for commissioner visual sign-off, not automatically approved or merged.**
+Remaining limitations: existing low-resolution source artwork, missing approved
+current-name Albany artwork, and Chromium-only browser coverage. No further
+redesign is recommended before commissioner feedback.
+
 ## Professional identity pass — September 6, 2026
 
 New baseline: `303fd2c`, latest main after #29 and scheduled Yahoo updates.
