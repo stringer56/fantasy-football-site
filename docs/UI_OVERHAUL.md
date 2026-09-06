@@ -1,5 +1,37 @@
 # UI Overhaul — League publication and franchise profiles
 
+## Professional identity pass — September 6, 2026 (in review)
+
+New baseline: `303fd2c`, latest main after #29 and scheduled Yahoo updates.
+The previously merged `codex/ui-overhaul-team-pages` branch was fast-forwarded
+without rewriting history. All material below this section documents the earlier
+#27 implementation, not new validation evidence.
+
+Before review uses the actual #29 deployed Pages artifact across 44 routes at
+1440, 1024, 768, 390 and 360 pixels. Original Google Site captures from the
+previous migration were reviewed: home, Greendale and Turnbull. A fresh web
+fetch was unavailable, so no new source content or assets were inferred.
+
+Observed opportunities: separated venue/helmet bands make directory entries tall;
+profile covers underemphasize the helmet; mobile statistical cards repeat a long
+single-column rhythm; the homepage's championship identity lacks the champion's
+helmet. The existing design is healthy; this is a presentation refinement.
+
+Changes: two-column editorial identity panels pair artwork with coach/story;
+helmet-first desktop profile covers retain readable navy text surfaces; a labelled
+2021–2025 ledger reuses existing verified career metrics; mobile records use two
+columns. Home pairs the real Cup with its canonical defending champion. Archive
+year panels, championship chronology, record leaders and draft/community borders
+share restrained navy/gold treatment. Original summaries, canonical data, art,
+routes, Yahoo, community and statistical logic are unchanged.
+
+No assets migrated or recompressed. Existing colors and source-resolution limits
+remain as documented below and in ASSET_REPLACEMENT_WISHLIST.md. The original
+31 franchise assets remain intact. Newly shown champion artwork is lazy-loaded
+and already used elsewhere on the homepage, allowing browser cache reuse.
+
+Validation and final browser findings will be recorded after the draft build.
+
 ## Audit before implementation
 
 Started from main after PR #26, on `codex/ui-overhaul-team-pages`.

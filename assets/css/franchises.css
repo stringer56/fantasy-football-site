@@ -7,7 +7,7 @@
 .directory-hero__edition strong { display: block; font-size: 4rem; font-weight: 900; line-height: 1; color: var(--gold-400); }
 .directory-hero__edition span { display: block; font-size: .75rem; text-transform: uppercase; letter-spacing: .12em; margin-top: .5rem; }
 .directory-hero__edition a { display: inline-block; color: #d3dae4; font-size: .8rem; margin-top: 1rem; }
-.franchise-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.franchise-card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem 2rem; }
 .franchise-card { display: flex; flex-direction: column; min-width: 0; border: var(--rule); border-top: 6px solid var(--team-accent, var(--gold-500)); background: white; transition: box-shadow 160ms; }
 .franchise-card:hover, .franchise-card:focus-within { box-shadow: var(--shadow-md); }
 .franchise-card__image { display: flex; align-items: center; justify-content: center; flex: 0 0 15rem; min-height: 0; height: 15rem; padding: 1rem; background: #f9f9f7; border-bottom: var(--rule); }
@@ -25,13 +25,15 @@
 
 /* Profile cover and in-page navigation. */
 .franchise-hero { position: relative; background: var(--navy-950); color: white; border-bottom: 6px solid var(--team-accent, var(--gold-500)); }
-.franchise-hero__grid { display: grid; align-items: center; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 3rem; min-height: 0; padding-block: 3rem; }
+.franchise-hero__grid { display: grid; align-items: center; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 5rem); min-height: 0; padding-block: 3rem; }
+.franchise-hero__copy { grid-column: 2; grid-row: 1; }
+.franchise-hero .franchise-identity { grid-column: 1; grid-row: 1; }
 .franchise-hero h1 { margin: 0; font-family: var(--font-display); font-size: clamp(2.8rem, 5.3vw, 5rem); font-weight: 950; letter-spacing: -.05em; line-height: 1.02; overflow-wrap: normal; }
 .franchise-hero__lede { max-width: 40rem; margin: 1.3rem 0 0; font-family: Georgia, serif; font-size: clamp(1.05rem, 1.8vw, 1.3rem); font-style: italic; line-height: 1.55; color: #d0d9e4; }
 .franchise-hero__owners { display: flex; align-items: baseline; flex-wrap: wrap; gap: .65rem; margin-top: 1.5rem; }
 .franchise-hero__owners span { color: var(--gold-300); font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .franchise-hero__owners strong { font-size: 1.15rem; }
-.franchise-identity { display: flex; align-items: center; justify-content: center; min-height: 0; width: 100%; height: 23rem; padding: 1.25rem; margin: 0; border-top: 6px solid var(--team-accent, var(--gold-500)); background: #fff; box-shadow: 10px 10px 0 #1a293b; }
+.franchise-identity { display: flex; align-items: center; justify-content: center; min-height: 0; width: 100%; height: 26rem; padding: .75rem; margin: 0; background: #f7f6f2; border-bottom: 6px solid var(--team-accent, var(--gold-500)); }
 .franchise-identity img { width: 100%; height: 100%; object-fit: contain; }
 .franchise-honors { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.4rem; }
 .franchise-honors a { border-bottom: 1px solid #9d813e; padding-bottom: .35rem; color: var(--gold-300); font-size: .8rem; font-weight: 800; text-decoration: none; }
@@ -41,7 +43,7 @@
 .franchise-jump-nav a:hover { text-decoration: underline; }
 
 /* Preserved editorial story and distinct coach dossier. */
-.franchise-story-grid { display: grid; align-items: start; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); }
+.franchise-story-grid { display: grid; align-items: start; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); }
 .franchise-section-title { margin: 0; color: var(--navy-900); font-size: var(--type-section); line-height: 1.1; letter-spacing: -.04em; font-weight: 900; }
 .franchise-story { margin: 1.4rem 0 0; color: #344154; font-size: 1.12rem; line-height: 1.85; max-width: 65ch; }
 .alias-block { margin-top: 1.5rem; padding-top: 1.2rem; border-top: var(--rule); }
@@ -67,6 +69,13 @@
 .venue-feature figcaption span, .honors-feature figcaption span { display: block; color: #586577; font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; }
 .venue-feature figcaption strong, .honors-feature figcaption strong { display: block; margin-top: .25rem; }
 .franchise-source-note { margin: 1.25rem 0 0; color: #586577; font-size: .8rem; }
+.franchise-ledger { background: #ede9df; border-bottom: var(--rule); color: var(--navy-900); }
+.franchise-ledger > .wrap { display: flex; align-items: center; gap: 3rem; padding-block: 1.25rem; }
+.franchise-ledger p { margin: 0; padding-right: 2rem; border-right: 1px solid #c9c8c0; }
+.franchise-ledger p span, .franchise-ledger dt { display: block; color: #536172; font-size: .875rem; }
+.franchise-ledger p strong { font-size: 1.2rem; }
+.franchise-ledger dl { display: flex; flex: 1; justify-content: space-between; gap: 2rem; margin: 0; }
+.franchise-ledger dd { margin: .15rem 0 0; font-size: clamp(1.6rem, 2.7vw, 2.3rem); font-weight: 850; font-variant-numeric: tabular-nums; line-height: 1.2; }
 .franchise-history__grid article, .franchise-live__grid article { border-radius: .15rem; box-shadow: none; }
 .franchise-live__grid > article { color: var(--navy-900); }
 .franchise-live__grid .text-link { color: var(--navy-700); }
@@ -85,7 +94,7 @@
 .retired-card p:not(.eyebrow) { color: #c8d3df; }
 @media (max-width: 1100px) { .franchise-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 900px) {
-  .franchise-hero__grid { gap: 2rem; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); }
+  .franchise-hero__grid { gap: 2rem; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
   .franchise-identity { height: 19rem; padding: .8rem; }
   .franchise-story-grid { grid-template-columns: minmax(0, 1fr); }
   .franchise-facts { max-width: none; }
@@ -100,8 +109,10 @@
   .franchise-card-grid, .franchise-gallery, .franchise-gallery--two, .retired-grid { grid-template-columns: minmax(0, 1fr); }
   .franchise-card__image { height: 14rem; flex-basis: 14rem; }
   .franchise-hero__grid { grid-template-columns: minmax(0, 1fr); padding-block: 2rem; gap: 1.8rem; }
+  .franchise-hero__copy { grid-column: 1; grid-row: 1; }
+  .franchise-hero .franchise-identity { grid-column: 1; grid-row: 2; }
   .franchise-hero h1 { font-size: clamp(2.6rem, 10vw, 3.5rem); }
-  .franchise-identity { max-width: 23rem; height: 17rem; justify-self: center; box-shadow: 5px 5px 0 #1a293b; }
+  .franchise-identity { max-width: 23rem; height: 17rem; justify-self: center; }
   .franchise-hero__lede { font-size: 1rem; }
   .franchise-jump-nav > .wrap { gap: .15rem 1rem; }
   .franchise-jump-nav a { font-size: .77rem; }
@@ -113,25 +124,25 @@
 
 /* Stadium-led covers retain the complete identity artwork in a separate image panel. */
 .franchise-hero { isolation: isolate; overflow: hidden; }
-.franchise-hero__venue { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .22; z-index: -2; }
+.franchise-hero__venue { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .4; z-index: -2; }
 .franchise-hero .text-link { display: inline-block; color: #f0cf74; margin-top: 1rem; }
 .franchise-art-note { color: #c8d3df; font-size: .8rem; margin: 1rem 0 0; }
-.franchise-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #071426 10%, rgb(7 20 38 / 75%) 50%, rgb(7 20 38 / 15%)); pointer-events: none; }
+.franchise-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgb(7 20 38 / 20%), #071426 65%); pointer-events: none; }
 .franchise-hero__grid { padding-block: 3.5rem; }
-.franchise-identity { height: 25rem; box-shadow: none; padding: 1rem; border: 0; background: #fbfaf6; border-bottom: 6px solid var(--team-accent, var(--gold-500)); }
-.franchise-card { position: relative; border: 0; border-bottom: 1px solid #c9c8c0; background: transparent; }
-.franchise-card__venue { position: relative; height: 8rem; overflow: hidden; background: var(--navy-900); }
-.franchise-card__venue img { height: 100%; width: 100%; object-fit: cover; opacity: .65; }
-.franchise-card__venue span { position: absolute; bottom: .65rem; left: 1rem; right: 1rem; color: white; font-weight: 750; font-size: .8rem; text-shadow: 0 1px 4px black; }
-.franchise-card__image { margin: 0; border: 0; border-top: 4px solid var(--team-accent); background: #eeede7; height: 14rem; flex-basis: 14rem; padding: 1.25rem; }
+.franchise-card { position: relative; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); border: 0; border-bottom: 1px solid #c9c8c0; background: transparent; }
+.franchise-card__visual { position: relative; min-width: 0; display: grid; align-content: center; background: var(--navy-950); border-bottom: 5px solid var(--team-accent); }
+.franchise-card__venue { position: absolute; inset: 0; overflow: hidden; }
+.franchise-card__venue img { height: 100%; width: 100%; object-fit: cover; opacity: .4; }
+.franchise-card__venue span { position: absolute; bottom: 0; left: 0; right: 0; padding: .65rem .8rem; background: #071426; color: white; font-weight: 650; font-size: .75rem; line-height: 1.4; }
+.franchise-card__image { position: relative; margin: 1rem .75rem 4.5rem; border: 0; background: #f7f6f2; height: 14rem; padding: .5rem; }
 .franchise-card__image img { transition: transform 180ms; }
 .franchise-card__image:hover img { transform: scale(1.035); }
-.franchise-card__body { padding: 1.4rem 0; }
+.franchise-card__body { padding: 1.25rem 0 1.25rem 1.25rem; }
 .franchise-card__status { font-size: .75rem; }
 .franchise-card__body > p:not([class]) { font-size: 1rem; }
 .franchise-card__footer > span { font-size: .8rem; }
 .franchise-card:hover, .franchise-card:focus-within { box-shadow: none; }
-.franchise-card h2 { font-size: 1.75rem; }
+.franchise-card h2 { font-size: clamp(1.4rem, 2vw, 1.9rem); }
 .franchise-story { font-family: Georgia, serif; }
 .franchise-facts dt { font-size: .85rem; }
 .franchise-facts dd { font-size: 1rem; }
@@ -144,11 +155,20 @@
 .retired-card__image { height: 19rem; background: #eeede7; }
 @media (max-width: 900px) {
   .franchise-identity { height: 21rem; }
+  .franchise-card { grid-template-columns: minmax(0, 1fr); }
+  .franchise-card__body { padding: 1.25rem 0; }
+  .franchise-card__image { margin: 1rem 2rem 3.5rem; height: 16rem; }
 }
 @media (max-width: 600px) {
   .franchise-hero__grid { padding-block: 2rem; }
   .franchise-hero__venue { opacity: .35; }
   .franchise-identity { height: 18rem; width: 100%; box-shadow: none; }
-  .franchise-card__venue { height: 7rem; }
-  .franchise-card__image { height: 15rem; flex-basis: 15rem; }
+  .franchise-card__image { height: 17rem; margin-inline: 2rem; }
+  .franchise-ledger > .wrap { display: block; padding-block: 1rem; }
+  .franchise-ledger p { display: flex; justify-content: space-between; border: 0; padding: 0 0 .75rem; }
+  .franchise-ledger p strong { font-size: .875rem; }
+  .franchise-ledger dl { gap: .5rem; }
+  .franchise-ledger dt { font-size: .75rem; }
+  .franchise-ledger dd { font-size: 1.5rem; }
+  .franchise-record-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

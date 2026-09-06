@@ -7,6 +7,7 @@ body_class: home-page
 
 {% assign live = site.data.generated.live_season %}
 {% assign latest_champion = site.data.champions.champions | sort: 'year' | last %}
+{% assign defending_franchise = site.data.franchises.franchises | where: 'franchise_id', latest_champion.champion_franchise_id | first %}
 {% assign active = site.data.franchises.franchises | where: 'status', 'active' %}
 <section class="home-hero"><div class="wrap home-hero__inner">
   <div><p class="eyebrow">{{ site.data.site.current_season }} season · Established {{ site.data.league.founded_season }}</p>
@@ -16,7 +17,7 @@ body_class: home-page
     <a class="home-yahoo-link" href="{{ site.data.site.yahoo.league_url }}" target="_blank" rel="noopener noreferrer">View League on Yahoo ↗</a>
   </div>
   <figure class="home-trophy"><img src="{{ '/assets/img/cup/brew-crew-cup.jpg' | relative_url }}" width="1536" height="2048" alt="The league’s gold Brew Crew Cup trophy" fetchpriority="high">
-    <figcaption><span>The prize that brings us back</span><strong>Brew Crew Cup</strong>{% if latest_champion %}<a href="{{ latest_champion.season_path | relative_url }}">{{ latest_champion.year }} champions · {{ latest_champion.champion_display_name }} ↗</a>{% endif %}</figcaption>
+    <figcaption><span>The prize that brings us back</span><strong>Brew Crew Cup</strong>{% if latest_champion %}<a class="defending-champion" href="{{ latest_champion.season_path | relative_url }}">{% if defending_franchise %}<img src="{{ defending_franchise.branding.identity_image | relative_url }}" alt="" loading="lazy">{% endif %}<span>{{ latest_champion.year }} champions<br><b>{{ latest_champion.champion_display_name }}</b> ↗</span></a>{% endif %}</figcaption>
   </figure>
 </div></section>
 
