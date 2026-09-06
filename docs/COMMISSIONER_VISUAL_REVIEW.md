@@ -147,5 +147,59 @@ Categories support a future news index; a new news backend/page was not added.
 
 ## Validation and visual evidence
 
-Final validation and browser findings are recorded below after the actual Jekyll
-artifact review. No local Ruby is installed; builds use pinned GitHub Actions.
+The source build at `520cf81` passed [Validate Site, run 34056883534](https://github.com/stringer56/fantasy-football-site/actions/runs/34056883534).
+No local Ruby is installed; the actual pinned GitHub Actions Jekyll artifact was
+downloaded and served temporarily for browser review, not approximated with a
+different local renderer. This is PR preview validation, not production deployment.
+
+- `python -m compileall -q scripts tests`: pass.
+- Full unit suite: **245 tests passed**, including 11 new commissioner regressions
+  for branding/labels, safe wire output, failed feeds, malformed URLs, newest-first
+  limits, complete local Cup/draft art, and the verified-only 2026 draft contract.
+- All 13 canonical data/repository validators: pass; the compatibility Yahoo
+  history validator also passes. Generated records, recaps, historical metrics
+  and history discovery baseline checks are current.
+- `python -m pip check`: no broken requirements. JavaScript syntax checks: pass.
+- `bundle exec jekyll build`: pass in CI. Rendered-site validation: **45 pages**,
+  valid assets/internal links/landmarks. Public-data and rendered privacy: pass.
+- Full-route Chromium review: **225 checks, no problems reported**, using
+  **1440, 1024, 768, 390 and 360px**, checking
+  body overflow, missing/broken/distorted images, headings, disclosure controls,
+  JavaScript errors and visible debug/private content.
+- Additional focused review covers homepage, directory, Albany/Greendale,
+  Cup story/gallery, draft index, and 2021/2024/2026 draft pages at all five widths.
+  Representative desktop/mobile screenshots were visually inspected. Corrections
+  include Cup section spacing, compact 2026 year display, readable mobile branding,
+  long team-name wrapping and champion-score reflow.
+- **200% text at 390px:** homepage, directory, Greendale, Cup, draft index and
+  2026 draft all pass without body overflow. Ticker pause/resume, keyboard focus,
+  reduced motion and no-JS headlines pass. Existing no-JS navigation, keyboard
+  menu/Escape, franchise scrolling, roster expansion and contained bracket tests pass.
+- Rendered search finds no obsolete standalone `Field:` venue labels. Venue
+  labels say **Home Field**. `git diff --check`: pass.
+
+Ignored local evidence is under `.cache/commissioner-verified-review/` (all-route
+audit/screenshots) and `.cache/commissioner-review/` (focused views/interactions).
+These are QA evidence, never production content. No source assets were stretched,
+recolored or replaced. The two PNG-to-WebP conversions preserve decoded pixels.
+
+## Handoff and remaining input
+
+[Draft PR #31](https://github.com/stringer56/fantasy-football-site/pull/31) contains
+this complete follow-up. PR #30 was already merged; no changes were retroactively
+added to it and no unmerged prerequisite remains. **Do not merge automatically.**
+
+The changed files comprise reusable layouts/includes, one lightweight CSS layer
+and wire script, the news adapter/snapshot, Cup/draft metadata and pages, 18 new
+local assets, 11 regressions, validators and documentation. Canonical generated
+Yahoo/history/records data, franchise artwork, community configuration, workflow
+files and Yahoo OAuth logic have no diff against the merged base.
+
+Next: commissioner review/approval of PR #31, then provide an authoritative 2026
+draft-results export if results should be populated. The missing historical
+Albany helmet and higher-resolution originals remain optional future artwork
+inputs; the approved fallback stays intact. Existing photography's baked frames
+and modest source resolutions are preserved rather than artificially enhanced.
+Feed availability remains publisher-dependent; refresh is scheduled every six
+hours, not a live push service. No article bodies, fake picks, community ballots,
+credentials or raw private inputs were introduced. GitHub Pages remains the host.
