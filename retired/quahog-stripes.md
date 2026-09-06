@@ -39,12 +39,12 @@ description: Preserved profile of the New Jersey Giants franchise's Quahog Strip
 <section class="content-section content-section--neutral content-section--bordered">
   <div class="wrap franchise-gallery franchise-gallery--two">
     <figure class="venue-feature">
-      <img src="{{ '/assets/img/franchises/quahog-stripes/identity.jpg' | relative_url }}" alt="White Quahog Stripes football helmet with an orange animal emblem" loading="lazy">
+      <a href="{{ '/assets/img/franchises/quahog-stripes/identity.jpg' | relative_url }}" aria-label="View full-size Quahog Stripes helmet"><img src="{{ '/assets/img/franchises/quahog-stripes/identity.jpg' | relative_url }}" alt="White Quahog Stripes football helmet with an orange animal emblem" loading="lazy"></a>
       <figcaption><span>Historical identity</span><strong>Quahog Stripes</strong></figcaption>
     </figure>
     <figure class="venue-feature">
-      <img src="{{ '/assets/img/franchises/quahog-stripes/venue.jpg' | relative_url }}" alt="Quahog Dome, former home of the Quahog Stripes identity" loading="lazy">
-      <figcaption><span>Former home turf</span><strong>Quahog Dome</strong></figcaption>
+      <a href="{{ '/assets/img/franchises/quahog-stripes/venue.jpg' | relative_url }}" aria-label="View full-size Quahog Dome image"><img src="{{ '/assets/img/franchises/quahog-stripes/venue.jpg' | relative_url }}" alt="Quahog Dome, former home of the Quahog Stripes identity" loading="lazy"></a>
+      <figcaption><span>Former home turf</span><strong>Field: Quahog Dome</strong></figcaption>
     </figure>
   </div>
 </section>

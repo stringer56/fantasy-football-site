@@ -36,6 +36,16 @@ layout: default
         </figure>
       </div>
     </header>
+    {% if historical_metrics.season_history.season_count > 0 %}
+    <section class="franchise-ledger" aria-label="Verified franchise record, 2021 through 2025"><div class="wrap">
+      <p><span>In the record book</span><strong>2021–2025</strong></p>
+      <dl>
+        <div><dt>Career record</dt><dd>{{ historical_metrics.season_history.wins }}–{{ historical_metrics.season_history.losses }}–{{ historical_metrics.season_history.ties }}</dd></div>
+        <div><dt>Win percentage</dt><dd>{{ historical_metrics.season_history.win_percentage | times: 100 | round: 1 }}%</dd></div>
+        <div><dt>Brew Crew Cups</dt><dd>{{ historical_metrics.season_history.championships }}</dd></div>
+      </dl>
+    </div></section>
+    {% endif %}
     <nav class="franchise-jump-nav" aria-label="On this franchise page"><div class="wrap"><a href="#team-story">The story</a><a href="#team-facts-title">Coach &amp; identity</a><a href="#home-turf">Home turf</a>{% unless is_retired %}<a href="#franchise-live-2026">2026 season</a>{% endunless %}{% if historical_metrics %}<a href="#franchise-history">Career &amp; seasons</a>{% endif %}<a href="{{ '/drafts/' | relative_url }}">Draft archive ↗</a></div></nav>
 
     <section class="content-section content-section--tight" id="team-story">
