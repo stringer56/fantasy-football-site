@@ -1,6 +1,6 @@
 # UI Overhaul — League publication and franchise profiles
 
-## Professional identity pass — September 6, 2026 (in review)
+## Professional identity pass — September 6, 2026
 
 New baseline: `303fd2c`, latest main after #29 and scheduled Yahoo updates.
 The previously merged `codex/ui-overhaul-team-pages` branch was fast-forwarded
@@ -30,7 +30,98 @@ remain as documented below and in ASSET_REPLACEMENT_WISHLIST.md. The original
 31 franchise assets remain intact. Newly shown champion artwork is lazy-loaded
 and already used elsewhere on the homepage, allowing browser cache reuse.
 
-Validation and final browser findings will be recorded after the draft build.
+### Delivery and file inventory
+
+- Branch: `codex/ui-overhaul-team-pages` (fast-forwarded from its merged #27 tip).
+- Draft PR: https://github.com/stringer56/fantasy-football-site/pull/30 — not merged.
+- Final UI revision: `8336676ba5e86392179c6118f6e4cac407a5fc6f`.
+- Created: `tests/test_professional_ui.py`.
+- Modified: `.gitignore`, `_includes/franchise-card.html`,
+  `_layouts/franchise.html`, `assets/css/franchises.css`,
+  `assets/css/publication.css`, `docs/DESIGN_SYSTEM.md`, `docs/UI_OVERHAUL.md`,
+  `index.md`, `retired/quahog-stripes.md`.
+- Removed: none. No images, canonical data, JavaScript, dependency manifests,
+  workflows, generators or Yahoo files changed relative to the baseline.
+
+### Review findings and final refinements
+
+The final cover puts the complete helmet ahead of the profile copy on desktop;
+mobile retains the title-first reading order and contained art. The directory
+uses fewer, larger identity panels per row and venue-backed art rather than
+separate venue and helmet bands. This makes the coach and original voice visible
+beside the image. Existing global header/menu behavior was retained after review,
+not rebuilt just to produce changes. The Sites building skill's existing-site
+and imagery guidance was applied without changing the required GitHub Pages host.
+
+Manual screenshot review led to three small iterations: remove the mobile
+trophy's oversized fixed-height frame, enlarge career-stat labels, and give the
+Power Rankings "Managers" field a full-width mobile row rather than splitting
+the word. Quahog's two gallery images now link to their full-size local originals.
+History year panels, record/draft category edges, Cup chronology and community
+empty states share the navy/gold rules; detailed season templates and all verified
+storytelling remain intact. No new stats or feature behavior were needed.
+
+Reviewed all 12 active profile routes and both archive destinations through the
+all-route browser matrix. Focused rendered review covered Albany, Greendale,
+Turnbull and Baseball Furies, plus Savage Huns and Quahog, at all five requested
+widths. Quahog remains an earlier identity of New Jersey, not a second retired
+canonical franchise. Home, directory, history, 2024 season, records, drafts, Cup,
+Power Rankings, Pick'em, votes, rules and mobile navigation were also reviewed.
+
+### Validation evidence for this pass
+
+- 229 unit tests passed (six new presentation contracts); Python compilation and
+  `python -m pip check` passed; `git diff --check` passed.
+- All 13 canonical validators passed: public data, repository, site config,
+  franchises, history, drafts, records, votes/community, recaps, Yahoo historical
+  backfill, historical metrics, live season and privacy.
+- Record, recap and historical-metric generator `--check` modes passed; Yahoo
+  discovery `--dry-run --check` passed without changing data or authenticating.
+- CI https://github.com/stringer56/fantasy-football-site/actions/runs/34051108661
+  passed for final UI revision `8336676`: pinned Ruby/Bundler Jekyll build,
+  JavaScript syntax, all tests/validators and rendered checks. Ruby is not
+  installed locally; the actual CI artifact, not a hand-built substitute, was
+  downloaded and inspected.
+- Rendered-site validation: all 44 pages, local routes, assets, landmarks and
+  internal links passed. Public-data and rendered privacy checks passed.
+- Final browser matrix: 44 routes × 5 widths (1440, 1024, 768, 390, 360).
+  All 220 checks passed with zero reported problems: no body overflow, broken
+  images, failed internal requests or script errors. Results are recorded in
+  `.cache/professional-ui/final-review/results.json`.
+- Focused checks: 60 page/width checks plus directory 200% text-resize test passed.
+- Keyboard/no-JS review passed: menu/Escape/focus return, four no-JS pages,
+  reduced motion, franchise-strip scrolling, bracket arrow-key scrolling and
+  roster disclosure expansion. No UI dependencies or scripts were added.
+
+Representative cover/full-page screenshots are in the ignored
+`.cache/professional-ui/final-review/` and `final-details/` folders. They are QA
+evidence only and never production content. The baseline and first-iteration
+artifacts/results are retained separately for comparison. No source art was
+stretched, substituted or edited. Decorative venue crops have full uncropped
+counterparts in the profile galleries. All helmet/logo references resolve locally;
+no Google image hotlinks were introduced or retained in place of local copies.
+
+### Limitations and next refinement
+
+No assets were newly migrated. Existing palette values listed below were reused
+unchanged; uncertain/retired accents retain league gold. Image bytes are unchanged:
+31 franchise files (4,063,255 bytes) and existing Cup/archive media. Fixed frames,
+lazy loading and cached reuse avoid new heavyweight requests; large historical
+PNGs and low-resolution venues remain documented source-quality limitations, not
+silently recompressed artwork. No independent owner biographies/photos exist.
+
+Albany's current-name approved artwork is still needed; its historical Kneelers
+helmet and explicit note remain. No historical or community facts were fabricated.
+All Yahoo OAuth/fallback, community privacy/data flow, ranking/pick/voting logic,
+and history/record/draft calculations are unchanged. No secrets, raw responses,
+private picks, test fixtures, paid services, analytics or frameworks were added.
+Google Forms remain optional and dormant states intentional. The review covers
+Chromium, not a formal full assistive-technology or Safari/Firefox certification.
+
+Exact next refinement: commissioner visual sign-off on draft #30, followed by a
+separate approved-artwork-only pass for Albany and higher-resolution venue/source
+originals from ASSET_REPLACEMENT_WISHLIST.md. Do not fabricate replacements or merge
+this draft without commissioner authorization.
 
 ## Audit before implementation
 
