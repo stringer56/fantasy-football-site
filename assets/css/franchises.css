@@ -80,6 +80,10 @@
 .franchise-live__grid > article { color: var(--navy-900); }
 .franchise-live__grid .text-link { color: var(--navy-700); }
 .franchise-record-grid strong { font-variant-numeric: tabular-nums; }
+.franchise-history__grid h3 { font-size: 1.6rem; text-transform: none; letter-spacing: -.03em; }
+.franchise-history__grid dt, .franchise-record-grid span { font-size: .75rem; letter-spacing: .02em; }
+.franchise-history__grid article > span { font-size: .8rem; }
+.franchise-live__grid dt { font-size: .8rem; }
 .franchise-history-columns { gap: 2rem; }
 .profile-back-nav { padding-block: 1.5rem; border-top: var(--rule); background: white; }
 
@@ -171,4 +175,5 @@
   .franchise-ledger dt { font-size: .75rem; }
   .franchise-ledger dd { font-size: 1.5rem; }
   .franchise-record-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .franchise-record-grid article { min-height: 6rem; }
 }
