@@ -1,5 +1,11 @@
 # Asset replacement wishlist
 
+**September 6 update:** The commissioner supplied all twelve current 3D helmets
+and a league emblem. The current-name Albany request and active helmet requests
+below are fulfilled; legacy sources remain preserved. See
+[Approved 2026 brand assets](APPROVED_2026_BRAND_ASSETS.md). The original inventory
+and measurements below describe the September 5 audit, not the new PNG payload.
+
 Audit date: 2026-09-05. All 63 local files were inventoried by dimensions,
 byte size, and SHA-256. Combined size: 13,708,685 bytes (13.07 MiB).
 There are **no byte-identical duplicate files**. Reuse of the same URL across

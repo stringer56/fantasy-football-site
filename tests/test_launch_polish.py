@@ -44,10 +44,10 @@ class LaunchPolishTests(unittest.TestCase):
         self.assertIn("{% if page.url == '/' %}<script src=\"{{ '/assets/js/countdown.js'", layout)
         self.assertIn('include social-meta.html', layout)
 
-    def test_archival_helmet_is_labelled_without_replacement(self):
+    def test_approved_current_helmet_replaces_obsolete_fallback_note(self):
         text = (ROOT / '_layouts/franchise.html').read_text(encoding='utf-8')
-        self.assertIn('Featuring the archived Albany Kneelers helmet.', text)
-        self.assertIn('aria-describedby="archived-helmet-note"', text)
+        self.assertNotIn('Featuring the archived Albany Kneelers helmet.', text)
+        self.assertNotIn('aria-describedby="archived-helmet-note"', text)
         self.assertIn('branding.identity_image', text)
 
     def test_obsolete_analysis_css_is_removed(self):

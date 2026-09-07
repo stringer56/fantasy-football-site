@@ -229,3 +229,12 @@ The wire uses safe publisher headlines with an explicit pause toggle, static
 keyboard/reduced-motion presentation and no third-party browser dependency.
 Card names, score links and compact grids must reflow with enlarged text.
 See [Commissioner review](COMMISSIONER_VISUAL_REVIEW.md) for source and QA evidence.
+
+### Approved league and franchise artwork
+
+The September 6 commissioner-supplied circular league emblem supersedes the
+temporary RTG shield in the shared header and footer. `_data/brand.yml` also
+selects it as the browser icon. Twelve supplied 3D PNG helmets supersede current
+franchise identity references, without replacing retired/historical source files.
+Use `object-fit: contain`; do not crop, recolor or stretch these approved designs.
+See [asset provenance](APPROVED_2026_BRAND_ASSETS.md).
