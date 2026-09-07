@@ -7,7 +7,8 @@
   <meta name="description" content="{{ page.description | default: site.description | escape }}">
   <title>{% if page.title == 'Home' %}{{ site.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}</title>
   {% include social-meta.html %}
-  <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="icon" href="{{ site.data.brand.favicon | relative_url }}" type="image/png">
+  <link rel="apple-touch-icon" href="{{ site.data.brand.league_logo | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/publication.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/franchises.css' | relative_url }}">
@@ -62,7 +63,7 @@
   <footer class="site-footer">
     <div class="wrap site-footer__grid">
       <div>
-        <a class="footer-brand" href="{{ '/' | relative_url }}">Road to Glory FFL</a>
+        <a class="footer-brand footer-brand--emblem" href="{{ '/' | relative_url }}"><img src="{{ site.data.brand.league_logo | relative_url }}" width="80" height="80" alt="" loading="lazy">Road to Glory FFL</a>
         <p>Rivalries, history, and the pursuit of the Brew Crew Cup.</p>
       </div>
       <div class="site-footer__links">
