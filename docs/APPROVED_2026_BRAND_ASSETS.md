@@ -56,3 +56,18 @@ legacy sources, retired/historical references, exact league-logo SHA-256, and
 header/footer/favicon wiring. Existing fallback tests now assert its removal
 after receipt of the approved current artwork. Full unit and Jekyll/rendered
 validation results are reported in the pull request.
+
+Validation on the source commit: **249 unit tests passed**, all canonical
+validators passed, generated-output checks are current, and pip/diff checks pass.
+[Jekyll CI run 34069028321](https://github.com/stringer56/fantasy-football-site/actions/runs/34069028321)
+passed. Its downloaded artifact passes all 45-page link/landmark/privacy checks.
+An additional rendered-HTML check confirms the emblem/favicon on all 45 routes,
+new helmets on all 12 current franchise profiles, and no obsolete Albany fallback
+notice. The ZIP comparison verifies all twelve helmet files byte-for-byte;
+all fourteen legacy helmet files also match the base commit. Seventeen generated
+JSON files differ only in their image paths/alt text, not statistics or prose.
+
+No additional browser interaction/screenshots were requested for this asset
+replacement; responsive sizing continues to use the existing contained-image
+components. The change is held in draft PR #32 for commissioner review, not
+automatically merged or deployed.

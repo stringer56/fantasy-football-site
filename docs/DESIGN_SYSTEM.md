@@ -234,7 +234,7 @@ See [Commissioner review](COMMISSIONER_VISUAL_REVIEW.md) for source and QA evide
 
 The September 6 commissioner-supplied circular league emblem supersedes the
 temporary RTG shield in the shared header and footer. `_data/brand.yml` also
-selects it as the browser icon. Twelve supplied 3D PNG helmets supersede current
+selects it as the browser icon. Twelve supplied 3D helmet images supersede current
 franchise identity references, without replacing retired/historical source files.
 Use `object-fit: contain`; do not crop, recolor or stretch these approved designs.
 See [asset provenance](APPROVED_2026_BRAND_ASSETS.md).
