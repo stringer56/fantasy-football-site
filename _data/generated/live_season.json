@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-09-07T17:18:09Z",
+  "generated_at": "2026-09-07T21:09:09Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-07T17:18:09Z",
+    "source_updated_at": "2026-09-07T21:09:09Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-09-07T17:18:09Z"
+    "source_update_timestamp": "2026-09-07T21:09:09Z"
   },
   "standings": [
     {
@@ -326,7 +326,7 @@
           "team_id": 2,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 109.0,
+          "projected_score": 113.35,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -383,7 +383,7 @@
           "team_id": 11,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 107.38,
+          "projected_score": 113.47,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -543,7 +543,7 @@
           "team_id": 3,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 107.08,
+          "projected_score": 113.14,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -576,7 +576,7 @@
           "team_id": 12,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 105.79,
+          "projected_score": 110.35,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -720,7 +720,7 @@
           "team_id": 7,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 114.07,
+          "projected_score": 117.23,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -857,7 +857,7 @@
           "team_id": 10,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 103.64,
+          "projected_score": 108.05,
           "roster": [
             {
               "player_key": null,
@@ -937,7 +937,7 @@
           "team_id": 1,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 105.97,
+          "projected_score": 112.45,
           "roster": [
             {
               "player_key": "470.p.33537",
@@ -962,7 +962,7 @@
           "team_id": 4,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 104.02,
+          "projected_score": 109.19,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1114,7 +1114,7 @@
           "team_id": 5,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 113.15,
+          "projected_score": 117.57,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1243,7 +1243,7 @@
           "team_id": 9,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 108.58,
+          "projected_score": 114.41,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -1347,7 +1347,7 @@
           "team_id": 6,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 114.41,
+          "projected_score": 119.09,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1468,7 +1468,7 @@
           "team_id": 8,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 111.05,
+          "projected_score": 112.92,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1583,7 +1583,7 @@
     }
   ],
   "featured_matchup": {
-    "matchup_id": "2026-w01-ayahuasca-rush--vegas-vandals",
+    "matchup_id": "2026-w01-albany-kneelers--turnbull-acs",
     "week": 1,
     "status": "upcoming",
     "status_label": "Upcoming",
@@ -1593,112 +1593,47 @@
     "winner_franchise_id": null,
     "teams": [
       {
-        "franchise_id": "ayahuasca-rush",
-        "display_name": "Ayahuasca Rush",
-        "canonical_name": "Ayahuasca Rush",
-        "short_name": "Rush",
-        "path": "/teams/ayahuasca-rush/",
-        "identity_image": "/assets/img/franchises/ayahuasca-rush/helmet-2026.jpg",
-        "identity_alt": "Ayahuasca Rush green 3D football helmet with a leaf emblem",
-        "primary_color": "#2e7d32",
-        "team_key": "470.l.26455.t.3",
-        "team_id": 3,
+        "franchise_id": "albany-kneelers",
+        "display_name": "Albany Redskins",
+        "canonical_name": "Albany Redskins",
+        "short_name": "Redskins",
+        "path": "/teams/albany-kneelers/",
+        "identity_image": "/assets/img/franchises/albany-kneelers/helmet-2026.png",
+        "identity_alt": "Albany Redskins black 3D football helmet with the approved team emblem",
+        "primary_color": "#111827",
+        "team_key": "470.l.26455.t.2",
+        "team_id": 2,
         "record": "0-0-0",
         "score": 0.0,
-        "projected_score": 107.08,
+        "projected_score": 113.35,
         "roster": [
           {
-            "player_key": "470.p.31002",
-            "player_name": "Lamar Jackson",
+            "player_key": "470.p.30123",
+            "player_name": "Patrick Mahomes",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "QB",
             "status": null
           },
           {
-            "player_key": "470.p.40819",
-            "player_name": "Brandon Aubrey",
-            "nfl_team": null,
-            "primary_position": null,
-            "selected_position": "K",
-            "status": null
-          }
-        ]
-      },
-      {
-        "franchise_id": "vegas-vandals",
-        "display_name": "Vegas Vandals",
-        "canonical_name": "Vegas Vandals",
-        "short_name": "Vandals",
-        "path": "/teams/vegas-vandals/",
-        "identity_image": "/assets/img/franchises/vegas-vandals/helmet-2026.png",
-        "identity_alt": "Vegas Vandals commissioner-approved 3D football helmet",
-        "primary_color": "#991b1b",
-        "team_key": "470.l.26455.t.12",
-        "team_id": 12,
-        "record": "0-0-0",
-        "score": 0.0,
-        "projected_score": 105.79,
-        "roster": [
-          {
-            "player_key": "470.p.32676",
-            "player_name": "Justin Herbert",
-            "nfl_team": null,
-            "primary_position": null,
-            "selected_position": "QB",
-            "status": null
-          },
-          {
-            "player_key": "470.p.30972",
-            "player_name": "Saquon Barkley",
+            "player_key": "470.p.33423",
+            "player_name": "Javonte Williams",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "RB",
             "status": null
           },
           {
-            "player_key": "470.p.41807",
-            "player_name": "Omarion Hampton",
+            "player_key": "470.p.41922",
+            "player_name": "Cam Skattebo",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "RB",
             "status": null
           },
           {
-            "player_key": "470.p.33966",
-            "player_name": "Chris Olave",
-            "nfl_team": null,
-            "primary_position": null,
-            "selected_position": "WR",
-            "status": null
-          },
-          {
-            "player_key": "470.p.31908",
-            "player_name": "Terry McLaurin",
-            "nfl_team": null,
-            "primary_position": null,
-            "selected_position": "WR",
-            "status": null
-          },
-          {
-            "player_key": "470.p.34085",
-            "player_name": "Jake Ferguson",
-            "nfl_team": null,
-            "primary_position": null,
-            "selected_position": "TE",
-            "status": null
-          },
-          {
-            "player_key": "470.p.40901",
-            "player_name": "Rome Odunze",
-            "nfl_team": null,
-            "primary_position": null,
-            "selected_position": "W/R/T",
-            "status": null
-          },
-          {
-            "player_key": "470.p.30266",
-            "player_name": "Jake Elliott",
+            "player_key": "470.p.30346",
+            "player_name": "Harrison Butker",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "K",
@@ -1706,7 +1641,112 @@
           },
           {
             "player_key": null,
-            "player_name": "Eagles",
+            "player_name": "Ravens",
+            "nfl_team": null,
+            "primary_position": null,
+            "selected_position": "DEF",
+            "status": null
+          }
+        ]
+      },
+      {
+        "franchise_id": "turnbull-acs",
+        "display_name": "Turnbull AC’s",
+        "canonical_name": "Turnbull AC's",
+        "short_name": "Turnbull",
+        "path": "/teams/turnbull-acs/",
+        "identity_image": "/assets/img/franchises/turnbull-acs/helmet-2026.png",
+        "identity_alt": "Turnbull AC's commissioner-approved 3D football helmet",
+        "primary_color": "#7e22ce",
+        "team_key": "470.l.26455.t.11",
+        "team_id": 11,
+        "record": "0-0-0",
+        "score": 0.0,
+        "projected_score": 113.47,
+        "roster": [
+          {
+            "player_key": "470.p.29369",
+            "player_name": "Dak Prescott",
+            "nfl_team": null,
+            "primary_position": null,
+            "selected_position": "QB",
+            "status": null
+          },
+          {
+            "player_key": "470.p.41791",
+            "player_name": "Ashton Jeanty",
+            "nfl_team": null,
+            "primary_position": null,
+            "selected_position": "RB",
+            "status": null
+          },
+          {
+            "player_key": "470.p.33991",
+            "player_name": "Breece Hall",
+            "nfl_team": null,
+            "primary_position": null,
+            "selected_position": "RB",
+            "status": null
+          },
+          {
+            "player_key": "470.p.32687",
+            "player_name": "CeeDee Lamb",
+            "nfl_team": null,
+            "primary_position": null,
+            "selected_position": "WR",
+            "status": null
+          },
+          {
+            "player_key": "470.p.41804",
+            "player_name": "Emeka Egbuka",
+            "nfl_team": null,
+            "primary_position": null,
+            "selected_position": "WR",
+            "status": null
+          },
+          {
+            "player_key": "470.p.40102",
+            "player_name": "Tucker Kraft",
+            "nfl_team": null,
+            "primary_position": null,
+            "selected_position": "TE",
+            "status": null
+          },
+          {
+            "player_key": "470.p.41824",
+            "player_name": "Luther Burden III",
+            "nfl_team": null,
+            "primary_position": null,
+            "selected_position": "W/R/T",
+            "status": null
+          },
+          {
+            "player_key": "470.p.32725",
+            "player_name": "J.K. Dobbins",
+            "nfl_team": null,
+            "primary_position": null,
+            "selected_position": "BN",
+            "status": null
+          },
+          {
+            "player_key": "470.p.28534",
+            "player_name": "Stefon Diggs",
+            "nfl_team": null,
+            "primary_position": null,
+            "selected_position": "BN",
+            "status": null
+          },
+          {
+            "player_key": "470.p.41062",
+            "player_name": "Cam Little",
+            "nfl_team": null,
+            "primary_position": null,
+            "selected_position": "K",
+            "status": null
+          },
+          {
+            "player_key": null,
+            "player_name": "Steelers",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "DEF",
@@ -1716,46 +1756,46 @@
       }
     ],
     "historical_context": {
-      "series_path": "/head-to-head/?a=ayahuasca-rush&b=vegas-vandals",
-      "meetings": 5,
-      "wins_a": 5,
-      "wins_b": 0,
+      "series_path": "/head-to-head/?a=albany-kneelers&b=turnbull-acs",
+      "meetings": 6,
+      "wins_a": 3,
+      "wins_b": 3,
       "ties": 0,
-      "franchise_a_id": "ayahuasca-rush",
+      "franchise_a_id": "albany-kneelers",
       "most_recent_meeting": {
-        "matchup_id": "2025-w05-03-11",
+        "matchup_id": "2025-w03-02-10",
         "season": 2025,
-        "week": 5,
+        "week": 3,
         "game_type": "regular_season",
         "playoff_round": null,
         "tie": false,
         "team_a": {
-          "franchise_id": "ayahuasca-rush",
-          "display_name": "Ayahuasca Rush",
-          "path": "/teams/ayahuasca-rush/",
-          "score": 123.82
+          "franchise_id": "albany-kneelers",
+          "display_name": "Albany Redskins",
+          "path": "/teams/albany-kneelers/",
+          "score": 102.26
         },
         "team_b": {
-          "franchise_id": "vegas-vandals",
-          "display_name": "Vegas Vandals",
-          "path": "/teams/vegas-vandals/",
-          "score": 114.0
+          "franchise_id": "turnbull-acs",
+          "display_name": "Turnbull AC's",
+          "path": "/teams/turnbull-acs/",
+          "score": 118.72
         },
         "winner": {
-          "franchise_id": "ayahuasca-rush",
-          "display_name": "Ayahuasca Rush"
+          "franchise_id": "turnbull-acs",
+          "display_name": "Turnbull AC's"
         },
-        "margin": 9.82,
-        "combined_score": 237.82
+        "margin": 16.46,
+        "combined_score": 220.98
       },
       "current_series_streak": {
-        "franchise_id": "ayahuasca-rush",
-        "wins": 5,
-        "against_franchise_id": "vegas-vandals",
-        "start_season": 2022,
-        "start_week": 3,
+        "franchise_id": "turnbull-acs",
+        "wins": 2,
+        "against_franchise_id": "albany-kneelers",
+        "start_season": 2024,
+        "start_week": 4,
         "end_season": 2025,
-        "end_week": 5
+        "end_week": 3
       }
     }
   },
@@ -1766,7 +1806,7 @@
       "headline_id": "week-1:slate",
       "category": "League Wire",
       "headline": "Week 1 slate is set",
-      "detail": "Ayahuasca Rush meets Vegas Vandals in the featured matchup.",
+      "detail": "Albany Redskins meets Turnbull AC’s in the featured matchup.",
       "week": 1,
       "source": "normalized_yahoo",
       "path": "/2026/week/1/"
