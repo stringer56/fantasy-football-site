@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-09-09T15:58:00Z",
+  "generated_at": "2026-09-09T20:28:14Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-09T15:58:00Z",
+    "source_updated_at": "2026-09-09T20:28:14Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-09-09T15:58:00Z"
+    "source_update_timestamp": "2026-09-09T20:28:14Z"
   },
   "standings": [
     {
@@ -326,7 +326,7 @@
           "team_id": 2,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 112.12,
+          "projected_score": 111.49,
           "roster": [
             {
               "player_key": null,
@@ -351,7 +351,7 @@
           "team_id": 11,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 111.73,
+          "projected_score": 109.86,
           "roster": []
         }
       ],
@@ -422,7 +422,7 @@
           "team_id": 3,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 115.97,
+          "projected_score": 115.8,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -447,7 +447,7 @@
           "team_id": 12,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 108.01,
+          "projected_score": 107.2,
           "roster": []
         }
       ],
@@ -518,7 +518,7 @@
           "team_id": 7,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 117.7,
+          "projected_score": 117.3,
           "roster": [
             {
               "player_key": null,
@@ -543,7 +543,7 @@
           "team_id": 10,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 109.67,
+          "projected_score": 109.58,
           "roster": [
             {
               "player_key": null,
@@ -623,7 +623,7 @@
           "team_id": 1,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 112.06,
+          "projected_score": 112.71,
           "roster": []
         },
         {
@@ -639,7 +639,7 @@
           "team_id": 4,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 108.49,
+          "projected_score": 109.76,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -735,7 +735,7 @@
           "team_id": 5,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 115.92,
+          "projected_score": 116.81,
           "roster": []
         },
         {
@@ -751,7 +751,7 @@
           "team_id": 9,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 115.0,
+          "projected_score": 115.4,
           "roster": [
             {
               "player_key": "470.p.41988",
@@ -839,7 +839,7 @@
           "team_id": 6,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 117.06,
+          "projected_score": 119.14,
           "roster": [
             {
               "player_key": null,
@@ -864,7 +864,7 @@
           "team_id": 8,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 115.39,
+          "projected_score": 116.07,
           "roster": [
             {
               "player_key": "470.p.41093",
@@ -923,7 +923,7 @@
     }
   ],
   "featured_matchup": {
-    "matchup_id": "2026-w01-albany-kneelers--turnbull-acs",
+    "matchup_id": "2026-w01-crazy-wazs-team--north-town-ninnyhammers",
     "week": 1,
     "status": "upcoming",
     "status_label": "Upcoming",
@@ -933,88 +933,96 @@
     "winner_franchise_id": null,
     "teams": [
       {
-        "franchise_id": "albany-kneelers",
-        "display_name": "Albany Redskins",
-        "canonical_name": "Albany Redskins",
-        "short_name": "Redskins",
-        "path": "/teams/albany-kneelers/",
-        "identity_image": "/assets/img/franchises/albany-kneelers/helmet-2026.png",
-        "identity_alt": "Albany Redskins black 3D football helmet with the approved team emblem",
-        "primary_color": "#111827",
-        "team_key": "470.l.26455.t.2",
-        "team_id": 2,
+        "franchise_id": "crazy-wazs-team",
+        "display_name": "Chris's Crazy Team",
+        "canonical_name": "Crazy Waz's Team",
+        "short_name": "Crazy Waz",
+        "path": "/teams/crazy-wazs-team/",
+        "identity_image": "/assets/img/franchises/crazy-wazs-team/helmet-2026.png",
+        "identity_alt": "Crazy Waz's Team commissioner-approved 3D football helmet",
+        "primary_color": "#15803d",
+        "team_key": "470.l.26455.t.5",
+        "team_id": 5,
         "record": "0-0-0",
         "score": 0.0,
-        "projected_score": 112.12,
+        "projected_score": 116.81,
+        "roster": []
+      },
+      {
+        "franchise_id": "north-town-ninnyhammers",
+        "display_name": "North town Ninnyhammers",
+        "canonical_name": "North Town Ninnyhammers",
+        "short_name": "Ninnyhammers",
+        "path": "/teams/north-town-ninnyhammers/",
+        "identity_image": "/assets/img/franchises/north-town-ninnyhammers/helmet-2026.png",
+        "identity_alt": "North Town Ninnyhammers commissioner-approved 3D football helmet",
+        "primary_color": "#dc2626",
+        "team_key": "470.l.26455.t.9",
+        "team_id": 9,
+        "record": "0-0-0",
+        "score": 0.0,
+        "projected_score": 115.4,
         "roster": [
           {
+            "player_key": "470.p.41988",
+            "player_name": "Tyler Loop",
+            "nfl_team": null,
+            "primary_position": null,
+            "selected_position": "K",
+            "status": null
+          },
+          {
             "player_key": null,
-            "player_name": "Ravens",
+            "player_name": "Vikings",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "DEF",
             "status": null
           }
         ]
-      },
-      {
-        "franchise_id": "turnbull-acs",
-        "display_name": "Turnbull AC’s",
-        "canonical_name": "Turnbull AC's",
-        "short_name": "Turnbull",
-        "path": "/teams/turnbull-acs/",
-        "identity_image": "/assets/img/franchises/turnbull-acs/helmet-2026.png",
-        "identity_alt": "Turnbull AC's commissioner-approved 3D football helmet",
-        "primary_color": "#7e22ce",
-        "team_key": "470.l.26455.t.11",
-        "team_id": 11,
-        "record": "0-0-0",
-        "score": 0.0,
-        "projected_score": 111.73,
-        "roster": []
       }
     ],
     "historical_context": {
-      "series_path": "/head-to-head/?a=albany-kneelers&b=turnbull-acs",
-      "meetings": 6,
-      "wins_a": 3,
-      "wins_b": 3,
+      "series_path": "/head-to-head/?a=crazy-wazs-team&b=north-town-ninnyhammers",
+      "meetings": 3,
+      "wins_a": 2,
+      "wins_b": 1,
       "ties": 0,
-      "franchise_a_id": "albany-kneelers",
+      "franchise_a_id": "crazy-wazs-team",
       "most_recent_meeting": {
-        "matchup_id": "2025-w03-02-10",
+        "matchup_id": "2025-w08-05-08",
         "season": 2025,
-        "week": 3,
+        "week": 8,
         "game_type": "regular_season",
         "playoff_round": null,
         "tie": false,
         "team_a": {
-          "franchise_id": "albany-kneelers",
-          "display_name": "Albany Redskins",
-          "path": "/teams/albany-kneelers/",
-          "score": 102.26
+          "franchise_id": "crazy-wazs-team",
+          "display_name": "Crazy Waz's Team",
+          "path": "/teams/crazy-wazs-team/",
+          "score": 54.58
         },
         "team_b": {
-          "franchise_id": "turnbull-acs",
-          "display_name": "Turnbull AC's",
-          "path": "/teams/turnbull-acs/",
-          "score": 118.72
+          "franchise_id": "north-town-ninnyhammers",
+          "display_name": "North Town Ninnyhammers",
+          "path": "/teams/north-town-ninnyhammers/",
+          "score": 108.88
         },
         "winner": {
-          "franchise_id": "turnbull-acs",
-          "display_name": "Turnbull AC's"
+          "franchise_id": "north-town-ninnyhammers",
+          "display_name": "North Town Ninnyhammers"
         },
-        "margin": 16.46,
-        "combined_score": 220.98
+        "margin": 54.3,
+        "combined_score": 163.46
       },
       "current_series_streak": {
-        "franchise_id": "turnbull-acs",
-        "wins": 2,
-        "against_franchise_id": "albany-kneelers",
-        "start_season": 2024,
-        "start_week": 4,
+        "franchise_id": "north-town-ninnyhammers",
+        "wins": 1,
+        "against_franchise_id": "crazy-wazs-team",
+        "start_season": 2025,
+        "start_week": 8,
         "end_season": 2025,
-        "end_week": 3
+        "end_week": 8
       }
     }
   },
@@ -1025,7 +1033,7 @@
       "headline_id": "week-1:slate",
       "category": "League Wire",
       "headline": "Week 1 slate is set",
-      "detail": "Albany Redskins meets Turnbull AC’s in the featured matchup.",
+      "detail": "Chris's Crazy Team meets North town Ninnyhammers in the featured matchup.",
       "week": 1,
       "source": "normalized_yahoo",
       "path": "/2026/week/1/"
