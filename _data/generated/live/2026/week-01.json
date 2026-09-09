@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 1,
-  "generated_at": "2026-09-08T20:45:17Z",
+  "generated_at": "2026-09-09T03:14:22Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-08T20:45:17Z",
+    "source_updated_at": "2026-09-09T03:14:22Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -287,7 +287,7 @@
           "team_id": 2,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 112.61,
+          "projected_score": 112.56,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -295,22 +295,6 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
-              "status": null
-            },
-            {
-              "player_key": "470.p.33423",
-              "player_name": "Javonte Williams",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "RB",
-              "status": null
-            },
-            {
-              "player_key": "470.p.41922",
-              "player_name": "Cam Skattebo",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "RB",
               "status": null
             },
             {
@@ -344,25 +328,8 @@
           "team_id": 11,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 112.39,
-          "roster": [
-            {
-              "player_key": "470.p.29369",
-              "player_name": "Dak Prescott",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "QB",
-              "status": null
-            },
-            {
-              "player_key": "470.p.41791",
-              "player_name": "Ashton Jeanty",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "RB",
-              "status": null
-            }
-          ]
+          "projected_score": 112.4,
+          "roster": []
         }
       ],
       "historical_context": {
@@ -432,7 +399,7 @@
           "team_id": 3,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 114.08,
+          "projected_score": 116.05,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -440,14 +407,6 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40819",
-              "player_name": "Brandon Aubrey",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "K",
               "status": null
             }
           ]
@@ -465,7 +424,7 @@
           "team_id": 12,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 108.94,
+          "projected_score": 109.41,
           "roster": []
         }
       ],
@@ -536,7 +495,7 @@
           "team_id": 7,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 118.39,
+          "projected_score": 119.86,
           "roster": [
             {
               "player_key": null,
@@ -561,7 +520,7 @@
           "team_id": 10,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 108.92,
+          "projected_score": 109.3,
           "roster": [
             {
               "player_key": null,
@@ -641,7 +600,7 @@
           "team_id": 1,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 112.83,
+          "projected_score": 112.85,
           "roster": []
         },
         {
@@ -657,7 +616,7 @@
           "team_id": 4,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 109.26,
+          "projected_score": 109.21,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -761,7 +720,7 @@
           "team_id": 5,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 116.52,
+          "projected_score": 116.54,
           "roster": []
         },
         {
@@ -777,7 +736,7 @@
           "team_id": 9,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 115.24,
+          "projected_score": 115.39,
           "roster": [
             {
               "player_key": "470.p.41988",
@@ -865,7 +824,7 @@
           "team_id": 6,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 118.5,
+          "projected_score": 118.38,
           "roster": [
             {
               "player_key": null,
@@ -890,7 +849,7 @@
           "team_id": 8,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 115.84,
+          "projected_score": 115.82,
           "roster": [
             {
               "player_key": "470.p.40875",
