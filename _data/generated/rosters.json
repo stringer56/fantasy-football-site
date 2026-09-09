@@ -14,22 +14,6 @@
       "team_name": "Albany Redskins",
       "players": [
         {
-          "player_key": "470.p.30123",
-          "player_name": "Patrick Mahomes",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "QB",
-          "status": null
-        },
-        {
-          "player_key": "470.p.30346",
-          "player_name": "Harrison Butker",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "K",
-          "status": null
-        },
-        {
           "player_key": null,
           "player_name": "Ravens",
           "nfl_team": null,
@@ -82,14 +66,6 @@
           "primary_position": null,
           "selected_position": "K",
           "status": null
-        },
-        {
-          "player_key": null,
-          "player_name": "Broncos",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "DEF",
-          "status": null
         }
       ]
     },
@@ -134,14 +110,6 @@
       "team_id": 8,
       "team_name": "New Jersey Giants",
       "players": [
-        {
-          "player_key": "470.p.40875",
-          "player_name": "Bo Nix",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "QB",
-          "status": null
-        },
         {
           "player_key": "470.p.41093",
           "player_name": "Will Reichard",

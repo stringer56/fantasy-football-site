@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 1,
-  "generated_at": "2026-09-09T10:48:35Z",
+  "generated_at": "2026-09-09T15:58:00Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-09T10:48:35Z",
+    "source_updated_at": "2026-09-09T15:58:00Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -287,24 +287,8 @@
           "team_id": 2,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 112.6,
+          "projected_score": 112.12,
           "roster": [
-            {
-              "player_key": "470.p.30123",
-              "player_name": "Patrick Mahomes",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "QB",
-              "status": null
-            },
-            {
-              "player_key": "470.p.30346",
-              "player_name": "Harrison Butker",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "K",
-              "status": null
-            },
             {
               "player_key": null,
               "player_name": "Ravens",
@@ -328,7 +312,7 @@
           "team_id": 11,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 112.44,
+          "projected_score": 111.73,
           "roster": []
         }
       ],
@@ -399,7 +383,7 @@
           "team_id": 3,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 116.5,
+          "projected_score": 115.97,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -424,7 +408,7 @@
           "team_id": 12,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 109.43,
+          "projected_score": 108.01,
           "roster": []
         }
       ],
@@ -495,7 +479,7 @@
           "team_id": 7,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 119.87,
+          "projected_score": 117.7,
           "roster": [
             {
               "player_key": null,
@@ -520,7 +504,7 @@
           "team_id": 10,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 109.55,
+          "projected_score": 109.67,
           "roster": [
             {
               "player_key": null,
@@ -600,7 +584,7 @@
           "team_id": 1,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 112.8,
+          "projected_score": 112.06,
           "roster": []
         },
         {
@@ -616,7 +600,7 @@
           "team_id": 4,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 109.2,
+          "projected_score": 108.49,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -640,14 +624,6 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "K",
-              "status": null
-            },
-            {
-              "player_key": null,
-              "player_name": "Broncos",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "DEF",
               "status": null
             }
           ]
@@ -720,7 +696,7 @@
           "team_id": 5,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 116.54,
+          "projected_score": 115.92,
           "roster": []
         },
         {
@@ -736,7 +712,7 @@
           "team_id": 9,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 115.36,
+          "projected_score": 115.0,
           "roster": [
             {
               "player_key": "470.p.41988",
@@ -824,7 +800,7 @@
           "team_id": 6,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 118.47,
+          "projected_score": 117.06,
           "roster": [
             {
               "player_key": null,
@@ -849,16 +825,8 @@
           "team_id": 8,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 115.9,
+          "projected_score": 115.39,
           "roster": [
-            {
-              "player_key": "470.p.40875",
-              "player_name": "Bo Nix",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "QB",
-              "status": null
-            },
             {
               "player_key": "470.p.41093",
               "player_name": "Will Reichard",
