@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 1,
-  "generated_at": "2026-09-10T03:14:02Z",
+  "generated_at": "2026-09-10T09:12:29Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-10T03:14:02Z",
+    "source_updated_at": "2026-09-10T09:12:29Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -287,7 +287,7 @@
           "team_id": 2,
           "record": "0-0-0",
           "score": 4.1,
-          "projected_score": 104.47,
+          "projected_score": 104.43,
           "roster": [
             {
               "player_key": null,
@@ -312,7 +312,7 @@
           "team_id": 11,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 112.77,
+          "projected_score": 112.73,
           "roster": []
         }
       ],
@@ -382,8 +382,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "0-0-0",
-          "score": 29.2,
-          "projected_score": 115.61,
+          "score": 34.0,
+          "projected_score": 119.86,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -391,6 +391,14 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Seahawks",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "DEF",
               "status": null
             }
           ]
@@ -408,7 +416,7 @@
           "team_id": 12,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 109.4,
+          "projected_score": 109.31,
           "roster": []
         }
       ],
@@ -479,7 +487,7 @@
           "team_id": 7,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 120.06,
+          "projected_score": 120.04,
           "roster": [
             {
               "player_key": null,
@@ -503,9 +511,41 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "0-0-0",
-          "score": 19.26,
-          "projected_score": 101.92,
+          "score": 19.82,
+          "projected_score": 101.61,
           "roster": [
+            {
+              "player_key": "470.p.40881",
+              "player_name": "Drake Maye",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "QB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.32711",
+              "player_name": "Jonathan Taylor",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33413",
+              "player_name": "Travis Etienne Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.28378",
+              "player_name": "Jason Myers",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "K",
+              "status": null
+            },
             {
               "player_key": null,
               "player_name": "Texans",
@@ -584,8 +624,17 @@
           "team_id": 1,
           "record": "0-0-0",
           "score": 9.0,
-          "projected_score": 112.2,
-          "roster": []
+          "projected_score": 112.15,
+          "roster": [
+            {
+              "player_key": null,
+              "player_name": "Patriots",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "DEF",
+              "status": null
+            }
+          ]
         },
         {
           "franchise_id": "buffalo-bravado",
@@ -600,7 +649,7 @@
           "team_id": 4,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 108.79,
+          "projected_score": 108.73,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -696,7 +745,7 @@
           "team_id": 5,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 116.41,
+          "projected_score": 116.43,
           "roster": []
         },
         {
@@ -712,7 +761,7 @@
           "team_id": 9,
           "record": "0-0-0",
           "score": 33.0,
-          "projected_score": 121.69,
+          "projected_score": 120.68,
           "roster": [
             {
               "player_key": "470.p.41988",
@@ -800,7 +849,7 @@
           "team_id": 6,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 116.51,
+          "projected_score": 116.48,
           "roster": [
             {
               "player_key": null,
@@ -825,7 +874,7 @@
           "team_id": 8,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 114.72,
+          "projected_score": 114.71,
           "roster": [
             {
               "player_key": "470.p.41093",
@@ -887,9 +936,9 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 33.0,
-      "franchise_id": "north-town-ninnyhammers",
-      "display_name": "North town Ninnyhammers"
+      "value": 34.0,
+      "franchise_id": "ayahuasca-rush",
+      "display_name": "Ayahuasca Rush"
     },
     {
       "fact_id": "lowest-score",
@@ -901,14 +950,14 @@
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 33.0,
-      "matchup_id": "2026-w01-crazy-wazs-team--north-town-ninnyhammers"
+      "value": 34.0,
+      "matchup_id": "2026-w01-ayahuasca-rush--vegas-vandals"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 33.0,
-      "matchup_id": "2026-w01-crazy-wazs-team--north-town-ninnyhammers"
+      "value": 34.0,
+      "matchup_id": "2026-w01-ayahuasca-rush--vegas-vandals"
     },
     {
       "fact_id": "closest-game",

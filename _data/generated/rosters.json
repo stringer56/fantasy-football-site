@@ -6,7 +6,16 @@
       "team_key": "470.l.26455.t.1",
       "team_id": 1,
       "team_name": "Van Cortlant Rangers",
-      "players": []
+      "players": [
+        {
+          "player_key": null,
+          "player_name": "Patriots",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "DEF",
+          "status": null
+        }
+      ]
     },
     {
       "team_key": "470.l.26455.t.2",
@@ -34,6 +43,14 @@
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "QB",
+          "status": null
+        },
+        {
+          "player_key": null,
+          "player_name": "Seahawks",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "DEF",
           "status": null
         }
       ]
@@ -148,6 +165,38 @@
       "team_id": 10,
       "team_name": "The Baseball Furies",
       "players": [
+        {
+          "player_key": "470.p.40881",
+          "player_name": "Drake Maye",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "QB",
+          "status": null
+        },
+        {
+          "player_key": "470.p.32711",
+          "player_name": "Jonathan Taylor",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "RB",
+          "status": null
+        },
+        {
+          "player_key": "470.p.33413",
+          "player_name": "Travis Etienne Jr.",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "RB",
+          "status": null
+        },
+        {
+          "player_key": "470.p.28378",
+          "player_name": "Jason Myers",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "K",
+          "status": null
+        },
         {
           "player_key": null,
           "player_name": "Texans",
