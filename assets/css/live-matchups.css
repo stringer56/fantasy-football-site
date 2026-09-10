@@ -1,0 +1,27 @@
+/* Weekly pages share the approved broadcast matchups and readable league colors. */
+:is(.live-week-page,.live-season-page) main :is(h1,h2,h3,h4){background:none!important;background-clip:border-box;-webkit-background-clip:border-box;-webkit-text-fill-color:currentColor;filter:none;text-shadow:none;font-synthesis:none}
+:is(.live-week-page,.live-season-page) main :is(h1,h2){color:#f2d16b!important}
+:is(.live-week-page,.live-season-page) main :is(h1,h2) :is(a,span,em){-webkit-text-fill-color:currentColor}
+:is(.live-week-page,.live-season-page) .rtg-matchup-side h2{font-family:var(--display)!important;font-weight:700!important;letter-spacing:0!important}
+.live-week-hero{background:radial-gradient(ellipse at 80% 20%,#24466b66,transparent 65%),linear-gradient(120deg,#07111f,#102338);border-bottom:1px solid #314962}
+.live-week-hero>.wrap{padding-block:38px}
+.live-week-hero h1{margin-block:10px 14px}
+.live-week-hero__meta{font:600 12px/1.5 Arial,sans-serif;letter-spacing:.025em}
+:is(.live-week-page,.live-season-page) .live-section{padding-block:34px}
+.live-week-summary-grid,.live-community-grid{gap:24px;align-items:stretch}
+.live-week-summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+:is(.live-week-summary-grid,.live-community-grid)>article{padding:24px;background:linear-gradient(145deg,#172d45,#0b1827);color:#e8eef6;border:0;border-top:2px solid #365574;box-shadow:none}
+:is(.live-week-summary-grid,.live-community-grid)>article:nth-child(2n){background:linear-gradient(140deg,#201626,#0c1827);border-top-color:#6e303c}
+:is(.live-week-summary-grid,.live-community-grid) h2{font-size:clamp(25px,2.8vw,35px);line-height:1.12;margin:10px 0 18px}
+:is(.live-week-page,.live-season-page) .live-empty-inline{background:#050b1480;border:0;border-left:2px solid #d4af37;padding:16px;color:#e5edf7}
+:is(.live-week-page,.live-season-page) .live-empty-inline strong{font:700 16px/1.4 Arial,sans-serif;color:#edf3fa}
+:is(.live-week-page,.live-season-page) .live-empty-inline p{font:14px/1.6 Arial,sans-serif;color:#bdcbda!important;opacity:1}
+:is(.live-week-page,.live-season-page) .weekly-facts dd{color:#f2d16b}
+:is(.live-week-page,.live-season-page) .section-heading h2{font-size:clamp(30px,4vw,44px)}
+@media(max-width:760px){
+ .live-week-summary-grid,.live-community-grid{grid-template-columns:minmax(0,1fr);gap:18px}
+ :is(.live-week-summary-grid,.live-community-grid)>article{padding:20px}
+ .live-week-hero>.wrap{padding-block:28px}
+ :is(.live-week-page,.live-season-page) .live-section{padding-block:26px}
+}
+.rtg-yahoo-live__status{margin:0 0 1rem;padding:.65rem .85rem;border-left:3px solid #f0bd20;background:#112436;color:#d7e2eb;font-size:.82rem;font-weight:800;letter-spacing:.02em}.rtg-yahoo-live__status.is-current{border-color:#49c987}.rtg-yahoo-live__status.is-delayed{border-color:#d9a441;color:#f2d89a}

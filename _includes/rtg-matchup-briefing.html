@@ -1,0 +1,37 @@
+{% assign briefing = include.matchup %}
+<div class="rtg-matchup-briefing">
+ <header class="rtg-briefing-heading"><h3>Inside the matchup</h3><span>Week {{ briefing.week }} · Roster snapshot</span></header>
+ <div class="rtg-roster-panels">
+  {% for team in briefing.teams %}
+  <section class="rtg-roster-panel" style="--roster-accent:{{ team.primary_color }}" aria-label="{{ team | current_franchise_name | escape }} roster" data-yahoo-roster-team="{{ team.team_key }}">
+   <header>{% include rtg-franchise-logo.html franchise_id=team.franchise_id decorative=true thumbnail=true size=40 %}<h4><a href="{{ team.path }}">{{ team | current_franchise_name }}</a></h4><p data-yahoo-roster-meta>{{ team.roster.size }} {% if team.roster.size == 1 %}player{% else %}players{% endif %} in snapshot{% if team.roster_source.retrieved_at %} · Updated <time datetime="{{ team.roster_source.retrieved_at }}">{{ team.roster_source.retrieved_at | date: '%b %-d' }}</time>{% endif %}</p></header>
+   {% if team.roster.size > 0 %}
+   <div class="rtg-roster-scroll">
+    <table aria-label="{{ team | current_franchise_name | escape }} roster" data-yahoo-roster-table><thead><tr><th scope="col">Slot</th><th scope="col">Player</th></tr></thead>
+    {% assign roster_groups = 'Active lineup,Bench,Injured reserve' | split: ',' %}
+    {% for roster_group in roster_groups %}
+     {% capture group_rows %}{% for player in team.roster %}{% assign player_slot = player.selected_position | default: player.primary_position | default: '—' %}{% assign player_group = 'Active lineup' %}{% if player_slot == 'BN' %}{% assign player_group = 'Bench' %}{% elsif player_slot == 'IR' or player_slot == 'IR+' %}{% assign player_group = 'Injured reserve' %}{% endif %}{% if player_group == roster_group %}<tr><td><span class="rtg-roster-slot">{{ player_slot }}</span></td><td>{{ player.player_name }}</td></tr>{% endif %}{% endfor %}{% endcapture %}
+     {% assign group_rows = group_rows | strip %}{% if group_rows != '' %}<tbody><tr class="rtg-roster-group"><th colspan="2" scope="rowgroup">{{ roster_group }}</th></tr>{{ group_rows }}</tbody>{% endif %}
+    {% endfor %}
+    </table>
+   </div>
+   {% else %}<p class="rtg-roster-unavailable">Roster details are unavailable in this snapshot.</p>{% endif %}
+  </section>
+  {% endfor %}
+ </div>
+ {% assign series = briefing.historical_context %}
+ {% if series %}
+ <section class="rtg-matchup-series" aria-label="Verified head-to-head series">
+  <header class="rtg-briefing-heading"><h3>Series history</h3><span>Verified meetings through 2025</span></header>
+  <div class="rtg-series-scoreline">
+   {% for team in briefing.teams %}
+   {% unless forloop.first %}<div class="rtg-series-meetings"><strong>{{ series.meetings }}</strong><span>meetings</span></div>{% endunless %}
+   <div class="rtg-series-team" style="--roster-accent:{{ team.primary_color }}" data-franchise="{{ team.franchise_id }}">{% include rtg-franchise-logo.html franchise_id=team.franchise_id decorative=true thumbnail=true size=42 %}<span>{{ team | current_franchise_name }}</span><strong>{% if team.franchise_id == series.franchise_a_id %}{{ series.wins_a }}{% else %}{{ series.wins_b }}{% endif %}<small>wins</small></strong></div>
+   {% endfor %}
+  </div>
+  {% if series.ties > 0 %}<p class="rtg-series-note">{{ series.ties }} {% if series.ties == 1 %}tie{% else %}ties{% endif %} in the series.</p>{% endif %}
+  {% if series.current_series_streak %}{% for team in briefing.teams %}{% if team.franchise_id == series.current_series_streak.franchise_id %}<p class="rtg-series-note"><span>Current streak</span><strong>{{ team | current_franchise_name }}</strong> · {{ series.current_series_streak.wins }} {% if series.current_series_streak.wins == 1 %}win{% else %}wins{% endif %}</p>{% endif %}{% endfor %}{% endif %}
+ </section>
+ {% endif %}
+ <nav class="rtg-briefing-links" aria-label="Matchup resources">{% if series %}<a href="{{ series.series_path | relative_url }}">Head-to-head history <span aria-hidden="true">↗</span></a>{% endif %}<a href="{{ '/picks/' | relative_url }}">Matchup picks <span aria-hidden="true">→</span></a></nav>
+</div>

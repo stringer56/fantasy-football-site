@@ -1,0 +1,15 @@
+{% assign game = include.matchup %}{% if game %}
+{% capture share_game_url %}/{{ site.data.generated.live_season.season }}/week/{{ game.week }}/#{{ game.matchup_id }}{% endcapture %}{% capture share_game_title %}{{ game.teams[0] | current_franchise_name }} vs {{ game.teams[1] | current_franchise_name }} — {{ site.data.generated.live_season.season }} Week {{ game.week }}{% endcapture %}
+<section class="rtg-matchup-hero"{% if include.scoreboard %} data-scoreboard="true" id="{{ game.matchup_id }}"{% endif %} aria-label="{% if include.scoreboard %}{{ game.teams[0] | current_franchise_name | escape }} versus {{ game.teams[1] | current_franchise_name | escape }}{% else %}Featured matchup{% endif %}" style="--side-a:{{ game.teams[0].primary_color }};--side-b:{{ game.teams[1].primary_color }}">
+ <header><p class="eyebrow">{{ include.label | default: 'GAME OF THE WEEK' }}</p><div class="rtg-matchup-heading-tools"><span data-yahoo-matchup-status>WEEK {{ game.week }} · {{ game.status_label }}</span>{% include matchup-share.html url=share_game_url title=share_game_title %}</div></header>
+ {% include rtg-matchup-stage.html teams=game.teams winner_id=game.winner_franchise_id lazy=include.scoreboard %}
+ {% if include.scoreboard %}
+ <details class="rtg-matchup-details">
+  <summary><span class="rtg-details-expand">Expand details</span><span class="rtg-details-collapse">Collapse details</span><span class="rtg-details-icon" aria-hidden="true"></span></summary>
+  <div class="rtg-matchup-expanded">
+   <p class="rtg-matchup-meta"><span>{{ game.status_label }} · {{ include.freshness.label | default: site.data.generated.live_season.freshness.label | default: 'Current league snapshot' }}</span>{% unless page.layout == 'live_week' %}<a href="/2026/week/{{ game.week }}/#{{ game.matchup_id }}">Matchup &amp; rosters →</a>{% endunless %}</p>
+   {% include rtg-matchup-briefing.html matchup=game %}
+  </div>
+ </details>
+ {% else %}<footer><span>{{ game.status_label }} · {{ site.data.generated.live_season.freshness.label | default: 'Current league snapshot' }}</span><a href="/2026/week/{{ game.week }}/#{{ game.matchup_id }}">Matchup &amp; rosters →</a></footer>{% endif %}
+</section>{% endif %}

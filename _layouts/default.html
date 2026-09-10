@@ -8,13 +8,35 @@
   <title>{% if page.title == 'Home' %}{{ site.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}</title>
   {% include social-meta.html %}
   <link rel="icon" href="{{ site.data.brand.favicon | relative_url }}" type="image/png">
+  <link rel="shortcut icon" href="{{ site.data.brand.favicon | relative_url }}" type="image/png">
   <link rel="apple-touch-icon" href="{{ site.data.brand.league_logo | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/publication.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/franchises.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/league-brand.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=gold-17' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/publication.css?v=gold-17' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/franchises.css?v=gold-17' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/league-brand.css?v=gold-17' | relative_url }}">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="/assets/css/private-edition.css?v=gold-17">
+<link rel="stylesheet" href="/assets/css/visual-pass-2.css?v=gold-17">
+<link rel="stylesheet" href="/assets/css/visual-pass-3.css?v=gold-17">
+<link rel="stylesheet" href="/assets/css/visual-pass-4.css?v=gold-17">
+<link rel="stylesheet" href="/assets/css/visual-pass-5.css?v=gold-17">
+<link rel="stylesheet" href="/assets/css/visual-pass-6.css?v=classics-nav-47">
+<link rel="stylesheet" href="/assets/css/championship-gold.css?v=gold-17">
+<link rel="stylesheet" href="/assets/css/pass-7.css?v=1">
+<link rel="stylesheet" href="/assets/css/document-scroll.css?v=gold-17">
+{% if page.url == '/' or page.url contains '/nfl-games/' or page.url == '/my-road-to-glory/' or page.url contains '/commissioner/' %}<link rel="stylesheet" href="/assets/css/nfl-games.css?v=8">{% endif %}
+{% if page.url == '/cup/' %}<link rel="stylesheet" href="/assets/css/cup-slideshow.css">{% endif %}
+{% if page.franchise_id %}<link rel="stylesheet" href="/assets/css/trophy-case.css">{% endif %}{% if site.data.franchise_analysis.franchises[page.franchise_id] %}<link rel="stylesheet" href="/assets/css/franchise-analysis.css?v=1">{% endif %}
+{% if page.url == "/rules/" %}<link rel="stylesheet" href="/assets/css/bylaws.css?v=abstract-21">{% endif %}
+{% if page.url == "/votes/" %}<link rel="stylesheet" href="/assets/css/league-polls.css">{% endif %}
+<link rel="stylesheet" href="/assets/css/sports-presentation.css?v=complete-rosters-38">
+<link rel="stylesheet" href="/assets/css/franchise-logos.css?v=1">{% if page.url == '/' or page.url == '/teams/' %}<link rel="stylesheet" href="/assets/css/league-wide-art.css?v=1">{% endif %}
+{% if page.url == '/' or page.layout == 'live_week' or page.body_class == 'live-season-page' %}<link rel="stylesheet" href="/assets/css/live-matchups.css?v=yahoo-live-39">{% endif %}
+{% if page.layout == 'historical-matchup' or page.layout == 'season' %}<link rel="stylesheet" href="/assets/css/historical-matchups.css?v=archive-39">{% endif %}{% if page.url == '/teams/' %}<link rel="stylesheet" href="/assets/css/teams-inward-helmets.css?v=2">{% endif %}{% if page.url == '/' or page.franchise_id or page.layout == 'live_week' or page.body_class == 'live-season-page' or page.layout == 'historical-matchup' or page.layout == 'season' or page.layout == 'classics' %}<link rel="stylesheet" href="/assets/css/league-discovery.css?v=1">{% endif %}
+{% if page.franchise_id or page.layout == 'classics' %}<link rel="stylesheet" href="/assets/css/classic-badge.css?v=1">{% endif %}
+{% if page.layout == 'classics' %}<link rel="stylesheet" href="/assets/css/classics.css?v=1">{% endif %}
 </head>
-<body class="{% if page.body_class %}{{ page.body_class }}{% endif %}">
+<body class="{% if page.body_class %}{{ page.body_class }}{% endif %}{% if page.layout == 'live_week' %} live-week-page{% endif %}">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
@@ -22,12 +44,14 @@
       <a class="brand" href="{{ '/' | relative_url }}" aria-label="Road to Glory FFL home">
         {% include league-mark.html %}
         <span class="brand__copy">
-          <span class="brand__name">Road to Glory</span>
+          <span class="brand__name">Road to <b>Glory</b></span>
           <span class="brand__league"><span class="brand__league-full">Fantasy Football League</span><span class="brand__league-short" aria-hidden="true">Fantasy Football</span></span>
         </span>
       </a>
 
       <div class="site-header__tools">
+        <a class="header-account" href="{{ '/my-road-to-glory/' | relative_url }}" aria-label="Open My Road to Glory"><span aria-hidden="true">●</span><b>My RTG</b></a>
+        <a class="header-search" href="{{ '/search/' | relative_url }}" aria-label="Search Road to Glory"><span aria-hidden="true">⌕</span><b>Search</b></a>
         <a class="season-chip" href="{{ '/2026/' | relative_url }}"{% if page.url contains '/2026/' %} aria-current="page"{% endif %}><span class="season-chip__dot" aria-hidden="true"></span>{{ site.data.site.current_season }} Season →</a>
         <a class="button button--gold button--compact desktop-yahoo-link" href="{{ site.data.site.yahoo.league_url }}" target="_blank" rel="noopener">
           Yahoo League <span aria-hidden="true">↗</span>
@@ -44,19 +68,24 @@
         <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
         <a href="{{ '/teams/' | relative_url }}"{% if page.url contains '/teams/' %} aria-current="page"{% endif %}>Teams</a>
         <a href="{{ '/history/' | relative_url }}"{% if page.url contains '/history/' or page.url contains '/seasons/' %} aria-current="page"{% endif %}>History</a>
+        <a href="{{ '/classics/' | relative_url }}"{% if page.url == '/classics/' %} aria-current="page"{% endif %}>Classics</a>
         <a href="{{ '/drafts/' | relative_url }}"{% if page.url contains '/drafts/' %} aria-current="page"{% endif %}>Drafts</a>
         <a href="{{ '/cup/' | relative_url }}"{% if page.url contains '/cup/' %} aria-current="page"{% endif %}>Brew Crew Cup</a>
         <a href="{{ '/records/' | relative_url }}"{% if page.url contains '/records/' or page.url contains '/head-to-head/' or page.url contains '/all-time-standings/' or page.url contains '/championships/' %} aria-current="page"{% endif %}>Records</a>
-        <a href="{{ '/votes/' | relative_url }}"{% if page.url contains '/votes/' or page.url contains '/power-rankings/' or page.url contains '/picks/' or page.url contains '/pickem/' %} aria-current="page"{% endif %}>Community</a>
+        <a href="{{ '/votes/' | relative_url }}"{% if page.url contains '/votes/' or page.url contains '/power-rankings/' or page.url contains '/road-to-the-cup/' or page.url contains '/picks/' or page.url == '/pickem/' %} aria-current="page"{% endif %}>Community</a>
+        <a href="{{ '/nfl-games/pickem/' | relative_url }}"{% if page.url contains '/nfl-games/pickem/' %} aria-current="page"{% endif %}>NFL Pick’em</a>
+        <a href="{{ '/nfl-games/survivor/' | relative_url }}"{% if page.url == '/nfl-games/survivor/' %} aria-current="page"{% endif %}>NFL Survivor</a>
         <a href="{{ '/retired/' | relative_url }}"{% if page.url contains '/retired/' %} aria-current="page"{% endif %}>Retired</a>
         <a href="{{ '/rules/' | relative_url }}"{% if page.url contains '/rules/' %} aria-current="page"{% endif %}>Rules</a>
-        <a class="mobile-yahoo-link" href="{{ site.data.site.yahoo.league_url }}" target="_blank" rel="noopener">Yahoo League <span aria-hidden="true">↗</span></a>
+        <a href="/rules/"{% if page.url == "/rules/" %} aria-current="page"{% endif %}>Bylaws</a><a href="/news/">News</a><a href="/search/"{% if page.url == '/search/' %} aria-current="page"{% endif %}>Search</a><a class="mobile-yahoo-link" href="{{ site.data.site.yahoo.league_url }}" target="_blank" rel="noopener">Yahoo League <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
 
+  <nav class="mobile-league-nav" aria-label="Quick league navigation"><a href="/">Home</a><a href="/2026/week/{{ site.data.generated.live_season.current_week | default: 1 }}/">Matchups</a><a href="/teams/">Teams</a><a href="/2026/#standings">Standings</a><a href="/nfl-games/pickem/"{% if page.url contains '/nfl-games/pickem/' %} aria-current="page"{% endif %}>NFL Pick’em</a><a href="/nfl-games/survivor/"{% if page.url == '/nfl-games/survivor/' %} aria-current="page"{% endif %}>NFL Survivor</a></nav>
   <main id="main-content">
-    {% if page.url contains '/votes/' or page.url contains '/power-rankings/' or page.url contains '/picks/' or page.url contains '/pickem/' %}{% include community-nav.html %}{% endif %}
+    {% if page.url contains '/nfl-games/' %}{% include nfl-games-nav.html %}{% endif %}
+    {% if page.url contains '/votes/' or page.url contains '/power-rankings/' or page.url contains '/picks/' or page.url == '/pickem/' %}{% include community-nav.html %}{% endif %}
     {{ content }}
   </main>
 
@@ -67,7 +96,8 @@
         <p>Rivalries, history, and the pursuit of the Brew Crew Cup.</p>
       </div>
       <div class="site-footer__links">
-        <a href="{{ '/rules/' | relative_url }}">League Rules</a>
+        <a href="/classics/">Classic Matchups</a>
+        <a href="{{ '/rules/' | relative_url }}">League Bylaws</a>
         <a href="{{ site.data.site.yahoo.league_url }}" target="_blank" rel="noopener">Yahoo League <span aria-hidden="true">↗</span></a>
       </div>
       <p class="site-footer__meta">© {{ site.time | date: '%Y' }} Road to Glory FFL<br><span>Rivalries since {{ site.data.league.founded_season }}</span></p>
@@ -76,6 +106,10 @@
 
   <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
   {% if page.url == '/' %}<script src="{{ '/assets/js/news-wire.js' | relative_url }}" defer></script>{% endif %}
-  {% if page.url == '/' %}<script src="{{ '/assets/js/countdown.js' | relative_url }}" defer></script>{% endif %}
+{% if page.url == '/' %}<script src="{{ '/assets/js/countdown.js' | relative_url }}" defer></script>{% endif %}
+{% if page.url == '/' or page.layout == 'live_week' or page.body_class == 'live-season-page' %}<script src="/assets/js/yahoo-live.js?v=1" defer></script>{% endif %}
+{% if page.url == '/cup/' %}<script src="/assets/js/cup-slideshow.js" defer></script>{% endif %}
+{% if page.url == "/votes/" %}<script src="/assets/js/league-polls.js" defer></script>{% endif %}{% if page.url == '/' or page.franchise_id or page.layout == 'live_week' or page.body_class == 'live-season-page' or page.layout == 'historical-matchup' or page.layout == 'season' or page.layout == 'classics' %}<script src="/assets/js/league-discovery.js?v=1" type="module"></script>{% endif %}
+{% if page.url == '/' or page.url contains '/nfl-games/' or page.url == '/my-road-to-glory/' or page.url contains '/commissioner/' %}<script src="/assets/js/nfl-games.js?v=6" type="module"></script>{% endif %}
 </body>
 </html>

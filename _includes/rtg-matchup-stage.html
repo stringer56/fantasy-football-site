@@ -1,0 +1,19 @@
+{%- capture rtg_matchup_stage_markup -%}
+<div class="rtg-matchup-stage">
+ {% for team in include.teams %}
+ {% assign facing = 'right' %}{% unless forloop.first %}{% assign facing = 'left' %}<div class="rtg-matchup-vs"><img src="{{ site.data.brand.league_logo }}" alt="Road to Glory" width="90" height="90"{% if include.lazy %} loading="lazy"{% endif %}><b>VS</b></div>{% endunless %}
+ {% if include.historical %}{% assign side_name = team.name %}{% else %}{% assign side_name = team | current_franchise_name %}{% endif %}
+ <div class="rtg-matchup-side{% if include.winner_id == team.franchise_id %} is-winner{% endif %}" data-yahoo-team-key="{{ team.team_key }}">
+  {% if include.historical %}
+   {% assign helmet_loading = 'eager' %}{% if include.lazy %}{% assign helmet_loading = 'lazy' %}{% endif %}
+   {% include rtg-franchise-helmet.html franchise_id=team.franchise_id name=team.name direction=facing size=300 loading=helmet_loading %}
+  {% else %}<img src="{{ team.identity_image | directional_helmet: facing }}" alt="{{ side_name | escape }} helmet" loading="{% if include.lazy %}lazy{% else %}eager{% endif %}">{% endif %}
+  <h2><a href="{{ team.path }}">{{ side_name | escape }}</a></h2>
+  {% if team.record %}<p>{{ team.record }} <span>Season record</span></p>{% endif %}
+  {% if include.historical and team.seed %}<p class="rtg-matchup-seed">Seed {{ team.seed }}</p>{% endif %}
+  <strong data-yahoo-score>{{ team.score | fixed_score }}</strong>
+  {% if include.historical %}<p class="rtg-result-label">{% if include.tie %}Tie{% elsif include.winner_id == team.franchise_id %}Winner{% else %}Final{% endif %}</p>{% elsif team.projected_score != null %}<small data-yahoo-projection>Projected {{ team.projected_score | fixed_score }}</small>{% endif %}
+ </div>
+ {% endfor %}
+</div>
+{%- endcapture -%}{{ rtg_matchup_stage_markup | strip_newlines }}

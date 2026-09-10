@@ -2,7 +2,9 @@ name: Update Yahoo Data
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    # Full rosters, standings, and league data. Score-only refreshes run every
+    # five minutes in live-yahoo-scores.yml.
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 permissions:
