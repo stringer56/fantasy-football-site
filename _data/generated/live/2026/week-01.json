@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 1,
-  "generated_at": "2026-09-09T20:28:14Z",
+  "generated_at": "2026-09-10T03:14:02Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-09T20:28:14Z",
+    "source_updated_at": "2026-09-10T03:14:02Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -267,8 +267,8 @@
     {
       "matchup_id": "2026-w01-albany-kneelers--turnbull-acs",
       "week": 1,
-      "status": "upcoming",
-      "status_label": "Upcoming",
+      "status": "live",
+      "status_label": "In Progress",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -286,8 +286,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 111.49,
+          "score": 4.1,
+          "projected_score": 104.47,
           "roster": [
             {
               "player_key": null,
@@ -312,7 +312,7 @@
           "team_id": 11,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 109.86,
+          "projected_score": 112.77,
           "roster": []
         }
       ],
@@ -363,8 +363,8 @@
     {
       "matchup_id": "2026-w01-ayahuasca-rush--vegas-vandals",
       "week": 1,
-      "status": "upcoming",
-      "status_label": "Upcoming",
+      "status": "live",
+      "status_label": "In Progress",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -382,8 +382,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 115.8,
+          "score": 29.2,
+          "projected_score": 115.61,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -408,7 +408,7 @@
           "team_id": 12,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 107.2,
+          "projected_score": 109.4,
           "roster": []
         }
       ],
@@ -459,8 +459,8 @@
     {
       "matchup_id": "2026-w01-baseball-furies--maine-moose",
       "week": 1,
-      "status": "upcoming",
-      "status_label": "Upcoming",
+      "status": "live",
+      "status_label": "In Progress",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -479,7 +479,7 @@
           "team_id": 7,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 117.3,
+          "projected_score": 120.06,
           "roster": [
             {
               "player_key": null,
@@ -503,8 +503,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 109.58,
+          "score": 19.26,
+          "projected_score": 101.92,
           "roster": [
             {
               "player_key": null,
@@ -564,8 +564,8 @@
     {
       "matchup_id": "2026-w01-buffalo-bravado--van-cortlant-rangers",
       "week": 1,
-      "status": "upcoming",
-      "status_label": "Upcoming",
+      "status": "live",
+      "status_label": "In Progress",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -583,8 +583,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 112.71,
+          "score": 9.0,
+          "projected_score": 112.2,
           "roster": []
         },
         {
@@ -600,7 +600,7 @@
           "team_id": 4,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 109.76,
+          "projected_score": 108.79,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -676,8 +676,8 @@
     {
       "matchup_id": "2026-w01-crazy-wazs-team--north-town-ninnyhammers",
       "week": 1,
-      "status": "upcoming",
-      "status_label": "Upcoming",
+      "status": "live",
+      "status_label": "In Progress",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -696,7 +696,7 @@
           "team_id": 5,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 116.81,
+          "projected_score": 116.41,
           "roster": []
         },
         {
@@ -711,8 +711,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 115.4,
+          "score": 33.0,
+          "projected_score": 121.69,
           "roster": [
             {
               "player_key": "470.p.41988",
@@ -780,8 +780,8 @@
     {
       "matchup_id": "2026-w01-greendale-human-beings--new-jersey-giants",
       "week": 1,
-      "status": "upcoming",
-      "status_label": "Upcoming",
+      "status": "live",
+      "status_label": "In Progress",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -800,7 +800,7 @@
           "team_id": 6,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 119.14,
+          "projected_score": 116.51,
           "roster": [
             {
               "player_key": null,
@@ -825,7 +825,7 @@
           "team_id": 8,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 116.07,
+          "projected_score": 114.72,
           "roster": [
             {
               "player_key": "470.p.41093",
@@ -883,7 +883,40 @@
       }
     }
   ],
-  "weekly_facts": [],
+  "weekly_facts": [
+    {
+      "fact_id": "highest-score",
+      "label": "Highest score",
+      "value": 33.0,
+      "franchise_id": "north-town-ninnyhammers",
+      "display_name": "North town Ninnyhammers"
+    },
+    {
+      "fact_id": "lowest-score",
+      "label": "Lowest score",
+      "value": 0.0,
+      "franchise_id": "buffalo-bravado",
+      "display_name": "Buffalo Bravados"
+    },
+    {
+      "fact_id": "highest-combined",
+      "label": "Highest combined score",
+      "value": 33.0,
+      "matchup_id": "2026-w01-crazy-wazs-team--north-town-ninnyhammers"
+    },
+    {
+      "fact_id": "biggest-win",
+      "label": "Biggest lead",
+      "value": 33.0,
+      "matchup_id": "2026-w01-crazy-wazs-team--north-town-ninnyhammers"
+    },
+    {
+      "fact_id": "closest-game",
+      "label": "Closest game",
+      "value": 4.1,
+      "matchup_id": "2026-w01-albany-kneelers--turnbull-acs"
+    }
+  ],
   "record_watch": [],
   "power_rankings": {
     "status": "unavailable",
@@ -906,7 +939,7 @@
         "matchup_id": "2026-week-01-buffalo-bravado-vs-van-cortlant-rangers",
         "season": 2026,
         "week": 1,
-        "status": "preevent",
+        "status": "midevent",
         "participants": [
           {
             "franchise_id": "van-cortlant-rangers",
@@ -930,7 +963,7 @@
         "matchup_id": "2026-week-01-albany-kneelers-vs-turnbull-acs",
         "season": 2026,
         "week": 1,
-        "status": "preevent",
+        "status": "midevent",
         "participants": [
           {
             "franchise_id": "albany-kneelers",
@@ -954,7 +987,7 @@
         "matchup_id": "2026-week-01-ayahuasca-rush-vs-vegas-vandals",
         "season": 2026,
         "week": 1,
-        "status": "preevent",
+        "status": "midevent",
         "participants": [
           {
             "franchise_id": "ayahuasca-rush",
@@ -978,7 +1011,7 @@
         "matchup_id": "2026-week-01-crazy-wazs-team-vs-north-town-ninnyhammers",
         "season": 2026,
         "week": 1,
-        "status": "preevent",
+        "status": "midevent",
         "participants": [
           {
             "franchise_id": "crazy-wazs-team",
@@ -1002,7 +1035,7 @@
         "matchup_id": "2026-week-01-greendale-human-beings-vs-new-jersey-giants",
         "season": 2026,
         "week": 1,
-        "status": "preevent",
+        "status": "midevent",
         "participants": [
           {
             "franchise_id": "greendale-human-beings",
@@ -1026,7 +1059,7 @@
         "matchup_id": "2026-week-01-baseball-furies-vs-maine-moose",
         "season": 2026,
         "week": 1,
-        "status": "preevent",
+        "status": "midevent",
         "participants": [
           {
             "franchise_id": "maine-moose",

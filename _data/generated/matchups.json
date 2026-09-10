@@ -4,7 +4,7 @@
   "matchups": [
     {
       "week": 1,
-      "status": "preevent",
+      "status": "midevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -15,8 +15,8 @@
           "team_id": 1,
           "team_name": "Van Cortlant Rangers",
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 112.71
+          "score": 9.0,
+          "projected_score": 112.2
         },
         {
           "team_key": "470.l.26455.t.4",
@@ -24,13 +24,13 @@
           "team_name": "Buffalo Bravados",
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 109.76
+          "projected_score": 108.79
         }
       ]
     },
     {
       "week": 1,
-      "status": "preevent",
+      "status": "midevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -41,8 +41,8 @@
           "team_id": 2,
           "team_name": "Albany Redskins",
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 111.49
+          "score": 4.1,
+          "projected_score": 104.47
         },
         {
           "team_key": "470.l.26455.t.11",
@@ -50,13 +50,13 @@
           "team_name": "Turnbull AC’s",
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 109.86
+          "projected_score": 112.77
         }
       ]
     },
     {
       "week": 1,
-      "status": "preevent",
+      "status": "midevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -67,8 +67,8 @@
           "team_id": 3,
           "team_name": "Ayahuasca Rush",
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 115.8
+          "score": 29.2,
+          "projected_score": 115.61
         },
         {
           "team_key": "470.l.26455.t.12",
@@ -76,13 +76,13 @@
           "team_name": "Vegas Vandals",
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 107.2
+          "projected_score": 109.4
         }
       ]
     },
     {
       "week": 1,
-      "status": "preevent",
+      "status": "midevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -94,21 +94,21 @@
           "team_name": "Chris's Crazy Team",
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 116.81
+          "projected_score": 116.41
         },
         {
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "team_name": "North town Ninnyhammers",
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 115.4
+          "score": 33.0,
+          "projected_score": 121.69
         }
       ]
     },
     {
       "week": 1,
-      "status": "preevent",
+      "status": "midevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -120,7 +120,7 @@
           "team_name": "Greendale Human Beings",
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 119.14
+          "projected_score": 116.51
         },
         {
           "team_key": "470.l.26455.t.8",
@@ -128,13 +128,13 @@
           "team_name": "New Jersey Giants",
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 116.07
+          "projected_score": 114.72
         }
       ]
     },
     {
       "week": 1,
-      "status": "preevent",
+      "status": "midevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -146,15 +146,15 @@
           "team_name": "Maine Moose",
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 117.3
+          "projected_score": 120.06
         },
         {
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "team_name": "The Baseball Furies",
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 109.58
+          "score": 19.26,
+          "projected_score": 101.92
         }
       ]
     }
