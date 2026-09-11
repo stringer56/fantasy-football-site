@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 1,
-  "generated_at": "2026-09-11T00:23:43Z",
+  "generated_at": "2026-09-11T05:01:45Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-11T00:23:43Z",
+    "source_updated_at": "2026-09-11T05:01:45Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -286,8 +286,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "0-0-0",
-          "score": 4.1,
-          "projected_score": 104.45,
+          "score": 16.0,
+          "projected_score": 99.5,
           "roster": [
             {
               "player_key": null,
@@ -312,7 +312,7 @@
           "team_id": 11,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 112.97,
+          "projected_score": 112.91,
           "roster": []
         }
       ],
@@ -382,8 +382,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "0-0-0",
-          "score": 34.0,
-          "projected_score": 119.67,
+          "score": 48.0,
+          "projected_score": 120.37,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -391,6 +391,22 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34120",
+              "player_name": "Kyren Williams",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33508",
+              "player_name": "Rhamondre Stevenson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
               "status": null
             },
             {
@@ -415,8 +431,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 109.58,
+          "score": 13.9,
+          "projected_score": 113.43,
           "roster": []
         }
       ],
@@ -487,7 +503,7 @@
           "team_id": 7,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 119.94,
+          "projected_score": 119.72,
           "roster": [
             {
               "player_key": null,
@@ -512,7 +528,7 @@
           "team_id": 10,
           "record": "0-0-0",
           "score": 19.82,
-          "projected_score": 101.58,
+          "projected_score": 101.51,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -623,9 +639,25 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "0-0-0",
-          "score": 9.0,
-          "projected_score": 112.36,
+          "score": 31.5,
+          "projected_score": 87.1,
           "roster": [
+            {
+              "player_key": "470.p.9265",
+              "player_name": "Matthew Stafford",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "QB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.30121",
+              "player_name": "Christian McCaffrey",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
             {
               "player_key": null,
               "player_name": "Patriots",
@@ -649,7 +681,7 @@
           "team_id": 4,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 109.16,
+          "projected_score": 108.78,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -744,9 +776,18 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 116.48,
-          "roster": []
+          "score": 11.0,
+          "projected_score": 120.53,
+          "roster": [
+            {
+              "player_key": "470.p.31482",
+              "player_name": "Eddy Pineiro",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "K",
+              "status": null
+            }
+          ]
         },
         {
           "franchise_id": "north-town-ninnyhammers",
@@ -760,8 +801,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "0-0-0",
-          "score": 33.0,
-          "projected_score": 120.56,
+          "score": 35.2,
+          "projected_score": 115.24,
           "roster": [
             {
               "player_key": "470.p.41988",
@@ -848,15 +889,31 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 116.52,
+          "score": 1.0,
+          "projected_score": 110.02,
           "roster": [
+            {
+              "player_key": "470.p.41312",
+              "player_name": "Harrison Mevis",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "K",
+              "status": null
+            },
             {
               "player_key": null,
               "player_name": "Raiders",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Rams",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
               "status": null
             }
           ]
@@ -874,7 +931,7 @@
           "team_id": 8,
           "record": "0-0-0",
           "score": 0.0,
-          "projected_score": 114.65,
+          "projected_score": 114.43,
           "roster": [
             {
               "player_key": "470.p.41093",
@@ -936,7 +993,7 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 34.0,
+      "value": 48.0,
       "franchise_id": "ayahuasca-rush",
       "display_name": "Ayahuasca Rush"
     },
@@ -950,20 +1007,20 @@
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 34.0,
+      "value": 61.9,
       "matchup_id": "2026-w01-ayahuasca-rush--vegas-vandals"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 34.0,
+      "value": 34.1,
       "matchup_id": "2026-w01-ayahuasca-rush--vegas-vandals"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 4.1,
-      "matchup_id": "2026-w01-albany-kneelers--turnbull-acs"
+      "value": 1.0,
+      "matchup_id": "2026-w01-greendale-human-beings--new-jersey-giants"
     }
   ],
   "record_watch": [],

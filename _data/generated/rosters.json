@@ -8,6 +8,22 @@
       "team_name": "Van Cortlant Rangers",
       "players": [
         {
+          "player_key": "470.p.9265",
+          "player_name": "Matthew Stafford",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "QB",
+          "status": null
+        },
+        {
+          "player_key": "470.p.30121",
+          "player_name": "Christian McCaffrey",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "RB",
+          "status": null
+        },
+        {
           "player_key": null,
           "player_name": "Patriots",
           "nfl_team": null,
@@ -43,6 +59,22 @@
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "QB",
+          "status": null
+        },
+        {
+          "player_key": "470.p.34120",
+          "player_name": "Kyren Williams",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "RB",
+          "status": null
+        },
+        {
+          "player_key": "470.p.33508",
+          "player_name": "Rhamondre Stevenson",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "RB",
           "status": null
         },
         {
@@ -90,7 +122,16 @@
       "team_key": "470.l.26455.t.5",
       "team_id": 5,
       "team_name": "Chris's Crazy Team",
-      "players": []
+      "players": [
+        {
+          "player_key": "470.p.31482",
+          "player_name": "Eddy Pineiro",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "K",
+          "status": null
+        }
+      ]
     },
     {
       "team_key": "470.l.26455.t.6",
@@ -98,11 +139,27 @@
       "team_name": "Greendale Human Beings",
       "players": [
         {
+          "player_key": "470.p.41312",
+          "player_name": "Harrison Mevis",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "K",
+          "status": null
+        },
+        {
           "player_key": null,
           "player_name": "Raiders",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
+          "status": null
+        },
+        {
+          "player_key": null,
+          "player_name": "Rams",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
           "status": null
         }
       ]
