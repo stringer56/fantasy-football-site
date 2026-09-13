@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-09-13T14:43:11Z",
+  "generated_at": "2026-09-13T17:42:59Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-13T14:43:11Z",
+    "source_updated_at": "2026-09-13T17:42:59Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-09-13T14:43:11Z"
+    "source_update_timestamp": "2026-09-13T17:42:59Z"
   },
   "standings": [
     {
@@ -325,9 +325,17 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "0-0-0",
-          "score": 16.0,
-          "projected_score": 99.57,
+          "score": 36.4,
+          "projected_score": 104.15,
           "roster": [
+            {
+              "player_key": "470.p.41825",
+              "player_name": "Tyler Shough",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "QB",
+              "status": null
+            },
             {
               "player_key": null,
               "player_name": "Ravens",
@@ -350,8 +358,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 114.07,
+          "score": 14.6,
+          "projected_score": 108.02,
           "roster": []
         }
       ],
@@ -421,8 +429,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "0-0-0",
-          "score": 48.0,
-          "projected_score": 120.13,
+          "score": 64.94,
+          "projected_score": 122.03,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -471,7 +479,7 @@
           "team_id": 12,
           "record": "0-0-0",
           "score": 13.9,
-          "projected_score": 114.5,
+          "projected_score": 111.15,
           "roster": []
         }
       ],
@@ -541,8 +549,8 @@
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 120.24,
+          "score": 14.4,
+          "projected_score": 123.36,
           "roster": [
             {
               "player_key": null,
@@ -566,8 +574,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "0-0-0",
-          "score": 19.82,
-          "projected_score": 101.97,
+          "score": 53.82,
+          "projected_score": 111.0,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -678,8 +686,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "0-0-0",
-          "score": 31.5,
-          "projected_score": 87.39,
+          "score": 40.3,
+          "projected_score": 85.62,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -719,8 +727,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 109.95,
+          "score": 24.06,
+          "projected_score": 112.5,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -815,8 +823,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "0-0-0",
-          "score": 11.0,
-          "projected_score": 120.0,
+          "score": 38.7,
+          "projected_score": 123.56,
           "roster": [
             {
               "player_key": "470.p.31482",
@@ -840,8 +848,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "0-0-0",
-          "score": 35.2,
-          "projected_score": 115.27,
+          "score": 42.4,
+          "projected_score": 111.95,
           "roster": [
             {
               "player_key": "470.p.41988",
@@ -928,8 +936,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "0-0-0",
-          "score": 1.0,
-          "projected_score": 110.63,
+          "score": 9.4,
+          "projected_score": 110.61,
           "roster": [
             {
               "player_key": "470.p.41312",
@@ -969,8 +977,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 113.74,
+          "score": 19.4,
+          "projected_score": 120.02,
           "roster": [
             {
               "player_key": "470.p.41093",
@@ -1029,7 +1037,7 @@
     }
   ],
   "featured_matchup": {
-    "matchup_id": "2026-w01-greendale-human-beings--new-jersey-giants",
+    "matchup_id": "2026-w01-albany-kneelers--turnbull-acs",
     "week": 1,
     "status": "live",
     "status_label": "In Progress",
@@ -1039,113 +1047,96 @@
     "winner_franchise_id": null,
     "teams": [
       {
-        "franchise_id": "greendale-human-beings",
-        "display_name": "Greendale Human Beings",
-        "canonical_name": "Greendale Human Beings",
-        "short_name": "Human Beings",
-        "path": "/teams/greendale-human-beings/",
-        "identity_image": "/assets/img/franchises/greendale-human-beings/helmet-2026.png",
-        "identity_alt": "Greendale Human Beings blue 3D football helmet with the college emblem",
-        "primary_color": "#1e3a8a",
-        "team_key": "470.l.26455.t.6",
-        "team_id": 6,
+        "franchise_id": "albany-kneelers",
+        "display_name": "Albany Redskins",
+        "canonical_name": "Albany Redskins",
+        "short_name": "Redskins",
+        "path": "/teams/albany-kneelers/",
+        "identity_image": "/assets/img/franchises/albany-kneelers/helmet-2026.png",
+        "identity_alt": "Albany Redskins black 3D football helmet with the approved team emblem",
+        "primary_color": "#111827",
+        "team_key": "470.l.26455.t.2",
+        "team_id": 2,
         "record": "0-0-0",
-        "score": 1.0,
-        "projected_score": 110.63,
+        "score": 36.4,
+        "projected_score": 104.15,
         "roster": [
           {
-            "player_key": "470.p.41312",
-            "player_name": "Harrison Mevis",
+            "player_key": "470.p.41825",
+            "player_name": "Tyler Shough",
             "nfl_team": null,
             "primary_position": null,
-            "selected_position": "K",
+            "selected_position": "QB",
             "status": null
           },
           {
             "player_key": null,
-            "player_name": "Raiders",
+            "player_name": "Ravens",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "DEF",
-            "status": null
-          },
-          {
-            "player_key": null,
-            "player_name": "Rams",
-            "nfl_team": null,
-            "primary_position": null,
-            "selected_position": "BN",
             "status": null
           }
         ]
       },
       {
-        "franchise_id": "new-jersey-giants",
-        "display_name": "New Jersey Giants",
-        "canonical_name": "New Jersey Giants",
-        "short_name": "Giants",
-        "path": "/teams/new-jersey-giants/",
-        "identity_image": "/assets/img/franchises/new-jersey-giants/helmet-2026.png",
-        "identity_alt": "New Jersey Giants commissioner-approved 3D football helmet",
-        "primary_color": "#1d4ed8",
-        "team_key": "470.l.26455.t.8",
-        "team_id": 8,
+        "franchise_id": "turnbull-acs",
+        "display_name": "Turnbull AC’s",
+        "canonical_name": "Turnbull AC's",
+        "short_name": "Turnbull",
+        "path": "/teams/turnbull-acs/",
+        "identity_image": "/assets/img/franchises/turnbull-acs/helmet-2026.png",
+        "identity_alt": "Turnbull AC's commissioner-approved 3D football helmet",
+        "primary_color": "#7e22ce",
+        "team_key": "470.l.26455.t.11",
+        "team_id": 11,
         "record": "0-0-0",
-        "score": 0.0,
-        "projected_score": 113.74,
-        "roster": [
-          {
-            "player_key": "470.p.41093",
-            "player_name": "Will Reichard",
-            "nfl_team": null,
-            "primary_position": null,
-            "selected_position": "K",
-            "status": null
-          }
-        ]
+        "score": 14.6,
+        "projected_score": 108.02,
+        "roster": []
       }
     ],
     "historical_context": {
-      "series_path": "/head-to-head/?a=greendale-human-beings&b=new-jersey-giants",
+      "series_path": "/head-to-head/?a=albany-kneelers&b=turnbull-acs",
       "meetings": 6,
-      "wins_a": 4,
-      "wins_b": 2,
+      "wins_a": 3,
+      "wins_b": 3,
       "ties": 0,
-      "franchise_a_id": "greendale-human-beings",
+      "franchise_a_id": "albany-kneelers",
       "most_recent_meeting": {
-        "matchup_id": "2025-w15-06-12",
+        "matchup_id": "2025-w03-02-10",
         "season": 2025,
-        "week": 15,
-        "game_type": "championship_playoff",
-        "playoff_round": "Semifinal",
+        "week": 3,
+        "game_type": "regular_season",
+        "playoff_round": null,
         "tie": false,
         "team_a": {
-          "franchise_id": "greendale-human-beings",
-          "display_name": "Greendale Human Beings",
-          "path": "/teams/greendale-human-beings/",
-          "score": 159.06
+          "franchise_id": "albany-kneelers",
+          "display_name": "Albany Redskins",
+          "path": "/teams/albany-kneelers/",
+          "score": 102.26
         },
         "team_b": {
-          "franchise_id": "new-jersey-giants",
-          "display_name": "New Jersey Giants",
-          "path": "/teams/new-jersey-giants/",
-          "score": 134.52
+          "franchise_id": "turnbull-acs",
+          "display_name": "Turnbull AC's",
+          "path": "/teams/turnbull-acs/",
+          "score": 118.72
         },
         "winner": {
-          "franchise_id": "greendale-human-beings",
-          "display_name": "Greendale Human Beings"
+          "franchise_id": "turnbull-acs",
+          "display_name": "Turnbull AC's"
         },
-        "margin": 24.54,
-        "combined_score": 293.58
+        "margin": 16.46,
+        "combined_score": 220.98
       },
       "current_series_streak": {
-        "franchise_id": "greendale-human-beings",
-        "wins": 1,
-        "against_franchise_id": "new-jersey-giants",
-        "start_season": 2025,
-        "start_week": 15,
+        "franchise_id": "turnbull-acs",
+        "wins": 2,
+        "against_franchise_id": "albany-kneelers",
+        "start_season": 2024,
+        "start_week": 4,
         "end_season": 2025,
-        "end_week": 15
+        "end_week": 3
       }
     }
   },
@@ -1153,34 +1144,34 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 48.0,
+      "value": 64.94,
       "franchise_id": "ayahuasca-rush",
       "display_name": "Ayahuasca Rush"
     },
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 0.0,
-      "franchise_id": "buffalo-bravado",
-      "display_name": "Buffalo Bravados"
+      "value": 9.4,
+      "franchise_id": "greendale-human-beings",
+      "display_name": "Greendale Human Beings"
     },
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 61.9,
-      "matchup_id": "2026-w01-ayahuasca-rush--vegas-vandals"
+      "value": 81.1,
+      "matchup_id": "2026-w01-crazy-wazs-team--north-town-ninnyhammers"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 34.1,
+      "value": 51.04,
       "matchup_id": "2026-w01-ayahuasca-rush--vegas-vandals"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 1.0,
-      "matchup_id": "2026-w01-greendale-human-beings--new-jersey-giants"
+      "value": 3.7,
+      "matchup_id": "2026-w01-crazy-wazs-team--north-town-ninnyhammers"
     }
   ],
   "record_watch": [],
@@ -1189,7 +1180,7 @@
       "headline_id": "week-1:high-score",
       "category": "Week in Review",
       "headline": "Ayahuasca Rush leads Week 1 scoring",
-      "detail": "The week's current high is 48.00 points.",
+      "detail": "The week's current high is 64.94 points.",
       "week": 1,
       "source": "normalized_yahoo",
       "path": "/2026/week/1/"
@@ -1225,8 +1216,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 114.07,
+          "score": 14.6,
+          "projected_score": 108.02,
           "roster": []
         },
         "week": 1
@@ -1263,7 +1254,7 @@
           "team_id": 12,
           "record": "0-0-0",
           "score": 13.9,
-          "projected_score": 114.5,
+          "projected_score": 111.15,
           "roster": []
         },
         "week": 1
@@ -1299,8 +1290,8 @@
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 120.24,
+          "score": 14.4,
+          "projected_score": 123.36,
           "roster": [
             {
               "player_key": null,
@@ -1345,8 +1336,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "0-0-0",
-          "score": 31.5,
-          "projected_score": 87.39,
+          "score": 40.3,
+          "projected_score": 85.62,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1407,8 +1398,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "0-0-0",
-          "score": 35.2,
-          "projected_score": 115.27,
+          "score": 42.4,
+          "projected_score": 111.95,
           "roster": [
             {
               "player_key": "470.p.41988",
@@ -1461,8 +1452,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 113.74,
+          "score": 19.4,
+          "projected_score": 120.02,
           "roster": [
             {
               "player_key": "470.p.41093",
@@ -1507,8 +1498,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "0-0-0",
-          "score": 19.82,
-          "projected_score": 101.97,
+          "score": 53.82,
+          "projected_score": 111.0,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1585,8 +1576,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "0-0-0",
-          "score": 1.0,
-          "projected_score": 110.63,
+          "score": 9.4,
+          "projected_score": 110.61,
           "roster": [
             {
               "player_key": "470.p.41312",
@@ -1647,8 +1638,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "0-0-0",
-          "score": 11.0,
-          "projected_score": 120.0,
+          "score": 38.7,
+          "projected_score": 123.56,
           "roster": [
             {
               "player_key": "470.p.31482",
@@ -1693,9 +1684,17 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "0-0-0",
-          "score": 16.0,
-          "projected_score": 99.57,
+          "score": 36.4,
+          "projected_score": 104.15,
           "roster": [
+            {
+              "player_key": "470.p.41825",
+              "player_name": "Tyler Shough",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "QB",
+              "status": null
+            },
             {
               "player_key": null,
               "player_name": "Ravens",
@@ -1739,8 +1738,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "0-0-0",
-          "score": 0.0,
-          "projected_score": 109.95,
+          "score": 24.06,
+          "projected_score": 112.5,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1801,8 +1800,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "0-0-0",
-          "score": 48.0,
-          "projected_score": 120.13,
+          "score": 64.94,
+          "projected_score": 122.03,
           "roster": [
             {
               "player_key": "470.p.31002",
