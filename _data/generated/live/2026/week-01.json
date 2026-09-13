@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 1,
-  "generated_at": "2026-09-13T19:52:06Z",
+  "generated_at": "2026-09-13T22:13:07Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-13T19:52:06Z",
+    "source_updated_at": "2026-09-13T22:13:07Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -286,8 +286,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "0-0-0",
-          "score": 65.42,
-          "projected_score": 112.56,
+          "score": 85.6,
+          "projected_score": 129.0,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -319,8 +319,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "0-0-0",
-          "score": 66.8,
-          "projected_score": 127.55,
+          "score": 93.6,
+          "projected_score": 137.48,
           "roster": [
             {
               "player_key": "470.p.41062",
@@ -328,6 +328,14 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "K",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Steelers",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "DEF",
               "status": null
             }
           ]
@@ -399,8 +407,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "0-0-0",
-          "score": 115.64,
-          "projected_score": 130.23,
+          "score": 118.06,
+          "projected_score": 125.73,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -427,6 +435,46 @@
               "status": null
             },
             {
+              "player_key": "470.p.33393",
+              "player_name": "Ja'Marr Chase",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.30994",
+              "player_name": "DJ Moore",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31056",
+              "player_name": "Mark Andrews",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "TE",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40883",
+              "player_name": "Brian Thomas Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40878",
+              "player_name": "Brock Bowers",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": null,
               "player_name": "Seahawks",
               "nfl_team": null,
@@ -448,8 +496,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "0-0-0",
-          "score": 30.6,
-          "projected_score": 119.48,
+          "score": 72.44,
+          "projected_score": 109.1,
           "roster": []
         }
       ],
@@ -519,8 +567,8 @@
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
           "record": "0-0-0",
-          "score": 42.8,
-          "projected_score": 124.41,
+          "score": 92.8,
+          "projected_score": 148.53,
           "roster": [
             {
               "player_key": null,
@@ -544,8 +592,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "0-0-0",
-          "score": 81.22,
-          "projected_score": 96.11,
+          "score": 84.92,
+          "projected_score": 88.11,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -569,6 +617,30 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33963",
+              "player_name": "Drake London",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40234",
+              "player_name": "Parker Washington",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41877",
+              "player_name": "Harold Fannin Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "TE",
               "status": null
             },
             {
@@ -656,8 +728,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "0-0-0",
-          "score": 83.3,
-          "projected_score": 97.52,
+          "score": 94.4,
+          "projected_score": 98.54,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -673,6 +745,46 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40196",
+              "player_name": "Chase Brown",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33965",
+              "player_name": "Garrett Wilson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.27581",
+              "player_name": "Davante Adams",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40064",
+              "player_name": "Sam LaPorta",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "TE",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33537",
+              "player_name": "Evan McPherson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "K",
               "status": null
             },
             {
@@ -697,8 +809,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "0-0-0",
-          "score": 95.78,
-          "projected_score": 129.61,
+          "score": 115.76,
+          "projected_score": 133.39,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -711,6 +823,14 @@
             {
               "player_key": "470.p.34019",
               "player_name": "James Cook III",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.32705",
+              "player_name": "D'Andre Swift",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
@@ -793,8 +913,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "0-0-0",
-          "score": 87.5,
-          "projected_score": 135.01,
+          "score": 130.38,
+          "projected_score": 154.59,
           "roster": [
             {
               "player_key": "470.p.31482",
@@ -826,9 +946,17 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "0-0-0",
-          "score": 63.5,
-          "projected_score": 103.86,
+          "score": 73.76,
+          "projected_score": 99.76,
           "roster": [
+            {
+              "player_key": "470.p.32671",
+              "player_name": "Joe Burrow",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "QB",
+              "status": null
+            },
             {
               "player_key": "470.p.41988",
               "player_name": "Tyler Loop",
@@ -914,8 +1042,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "0-0-0",
-          "score": 45.5,
-          "projected_score": 123.59,
+          "score": 89.92,
+          "projected_score": 118.86,
           "roster": [
             {
               "player_key": "470.p.41312",
@@ -955,8 +1083,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "0-0-0",
-          "score": 45.1,
-          "projected_score": 112.97,
+          "score": 70.1,
+          "projected_score": 100.92,
           "roster": [
             {
               "player_key": "470.p.41093",
@@ -1018,34 +1146,34 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 115.64,
-      "franchise_id": "ayahuasca-rush",
-      "display_name": "Ayahuasca Rush"
+      "value": 130.38,
+      "franchise_id": "crazy-wazs-team",
+      "display_name": "Chris's Crazy Team"
     },
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 30.6,
-      "franchise_id": "vegas-vandals",
-      "display_name": "Vegas Vandals"
+      "value": 70.1,
+      "franchise_id": "new-jersey-giants",
+      "display_name": "New Jersey Giants"
     },
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 179.08,
+      "value": 210.16,
       "matchup_id": "2026-w01-buffalo-bravado--van-cortlant-rangers"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 85.04,
-      "matchup_id": "2026-w01-ayahuasca-rush--vegas-vandals"
+      "value": 56.62,
+      "matchup_id": "2026-w01-crazy-wazs-team--north-town-ninnyhammers"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 0.4,
-      "matchup_id": "2026-w01-greendale-human-beings--new-jersey-giants"
+      "value": 7.88,
+      "matchup_id": "2026-w01-baseball-furies--maine-moose"
     }
   ],
   "record_watch": [],
