@@ -2,14 +2,23 @@
   "schema_version": 1,
   "season": 2026,
   "week": 1,
-  "generated_at": "2026-09-13T22:13:07Z",
+  "generated_at": "2026-09-14T00:15:46Z",
   "coverage_status": "ready",
   "items": [
+    {
+      "headline_id": "record:2026-w01-crazy-wazs-team--north-town-ninnyhammers:crazy-wazs-team:weekly-score:record-watch",
+      "category": "Record Watch",
+      "headline": "Record Watch",
+      "detail": "Chris's Crazy Team is 2.28 points from the verified Top-25 cutoff.",
+      "week": 1,
+      "source": "normalized_yahoo_and_verified_history",
+      "path": "/records/"
+    },
     {
       "headline_id": "week-1:high-score",
       "category": "Week in Review",
       "headline": "Chris's Crazy Team leads Week 1 scoring",
-      "detail": "The week's current high is 130.38 points.",
+      "detail": "The week's current high is 159.92 points.",
       "week": 1,
       "source": "normalized_yahoo",
       "path": "/2026/week/1/"
