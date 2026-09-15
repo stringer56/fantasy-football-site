@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "week": 1,
+  "week": 2,
   "generated_at": null,
   "source": {
     "type": "normalized_yahoo",
@@ -20,12 +20,12 @@
   },
   "current_week": {
     "season": 2026,
-    "week": 1,
+    "week": 2,
     "matchups": [
       {
-        "matchup_id": "2026-week-01-buffalo-bravado-vs-van-cortlant-rangers",
+        "matchup_id": "2026-week-02-baseball-furies-vs-van-cortlant-rangers",
         "season": 2026,
-        "week": 1,
+        "week": 2,
         "status": "midevent",
         "participants": [
           {
@@ -35,10 +35,10 @@
             "identity_image": "/assets/img/franchises/van-cortlant-rangers/helmet-2026.png"
           },
           {
-            "franchise_id": "buffalo-bravado",
-            "display_name": "Buffalo Bravado",
-            "path": "/teams/buffalo-bravado/",
-            "identity_image": "/assets/img/franchises/buffalo-bravado/helmet-2026.jpg"
+            "franchise_id": "baseball-furies",
+            "display_name": "The Baseball Furies",
+            "path": "/teams/baseball-furies/",
+            "identity_image": "/assets/img/franchises/baseball-furies/helmet-2026.jpg"
           }
         ],
         "winner_franchise_id": null,
@@ -47,9 +47,9 @@
         "ballots_counted": 0
       },
       {
-        "matchup_id": "2026-week-01-albany-kneelers-vs-turnbull-acs",
+        "matchup_id": "2026-week-02-albany-kneelers-vs-vegas-vandals",
         "season": 2026,
-        "week": 1,
+        "week": 2,
         "status": "midevent",
         "participants": [
           {
@@ -57,30 +57,6 @@
             "display_name": "Albany Redskins",
             "path": "/teams/albany-kneelers/",
             "identity_image": "/assets/img/franchises/albany-kneelers/helmet-2026.png"
-          },
-          {
-            "franchise_id": "turnbull-acs",
-            "display_name": "Turnbull AC's",
-            "path": "/teams/turnbull-acs/",
-            "identity_image": "/assets/img/franchises/turnbull-acs/helmet-2026.png"
-          }
-        ],
-        "winner_franchise_id": null,
-        "winner_status": "pending",
-        "pick_results": [],
-        "ballots_counted": 0
-      },
-      {
-        "matchup_id": "2026-week-01-ayahuasca-rush-vs-vegas-vandals",
-        "season": 2026,
-        "week": 1,
-        "status": "midevent",
-        "participants": [
-          {
-            "franchise_id": "ayahuasca-rush",
-            "display_name": "Ayahuasca Rush",
-            "path": "/teams/ayahuasca-rush/",
-            "identity_image": "/assets/img/franchises/ayahuasca-rush/helmet-2026.jpg"
           },
           {
             "franchise_id": "vegas-vandals",
@@ -95,16 +71,64 @@
         "ballots_counted": 0
       },
       {
-        "matchup_id": "2026-week-01-crazy-wazs-team-vs-north-town-ninnyhammers",
+        "matchup_id": "2026-week-02-ayahuasca-rush-vs-crazy-wazs-team",
         "season": 2026,
-        "week": 1,
+        "week": 2,
         "status": "midevent",
         "participants": [
+          {
+            "franchise_id": "ayahuasca-rush",
+            "display_name": "Ayahuasca Rush",
+            "path": "/teams/ayahuasca-rush/",
+            "identity_image": "/assets/img/franchises/ayahuasca-rush/helmet-2026.jpg"
+          },
           {
             "franchise_id": "crazy-wazs-team",
             "display_name": "Crazy Waz's Team",
             "path": "/teams/crazy-wazs-team/",
             "identity_image": "/assets/img/franchises/crazy-wazs-team/helmet-2026.png"
+          }
+        ],
+        "winner_franchise_id": null,
+        "winner_status": "pending",
+        "pick_results": [],
+        "ballots_counted": 0
+      },
+      {
+        "matchup_id": "2026-week-02-buffalo-bravado-vs-turnbull-acs",
+        "season": 2026,
+        "week": 2,
+        "status": "midevent",
+        "participants": [
+          {
+            "franchise_id": "buffalo-bravado",
+            "display_name": "Buffalo Bravado",
+            "path": "/teams/buffalo-bravado/",
+            "identity_image": "/assets/img/franchises/buffalo-bravado/helmet-2026.jpg"
+          },
+          {
+            "franchise_id": "turnbull-acs",
+            "display_name": "Turnbull AC's",
+            "path": "/teams/turnbull-acs/",
+            "identity_image": "/assets/img/franchises/turnbull-acs/helmet-2026.png"
+          }
+        ],
+        "winner_franchise_id": null,
+        "winner_status": "pending",
+        "pick_results": [],
+        "ballots_counted": 0
+      },
+      {
+        "matchup_id": "2026-week-02-greendale-human-beings-vs-north-town-ninnyhammers",
+        "season": 2026,
+        "week": 2,
+        "status": "midevent",
+        "participants": [
+          {
+            "franchise_id": "greendale-human-beings",
+            "display_name": "Greendale Human Beings",
+            "path": "/teams/greendale-human-beings/",
+            "identity_image": "/assets/img/franchises/greendale-human-beings/helmet-2026.png"
           },
           {
             "franchise_id": "north-town-ninnyhammers",
@@ -119,33 +143,9 @@
         "ballots_counted": 0
       },
       {
-        "matchup_id": "2026-week-01-greendale-human-beings-vs-new-jersey-giants",
+        "matchup_id": "2026-week-02-maine-moose-vs-new-jersey-giants",
         "season": 2026,
-        "week": 1,
-        "status": "midevent",
-        "participants": [
-          {
-            "franchise_id": "greendale-human-beings",
-            "display_name": "Greendale Human Beings",
-            "path": "/teams/greendale-human-beings/",
-            "identity_image": "/assets/img/franchises/greendale-human-beings/helmet-2026.png"
-          },
-          {
-            "franchise_id": "new-jersey-giants",
-            "display_name": "New Jersey Giants",
-            "path": "/teams/new-jersey-giants/",
-            "identity_image": "/assets/img/franchises/new-jersey-giants/helmet-2026.png"
-          }
-        ],
-        "winner_franchise_id": null,
-        "winner_status": "pending",
-        "pick_results": [],
-        "ballots_counted": 0
-      },
-      {
-        "matchup_id": "2026-week-01-baseball-furies-vs-maine-moose",
-        "season": 2026,
-        "week": 1,
+        "week": 2,
         "status": "midevent",
         "participants": [
           {
@@ -155,10 +155,10 @@
             "identity_image": "/assets/img/franchises/maine-moose/helmet-2026.png"
           },
           {
-            "franchise_id": "baseball-furies",
-            "display_name": "The Baseball Furies",
-            "path": "/teams/baseball-furies/",
-            "identity_image": "/assets/img/franchises/baseball-furies/helmet-2026.jpg"
+            "franchise_id": "new-jersey-giants",
+            "display_name": "New Jersey Giants",
+            "path": "/teams/new-jersey-giants/",
+            "identity_image": "/assets/img/franchises/new-jersey-giants/helmet-2026.png"
           }
         ],
         "winner_franchise_id": null,

@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "week": 1,
-  "generated_at": "2026-09-15T01:56:00Z",
+  "week": 2,
+  "generated_at": "2026-09-15T07:27:30Z",
   "coverage_status": "ready",
   "items": [
     {
-      "headline_id": "week-1:high-score",
-      "category": "Week in Review",
-      "headline": "Chris's Crazy Team leads Week 1 scoring",
-      "detail": "The week's current high is 167.72 points.",
-      "week": 1,
+      "headline_id": "week-2:slate",
+      "category": "League Wire",
+      "headline": "Week 2 slate is set",
+      "detail": "Buffalo Bravados meets Turnbull AC’s in the featured matchup.",
+      "week": 2,
       "source": "normalized_yahoo",
-      "path": "/2026/week/1/"
+      "path": "/2026/week/2/"
     }
   ]
 }
