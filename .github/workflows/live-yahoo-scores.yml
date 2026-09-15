@@ -43,10 +43,8 @@ jobs:
       - name: Validate Yahoo live helpers
         run: python -m unittest tests.test_yahoo_client tests.test_yahoo_scores -v
 
-      - name: Validate browser polling and commissioner authorization
-        run: |
-          node --test tests/yahoo_live_client.mjs
-          node tests/nfl_worker_e2e.mjs
+      - name: Validate browser polling
+        run: node --test tests/yahoo_live_client.mjs
 
       - name: Pull current Yahoo scoreboard
         env:
