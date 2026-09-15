@@ -2,20 +2,21 @@
 
 from __future__ import annotations
 
-import base64
 import json
 import os
 import pathlib
-import re
 import sys
+from datetime import datetime, timezone
 from typing import Any
 
 import requests
 import yaml
 
 try:
+    from .yahoo_client import YahooApiError, YahooTransportError, get_json, refresh_access_token
     from .yahoo_normalize import build_public_payloads, normalize_matchups, normalize_teams
 except ImportError:
+    from yahoo_client import YahooApiError, YahooTransportError, get_json, refresh_access_token
     from yahoo_normalize import build_public_payloads, normalize_matchups, normalize_teams
 
 
@@ -23,90 +24,6 @@ API = "https://fantasysports.yahooapis.com/fantasy/v2"
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 OUTPUT_DIRECTORY = ROOT / "_data" / "generated"
 SITE_CONFIG = ROOT / "_data" / "site.yml"
-
-
-class YahooApiError(RuntimeError):
-    """Sanitized Yahoo HTTP failure that never includes URLs or response bodies."""
-
-    def __init__(
-        self, operation: str, status_code: int, error_code: str | None = None
-    ) -> None:
-        self.operation = operation
-        self.status_code = status_code
-        self.error_code = error_code
-        suffix = f" ({error_code})" if error_code else ""
-        super().__init__(f"{operation} failed with HTTP {status_code}{suffix}")
-
-
-def safe_yahoo_error_code(response: requests.Response) -> str | None:
-    """Extract one allowlisted diagnostic code without retaining an error body."""
-
-    try:
-        payload = response.json()
-    except (requests.RequestException, ValueError, TypeError):
-        return None
-    if not isinstance(payload, dict):
-        return None
-
-    candidates: list[Any] = []
-
-    def visit(value: Any) -> None:
-        if isinstance(value, dict):
-            for key, child in value.items():
-                if key.casefold() in {"code", "error_code"}:
-                    candidates.append(child)
-                elif isinstance(child, (dict, list)):
-                    visit(child)
-        elif isinstance(value, list):
-            for child in value:
-                visit(child)
-
-    visit(payload)
-    for candidate in candidates:
-        if isinstance(candidate, str) and re.fullmatch(r"[A-Za-z0-9_.-]{1,64}", candidate):
-            return candidate
-    return None
-
-
-def refresh_access_token(client_id: str, client_secret: str, refresh_token: str) -> str:
-    auth = base64.b64encode(f"{client_id}:{client_secret}".encode()).decode()
-    response = requests.post(
-        "https://api.login.yahoo.com/oauth2/get_token",
-        headers={
-            "Authorization": f"Basic {auth}",
-            "Content-Type": "application/x-www-form-urlencoded",
-        },
-        data={"grant_type": "refresh_token", "refresh_token": refresh_token},
-        timeout=30,
-    )
-    try:
-        response.raise_for_status()
-    except requests.HTTPError:
-        raise YahooApiError(
-            "Yahoo OAuth token refresh",
-            response.status_code,
-            safe_yahoo_error_code(response),
-        ) from None
-    return response.json()["access_token"]
-
-
-def get_json(url: str, token: str) -> dict[str, Any]:
-    response = requests.get(
-        url,
-        headers={"Authorization": f"Bearer {token}", "Accept": "application/json"},
-        timeout=30,
-    )
-    try:
-        response.raise_for_status()
-    except requests.HTTPError:
-        raise YahooApiError(
-            "Yahoo Fantasy API request",
-            response.status_code,
-            safe_yahoo_error_code(response),
-        ) from None
-    if "application/json" not in response.headers.get("Content-Type", ""):
-        raise ValueError("Yahoo returned a non-JSON response")
-    return response.json()
 
 
 def write_json_if_changed(path: pathlib.Path, data: Any) -> bool:
@@ -184,7 +101,12 @@ def fetch_rosters(
         try:
             payloads[team_key] = get_json(url, token)
             print(f"fetched roster for team {team.get('team_id')}")
-        except (requests.RequestException, ValueError) as error:
+        except (
+            requests.RequestException,
+            YahooApiError,
+            YahooTransportError,
+            ValueError,
+        ) as error:
             print(
                 f"warning: roster unavailable for team {team.get('team_id')}: {error}",
                 file=sys.stderr,
@@ -231,6 +153,24 @@ def main() -> None:
     changed = 0
     for filename, payload in public_payloads.items():
         changed += int(write_json_if_changed(OUTPUT_DIRECTORY / filename, payload))
+    fetched_at = (
+        datetime.now(timezone.utc)
+        .replace(microsecond=0)
+        .isoformat()
+        .replace("+00:00", "Z")
+    )
+    changed += int(
+        write_json_if_changed(
+            OUTPUT_DIRECTORY / "live_sync.json",
+            {
+                "schema_version": 1,
+                "status": "ready",
+                "source": "official_yahoo_fantasy_api",
+                "week": public_payloads["matchups.json"]["week"],
+                "fetched_at": fetched_at,
+            },
+        )
+    )
     print(
         "Yahoo update complete: "
         f"{len(public_payloads['teams.json']['teams'])} teams, "

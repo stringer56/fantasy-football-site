@@ -264,7 +264,7 @@ class YahooHistoryDiscoveryTests(unittest.TestCase):
             }
         }
         response.raise_for_status.side_effect = __import__("requests").HTTPError("unsafe URL")
-        with patch("pull_yahoo.requests.get", return_value=response):
+        with patch("yahoo_client.requests.get", return_value=response):
             with self.assertRaises(YahooApiError) as raised:
                 get_json("https://example.invalid/private-league-key", "private-token")
         self.assertEqual(
@@ -280,7 +280,7 @@ class YahooHistoryDiscoveryTests(unittest.TestCase):
         response = Mock(status_code=400)
         response.json.return_value = {"error": "invalid_grant"}
         response.raise_for_status.side_effect = __import__("requests").HTTPError("unsafe body")
-        with patch("pull_yahoo.requests.post", return_value=response):
+        with patch("yahoo_client.requests.post", return_value=response):
             with self.assertRaises(YahooApiError) as raised:
                 refresh_access_token("client", "secret", "refresh")
         self.assertEqual(str(raised.exception), "Yahoo OAuth token refresh failed with HTTP 400")
@@ -291,7 +291,7 @@ class YahooHistoryDiscoveryTests(unittest.TestCase):
             "error": {"code": "contains spaces and secret material"}
         }
         response.raise_for_status.side_effect = __import__("requests").HTTPError("unsafe")
-        with patch("pull_yahoo.requests.get", return_value=response):
+        with patch("yahoo_client.requests.get", return_value=response):
             with self.assertRaises(YahooApiError) as raised:
                 get_json("https://example.invalid/private", "private-token")
         self.assertIsNone(raised.exception.error_code)

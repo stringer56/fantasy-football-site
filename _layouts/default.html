@@ -107,7 +107,7 @@
   <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
   {% if page.url == '/' %}<script src="{{ '/assets/js/news-wire.js' | relative_url }}" defer></script>{% endif %}
 {% if page.url == '/' %}<script src="{{ '/assets/js/countdown.js' | relative_url }}" defer></script>{% endif %}
-{% if page.url == '/' or page.layout == 'live_week' or page.body_class == 'live-season-page' %}<script src="/assets/js/yahoo-live.js?v=1" defer></script>{% endif %}
+{% if page.url == '/' or page.layout == 'live_week' or page.body_class == 'live-season-page' %}<script src="/assets/js/yahoo-live.js?v=2" type="module"></script>{% endif %}
 {% if page.url == '/cup/' %}<script src="/assets/js/cup-slideshow.js" defer></script>{% endif %}
 {% if page.url == "/votes/" %}<script src="/assets/js/league-polls.js" defer></script>{% endif %}{% if page.url == '/' or page.franchise_id or page.layout == 'live_week' or page.body_class == 'live-season-page' or page.layout == 'historical-matchup' or page.layout == 'season' or page.layout == 'classics' %}<script src="/assets/js/league-discovery.js?v=1" type="module"></script>{% endif %}
 {% if page.url == '/' or page.url contains '/nfl-games/' or page.url == '/my-road-to-glory/' or page.url contains '/commissioner/' %}<script src="/assets/js/nfl-games.js?v=6" type="module"></script>{% endif %}

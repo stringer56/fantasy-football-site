@@ -341,7 +341,71 @@ def build_public_page_payloads(
         "standings.json": {"schema_version": 1, "standings": standings},
         "matchups.json": {"schema_version": 1, "week": week, "matchups": matchups},
         "rosters.json": {"schema_version": 1, "week": week, "teams": rosters or []},
+        "live_sync.json": {
+            "schema_version": 1,
+            "status": "ready",
+            "source": "official_yahoo_public_page_fallback",
+            "week": week,
+            "fetched_at": generated_at,
+        },
     }
+
+
+def load_public_score_payloads(
+    *, delay_seconds: float = 0.5, refresh: bool = True
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    """Fetch and validate the single public page needed by the fast score job."""
+
+    season, record = _current_season_record()
+    game_key, league_id = str(record["game_key"]), str(record["league_id"])
+    base_url = str(record["league_url"]).rstrip("/")
+    client = ArchiveClient(
+        ROOT / ".cache" / "yahoo-live-scores",
+        delay_seconds=delay_seconds,
+        max_retries=2,
+        timeout_seconds=30,
+    )
+    page = client.get(
+        f"{base_url}?module=matchups&lhst=matchups",
+        pathlib.Path(str(season)) / "current.html",
+        refresh=refresh,
+    )
+    week = parse_current_week(page)
+    if week is None:
+        raise ValueError("current matchup week was not found")
+    matchups = parse_live_matchups(
+        page,
+        week=week,
+        game_key=game_key,
+        league_id=league_id,
+    )
+    team_keys = {
+        str(team.get("team_key") or "")
+        for matchup in matchups
+        for team in matchup.get("teams", [])
+    }
+    expected_prefix = f"{game_key}.l.{league_id}.t."
+    if len(matchups) != 6 or len(team_keys) != 12:
+        raise ValueError("Yahoo public scoreboard was incomplete")
+    if any(not key.startswith(expected_prefix) for key in team_keys):
+        raise ValueError("Yahoo public scoreboard identity mismatch")
+
+    fetched_at = (
+        datetime.now(timezone.utc)
+        .replace(microsecond=0)
+        .isoformat()
+        .replace("+00:00", "Z")
+    )
+    return (
+        {"schema_version": 1, "week": week, "matchups": matchups},
+        {
+            "schema_version": 1,
+            "status": "ready",
+            "source": "official_yahoo_public_page_fallback",
+            "week": week,
+            "fetched_at": fetched_at,
+        },
+    )
 
 
 def main() -> None:
@@ -382,6 +446,7 @@ def main() -> None:
                     team_key=team["team_key"],
                     franchise_id=None,
                     historical_team_name=team["team_name"],
+                    require_score=False,
                 )
             except (OSError, ValueError, RuntimeError):
                 parsed = []

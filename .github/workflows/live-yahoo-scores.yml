@@ -4,6 +4,17 @@ on:
   schedule:
     - cron: "*/5 * * * *"
   workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/live-yahoo-scores.yml"
+      - ".github/workflows/update.yml"
+      - "scripts/pull_yahoo.py"
+      - "scripts/pull_yahoo_scores.py"
+      - "scripts/yahoo_client.py"
+      - "scripts/yahoo_live.py"
+      - "scripts/yahoo_normalize.py"
+      - "tests/test_yahoo_client.py"
+      - "tests/test_yahoo_scores.py"
 
 permissions:
   contents: write
@@ -15,7 +26,7 @@ concurrency:
 jobs:
   scores:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 10
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -29,13 +40,23 @@ jobs:
       - name: Install pinned dependencies
         run: python -m pip install --disable-pip-version-check -r requirements.txt
 
+      - name: Validate Yahoo live helpers
+        run: python -m unittest tests.test_yahoo_client tests.test_yahoo_scores -v
+
+      - name: Validate browser polling and commissioner authorization
+        run: |
+          node --test tests/yahoo_live_client.mjs
+          node tests/nfl_worker_e2e.mjs
+
       - name: Pull current Yahoo scoreboard
         env:
           YAHOO_CLIENT_ID: ${{ secrets.YAHOO_CLIENT_ID }}
           YAHOO_CLIENT_SECRET: ${{ secrets.YAHOO_CLIENT_SECRET }}
           YAHOO_REFRESH_TOKEN: ${{ secrets.YAHOO_REFRESH_TOKEN }}
           LEAGUE_KEY: ${{ secrets.LEAGUE_KEY }}
-        run: python scripts/pull_yahoo_scores.py
+        run: >-
+          python scripts/pull_yahoo_scores.py
+          ${{ github.event_name == 'push' && '--stability-runs 3 --stability-delay 2' || '' }}
 
       - name: Publish changed scores
         shell: bash
