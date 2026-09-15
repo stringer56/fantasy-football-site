@@ -6,6 +6,12 @@ on:
     # five minutes in live-yahoo-scores.yml.
     - cron: "*/15 * * * *"
   workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/update.yml"
+      - "scripts/pull_yahoo.py"
+      - "scripts/yahoo_client.py"
+      - "scripts/yahoo_live.py"
 
 permissions:
   contents: write
