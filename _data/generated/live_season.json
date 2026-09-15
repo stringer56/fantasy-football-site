@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-09-15T00:20:16Z",
+  "generated_at": "2026-09-15T01:56:00Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-15T00:20:16Z",
+    "source_updated_at": "2026-09-15T01:56:00Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-09-15T00:20:16Z"
+    "source_update_timestamp": "2026-09-15T01:56:00Z"
   },
   "standings": [
     {
@@ -325,8 +325,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "0-0-0",
-          "score": 121.4,
-          "projected_score": 135.92,
+          "score": 124.5,
+          "projected_score": 131.97,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -1329,8 +1329,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "0-0-0",
-          "score": 130.86,
-          "projected_score": 132.88,
+          "score": 121.86,
+          "projected_score": 122.9,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1513,8 +1513,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "0-0-0",
-          "score": 159.92,
-          "projected_score": 170.45,
+          "score": 167.72,
+          "projected_score": 173.14,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1578,8 +1578,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "0-0-0",
-          "score": 88.96,
-          "projected_score": 113.48,
+          "score": 101.36,
+          "projected_score": 113.97,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -1771,8 +1771,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "0-0-0",
-          "score": 74.2,
-          "projected_score": 91.61,
+          "score": 82.12,
+          "projected_score": 91.08,
           "roster": [
             {
               "player_key": "470.p.41093",
@@ -1860,8 +1860,8 @@
         "team_key": "470.l.26455.t.2",
         "team_id": 2,
         "record": "0-0-0",
-        "score": 121.4,
-        "projected_score": 135.92,
+        "score": 124.5,
+        "projected_score": 131.97,
         "roster": [
           {
             "player_key": "470.p.41825",
@@ -2051,65 +2051,43 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 159.92,
+      "value": 167.72,
       "franchise_id": "crazy-wazs-team",
       "display_name": "Chris's Crazy Team"
     },
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 74.2,
+      "value": 82.12,
       "franchise_id": "new-jersey-giants",
       "display_name": "New Jersey Giants"
     },
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 259.0,
-      "matchup_id": "2026-w01-albany-kneelers--turnbull-acs"
+      "value": 269.08,
+      "matchup_id": "2026-w01-crazy-wazs-team--north-town-ninnyhammers"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 70.96,
+      "value": 66.36,
       "matchup_id": "2026-w01-crazy-wazs-team--north-town-ninnyhammers"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 16.2,
+      "value": 13.1,
       "matchup_id": "2026-w01-albany-kneelers--turnbull-acs"
     }
   ],
-  "record_watch": [
-    {
-      "event_id": "2026-w01-crazy-wazs-team--north-town-ninnyhammers:crazy-wazs-team:weekly-score:record-watch",
-      "type": "weekly_score",
-      "level": "Record Watch",
-      "final": false,
-      "franchise_id": "crazy-wazs-team",
-      "display_name": "Chris's Crazy Team",
-      "value": 159.92,
-      "threshold": 162.2,
-      "difference": 2.28,
-      "message": "Chris's Crazy Team is 2.28 points from the verified Top-25 cutoff."
-    }
-  ],
+  "record_watch": [],
   "league_wire": [
-    {
-      "headline_id": "record:2026-w01-crazy-wazs-team--north-town-ninnyhammers:crazy-wazs-team:weekly-score:record-watch",
-      "category": "Record Watch",
-      "headline": "Record Watch",
-      "detail": "Chris's Crazy Team is 2.28 points from the verified Top-25 cutoff.",
-      "week": 1,
-      "source": "normalized_yahoo_and_verified_history",
-      "path": "/records/"
-    },
     {
       "headline_id": "week-1:high-score",
       "category": "Week in Review",
       "headline": "Chris's Crazy Team leads Week 1 scoring",
-      "detail": "The week's current high is 159.92 points.",
+      "detail": "The week's current high is 167.72 points.",
       "week": 1,
       "source": "normalized_yahoo",
       "path": "/2026/week/1/"
@@ -2729,8 +2707,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "0-0-0",
-          "score": 88.96,
-          "projected_score": 113.48,
+          "score": 101.36,
+          "projected_score": 113.97,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2791,8 +2769,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "0-0-0",
-          "score": 74.2,
-          "projected_score": 91.61,
+          "score": 82.12,
+          "projected_score": 91.08,
           "roster": [
             {
               "player_key": "470.p.41093",
@@ -3121,8 +3099,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "0-0-0",
-          "score": 159.92,
-          "projected_score": 170.45,
+          "score": 167.72,
+          "projected_score": 173.14,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -3207,8 +3185,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "0-0-0",
-          "score": 121.4,
-          "projected_score": 135.92,
+          "score": 124.5,
+          "projected_score": 131.97,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -3293,8 +3271,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "0-0-0",
-          "score": 130.86,
-          "projected_score": 132.88,
+          "score": 121.86,
+          "projected_score": 122.9,
           "roster": [
             {
               "player_key": "470.p.30977",
