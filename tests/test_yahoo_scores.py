@@ -138,10 +138,18 @@ class YahooScoreRefreshTests(unittest.TestCase):
         )
         self.assertFalse(fast["concurrency"]["cancel-in-progress"])
         self.assertFalse(full["concurrency"]["cancel-in-progress"])
+        self.assertEqual(fast[True]["schedule"][0]["cron"], "*/5 * * * *")
+        self.assertEqual(full[True]["schedule"][0]["cron"], "*/15 * * * *")
+        publish = next(
+            step for step in fast["jobs"]["scores"]["steps"]
+            if step["name"] == "Publish changed scores"
+        )
+        self.assertIn("_data/generated/matchups.json", publish["run"])
+        self.assertIn("_data/generated/live_sync.json", publish["run"])
+        self.assertNotIn("rosters.json", publish["run"])
 
     def test_freshness_metadata_must_match_score_week(self) -> None:
         sync = valid_sync()
         sync["week"] = 2
         with self.assertRaises(ValueError):
             scores.validate_sync_payload(sync, 1)
-
