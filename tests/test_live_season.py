@@ -112,6 +112,16 @@ class LiveSeasonTests(unittest.TestCase):
         live["data_status"] = "unavailable"
         self.assertNotIn("unavailable live data must not publish synthetic results", validate_live_season.validate(live, {"schema_version": 1, "season": 2026, "items": []}))
 
+    def test_partial_current_roster_snapshot_is_rejected(self) -> None:
+        complete = [
+            {"team_key": f"470.l.26455.t.{team}", "players": [{}] * 8}
+            for team in range(1, 13)
+        ]
+        yahoo_live.validate_current_rosters(complete)
+        complete[4]["players"] = [{}] * 3
+        with self.assertRaisesRegex(ValueError, "incomplete"):
+            yahoo_live.validate_current_rosters(complete)
+
     def test_weekly_hub_uses_only_that_weeks_finalized_power_ranking(self) -> None:
         week_one = {"season": 2026, "week": 1, "rankings": [{"franchise_id": "alpha", "rank": 1, "movement": None}]}
         week_two = {"season": 2026, "week": 2, "rankings": [{"franchise_id": "beta", "rank": 1, "movement": 2}]}

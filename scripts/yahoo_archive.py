@@ -9,6 +9,7 @@ import random
 import re
 import time
 from dataclasses import dataclass
+from html.parser import HTMLParser
 from typing import Any, Callable
 from urllib.parse import urlsplit
 
@@ -218,33 +219,80 @@ def parse_draft(page: str, *, season: int, game_key: str, league_id: str,
     return picks
 
 
+class _RosterRows(HTMLParser):
+    """Keep complete Yahoo roster rows, including nested weather/note tables."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=False)
+        self.table_depth = 0
+        self.roster_depth: int | None = None
+        self.row_attrs = ""
+        self.row_parts: list[str] | None = None
+        self.rows: list[tuple[str, str]] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        raw = self.get_starttag_text()
+        if tag == "table":
+            self.table_depth += 1
+            if self.roster_depth is None and re.fullmatch(r"statTable\d+", dict(attrs).get("id") or "", re.I):
+                self.roster_depth = self.table_depth
+        if tag == "tr" and self.table_depth == self.roster_depth:
+            self.row_attrs = raw
+            self.row_parts = []
+        elif self.row_parts is not None:
+            self.row_parts.append(raw)
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag == "tr" and self.table_depth == self.roster_depth and self.row_parts is not None:
+            self.rows.append((self.row_attrs, "".join(self.row_parts)))
+            self.row_parts = None
+        elif self.row_parts is not None:
+            self.row_parts.append(f"</{tag}>")
+        if tag == "table":
+            if self.table_depth == self.roster_depth:
+                self.roster_depth = None
+            self.table_depth -= 1
+
+    def handle_data(self, data: str) -> None:
+        if self.row_parts is not None:
+            self.row_parts.append(data)
+
+    def handle_entityref(self, name: str) -> None:
+        self.handle_data(f"&{name};")
+
+    def handle_charref(self, name: str) -> None:
+        self.handle_data(f"&#{name};")
+
+
 def parse_roster(page: str, *, season: int, week: int, team_key: str,
-                 franchise_id: str | None, historical_team_name: str) -> list[dict[str, Any]]:
+                 franchise_id: str | None, historical_team_name: str,
+                 require_score: bool = True) -> list[dict[str, Any]]:
     players: list[dict[str, Any]] = []
-    for table in re.findall(r"<table\b[^>]*id=['\"]statTable\d+['\"][^>]*>(.*?)</table>", page, re.I | re.S):
-        for row_tag, body in re.findall(r"<tr\b([^>]*)>(.*?)</tr>", table, re.I | re.S):
-            pos = re.search(r"data-pos=['\"]([^'\"]+)['\"]", body, re.I)
-            player = re.search(r"<a\b([^>]*\bclass\s*=\s*(['\"])[^'\"]*\bname\b[^'\"]*\2[^>]*)>(.*?)</a>", body, re.I | re.S)
-            score = re.search(r"<td\b[^>]*class\s*=\s*(['\"])[^'\"]*\bpts\b[^'\"]*\1[^>]*>(.*?)</td>", body, re.I | re.S)
-            if not (pos and player and score):
-                continue
-            attrs = _attrs(player.group(1))
-            player_id_match = re.search(r"/players/(\d+)", attrs.get("href", ""))
-            players.append({
-                "season": season,
-                "week": week,
-                "yahoo_team_key": team_key,
-                "franchise_id": franchise_id,
-                "historical_team_name": historical_team_name,
-                "player_id": player_id_match.group(1) if player_id_match else None,
-                "player_name": clean_text(player.group(3)),
-                "selected_position": pos.group(1),
-                "starter_or_bench": "bench" if pos.group(1) == "BN" or "bench" in _classes(row_tag) else "starter",
-                "fantasy_points": _float(score.group(2)),
-                "source": "official_yahoo_public_archive",
-            })
+    roster = _RosterRows()
+    roster.feed(page)
+    for row_tag, body in roster.rows:
+        pos = re.search(r"data-pos=['\"]([^'\"]+)['\"]", body, re.I)
+        player = re.search(r"<a\b([^>]*\bclass\s*=\s*(['\"])[^'\"]*\bname\b[^'\"]*\2[^>]*)>(.*?)</a>", body, re.I | re.S)
+        score = re.search(r"<td\b[^>]*class\s*=\s*(['\"])[^'\"]*\bpts\b[^'\"]*\1[^>]*>(.*?)</td>", body, re.I | re.S)
+        if not (pos and player) or (require_score and not score):
+            continue
+        attrs = _attrs(player.group(1))
+        player_id_match = re.search(r"/players/(\d+)", attrs.get("href", ""))
+        players.append({
+            "season": season,
+            "week": week,
+            "yahoo_team_key": team_key,
+            "franchise_id": franchise_id,
+            "historical_team_name": historical_team_name,
+            "player_id": player_id_match.group(1) if player_id_match else None,
+            "player_name": clean_text(player.group(3)),
+            "selected_position": pos.group(1),
+            "starter_or_bench": "bench" if pos.group(1) == "BN" or "bench" in _classes(row_tag) else "starter",
+            "fantasy_points": _float(score.group(2)) if score else None,
+            "source": "official_yahoo_public_archive",
+        })
     if not players:
-        raise ValueError("roster page contained no scored players")
+        raise ValueError("roster page contained no scored players" if require_score else "roster page contained no players")
     return players
 
 

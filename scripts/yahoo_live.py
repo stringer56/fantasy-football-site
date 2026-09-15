@@ -366,6 +366,13 @@ def attach_standings_records(
                 team["record"] = records[team["team_key"]]
 
 
+def validate_current_rosters(rosters: list[dict[str, Any]]) -> None:
+    if len(rosters) != 12:
+        raise ValueError("Yahoo roster snapshot did not contain all 12 teams")
+    if any(len(team.get("players", [])) < 8 for team in rosters):
+        raise ValueError("Yahoo roster snapshot was incomplete")
+
+
 def load_public_score_payloads(
     *, delay_seconds: float = 0.5, refresh: bool = True
 ) -> tuple[dict[str, Any], dict[str, Any]]:
@@ -465,6 +472,7 @@ def main() -> None:
                     team_key=team["team_key"],
                     franchise_id=None,
                     historical_team_name=team["team_name"],
+                    require_score=False,
                 )
             except (OSError, ValueError, RuntimeError):
                 parsed = []
@@ -486,6 +494,7 @@ def main() -> None:
                     ],
                 }
             )
+        validate_current_rosters(rosters)
 
     generated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     payloads = build_public_page_payloads(
