@@ -141,7 +141,11 @@ if(roots.length){
         if(value&&score!==null)value.textContent=score;
         const projected=formattedScore(team.projected_score);
         const projection=side.querySelector('[data-yahoo-projection]');
-        if(projection&&projected!==null)projection.textContent=`Projected ${projected}`;
+        if(projection){
+          projection.textContent=projected===null
+            ?'Projection unavailable'
+            :`Projected ${projected}`;
+        }
         side.classList.toggle(
           'is-winner',
           Boolean(matchup?.winner_team_key)&&matchup.winner_team_key===key

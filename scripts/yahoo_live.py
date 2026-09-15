@@ -446,7 +446,6 @@ def main() -> None:
                     team_key=team["team_key"],
                     franchise_id=None,
                     historical_team_name=team["team_name"],
-                    require_score=False,
                 )
             except (OSError, ValueError, RuntimeError):
                 parsed = []

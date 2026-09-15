@@ -138,6 +138,10 @@ class YahooScoreRefreshTests(unittest.TestCase):
         )
         self.assertFalse(fast["concurrency"]["cancel-in-progress"])
         self.assertFalse(full["concurrency"]["cancel-in-progress"])
+        fast_checkout = fast["jobs"]["scores"]["steps"][0]
+        full_checkout = full["jobs"]["update"]["steps"][0]
+        self.assertEqual(fast_checkout["with"]["ref"], "main")
+        self.assertEqual(full_checkout["with"]["ref"], "main")
         self.assertEqual(fast[True]["schedule"][0]["cron"], "*/5 * * * *")
         self.assertEqual(full[True]["schedule"][0]["cron"], "*/15 * * * *")
         publish = next(
