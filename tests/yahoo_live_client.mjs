@@ -5,6 +5,7 @@ import test from 'node:test';
 import {
   formatEastern,
   freshnessState,
+  normalizeRecord,
   parseFreshness
 } from '../assets/js/yahoo-live.js';
 
@@ -25,10 +26,19 @@ test('visible freshness time is explicitly Eastern',()=>{
   assert.match(formatEastern(Date.parse('2026-09-15T00:00:00Z')),/8:00 PM EDT/);
 });
 
+test('matchup records accept W-L and W-L-T without inventing values',()=>{
+  assert.equal(normalizeRecord('4-1-0'),'4-1-0');
+  assert.equal(normalizeRecord(' 4–1 '),'4-1');
+  assert.equal(normalizeRecord(null),null);
+  assert.equal(normalizeRecord('first place'),null);
+});
+
 test('client uses scoped no-cache polling and never reloads the page',()=>{
   const source=fs.readFileSync(new URL('../assets/js/yahoo-live.js',import.meta.url),'utf8');
+  const template=fs.readFileSync(new URL('../_includes/rtg-matchup-stage.html',import.meta.url),'utf8');
   assert.match(source,/cache:'no-store'/);
   assert.match(source,/const SCORE_POLL_MS=60_000/);
   assert.match(source,/const ROSTER_POLL_MS=15\*60_000/);
   assert.doesNotMatch(source,/location\.reload|window\.location/);
+  assert.match(template,/data-yahoo-record/);
 });

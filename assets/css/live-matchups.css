@@ -3,6 +3,7 @@
 :is(.live-week-page,.live-season-page) main :is(h1,h2){color:#f2d16b!important}
 :is(.live-week-page,.live-season-page) main :is(h1,h2) :is(a,span,em){-webkit-text-fill-color:currentColor}
 :is(.live-week-page,.live-season-page) .rtg-matchup-side h2{font-family:var(--display)!important;font-weight:700!important;letter-spacing:0!important}
+:is(.live-week-page,.live-season-page) .rtg-team-record>b{display:block;color:#f2d16b;font:800 17px/1.35 Arial,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:.03em}
 .live-week-hero{background:radial-gradient(ellipse at 80% 20%,#24466b66,transparent 65%),linear-gradient(120deg,#07111f,#102338);border-bottom:1px solid #314962}
 .live-week-hero>.wrap{padding-block:38px}
 .live-week-hero h1{margin-block:10px 14px}

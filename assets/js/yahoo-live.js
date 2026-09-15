@@ -9,6 +9,12 @@ export function parseFreshness(value,minimum=0){
   return Number.isFinite(timestamp)&&timestamp>=minimum?timestamp:null;
 }
 
+export function normalizeRecord(value){
+  if(typeof value!=='string')return null;
+  const normalized=value.trim().replace(/[–—]/g,'-');
+  return /^\d+-\d+(?:-\d+)?$/.test(normalized)?normalized:null;
+}
+
 export function formatEastern(timestamp){
   return new Intl.DateTimeFormat('en-US',{
     timeZone:'America/New_York',
@@ -139,6 +145,9 @@ if(roots.length){
         const score=formattedScore(team.score);
         const value=side.querySelector('[data-yahoo-score]');
         if(value&&score!==null)value.textContent=score;
+        const record=normalizeRecord(team.record);
+        const recordValue=side.querySelector('[data-yahoo-record]');
+        if(recordValue&&record!==null)recordValue.textContent=record;
         const projected=formattedScore(team.projected_score);
         const projection=side.querySelector('[data-yahoo-projection]');
         if(projection){

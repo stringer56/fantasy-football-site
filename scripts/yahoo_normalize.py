@@ -401,6 +401,16 @@ def build_public_payloads(
     teams = normalize_teams(teams_data)
     standings = normalize_standings(standings_data)
     matchups = normalize_matchups(scoreboard_data)
+    records_by_team = {
+        row["team_key"]: f"{row['wins']}-{row['losses']}-{row['ties']}"
+        for row in standings["standings"]
+        if row.get("team_key")
+    }
+    for matchup in matchups["matchups"]:
+        for team in matchup.get("teams", []):
+            record = records_by_team.get(team.get("team_key"))
+            if record:
+                team["record"] = record
     rosters = normalize_rosters(
         roster_payloads,
         teams["teams"],

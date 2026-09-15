@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import pathlib
 import sys
 import time
@@ -23,6 +24,25 @@ from pull_yahoo import (
 from yahoo_client import YahooApiError, YahooTransportError
 from yahoo_live import load_public_score_payloads
 from yahoo_normalize import normalize_matchups
+
+
+def retain_existing_records(payload: dict[str, Any], current_path: pathlib.Path) -> None:
+    """Keep the last standings-derived record when a score response omits it."""
+
+    try:
+        current = json.loads(current_path.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        return
+    records = {
+        team.get("team_key"): team.get("record")
+        for matchup in current.get("matchups", [])
+        for team in matchup.get("teams", [])
+        if isinstance(team.get("record"), str)
+    }
+    for matchup in payload.get("matchups", []):
+        for team in matchup.get("teams", []):
+            if not team.get("record") and records.get(team.get("team_key")):
+                team["record"] = records[team["team_key"]]
 
 
 def validate_score_payload(payload: dict[str, Any], expected_prefix: str) -> None:
@@ -124,6 +144,7 @@ def fetch_score_payloads() -> tuple[dict[str, Any], dict[str, Any]]:
 
 def refresh_once(output_directory: pathlib.Path = OUTPUT_DIRECTORY) -> dict[str, Any]:
     payload, sync = fetch_score_payloads()
+    retain_existing_records(payload, output_directory / "matchups.json")
     configured = configured_yahoo_identity()
     validate_score_payload(payload, f"{configured['league_key']}.t.")
     validate_sync_payload(sync, int(payload["week"]))

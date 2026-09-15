@@ -101,6 +101,7 @@ class YahooNormalizerTests(unittest.TestCase):
         })
         for payload in payloads.values():
             self.assertEqual(payload["schema_version"], 1)
+        self.assertEqual(payloads["matchups.json"]["matchups"][0]["teams"][0]["record"], "2-0-0")
         self.assertEqual(len(payloads["rosters.json"]["teams"][0]["players"]), 2)
 
 

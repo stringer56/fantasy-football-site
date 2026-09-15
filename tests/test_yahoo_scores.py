@@ -157,3 +157,19 @@ class YahooScoreRefreshTests(unittest.TestCase):
         sync["week"] = 2
         with self.assertRaises(ValueError):
             scores.validate_sync_payload(sync, 1)
+
+    def test_score_only_refresh_retains_standings_record(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            output = pathlib.Path(directory)
+            existing = valid_payload()
+            existing["matchups"][0]["teams"][0]["record"] = "4-1-0"
+            (output / "matchups.json").write_text(json.dumps(existing), encoding="utf-8")
+            incoming = valid_payload()
+            with patch.object(
+                scores,
+                "fetch_score_payloads",
+                return_value=(incoming, valid_sync()),
+            ):
+                scores.refresh_once(output)
+            saved = json.loads((output / "matchups.json").read_text(encoding="utf-8"))
+            self.assertEqual(saved["matchups"][0]["teams"][0]["record"], "4-1-0")
