@@ -40,8 +40,16 @@ jobs:
       - name: Install pinned dependencies
         run: python -m pip install --disable-pip-version-check -r requirements.txt
 
-      - name: Validate normalizers
-        run: python -m unittest discover -s tests -v
+      - name: Validate Yahoo import
+        run: >-
+          python -m unittest
+          tests.test_yahoo_client
+          tests.test_yahoo_scores
+          tests.test_yahoo_history_discovery
+          tests.test_yahoo_normalize
+          tests.test_yahoo_archive
+          tests.test_live_season
+          -v
 
       - name: Run sanitized historical discovery probe
         if: ${{ github.event_name == 'workflow_dispatch' }}
