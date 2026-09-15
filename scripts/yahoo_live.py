@@ -306,6 +306,7 @@ def build_public_page_payloads(
     available_weeks = parse_available_weeks(page)
     standings, teams = parse_live_standings(page, game_key=game_key, league_id=league_id)
     matchups = parse_live_matchups(page, week=week, game_key=game_key, league_id=league_id)
+    attach_standings_records(matchups, standings)
     if len(teams) != 12:
         raise ValueError(f"expected 12 current teams, found {len(teams)}")
     if len(matchups) != 6:
@@ -351,6 +352,20 @@ def build_public_page_payloads(
     }
 
 
+def attach_standings_records(
+    matchups: list[dict[str, Any]], standings: list[dict[str, Any]]
+) -> None:
+    records = {
+        row["team_key"]: f"{row.get('wins', 0)}-{row.get('losses', 0)}-{row.get('ties', 0)}"
+        for row in standings
+        if row.get("team_key")
+    }
+    for matchup in matchups:
+        for team in matchup.get("teams", []):
+            if records.get(team.get("team_key")):
+                team["record"] = records[team["team_key"]]
+
+
 def load_public_score_payloads(
     *, delay_seconds: float = 0.5, refresh: bool = True
 ) -> tuple[dict[str, Any], dict[str, Any]]:
@@ -379,6 +394,10 @@ def load_public_score_payloads(
         game_key=game_key,
         league_id=league_id,
     )
+    standings, _ = parse_live_standings(
+        page, game_key=game_key, league_id=league_id
+    )
+    attach_standings_records(matchups, standings)
     team_keys = {
         str(team.get("team_key") or "")
         for matchup in matchups

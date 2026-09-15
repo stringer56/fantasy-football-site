@@ -92,6 +92,13 @@ class LiveSeasonTests(unittest.TestCase):
         self.assertTrue(all(row["rank"] is None for row in payloads["standings.json"]["standings"]))
         self.assertEqual(len(payloads["matchups.json"]["matchups"]), 6)
         self.assertTrue(all(row["status"] == "preevent" for row in payloads["matchups.json"]["matchups"]))
+        self.assertTrue(
+            all(
+                team["record"] == "0-0-0"
+                for matchup in payloads["matchups.json"]["matchups"]
+                for team in matchup["teams"]
+            )
+        )
 
     def test_stale_state_is_explicit(self) -> None:
         franchises = [f"team-{index}" for index in range(1, 13)]
