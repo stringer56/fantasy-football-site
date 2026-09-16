@@ -239,14 +239,6 @@
           "status": null
         },
         {
-          "player_key": "470.p.40097",
-          "player_name": "Tank Dell",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
           "player_key": "470.p.31883",
           "player_name": "A.J. Brown",
           "nfl_team": null,
@@ -264,10 +256,18 @@
         },
         {
           "player_key": null,
-          "player_name": "Ravens",
+          "player_name": "49ers",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
+          "status": null
+        },
+        {
+          "player_key": null,
+          "player_name": "Ravens",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
           "status": null
         }
       ]
