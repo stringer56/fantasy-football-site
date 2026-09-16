@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-09-16T19:59:23Z",
+  "generated_at": "2026-09-16T22:52:09Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-16T19:59:23Z",
+    "source_updated_at": "2026-09-16T22:52:09Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-09-16T19:59:23Z"
+    "source_update_timestamp": "2026-09-16T22:52:09Z"
   },
   "standings": [
     {
@@ -362,7 +362,7 @@
           "team_id": 2,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 117.98,
+          "projected_score": 117.77,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -507,7 +507,7 @@
           "team_id": 12,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 110.07,
+          "projected_score": 109.61,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -707,7 +707,7 @@
           "team_id": 3,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 110.89,
+          "projected_score": 110.71,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -844,7 +844,7 @@
           "team_id": 5,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 112.71,
+          "projected_score": 112.78,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1103,14 +1103,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.42655",
-              "player_name": "De'Zhaun Stribling",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.42646",
               "player_name": "KC Concepcion Jr.",
               "nfl_team": null,
@@ -1137,6 +1129,14 @@
             {
               "player_key": "470.p.42796",
               "player_name": "Emmett Johnson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41058",
+              "player_name": "Malik Washington",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1181,7 +1181,7 @@
           "team_id": 10,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 104.16,
+          "projected_score": 103.86,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1373,7 +1373,7 @@
           "team_id": 4,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 112.26,
+          "projected_score": 112.37,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1510,7 +1510,7 @@
           "team_id": 11,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 112.43,
+          "projected_score": 112.56,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1702,7 +1702,7 @@
           "team_id": 6,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 120.03,
+          "projected_score": 119.68,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1847,7 +1847,7 @@
           "team_id": 9,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 111.34,
+          "projected_score": 111.19,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2039,7 +2039,7 @@
           "team_id": 7,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 118.79,
+          "projected_score": 118.76,
           "roster": [
             {
               "player_key": "470.p.41810",
@@ -2176,7 +2176,7 @@
           "team_id": 8,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 114.22,
+          "projected_score": 114.17,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -2369,7 +2369,7 @@
         "team_id": 4,
         "record": "1-0-0",
         "score": 0.0,
-        "projected_score": 112.26,
+        "projected_score": 112.37,
         "roster": [
           {
             "player_key": "470.p.30977",
@@ -2506,7 +2506,7 @@
         "team_id": 11,
         "record": "0-1-0",
         "score": 0.0,
-        "projected_score": 112.43,
+        "projected_score": 112.56,
         "roster": [
           {
             "player_key": "470.p.29369",
@@ -2722,7 +2722,7 @@
           "team_id": 12,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 110.07,
+          "projected_score": 109.61,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -2891,7 +2891,7 @@
           "team_id": 5,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 112.71,
+          "projected_score": 112.78,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -3119,14 +3119,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.42655",
-              "player_name": "De'Zhaun Stribling",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.42646",
               "player_name": "KC Concepcion Jr.",
               "nfl_team": null,
@@ -3153,6 +3145,14 @@
             {
               "player_key": "470.p.42796",
               "player_name": "Emmett Johnson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41058",
+              "player_name": "Malik Washington",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -3221,7 +3221,7 @@
           "team_id": 11,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 112.43,
+          "projected_score": 112.56,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -3382,7 +3382,7 @@
           "team_id": 3,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 110.89,
+          "projected_score": 110.71,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -3543,7 +3543,7 @@
           "team_id": 9,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 111.34,
+          "projected_score": 111.19,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -3704,7 +3704,7 @@
           "team_id": 8,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 114.22,
+          "projected_score": 114.17,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -3865,7 +3865,7 @@
           "team_id": 7,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 118.79,
+          "projected_score": 118.76,
           "roster": [
             {
               "player_key": "470.p.41810",
@@ -4026,7 +4026,7 @@
           "team_id": 6,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 120.03,
+          "projected_score": 119.68,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -4195,7 +4195,7 @@
           "team_id": 4,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 112.26,
+          "projected_score": 112.37,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -4356,7 +4356,7 @@
           "team_id": 10,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 104.16,
+          "projected_score": 103.86,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -4517,7 +4517,7 @@
           "team_id": 2,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 117.98,
+          "projected_score": 117.77,
           "roster": [
             {
               "player_key": "470.p.30123",
