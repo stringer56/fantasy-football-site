@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 2,
-  "generated_at": "2026-09-16T06:36:18Z",
+  "generated_at": "2026-09-16T12:07:14Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-16T06:36:18Z",
+    "source_updated_at": "2026-09-16T12:07:14Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 117.31,
+          "projected_score": 117.37,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -468,7 +468,7 @@
           "team_id": 12,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 109.47,
+          "projected_score": 109.28,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -668,7 +668,7 @@
           "team_id": 3,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 110.4,
+          "projected_score": 110.31,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -805,7 +805,7 @@
           "team_id": 5,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 112.54,
+          "projected_score": 112.47,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -997,7 +997,7 @@
           "team_id": 1,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 113.99,
+          "projected_score": 114.01,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1142,7 +1142,7 @@
           "team_id": 10,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 103.35,
+          "projected_score": 103.28,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1334,7 +1334,7 @@
           "team_id": 4,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 111.65,
+          "projected_score": 111.64,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1433,8 +1433,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.42747",
-              "player_name": "Skyler Bell",
+              "player_key": "470.p.41097",
+              "player_name": "Devaughn Vele",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1471,7 +1471,7 @@
           "team_id": 11,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 112.3,
+          "projected_score": 112.29,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1663,7 +1663,7 @@
           "team_id": 6,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 116.44,
+          "projected_score": 119.65,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1779,7 +1779,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Rams",
+              "player_name": "Buccaneers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1787,7 +1787,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Raiders",
+              "player_name": "Rams",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1808,7 +1808,7 @@
           "team_id": 9,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 111.61,
+          "projected_score": 111.6,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2000,7 +2000,7 @@
           "team_id": 7,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 118.51,
+          "projected_score": 118.48,
           "roster": [
             {
               "player_key": "470.p.41810",
@@ -2137,7 +2137,7 @@
           "team_id": 8,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 113.61,
+          "projected_score": 113.64,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -2228,16 +2228,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.34659",
-              "player_name": "Rashid Shaheed",
+              "player_key": "470.p.42730",
+              "player_name": "Jonah Coleman",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
               "status": null
             },
             {
-              "player_key": "470.p.42730",
-              "player_name": "Jonah Coleman",
+              "player_key": "470.p.40222",
+              "player_name": "DeMario Douglas",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
