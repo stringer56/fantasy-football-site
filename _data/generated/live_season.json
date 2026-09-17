@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-09-17T19:18:48Z",
+  "generated_at": "2026-09-17T22:21:51Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-17T19:18:48Z",
+    "source_updated_at": "2026-09-17T22:21:51Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-09-17T19:18:48Z"
+    "source_update_timestamp": "2026-09-17T22:21:51Z"
   },
   "standings": [
     {
@@ -707,7 +707,7 @@
           "team_id": 3,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 111.25,
+          "projected_score": 111.38,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -844,7 +844,7 @@
           "team_id": 5,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 113.09,
+          "projected_score": 113.25,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1432,14 +1432,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.34320",
-              "player_name": "Jordan Mason",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.34088",
               "player_name": "Romeo Doubs",
               "nfl_team": null,
@@ -1477,6 +1469,22 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34054",
+              "player_name": "Brian Robinson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34320",
+              "player_name": "Jordan Mason",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "IR",
               "status": null
             },
             {
@@ -1847,7 +1855,7 @@
           "team_id": 9,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 109.02,
+          "projected_score": 109.24,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2176,7 +2184,7 @@
           "team_id": 8,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 114.62,
+          "projected_score": 113.19,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -2428,14 +2436,6 @@
             "status": null
           },
           {
-            "player_key": "470.p.34320",
-            "player_name": "Jordan Mason",
-            "nfl_team": null,
-            "primary_position": null,
-            "selected_position": "BN",
-            "status": null
-          },
-          {
             "player_key": "470.p.34088",
             "player_name": "Romeo Doubs",
             "nfl_team": null,
@@ -2473,6 +2473,22 @@
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
+            "status": null
+          },
+          {
+            "player_key": "470.p.34054",
+            "player_name": "Brian Robinson",
+            "nfl_team": null,
+            "primary_position": null,
+            "selected_position": "BN",
+            "status": null
+          },
+          {
+            "player_key": "470.p.34320",
+            "player_name": "Jordan Mason",
+            "nfl_team": null,
+            "primary_position": null,
+            "selected_position": "IR",
             "status": null
           },
           {
@@ -2891,7 +2907,7 @@
           "team_id": 5,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 113.09,
+          "projected_score": 113.25,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -3382,7 +3398,7 @@
           "team_id": 3,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 111.25,
+          "projected_score": 111.38,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -3543,7 +3559,7 @@
           "team_id": 9,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 109.02,
+          "projected_score": 109.24,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -3704,7 +3720,7 @@
           "team_id": 8,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 114.62,
+          "projected_score": 113.19,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -4254,14 +4270,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.34320",
-              "player_name": "Jordan Mason",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.34088",
               "player_name": "Romeo Doubs",
               "nfl_team": null,
@@ -4299,6 +4307,22 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34054",
+              "player_name": "Brian Robinson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34320",
+              "player_name": "Jordan Mason",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "IR",
               "status": null
             },
             {
