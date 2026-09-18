@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 2,
-  "generated_at": "2026-09-18T05:15:34Z",
+  "generated_at": "2026-09-18T09:59:03Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-18T05:15:34Z",
+    "source_updated_at": "2026-09-18T09:59:03Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 117.63,
+          "projected_score": 117.57,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -468,7 +468,7 @@
           "team_id": 12,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 109.62,
+          "projected_score": 109.7,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -668,7 +668,7 @@
           "team_id": 3,
           "record": "1-0-0",
           "score": -0.1,
-          "projected_score": 99.18,
+          "projected_score": 99.2,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -805,7 +805,7 @@
           "team_id": 5,
           "record": "1-0-0",
           "score": 30.7,
-          "projected_score": 128.7,
+          "projected_score": 128.77,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -997,7 +997,7 @@
           "team_id": 1,
           "record": "0-1-0",
           "score": 14.2,
-          "projected_score": 119.14,
+          "projected_score": 113.78,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1048,11 +1048,19 @@
               "status": null
             },
             {
+              "player_key": "470.p.42696",
+              "player_name": "Malachi Fields",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
               "player_key": "470.p.40908",
               "player_name": "Ladd McConkey",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "W/R/T",
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -1074,14 +1082,6 @@
             {
               "player_key": "470.p.32231",
               "player_name": "Jakobi Meyers",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.42696",
-              "player_name": "Malachi Fields",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1142,7 +1142,7 @@
           "team_id": 10,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 103.7,
+          "projected_score": 103.33,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1334,7 +1334,7 @@
           "team_id": 4,
           "record": "1-0-0",
           "score": 65.22,
-          "projected_score": 136.91,
+          "projected_score": 136.65,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1479,7 +1479,7 @@
           "team_id": 11,
           "record": "0-1-0",
           "score": 19.0,
-          "projected_score": 121.96,
+          "projected_score": 122.04,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1671,7 +1671,7 @@
           "team_id": 6,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 119.68,
+          "projected_score": 119.55,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1816,7 +1816,7 @@
           "team_id": 9,
           "record": "0-1-0",
           "score": 29.78,
-          "projected_score": 120.83,
+          "projected_score": 120.87,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2008,7 +2008,7 @@
           "team_id": 7,
           "record": "1-0-0",
           "score": 20.3,
-          "projected_score": 116.87,
+          "projected_score": 116.84,
           "roster": [
             {
               "player_key": "470.p.41810",
@@ -2145,7 +2145,7 @@
           "team_id": 8,
           "record": "0-1-0",
           "score": 4.3,
-          "projected_score": 106.55,
+          "projected_score": 106.1,
           "roster": [
             {
               "player_key": "470.p.40875",
