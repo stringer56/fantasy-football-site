@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 2,
-  "generated_at": "2026-09-18T20:36:22Z",
+  "generated_at": "2026-09-18T22:50:19Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-18T20:36:22Z",
+    "source_updated_at": "2026-09-18T22:50:19Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -1479,7 +1479,7 @@
           "team_id": 11,
           "record": "0-1-0",
           "score": 19.0,
-          "projected_score": 122.42,
+          "projected_score": 122.66,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1671,7 +1671,7 @@
           "team_id": 6,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 107.2,
+          "projected_score": 114.87,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1706,8 +1706,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.40039",
-              "player_name": "Zay Flowers",
+              "player_key": "470.p.42661",
+              "player_name": "Denzel Boston",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -1730,6 +1730,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.40039",
+              "player_name": "Zay Flowers",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.41845",
               "player_name": "RJ Harvey",
               "nfl_team": null,
@@ -1740,14 +1748,6 @@
             {
               "player_key": "470.p.32704",
               "player_name": "Michael Pittman Jr.",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.42661",
-              "player_name": "Denzel Boston",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
