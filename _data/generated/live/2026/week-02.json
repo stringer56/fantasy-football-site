@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 2,
-  "generated_at": "2026-09-17T22:21:51Z",
+  "generated_at": "2026-09-18T00:40:09Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-17T22:21:51Z",
+    "source_updated_at": "2026-09-18T00:40:09Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 117.91,
+          "projected_score": 117.63,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -468,7 +468,7 @@
           "team_id": 12,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 109.61,
+          "projected_score": 109.62,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -667,8 +667,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "1-0-0",
-          "score": 0.0,
-          "projected_score": 111.38,
+          "score": -0.1,
+          "projected_score": 109.12,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -805,7 +805,7 @@
           "team_id": 5,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 113.25,
+          "projected_score": 110.41,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -996,8 +996,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "0-1-0",
-          "score": 0.0,
-          "projected_score": 113.73,
+          "score": 0.7,
+          "projected_score": 112.76,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1142,7 +1142,7 @@
           "team_id": 10,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 103.7,
+          "projected_score": 103.69,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1333,8 +1333,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "1-0-0",
-          "score": 0.0,
-          "projected_score": 112.73,
+          "score": 20.68,
+          "projected_score": 126.88,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1478,8 +1478,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "0-1-0",
-          "score": 0.0,
-          "projected_score": 113.08,
+          "score": 3.0,
+          "projected_score": 114.31,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1671,7 +1671,7 @@
           "team_id": 6,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 119.8,
+          "projected_score": 119.68,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1815,8 +1815,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "0-1-0",
-          "score": 0.0,
-          "projected_score": 109.24,
+          "score": 0.08,
+          "projected_score": 105.85,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2008,7 +2008,7 @@
           "team_id": 7,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 118.89,
+          "projected_score": 114.05,
           "roster": [
             {
               "player_key": "470.p.41810",
@@ -2145,7 +2145,7 @@
           "team_id": 8,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 113.19,
+          "projected_score": 110.84,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -2315,7 +2315,48 @@
       }
     }
   ],
-  "weekly_facts": [],
+  "weekly_facts": [
+    {
+      "fact_id": "highest-score",
+      "label": "Highest score",
+      "value": 20.68,
+      "franchise_id": "buffalo-bravado",
+      "display_name": "Buffalo Bravados"
+    },
+    {
+      "fact_id": "lowest-score",
+      "label": "Lowest score",
+      "value": 0.0,
+      "franchise_id": "baseball-furies",
+      "display_name": "The Baseball Furies"
+    },
+    {
+      "fact_id": "highest-combined",
+      "label": "Highest combined score",
+      "value": 23.68,
+      "matchup_id": "2026-w02-buffalo-bravado--turnbull-acs"
+    },
+    {
+      "fact_id": "biggest-win",
+      "label": "Biggest lead",
+      "value": 17.68,
+      "matchup_id": "2026-w02-buffalo-bravado--turnbull-acs"
+    },
+    {
+      "fact_id": "closest-game",
+      "label": "Closest game",
+      "value": 0.08,
+      "matchup_id": "2026-w02-greendale-human-beings--north-town-ninnyhammers"
+    },
+    {
+      "fact_id": "longest-active-streak",
+      "label": "Longest active streak",
+      "value": 1,
+      "streak_type": "loss",
+      "franchise_id": "vegas-vandals",
+      "display_name": "Vegas Vandals"
+    }
+  ],
   "record_watch": [],
   "power_rankings": {
     "status": "unavailable",
