@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 2,
-  "generated_at": "2026-09-19T13:59:40Z",
+  "generated_at": "2026-09-19T17:11:25Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-19T13:59:40Z",
+    "source_updated_at": "2026-09-19T17:11:25Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -468,7 +468,7 @@
           "team_id": 12,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 109.36,
+          "projected_score": 109.39,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -1334,7 +1334,7 @@
           "team_id": 4,
           "record": "1-0-0",
           "score": 65.22,
-          "projected_score": 137.27,
+          "projected_score": 137.25,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1671,7 +1671,7 @@
           "team_id": 6,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 114.94,
+          "projected_score": 116.55,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1706,8 +1706,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.42661",
-              "player_name": "Denzel Boston",
+              "player_key": "470.p.40224",
+              "player_name": "Kayshon Boutte",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -1730,6 +1730,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.42661",
+              "player_name": "Denzel Boston",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.40039",
               "player_name": "Zay Flowers",
               "nfl_team": null,
@@ -1748,14 +1756,6 @@
             {
               "player_key": "470.p.32704",
               "player_name": "Michael Pittman Jr.",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40224",
-              "player_name": "Kayshon Boutte",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1816,7 +1816,7 @@
           "team_id": 9,
           "record": "0-1-0",
           "score": 29.78,
-          "projected_score": 121.27,
+          "projected_score": 121.28,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2145,7 +2145,7 @@
           "team_id": 8,
           "record": "0-1-0",
           "score": 4.3,
-          "projected_score": 101.0,
+          "projected_score": 100.99,
           "roster": [
             {
               "player_key": "470.p.40875",
