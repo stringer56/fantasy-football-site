@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-09-19T19:20:26Z",
+  "generated_at": "2026-09-19T21:37:37Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-19T19:20:26Z",
+    "source_updated_at": "2026-09-19T21:37:37Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-09-19T19:20:26Z"
+    "source_update_timestamp": "2026-09-19T21:37:37Z"
   },
   "standings": [
     {
@@ -362,7 +362,7 @@
           "team_id": 2,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 118.46,
+          "projected_score": 118.96,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -461,6 +461,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.42693",
+              "player_name": "Antonio Williams",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.31883",
               "player_name": "A.J. Brown",
               "nfl_team": null,
@@ -482,14 +490,6 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
-              "status": null
-            },
-            {
-              "player_key": null,
-              "player_name": "Ravens",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
               "status": null
             }
           ]
@@ -1181,7 +1181,7 @@
           "team_id": 10,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 104.24,
+          "projected_score": 103.61,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1710,7 +1710,7 @@
           "team_id": 6,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 116.84,
+          "projected_score": 116.83,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1855,7 +1855,7 @@
           "team_id": 9,
           "record": "0-1-0",
           "score": 29.78,
-          "projected_score": 121.35,
+          "projected_score": 121.32,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2184,7 +2184,7 @@
           "team_id": 8,
           "record": "0-1-0",
           "score": 4.3,
-          "projected_score": 101.01,
+          "projected_score": 101.0,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -2377,7 +2377,7 @@
         "team_id": 6,
         "record": "1-0-0",
         "score": 0.0,
-        "projected_score": 116.84,
+        "projected_score": 116.83,
         "roster": [
           {
             "player_key": "470.p.40896",
@@ -2522,7 +2522,7 @@
         "team_id": 9,
         "record": "0-1-0",
         "score": 29.78,
-        "projected_score": 121.35,
+        "projected_score": 121.32,
         "roster": [
           {
             "player_key": "470.p.29235",
@@ -3600,7 +3600,7 @@
           "team_id": 9,
           "record": "0-1-0",
           "score": 29.78,
-          "projected_score": 121.35,
+          "projected_score": 121.32,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -3761,7 +3761,7 @@
           "team_id": 8,
           "record": "0-1-0",
           "score": 4.3,
-          "projected_score": 101.01,
+          "projected_score": 101.0,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -4083,7 +4083,7 @@
           "team_id": 6,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 116.84,
+          "projected_score": 116.83,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -4421,7 +4421,7 @@
           "team_id": 10,
           "record": "0-1-0",
           "score": 0.0,
-          "projected_score": 104.24,
+          "projected_score": 103.61,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -4582,7 +4582,7 @@
           "team_id": 2,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 118.46,
+          "projected_score": 118.96,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -4681,6 +4681,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.42693",
+              "player_name": "Antonio Williams",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.31883",
               "player_name": "A.J. Brown",
               "nfl_team": null,
@@ -4702,14 +4710,6 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
-              "status": null
-            },
-            {
-              "player_key": null,
-              "player_name": "Ravens",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
               "status": null
             }
           ]
