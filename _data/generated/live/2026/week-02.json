@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 2,
-  "generated_at": "2026-09-18T22:50:19Z",
+  "generated_at": "2026-09-19T01:01:32Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-18T22:50:19Z",
+    "source_updated_at": "2026-09-19T01:01:32Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 117.86,
+          "projected_score": 117.87,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -805,7 +805,7 @@
           "team_id": 5,
           "record": "1-0-0",
           "score": 30.7,
-          "projected_score": 129.43,
+          "projected_score": 129.41,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1334,7 +1334,7 @@
           "team_id": 4,
           "record": "1-0-0",
           "score": 65.22,
-          "projected_score": 137.13,
+          "projected_score": 137.16,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1479,7 +1479,7 @@
           "team_id": 11,
           "record": "0-1-0",
           "score": 19.0,
-          "projected_score": 122.66,
+          "projected_score": 122.64,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1671,7 +1671,7 @@
           "team_id": 6,
           "record": "1-0-0",
           "score": 0.0,
-          "projected_score": 114.87,
+          "projected_score": 114.88,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -2008,7 +2008,7 @@
           "team_id": 7,
           "record": "1-0-0",
           "score": 20.3,
-          "projected_score": 116.06,
+          "projected_score": 116.05,
           "roster": [
             {
               "player_key": "470.p.41810",
@@ -2145,7 +2145,7 @@
           "team_id": 8,
           "record": "0-1-0",
           "score": 4.3,
-          "projected_score": 92.13,
+          "projected_score": 100.94,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -2172,16 +2172,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.33477",
-              "player_name": "Nico Collins",
+              "player_key": "470.p.33967",
+              "player_name": "Jameson Williams",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.33967",
-              "player_name": "Jameson Williams",
+              "player_key": "470.p.42626",
+              "player_name": "Carnell Tate",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -2196,24 +2196,24 @@
               "status": null
             },
             {
-              "player_key": "470.p.42626",
-              "player_name": "Carnell Tate",
+              "player_key": "470.p.41823",
+              "player_name": "TreVeyon Henderson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
               "status": null
             },
             {
-              "player_key": "470.p.40051",
-              "player_name": "Quentin Johnston",
+              "player_key": "470.p.33477",
+              "player_name": "Nico Collins",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
               "status": null
             },
             {
-              "player_key": "470.p.41823",
-              "player_name": "TreVeyon Henderson",
+              "player_key": "470.p.40051",
+              "player_name": "Quentin Johnston",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
