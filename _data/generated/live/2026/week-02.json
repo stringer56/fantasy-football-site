@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 2,
-  "generated_at": "2026-09-20T16:23:50Z",
+  "generated_at": "2026-09-20T18:58:28Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-20T16:23:50Z",
+    "source_updated_at": "2026-09-20T18:58:28Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -322,8 +322,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "1-0-0",
-          "score": 0.0,
-          "projected_score": 118.61,
+          "score": 3.5,
+          "projected_score": 99.85,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -350,16 +350,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.40168",
-              "player_name": "Puka Nacua",
+              "player_key": "470.p.31896",
+              "player_name": "DK Metcalf",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.31896",
-              "player_name": "DK Metcalf",
+              "player_key": "470.p.31868",
+              "player_name": "Deebo Samuel Sr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -382,6 +382,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.40168",
+              "player_name": "Puka Nacua",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.33100",
               "player_name": "Rico Dowdle",
               "nfl_team": null,
@@ -392,14 +400,6 @@
             {
               "player_key": "470.p.31856",
               "player_name": "Josh Jacobs",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.31868",
-              "player_name": "Deebo Samuel Sr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -467,8 +467,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "0-1-0",
-          "score": 0.0,
-          "projected_score": 108.0,
+          "score": 23.0,
+          "projected_score": 89.92,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -667,8 +667,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "1-0-0",
-          "score": -0.1,
-          "projected_score": 99.0,
+          "score": 34.7,
+          "projected_score": 97.65,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -804,8 +804,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "1-0-0",
-          "score": 30.7,
-          "projected_score": 129.57,
+          "score": 70.1,
+          "projected_score": 125.09,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -996,8 +996,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "0-1-0",
-          "score": 14.2,
-          "projected_score": 111.78,
+          "score": 40.0,
+          "projected_score": 108.44,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1141,8 +1141,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "0-1-0",
-          "score": 0.0,
-          "projected_score": 104.05,
+          "score": 30.54,
+          "projected_score": 92.8,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1333,8 +1333,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "1-0-0",
-          "score": 65.22,
-          "projected_score": 137.31,
+          "score": 103.22,
+          "projected_score": 138.58,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1478,8 +1478,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "0-1-0",
-          "score": 19.0,
-          "projected_score": 121.99,
+          "score": 45.5,
+          "projected_score": 116.43,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1530,16 +1530,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.28534",
-              "player_name": "Stefon Diggs",
+              "player_key": "470.p.41824",
+              "player_name": "Luther Burden III",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
               "status": null
             },
             {
-              "player_key": "470.p.41824",
-              "player_name": "Luther Burden III",
+              "player_key": "470.p.28534",
+              "player_name": "Stefon Diggs",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1670,8 +1670,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "1-0-0",
-          "score": 0.0,
-          "projected_score": 116.3,
+          "score": 26.0,
+          "projected_score": 108.84,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1815,8 +1815,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "0-1-0",
-          "score": 29.78,
-          "projected_score": 120.54,
+          "score": 61.28,
+          "projected_score": 125.05,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2007,8 +2007,8 @@
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
           "record": "1-0-0",
-          "score": 20.3,
-          "projected_score": 115.29,
+          "score": 36.6,
+          "projected_score": 112.92,
           "roster": [
             {
               "player_key": "470.p.41810",
@@ -2144,8 +2144,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "0-1-0",
-          "score": 4.3,
-          "projected_score": 100.85,
+          "score": 33.0,
+          "projected_score": 98.14,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -2319,34 +2319,34 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 65.22,
+      "value": 103.22,
       "franchise_id": "buffalo-bravado",
       "display_name": "Buffalo Bravados"
     },
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": -0.1,
-      "franchise_id": "ayahuasca-rush",
-      "display_name": "Ayahuasca Rush"
+      "value": 3.5,
+      "franchise_id": "albany-kneelers",
+      "display_name": "Albany Redskins"
     },
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 84.22,
+      "value": 148.72,
       "matchup_id": "2026-w02-buffalo-bravado--turnbull-acs"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 46.22,
+      "value": 57.72,
       "matchup_id": "2026-w02-buffalo-bravado--turnbull-acs"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 14.2,
-      "matchup_id": "2026-w02-baseball-furies--van-cortlant-rangers"
+      "value": 3.6,
+      "matchup_id": "2026-w02-maine-moose--new-jersey-giants"
     },
     {
       "fact_id": "longest-active-streak",
