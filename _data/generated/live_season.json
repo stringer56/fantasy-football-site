@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-09-19T23:35:34Z",
+  "generated_at": "2026-09-20T01:41:42Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-19T23:35:34Z",
+    "source_updated_at": "2026-09-20T01:41:42Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-09-19T23:35:34Z"
+    "source_update_timestamp": "2026-09-20T01:41:42Z"
   },
   "standings": [
     {
@@ -707,7 +707,7 @@
           "team_id": 3,
           "record": "1-0-0",
           "score": -0.1,
-          "projected_score": 99.58,
+          "projected_score": 99.6,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -844,7 +844,7 @@
           "team_id": 5,
           "record": "1-0-0",
           "score": 30.7,
-          "projected_score": 129.49,
+          "projected_score": 129.48,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1518,7 +1518,7 @@
           "team_id": 11,
           "record": "0-1-0",
           "score": 19.0,
-          "projected_score": 122.59,
+          "projected_score": 123.47,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1569,11 +1569,19 @@
               "status": null
             },
             {
+              "player_key": "470.p.28534",
+              "player_name": "Stefon Diggs",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
               "player_key": "470.p.41824",
               "player_name": "Luther Burden III",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "W/R/T",
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -1587,14 +1595,6 @@
             {
               "player_key": "470.p.32725",
               "player_name": "J.K. Dobbins",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.28534",
-              "player_name": "Stefon Diggs",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1855,7 +1855,7 @@
           "team_id": 9,
           "record": "0-1-0",
           "score": 29.78,
-          "projected_score": 121.32,
+          "projected_score": 121.29,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2522,7 +2522,7 @@
         "team_id": 9,
         "record": "0-1-0",
         "score": 29.78,
-        "projected_score": 121.32,
+        "projected_score": 121.29,
         "roster": [
           {
             "player_key": "470.p.29235",
@@ -2948,7 +2948,7 @@
           "team_id": 5,
           "record": "1-0-0",
           "score": 30.7,
-          "projected_score": 129.49,
+          "projected_score": 129.48,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -3278,7 +3278,7 @@
           "team_id": 11,
           "record": "0-1-0",
           "score": 19.0,
-          "projected_score": 122.59,
+          "projected_score": 123.47,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -3329,11 +3329,19 @@
               "status": null
             },
             {
+              "player_key": "470.p.28534",
+              "player_name": "Stefon Diggs",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
               "player_key": "470.p.41824",
               "player_name": "Luther Burden III",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "W/R/T",
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -3347,14 +3355,6 @@
             {
               "player_key": "470.p.32725",
               "player_name": "J.K. Dobbins",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.28534",
-              "player_name": "Stefon Diggs",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -3439,7 +3439,7 @@
           "team_id": 3,
           "record": "1-0-0",
           "score": -0.1,
-          "projected_score": 99.58,
+          "projected_score": 99.6,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -3600,7 +3600,7 @@
           "team_id": 9,
           "record": "0-1-0",
           "score": 29.78,
-          "projected_score": 121.32,
+          "projected_score": 121.29,
           "roster": [
             {
               "player_key": "470.p.29235",
