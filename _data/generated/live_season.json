@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-09-21T22:31:06Z",
+  "generated_at": "2026-09-22T01:12:08Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-21T22:31:06Z",
+    "source_updated_at": "2026-09-22T01:12:08Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-09-21T22:31:06Z"
+    "source_update_timestamp": "2026-09-22T01:12:08Z"
   },
   "standings": [
     {
@@ -361,8 +361,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "1-0-0",
-          "score": 102.18,
-          "projected_score": 114.62,
+          "score": 104.38,
+          "projected_score": 112.33,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -706,8 +706,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "1-0-0",
-          "score": 86.2,
-          "projected_score": 100.28,
+          "score": 95.1,
+          "projected_score": 104.29,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -1035,8 +1035,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "0-1-0",
-          "score": 97.7,
-          "projected_score": 132.36,
+          "score": 137.68,
+          "projected_score": 160.49,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1709,8 +1709,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "1-0-0",
-          "score": 71.14,
-          "projected_score": 79.92,
+          "score": 73.14,
+          "projected_score": 78.74,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1854,8 +1854,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "0-1-0",
-          "score": 145.88,
-          "projected_score": 154.33,
+          "score": 147.78,
+          "projected_score": 153.21,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2046,8 +2046,8 @@
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
           "record": "1-0-0",
-          "score": 81.0,
-          "projected_score": 112.35,
+          "score": 82.4,
+          "projected_score": 102.45,
           "roster": [
             {
               "player_key": "470.p.41810",
@@ -2695,14 +2695,14 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 145.88,
+      "value": 147.78,
       "franchise_id": "north-town-ninnyhammers",
       "display_name": "North town Ninnyhammers"
     },
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 71.14,
+      "value": 73.14,
       "franchise_id": "greendale-human-beings",
       "display_name": "Greendale Human Beings"
     },
@@ -2715,7 +2715,7 @@
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 74.74,
+      "value": 74.64,
       "matchup_id": "2026-w02-greendale-human-beings--north-town-ninnyhammers"
     },
     {
@@ -2741,10 +2741,10 @@
       "final": false,
       "franchise_id": "north-town-ninnyhammers",
       "display_name": "North town Ninnyhammers",
-      "value": 145.88,
+      "value": 147.78,
       "threshold": 162.2,
-      "difference": 16.32,
-      "message": "North town Ninnyhammers is 16.32 points from the verified Top-25 cutoff."
+      "difference": 14.42,
+      "message": "North town Ninnyhammers is 14.42 points from the verified Top-25 cutoff."
     }
   ],
   "league_wire": [
@@ -2752,7 +2752,7 @@
       "headline_id": "record:2026-w02-greendale-human-beings--north-town-ninnyhammers:north-town-ninnyhammers:weekly-score:record-watch",
       "category": "Record Watch",
       "headline": "Record Watch",
-      "detail": "North town Ninnyhammers is 16.32 points from the verified Top-25 cutoff.",
+      "detail": "North town Ninnyhammers is 14.42 points from the verified Top-25 cutoff.",
       "week": 2,
       "source": "normalized_yahoo_and_verified_history",
       "path": "/records/"
@@ -2761,7 +2761,7 @@
       "headline_id": "week-2:high-score",
       "category": "Week in Review",
       "headline": "North town Ninnyhammers leads Week 2 scoring",
-      "detail": "The week's current high is 145.88 points.",
+      "detail": "The week's current high is 147.78 points.",
       "week": 2,
       "source": "normalized_yahoo",
       "path": "/2026/week/2/"
@@ -3130,8 +3130,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "0-1-0",
-          "score": 97.7,
-          "projected_score": 132.36,
+          "score": 137.68,
+          "projected_score": 160.49,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -3460,8 +3460,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "1-0-0",
-          "score": 86.2,
-          "projected_score": 100.28,
+          "score": 95.1,
+          "projected_score": 104.29,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -3621,8 +3621,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "0-1-0",
-          "score": 145.88,
-          "projected_score": 154.33,
+          "score": 147.78,
+          "projected_score": 153.21,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -3943,8 +3943,8 @@
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
           "record": "1-0-0",
-          "score": 81.0,
-          "projected_score": 112.35,
+          "score": 82.4,
+          "projected_score": 102.45,
           "roster": [
             {
               "player_key": "470.p.41810",
@@ -4104,8 +4104,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "1-0-0",
-          "score": 71.14,
-          "projected_score": 79.92,
+          "score": 73.14,
+          "projected_score": 78.74,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -4603,8 +4603,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "1-0-0",
-          "score": 102.18,
-          "projected_score": 114.62,
+          "score": 104.38,
+          "projected_score": 112.33,
           "roster": [
             {
               "player_key": "470.p.30123",
