@@ -1,27 +1,18 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "week": 2,
-  "generated_at": "2026-09-22T06:18:02Z",
+  "week": 3,
+  "generated_at": "2026-09-22T11:58:03Z",
   "coverage_status": "ready",
   "items": [
     {
-      "headline_id": "record:2026-w02-greendale-human-beings--north-town-ninnyhammers:north-town-ninnyhammers:weekly-score:record-watch",
-      "category": "Record Watch",
-      "headline": "Record Watch",
-      "detail": "North town Ninnyhammers is 10.52 points from the verified Top-25 cutoff.",
-      "week": 2,
-      "source": "normalized_yahoo_and_verified_history",
-      "path": "/records/"
-    },
-    {
-      "headline_id": "week-2:high-score",
-      "category": "Week in Review",
-      "headline": "Van Cortlant Rangers leads Week 2 scoring",
-      "detail": "The week's current high is 169.18 points.",
-      "week": 2,
+      "headline_id": "week-3:slate",
+      "category": "League Wire",
+      "headline": "Week 3 slate is set",
+      "detail": "Maine Moose meets North town Ninnyhammers in the featured matchup.",
+      "week": 3,
       "source": "normalized_yahoo",
-      "path": "/2026/week/2/"
+      "path": "/2026/week/3/"
     }
   ]
 }

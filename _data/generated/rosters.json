@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "week": 2,
+  "week": 3,
   "teams": [
     {
       "team_key": "470.l.26455.t.1",
@@ -56,16 +56,16 @@
           "status": null
         },
         {
-          "player_key": "470.p.42696",
-          "player_name": "Malachi Fields",
+          "player_key": "470.p.40908",
+          "player_name": "Ladd McConkey",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "W/R/T",
           "status": null
         },
         {
-          "player_key": "470.p.40908",
-          "player_name": "Ladd McConkey",
+          "player_key": "470.p.42696",
+          "player_name": "Malachi Fields",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -129,7 +129,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Patriots",
+          "player_name": "New England",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -175,8 +175,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.31868",
-          "player_name": "Deebo Samuel Sr.",
+          "player_key": "470.p.40168",
+          "player_name": "Puka Nacua",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "WR",
@@ -199,8 +199,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.40168",
-          "player_name": "Puka Nacua",
+          "player_key": "470.p.31868",
+          "player_name": "Deebo Samuel Sr.",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -653,7 +653,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Jaguars",
+          "player_name": "Jacksonville",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -915,7 +915,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Packers",
+          "player_name": "Green Bay",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
