@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-09-22T01:12:08Z",
+  "generated_at": "2026-09-22T06:18:02Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-22T01:12:08Z",
+    "source_updated_at": "2026-09-22T06:18:02Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-09-22T01:12:08Z"
+    "source_update_timestamp": "2026-09-22T06:18:02Z"
   },
   "standings": [
     {
@@ -61,39 +61,15 @@
       "team_key": "470.l.26455.t.5",
       "team_id": 5,
       "rank": 1,
-      "wins": 1,
+      "wins": 2,
       "losses": 0,
       "ties": 0,
       "winning_percentage": 1.0,
-      "points_for": 168.82,
-      "points_against": 126.06,
+      "points_for": 274.98,
+      "points_against": 226.96,
       "streak": {
         "type": "win",
-        "value": 1
-      },
-      "playoff_seed": null
-    },
-    {
-      "franchise_id": "greendale-human-beings",
-      "display_name": "Greendale Human Beings",
-      "canonical_name": "Greendale Human Beings",
-      "short_name": "Human Beings",
-      "path": "/teams/greendale-human-beings/",
-      "identity_image": "/assets/img/franchises/greendale-human-beings/helmet-2026.png",
-      "identity_alt": "Greendale Human Beings blue 3D football helmet with the college emblem",
-      "primary_color": "#1e3a8a",
-      "team_key": "470.l.26455.t.6",
-      "team_id": 6,
-      "rank": 2,
-      "wins": 1,
-      "losses": 0,
-      "ties": 0,
-      "winning_percentage": 1.0,
-      "points_for": 140.86,
-      "points_against": 81.64,
-      "streak": {
-        "type": "win",
-        "value": 1
+        "value": 2
       },
       "playoff_seed": null
     },
@@ -108,16 +84,16 @@
       "primary_color": "#111827",
       "team_key": "470.l.26455.t.2",
       "team_id": 2,
-      "rank": 3,
-      "wins": 1,
+      "rank": 2,
+      "wins": 2,
       "losses": 0,
       "ties": 0,
       "winning_percentage": 1.0,
-      "points_for": 139.0,
-      "points_against": 137.6,
+      "points_for": 248.68,
+      "points_against": 235.08,
       "streak": {
         "type": "win",
-        "value": 1
+        "value": 2
       },
       "playoff_seed": null
     },
@@ -132,61 +108,37 @@
       "primary_color": "#b45309",
       "team_key": "470.l.26455.t.7",
       "team_id": 7,
+      "rank": 3,
+      "wins": 2,
+      "losses": 0,
+      "ties": 0,
+      "winning_percentage": 1.0,
+      "points_for": 213.1,
+      "points_against": 159.54,
+      "streak": {
+        "type": "win",
+        "value": 2
+      },
+      "playoff_seed": null
+    },
+    {
+      "franchise_id": "north-town-ninnyhammers",
+      "display_name": "North town Ninnyhammers",
+      "canonical_name": "North Town Ninnyhammers",
+      "short_name": "Ninnyhammers",
+      "path": "/teams/north-town-ninnyhammers/",
+      "identity_image": "/assets/img/franchises/north-town-ninnyhammers/helmet-2026.png",
+      "identity_alt": "North Town Ninnyhammers commissioner-approved 3D football helmet",
+      "primary_color": "#dc2626",
+      "team_key": "470.l.26455.t.9",
+      "team_id": 9,
       "rank": 4,
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "winning_percentage": 1.0,
-      "points_for": 130.7,
-      "points_against": 84.92,
-      "streak": {
-        "type": "win",
-        "value": 1
-      },
-      "playoff_seed": null
-    },
-    {
-      "franchise_id": "buffalo-bravado",
-      "display_name": "Buffalo Bravados",
-      "canonical_name": "Buffalo Bravado",
-      "short_name": "Bravado",
-      "path": "/teams/buffalo-bravado/",
-      "identity_image": "/assets/img/franchises/buffalo-bravado/helmet-2026.jpg",
-      "identity_alt": "Buffalo Bravado light blue 3D football helmet with a heraldic crest",
-      "primary_color": "#2563eb",
-      "team_key": "470.l.26455.t.4",
-      "team_id": 4,
-      "rank": 5,
-      "wins": 1,
-      "losses": 0,
-      "ties": 0,
-      "winning_percentage": 1.0,
-      "points_for": 127.86,
-      "points_against": 101.7,
-      "streak": {
-        "type": "win",
-        "value": 1
-      },
-      "playoff_seed": null
-    },
-    {
-      "franchise_id": "ayahuasca-rush",
-      "display_name": "Ayahuasca Rush",
-      "canonical_name": "Ayahuasca Rush",
-      "short_name": "Rush",
-      "path": "/teams/ayahuasca-rush/",
-      "identity_image": "/assets/img/franchises/ayahuasca-rush/helmet-2026.jpg",
-      "identity_alt": "Ayahuasca Rush green 3D football helmet with a leaf emblem",
-      "primary_color": "#2e7d32",
-      "team_key": "470.l.26455.t.3",
-      "team_id": 3,
-      "rank": 6,
-      "wins": 1,
-      "losses": 0,
-      "ties": 0,
-      "winning_percentage": 1.0,
-      "points_for": 120.06,
-      "points_against": 89.16,
+      "winning_percentage": 0.5,
+      "points_for": 277.74,
+      "points_against": 243.96,
       "streak": {
         "type": "win",
         "value": 1
@@ -204,39 +156,15 @@
       "primary_color": "#7e22ce",
       "team_key": "470.l.26455.t.11",
       "team_id": 11,
-      "rank": 7,
-      "wins": 0,
+      "rank": 5,
+      "wins": 1,
       "losses": 1,
       "ties": 0,
-      "winning_percentage": 0.0,
-      "points_for": 137.6,
-      "points_against": 139.0,
+      "winning_percentage": 0.5,
+      "points_for": 277.16,
+      "points_against": 277.62,
       "streak": {
-        "type": "loss",
-        "value": 1
-      },
-      "playoff_seed": null
-    },
-    {
-      "franchise_id": "north-town-ninnyhammers",
-      "display_name": "North town Ninnyhammers",
-      "canonical_name": "North Town Ninnyhammers",
-      "short_name": "Ninnyhammers",
-      "path": "/teams/north-town-ninnyhammers/",
-      "identity_image": "/assets/img/franchises/north-town-ninnyhammers/helmet-2026.png",
-      "identity_alt": "North Town Ninnyhammers commissioner-approved 3D football helmet",
-      "primary_color": "#dc2626",
-      "team_key": "470.l.26455.t.9",
-      "team_id": 9,
-      "rank": 8,
-      "wins": 0,
-      "losses": 1,
-      "ties": 0,
-      "winning_percentage": 0.0,
-      "points_for": 126.06,
-      "points_against": 168.82,
-      "streak": {
-        "type": "loss",
+        "type": "win",
         "value": 1
       },
       "playoff_seed": null
@@ -252,13 +180,85 @@
       "primary_color": "#0f4c81",
       "team_key": "470.l.26455.t.1",
       "team_id": 1,
-      "rank": 9,
-      "wins": 0,
+      "rank": 6,
+      "wins": 1,
       "losses": 1,
       "ties": 0,
-      "winning_percentage": 0.0,
-      "points_for": 101.7,
-      "points_against": 127.86,
+      "winning_percentage": 0.5,
+      "points_for": 270.88,
+      "points_against": 221.28,
+      "streak": {
+        "type": "win",
+        "value": 1
+      },
+      "playoff_seed": null
+    },
+    {
+      "franchise_id": "buffalo-bravado",
+      "display_name": "Buffalo Bravados",
+      "canonical_name": "Buffalo Bravado",
+      "short_name": "Bravado",
+      "path": "/teams/buffalo-bravado/",
+      "identity_image": "/assets/img/franchises/buffalo-bravado/helmet-2026.jpg",
+      "identity_alt": "Buffalo Bravado light blue 3D football helmet with a heraldic crest",
+      "primary_color": "#2563eb",
+      "team_key": "470.l.26455.t.4",
+      "team_id": 4,
+      "rank": 7,
+      "wins": 1,
+      "losses": 1,
+      "ties": 0,
+      "winning_percentage": 0.5,
+      "points_for": 266.48,
+      "points_against": 241.26,
+      "streak": {
+        "type": "loss",
+        "value": 1
+      },
+      "playoff_seed": null
+    },
+    {
+      "franchise_id": "ayahuasca-rush",
+      "display_name": "Ayahuasca Rush",
+      "canonical_name": "Ayahuasca Rush",
+      "short_name": "Rush",
+      "path": "/teams/ayahuasca-rush/",
+      "identity_image": "/assets/img/franchises/ayahuasca-rush/helmet-2026.jpg",
+      "identity_alt": "Ayahuasca Rush green 3D football helmet with a leaf emblem",
+      "primary_color": "#2e7d32",
+      "team_key": "470.l.26455.t.3",
+      "team_id": 3,
+      "rank": 8,
+      "wins": 1,
+      "losses": 1,
+      "ties": 0,
+      "winning_percentage": 0.5,
+      "points_for": 220.96,
+      "points_against": 195.32,
+      "streak": {
+        "type": "loss",
+        "value": 1
+      },
+      "playoff_seed": null
+    },
+    {
+      "franchise_id": "greendale-human-beings",
+      "display_name": "Greendale Human Beings",
+      "canonical_name": "Greendale Human Beings",
+      "short_name": "Human Beings",
+      "path": "/teams/greendale-human-beings/",
+      "identity_image": "/assets/img/franchises/greendale-human-beings/helmet-2026.png",
+      "identity_alt": "Greendale Human Beings blue 3D football helmet with the college emblem",
+      "primary_color": "#1e3a8a",
+      "team_key": "470.l.26455.t.6",
+      "team_id": 6,
+      "rank": 9,
+      "wins": 1,
+      "losses": 1,
+      "ties": 0,
+      "winning_percentage": 0.5,
+      "points_for": 216.0,
+      "points_against": 233.32,
       "streak": {
         "type": "loss",
         "value": 1
@@ -278,14 +278,14 @@
       "team_id": 12,
       "rank": 10,
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
       "winning_percentage": 0.0,
-      "points_for": 89.16,
-      "points_against": 120.06,
+      "points_for": 186.64,
+      "points_against": 229.74,
       "streak": {
         "type": "loss",
-        "value": 1
+        "value": 2
       },
       "playoff_seed": null
     },
@@ -302,14 +302,14 @@
       "team_id": 10,
       "rank": 11,
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
       "winning_percentage": 0.0,
-      "points_for": 84.92,
-      "points_against": 130.7,
+      "points_for": 178.34,
+      "points_against": 299.88,
       "streak": {
         "type": "loss",
-        "value": 1
+        "value": 2
       },
       "playoff_seed": null
     },
@@ -326,14 +326,14 @@
       "team_id": 8,
       "rank": 12,
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
       "winning_percentage": 0.0,
-      "points_for": 81.64,
-      "points_against": 140.86,
+      "points_for": 156.26,
+      "points_against": 223.26,
       "streak": {
         "type": "loss",
-        "value": 1
+        "value": 2
       },
       "playoff_seed": null
     }
@@ -360,9 +360,9 @@
           "primary_color": "#111827",
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
-          "record": "1-0-0",
-          "score": 104.38,
-          "projected_score": 112.33,
+          "record": "2-0-0",
+          "score": 109.68,
+          "projected_score": 112.53,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -505,9 +505,9 @@
           "primary_color": "#991b1b",
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
-          "record": "0-1-0",
+          "record": "0-2-0",
           "score": 97.48,
-          "projected_score": 97.48,
+          "projected_score": 108.63,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -705,9 +705,9 @@
           "primary_color": "#2e7d32",
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
-          "record": "1-0-0",
-          "score": 95.1,
-          "projected_score": 104.29,
+          "record": "1-1-0",
+          "score": 100.9,
+          "projected_score": 112.66,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -842,9 +842,9 @@
           "primary_color": "#15803d",
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
-          "record": "1-0-0",
+          "record": "2-0-0",
           "score": 106.16,
-          "projected_score": 106.16,
+          "projected_score": 114.89,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1034,9 +1034,9 @@
           "primary_color": "#0f4c81",
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
-          "record": "0-1-0",
-          "score": 137.68,
-          "projected_score": 160.49,
+          "record": "1-1-0",
+          "score": 169.18,
+          "projected_score": 109.09,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1179,9 +1179,9 @@
           "primary_color": "#155e75",
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
-          "record": "0-1-0",
+          "record": "0-2-0",
           "score": 93.42,
-          "projected_score": 93.42,
+          "projected_score": 104.82,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1371,9 +1371,9 @@
           "primary_color": "#2563eb",
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
-          "record": "1-0-0",
+          "record": "1-1-0",
           "score": 138.62,
-          "projected_score": 138.62,
+          "projected_score": 115.21,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1516,9 +1516,9 @@
           "primary_color": "#7e22ce",
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
-          "record": "0-1-0",
+          "record": "1-1-0",
           "score": 139.56,
-          "projected_score": 139.56,
+          "projected_score": 113.24,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1708,9 +1708,9 @@
           "primary_color": "#1e3a8a",
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
-          "record": "1-0-0",
-          "score": 73.14,
-          "projected_score": 78.74,
+          "record": "1-1-0",
+          "score": 75.14,
+          "projected_score": 117.22,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1853,9 +1853,9 @@
           "primary_color": "#dc2626",
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
-          "record": "0-1-0",
-          "score": 147.78,
-          "projected_score": 153.21,
+          "record": "1-1-0",
+          "score": 151.68,
+          "projected_score": 110.35,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2045,9 +2045,9 @@
           "primary_color": "#b45309",
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
-          "record": "1-0-0",
+          "record": "2-0-0",
           "score": 82.4,
-          "projected_score": 102.45,
+          "projected_score": 118.17,
           "roster": [
             {
               "player_key": "470.p.41810",
@@ -2182,9 +2182,9 @@
           "primary_color": "#1d4ed8",
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
-          "record": "0-1-0",
+          "record": "0-2-0",
           "score": 74.62,
-          "projected_score": 74.62,
+          "projected_score": 108.01,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -2375,9 +2375,9 @@
         "primary_color": "#2563eb",
         "team_key": "470.l.26455.t.4",
         "team_id": 4,
-        "record": "1-0-0",
+        "record": "1-1-0",
         "score": 138.62,
-        "projected_score": 138.62,
+        "projected_score": 115.21,
         "roster": [
           {
             "player_key": "470.p.30977",
@@ -2520,9 +2520,9 @@
         "primary_color": "#7e22ce",
         "team_key": "470.l.26455.t.11",
         "team_id": 11,
-        "record": "0-1-0",
+        "record": "1-1-0",
         "score": 139.56,
-        "projected_score": 139.56,
+        "projected_score": 113.24,
         "roster": [
           {
             "player_key": "470.p.29369",
@@ -2695,16 +2695,16 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 147.78,
-      "franchise_id": "north-town-ninnyhammers",
-      "display_name": "North town Ninnyhammers"
+      "value": 169.18,
+      "franchise_id": "van-cortlant-rangers",
+      "display_name": "Van Cortlant Rangers"
     },
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 73.14,
-      "franchise_id": "greendale-human-beings",
-      "display_name": "Greendale Human Beings"
+      "value": 74.62,
+      "franchise_id": "new-jersey-giants",
+      "display_name": "New Jersey Giants"
     },
     {
       "fact_id": "highest-combined",
@@ -2715,7 +2715,7 @@
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 74.64,
+      "value": 76.54,
       "matchup_id": "2026-w02-greendale-human-beings--north-town-ninnyhammers"
     },
     {
@@ -2727,7 +2727,7 @@
     {
       "fact_id": "longest-active-streak",
       "label": "Longest active streak",
-      "value": 1,
+      "value": 2,
       "streak_type": "loss",
       "franchise_id": "vegas-vandals",
       "display_name": "Vegas Vandals"
@@ -2741,10 +2741,10 @@
       "final": false,
       "franchise_id": "north-town-ninnyhammers",
       "display_name": "North town Ninnyhammers",
-      "value": 147.78,
+      "value": 151.68,
       "threshold": 162.2,
-      "difference": 14.42,
-      "message": "North town Ninnyhammers is 14.42 points from the verified Top-25 cutoff."
+      "difference": 10.52,
+      "message": "North town Ninnyhammers is 10.52 points from the verified Top-25 cutoff."
     }
   ],
   "league_wire": [
@@ -2752,7 +2752,7 @@
       "headline_id": "record:2026-w02-greendale-human-beings--north-town-ninnyhammers:north-town-ninnyhammers:weekly-score:record-watch",
       "category": "Record Watch",
       "headline": "Record Watch",
-      "detail": "North town Ninnyhammers is 14.42 points from the verified Top-25 cutoff.",
+      "detail": "North town Ninnyhammers is 10.52 points from the verified Top-25 cutoff.",
       "week": 2,
       "source": "normalized_yahoo_and_verified_history",
       "path": "/records/"
@@ -2760,8 +2760,8 @@
     {
       "headline_id": "week-2:high-score",
       "category": "Week in Review",
-      "headline": "North town Ninnyhammers leads Week 2 scoring",
-      "detail": "The week's current high is 147.78 points.",
+      "headline": "Van Cortlant Rangers leads Week 2 scoring",
+      "detail": "The week's current high is 169.18 points.",
       "week": 2,
       "source": "normalized_yahoo",
       "path": "/2026/week/2/"
@@ -2777,13 +2777,13 @@
       "identity_image": "/assets/img/franchises/albany-kneelers/helmet-2026.png",
       "identity_alt": "Albany Redskins black 3D football helmet with the approved team emblem",
       "primary_color": "#111827",
-      "rank": 3,
-      "record": "1–0–0",
-      "points_for": 139.0,
-      "points_against": 137.6,
+      "rank": 2,
+      "record": "2–0–0",
+      "points_for": 248.68,
+      "points_against": 235.08,
       "streak": {
         "type": "win",
-        "value": 1
+        "value": 2
       },
       "current_matchup": {
         "matchup_id": "2026-w02-albany-kneelers--vegas-vandals",
@@ -2799,9 +2799,9 @@
           "primary_color": "#991b1b",
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
-          "record": "0-1-0",
+          "record": "0-2-0",
           "score": 97.48,
-          "projected_score": 97.48,
+          "projected_score": 108.63,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -2946,12 +2946,12 @@
       "identity_image": "/assets/img/franchises/ayahuasca-rush/helmet-2026.jpg",
       "identity_alt": "Ayahuasca Rush green 3D football helmet with a leaf emblem",
       "primary_color": "#2e7d32",
-      "rank": 6,
-      "record": "1–0–0",
-      "points_for": 120.06,
-      "points_against": 89.16,
+      "rank": 8,
+      "record": "1–1–0",
+      "points_for": 220.96,
+      "points_against": 195.32,
       "streak": {
-        "type": "win",
+        "type": "loss",
         "value": 1
       },
       "current_matchup": {
@@ -2968,9 +2968,9 @@
           "primary_color": "#15803d",
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
-          "record": "1-0-0",
+          "record": "2-0-0",
           "score": 106.16,
-          "projected_score": 106.16,
+          "projected_score": 114.89,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -3108,12 +3108,12 @@
       "identity_alt": "Baseball Furies commissioner-approved 3D football helmet",
       "primary_color": "#155e75",
       "rank": 11,
-      "record": "0–1–0",
-      "points_for": 84.92,
-      "points_against": 130.7,
+      "record": "0–2–0",
+      "points_for": 178.34,
+      "points_against": 299.88,
       "streak": {
         "type": "loss",
-        "value": 1
+        "value": 2
       },
       "current_matchup": {
         "matchup_id": "2026-w02-baseball-furies--van-cortlant-rangers",
@@ -3129,9 +3129,9 @@
           "primary_color": "#0f4c81",
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
-          "record": "0-1-0",
-          "score": 137.68,
-          "projected_score": 160.49,
+          "record": "1-1-0",
+          "score": 169.18,
+          "projected_score": 109.09,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -3276,12 +3276,12 @@
       "identity_image": "/assets/img/franchises/buffalo-bravado/helmet-2026.jpg",
       "identity_alt": "Buffalo Bravado light blue 3D football helmet with a heraldic crest",
       "primary_color": "#2563eb",
-      "rank": 5,
-      "record": "1–0–0",
-      "points_for": 127.86,
-      "points_against": 101.7,
+      "rank": 7,
+      "record": "1–1–0",
+      "points_for": 266.48,
+      "points_against": 241.26,
       "streak": {
-        "type": "win",
+        "type": "loss",
         "value": 1
       },
       "current_matchup": {
@@ -3298,9 +3298,9 @@
           "primary_color": "#7e22ce",
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
-          "record": "0-1-0",
+          "record": "1-1-0",
           "score": 139.56,
-          "projected_score": 139.56,
+          "projected_score": 113.24,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -3438,12 +3438,12 @@
       "identity_alt": "Crazy Waz's Team commissioner-approved 3D football helmet",
       "primary_color": "#15803d",
       "rank": 1,
-      "record": "1–0–0",
-      "points_for": 168.82,
-      "points_against": 126.06,
+      "record": "2–0–0",
+      "points_for": 274.98,
+      "points_against": 226.96,
       "streak": {
         "type": "win",
-        "value": 1
+        "value": 2
       },
       "current_matchup": {
         "matchup_id": "2026-w02-ayahuasca-rush--crazy-wazs-team",
@@ -3459,9 +3459,9 @@
           "primary_color": "#2e7d32",
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
-          "record": "1-0-0",
-          "score": 95.1,
-          "projected_score": 104.29,
+          "record": "1-1-0",
+          "score": 100.9,
+          "projected_score": 112.66,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -3598,12 +3598,12 @@
       "identity_image": "/assets/img/franchises/greendale-human-beings/helmet-2026.png",
       "identity_alt": "Greendale Human Beings blue 3D football helmet with the college emblem",
       "primary_color": "#1e3a8a",
-      "rank": 2,
-      "record": "1–0–0",
-      "points_for": 140.86,
-      "points_against": 81.64,
+      "rank": 9,
+      "record": "1–1–0",
+      "points_for": 216.0,
+      "points_against": 233.32,
       "streak": {
-        "type": "win",
+        "type": "loss",
         "value": 1
       },
       "current_matchup": {
@@ -3620,9 +3620,9 @@
           "primary_color": "#dc2626",
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
-          "record": "0-1-0",
-          "score": 147.78,
-          "projected_score": 153.21,
+          "record": "1-1-0",
+          "score": 151.68,
+          "projected_score": 110.35,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -3759,13 +3759,13 @@
       "identity_image": "/assets/img/franchises/maine-moose/helmet-2026.png",
       "identity_alt": "Maine Moose commissioner-approved 3D football helmet",
       "primary_color": "#b45309",
-      "rank": 4,
-      "record": "1–0–0",
-      "points_for": 130.7,
-      "points_against": 84.92,
+      "rank": 3,
+      "record": "2–0–0",
+      "points_for": 213.1,
+      "points_against": 159.54,
       "streak": {
         "type": "win",
-        "value": 1
+        "value": 2
       },
       "current_matchup": {
         "matchup_id": "2026-w02-maine-moose--new-jersey-giants",
@@ -3781,9 +3781,9 @@
           "primary_color": "#1d4ed8",
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
-          "record": "0-1-0",
+          "record": "0-2-0",
           "score": 74.62,
-          "projected_score": 74.62,
+          "projected_score": 108.01,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -3921,12 +3921,12 @@
       "identity_alt": "New Jersey Giants commissioner-approved 3D football helmet",
       "primary_color": "#1d4ed8",
       "rank": 12,
-      "record": "0–1–0",
-      "points_for": 81.64,
-      "points_against": 140.86,
+      "record": "0–2–0",
+      "points_for": 156.26,
+      "points_against": 223.26,
       "streak": {
         "type": "loss",
-        "value": 1
+        "value": 2
       },
       "current_matchup": {
         "matchup_id": "2026-w02-maine-moose--new-jersey-giants",
@@ -3942,9 +3942,9 @@
           "primary_color": "#b45309",
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
-          "record": "1-0-0",
+          "record": "2-0-0",
           "score": 82.4,
-          "projected_score": 102.45,
+          "projected_score": 118.17,
           "roster": [
             {
               "player_key": "470.p.41810",
@@ -4081,12 +4081,12 @@
       "identity_image": "/assets/img/franchises/north-town-ninnyhammers/helmet-2026.png",
       "identity_alt": "North Town Ninnyhammers commissioner-approved 3D football helmet",
       "primary_color": "#dc2626",
-      "rank": 8,
-      "record": "0–1–0",
-      "points_for": 126.06,
-      "points_against": 168.82,
+      "rank": 4,
+      "record": "1–1–0",
+      "points_for": 277.74,
+      "points_against": 243.96,
       "streak": {
-        "type": "loss",
+        "type": "win",
         "value": 1
       },
       "current_matchup": {
@@ -4103,9 +4103,9 @@
           "primary_color": "#1e3a8a",
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
-          "record": "1-0-0",
-          "score": 73.14,
-          "projected_score": 78.74,
+          "record": "1-1-0",
+          "score": 75.14,
+          "projected_score": 117.22,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -4250,12 +4250,12 @@
       "identity_image": "/assets/img/franchises/turnbull-acs/helmet-2026.png",
       "identity_alt": "Turnbull AC's commissioner-approved 3D football helmet",
       "primary_color": "#7e22ce",
-      "rank": 7,
-      "record": "0–1–0",
-      "points_for": 137.6,
-      "points_against": 139.0,
+      "rank": 5,
+      "record": "1–1–0",
+      "points_for": 277.16,
+      "points_against": 277.62,
       "streak": {
-        "type": "loss",
+        "type": "win",
         "value": 1
       },
       "current_matchup": {
@@ -4272,9 +4272,9 @@
           "primary_color": "#2563eb",
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
-          "record": "1-0-0",
+          "record": "1-1-0",
           "score": 138.62,
-          "projected_score": 138.62,
+          "projected_score": 115.21,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -4419,12 +4419,12 @@
       "identity_image": "/assets/img/franchises/van-cortlant-rangers/helmet-2026.png",
       "identity_alt": "Van Cortlant Rangers commissioner-approved 3D football helmet",
       "primary_color": "#0f4c81",
-      "rank": 9,
-      "record": "0–1–0",
-      "points_for": 101.7,
-      "points_against": 127.86,
+      "rank": 6,
+      "record": "1–1–0",
+      "points_for": 270.88,
+      "points_against": 221.28,
       "streak": {
-        "type": "loss",
+        "type": "win",
         "value": 1
       },
       "current_matchup": {
@@ -4441,9 +4441,9 @@
           "primary_color": "#155e75",
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
-          "record": "0-1-0",
+          "record": "0-2-0",
           "score": 93.42,
-          "projected_score": 93.42,
+          "projected_score": 104.82,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -4581,12 +4581,12 @@
       "identity_alt": "Vegas Vandals commissioner-approved 3D football helmet",
       "primary_color": "#991b1b",
       "rank": 10,
-      "record": "0–1–0",
-      "points_for": 89.16,
-      "points_against": 120.06,
+      "record": "0–2–0",
+      "points_for": 186.64,
+      "points_against": 229.74,
       "streak": {
         "type": "loss",
-        "value": 1
+        "value": 2
       },
       "current_matchup": {
         "matchup_id": "2026-w02-albany-kneelers--vegas-vandals",
@@ -4602,9 +4602,9 @@
           "primary_color": "#111827",
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
-          "record": "1-0-0",
-          "score": 104.38,
-          "projected_score": 112.33,
+          "record": "2-0-0",
+          "score": 109.68,
+          "projected_score": 112.53,
           "roster": [
             {
               "player_key": "470.p.30123",
