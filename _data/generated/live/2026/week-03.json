@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 3,
-  "generated_at": "2026-09-23T16:47:51Z",
+  "generated_at": "2026-09-23T20:00:00Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-23T16:47:51Z",
+    "source_updated_at": "2026-09-23T20:00:00Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 119.62,
+          "projected_score": 119.56,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -468,7 +468,7 @@
           "team_id": 5,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 118.93,
+          "projected_score": 118.92,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -584,7 +584,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Jacksonville",
+              "player_name": "Jaguars",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 111.25,
+          "projected_score": 111.58,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -797,7 +797,7 @@
           "team_id": 6,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 116.66,
+          "projected_score": 116.63,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -997,7 +997,7 @@
           "team_id": 8,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 103.41,
+          "projected_score": 108.9,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1032,8 +1032,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.42626",
-              "player_name": "Carnell Tate",
+              "player_key": "470.p.33477",
+              "player_name": "Nico Collins",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -1056,8 +1056,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.33477",
-              "player_name": "Nico Collins",
+              "player_key": "470.p.42626",
+              "player_name": "Carnell Tate",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1113,7 +1113,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Los Angeles",
+              "player_name": "Chargers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1134,7 +1134,7 @@
           "team_id": 10,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 106.71,
+          "projected_score": 106.73,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1326,7 +1326,7 @@
           "team_id": 4,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 113.06,
+          "projected_score": 113.56,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1471,7 +1471,7 @@
           "team_id": 12,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 107.62,
+          "projected_score": 107.57,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -1671,11 +1671,11 @@
           "team_id": 7,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 100.01,
+          "projected_score": 118.63,
           "roster": [
             {
-              "player_key": "470.p.41810",
-              "player_name": "Jaxson Dart",
+              "player_key": "470.p.40030",
+              "player_name": "C.J. Stroud",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -1770,11 +1770,11 @@
               "status": null
             },
             {
-              "player_key": "470.p.40030",
-              "player_name": "C.J. Stroud",
+              "player_key": "470.p.41810",
+              "player_name": "Jaxson Dart",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "BN",
+              "selected_position": "IR",
               "status": null
             },
             {
@@ -1808,7 +1808,7 @@
           "team_id": 9,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 120.72,
+          "projected_score": 120.96,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2000,7 +2000,7 @@
           "team_id": 1,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 112.19,
+          "projected_score": 112.22,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2145,7 +2145,7 @@
           "team_id": 11,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 113.93,
+          "projected_score": 114.07,
           "roster": [
             {
               "player_key": "470.p.29369",
