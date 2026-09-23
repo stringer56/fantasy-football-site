@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 3,
-  "generated_at": "2026-09-22T22:58:06Z",
+  "generated_at": "2026-09-23T01:24:26Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-22T22:58:06Z",
+    "source_updated_at": "2026-09-23T01:24:26Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 115.06,
+          "projected_score": 116.37,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -468,7 +468,7 @@
           "team_id": 5,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 109.95,
+          "projected_score": 111.12,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 109.77,
+          "projected_score": 110.9,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -797,16 +797,8 @@
           "team_id": 6,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 80.09,
+          "projected_score": 96.69,
           "roster": [
-            {
-              "player_key": "470.p.40896",
-              "player_name": "Jayden Daniels",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "QB",
-              "status": null
-            },
             {
               "player_key": "470.p.40118",
               "player_name": "De'Von Achane",
@@ -832,8 +824,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.40224",
-              "player_name": "Kayshon Boutte",
+              "player_key": "470.p.40039",
+              "player_name": "Zay Flowers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -848,24 +840,32 @@
               "status": null
             },
             {
-              "player_key": "470.p.34008",
-              "player_name": "Alec Pierce",
+              "player_key": "470.p.42661",
+              "player_name": "Denzel Boston",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
               "status": null
             },
             {
-              "player_key": "470.p.42661",
-              "player_name": "Denzel Boston",
+              "player_key": "470.p.40224",
+              "player_name": "Kayshon Boutte",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
               "status": null
             },
             {
-              "player_key": "470.p.40039",
-              "player_name": "Zay Flowers",
+              "player_key": "470.p.34008",
+              "player_name": "Alec Pierce",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40896",
+              "player_name": "Jayden Daniels",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -997,7 +997,7 @@
           "team_id": 8,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 102.28,
+          "projected_score": 103.5,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1134,7 +1134,7 @@
           "team_id": 10,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 105.29,
+          "projected_score": 106.66,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1326,7 +1326,7 @@
           "team_id": 4,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 110.06,
+          "projected_score": 111.23,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1471,7 +1471,7 @@
           "team_id": 12,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 105.87,
+          "projected_score": 106.94,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -1671,7 +1671,7 @@
           "team_id": 7,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 99.23,
+          "projected_score": 100.03,
           "roster": [
             {
               "player_key": "470.p.41810",
@@ -1808,7 +1808,7 @@
           "team_id": 9,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 119.58,
+          "projected_score": 120.7,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2000,7 +2000,7 @@
           "team_id": 1,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 109.98,
+          "projected_score": 111.09,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2145,7 +2145,7 @@
           "team_id": 11,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 113.14,
+          "projected_score": 114.01,
           "roster": [
             {
               "player_key": "470.p.29369",
