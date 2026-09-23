@@ -72,14 +72,6 @@
           "status": null
         },
         {
-          "player_key": "470.p.40926",
-          "player_name": "Jonathon Brooks",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
           "player_key": "470.p.42646",
           "player_name": "KC Concepcion Jr.",
           "nfl_team": null,
@@ -106,6 +98,14 @@
         {
           "player_key": "470.p.41058",
           "player_name": "Malik Washington",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.40707",
+          "player_name": "Emanuel Wilson",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -653,7 +653,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Jaguars",
+          "player_name": "Jacksonville",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -666,6 +666,14 @@
       "team_id": 6,
       "team_name": "Greendale Human Beings",
       "players": [
+        {
+          "player_key": "470.p.40029",
+          "player_name": "Bryce Young",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "QB",
+          "status": null
+        },
         {
           "player_key": "470.p.40118",
           "player_name": "De'Von Achane",
@@ -755,14 +763,6 @@
           "status": null
         },
         {
-          "player_key": "470.p.41969",
-          "player_name": "Ollie Gordon II",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
           "player_key": "470.p.40075",
           "player_name": "Zach Charbonnet",
           "nfl_team": null,
@@ -771,8 +771,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.41312",
-          "player_name": "Harrison Mevis",
+          "player_key": "470.p.32858",
+          "player_name": "Tyler Bass",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "K",
@@ -780,7 +780,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Buccaneers",
+          "player_name": "Bills",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -1042,7 +1042,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Chargers",
+          "player_name": "Los Angeles",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -1296,7 +1296,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Houston",
+          "player_name": "Texans",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -1423,7 +1423,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Pittsburgh",
+          "player_name": "Steelers",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",

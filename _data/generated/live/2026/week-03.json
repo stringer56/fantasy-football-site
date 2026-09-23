@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 3,
-  "generated_at": "2026-09-23T12:00:26Z",
+  "generated_at": "2026-09-23T16:47:51Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-23T12:00:26Z",
+    "source_updated_at": "2026-09-23T16:47:51Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 118.46,
+          "projected_score": 119.62,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -468,7 +468,7 @@
           "team_id": 5,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 119.91,
+          "projected_score": 118.93,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -584,7 +584,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Jaguars",
+              "player_name": "Jacksonville",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 110.79,
+          "projected_score": 111.25,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -797,8 +797,16 @@
           "team_id": 6,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 97.45,
+          "projected_score": 116.66,
           "roster": [
+            {
+              "player_key": "470.p.40029",
+              "player_name": "Bryce Young",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "QB",
+              "status": null
+            },
             {
               "player_key": "470.p.40118",
               "player_name": "De'Von Achane",
@@ -888,14 +896,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.41969",
-              "player_name": "Ollie Gordon II",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.40075",
               "player_name": "Zach Charbonnet",
               "nfl_team": null,
@@ -904,8 +904,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.41312",
-              "player_name": "Harrison Mevis",
+              "player_key": "470.p.32858",
+              "player_name": "Tyler Bass",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "K",
@@ -913,7 +913,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Buccaneers",
+              "player_name": "Bills",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -997,7 +997,7 @@
           "team_id": 8,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 101.77,
+          "projected_score": 103.41,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1113,7 +1113,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Chargers",
+              "player_name": "Los Angeles",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1134,7 +1134,7 @@
           "team_id": 10,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 106.53,
+          "projected_score": 106.71,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1250,7 +1250,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Houston",
+              "player_name": "Texans",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1326,7 +1326,7 @@
           "team_id": 4,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 113.44,
+          "projected_score": 113.06,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1471,7 +1471,7 @@
           "team_id": 12,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 107.54,
+          "projected_score": 107.62,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -1671,7 +1671,7 @@
           "team_id": 7,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 97.34,
+          "projected_score": 100.01,
           "roster": [
             {
               "player_key": "470.p.41810",
@@ -1808,7 +1808,7 @@
           "team_id": 9,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 120.89,
+          "projected_score": 120.72,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2000,7 +2000,7 @@
           "team_id": 1,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 111.7,
+          "projected_score": 112.19,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2067,14 +2067,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.40926",
-              "player_name": "Jonathon Brooks",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.42646",
               "player_name": "KC Concepcion Jr.",
               "nfl_team": null,
@@ -2101,6 +2093,14 @@
             {
               "player_key": "470.p.41058",
               "player_name": "Malik Washington",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40707",
+              "player_name": "Emanuel Wilson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2145,7 +2145,7 @@
           "team_id": 11,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 114.62,
+          "projected_score": 113.93,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -2261,7 +2261,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Pittsburgh",
+              "player_name": "Steelers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
