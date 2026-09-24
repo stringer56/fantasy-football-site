@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-09-24T16:49:01Z",
+  "generated_at": "2026-09-24T20:18:17Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-24T16:49:01Z",
+    "source_updated_at": "2026-09-24T20:18:17Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-09-24T16:49:01Z"
+    "source_update_timestamp": "2026-09-24T20:18:17Z"
   },
   "standings": [
     {
@@ -362,7 +362,7 @@
           "team_id": 2,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 118.08,
+          "projected_score": 118.03,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -507,7 +507,7 @@
           "team_id": 5,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 118.81,
+          "projected_score": 118.87,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -699,7 +699,7 @@
           "team_id": 3,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 111.87,
+          "projected_score": 112.63,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -815,7 +815,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Seattle",
+              "player_name": "Seahawks",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -836,7 +836,7 @@
           "team_id": 6,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 116.65,
+          "projected_score": 118.22,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -1036,7 +1036,7 @@
           "team_id": 8,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 107.49,
+          "projected_score": 107.47,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1173,7 +1173,7 @@
           "team_id": 10,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 106.72,
+          "projected_score": 106.53,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1365,7 +1365,7 @@
           "team_id": 4,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 113.3,
+          "projected_score": 113.23,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1510,7 +1510,7 @@
           "team_id": 12,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 108.38,
+          "projected_score": 108.16,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -1710,7 +1710,7 @@
           "team_id": 7,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 118.42,
+          "projected_score": 118.41,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -1847,7 +1847,7 @@
           "team_id": 9,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 120.72,
+          "projected_score": 120.79,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2039,7 +2039,7 @@
           "team_id": 1,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 112.66,
+          "projected_score": 112.57,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2074,8 +2074,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.27581",
-              "player_name": "Davante Adams",
+              "player_key": "470.p.40908",
+              "player_name": "Ladd McConkey",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -2090,8 +2090,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.40908",
-              "player_name": "Ladd McConkey",
+              "player_key": "470.p.27581",
+              "player_name": "Davante Adams",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
@@ -2184,7 +2184,7 @@
           "team_id": 11,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 113.96,
+          "projected_score": 113.93,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -2377,7 +2377,7 @@
         "team_id": 2,
         "record": "2-0-0",
         "score": 0.0,
-        "projected_score": 118.08,
+        "projected_score": 118.03,
         "roster": [
           {
             "player_key": "470.p.30123",
@@ -2522,7 +2522,7 @@
         "team_id": 5,
         "record": "2-0-0",
         "score": 0.0,
-        "projected_score": 118.81,
+        "projected_score": 118.87,
         "roster": [
           {
             "player_key": "470.p.32723",
@@ -2738,7 +2738,7 @@
           "team_id": 5,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 118.81,
+          "projected_score": 118.87,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -2899,7 +2899,7 @@
           "team_id": 6,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 116.65,
+          "projected_score": 118.22,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -3068,7 +3068,7 @@
           "team_id": 8,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 107.49,
+          "projected_score": 107.47,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -3229,7 +3229,7 @@
           "team_id": 12,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 108.38,
+          "projected_score": 108.16,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -3398,7 +3398,7 @@
           "team_id": 2,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 118.08,
+          "projected_score": 118.03,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -3567,7 +3567,7 @@
           "team_id": 3,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 111.87,
+          "projected_score": 112.63,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -3683,7 +3683,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Seattle",
+              "player_name": "Seahawks",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -3728,7 +3728,7 @@
           "team_id": 9,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 120.72,
+          "projected_score": 120.79,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -3889,7 +3889,7 @@
           "team_id": 10,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 106.72,
+          "projected_score": 106.53,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -4050,7 +4050,7 @@
           "team_id": 7,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 118.42,
+          "projected_score": 118.41,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -4211,7 +4211,7 @@
           "team_id": 1,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 112.66,
+          "projected_score": 112.57,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -4246,8 +4246,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.27581",
-              "player_name": "Davante Adams",
+              "player_key": "470.p.40908",
+              "player_name": "Ladd McConkey",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -4262,8 +4262,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.40908",
-              "player_name": "Ladd McConkey",
+              "player_key": "470.p.27581",
+              "player_name": "Davante Adams",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
@@ -4380,7 +4380,7 @@
           "team_id": 11,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 113.96,
+          "projected_score": 113.93,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -4541,7 +4541,7 @@
           "team_id": 4,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 113.3,
+          "projected_score": 113.23,
           "roster": [
             {
               "player_key": "470.p.30977",
