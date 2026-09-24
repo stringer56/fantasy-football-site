@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-09-24T20:18:17Z",
+  "generated_at": "2026-09-24T23:19:10Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-24T20:18:17Z",
+    "source_updated_at": "2026-09-24T23:19:10Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-09-24T20:18:17Z"
+    "source_update_timestamp": "2026-09-24T23:19:10Z"
   },
   "standings": [
     {
@@ -362,7 +362,7 @@
           "team_id": 2,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 118.03,
+          "projected_score": 116.17,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -507,7 +507,7 @@
           "team_id": 5,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 118.87,
+          "projected_score": 118.82,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -699,7 +699,7 @@
           "team_id": 3,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 112.63,
+          "projected_score": 112.62,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -836,7 +836,7 @@
           "team_id": 6,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 118.22,
+          "projected_score": 118.07,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -1036,7 +1036,7 @@
           "team_id": 8,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 107.47,
+          "projected_score": 106.95,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1173,7 +1173,7 @@
           "team_id": 10,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 106.53,
+          "projected_score": 107.22,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1365,7 +1365,7 @@
           "team_id": 4,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 113.23,
+          "projected_score": 113.43,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1510,7 +1510,7 @@
           "team_id": 12,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 108.16,
+          "projected_score": 107.86,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -1710,7 +1710,7 @@
           "team_id": 7,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 118.41,
+          "projected_score": 118.46,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -1847,7 +1847,7 @@
           "team_id": 9,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 120.79,
+          "projected_score": 120.7,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2039,7 +2039,7 @@
           "team_id": 1,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 112.57,
+          "projected_score": 112.9,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2184,7 +2184,7 @@
           "team_id": 11,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 113.93,
+          "projected_score": 113.49,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -2355,7 +2355,7 @@
     }
   ],
   "featured_matchup": {
-    "matchup_id": "2026-w03-albany-kneelers--crazy-wazs-team",
+    "matchup_id": "2026-w03-baseball-furies--new-jersey-giants",
     "week": 3,
     "status": "live",
     "status_label": "In Progress",
@@ -2365,135 +2365,127 @@
     "winner_franchise_id": null,
     "teams": [
       {
-        "franchise_id": "albany-kneelers",
-        "display_name": "Albany Redskins",
-        "canonical_name": "Albany Redskins",
-        "short_name": "Redskins",
-        "path": "/teams/albany-kneelers/",
-        "identity_image": "/assets/img/franchises/albany-kneelers/helmet-2026.png",
-        "identity_alt": "Albany Redskins black 3D football helmet with the approved team emblem",
-        "primary_color": "#111827",
-        "team_key": "470.l.26455.t.2",
-        "team_id": 2,
-        "record": "2-0-0",
+        "franchise_id": "new-jersey-giants",
+        "display_name": "New Jersey Giants",
+        "canonical_name": "New Jersey Giants",
+        "short_name": "Giants",
+        "path": "/teams/new-jersey-giants/",
+        "identity_image": "/assets/img/franchises/new-jersey-giants/helmet-2026.png",
+        "identity_alt": "New Jersey Giants commissioner-approved 3D football helmet",
+        "primary_color": "#1d4ed8",
+        "team_key": "470.l.26455.t.8",
+        "team_id": 8,
+        "record": "0-2-0",
         "score": 0.0,
-        "projected_score": 118.03,
+        "projected_score": 106.95,
         "roster": [
           {
-            "player_key": "470.p.30123",
-            "player_name": "Patrick Mahomes",
+            "player_key": "470.p.40875",
+            "player_name": "Bo Nix",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "QB",
             "status": null
           },
           {
-            "player_key": "470.p.33423",
-            "player_name": "Javonte Williams",
+            "player_key": "470.p.40055",
+            "player_name": "Bijan Robinson",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "RB",
             "status": null
           },
           {
-            "player_key": "470.p.31905",
-            "player_name": "David Montgomery",
+            "player_key": "470.p.42625",
+            "player_name": "Jeremiyah Love",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "RB",
             "status": null
           },
           {
-            "player_key": "470.p.31896",
-            "player_name": "DK Metcalf",
+            "player_key": "470.p.33967",
+            "player_name": "Jameson Williams",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "WR",
             "status": null
           },
           {
-            "player_key": "470.p.40168",
-            "player_name": "Puka Nacua",
+            "player_key": "470.p.33477",
+            "player_name": "Nico Collins",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "WR",
             "status": null
           },
           {
-            "player_key": "470.p.26686",
-            "player_name": "Travis Kelce",
+            "player_key": "470.p.41795",
+            "player_name": "Colston Loveland",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "TE",
             "status": null
           },
           {
-            "player_key": "470.p.41922",
-            "player_name": "Cam Skattebo",
+            "player_key": "470.p.41823",
+            "player_name": "TreVeyon Henderson",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "W/R/T",
             "status": null
           },
           {
-            "player_key": "470.p.31868",
-            "player_name": "Deebo Samuel Sr.",
+            "player_key": "470.p.42626",
+            "player_name": "Carnell Tate",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.33100",
-            "player_name": "Rico Dowdle",
+            "player_key": "470.p.40051",
+            "player_name": "Quentin Johnston",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.31856",
-            "player_name": "Josh Jacobs",
+            "player_key": "470.p.33538",
+            "player_name": "Kenny Gainwell",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.40114",
-            "player_name": "Tre Tucker",
+            "player_key": "470.p.34047",
+            "player_name": "Rachaad White",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.41825",
-            "player_name": "Tyler Shough",
+            "player_key": "470.p.42730",
+            "player_name": "Jonah Coleman",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.42693",
-            "player_name": "Antonio Williams",
+            "player_key": "470.p.40222",
+            "player_name": "DeMario Douglas",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.31883",
-            "player_name": "A.J. Brown",
-            "nfl_team": null,
-            "primary_position": null,
-            "selected_position": "IR",
-            "status": null
-          },
-          {
-            "player_key": "470.p.30346",
-            "player_name": "Harrison Butker",
+            "player_key": "470.p.41093",
+            "player_name": "Will Reichard",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "K",
@@ -2501,7 +2493,7 @@
           },
           {
             "player_key": null,
-            "player_name": "Chiefs",
+            "player_name": "Chargers",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "DEF",
@@ -2510,127 +2502,127 @@
         ]
       },
       {
-        "franchise_id": "crazy-wazs-team",
-        "display_name": "Chris's Crazy Team",
-        "canonical_name": "Crazy Waz's Team",
-        "short_name": "Crazy Waz",
-        "path": "/teams/crazy-wazs-team/",
-        "identity_image": "/assets/img/franchises/crazy-wazs-team/helmet-2026.png",
-        "identity_alt": "Crazy Waz's Team commissioner-approved 3D football helmet",
-        "primary_color": "#15803d",
-        "team_key": "470.l.26455.t.5",
-        "team_id": 5,
-        "record": "2-0-0",
+        "franchise_id": "baseball-furies",
+        "display_name": "The Baseball Furies",
+        "canonical_name": "The Baseball Furies",
+        "short_name": "Furies",
+        "path": "/teams/baseball-furies/",
+        "identity_image": "/assets/img/franchises/baseball-furies/helmet-2026.jpg",
+        "identity_alt": "Baseball Furies commissioner-approved 3D football helmet",
+        "primary_color": "#155e75",
+        "team_key": "470.l.26455.t.10",
+        "team_id": 10,
+        "record": "0-2-0",
         "score": 0.0,
-        "projected_score": 118.87,
+        "projected_score": 107.22,
         "roster": [
           {
-            "player_key": "470.p.32723",
-            "player_name": "Jalen Hurts",
+            "player_key": "470.p.40881",
+            "player_name": "Drake Maye",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "QB",
             "status": null
           },
           {
-            "player_key": "470.p.29279",
-            "player_name": "Derrick Henry",
+            "player_key": "470.p.32711",
+            "player_name": "Jonathan Taylor",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "RB",
             "status": null
           },
           {
-            "player_key": "470.p.41821",
-            "player_name": "Quinshon Judkins",
+            "player_key": "470.p.33413",
+            "player_name": "Travis Etienne Jr.",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "RB",
             "status": null
           },
           {
-            "player_key": "470.p.33500",
-            "player_name": "Amon-Ra St. Brown",
+            "player_key": "470.p.33963",
+            "player_name": "Drake London",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "WR",
             "status": null
           },
           {
-            "player_key": "470.p.40084",
-            "player_name": "Rashee Rice",
+            "player_key": "470.p.40234",
+            "player_name": "Parker Washington",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "WR",
             "status": null
           },
           {
-            "player_key": "470.p.33113",
-            "player_name": "Juwan Johnson",
+            "player_key": "470.p.41877",
+            "player_name": "Harold Fannin Jr.",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "TE",
             "status": null
           },
           {
-            "player_key": "470.p.41793",
-            "player_name": "Tetairoa McMillan",
+            "player_key": "470.p.40893",
+            "player_name": "Marvin Harrison Jr.",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "W/R/T",
             "status": null
           },
           {
-            "player_key": "470.p.40971",
-            "player_name": "MarShawn Lloyd",
+            "player_key": "470.p.40962",
+            "player_name": "Blake Corum",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.31960",
-            "player_name": "Tony Pollard",
+            "player_key": "470.p.40042",
+            "player_name": "Jordan Addison",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.31010",
-            "player_name": "Courtland Sutton",
+            "player_key": "470.p.41293",
+            "player_name": "Jalen Coker",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.40877",
-            "player_name": "Xavier Worthy",
+            "player_key": "470.p.42744",
+            "player_name": "Mike Washington Jr.",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.30295",
-            "player_name": "Aaron Jones Sr.",
+            "player_key": "470.p.30973",
+            "player_name": "Sam Darnold",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.34104",
-            "player_name": "Khalil Shakir",
+            "player_key": "470.p.40980",
+            "player_name": "Ray Davis",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.31482",
-            "player_name": "Eddy Pineiro",
+            "player_key": "470.p.28378",
+            "player_name": "Jason Myers",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "K",
@@ -2638,7 +2630,7 @@
           },
           {
             "player_key": null,
-            "player_name": "Jaguars",
+            "player_name": "Texans",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "DEF",
@@ -2648,46 +2640,46 @@
       }
     ],
     "historical_context": {
-      "series_path": "/head-to-head/?a=albany-kneelers&b=crazy-wazs-team",
-      "meetings": 9,
-      "wins_a": 6,
-      "wins_b": 3,
+      "series_path": "/head-to-head/?a=baseball-furies&b=new-jersey-giants",
+      "meetings": 3,
+      "wins_a": 1,
+      "wins_b": 2,
       "ties": 0,
-      "franchise_a_id": "albany-kneelers",
+      "franchise_a_id": "baseball-furies",
       "most_recent_meeting": {
-        "matchup_id": "2025-w04-02-05",
+        "matchup_id": "2025-w11-09-12",
         "season": 2025,
-        "week": 4,
+        "week": 11,
         "game_type": "regular_season",
         "playoff_round": null,
         "tie": false,
         "team_a": {
-          "franchise_id": "albany-kneelers",
-          "display_name": "Albany Redskins",
-          "path": "/teams/albany-kneelers/",
-          "score": 110.64
+          "franchise_id": "baseball-furies",
+          "display_name": "The Baseball Furies",
+          "path": "/teams/baseball-furies/",
+          "score": 88.14
         },
         "team_b": {
-          "franchise_id": "crazy-wazs-team",
-          "display_name": "Crazy Waz's Team",
-          "path": "/teams/crazy-wazs-team/",
-          "score": 153.98
+          "franchise_id": "new-jersey-giants",
+          "display_name": "New Jersey Giants",
+          "path": "/teams/new-jersey-giants/",
+          "score": 123.6
         },
         "winner": {
-          "franchise_id": "crazy-wazs-team",
-          "display_name": "Crazy Waz's Team"
+          "franchise_id": "new-jersey-giants",
+          "display_name": "New Jersey Giants"
         },
-        "margin": 43.34,
-        "combined_score": 264.62
+        "margin": 35.46,
+        "combined_score": 211.74
       },
       "current_series_streak": {
-        "franchise_id": "crazy-wazs-team",
+        "franchise_id": "new-jersey-giants",
         "wins": 1,
-        "against_franchise_id": "albany-kneelers",
+        "against_franchise_id": "baseball-furies",
         "start_season": 2025,
-        "start_week": 4,
+        "start_week": 11,
         "end_season": 2025,
-        "end_week": 4
+        "end_week": 11
       }
     }
   },
@@ -2698,7 +2690,7 @@
       "headline_id": "week-3:slate",
       "category": "League Wire",
       "headline": "Week 3 slate is set",
-      "detail": "Albany Redskins meets Chris's Crazy Team in the featured matchup.",
+      "detail": "New Jersey Giants meets The Baseball Furies in the featured matchup.",
       "week": 3,
       "source": "normalized_yahoo",
       "path": "/2026/week/3/"
@@ -2738,7 +2730,7 @@
           "team_id": 5,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 118.87,
+          "projected_score": 118.82,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -2899,7 +2891,7 @@
           "team_id": 6,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 118.22,
+          "projected_score": 118.07,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -3068,7 +3060,7 @@
           "team_id": 8,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 107.47,
+          "projected_score": 106.95,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -3229,7 +3221,7 @@
           "team_id": 12,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 108.16,
+          "projected_score": 107.86,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -3398,7 +3390,7 @@
           "team_id": 2,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 118.03,
+          "projected_score": 116.17,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -3567,7 +3559,7 @@
           "team_id": 3,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 112.63,
+          "projected_score": 112.62,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -3728,7 +3720,7 @@
           "team_id": 9,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 120.79,
+          "projected_score": 120.7,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -3889,7 +3881,7 @@
           "team_id": 10,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 106.53,
+          "projected_score": 107.22,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -4050,7 +4042,7 @@
           "team_id": 7,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 118.41,
+          "projected_score": 118.46,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -4211,7 +4203,7 @@
           "team_id": 1,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 112.57,
+          "projected_score": 112.9,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -4380,7 +4372,7 @@
           "team_id": 11,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 113.93,
+          "projected_score": 113.49,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -4541,7 +4533,7 @@
           "team_id": 4,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 113.23,
+          "projected_score": 113.43,
           "roster": [
             {
               "player_key": "470.p.30977",
