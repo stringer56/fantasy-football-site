@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 3,
-  "generated_at": "2026-09-25T01:45:47Z",
+  "generated_at": "2026-09-25T07:18:35Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-25T01:45:47Z",
+    "source_updated_at": "2026-09-25T07:18:35Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 116.65,
+          "projected_score": 116.68,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -468,7 +468,7 @@
           "team_id": 5,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 118.85,
+          "projected_score": 118.86,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 112.56,
+          "projected_score": 112.63,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -797,7 +797,7 @@
           "team_id": 6,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 118.0,
+          "projected_score": 118.04,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -996,8 +996,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "0-2-0",
-          "score": 21.3,
-          "projected_score": 119.34,
+          "score": 36.3,
+          "projected_score": 125.1,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1133,8 +1133,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "0-2-0",
-          "score": 7.9,
-          "projected_score": 108.98,
+          "score": 27.9,
+          "projected_score": 122.65,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1471,7 +1471,7 @@
           "team_id": 12,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 107.87,
+          "projected_score": 107.88,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -1670,8 +1670,8 @@
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
           "record": "2-0-0",
-          "score": 12.9,
-          "projected_score": 112.74,
+          "score": 22.1,
+          "projected_score": 113.5,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -1807,8 +1807,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "1-1-0",
-          "score": 8.3,
-          "projected_score": 124.19,
+          "score": 20.5,
+          "projected_score": 131.47,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2145,7 +2145,7 @@
           "team_id": 11,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 113.52,
+          "projected_score": 113.58,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -2319,33 +2319,33 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 21.3,
+      "value": 36.3,
       "franchise_id": "new-jersey-giants",
       "display_name": "New Jersey Giants"
     },
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 7.9,
-      "franchise_id": "baseball-furies",
-      "display_name": "The Baseball Furies"
+      "value": 20.5,
+      "franchise_id": "north-town-ninnyhammers",
+      "display_name": "North town Ninnyhammers"
     },
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 29.2,
+      "value": 64.2,
       "matchup_id": "2026-w03-baseball-furies--new-jersey-giants"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 13.4,
+      "value": 8.4,
       "matchup_id": "2026-w03-baseball-furies--new-jersey-giants"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 4.6,
+      "value": 1.6,
       "matchup_id": "2026-w03-maine-moose--north-town-ninnyhammers"
     },
     {
