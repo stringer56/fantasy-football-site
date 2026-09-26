@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-09-26T17:39:33Z",
+  "generated_at": "2026-09-26T20:09:43Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-26T17:39:33Z",
+    "source_updated_at": "2026-09-26T20:09:43Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-09-26T17:39:33Z"
+    "source_update_timestamp": "2026-09-26T20:09:43Z"
   },
   "standings": [
     {
@@ -362,7 +362,7 @@
           "team_id": 2,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 113.27,
+          "projected_score": 113.26,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -507,7 +507,7 @@
           "team_id": 5,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 119.23,
+          "projected_score": 119.12,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -699,7 +699,7 @@
           "team_id": 3,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 112.15,
+          "projected_score": 112.27,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -836,7 +836,7 @@
           "team_id": 6,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 118.75,
+          "projected_score": 118.8,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -1036,7 +1036,7 @@
           "team_id": 8,
           "record": "0-2-0",
           "score": 36.3,
-          "projected_score": 111.99,
+          "projected_score": 111.85,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1173,7 +1173,7 @@
           "team_id": 10,
           "record": "0-2-0",
           "score": 27.9,
-          "projected_score": 123.09,
+          "projected_score": 123.35,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1365,7 +1365,7 @@
           "team_id": 4,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 113.79,
+          "projected_score": 113.77,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1510,7 +1510,7 @@
           "team_id": 12,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 107.97,
+          "projected_score": 107.79,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -1847,7 +1847,7 @@
           "team_id": 9,
           "record": "1-1-0",
           "score": 20.5,
-          "projected_score": 130.78,
+          "projected_score": 130.77,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2039,7 +2039,7 @@
           "team_id": 1,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 114.6,
+          "projected_score": 114.64,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2184,11 +2184,11 @@
           "team_id": 11,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 113.51,
+          "projected_score": 112.25,
           "roster": [
             {
-              "player_key": "470.p.29369",
-              "player_name": "Dak Prescott",
+              "player_key": "470.p.34218",
+              "player_name": "Brock Purdy",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -2235,11 +2235,27 @@
               "status": null
             },
             {
+              "player_key": "470.p.40201",
+              "player_name": "Dontayvion Wicks",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.29369",
+              "player_name": "Dak Prescott",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.41824",
               "player_name": "Luther Burden III",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "W/R/T",
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -2251,24 +2267,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.40102",
-              "player_name": "Tucker Kraft",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.32725",
               "player_name": "J.K. Dobbins",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.34218",
-              "player_name": "Brock Purdy",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2377,7 +2377,7 @@
         "team_id": 1,
         "record": "1-1-0",
         "score": 0.0,
-        "projected_score": 114.6,
+        "projected_score": 114.64,
         "roster": [
           {
             "player_key": "470.p.9265",
@@ -2522,11 +2522,11 @@
         "team_id": 11,
         "record": "1-1-0",
         "score": 0.0,
-        "projected_score": 113.51,
+        "projected_score": 112.25,
         "roster": [
           {
-            "player_key": "470.p.29369",
-            "player_name": "Dak Prescott",
+            "player_key": "470.p.34218",
+            "player_name": "Brock Purdy",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "QB",
@@ -2573,11 +2573,27 @@
             "status": null
           },
           {
+            "player_key": "470.p.40201",
+            "player_name": "Dontayvion Wicks",
+            "nfl_team": null,
+            "primary_position": null,
+            "selected_position": "W/R/T",
+            "status": null
+          },
+          {
+            "player_key": "470.p.29369",
+            "player_name": "Dak Prescott",
+            "nfl_team": null,
+            "primary_position": null,
+            "selected_position": "BN",
+            "status": null
+          },
+          {
             "player_key": "470.p.41824",
             "player_name": "Luther Burden III",
             "nfl_team": null,
             "primary_position": null,
-            "selected_position": "W/R/T",
+            "selected_position": "BN",
             "status": null
           },
           {
@@ -2589,24 +2605,8 @@
             "status": null
           },
           {
-            "player_key": "470.p.40102",
-            "player_name": "Tucker Kraft",
-            "nfl_team": null,
-            "primary_position": null,
-            "selected_position": "BN",
-            "status": null
-          },
-          {
             "player_key": "470.p.32725",
             "player_name": "J.K. Dobbins",
-            "nfl_team": null,
-            "primary_position": null,
-            "selected_position": "BN",
-            "status": null
-          },
-          {
-            "player_key": "470.p.34218",
-            "player_name": "Brock Purdy",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
@@ -2779,7 +2779,7 @@
           "team_id": 5,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 119.23,
+          "projected_score": 119.12,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -2940,7 +2940,7 @@
           "team_id": 6,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 118.75,
+          "projected_score": 118.8,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -3109,7 +3109,7 @@
           "team_id": 8,
           "record": "0-2-0",
           "score": 36.3,
-          "projected_score": 111.99,
+          "projected_score": 111.85,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -3270,7 +3270,7 @@
           "team_id": 12,
           "record": "0-2-0",
           "score": 0.0,
-          "projected_score": 107.97,
+          "projected_score": 107.79,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -3439,7 +3439,7 @@
           "team_id": 2,
           "record": "2-0-0",
           "score": 0.0,
-          "projected_score": 113.27,
+          "projected_score": 113.26,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -3608,7 +3608,7 @@
           "team_id": 3,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 112.15,
+          "projected_score": 112.27,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -3769,7 +3769,7 @@
           "team_id": 9,
           "record": "1-1-0",
           "score": 20.5,
-          "projected_score": 130.78,
+          "projected_score": 130.77,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -3930,7 +3930,7 @@
           "team_id": 10,
           "record": "0-2-0",
           "score": 27.9,
-          "projected_score": 123.09,
+          "projected_score": 123.35,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -4252,7 +4252,7 @@
           "team_id": 1,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 114.6,
+          "projected_score": 114.64,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -4421,11 +4421,11 @@
           "team_id": 11,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 113.51,
+          "projected_score": 112.25,
           "roster": [
             {
-              "player_key": "470.p.29369",
-              "player_name": "Dak Prescott",
+              "player_key": "470.p.34218",
+              "player_name": "Brock Purdy",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -4472,11 +4472,27 @@
               "status": null
             },
             {
+              "player_key": "470.p.40201",
+              "player_name": "Dontayvion Wicks",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.29369",
+              "player_name": "Dak Prescott",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.41824",
               "player_name": "Luther Burden III",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "W/R/T",
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -4488,24 +4504,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.40102",
-              "player_name": "Tucker Kraft",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.32725",
               "player_name": "J.K. Dobbins",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.34218",
-              "player_name": "Brock Purdy",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -4582,7 +4582,7 @@
           "team_id": 4,
           "record": "1-1-0",
           "score": 0.0,
-          "projected_score": 113.79,
+          "projected_score": 113.77,
           "roster": [
             {
               "player_key": "470.p.30977",
