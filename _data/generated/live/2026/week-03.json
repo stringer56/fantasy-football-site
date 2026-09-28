@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 3,
-  "generated_at": "2026-09-27T23:06:11Z",
+  "generated_at": "2026-09-28T01:41:14Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-27T23:06:11Z",
+    "source_updated_at": "2026-09-28T01:41:14Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -322,8 +322,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "2-0-0",
-          "score": 115.34,
-          "projected_score": 117.82,
+          "score": 115.44,
+          "projected_score": 115.44,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -467,8 +467,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "2-0-0",
-          "score": 95.0,
-          "projected_score": 119.38,
+          "score": 98.5,
+          "projected_score": 118.17,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -659,8 +659,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "1-1-0",
-          "score": 64.86,
-          "projected_score": 84.02,
+          "score": 89.44,
+          "projected_score": 96.23,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -776,7 +776,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Seahawks",
+              "player_name": "Seattle",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -796,8 +796,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "1-1-0",
-          "score": 79.24,
-          "projected_score": 81.35,
+          "score": 87.64,
+          "projected_score": 87.64,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -996,8 +996,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "0-2-0",
-          "score": 92.5,
-          "projected_score": 120.12,
+          "score": 99.32,
+          "projected_score": 117.26,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1134,7 +1134,7 @@
           "team_id": 10,
           "record": "0-2-0",
           "score": 113.46,
-          "projected_score": 115.63,
+          "projected_score": 113.46,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1325,8 +1325,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "1-1-0",
-          "score": 60.06,
-          "projected_score": 97.95,
+          "score": 68.06,
+          "projected_score": 93.47,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1450,7 +1450,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Denver",
+              "player_name": "Broncos",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1470,8 +1470,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "0-2-0",
-          "score": 68.24,
-          "projected_score": 106.9,
+          "score": 72.04,
+          "projected_score": 106.56,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -1663,7 +1663,7 @@
           "team_id": 7,
           "record": "2-0-0",
           "score": 124.68,
-          "projected_score": 126.85,
+          "projected_score": 124.68,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -1799,8 +1799,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "1-1-0",
-          "score": 149.92,
-          "projected_score": 151.71,
+          "score": 171.42,
+          "projected_score": 171.42,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -1991,8 +1991,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "1-1-0",
-          "score": 75.6,
-          "projected_score": 105.91,
+          "score": 91.82,
+          "projected_score": 108.03,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2136,8 +2136,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "1-1-0",
-          "score": 80.28,
-          "projected_score": 94.33,
+          "score": 92.28,
+          "projected_score": 99.9,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2311,33 +2311,33 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 149.92,
+      "value": 171.42,
       "franchise_id": "north-town-ninnyhammers",
       "display_name": "North town Ninnyhammers"
     },
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 60.06,
+      "value": 68.06,
       "franchise_id": "buffalo-bravado",
       "display_name": "Buffalo Bravados"
     },
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 274.6,
+      "value": 296.1,
       "matchup_id": "2026-w03-maine-moose--north-town-ninnyhammers"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 25.24,
+      "value": 46.74,
       "matchup_id": "2026-w03-maine-moose--north-town-ninnyhammers"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 4.68,
+      "value": 0.46,
       "matchup_id": "2026-w03-turnbull-acs--van-cortlant-rangers"
     },
     {
@@ -2349,20 +2349,7 @@
       "display_name": "Vegas Vandals"
     }
   ],
-  "record_watch": [
-    {
-      "event_id": "2026-w03-maine-moose--north-town-ninnyhammers:north-town-ninnyhammers:weekly-score:record-watch",
-      "type": "weekly_score",
-      "level": "Record Watch",
-      "final": false,
-      "franchise_id": "north-town-ninnyhammers",
-      "display_name": "North town Ninnyhammers",
-      "value": 149.92,
-      "threshold": 162.2,
-      "difference": 12.28,
-      "message": "North town Ninnyhammers is 12.28 points from the verified Top-25 cutoff."
-    }
-  ],
+  "record_watch": [],
   "power_rankings": {
     "status": "unavailable",
     "voting_status": "unconfigured",
