@@ -3,32 +3,32 @@
   "standings": [
     {
       "rank": 1,
-      "team_key": "470.l.26455.t.5",
-      "team_id": 5,
-      "team_name": "Chris's Crazy Team",
-      "wins": 2,
+      "team_key": "470.l.26455.t.2",
+      "team_id": 2,
+      "team_name": "Albany Redskins",
+      "wins": 3,
       "losses": 0,
       "ties": 0,
       "winning_percentage": 1.0,
-      "points_for": 274.98,
-      "points_against": 226.96,
+      "points_for": 366.12,
+      "points_against": 348.2,
       "streak": {
         "type": "win",
-        "value": 2
+        "value": 3
       },
       "playoff_seed": null
     },
     {
       "rank": 2,
-      "team_key": "470.l.26455.t.2",
-      "team_id": 2,
-      "team_name": "Albany Redskins",
+      "team_key": "470.l.26455.t.9",
+      "team_id": 9,
+      "team_name": "North town Ninnyhammers",
       "wins": 2,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "winning_percentage": 1.0,
-      "points_for": 248.68,
-      "points_against": 235.08,
+      "winning_percentage": 0.666667,
+      "points_for": 449.16,
+      "points_against": 368.64,
       "streak": {
         "type": "win",
         "value": 2
@@ -37,15 +37,15 @@
     },
     {
       "rank": 3,
-      "team_key": "470.l.26455.t.7",
-      "team_id": 7,
-      "team_name": "Maine Moose",
+      "team_key": "470.l.26455.t.1",
+      "team_id": 1,
+      "team_name": "Van Cortlant Rangers",
       "wins": 2,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "winning_percentage": 1.0,
-      "points_for": 213.1,
-      "points_against": 159.54,
+      "winning_percentage": 0.666667,
+      "points_for": 394.68,
+      "points_against": 321.76,
       "streak": {
         "type": "win",
         "value": 2
@@ -54,32 +54,32 @@
     },
     {
       "rank": 4,
-      "team_key": "470.l.26455.t.9",
-      "team_id": 9,
-      "team_name": "North town Ninnyhammers",
-      "wins": 1,
+      "team_key": "470.l.26455.t.5",
+      "team_id": 5,
+      "team_name": "Chris's Crazy Team",
+      "wins": 2,
       "losses": 1,
       "ties": 0,
-      "winning_percentage": 0.5,
-      "points_for": 277.74,
-      "points_against": 243.96,
+      "winning_percentage": 0.666667,
+      "points_for": 388.1,
+      "points_against": 344.4,
       "streak": {
-        "type": "win",
+        "type": "loss",
         "value": 1
       },
       "playoff_seed": null
     },
     {
       "rank": 5,
-      "team_key": "470.l.26455.t.11",
-      "team_id": 11,
-      "team_name": "Turnbull AC’s",
-      "wins": 1,
+      "team_key": "470.l.26455.t.4",
+      "team_id": 4,
+      "team_name": "Buffalo Bravados",
+      "wins": 2,
       "losses": 1,
       "ties": 0,
-      "winning_percentage": 0.5,
-      "points_for": 277.16,
-      "points_against": 277.62,
+      "winning_percentage": 0.666667,
+      "points_for": 367.84,
+      "points_against": 328.8,
       "streak": {
         "type": "win",
         "value": 1
@@ -88,32 +88,15 @@
     },
     {
       "rank": 6,
-      "team_key": "470.l.26455.t.1",
-      "team_id": 1,
-      "team_name": "Van Cortlant Rangers",
-      "wins": 1,
+      "team_key": "470.l.26455.t.7",
+      "team_id": 7,
+      "team_name": "Maine Moose",
+      "wins": 2,
       "losses": 1,
       "ties": 0,
-      "winning_percentage": 0.5,
-      "points_for": 270.88,
-      "points_against": 221.28,
-      "streak": {
-        "type": "win",
-        "value": 1
-      },
-      "playoff_seed": null
-    },
-    {
-      "rank": 7,
-      "team_key": "470.l.26455.t.4",
-      "team_id": 4,
-      "team_name": "Buffalo Bravados",
-      "wins": 1,
-      "losses": 1,
-      "ties": 0,
-      "winning_percentage": 0.5,
-      "points_for": 266.48,
-      "points_against": 241.26,
+      "winning_percentage": 0.666667,
+      "points_for": 337.78,
+      "points_against": 330.96,
       "streak": {
         "type": "loss",
         "value": 1
@@ -121,16 +104,33 @@
       "playoff_seed": null
     },
     {
-      "rank": 8,
+      "rank": 7,
       "team_key": "470.l.26455.t.3",
       "team_id": 3,
       "team_name": "Ayahuasca Rush",
-      "wins": 1,
+      "wins": 2,
       "losses": 1,
       "ties": 0,
-      "winning_percentage": 0.5,
-      "points_for": 220.96,
-      "points_against": 195.32,
+      "winning_percentage": 0.666667,
+      "points_for": 318.7,
+      "points_against": 282.96,
+      "streak": {
+        "type": "win",
+        "value": 1
+      },
+      "playoff_seed": null
+    },
+    {
+      "rank": 8,
+      "team_key": "470.l.26455.t.11",
+      "team_id": 11,
+      "team_name": "Turnbull AC’s",
+      "wins": 1,
+      "losses": 2,
+      "ties": 0,
+      "winning_percentage": 0.333333,
+      "points_for": 377.64,
+      "points_against": 401.42,
       "streak": {
         "type": "loss",
         "value": 1
@@ -143,31 +143,31 @@
       "team_id": 6,
       "team_name": "Greendale Human Beings",
       "wins": 1,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "winning_percentage": 0.5,
-      "points_for": 216.0,
-      "points_against": 233.32,
+      "winning_percentage": 0.333333,
+      "points_for": 303.64,
+      "points_against": 331.06,
       "streak": {
         "type": "loss",
-        "value": 1
+        "value": 2
       },
       "playoff_seed": null
     },
     {
       "rank": 10,
-      "team_key": "470.l.26455.t.12",
-      "team_id": 12,
-      "team_name": "Vegas Vandals",
-      "wins": 0,
+      "team_key": "470.l.26455.t.8",
+      "team_id": 8,
+      "team_name": "New Jersey Giants",
+      "wins": 1,
       "losses": 2,
       "ties": 0,
-      "winning_percentage": 0.0,
-      "points_for": 186.64,
-      "points_against": 229.74,
+      "winning_percentage": 0.333333,
+      "points_for": 283.3,
+      "points_against": 336.72,
       "streak": {
-        "type": "loss",
-        "value": 2
+        "type": "win",
+        "value": 1
       },
       "playoff_seed": null
     },
@@ -177,31 +177,31 @@
       "team_id": 10,
       "team_name": "The Baseball Furies",
       "wins": 0,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
       "winning_percentage": 0.0,
-      "points_for": 178.34,
-      "points_against": 299.88,
+      "points_for": 291.8,
+      "points_against": 426.92,
       "streak": {
         "type": "loss",
-        "value": 2
+        "value": 3
       },
       "playoff_seed": null
     },
     {
       "rank": 12,
-      "team_key": "470.l.26455.t.8",
-      "team_id": 8,
-      "team_name": "New Jersey Giants",
+      "team_key": "470.l.26455.t.12",
+      "team_id": 12,
+      "team_name": "Vegas Vandals",
       "wins": 0,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
       "winning_percentage": 0.0,
-      "points_for": 156.26,
-      "points_against": 223.26,
+      "points_for": 274.18,
+      "points_against": 331.1,
       "streak": {
         "type": "loss",
-        "value": 2
+        "value": 3
       },
       "playoff_seed": null
     }
