@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 4,
-  "generated_at": "2026-09-29T14:59:43Z",
+  "generated_at": "2026-09-29T19:56:34Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-29T14:59:43Z",
+    "source_updated_at": "2026-09-29T19:56:34Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-0-0",
           "score": 0.0,
-          "projected_score": 98.78,
+          "projected_score": 115.71,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -468,7 +468,7 @@
           "team_id": 6,
           "record": "1-2-0",
           "score": 0.0,
-          "projected_score": 110.62,
+          "projected_score": 115.92,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 107.38,
+          "projected_score": 109.88,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -797,7 +797,7 @@
           "team_id": 7,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 121.64,
+          "projected_score": 121.63,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -989,7 +989,7 @@
           "team_id": 10,
           "record": "0-3-0",
           "score": 0.0,
-          "projected_score": 109.27,
+          "projected_score": 112.06,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1126,7 +1126,7 @@
           "team_id": 11,
           "record": "1-2-0",
           "score": 0.0,
-          "projected_score": 103.13,
+          "projected_score": 103.64,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1318,7 +1318,7 @@
           "team_id": 4,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 109.03,
+          "projected_score": 110.81,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1463,7 +1463,7 @@
           "team_id": 5,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 110.54,
+          "projected_score": 115.25,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1655,7 +1655,7 @@
           "team_id": 8,
           "record": "1-2-0",
           "score": 0.0,
-          "projected_score": 110.95,
+          "projected_score": 110.27,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1792,11 +1792,11 @@
           "team_id": 9,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 118.85,
+          "projected_score": 122.67,
           "roster": [
             {
-              "player_key": "470.p.29235",
-              "player_name": "Jared Goff",
+              "player_key": "470.p.33389",
+              "player_name": "Trevor Lawrence",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -1851,6 +1851,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.29235",
+              "player_name": "Jared Goff",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.34095",
               "player_name": "Isaiah Likely",
               "nfl_team": null,
@@ -1869,14 +1877,6 @@
             {
               "player_key": "470.p.32671",
               "player_name": "Joe Burrow",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.33389",
-              "player_name": "Trevor Lawrence",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1984,7 +1984,7 @@
           "team_id": 1,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 106.91,
+          "projected_score": 111.5,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2129,7 +2129,7 @@
           "team_id": 12,
           "record": "0-3-0",
           "score": 0.0,
-          "projected_score": 101.51,
+          "projected_score": 104.48,
           "roster": [
             {
               "player_key": "470.p.32676",
