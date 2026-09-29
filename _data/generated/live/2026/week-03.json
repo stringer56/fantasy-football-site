@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 3,
-  "generated_at": "2026-09-28T22:02:34Z",
+  "generated_at": "2026-09-29T01:59:02Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-28T22:02:34Z",
+    "source_updated_at": "2026-09-29T01:59:02Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -467,8 +467,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "2-0-0",
-          "score": 99.5,
-          "projected_score": 119.14,
+          "score": 110.06,
+          "projected_score": 119.31,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -996,8 +996,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "0-2-0",
-          "score": 121.94,
-          "projected_score": 129.49,
+          "score": 123.84,
+          "projected_score": 127.46,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1325,8 +1325,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "1-1-0",
-          "score": 82.06,
-          "projected_score": 107.24,
+          "score": 95.06,
+          "projected_score": 106.89,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1470,8 +1470,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "0-2-0",
-          "score": 72.04,
-          "projected_score": 106.84,
+          "score": 90.34,
+          "projected_score": 101.91,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -2136,8 +2136,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "1-1-0",
-          "score": 96.28,
-          "projected_score": 103.84,
+          "score": 98.08,
+          "projected_score": 101.74,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2318,9 +2318,9 @@
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 72.04,
-      "franchise_id": "vegas-vandals",
-      "display_name": "Vegas Vandals"
+      "value": 87.64,
+      "franchise_id": "greendale-human-beings",
+      "display_name": "Greendale Human Beings"
     },
     {
       "fact_id": "highest-combined",
@@ -2337,8 +2337,8 @@
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 8.48,
-      "matchup_id": "2026-w03-baseball-furies--new-jersey-giants"
+      "value": 4.72,
+      "matchup_id": "2026-w03-buffalo-bravado--vegas-vandals"
     },
     {
       "fact_id": "longest-active-streak",
