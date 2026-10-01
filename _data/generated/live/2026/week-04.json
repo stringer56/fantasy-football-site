@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 4,
-  "generated_at": "2026-10-01T12:56:52Z",
+  "generated_at": "2026-10-01T18:46:35Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-01T12:56:52Z",
+    "source_updated_at": "2026-10-01T18:46:35Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-0-0",
           "score": 0.0,
-          "projected_score": 118.05,
+          "projected_score": 118.14,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -468,7 +468,7 @@
           "team_id": 6,
           "record": "1-2-0",
           "score": 0.0,
-          "projected_score": 119.11,
+          "projected_score": 118.85,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 110.14,
+          "projected_score": 110.46,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -797,7 +797,7 @@
           "team_id": 7,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 121.49,
+          "projected_score": 121.66,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -989,7 +989,7 @@
           "team_id": 10,
           "record": "0-3-0",
           "score": 0.0,
-          "projected_score": 112.3,
+          "projected_score": 112.51,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1126,7 +1126,7 @@
           "team_id": 11,
           "record": "1-2-0",
           "score": 0.0,
-          "projected_score": 100.4,
+          "projected_score": 102.61,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1177,11 +1177,19 @@
               "status": null
             },
             {
+              "player_key": "470.p.28534",
+              "player_name": "Stefon Diggs",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
               "player_key": "470.p.40201",
               "player_name": "Dontayvion Wicks",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "W/R/T",
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -1195,14 +1203,6 @@
             {
               "player_key": "470.p.41824",
               "player_name": "Luther Burden III",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.28534",
-              "player_name": "Stefon Diggs",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1318,7 +1318,7 @@
           "team_id": 4,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 111.11,
+          "projected_score": 111.13,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1463,7 +1463,7 @@
           "team_id": 5,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 115.59,
+          "projected_score": 117.54,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1482,8 +1482,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.41821",
-              "player_name": "Quinshon Judkins",
+              "player_key": "470.p.30295",
+              "player_name": "Aaron Jones Sr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
@@ -1522,6 +1522,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.41821",
+              "player_name": "Quinshon Judkins",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.40971",
               "player_name": "MarShawn Lloyd",
               "nfl_team": null,
@@ -1548,14 +1556,6 @@
             {
               "player_key": "470.p.40877",
               "player_name": "Xavier Worthy",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.30295",
-              "player_name": "Aaron Jones Sr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1655,7 +1655,7 @@
           "team_id": 8,
           "record": "1-2-0",
           "score": 0.0,
-          "projected_score": 115.97,
+          "projected_score": 116.01,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1792,7 +1792,7 @@
           "team_id": 9,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 123.09,
+          "projected_score": 123.08,
           "roster": [
             {
               "player_key": "470.p.33389",
@@ -1984,7 +1984,7 @@
           "team_id": 1,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 118.26,
+          "projected_score": 118.56,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2083,8 +2083,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.40707",
-              "player_name": "Emanuel Wilson",
+              "player_key": "470.p.41010",
+              "player_name": "Jaylen Wright",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2129,7 +2129,7 @@
           "team_id": 12,
           "record": "0-3-0",
           "score": 0.0,
-          "projected_score": 104.29,
+          "projected_score": 104.12,
           "roster": [
             {
               "player_key": "470.p.32676",
