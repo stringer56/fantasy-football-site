@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 4,
-  "generated_at": "2026-10-02T02:16:52Z",
+  "generated_at": "2026-10-02T08:51:17Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-02T02:16:52Z",
+    "source_updated_at": "2026-10-02T08:51:17Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -322,8 +322,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "3-0-0",
-          "score": 3.2,
-          "projected_score": 116.46,
+          "score": 16.0,
+          "projected_score": 125.34,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -447,7 +447,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Baltimore",
+              "player_name": "Ravens",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -467,8 +467,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "1-2-0",
-          "score": 20.0,
-          "projected_score": 123.88,
+          "score": 27.0,
+          "projected_score": 119.86,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 110.13,
+          "projected_score": 110.08,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -776,7 +776,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Seattle",
+              "player_name": "Seahawks",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -797,7 +797,7 @@
           "team_id": 7,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 121.65,
+          "projected_score": 121.58,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -988,8 +988,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "0-3-0",
-          "score": 8.5,
-          "projected_score": 115.53,
+          "score": 10.2,
+          "projected_score": 113.16,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1125,8 +1125,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "1-2-0",
-          "score": 1.0,
-          "projected_score": 91.55,
+          "score": 10.0,
+          "projected_score": 98.8,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1242,7 +1242,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Steelers",
+              "player_name": "Pittsburgh",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1318,7 +1318,7 @@
           "team_id": 4,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 108.23,
+          "projected_score": 108.25,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1442,7 +1442,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Denver",
+              "player_name": "Broncos",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1655,7 +1655,7 @@
           "team_id": 8,
           "record": "1-2-0",
           "score": 0.0,
-          "projected_score": 117.65,
+          "projected_score": 117.66,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1792,7 +1792,7 @@
           "team_id": 9,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 123.05,
+          "projected_score": 123.0,
           "roster": [
             {
               "player_key": "470.p.33389",
@@ -1984,7 +1984,7 @@
           "team_id": 1,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 117.85,
+          "projected_score": 117.61,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2129,7 +2129,7 @@
           "team_id": 12,
           "record": "0-3-0",
           "score": 0.0,
-          "projected_score": 104.31,
+          "projected_score": 105.01,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -2311,33 +2311,33 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 20.0,
+      "value": 27.0,
       "franchise_id": "greendale-human-beings",
       "display_name": "Greendale Human Beings"
     },
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 1.0,
+      "value": 10.0,
       "franchise_id": "turnbull-acs",
       "display_name": "Turnbull AC’s"
     },
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 23.2,
+      "value": 43.0,
       "matchup_id": "2026-w04-albany-kneelers--greendale-human-beings"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 16.8,
+      "value": 11.0,
       "matchup_id": "2026-w04-albany-kneelers--greendale-human-beings"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 7.5,
+      "value": 0.2,
       "matchup_id": "2026-w04-baseball-furies--turnbull-acs"
     },
     {
