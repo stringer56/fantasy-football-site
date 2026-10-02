@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 4,
-  "generated_at": "2026-10-02T15:30:54Z",
+  "generated_at": "2026-10-02T20:08:21Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-02T15:30:54Z",
+    "source_updated_at": "2026-10-02T20:08:21Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -468,7 +468,7 @@
           "team_id": 6,
           "record": "1-2-0",
           "score": 27.0,
-          "projected_score": 119.95,
+          "projected_score": 105.46,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 110.46,
+          "projected_score": 110.76,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -797,7 +797,7 @@
           "team_id": 7,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 121.57,
+          "projected_score": 121.54,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -989,7 +989,7 @@
           "team_id": 10,
           "record": "0-3-0",
           "score": 10.2,
-          "projected_score": 113.33,
+          "projected_score": 116.0,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1126,7 +1126,7 @@
           "team_id": 11,
           "record": "1-2-0",
           "score": 10.0,
-          "projected_score": 94.73,
+          "projected_score": 94.79,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1318,7 +1318,7 @@
           "team_id": 4,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 108.18,
+          "projected_score": 108.16,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1463,7 +1463,7 @@
           "team_id": 5,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 117.23,
+          "projected_score": 117.2,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1655,11 +1655,11 @@
           "team_id": 8,
           "record": "1-2-0",
           "score": 0.0,
-          "projected_score": 117.88,
+          "projected_score": 116.87,
           "roster": [
             {
-              "player_key": "470.p.40875",
-              "player_name": "Bo Nix",
+              "player_key": "470.p.31838",
+              "player_name": "Daniel Jones",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -1698,8 +1698,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.41795",
-              "player_name": "Colston Loveland",
+              "player_key": "470.p.42638",
+              "player_name": "Kenyon Sadiq",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "TE",
@@ -1711,6 +1711,22 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40875",
+              "player_name": "Bo Nix",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41795",
+              "player_name": "Colston Loveland",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -1740,14 +1756,6 @@
             {
               "player_key": "470.p.34047",
               "player_name": "Rachaad White",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.42638",
-              "player_name": "Kenyon Sadiq",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1792,7 +1800,7 @@
           "team_id": 9,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 123.28,
+          "projected_score": 123.62,
           "roster": [
             {
               "player_key": "470.p.33389",
@@ -1984,7 +1992,7 @@
           "team_id": 1,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 118.24,
+          "projected_score": 117.94,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2019,8 +2027,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.40908",
-              "player_name": "Ladd McConkey",
+              "player_key": "470.p.27581",
+              "player_name": "Davante Adams",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -2035,8 +2043,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.27581",
-              "player_name": "Davante Adams",
+              "player_key": "470.p.40908",
+              "player_name": "Ladd McConkey",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
@@ -2129,7 +2137,7 @@
           "team_id": 12,
           "record": "0-3-0",
           "score": 0.0,
-          "projected_score": 105.04,
+          "projected_score": 107.59,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -2148,8 +2156,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.41807",
-              "player_name": "Omarion Hampton",
+              "player_key": "470.p.40981",
+              "player_name": "Braelon Allen",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
@@ -2188,6 +2196,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.41807",
+              "player_name": "Omarion Hampton",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.40901",
               "player_name": "Rome Odunze",
               "nfl_team": null,
@@ -2222,14 +2238,6 @@
             {
               "player_key": "470.p.40119",
               "player_name": "Tyjae Spears",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40981",
-              "player_name": "Braelon Allen",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
