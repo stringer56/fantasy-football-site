@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 4,
-  "generated_at": "2026-10-02T20:08:21Z",
+  "generated_at": "2026-10-02T23:47:41Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-02T20:08:21Z",
+    "source_updated_at": "2026-10-02T23:47:41Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-0-0",
           "score": 16.0,
-          "projected_score": 125.32,
+          "projected_score": 125.25,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -468,7 +468,7 @@
           "team_id": 6,
           "record": "1-2-0",
           "score": 27.0,
-          "projected_score": 105.46,
+          "projected_score": 110.98,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -495,16 +495,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.32692",
-              "player_name": "Justin Jefferson",
+              "player_key": "470.p.42661",
+              "player_name": "Denzel Boston",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.42661",
-              "player_name": "Denzel Boston",
+              "player_key": "470.p.40039",
+              "player_name": "Zay Flowers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -519,11 +519,19 @@
               "status": null
             },
             {
-              "player_key": "470.p.40039",
-              "player_name": "Zay Flowers",
+              "player_key": "470.p.41969",
+              "player_name": "Ollie Gordon II",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.32692",
+              "player_name": "Justin Jefferson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -545,14 +553,6 @@
             {
               "player_key": "470.p.32704",
               "player_name": "Michael Pittman Jr.",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.41969",
-              "player_name": "Ollie Gordon II",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 110.76,
+          "projected_score": 110.94,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -797,7 +797,7 @@
           "team_id": 7,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 121.54,
+          "projected_score": 121.56,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -989,7 +989,7 @@
           "team_id": 10,
           "record": "0-3-0",
           "score": 10.2,
-          "projected_score": 116.0,
+          "projected_score": 115.92,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1318,7 +1318,7 @@
           "team_id": 4,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 108.16,
+          "projected_score": 108.42,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1463,7 +1463,7 @@
           "team_id": 5,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 117.2,
+          "projected_score": 117.18,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1655,7 +1655,7 @@
           "team_id": 8,
           "record": "1-2-0",
           "score": 0.0,
-          "projected_score": 116.87,
+          "projected_score": 116.8,
           "roster": [
             {
               "player_key": "470.p.31838",
@@ -1800,7 +1800,7 @@
           "team_id": 9,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 123.62,
+          "projected_score": 120.27,
           "roster": [
             {
               "player_key": "470.p.33389",
@@ -1819,8 +1819,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.42654",
-              "player_name": "Jadarian Price",
+              "player_key": "470.p.40231",
+              "player_name": "Chris Rodriguez Jr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
@@ -1859,6 +1859,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.42654",
+              "player_name": "Jadarian Price",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.29235",
               "player_name": "Jared Goff",
               "nfl_team": null,
@@ -1893,14 +1901,6 @@
             {
               "player_key": "470.p.42642",
               "player_name": "Makai Lemon",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40231",
-              "player_name": "Chris Rodriguez Jr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1992,7 +1992,7 @@
           "team_id": 1,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 117.94,
+          "projected_score": 117.93,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2137,7 +2137,7 @@
           "team_id": 12,
           "record": "0-3-0",
           "score": 0.0,
-          "projected_score": 107.59,
+          "projected_score": 106.82,
           "roster": [
             {
               "player_key": "470.p.32676",
