@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 4,
-  "generated_at": "2026-10-01T23:01:53Z",
+  "generated_at": "2026-10-02T02:16:52Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-01T23:01:53Z",
+    "source_updated_at": "2026-10-02T02:16:52Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -322,8 +322,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "3-0-0",
-          "score": 0.0,
-          "projected_score": 118.66,
+          "score": 3.2,
+          "projected_score": 116.46,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -447,7 +447,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Ravens",
+              "player_name": "Baltimore",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -467,8 +467,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "1-2-0",
-          "score": 0.0,
-          "projected_score": 118.91,
+          "score": 20.0,
+          "projected_score": 123.88,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 110.15,
+          "projected_score": 110.13,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -776,7 +776,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Seahawks",
+              "player_name": "Seattle",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -797,7 +797,7 @@
           "team_id": 7,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 121.75,
+          "projected_score": 121.65,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -988,8 +988,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "0-3-0",
-          "score": 0.0,
-          "projected_score": 112.58,
+          "score": 8.5,
+          "projected_score": 115.53,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1056,14 +1056,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.33413",
-              "player_name": "Travis Etienne Jr.",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.41293",
               "player_name": "Jalen Coker",
               "nfl_team": null,
@@ -1096,6 +1088,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.33413",
+              "player_name": "Travis Etienne Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "IR",
+              "status": null
+            },
+            {
               "player_key": "470.p.28378",
               "player_name": "Jason Myers",
               "nfl_team": null,
@@ -1125,8 +1125,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "1-2-0",
-          "score": 0.0,
-          "projected_score": 102.65,
+          "score": 1.0,
+          "projected_score": 91.55,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1318,7 +1318,7 @@
           "team_id": 4,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 111.19,
+          "projected_score": 108.23,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1345,16 +1345,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.33398",
-              "player_name": "DeVonta Smith",
+              "player_key": "470.p.26699",
+              "player_name": "Keenan Allen",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.26699",
-              "player_name": "Keenan Allen",
+              "player_key": "470.p.41097",
+              "player_name": "Devaughn Vele",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -1377,8 +1377,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.41097",
-              "player_name": "Devaughn Vele",
+              "player_key": "470.p.33398",
+              "player_name": "DeVonta Smith",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1442,7 +1442,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Broncos",
+              "player_name": "Denver",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1463,7 +1463,7 @@
           "team_id": 5,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 117.52,
+          "projected_score": 117.28,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1655,7 +1655,7 @@
           "team_id": 8,
           "record": "1-2-0",
           "score": 0.0,
-          "projected_score": 117.78,
+          "projected_score": 117.65,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1792,7 +1792,7 @@
           "team_id": 9,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 123.08,
+          "projected_score": 123.05,
           "roster": [
             {
               "player_key": "470.p.33389",
@@ -1984,7 +1984,7 @@
           "team_id": 1,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 117.99,
+          "projected_score": 117.85,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2129,7 +2129,7 @@
           "team_id": 12,
           "record": "0-3-0",
           "score": 0.0,
-          "projected_score": 104.16,
+          "projected_score": 104.31,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -2307,7 +2307,48 @@
       }
     }
   ],
-  "weekly_facts": [],
+  "weekly_facts": [
+    {
+      "fact_id": "highest-score",
+      "label": "Highest score",
+      "value": 20.0,
+      "franchise_id": "greendale-human-beings",
+      "display_name": "Greendale Human Beings"
+    },
+    {
+      "fact_id": "lowest-score",
+      "label": "Lowest score",
+      "value": 1.0,
+      "franchise_id": "turnbull-acs",
+      "display_name": "Turnbull AC’s"
+    },
+    {
+      "fact_id": "highest-combined",
+      "label": "Highest combined score",
+      "value": 23.2,
+      "matchup_id": "2026-w04-albany-kneelers--greendale-human-beings"
+    },
+    {
+      "fact_id": "biggest-win",
+      "label": "Biggest lead",
+      "value": 16.8,
+      "matchup_id": "2026-w04-albany-kneelers--greendale-human-beings"
+    },
+    {
+      "fact_id": "closest-game",
+      "label": "Closest game",
+      "value": 7.5,
+      "matchup_id": "2026-w04-baseball-furies--turnbull-acs"
+    },
+    {
+      "fact_id": "longest-active-streak",
+      "label": "Longest active streak",
+      "value": 3,
+      "streak_type": "loss",
+      "franchise_id": "vegas-vandals",
+      "display_name": "Vegas Vandals"
+    }
+  ],
   "record_watch": [],
   "power_rankings": {
     "status": "unavailable",
