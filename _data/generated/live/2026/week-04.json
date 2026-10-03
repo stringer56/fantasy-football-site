@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 4,
-  "generated_at": "2026-10-03T18:17:50Z",
+  "generated_at": "2026-10-03T21:39:13Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-03T18:17:50Z",
+    "source_updated_at": "2026-10-03T21:39:13Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -468,7 +468,7 @@
           "team_id": 6,
           "record": "1-2-0",
           "score": 27.0,
-          "projected_score": 110.25,
+          "projected_score": 110.3,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 110.85,
+          "projected_score": 110.89,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -797,7 +797,7 @@
           "team_id": 7,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 123.16,
+          "projected_score": 123.13,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -989,7 +989,7 @@
           "team_id": 10,
           "record": "0-3-0",
           "score": 10.2,
-          "projected_score": 116.02,
+          "projected_score": 116.09,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1126,7 +1126,7 @@
           "team_id": 11,
           "record": "1-2-0",
           "score": 10.0,
-          "projected_score": 96.65,
+          "projected_score": 104.77,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1145,8 +1145,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.33991",
-              "player_name": "Breece Hall",
+              "player_key": "470.p.32725",
+              "player_name": "J.K. Dobbins",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
@@ -1185,6 +1185,22 @@
               "status": null
             },
             {
+              "player_key": "470.p.40641",
+              "player_name": "Keaton Mitchell",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33991",
+              "player_name": "Breece Hall",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.40201",
               "player_name": "Dontayvion Wicks",
               "nfl_team": null,
@@ -1203,22 +1219,6 @@
             {
               "player_key": "470.p.41824",
               "player_name": "Luther Burden III",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.32725",
-              "player_name": "J.K. Dobbins",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40641",
-              "player_name": "Keaton Mitchell",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1463,7 +1463,7 @@
           "team_id": 5,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 117.3,
+          "projected_score": 117.31,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1655,7 +1655,7 @@
           "team_id": 8,
           "record": "1-2-0",
           "score": 0.0,
-          "projected_score": 116.67,
+          "projected_score": 116.74,
           "roster": [
             {
               "player_key": "470.p.31838",
@@ -1800,7 +1800,7 @@
           "team_id": 9,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 120.58,
+          "projected_score": 120.64,
           "roster": [
             {
               "player_key": "470.p.33389",
@@ -1859,14 +1859,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.42654",
-              "player_name": "Jadarian Price",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.29235",
               "player_name": "Jared Goff",
               "nfl_team": null,
@@ -1904,6 +1896,14 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42654",
+              "player_name": "Jadarian Price",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "IR",
               "status": null
             },
             {
@@ -1992,7 +1992,7 @@
           "team_id": 1,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 118.23,
+          "projected_score": 118.3,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2137,7 +2137,7 @@
           "team_id": 12,
           "record": "0-3-0",
           "score": 0.0,
-          "projected_score": 97.32,
+          "projected_score": 97.33,
           "roster": [
             {
               "player_key": "470.p.32676",
