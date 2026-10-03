@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 4,
-  "generated_at": "2026-10-03T10:00:05Z",
+  "generated_at": "2026-10-03T14:41:06Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-03T10:00:05Z",
+    "source_updated_at": "2026-10-03T14:41:06Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-0-0",
           "score": 16.0,
-          "projected_score": 124.56,
+          "projected_score": 124.41,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -447,7 +447,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Ravens",
+              "player_name": "Baltimore",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -468,7 +468,7 @@
           "team_id": 6,
           "record": "1-2-0",
           "score": 27.0,
-          "projected_score": 110.6,
+          "projected_score": 110.59,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 110.81,
+          "projected_score": 110.79,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -797,7 +797,7 @@
           "team_id": 7,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 122.03,
+          "projected_score": 121.96,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -1105,7 +1105,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Texans",
+              "player_name": "Houston",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1126,7 +1126,7 @@
           "team_id": 11,
           "record": "1-2-0",
           "score": 10.0,
-          "projected_score": 94.9,
+          "projected_score": 94.92,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1318,7 +1318,7 @@
           "team_id": 4,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 108.53,
+          "projected_score": 108.6,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1442,7 +1442,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Denver",
+              "player_name": "Broncos",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1463,7 +1463,7 @@
           "team_id": 5,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 117.4,
+          "projected_score": 117.39,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1579,7 +1579,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Jaguars",
+              "player_name": "Jacksonville",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1800,7 +1800,7 @@
           "team_id": 9,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 120.47,
+          "projected_score": 120.44,
           "roster": [
             {
               "player_key": "470.p.33389",
@@ -1992,7 +1992,7 @@
           "team_id": 1,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 117.48,
+          "projected_score": 118.0,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2137,7 +2137,7 @@
           "team_id": 12,
           "record": "0-3-0",
           "score": 0.0,
-          "projected_score": 106.89,
+          "projected_score": 107.02,
           "roster": [
             {
               "player_key": "470.p.32676",
