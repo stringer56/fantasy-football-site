@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-10-04T05:55:45Z",
+  "generated_at": "2026-10-04T11:59:28Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-04T05:55:45Z",
+    "source_updated_at": "2026-10-04T11:59:28Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-10-04T05:55:45Z"
+    "source_update_timestamp": "2026-10-04T11:59:28Z"
   },
   "standings": [
     {
@@ -362,7 +362,7 @@
           "team_id": 2,
           "record": "3-0-0",
           "score": 16.0,
-          "projected_score": 122.86,
+          "projected_score": 122.93,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -699,7 +699,7 @@
           "team_id": 3,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 110.98,
+          "projected_score": 110.97,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -836,7 +836,7 @@
           "team_id": 7,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 123.05,
+          "projected_score": 123.03,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -1028,7 +1028,7 @@
           "team_id": 10,
           "record": "0-3-0",
           "score": 10.2,
-          "projected_score": 116.22,
+          "projected_score": 116.13,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1165,7 +1165,7 @@
           "team_id": 11,
           "record": "1-2-0",
           "score": 10.0,
-          "projected_score": 104.74,
+          "projected_score": 104.73,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1357,7 +1357,7 @@
           "team_id": 4,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 107.91,
+          "projected_score": 107.84,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1502,7 +1502,7 @@
           "team_id": 5,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 117.47,
+          "projected_score": 117.73,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1694,7 +1694,7 @@
           "team_id": 8,
           "record": "1-2-0",
           "score": 0.0,
-          "projected_score": 116.71,
+          "projected_score": 116.63,
           "roster": [
             {
               "player_key": "470.p.31838",
@@ -1839,7 +1839,7 @@
           "team_id": 9,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 120.75,
+          "projected_score": 120.66,
           "roster": [
             {
               "player_key": "470.p.33389",
@@ -1932,6 +1932,14 @@
             {
               "player_key": "470.p.42642",
               "player_name": "Makai Lemon",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40707",
+              "player_name": "Emanuel Wilson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2031,7 +2039,7 @@
           "team_id": 1,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 118.35,
+          "projected_score": 118.38,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2176,7 +2184,7 @@
           "team_id": 12,
           "record": "0-3-0",
           "score": 0.0,
-          "projected_score": 97.4,
+          "projected_score": 97.48,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -2377,7 +2385,7 @@
         "team_id": 8,
         "record": "1-2-0",
         "score": 0.0,
-        "projected_score": 116.71,
+        "projected_score": 116.63,
         "roster": [
           {
             "player_key": "470.p.31838",
@@ -2522,7 +2530,7 @@
         "team_id": 9,
         "record": "2-1-0",
         "score": 0.0,
-        "projected_score": 120.75,
+        "projected_score": 120.66,
         "roster": [
           {
             "player_key": "470.p.33389",
@@ -2615,6 +2623,14 @@
           {
             "player_key": "470.p.42642",
             "player_name": "Makai Lemon",
+            "nfl_team": null,
+            "primary_position": null,
+            "selected_position": "BN",
+            "status": null
+          },
+          {
+            "player_key": "470.p.40707",
+            "player_name": "Emanuel Wilson",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
@@ -2940,7 +2956,7 @@
           "team_id": 7,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 123.05,
+          "projected_score": 123.03,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -3101,7 +3117,7 @@
           "team_id": 11,
           "record": "1-2-0",
           "score": 10.0,
-          "projected_score": 104.74,
+          "projected_score": 104.73,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -3262,7 +3278,7 @@
           "team_id": 5,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 117.47,
+          "projected_score": 117.73,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -3423,7 +3439,7 @@
           "team_id": 4,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 107.91,
+          "projected_score": 107.84,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -3592,7 +3608,7 @@
           "team_id": 2,
           "record": "3-0-0",
           "score": 16.0,
-          "projected_score": 122.86,
+          "projected_score": 122.93,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -3761,7 +3777,7 @@
           "team_id": 3,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 110.98,
+          "projected_score": 110.97,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -3922,7 +3938,7 @@
           "team_id": 9,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 120.75,
+          "projected_score": 120.66,
           "roster": [
             {
               "player_key": "470.p.33389",
@@ -4021,6 +4037,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.40707",
+              "player_name": "Emanuel Wilson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.42654",
               "player_name": "Jadarian Price",
               "nfl_team": null,
@@ -4083,7 +4107,7 @@
           "team_id": 8,
           "record": "1-2-0",
           "score": 0.0,
-          "projected_score": 116.71,
+          "projected_score": 116.63,
           "roster": [
             {
               "player_key": "470.p.31838",
@@ -4252,7 +4276,7 @@
           "team_id": 10,
           "record": "0-3-0",
           "score": 10.2,
-          "projected_score": 116.22,
+          "projected_score": 116.13,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -4413,7 +4437,7 @@
           "team_id": 12,
           "record": "0-3-0",
           "score": 0.0,
-          "projected_score": 97.4,
+          "projected_score": 97.48,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -4582,7 +4606,7 @@
           "team_id": 1,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 118.35,
+          "projected_score": 118.38,
           "roster": [
             {
               "player_key": "470.p.9265",
