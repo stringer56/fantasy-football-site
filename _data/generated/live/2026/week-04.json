@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 4,
-  "generated_at": "2026-10-04T11:59:28Z",
+  "generated_at": "2026-10-04T16:48:11Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-04T11:59:28Z",
+    "source_updated_at": "2026-10-04T16:48:11Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-0-0",
           "score": 16.0,
-          "projected_score": 122.93,
+          "projected_score": 124.56,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -390,14 +390,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.33100",
-              "player_name": "Rico Dowdle",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.31856",
               "player_name": "Josh Jacobs",
               "nfl_team": null,
@@ -424,6 +416,14 @@
             {
               "player_key": "470.p.29399",
               "player_name": "Tyreek Hill",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40102",
+              "player_name": "Tucker Kraft",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -468,7 +468,7 @@
           "team_id": 6,
           "record": "1-2-0",
           "score": 27.0,
-          "projected_score": 110.33,
+          "projected_score": 111.19,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 110.97,
+          "projected_score": 116.71,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -703,8 +703,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.31056",
-              "player_name": "Mark Andrews",
+              "player_key": "470.p.40878",
+              "player_name": "Brock Bowers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "TE",
@@ -719,8 +719,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.40878",
-              "player_name": "Brock Bowers",
+              "player_key": "470.p.31056",
+              "player_name": "Mark Andrews",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -796,8 +796,8 @@
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
           "record": "2-1-0",
-          "score": 0.0,
-          "projected_score": 123.03,
+          "score": 6.6,
+          "projected_score": 118.43,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -988,8 +988,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "0-3-0",
-          "score": 10.2,
-          "projected_score": 116.13,
+          "score": 32.4,
+          "projected_score": 119.08,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1125,8 +1125,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "1-2-0",
-          "score": 10.0,
-          "projected_score": 104.73,
+          "score": 16.0,
+          "projected_score": 99.81,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1318,7 +1318,7 @@
           "team_id": 4,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 107.84,
+          "projected_score": 107.87,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1463,7 +1463,7 @@
           "team_id": 5,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 117.73,
+          "projected_score": 120.55,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1654,8 +1654,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "1-2-0",
-          "score": 0.0,
-          "projected_score": 116.63,
+          "score": 8.92,
+          "projected_score": 107.45,
           "roster": [
             {
               "player_key": "470.p.31838",
@@ -1800,7 +1800,7 @@
           "team_id": 9,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 120.66,
+          "projected_score": 123.69,
           "roster": [
             {
               "player_key": "470.p.33389",
@@ -1819,8 +1819,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.40231",
-              "player_name": "Chris Rodriguez Jr.",
+              "player_key": "470.p.40707",
+              "player_name": "Emanuel Wilson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
@@ -1859,6 +1859,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.40231",
+              "player_name": "Chris Rodriguez Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.29235",
               "player_name": "Jared Goff",
               "nfl_team": null,
@@ -1893,14 +1901,6 @@
             {
               "player_key": "470.p.42642",
               "player_name": "Makai Lemon",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40707",
-              "player_name": "Emanuel Wilson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2000,7 +2000,7 @@
           "team_id": 1,
           "record": "2-1-0",
           "score": 0.0,
-          "projected_score": 118.38,
+          "projected_score": 119.63,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2145,7 +2145,7 @@
           "team_id": 12,
           "record": "0-3-0",
           "score": 0.0,
-          "projected_score": 97.48,
+          "projected_score": 97.7,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -2327,34 +2327,34 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 27.0,
-      "franchise_id": "greendale-human-beings",
-      "display_name": "Greendale Human Beings"
+      "value": 32.4,
+      "franchise_id": "baseball-furies",
+      "display_name": "The Baseball Furies"
     },
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 10.0,
-      "franchise_id": "turnbull-acs",
-      "display_name": "Turnbull AC’s"
+      "value": 0.0,
+      "franchise_id": "ayahuasca-rush",
+      "display_name": "Ayahuasca Rush"
     },
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 43.0,
-      "matchup_id": "2026-w04-albany-kneelers--greendale-human-beings"
+      "value": 48.4,
+      "matchup_id": "2026-w04-baseball-furies--turnbull-acs"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 11.0,
-      "matchup_id": "2026-w04-albany-kneelers--greendale-human-beings"
+      "value": 16.4,
+      "matchup_id": "2026-w04-baseball-furies--turnbull-acs"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 0.2,
-      "matchup_id": "2026-w04-baseball-furies--turnbull-acs"
+      "value": 6.6,
+      "matchup_id": "2026-w04-ayahuasca-rush--maine-moose"
     },
     {
       "fact_id": "longest-active-streak",
