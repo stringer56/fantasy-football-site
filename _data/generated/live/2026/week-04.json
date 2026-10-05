@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 4,
-  "generated_at": "2026-10-05T01:43:41Z",
+  "generated_at": "2026-10-05T07:43:24Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-05T01:43:41Z",
+    "source_updated_at": "2026-10-05T07:43:24Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -467,8 +467,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "1-2-0",
-          "score": 117.52,
-          "projected_score": 127.89,
+          "score": 127.16,
+          "projected_score": 127.16,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -796,8 +796,8 @@
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
           "record": "2-1-0",
-          "score": 117.08,
-          "projected_score": 128.73,
+          "score": 121.38,
+          "projected_score": 121.38,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -1105,7 +1105,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Houston",
+              "player_name": "Texans",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1242,7 +1242,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Pittsburgh",
+              "player_name": "Steelers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1462,8 +1462,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "2-1-0",
-          "score": 92.62,
-          "projected_score": 117.83,
+          "score": 111.92,
+          "projected_score": 120.62,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1654,8 +1654,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "1-2-0",
-          "score": 71.42,
-          "projected_score": 107.87,
+          "score": 82.62,
+          "projected_score": 113.75,
           "roster": [
             {
               "player_key": "470.p.31838",
@@ -1999,8 +1999,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "2-1-0",
-          "score": 68.28,
-          "projected_score": 73.06,
+          "score": 83.58,
+          "projected_score": 83.58,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2144,8 +2144,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "0-3-0",
-          "score": 53.16,
-          "projected_score": 76.42,
+          "score": 68.76,
+          "projected_score": 84.41,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -2334,26 +2334,26 @@
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 53.16,
+      "value": 68.76,
       "franchise_id": "vegas-vandals",
       "display_name": "Vegas Vandals"
     },
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 252.26,
+      "value": 256.56,
       "matchup_id": "2026-w04-ayahuasca-rush--maine-moose"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 79.06,
+      "value": 67.86,
       "matchup_id": "2026-w04-new-jersey-giants--north-town-ninnyhammers"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 3.38,
+      "value": 6.26,
       "matchup_id": "2026-w04-albany-kneelers--greendale-human-beings"
     },
     {
