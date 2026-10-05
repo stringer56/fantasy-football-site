@@ -2,14 +2,23 @@
   "schema_version": 1,
   "season": 2026,
   "week": 4,
-  "generated_at": "2026-10-04T22:52:59Z",
+  "generated_at": "2026-10-05T01:43:41Z",
   "coverage_status": "ready",
   "items": [
     {
+      "headline_id": "record:2026-w04-new-jersey-giants--north-town-ninnyhammers:north-town-ninnyhammers:weekly-score:record-watch",
+      "category": "Record Watch",
+      "headline": "Record Watch",
+      "detail": "North town Ninnyhammers is 11.72 points from the verified Top-25 cutoff.",
+      "week": 4,
+      "source": "normalized_yahoo_and_verified_history",
+      "path": "/records/"
+    },
+    {
       "headline_id": "week-4:high-score",
       "category": "Week in Review",
-      "headline": "Ayahuasca Rush leads Week 4 scoring",
-      "detail": "The week's current high is 123.68 points.",
+      "headline": "North town Ninnyhammers leads Week 4 scoring",
+      "detail": "The week's current high is 150.48 points.",
       "week": 4,
       "source": "normalized_yahoo",
       "path": "/2026/week/4/"
