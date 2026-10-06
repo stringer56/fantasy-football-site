@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "week": 4,
+  "week": 5,
   "teams": [
     {
       "team_key": "470.l.26455.t.1",
@@ -143,8 +143,8 @@
       "team_name": "Albany Redskins",
       "players": [
         {
-          "player_key": "470.p.30123",
-          "player_name": "Patrick Mahomes",
+          "player_key": "470.p.41825",
+          "player_name": "Tyler Shough",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "QB",
@@ -183,8 +183,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.26686",
-          "player_name": "Travis Kelce",
+          "player_key": "470.p.40102",
+          "player_name": "Tucker Kraft",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "TE",
@@ -196,6 +196,22 @@
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "W/R/T",
+          "status": null
+        },
+        {
+          "player_key": "470.p.26686",
+          "player_name": "Travis Kelce",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.30123",
+          "player_name": "Patrick Mahomes",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
           "status": null
         },
         {
@@ -215,14 +231,6 @@
           "status": null
         },
         {
-          "player_key": "470.p.41825",
-          "player_name": "Tyler Shough",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
           "player_key": "470.p.30180",
           "player_name": "Alvin Kamara",
           "nfl_team": null,
@@ -233,14 +241,6 @@
         {
           "player_key": "470.p.29399",
           "player_name": "Tyreek Hill",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.40102",
-          "player_name": "Tucker Kraft",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -961,8 +961,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.42638",
-          "player_name": "Kenyon Sadiq",
+          "player_key": "470.p.41795",
+          "player_name": "Colston Loveland",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "TE",
@@ -977,16 +977,16 @@
           "status": null
         },
         {
-          "player_key": "470.p.40875",
-          "player_name": "Bo Nix",
+          "player_key": "470.p.42638",
+          "player_name": "Kenyon Sadiq",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
           "status": null
         },
         {
-          "player_key": "470.p.41795",
-          "player_name": "Colston Loveland",
+          "player_key": "470.p.40875",
+          "player_name": "Bo Nix",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -1056,24 +1056,24 @@
       "team_name": "North town Ninnyhammers",
       "players": [
         {
-          "player_key": "470.p.33389",
-          "player_name": "Trevor Lawrence",
+          "player_key": "470.p.32671",
+          "player_name": "Joe Burrow",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "QB",
           "status": null
         },
         {
-          "player_key": "470.p.33996",
-          "player_name": "Kenneth Walker III",
+          "player_key": "470.p.40707",
+          "player_name": "Emanuel Wilson",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "RB",
           "status": null
         },
         {
-          "player_key": "470.p.40707",
-          "player_name": "Emanuel Wilson",
+          "player_key": "470.p.40231",
+          "player_name": "Chris Rodriguez Jr.",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "RB",
@@ -1104,16 +1104,16 @@
           "status": null
         },
         {
-          "player_key": "470.p.41808",
-          "player_name": "Matthew Golden",
+          "player_key": "470.p.33394",
+          "player_name": "Jaylen Waddle",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "W/R/T",
           "status": null
         },
         {
-          "player_key": "470.p.40231",
-          "player_name": "Chris Rodriguez Jr.",
+          "player_key": "470.p.41808",
+          "player_name": "Matthew Golden",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -1128,24 +1128,24 @@
           "status": null
         },
         {
+          "player_key": "470.p.33389",
+          "player_name": "Trevor Lawrence",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.33996",
+          "player_name": "Kenneth Walker III",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
           "player_key": "470.p.34095",
           "player_name": "Isaiah Likely",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.33394",
-          "player_name": "Jaylen Waddle",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.32671",
-          "player_name": "Joe Burrow",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",

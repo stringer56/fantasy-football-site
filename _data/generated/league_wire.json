@@ -1,27 +1,18 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "week": 4,
-  "generated_at": "2026-10-06T02:45:16Z",
+  "week": 5,
+  "generated_at": "2026-10-06T09:27:34Z",
   "coverage_status": "ready",
   "items": [
     {
-      "headline_id": "record:2026-w04-new-jersey-giants--north-town-ninnyhammers:north-town-ninnyhammers:weekly-score:record-watch",
-      "category": "Record Watch",
-      "headline": "Record Watch",
-      "detail": "North town Ninnyhammers is 11.72 points from the verified Top-25 cutoff.",
-      "week": 4,
-      "source": "normalized_yahoo_and_verified_history",
-      "path": "/records/"
-    },
-    {
-      "headline_id": "week-4:high-score",
-      "category": "Week in Review",
-      "headline": "North town Ninnyhammers leads Week 4 scoring",
-      "detail": "The week's current high is 150.48 points.",
-      "week": 4,
+      "headline_id": "week-5:slate",
+      "category": "League Wire",
+      "headline": "Week 5 slate is set",
+      "detail": "North town Ninnyhammers meets The Baseball Furies in the featured matchup.",
+      "week": 5,
       "source": "normalized_yahoo",
-      "path": "/2026/week/4/"
+      "path": "/2026/week/5/"
     }
   ]
 }
