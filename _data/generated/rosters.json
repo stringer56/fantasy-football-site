@@ -56,11 +56,19 @@
           "status": null
         },
         {
+          "player_key": "470.p.41058",
+          "player_name": "Malik Washington",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "W/R/T",
+          "status": null
+        },
+        {
           "player_key": "470.p.40908",
           "player_name": "Ladd McConkey",
           "nfl_team": null,
           "primary_position": null,
-          "selected_position": "W/R/T",
+          "selected_position": "BN",
           "status": null
         },
         {
@@ -90,14 +98,6 @@
         {
           "player_key": "470.p.42796",
           "player_name": "Emmett Johnson",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.41058",
-          "player_name": "Malik Washington",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -437,8 +437,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.30197",
-          "player_name": "Chris Godwin Jr.",
+          "player_key": "470.p.34088",
+          "player_name": "Romeo Doubs",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "WR",
@@ -461,6 +461,14 @@
           "status": null
         },
         {
+          "player_key": "470.p.30197",
+          "player_name": "Chris Godwin Jr.",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
           "player_key": "470.p.26699",
           "player_name": "Keenan Allen",
           "nfl_team": null,
@@ -479,14 +487,6 @@
         {
           "player_key": "470.p.33392",
           "player_name": "Kyle Pitts Sr.",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.34088",
-          "player_name": "Romeo Doubs",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -572,8 +572,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.40084",
-          "player_name": "Rashee Rice",
+          "player_key": "470.p.31010",
+          "player_name": "Courtland Sutton",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "WR",
@@ -588,11 +588,27 @@
           "status": null
         },
         {
+          "player_key": "470.p.34104",
+          "player_name": "Khalil Shakir",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "W/R/T",
+          "status": null
+        },
+        {
           "player_key": "470.p.41793",
           "player_name": "Tetairoa McMillan",
           "nfl_team": null,
           "primary_position": null,
-          "selected_position": "W/R/T",
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.40084",
+          "player_name": "Rashee Rice",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
           "status": null
         },
         {
@@ -620,24 +636,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.31010",
-          "player_name": "Courtland Sutton",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
           "player_key": "470.p.40877",
           "player_name": "Xavier Worthy",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.34104",
-          "player_name": "Khalil Shakir",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -1056,8 +1056,8 @@
       "team_name": "North town Ninnyhammers",
       "players": [
         {
-          "player_key": "470.p.32671",
-          "player_name": "Joe Burrow",
+          "player_key": "470.p.29235",
+          "player_name": "Jared Goff",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "QB",
@@ -1096,8 +1096,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.30259",
-          "player_name": "George Kittle",
+          "player_key": "470.p.34095",
+          "player_name": "Isaiah Likely",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "TE",
@@ -1112,16 +1112,24 @@
           "status": null
         },
         {
-          "player_key": "470.p.41808",
-          "player_name": "Matthew Golden",
+          "player_key": "470.p.30259",
+          "player_name": "George Kittle",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
           "status": null
         },
         {
-          "player_key": "470.p.29235",
-          "player_name": "Jared Goff",
+          "player_key": "470.p.32671",
+          "player_name": "Joe Burrow",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.41808",
+          "player_name": "Matthew Golden",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -1138,14 +1146,6 @@
         {
           "player_key": "470.p.33996",
           "player_name": "Kenneth Walker III",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.34095",
-          "player_name": "Isaiah Likely",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
