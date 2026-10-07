@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 5,
-  "generated_at": "2026-10-07T06:33:59Z",
+  "generated_at": "2026-10-07T13:58:28Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-07T06:33:59Z",
+    "source_updated_at": "2026-10-07T13:58:28Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -99,7 +99,7 @@
       "ties": 0,
       "winning_percentage": 0.75,
       "points_for": 453.88,
-      "points_against": 403.34,
+      "points_against": 404.34,
       "streak": {
         "type": "win",
         "value": 2
@@ -194,7 +194,7 @@
       "losses": 2,
       "ties": 0,
       "winning_percentage": 0.5,
-      "points_for": 458.16,
+      "points_for": 459.16,
       "points_against": 466.14,
       "streak": {
         "type": "loss",
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 108.26,
+          "projected_score": 121.12,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -350,16 +350,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.31896",
-              "player_name": "DK Metcalf",
+              "player_key": "470.p.40168",
+              "player_name": "Puka Nacua",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.40168",
-              "player_name": "Puka Nacua",
+              "player_key": "470.p.31896",
+              "player_name": "DK Metcalf",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -438,8 +438,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.30346",
-              "player_name": "Harrison Butker",
+              "player_key": "470.p.41499",
+              "player_name": "Spencer Shrader",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "K",
@@ -447,7 +447,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Ravens",
+              "player_name": "Bengals",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -468,7 +468,7 @@
           "team_id": 7,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 119.84,
+          "projected_score": 119.8,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 99.87,
+          "projected_score": 99.93,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -797,7 +797,7 @@
           "team_id": 8,
           "record": "1-3-0",
           "score": 0.0,
-          "projected_score": 117.48,
+          "projected_score": 117.33,
           "roster": [
             {
               "player_key": "470.p.31838",
@@ -880,14 +880,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.40051",
-              "player_name": "Quentin Johnston",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.33538",
               "player_name": "Kenny Gainwell",
               "nfl_team": null,
@@ -898,6 +890,14 @@
             {
               "player_key": "470.p.34047",
               "player_name": "Rachaad White",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42616",
+              "player_name": "Dohnte Meyers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -997,7 +997,7 @@
           "team_id": 9,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 112.43,
+          "projected_score": 112.4,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -1142,7 +1142,7 @@
           "team_id": 10,
           "record": "0-4-0",
           "score": 0.0,
-          "projected_score": 111.28,
+          "projected_score": 111.27,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1334,7 +1334,7 @@
           "team_id": 4,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 102.6,
+          "projected_score": 102.62,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1479,7 +1479,7 @@
           "team_id": 6,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 113.91,
+          "projected_score": 113.85,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1671,7 +1671,7 @@
           "team_id": 1,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 120.3,
+          "projected_score": 120.22,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1770,8 +1770,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.41010",
-              "player_name": "Jaylen Wright",
+              "player_key": "470.p.41002",
+              "player_name": "Will Shipley",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1816,7 +1816,7 @@
           "team_id": 5,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 111.88,
+          "projected_score": 111.94,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -2008,7 +2008,7 @@
           "team_id": 11,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 108.3,
+          "projected_score": 108.2,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -2145,7 +2145,7 @@
           "team_id": 12,
           "record": "1-3-0",
           "score": 0.0,
-          "projected_score": 92.62,
+          "projected_score": 92.67,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -2230,6 +2230,14 @@
             {
               "player_key": "470.p.33415",
               "player_name": "Rashod Bateman",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40911",
+              "player_name": "Keon Coleman",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
