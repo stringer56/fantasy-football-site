@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-10-07T00:43:59Z",
+  "generated_at": "2026-10-07T06:33:59Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-07T00:43:59Z",
+    "source_updated_at": "2026-10-07T06:33:59Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-10-07T00:43:59Z"
+    "source_update_timestamp": "2026-10-07T06:33:59Z"
   },
   "standings": [
     {
@@ -362,7 +362,7 @@
           "team_id": 2,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 108.34,
+          "projected_score": 108.26,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -507,7 +507,7 @@
           "team_id": 7,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 119.86,
+          "projected_score": 119.84,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -699,7 +699,7 @@
           "team_id": 3,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 99.86,
+          "projected_score": 99.87,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -1036,7 +1036,7 @@
           "team_id": 9,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 112.42,
+          "projected_score": 112.43,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -1181,7 +1181,7 @@
           "team_id": 10,
           "record": "0-4-0",
           "score": 0.0,
-          "projected_score": 111.23,
+          "projected_score": 111.28,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1373,7 +1373,7 @@
           "team_id": 4,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 109.56,
+          "projected_score": 102.6,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1424,11 +1424,19 @@
               "status": null
             },
             {
+              "player_key": "470.p.34054",
+              "player_name": "Brian Robinson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
               "player_key": "470.p.40993",
               "player_name": "Bucky Irving",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "W/R/T",
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -1466,14 +1474,6 @@
             {
               "player_key": "470.p.42712",
               "player_name": "Kaelon Black",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.34054",
-              "player_name": "Brian Robinson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1518,11 +1518,11 @@
           "team_id": 6,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 90.02,
+          "projected_score": 113.91,
           "roster": [
             {
-              "player_key": "470.p.40029",
-              "player_name": "Bryce Young",
+              "player_key": "470.p.40896",
+              "player_name": "Jayden Daniels",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -1537,24 +1537,24 @@
               "status": null
             },
             {
-              "player_key": "470.p.41845",
-              "player_name": "RJ Harvey",
+              "player_key": "470.p.41969",
+              "player_name": "Ollie Gordon II",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
               "status": null
             },
             {
-              "player_key": "470.p.42661",
-              "player_name": "Denzel Boston",
+              "player_key": "470.p.40039",
+              "player_name": "Zay Flowers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.40039",
-              "player_name": "Zay Flowers",
+              "player_key": "470.p.32692",
+              "player_name": "Justin Jefferson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -1569,16 +1569,24 @@
               "status": null
             },
             {
-              "player_key": "470.p.41969",
-              "player_name": "Ollie Gordon II",
+              "player_key": "470.p.42661",
+              "player_name": "Denzel Boston",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
               "status": null
             },
             {
-              "player_key": "470.p.32692",
-              "player_name": "Justin Jefferson",
+              "player_key": "470.p.41845",
+              "player_name": "RJ Harvey",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40029",
+              "player_name": "Bryce Young",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1587,14 +1595,6 @@
             {
               "player_key": "470.p.34008",
               "player_name": "Alec Pierce",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40896",
-              "player_name": "Jayden Daniels",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1710,7 +1710,7 @@
           "team_id": 1,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 120.22,
+          "projected_score": 120.3,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2184,7 +2184,7 @@
           "team_id": 12,
           "record": "1-3-0",
           "score": 0.0,
-          "projected_score": 92.53,
+          "projected_score": 92.62,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -2369,7 +2369,7 @@
         "team_id": 9,
         "record": "3-1-0",
         "score": 0.0,
-        "projected_score": 112.42,
+        "projected_score": 112.43,
         "roster": [
           {
             "player_key": "470.p.29235",
@@ -2514,7 +2514,7 @@
         "team_id": 10,
         "record": "0-4-0",
         "score": 0.0,
-        "projected_score": 111.23,
+        "projected_score": 111.28,
         "roster": [
           {
             "player_key": "470.p.40881",
@@ -2730,7 +2730,7 @@
           "team_id": 7,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 119.86,
+          "projected_score": 119.84,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -3060,7 +3060,7 @@
           "team_id": 9,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 112.42,
+          "projected_score": 112.43,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -3229,11 +3229,11 @@
           "team_id": 6,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 90.02,
+          "projected_score": 113.91,
           "roster": [
             {
-              "player_key": "470.p.40029",
-              "player_name": "Bryce Young",
+              "player_key": "470.p.40896",
+              "player_name": "Jayden Daniels",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -3248,24 +3248,24 @@
               "status": null
             },
             {
-              "player_key": "470.p.41845",
-              "player_name": "RJ Harvey",
+              "player_key": "470.p.41969",
+              "player_name": "Ollie Gordon II",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
               "status": null
             },
             {
-              "player_key": "470.p.42661",
-              "player_name": "Denzel Boston",
+              "player_key": "470.p.40039",
+              "player_name": "Zay Flowers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.40039",
-              "player_name": "Zay Flowers",
+              "player_key": "470.p.32692",
+              "player_name": "Justin Jefferson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -3280,16 +3280,24 @@
               "status": null
             },
             {
-              "player_key": "470.p.41969",
-              "player_name": "Ollie Gordon II",
+              "player_key": "470.p.42661",
+              "player_name": "Denzel Boston",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
               "status": null
             },
             {
-              "player_key": "470.p.32692",
-              "player_name": "Justin Jefferson",
+              "player_key": "470.p.41845",
+              "player_name": "RJ Harvey",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40029",
+              "player_name": "Bryce Young",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -3298,14 +3306,6 @@
             {
               "player_key": "470.p.34008",
               "player_name": "Alec Pierce",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40896",
-              "player_name": "Jayden Daniels",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -3390,7 +3390,7 @@
           "team_id": 1,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 120.22,
+          "projected_score": 120.3,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -3559,7 +3559,7 @@
           "team_id": 4,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 109.56,
+          "projected_score": 102.6,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -3610,11 +3610,19 @@
               "status": null
             },
             {
+              "player_key": "470.p.34054",
+              "player_name": "Brian Robinson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
               "player_key": "470.p.40993",
               "player_name": "Bucky Irving",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "W/R/T",
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -3652,14 +3660,6 @@
             {
               "player_key": "470.p.42712",
               "player_name": "Kaelon Black",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.34054",
-              "player_name": "Brian Robinson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -3728,7 +3728,7 @@
           "team_id": 2,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 108.34,
+          "projected_score": 108.26,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -3897,7 +3897,7 @@
           "team_id": 3,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 99.86,
+          "projected_score": 99.87,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -4058,7 +4058,7 @@
           "team_id": 10,
           "record": "0-4-0",
           "score": 0.0,
-          "projected_score": 111.23,
+          "projected_score": 111.28,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -4219,7 +4219,7 @@
           "team_id": 12,
           "record": "1-3-0",
           "score": 0.0,
-          "projected_score": 92.53,
+          "projected_score": 92.62,
           "roster": [
             {
               "player_key": "470.p.32676",
