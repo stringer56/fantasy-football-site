@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 5,
-  "generated_at": "2026-10-08T13:33:07Z",
+  "generated_at": "2026-10-08T19:28:17Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-08T13:33:07Z",
+    "source_updated_at": "2026-10-08T19:28:17Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 121.15,
+          "projected_score": 122.23,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -468,7 +468,7 @@
           "team_id": 7,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 119.84,
+          "projected_score": 120.13,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 99.76,
+          "projected_score": 99.96,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -797,11 +797,11 @@
           "team_id": 8,
           "record": "1-3-0",
           "score": 0.0,
-          "projected_score": 117.42,
+          "projected_score": 119.53,
           "roster": [
             {
-              "player_key": "470.p.31838",
-              "player_name": "Daniel Jones",
+              "player_key": "470.p.40875",
+              "player_name": "Bo Nix",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -856,16 +856,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.42638",
-              "player_name": "Kenyon Sadiq",
+              "player_key": "470.p.31838",
+              "player_name": "Daniel Jones",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
               "status": null
             },
             {
-              "player_key": "470.p.40875",
-              "player_name": "Bo Nix",
+              "player_key": "470.p.42638",
+              "player_name": "Kenyon Sadiq",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -997,7 +997,7 @@
           "team_id": 9,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 112.21,
+          "projected_score": 112.26,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -1142,7 +1142,7 @@
           "team_id": 10,
           "record": "0-4-0",
           "score": 0.0,
-          "projected_score": 111.34,
+          "projected_score": 111.58,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1334,7 +1334,7 @@
           "team_id": 4,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 102.59,
+          "projected_score": 102.45,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1479,7 +1479,7 @@
           "team_id": 6,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 113.41,
+          "projected_score": 113.79,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1671,7 +1671,7 @@
           "team_id": 1,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 119.56,
+          "projected_score": 119.22,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1816,7 +1816,7 @@
           "team_id": 5,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 111.59,
+          "projected_score": 111.65,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -2008,7 +2008,7 @@
           "team_id": 11,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 108.39,
+          "projected_score": 109.24,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -2145,7 +2145,7 @@
           "team_id": 12,
           "record": "1-3-0",
           "score": 0.0,
-          "projected_score": 96.32,
+          "projected_score": 96.29,
           "roster": [
             {
               "player_key": "470.p.32676",
