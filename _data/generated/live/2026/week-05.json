@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 5,
-  "generated_at": "2026-10-09T05:12:26Z",
+  "generated_at": "2026-10-09T11:56:31Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-09T05:12:26Z",
+    "source_updated_at": "2026-10-09T11:56:31Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-1-0",
           "score": 13.2,
-          "projected_score": 118.77,
+          "projected_score": 118.81,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -447,7 +447,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Bengals",
+              "player_name": "Cincinnati",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -468,7 +468,7 @@
           "team_id": 7,
           "record": "2-2-0",
           "score": 23.5,
-          "projected_score": 137.1,
+          "projected_score": 137.19,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "3-1-0",
           "score": 5.0,
-          "projected_score": 96.25,
+          "projected_score": 96.36,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -776,7 +776,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Seattle",
+              "player_name": "Seahawks",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -797,7 +797,7 @@
           "team_id": 8,
           "record": "1-3-0",
           "score": 0.0,
-          "projected_score": 119.78,
+          "projected_score": 119.73,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -921,7 +921,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Saints",
+              "player_name": "New Orleans",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -997,7 +997,7 @@
           "team_id": 9,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 112.31,
+          "projected_score": 112.39,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -1121,7 +1121,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Vikings",
+              "player_name": "Minnesota",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1142,7 +1142,7 @@
           "team_id": 10,
           "record": "0-4-0",
           "score": 0.0,
-          "projected_score": 111.58,
+          "projected_score": 111.5,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1258,7 +1258,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Texans",
+              "player_name": "Houston",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1334,7 +1334,7 @@
           "team_id": 4,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 102.5,
+          "projected_score": 102.45,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1479,7 +1479,7 @@
           "team_id": 6,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 113.85,
+          "projected_score": 113.79,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1587,7 +1587,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Bills",
+              "player_name": "Buffalo",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1595,7 +1595,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Rams",
+              "player_name": "Los Angeles",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1671,7 +1671,7 @@
           "team_id": 1,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 119.8,
+          "projected_score": 119.77,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1816,7 +1816,7 @@
           "team_id": 5,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 112.0,
+          "projected_score": 112.03,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1932,7 +1932,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Jaguars",
+              "player_name": "Jacksonville",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -2008,7 +2008,7 @@
           "team_id": 11,
           "record": "2-2-0",
           "score": 32.74,
-          "projected_score": 93.34,
+          "projected_score": 93.33,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -2145,7 +2145,7 @@
           "team_id": 12,
           "record": "1-3-0",
           "score": 3.4,
-          "projected_score": 92.23,
+          "projected_score": 92.21,
           "roster": [
             {
               "player_key": "470.p.32676",
