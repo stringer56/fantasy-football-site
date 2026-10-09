@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 5,
-  "generated_at": "2026-10-08T23:53:48Z",
+  "generated_at": "2026-10-09T05:12:26Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-08T23:53:48Z",
+    "source_updated_at": "2026-10-09T05:12:26Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -322,8 +322,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "3-1-0",
-          "score": 0.0,
-          "projected_score": 121.23,
+          "score": 13.2,
+          "projected_score": 118.77,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -467,8 +467,8 @@
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
           "record": "2-2-0",
-          "score": 0.0,
-          "projected_score": 126.21,
+          "score": 23.5,
+          "projected_score": 137.1,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -659,8 +659,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "3-1-0",
-          "score": 0.0,
-          "projected_score": 100.71,
+          "score": 5.0,
+          "projected_score": 96.25,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -776,7 +776,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Seahawks",
+              "player_name": "Seattle",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -797,7 +797,7 @@
           "team_id": 8,
           "record": "1-3-0",
           "score": 0.0,
-          "projected_score": 119.8,
+          "projected_score": 119.78,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -997,7 +997,7 @@
           "team_id": 9,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 112.34,
+          "projected_score": 112.31,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -1142,7 +1142,7 @@
           "team_id": 10,
           "record": "0-4-0",
           "score": 0.0,
-          "projected_score": 111.62,
+          "projected_score": 111.58,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1479,7 +1479,7 @@
           "team_id": 6,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 113.87,
+          "projected_score": 113.85,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1671,7 +1671,7 @@
           "team_id": 1,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 119.19,
+          "projected_score": 119.8,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1816,7 +1816,7 @@
           "team_id": 5,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 111.32,
+          "projected_score": 112.0,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -2007,8 +2007,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "2-2-0",
-          "score": 0.0,
-          "projected_score": 108.29,
+          "score": 32.74,
+          "projected_score": 93.34,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -2144,8 +2144,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "1-3-0",
-          "score": 0.0,
-          "projected_score": 96.08,
+          "score": 3.4,
+          "projected_score": 92.23,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -2315,7 +2315,48 @@
       }
     }
   ],
-  "weekly_facts": [],
+  "weekly_facts": [
+    {
+      "fact_id": "highest-score",
+      "label": "Highest score",
+      "value": 32.74,
+      "franchise_id": "turnbull-acs",
+      "display_name": "Turnbull AC’s"
+    },
+    {
+      "fact_id": "lowest-score",
+      "label": "Lowest score",
+      "value": 0.0,
+      "franchise_id": "new-jersey-giants",
+      "display_name": "New Jersey Giants"
+    },
+    {
+      "fact_id": "highest-combined",
+      "label": "Highest combined score",
+      "value": 36.7,
+      "matchup_id": "2026-w05-albany-kneelers--maine-moose"
+    },
+    {
+      "fact_id": "biggest-win",
+      "label": "Biggest lead",
+      "value": 29.34,
+      "matchup_id": "2026-w05-turnbull-acs--vegas-vandals"
+    },
+    {
+      "fact_id": "closest-game",
+      "label": "Closest game",
+      "value": 5.0,
+      "matchup_id": "2026-w05-ayahuasca-rush--new-jersey-giants"
+    },
+    {
+      "fact_id": "longest-active-streak",
+      "label": "Longest active streak",
+      "value": 4,
+      "streak_type": "loss",
+      "franchise_id": "baseball-furies",
+      "display_name": "The Baseball Furies"
+    }
+  ],
   "record_watch": [],
   "power_rankings": {
     "status": "unavailable",
