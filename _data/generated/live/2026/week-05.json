@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 5,
-  "generated_at": "2026-10-09T22:42:59Z",
+  "generated_at": "2026-10-10T01:56:20Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-09T22:42:59Z",
+    "source_updated_at": "2026-10-10T01:56:20Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-1-0",
           "score": 13.2,
-          "projected_score": 118.28,
+          "projected_score": 118.2,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -468,7 +468,7 @@
           "team_id": 7,
           "record": "2-2-0",
           "score": 23.5,
-          "projected_score": 137.16,
+          "projected_score": 137.03,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -660,11 +660,11 @@
           "team_id": 3,
           "record": "3-1-0",
           "score": 5.0,
-          "projected_score": 87.93,
+          "projected_score": 110.58,
           "roster": [
             {
-              "player_key": "470.p.31002",
-              "player_name": "Lamar Jackson",
+              "player_key": "470.p.32696",
+              "player_name": "Jordan Love",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -711,24 +711,32 @@
               "status": null
             },
             {
-              "player_key": "470.p.40883",
-              "player_name": "Brian Thomas Jr.",
+              "player_key": "470.p.42010",
+              "player_name": "Jacory Croskey-Merritt",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
               "status": null
             },
             {
-              "player_key": "470.p.31056",
-              "player_name": "Mark Andrews",
+              "player_key": "470.p.40883",
+              "player_name": "Brian Thomas Jr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
               "status": null
             },
             {
-              "player_key": "470.p.42010",
-              "player_name": "Jacory Croskey-Merritt",
+              "player_key": "470.p.31002",
+              "player_name": "Lamar Jackson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31056",
+              "player_name": "Mark Andrews",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -743,14 +751,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.32696",
-              "player_name": "Jordan Love",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.40095",
               "player_name": "Tank Bigsby",
               "nfl_team": null,
@@ -759,8 +759,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.34042",
-              "player_name": "Malik Willis",
+              "player_key": "470.p.33100",
+              "player_name": "Rico Dowdle",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -797,7 +797,7 @@
           "team_id": 8,
           "record": "1-3-0",
           "score": 0.0,
-          "projected_score": 120.04,
+          "projected_score": 120.05,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -997,7 +997,7 @@
           "team_id": 9,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 111.53,
+          "projected_score": 112.16,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -1142,7 +1142,7 @@
           "team_id": 10,
           "record": "0-4-0",
           "score": 0.0,
-          "projected_score": 111.64,
+          "projected_score": 111.54,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1334,7 +1334,7 @@
           "team_id": 4,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 107.62,
+          "projected_score": 107.42,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1479,7 +1479,7 @@
           "team_id": 6,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 115.16,
+          "projected_score": 114.94,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1671,7 +1671,7 @@
           "team_id": 1,
           "record": "2-2-0",
           "score": 0.0,
-          "projected_score": 120.28,
+          "projected_score": 119.86,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1816,7 +1816,7 @@
           "team_id": 5,
           "record": "3-1-0",
           "score": 0.0,
-          "projected_score": 110.78,
+          "projected_score": 110.73,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -2008,7 +2008,7 @@
           "team_id": 11,
           "record": "2-2-0",
           "score": 32.74,
-          "projected_score": 83.39,
+          "projected_score": 83.23,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -2145,7 +2145,7 @@
           "team_id": 12,
           "record": "1-3-0",
           "score": 3.4,
-          "projected_score": 93.21,
+          "projected_score": 92.79,
           "roster": [
             {
               "player_key": "470.p.32676",
