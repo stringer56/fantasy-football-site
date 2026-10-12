@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 5,
-  "generated_at": "2026-10-12T08:48:40Z",
+  "generated_at": "2026-10-12T18:44:20Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-12T08:48:40Z",
+    "source_updated_at": "2026-10-12T18:44:20Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-1-0",
           "score": 72.14,
-          "projected_score": 90.13,
+          "projected_score": 90.37,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "3-1-0",
           "score": 127.18,
-          "projected_score": 153.22,
+          "projected_score": 153.2,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -1334,7 +1334,7 @@
           "team_id": 4,
           "record": "2-2-0",
           "score": 71.1,
-          "projected_score": 108.02,
+          "projected_score": 107.87,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1479,7 +1479,7 @@
           "team_id": 6,
           "record": "2-2-0",
           "score": 144.46,
-          "projected_score": 161.36,
+          "projected_score": 161.38,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1671,7 +1671,7 @@
           "team_id": 1,
           "record": "2-2-0",
           "score": 84.3,
-          "projected_score": 118.36,
+          "projected_score": 118.84,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1932,7 +1932,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Jaguars",
+              "player_name": "Jacksonville",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -2008,7 +2008,7 @@
           "team_id": 11,
           "record": "2-2-0",
           "score": 79.24,
-          "projected_score": 88.49,
+          "projected_score": 88.41,
           "roster": [
             {
               "player_key": "470.p.29369",
