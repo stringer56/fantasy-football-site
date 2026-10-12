@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 5,
-  "generated_at": "2026-10-11T22:45:03Z",
+  "generated_at": "2026-10-12T01:50:22Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-11T22:45:03Z",
+    "source_updated_at": "2026-10-12T01:50:22Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -467,8 +467,8 @@
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
           "record": "2-2-0",
-          "score": 174.62,
-          "projected_score": 186.07,
+          "score": 184.72,
+          "projected_score": 184.72,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -659,8 +659,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "3-1-0",
-          "score": 126.18,
-          "projected_score": 152.23,
+          "score": 127.18,
+          "projected_score": 153.17,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -796,8 +796,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "1-3-0",
-          "score": 69.98,
-          "projected_score": 100.46,
+          "score": 77.82,
+          "projected_score": 88.43,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -996,8 +996,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "3-1-0",
-          "score": 122.28,
-          "projected_score": 146.34,
+          "score": 143.44,
+          "projected_score": 147.18,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -1141,8 +1141,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "0-4-0",
-          "score": 122.46,
-          "projected_score": 147.43,
+          "score": 133.46,
+          "projected_score": 148.16,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1333,8 +1333,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "2-2-0",
-          "score": 58.5,
-          "projected_score": 101.65,
+          "score": 70.0,
+          "projected_score": 109.79,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1478,8 +1478,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "2-2-0",
-          "score": 121.66,
-          "projected_score": 155.96,
+          "score": 140.76,
+          "projected_score": 164.6,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1670,8 +1670,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "2-2-0",
-          "score": 77.7,
-          "projected_score": 120.06,
+          "score": 84.3,
+          "projected_score": 118.38,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1815,8 +1815,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "3-1-0",
-          "score": 65.0,
-          "projected_score": 88.92,
+          "score": 84.7,
+          "projected_score": 92.31,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -2007,8 +2007,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "2-2-0",
-          "score": 75.14,
-          "projected_score": 85.66,
+          "score": 79.24,
+          "projected_score": 88.5,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -2144,8 +2144,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "1-3-0",
-          "score": 78.34,
-          "projected_score": 85.84,
+          "score": 89.04,
+          "projected_score": 89.04,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -2319,34 +2319,34 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 174.62,
+      "value": 184.72,
       "franchise_id": "maine-moose",
       "display_name": "Maine Moose"
     },
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 58.5,
+      "value": 70.0,
       "franchise_id": "buffalo-bravado",
       "display_name": "Buffalo Bravados"
     },
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 246.76,
-      "matchup_id": "2026-w05-albany-kneelers--maine-moose"
+      "value": 276.9,
+      "matchup_id": "2026-w05-baseball-furies--north-town-ninnyhammers"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 102.48,
+      "value": 112.58,
       "matchup_id": "2026-w05-albany-kneelers--maine-moose"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 0.18,
-      "matchup_id": "2026-w05-baseball-furies--north-town-ninnyhammers"
+      "value": 0.4,
+      "matchup_id": "2026-w05-crazy-wazs-team--van-cortlant-rangers"
     },
     {
       "fact_id": "longest-active-streak",
@@ -2357,7 +2357,20 @@
       "display_name": "The Baseball Furies"
     }
   ],
-  "record_watch": [],
+  "record_watch": [
+    {
+      "event_id": "2026-w05-baseball-furies--north-town-ninnyhammers:north-town-ninnyhammers:weekly-score:record-watch",
+      "type": "weekly_score",
+      "level": "Record Watch",
+      "final": false,
+      "franchise_id": "north-town-ninnyhammers",
+      "display_name": "North town Ninnyhammers",
+      "value": 143.44,
+      "threshold": 162.2,
+      "difference": 18.76,
+      "message": "North town Ninnyhammers is 18.76 points from the verified Top-25 cutoff."
+    }
+  ],
   "power_rankings": {
     "status": "unavailable",
     "voting_status": "unconfigured",
