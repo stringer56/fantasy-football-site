@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-10-12T18:44:20Z",
+  "generated_at": "2026-10-13T01:00:09Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-12T18:44:20Z",
+    "source_updated_at": "2026-10-13T01:00:09Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-10-12T18:44:20Z"
+    "source_update_timestamp": "2026-10-13T01:00:09Z"
   },
   "standings": [
     {
@@ -361,8 +361,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "3-1-0",
-          "score": 72.14,
-          "projected_score": 90.37,
+          "score": 78.74,
+          "projected_score": 90.33,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -698,8 +698,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "3-1-0",
-          "score": 127.18,
-          "projected_score": 153.2,
+          "score": 129.48,
+          "projected_score": 140.0,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -1180,8 +1180,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "0-4-0",
-          "score": 145.76,
-          "projected_score": 153.05,
+          "score": 150.26,
+          "projected_score": 154.9,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1372,8 +1372,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "2-2-0",
-          "score": 71.1,
-          "projected_score": 107.87,
+          "score": 77.18,
+          "projected_score": 100.53,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1517,8 +1517,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "2-2-0",
-          "score": 144.46,
-          "projected_score": 161.38,
+          "score": 158.46,
+          "projected_score": 162.89,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1709,8 +1709,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "2-2-0",
-          "score": 84.3,
-          "projected_score": 118.84,
+          "score": 98.24,
+          "projected_score": 120.23,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1971,7 +1971,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Jacksonville",
+              "player_name": "Jaguars",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -2047,7 +2047,7 @@
           "team_id": 11,
           "record": "2-2-0",
           "score": 79.24,
-          "projected_score": 88.41,
+          "projected_score": 85.47,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -2377,7 +2377,7 @@
         "team_id": 11,
         "record": "2-2-0",
         "score": 79.24,
-        "projected_score": 88.41,
+        "projected_score": 85.47,
         "roster": [
           {
             "player_key": "470.p.29369",
@@ -2694,27 +2694,27 @@
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 71.1,
+      "value": 77.18,
       "franchise_id": "buffalo-bravado",
       "display_name": "Buffalo Bravados"
     },
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 290.2,
+      "value": 294.7,
       "matchup_id": "2026-w05-baseball-furies--north-town-ninnyhammers"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 112.58,
+      "value": 105.98,
       "matchup_id": "2026-w05-albany-kneelers--maine-moose"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 1.32,
-      "matchup_id": "2026-w05-baseball-furies--north-town-ninnyhammers"
+      "value": 1.26,
+      "matchup_id": "2026-w05-crazy-wazs-team--van-cortlant-rangers"
     },
     {
       "fact_id": "longest-active-streak",
@@ -2733,10 +2733,10 @@
       "final": false,
       "franchise_id": "baseball-furies",
       "display_name": "The Baseball Furies",
-      "value": 145.76,
+      "value": 150.26,
       "threshold": 162.2,
-      "difference": 16.44,
-      "message": "The Baseball Furies is 16.44 points from the verified Top-25 cutoff."
+      "difference": 11.94,
+      "message": "The Baseball Furies is 11.94 points from the verified Top-25 cutoff."
     },
     {
       "event_id": "2026-w05-baseball-furies--north-town-ninnyhammers:north-town-ninnyhammers:weekly-score:record-watch",
@@ -2757,10 +2757,10 @@
       "final": false,
       "franchise_id": "greendale-human-beings",
       "display_name": "Greendale Human Beings",
-      "value": 144.46,
+      "value": 158.46,
       "threshold": 162.2,
-      "difference": 17.74,
-      "message": "Greendale Human Beings is 17.74 points from the verified Top-25 cutoff."
+      "difference": 3.74,
+      "message": "Greendale Human Beings is 3.74 points from the verified Top-25 cutoff."
     }
   ],
   "league_wire": [
@@ -2768,7 +2768,7 @@
       "headline_id": "record:2026-w05-baseball-furies--north-town-ninnyhammers:baseball-furies:weekly-score:record-watch",
       "category": "Record Watch",
       "headline": "Record Watch",
-      "detail": "The Baseball Furies is 16.44 points from the verified Top-25 cutoff.",
+      "detail": "The Baseball Furies is 11.94 points from the verified Top-25 cutoff.",
       "week": 5,
       "source": "normalized_yahoo_and_verified_history",
       "path": "/records/"
@@ -3324,8 +3324,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "2-2-0",
-          "score": 144.46,
-          "projected_score": 161.38,
+          "score": 158.46,
+          "projected_score": 162.89,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -3485,8 +3485,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "2-2-0",
-          "score": 84.3,
-          "projected_score": 118.84,
+          "score": 98.24,
+          "projected_score": 120.23,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -3654,8 +3654,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "2-2-0",
-          "score": 71.1,
-          "projected_score": 107.87,
+          "score": 77.18,
+          "projected_score": 100.53,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -3823,8 +3823,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "3-1-0",
-          "score": 72.14,
-          "projected_score": 90.37,
+          "score": 78.74,
+          "projected_score": 90.33,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -3992,8 +3992,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "3-1-0",
-          "score": 127.18,
-          "projected_score": 153.2,
+          "score": 129.48,
+          "projected_score": 140.0,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -4153,8 +4153,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "0-4-0",
-          "score": 145.76,
-          "projected_score": 153.05,
+          "score": 150.26,
+          "projected_score": 154.9,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -4592,7 +4592,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Jacksonville",
+              "player_name": "Jaguars",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -4637,7 +4637,7 @@
           "team_id": 11,
           "record": "2-2-0",
           "score": 79.24,
-          "projected_score": 88.41,
+          "projected_score": 85.47,
           "roster": [
             {
               "player_key": "470.p.29369",
