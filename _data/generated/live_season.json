@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-10-13T07:38:30Z",
+  "generated_at": "2026-10-13T15:17:50Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-13T07:38:30Z",
+    "source_updated_at": "2026-10-13T15:17:50Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-10-13T07:38:30Z"
+    "source_update_timestamp": "2026-10-13T15:17:50Z"
   },
   "standings": [
     {
@@ -362,7 +362,7 @@
           "team_id": 2,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 107.4,
+          "projected_score": 107.39,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -445,14 +445,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.31868",
-              "player_name": "Deebo Samuel Sr.",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.31856",
               "player_name": "Josh Jacobs",
               "nfl_team": null,
@@ -473,6 +465,14 @@
               "player_name": "A.J. Brown",
               "nfl_team": null,
               "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31868",
+              "player_name": "Deebo Samuel Sr.",
+              "nfl_team": null,
+              "primary_position": null,
               "selected_position": "IR",
               "status": null
             },
@@ -486,7 +486,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Cincinnati",
+              "player_name": "Bengals",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -507,7 +507,7 @@
           "team_id": 8,
           "record": "1-4-0",
           "score": 0.0,
-          "projected_score": 95.91,
+          "projected_score": 87.79,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -707,7 +707,7 @@
           "team_id": 3,
           "record": "4-1-0",
           "score": 0.0,
-          "projected_score": 95.48,
+          "projected_score": 97.31,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -844,11 +844,11 @@
           "team_id": 9,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 64.44,
+          "projected_score": 106.01,
           "roster": [
             {
-              "player_key": "470.p.29235",
-              "player_name": "Jared Goff",
+              "player_key": "470.p.33389",
+              "player_name": "Trevor Lawrence",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -863,24 +863,24 @@
               "status": null
             },
             {
-              "player_key": "470.p.40231",
-              "player_name": "Chris Rodriguez Jr.",
+              "player_key": "470.p.33996",
+              "player_name": "Kenneth Walker III",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
               "status": null
             },
             {
-              "player_key": "470.p.40041",
-              "player_name": "Jaxon Smith-Njigba",
+              "player_key": "470.p.41808",
+              "player_name": "Matthew Golden",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.32703",
-              "player_name": "Tee Higgins",
+              "player_key": "470.p.33394",
+              "player_name": "Jaylen Waddle",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -895,16 +895,32 @@
               "status": null
             },
             {
-              "player_key": "470.p.41808",
-              "player_name": "Matthew Golden",
+              "player_key": "470.p.40041",
+              "player_name": "Jaxon Smith-Njigba",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
               "status": null
             },
             {
-              "player_key": "470.p.33394",
-              "player_name": "Jaylen Waddle",
+              "player_key": "470.p.40231",
+              "player_name": "Chris Rodriguez Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.32703",
+              "player_name": "Tee Higgins",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.29235",
+              "player_name": "Jared Goff",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -921,22 +937,6 @@
             {
               "player_key": "470.p.32671",
               "player_name": "Joe Burrow",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.33389",
-              "player_name": "Trevor Lawrence",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.33996",
-              "player_name": "Kenneth Walker III",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1044,7 +1044,7 @@
           "team_id": 10,
           "record": "1-4-0",
           "score": 0.0,
-          "projected_score": 101.99,
+          "projected_score": 103.06,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1181,7 +1181,7 @@
           "team_id": 12,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 87.6,
+          "projected_score": 90.81,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -1373,7 +1373,7 @@
           "team_id": 4,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 100.37,
+          "projected_score": 108.36,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1400,14 +1400,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.41097",
-              "player_name": "Devaughn Vele",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "WR",
-              "status": null
-            },
-            {
               "player_key": "470.p.34088",
               "player_name": "Romeo Doubs",
               "nfl_team": null,
@@ -1416,24 +1408,48 @@
               "status": null
             },
             {
-              "player_key": "470.p.31107",
-              "player_name": "Dalton Schultz",
+              "player_key": "470.p.26699",
+              "player_name": "Keenan Allen",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33392",
+              "player_name": "Kyle Pitts Sr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "TE",
               "status": null
             },
             {
-              "player_key": "470.p.34054",
-              "player_name": "Brian Robinson",
+              "player_key": "470.p.40993",
+              "player_name": "Bucky Irving",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
               "status": null
             },
             {
-              "player_key": "470.p.40993",
-              "player_name": "Bucky Irving",
+              "player_key": "470.p.41097",
+              "player_name": "Devaughn Vele",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31107",
+              "player_name": "Dalton Schultz",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34054",
+              "player_name": "Brian Robinson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1448,24 +1464,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.26699",
-              "player_name": "Keenan Allen",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.33398",
               "player_name": "DeVonta Smith",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.33392",
-              "player_name": "Kyle Pitts Sr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1518,7 +1518,7 @@
           "team_id": 7,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 95.24,
+          "projected_score": 96.96,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -1710,7 +1710,7 @@
           "team_id": 5,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 78.88,
+          "projected_score": 107.11,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1729,24 +1729,24 @@
               "status": null
             },
             {
-              "player_key": "470.p.30295",
-              "player_name": "Aaron Jones Sr.",
+              "player_key": "470.p.40971",
+              "player_name": "MarShawn Lloyd",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
               "status": null
             },
             {
-              "player_key": "470.p.33500",
-              "player_name": "Amon-Ra St. Brown",
+              "player_key": "470.p.41793",
+              "player_name": "Tetairoa McMillan",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.31010",
-              "player_name": "Courtland Sutton",
+              "player_key": "470.p.40084",
+              "player_name": "Rashee Rice",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -1769,32 +1769,32 @@
               "status": null
             },
             {
+              "player_key": "470.p.30295",
+              "player_name": "Aaron Jones Sr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31010",
+              "player_name": "Courtland Sutton",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33500",
+              "player_name": "Amon-Ra St. Brown",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.34104",
               "player_name": "Khalil Shakir",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.41793",
-              "player_name": "Tetairoa McMillan",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40084",
-              "player_name": "Rashee Rice",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40971",
-              "player_name": "MarShawn Lloyd",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1847,11 +1847,11 @@
           "team_id": 11,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 105.27,
+          "projected_score": 109.59,
           "roster": [
             {
-              "player_key": "470.p.29369",
-              "player_name": "Dak Prescott",
+              "player_key": "470.p.34218",
+              "player_name": "Brock Purdy",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -1906,6 +1906,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.29369",
+              "player_name": "Dak Prescott",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.28534",
               "player_name": "Stefon Diggs",
               "nfl_team": null,
@@ -1932,14 +1940,6 @@
             {
               "player_key": "470.p.40201",
               "player_name": "Dontayvion Wicks",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.34218",
-              "player_name": "Brock Purdy",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2039,7 +2039,7 @@
           "team_id": 1,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 82.93,
+          "projected_score": 87.66,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2163,7 +2163,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Chicago",
+              "player_name": "Bears",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -2184,7 +2184,7 @@
           "team_id": 6,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 87.27,
+          "projected_score": 99.61,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -2203,8 +2203,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.41969",
-              "player_name": "Ollie Gordon II",
+              "player_key": "470.p.41845",
+              "player_name": "RJ Harvey",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
@@ -2219,8 +2219,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.32692",
-              "player_name": "Justin Jefferson",
+              "player_key": "470.p.42661",
+              "player_name": "Denzel Boston",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -2235,16 +2235,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.42661",
-              "player_name": "Denzel Boston",
+              "player_key": "470.p.32692",
+              "player_name": "Justin Jefferson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
               "status": null
             },
             {
-              "player_key": "470.p.41845",
-              "player_name": "RJ Harvey",
+              "player_key": "470.p.41969",
+              "player_name": "Ollie Gordon II",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2355,7 +2355,7 @@
     }
   ],
   "featured_matchup": {
-    "matchup_id": "2026-w06-greendale-human-beings--van-cortlant-rangers",
+    "matchup_id": "2026-w06-crazy-wazs-team--turnbull-acs",
     "week": 6,
     "status": "live",
     "status_label": "In Progress",
@@ -2365,135 +2365,127 @@
     "winner_franchise_id": null,
     "teams": [
       {
-        "franchise_id": "van-cortlant-rangers",
-        "display_name": "Van Cortlant Rangers",
-        "canonical_name": "Van Cortlant Rangers",
-        "short_name": "Rangers",
-        "path": "/teams/van-cortlant-rangers/",
-        "identity_image": "/assets/img/franchises/van-cortlant-rangers/helmet-2026.png",
-        "identity_alt": "Van Cortlant Rangers commissioner-approved 3D football helmet",
-        "primary_color": "#0f4c81",
-        "team_key": "470.l.26455.t.1",
-        "team_id": 1,
+        "franchise_id": "crazy-wazs-team",
+        "display_name": "Chris's Crazy Team",
+        "canonical_name": "Crazy Waz's Team",
+        "short_name": "Crazy Waz",
+        "path": "/teams/crazy-wazs-team/",
+        "identity_image": "/assets/img/franchises/crazy-wazs-team/helmet-2026.png",
+        "identity_alt": "Crazy Waz's Team commissioner-approved 3D football helmet",
+        "primary_color": "#15803d",
+        "team_key": "470.l.26455.t.5",
+        "team_id": 5,
         "record": "3-2-0",
         "score": 0.0,
-        "projected_score": 82.93,
+        "projected_score": 107.11,
         "roster": [
           {
-            "player_key": "470.p.9265",
-            "player_name": "Matthew Stafford",
+            "player_key": "470.p.32723",
+            "player_name": "Jalen Hurts",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "QB",
             "status": null
           },
           {
-            "player_key": "470.p.41002",
-            "player_name": "Will Shipley",
+            "player_key": "470.p.29279",
+            "player_name": "Derrick Henry",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "RB",
             "status": null
           },
           {
-            "player_key": "470.p.30121",
-            "player_name": "Christian McCaffrey",
+            "player_key": "470.p.40971",
+            "player_name": "MarShawn Lloyd",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "RB",
             "status": null
           },
           {
-            "player_key": "470.p.33965",
-            "player_name": "Garrett Wilson",
+            "player_key": "470.p.41793",
+            "player_name": "Tetairoa McMillan",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "WR",
             "status": null
           },
           {
-            "player_key": "470.p.27581",
-            "player_name": "Davante Adams",
+            "player_key": "470.p.40084",
+            "player_name": "Rashee Rice",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "WR",
             "status": null
           },
           {
-            "player_key": "470.p.40064",
-            "player_name": "Sam LaPorta",
+            "player_key": "470.p.33113",
+            "player_name": "Juwan Johnson",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "TE",
             "status": null
           },
           {
-            "player_key": "470.p.40908",
-            "player_name": "Ladd McConkey",
+            "player_key": "470.p.41821",
+            "player_name": "Quinshon Judkins",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "W/R/T",
             "status": null
           },
           {
-            "player_key": "470.p.40196",
-            "player_name": "Chase Brown",
+            "player_key": "470.p.30295",
+            "player_name": "Aaron Jones Sr.",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.41058",
-            "player_name": "Malik Washington",
+            "player_key": "470.p.31010",
+            "player_name": "Courtland Sutton",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.42696",
-            "player_name": "Malachi Fields",
+            "player_key": "470.p.33500",
+            "player_name": "Amon-Ra St. Brown",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.42646",
-            "player_name": "KC Concepcion Jr.",
+            "player_key": "470.p.34104",
+            "player_name": "Khalil Shakir",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.32231",
-            "player_name": "Jakobi Meyers",
+            "player_key": "470.p.31960",
+            "player_name": "Tony Pollard",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.42796",
-            "player_name": "Emmett Johnson",
+            "player_key": "470.p.40877",
+            "player_name": "Xavier Worthy",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.42630",
-            "player_name": "Jordyn Tyson",
-            "nfl_team": null,
-            "primary_position": null,
-            "selected_position": "IR",
-            "status": null
-          },
-          {
-            "player_key": "470.p.33537",
-            "player_name": "Evan McPherson",
+            "player_key": "470.p.31482",
+            "player_name": "Eddy Pineiro",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "K",
@@ -2501,7 +2493,7 @@
           },
           {
             "player_key": null,
-            "player_name": "Chicago",
+            "player_name": "Jaguars",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "DEF",
@@ -2510,119 +2502,127 @@
         ]
       },
       {
-        "franchise_id": "greendale-human-beings",
-        "display_name": "Greendale Human Beings",
-        "canonical_name": "Greendale Human Beings",
-        "short_name": "Human Beings",
-        "path": "/teams/greendale-human-beings/",
-        "identity_image": "/assets/img/franchises/greendale-human-beings/helmet-2026.png",
-        "identity_alt": "Greendale Human Beings blue 3D football helmet with the college emblem",
-        "primary_color": "#1e3a8a",
-        "team_key": "470.l.26455.t.6",
-        "team_id": 6,
-        "record": "3-2-0",
+        "franchise_id": "turnbull-acs",
+        "display_name": "Turnbull AC’s",
+        "canonical_name": "Turnbull AC's",
+        "short_name": "Turnbull",
+        "path": "/teams/turnbull-acs/",
+        "identity_image": "/assets/img/franchises/turnbull-acs/helmet-2026.png",
+        "identity_alt": "Turnbull AC's commissioner-approved 3D football helmet",
+        "primary_color": "#7e22ce",
+        "team_key": "470.l.26455.t.11",
+        "team_id": 11,
+        "record": "2-3-0",
         "score": 0.0,
-        "projected_score": 87.27,
+        "projected_score": 109.59,
         "roster": [
           {
-            "player_key": "470.p.40896",
-            "player_name": "Jayden Daniels",
+            "player_key": "470.p.34218",
+            "player_name": "Brock Purdy",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "QB",
             "status": null
           },
           {
-            "player_key": "470.p.34447",
-            "player_name": "Jaylen Warren",
+            "player_key": "470.p.41791",
+            "player_name": "Ashton Jeanty",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "RB",
             "status": null
           },
           {
-            "player_key": "470.p.41969",
-            "player_name": "Ollie Gordon II",
+            "player_key": "470.p.32725",
+            "player_name": "J.K. Dobbins",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "RB",
             "status": null
           },
           {
-            "player_key": "470.p.40039",
-            "player_name": "Zay Flowers",
+            "player_key": "470.p.32687",
+            "player_name": "CeeDee Lamb",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "WR",
             "status": null
           },
           {
-            "player_key": "470.p.32692",
-            "player_name": "Justin Jefferson",
+            "player_key": "470.p.41804",
+            "player_name": "Emeka Egbuka",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "WR",
             "status": null
           },
           {
-            "player_key": "470.p.34010",
-            "player_name": "Trey McBride",
+            "player_key": "470.p.40048",
+            "player_name": "Dalton Kincaid",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "TE",
             "status": null
           },
           {
-            "player_key": "470.p.42661",
-            "player_name": "Denzel Boston",
+            "player_key": "470.p.41824",
+            "player_name": "Luther Burden III",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "W/R/T",
             "status": null
           },
           {
-            "player_key": "470.p.41845",
-            "player_name": "RJ Harvey",
+            "player_key": "470.p.29369",
+            "player_name": "Dak Prescott",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.40029",
-            "player_name": "Bryce Young",
+            "player_key": "470.p.28534",
+            "player_name": "Stefon Diggs",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.34008",
-            "player_name": "Alec Pierce",
+            "player_key": "470.p.40641",
+            "player_name": "Keaton Mitchell",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.32704",
-            "player_name": "Michael Pittman Jr.",
+            "player_key": "470.p.33991",
+            "player_name": "Breece Hall",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.40075",
-            "player_name": "Zach Charbonnet",
+            "player_key": "470.p.40201",
+            "player_name": "Dontayvion Wicks",
             "nfl_team": null,
             "primary_position": null,
-            "selected_position": "IR",
+            "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.32858",
-            "player_name": "Tyler Bass",
+            "player_key": "470.p.31833",
+            "player_name": "Kyler Murray",
+            "nfl_team": null,
+            "primary_position": null,
+            "selected_position": "BN",
+            "status": null
+          },
+          {
+            "player_key": "470.p.41062",
+            "player_name": "Cam Little",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "K",
@@ -2630,64 +2630,56 @@
           },
           {
             "player_key": null,
-            "player_name": "Bills",
+            "player_name": "Steelers",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "DEF",
-            "status": null
-          },
-          {
-            "player_key": null,
-            "player_name": "Rams",
-            "nfl_team": null,
-            "primary_position": null,
-            "selected_position": "BN",
             "status": null
           }
         ]
       }
     ],
     "historical_context": {
-      "series_path": "/head-to-head/?a=greendale-human-beings&b=van-cortlant-rangers",
-      "meetings": 6,
-      "wins_a": 5,
-      "wins_b": 1,
+      "series_path": "/head-to-head/?a=crazy-wazs-team&b=turnbull-acs",
+      "meetings": 10,
+      "wins_a": 3,
+      "wins_b": 7,
       "ties": 0,
-      "franchise_a_id": "greendale-human-beings",
+      "franchise_a_id": "crazy-wazs-team",
       "most_recent_meeting": {
-        "matchup_id": "2025-w08-01-06",
+        "matchup_id": "2025-w15-05-10",
         "season": 2025,
-        "week": 8,
-        "game_type": "regular_season",
+        "week": 15,
+        "game_type": "postseason_unclassified",
         "playoff_round": null,
         "tie": false,
         "team_a": {
-          "franchise_id": "van-cortlant-rangers",
-          "display_name": "Van Cortlant Rangers",
-          "path": "/teams/van-cortlant-rangers/",
-          "score": 114.12
+          "franchise_id": "crazy-wazs-team",
+          "display_name": "Crazy Waz's Team",
+          "path": "/teams/crazy-wazs-team/",
+          "score": 83.2
         },
         "team_b": {
-          "franchise_id": "greendale-human-beings",
-          "display_name": "Greendale Human Beings",
-          "path": "/teams/greendale-human-beings/",
-          "score": 142.32
+          "franchise_id": "turnbull-acs",
+          "display_name": "Turnbull AC's",
+          "path": "/teams/turnbull-acs/",
+          "score": 83.0
         },
         "winner": {
-          "franchise_id": "greendale-human-beings",
-          "display_name": "Greendale Human Beings"
+          "franchise_id": "crazy-wazs-team",
+          "display_name": "Crazy Waz's Team"
         },
-        "margin": 28.2,
-        "combined_score": 256.44
+        "margin": 0.2,
+        "combined_score": 166.2
       },
       "current_series_streak": {
-        "franchise_id": "greendale-human-beings",
-        "wins": 5,
-        "against_franchise_id": "van-cortlant-rangers",
-        "start_season": 2022,
-        "start_week": 3,
+        "franchise_id": "crazy-wazs-team",
+        "wins": 1,
+        "against_franchise_id": "turnbull-acs",
+        "start_season": 2025,
+        "start_week": 15,
         "end_season": 2025,
-        "end_week": 8
+        "end_week": 15
       }
     }
   },
@@ -2698,7 +2690,7 @@
       "headline_id": "week-6:slate",
       "category": "League Wire",
       "headline": "Week 6 slate is set",
-      "detail": "Van Cortlant Rangers meets Greendale Human Beings in the featured matchup.",
+      "detail": "Chris's Crazy Team meets Turnbull AC’s in the featured matchup.",
       "week": 6,
       "source": "normalized_yahoo",
       "path": "/2026/week/6/"
@@ -2738,7 +2730,7 @@
           "team_id": 8,
           "record": "1-4-0",
           "score": 0.0,
-          "projected_score": 95.91,
+          "projected_score": 87.79,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -2907,11 +2899,11 @@
           "team_id": 9,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 64.44,
+          "projected_score": 106.01,
           "roster": [
             {
-              "player_key": "470.p.29235",
-              "player_name": "Jared Goff",
+              "player_key": "470.p.33389",
+              "player_name": "Trevor Lawrence",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -2926,24 +2918,24 @@
               "status": null
             },
             {
-              "player_key": "470.p.40231",
-              "player_name": "Chris Rodriguez Jr.",
+              "player_key": "470.p.33996",
+              "player_name": "Kenneth Walker III",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
               "status": null
             },
             {
-              "player_key": "470.p.40041",
-              "player_name": "Jaxon Smith-Njigba",
+              "player_key": "470.p.41808",
+              "player_name": "Matthew Golden",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.32703",
-              "player_name": "Tee Higgins",
+              "player_key": "470.p.33394",
+              "player_name": "Jaylen Waddle",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -2958,16 +2950,32 @@
               "status": null
             },
             {
-              "player_key": "470.p.41808",
-              "player_name": "Matthew Golden",
+              "player_key": "470.p.40041",
+              "player_name": "Jaxon Smith-Njigba",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
               "status": null
             },
             {
-              "player_key": "470.p.33394",
-              "player_name": "Jaylen Waddle",
+              "player_key": "470.p.40231",
+              "player_name": "Chris Rodriguez Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.32703",
+              "player_name": "Tee Higgins",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.29235",
+              "player_name": "Jared Goff",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2984,22 +2992,6 @@
             {
               "player_key": "470.p.32671",
               "player_name": "Joe Burrow",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.33389",
-              "player_name": "Trevor Lawrence",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.33996",
-              "player_name": "Kenneth Walker III",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -3076,7 +3068,7 @@
           "team_id": 12,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 87.6,
+          "projected_score": 90.81,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -3237,7 +3229,7 @@
           "team_id": 7,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 95.24,
+          "projected_score": 96.96,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -3398,11 +3390,11 @@
           "team_id": 11,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 105.27,
+          "projected_score": 109.59,
           "roster": [
             {
-              "player_key": "470.p.29369",
-              "player_name": "Dak Prescott",
+              "player_key": "470.p.34218",
+              "player_name": "Brock Purdy",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -3457,6 +3449,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.29369",
+              "player_name": "Dak Prescott",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.28534",
               "player_name": "Stefon Diggs",
               "nfl_team": null,
@@ -3483,14 +3483,6 @@
             {
               "player_key": "470.p.40201",
               "player_name": "Dontayvion Wicks",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.34218",
-              "player_name": "Brock Purdy",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -3559,7 +3551,7 @@
           "team_id": 1,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 82.93,
+          "projected_score": 87.66,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -3683,7 +3675,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Chicago",
+              "player_name": "Bears",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -3728,7 +3720,7 @@
           "team_id": 4,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 100.37,
+          "projected_score": 108.36,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -3755,14 +3747,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.41097",
-              "player_name": "Devaughn Vele",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "WR",
-              "status": null
-            },
-            {
               "player_key": "470.p.34088",
               "player_name": "Romeo Doubs",
               "nfl_team": null,
@@ -3771,24 +3755,48 @@
               "status": null
             },
             {
-              "player_key": "470.p.31107",
-              "player_name": "Dalton Schultz",
+              "player_key": "470.p.26699",
+              "player_name": "Keenan Allen",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33392",
+              "player_name": "Kyle Pitts Sr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "TE",
               "status": null
             },
             {
-              "player_key": "470.p.34054",
-              "player_name": "Brian Robinson",
+              "player_key": "470.p.40993",
+              "player_name": "Bucky Irving",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
               "status": null
             },
             {
-              "player_key": "470.p.40993",
-              "player_name": "Bucky Irving",
+              "player_key": "470.p.41097",
+              "player_name": "Devaughn Vele",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31107",
+              "player_name": "Dalton Schultz",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34054",
+              "player_name": "Brian Robinson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -3803,24 +3811,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.26699",
-              "player_name": "Keenan Allen",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.33398",
               "player_name": "DeVonta Smith",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.33392",
-              "player_name": "Kyle Pitts Sr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -3897,7 +3889,7 @@
           "team_id": 2,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 107.4,
+          "projected_score": 107.39,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -3980,14 +3972,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.31868",
-              "player_name": "Deebo Samuel Sr.",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.31856",
               "player_name": "Josh Jacobs",
               "nfl_team": null,
@@ -4008,6 +3992,14 @@
               "player_name": "A.J. Brown",
               "nfl_team": null,
               "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31868",
+              "player_name": "Deebo Samuel Sr.",
+              "nfl_team": null,
+              "primary_position": null,
               "selected_position": "IR",
               "status": null
             },
@@ -4021,7 +4013,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Cincinnati",
+              "player_name": "Bengals",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -4066,7 +4058,7 @@
           "team_id": 3,
           "record": "4-1-0",
           "score": 0.0,
-          "projected_score": 95.48,
+          "projected_score": 97.31,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -4227,7 +4219,7 @@
           "team_id": 5,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 78.88,
+          "projected_score": 107.11,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -4246,24 +4238,24 @@
               "status": null
             },
             {
-              "player_key": "470.p.30295",
-              "player_name": "Aaron Jones Sr.",
+              "player_key": "470.p.40971",
+              "player_name": "MarShawn Lloyd",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
               "status": null
             },
             {
-              "player_key": "470.p.33500",
-              "player_name": "Amon-Ra St. Brown",
+              "player_key": "470.p.41793",
+              "player_name": "Tetairoa McMillan",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.31010",
-              "player_name": "Courtland Sutton",
+              "player_key": "470.p.40084",
+              "player_name": "Rashee Rice",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -4286,32 +4278,32 @@
               "status": null
             },
             {
+              "player_key": "470.p.30295",
+              "player_name": "Aaron Jones Sr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31010",
+              "player_name": "Courtland Sutton",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33500",
+              "player_name": "Amon-Ra St. Brown",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.34104",
               "player_name": "Khalil Shakir",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.41793",
-              "player_name": "Tetairoa McMillan",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40084",
-              "player_name": "Rashee Rice",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40971",
-              "player_name": "MarShawn Lloyd",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -4388,7 +4380,7 @@
           "team_id": 6,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 87.27,
+          "projected_score": 99.61,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -4407,8 +4399,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.41969",
-              "player_name": "Ollie Gordon II",
+              "player_key": "470.p.41845",
+              "player_name": "RJ Harvey",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
@@ -4423,8 +4415,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.32692",
-              "player_name": "Justin Jefferson",
+              "player_key": "470.p.42661",
+              "player_name": "Denzel Boston",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -4439,16 +4431,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.42661",
-              "player_name": "Denzel Boston",
+              "player_key": "470.p.32692",
+              "player_name": "Justin Jefferson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
               "status": null
             },
             {
-              "player_key": "470.p.41845",
-              "player_name": "RJ Harvey",
+              "player_key": "470.p.41969",
+              "player_name": "Ollie Gordon II",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -4549,7 +4541,7 @@
           "team_id": 10,
           "record": "1-4-0",
           "score": 0.0,
-          "projected_score": 101.99,
+          "projected_score": 103.06,
           "roster": [
             {
               "player_key": "470.p.40881",
