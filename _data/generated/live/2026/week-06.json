@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 6,
-  "generated_at": "2026-10-13T20:47:35Z",
+  "generated_at": "2026-10-14T00:12:16Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-13T20:47:35Z",
+    "source_updated_at": "2026-10-14T00:12:16Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,11 +323,11 @@
           "team_id": 2,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 97.01,
+          "projected_score": 105.72,
           "roster": [
             {
-              "player_key": "470.p.41825",
-              "player_name": "Tyler Shough",
+              "player_key": "470.p.30123",
+              "player_name": "Patrick Mahomes",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -342,8 +342,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.31905",
-              "player_name": "David Montgomery",
+              "player_key": "470.p.30180",
+              "player_name": "Alvin Kamara",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
@@ -382,8 +382,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.30180",
-              "player_name": "Alvin Kamara",
+              "player_key": "470.p.41825",
+              "player_name": "Tyler Shough",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31905",
+              "player_name": "David Montgomery",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -392,14 +400,6 @@
             {
               "player_key": "470.p.26686",
               "player_name": "Travis Kelce",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.30123",
-              "player_name": "Patrick Mahomes",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -468,7 +468,7 @@
           "team_id": 8,
           "record": "1-4-0",
           "score": 0.0,
-          "projected_score": 80.63,
+          "projected_score": 80.52,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -668,7 +668,7 @@
           "team_id": 3,
           "record": "4-1-0",
           "score": 0.0,
-          "projected_score": 112.35,
+          "projected_score": 112.3,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -805,7 +805,7 @@
           "team_id": 9,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 110.74,
+          "projected_score": 110.7,
           "roster": [
             {
               "player_key": "470.p.33389",
@@ -1005,7 +1005,7 @@
           "team_id": 10,
           "record": "1-4-0",
           "score": 0.0,
-          "projected_score": 102.22,
+          "projected_score": 102.28,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1142,7 +1142,7 @@
           "team_id": 12,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 94.03,
+          "projected_score": 93.99,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -1334,7 +1334,7 @@
           "team_id": 4,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 112.87,
+          "projected_score": 112.83,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1458,7 +1458,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Broncos",
+              "player_name": "Denver",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1479,7 +1479,7 @@
           "team_id": 7,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 96.04,
+          "projected_score": 95.97,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -1595,7 +1595,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Jets",
+              "player_name": "New York",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1671,7 +1671,7 @@
           "team_id": 5,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 108.72,
+          "projected_score": 108.91,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1808,7 +1808,7 @@
           "team_id": 11,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 110.89,
+          "projected_score": 110.87,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2000,7 +2000,7 @@
           "team_id": 1,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 85.85,
+          "projected_score": 85.79,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2145,7 +2145,7 @@
           "team_id": 6,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 97.33,
+          "projected_score": 97.39,
           "roster": [
             {
               "player_key": "470.p.40896",

@@ -143,8 +143,8 @@
       "team_name": "Albany Redskins",
       "players": [
         {
-          "player_key": "470.p.41825",
-          "player_name": "Tyler Shough",
+          "player_key": "470.p.30123",
+          "player_name": "Patrick Mahomes",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "QB",
@@ -159,8 +159,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.31905",
-          "player_name": "David Montgomery",
+          "player_key": "470.p.30180",
+          "player_name": "Alvin Kamara",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "RB",
@@ -199,8 +199,16 @@
           "status": null
         },
         {
-          "player_key": "470.p.30180",
-          "player_name": "Alvin Kamara",
+          "player_key": "470.p.41825",
+          "player_name": "Tyler Shough",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.31905",
+          "player_name": "David Montgomery",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -209,14 +217,6 @@
         {
           "player_key": "470.p.26686",
           "player_name": "Travis Kelce",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.30123",
-          "player_name": "Patrick Mahomes",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -526,7 +526,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Broncos",
+          "player_name": "Denver",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -907,7 +907,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Jets",
+          "player_name": "New York",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
