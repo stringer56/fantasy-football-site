@@ -24,6 +24,14 @@
           "status": null
         },
         {
+          "player_key": "470.p.41052",
+          "player_name": "Kimani Vidal",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "RB",
+          "status": null
+        },
+        {
           "player_key": "470.p.33965",
           "player_name": "Garrett Wilson",
           "nfl_team": null,
@@ -40,11 +48,19 @@
           "status": null
         },
         {
-          "player_key": "470.p.40064",
-          "player_name": "Sam LaPorta",
+          "player_key": "470.p.33443",
+          "player_name": "Pat Freiermuth",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "TE",
+          "status": null
+        },
+        {
+          "player_key": "470.p.32231",
+          "player_name": "Jakobi Meyers",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "W/R/T",
           "status": null
         },
         {
@@ -52,7 +68,15 @@
           "player_name": "Ladd McConkey",
           "nfl_team": null,
           "primary_position": null,
-          "selected_position": "W/R/T",
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.40064",
+          "player_name": "Sam LaPorta",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
           "status": null
         },
         {
@@ -80,32 +104,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.32231",
-          "player_name": "Jakobi Meyers",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
           "player_key": "470.p.42796",
           "player_name": "Emmett Johnson",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.41052",
-          "player_name": "Kimani Vidal",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.33443",
-          "player_name": "Pat Freiermuth",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -117,6 +117,14 @@
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "IR",
+          "status": null
+        },
+        {
+          "player_key": "470.p.31977",
+          "player_name": "Matt Gay",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "K",
           "status": null
         },
         {
@@ -151,8 +159,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.30180",
-          "player_name": "Alvin Kamara",
+          "player_key": "470.p.41922",
+          "player_name": "Cam Skattebo",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "RB",
@@ -183,8 +191,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.41922",
-          "player_name": "Cam Skattebo",
+          "player_key": "470.p.30180",
+          "player_name": "Alvin Kamara",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "W/R/T",
@@ -256,7 +264,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Cincinnati",
+          "player_name": "Patriots",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -383,7 +391,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Seattle",
+          "player_name": "Seahawks",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -421,16 +429,16 @@
           "status": null
         },
         {
-          "player_key": "470.p.34088",
-          "player_name": "Romeo Doubs",
+          "player_key": "470.p.26699",
+          "player_name": "Keenan Allen",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "WR",
           "status": null
         },
         {
-          "player_key": "470.p.26699",
-          "player_name": "Keenan Allen",
+          "player_key": "470.p.33398",
+          "player_name": "DeVonta Smith",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "WR",
@@ -450,6 +458,14 @@
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "W/R/T",
+          "status": null
+        },
+        {
+          "player_key": "470.p.34088",
+          "player_name": "Romeo Doubs",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
           "status": null
         },
         {
@@ -479,14 +495,6 @@
         {
           "player_key": "470.p.30197",
           "player_name": "Chris Godwin Jr.",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.33398",
-          "player_name": "DeVonta Smith",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -707,11 +715,19 @@
           "status": null
         },
         {
+          "player_key": "470.p.40114",
+          "player_name": "Tre Tucker",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "W/R/T",
+          "status": null
+        },
+        {
           "player_key": "470.p.32692",
           "player_name": "Justin Jefferson",
           "nfl_team": null,
           "primary_position": null,
-          "selected_position": "W/R/T",
+          "selected_position": "BN",
           "status": null
         },
         {
@@ -764,7 +780,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Bills",
+          "player_name": "Chiefs",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
