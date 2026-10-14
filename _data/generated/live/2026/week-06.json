@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 6,
-  "generated_at": "2026-10-14T04:58:57Z",
+  "generated_at": "2026-10-14T10:03:35Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-14T04:58:57Z",
+    "source_updated_at": "2026-10-14T10:03:35Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 105.43,
+          "projected_score": 105.37,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -447,7 +447,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Bengals",
+              "player_name": "Cincinnati",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -468,7 +468,7 @@
           "team_id": 8,
           "record": "1-4-0",
           "score": 0.0,
-          "projected_score": 80.62,
+          "projected_score": 80.63,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -668,7 +668,7 @@
           "team_id": 3,
           "record": "4-1-0",
           "score": 0.0,
-          "projected_score": 112.08,
+          "projected_score": 112.02,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -784,7 +784,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Seahawks",
+              "player_name": "Seattle",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1005,7 +1005,7 @@
           "team_id": 10,
           "record": "1-4-0",
           "score": 0.0,
-          "projected_score": 102.33,
+          "projected_score": 102.32,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1142,7 +1142,7 @@
           "team_id": 12,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 93.88,
+          "projected_score": 93.99,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -1334,7 +1334,7 @@
           "team_id": 4,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 112.88,
+          "projected_score": 112.97,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1479,7 +1479,7 @@
           "team_id": 7,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 110.18,
+          "projected_score": 110.14,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1595,7 +1595,7 @@
             },
             {
               "player_key": null,
-              "player_name": "New York",
+              "player_name": "Jets",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1671,7 +1671,7 @@
           "team_id": 5,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 108.82,
+          "projected_score": 108.77,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1808,7 +1808,7 @@
           "team_id": 11,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 110.79,
+          "projected_score": 110.87,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2000,7 +2000,7 @@
           "team_id": 1,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 85.94,
+          "projected_score": 85.96,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2008,14 +2008,6 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
-              "status": null
-            },
-            {
-              "player_key": "470.p.41002",
-              "player_name": "Will Shipley",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "RB",
               "status": null
             },
             {
@@ -2083,14 +2075,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.42646",
-              "player_name": "KC Concepcion Jr.",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.32231",
               "player_name": "Jakobi Meyers",
               "nfl_team": null,
@@ -2101,6 +2085,22 @@
             {
               "player_key": "470.p.42796",
               "player_name": "Emmett Johnson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41052",
+              "player_name": "Kimani Vidal",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33443",
+              "player_name": "Pat Freiermuth",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2137,7 +2137,7 @@
           "team_id": 6,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 97.39,
+          "projected_score": 97.43,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -2245,7 +2245,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Buffalo",
+              "player_name": "Bills",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -2253,7 +2253,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Los Angeles",
+              "player_name": "Rams",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",

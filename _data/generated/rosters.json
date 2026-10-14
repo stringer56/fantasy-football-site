@@ -16,14 +16,6 @@
           "status": null
         },
         {
-          "player_key": "470.p.41002",
-          "player_name": "Will Shipley",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "RB",
-          "status": null
-        },
-        {
           "player_key": "470.p.30121",
           "player_name": "Christian McCaffrey",
           "nfl_team": null,
@@ -88,14 +80,6 @@
           "status": null
         },
         {
-          "player_key": "470.p.42646",
-          "player_name": "KC Concepcion Jr.",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
           "player_key": "470.p.32231",
           "player_name": "Jakobi Meyers",
           "nfl_team": null,
@@ -106,6 +90,22 @@
         {
           "player_key": "470.p.42796",
           "player_name": "Emmett Johnson",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.41052",
+          "player_name": "Kimani Vidal",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.33443",
+          "player_name": "Pat Freiermuth",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -256,7 +256,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Bengals",
+          "player_name": "Cincinnati",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -383,7 +383,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Seahawks",
+          "player_name": "Seattle",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -764,7 +764,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Buffalo",
+          "player_name": "Bills",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -772,7 +772,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Los Angeles",
+          "player_name": "Rams",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -899,7 +899,7 @@
         },
         {
           "player_key": null,
-          "player_name": "New York",
+          "player_name": "Jets",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
