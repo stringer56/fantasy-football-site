@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-10-14T19:26:04Z",
+  "generated_at": "2026-10-14T22:31:46Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-14T19:26:04Z",
+    "source_updated_at": "2026-10-14T22:31:46Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-10-14T19:26:04Z"
+    "source_update_timestamp": "2026-10-14T22:31:46Z"
   },
   "standings": [
     {
@@ -362,7 +362,7 @@
           "team_id": 2,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 119.1,
+          "projected_score": 119.07,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -507,7 +507,7 @@
           "team_id": 8,
           "record": "1-4-0",
           "score": 0.0,
-          "projected_score": 98.97,
+          "projected_score": 99.08,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -707,7 +707,7 @@
           "team_id": 3,
           "record": "4-1-0",
           "score": 0.0,
-          "projected_score": 111.91,
+          "projected_score": 120.33,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -734,16 +734,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.33393",
-              "player_name": "Ja'Marr Chase",
+              "player_key": "470.p.30994",
+              "player_name": "DJ Moore",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.30994",
-              "player_name": "DJ Moore",
+              "player_key": "470.p.33998",
+              "player_name": "Wan'Dale Robinson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -766,6 +766,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.33393",
+              "player_name": "Ja'Marr Chase",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.40883",
               "player_name": "Brian Thomas Jr.",
               "nfl_team": null,
@@ -784,14 +792,6 @@
             {
               "player_key": "470.p.31056",
               "player_name": "Mark Andrews",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.33998",
-              "player_name": "Wan'Dale Robinson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -844,7 +844,7 @@
           "team_id": 9,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 110.28,
+          "projected_score": 110.27,
           "roster": [
             {
               "player_key": "470.p.33389",
@@ -1044,7 +1044,7 @@
           "team_id": 10,
           "record": "1-4-0",
           "score": 0.0,
-          "projected_score": 102.82,
+          "projected_score": 102.93,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1181,7 +1181,7 @@
           "team_id": 12,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 106.7,
+          "projected_score": 107.18,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1373,7 +1373,7 @@
           "team_id": 4,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 115.65,
+          "projected_score": 115.56,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1518,7 +1518,7 @@
           "team_id": 7,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 110.36,
+          "projected_score": 110.19,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1710,7 +1710,7 @@
           "team_id": 5,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 108.97,
+          "projected_score": 108.91,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1847,7 +1847,7 @@
           "team_id": 11,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 111.13,
+          "projected_score": 111.06,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2039,7 +2039,7 @@
           "team_id": 1,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 106.9,
+          "projected_score": 106.85,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2184,7 +2184,7 @@
           "team_id": 6,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 109.82,
+          "projected_score": 109.86,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -2363,7 +2363,7 @@
     }
   ],
   "featured_matchup": {
-    "matchup_id": "2026-w06-ayahuasca-rush--north-town-ninnyhammers",
+    "matchup_id": "2026-w06-crazy-wazs-team--turnbull-acs",
     "week": 6,
     "status": "live",
     "status_label": "In Progress",
@@ -2373,127 +2373,127 @@
     "winner_franchise_id": null,
     "teams": [
       {
-        "franchise_id": "ayahuasca-rush",
-        "display_name": "Ayahuasca Rush",
-        "canonical_name": "Ayahuasca Rush",
-        "short_name": "Rush",
-        "path": "/teams/ayahuasca-rush/",
-        "identity_image": "/assets/img/franchises/ayahuasca-rush/helmet-2026.jpg",
-        "identity_alt": "Ayahuasca Rush green 3D football helmet with a leaf emblem",
-        "primary_color": "#2e7d32",
-        "team_key": "470.l.26455.t.3",
-        "team_id": 3,
-        "record": "4-1-0",
+        "franchise_id": "crazy-wazs-team",
+        "display_name": "Chris's Crazy Team",
+        "canonical_name": "Crazy Waz's Team",
+        "short_name": "Crazy Waz",
+        "path": "/teams/crazy-wazs-team/",
+        "identity_image": "/assets/img/franchises/crazy-wazs-team/helmet-2026.png",
+        "identity_alt": "Crazy Waz's Team commissioner-approved 3D football helmet",
+        "primary_color": "#15803d",
+        "team_key": "470.l.26455.t.5",
+        "team_id": 5,
+        "record": "3-2-0",
         "score": 0.0,
-        "projected_score": 111.91,
+        "projected_score": 108.91,
         "roster": [
           {
-            "player_key": "470.p.32696",
-            "player_name": "Jordan Love",
+            "player_key": "470.p.32723",
+            "player_name": "Jalen Hurts",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "QB",
             "status": null
           },
           {
-            "player_key": "470.p.34120",
-            "player_name": "Kyren Williams",
+            "player_key": "470.p.29279",
+            "player_name": "Derrick Henry",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "RB",
             "status": null
           },
           {
-            "player_key": "470.p.33508",
-            "player_name": "Rhamondre Stevenson",
+            "player_key": "470.p.40971",
+            "player_name": "MarShawn Lloyd",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "RB",
             "status": null
           },
           {
-            "player_key": "470.p.33393",
-            "player_name": "Ja'Marr Chase",
+            "player_key": "470.p.41793",
+            "player_name": "Tetairoa McMillan",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "WR",
             "status": null
           },
           {
-            "player_key": "470.p.30994",
-            "player_name": "DJ Moore",
+            "player_key": "470.p.40084",
+            "player_name": "Rashee Rice",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "WR",
             "status": null
           },
           {
-            "player_key": "470.p.40878",
-            "player_name": "Brock Bowers",
+            "player_key": "470.p.33113",
+            "player_name": "Juwan Johnson",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "TE",
             "status": null
           },
           {
-            "player_key": "470.p.42010",
-            "player_name": "Jacory Croskey-Merritt",
+            "player_key": "470.p.31960",
+            "player_name": "Tony Pollard",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "W/R/T",
             "status": null
           },
           {
-            "player_key": "470.p.40883",
-            "player_name": "Brian Thomas Jr.",
+            "player_key": "470.p.41821",
+            "player_name": "Quinshon Judkins",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.31002",
-            "player_name": "Lamar Jackson",
+            "player_key": "470.p.30295",
+            "player_name": "Aaron Jones Sr.",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.31056",
-            "player_name": "Mark Andrews",
+            "player_key": "470.p.31010",
+            "player_name": "Courtland Sutton",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.33998",
-            "player_name": "Wan'Dale Robinson",
+            "player_key": "470.p.33500",
+            "player_name": "Amon-Ra St. Brown",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.40095",
-            "player_name": "Tank Bigsby",
+            "player_key": "470.p.34104",
+            "player_name": "Khalil Shakir",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.33100",
-            "player_name": "Rico Dowdle",
+            "player_key": "470.p.40877",
+            "player_name": "Xavier Worthy",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.40819",
-            "player_name": "Brandon Aubrey",
+            "player_key": "470.p.31482",
+            "player_name": "Eddy Pineiro",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "K",
@@ -2501,7 +2501,7 @@
           },
           {
             "player_key": null,
-            "player_name": "Seahawks",
+            "player_name": "Jaguars",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "DEF",
@@ -2510,135 +2510,127 @@
         ]
       },
       {
-        "franchise_id": "north-town-ninnyhammers",
-        "display_name": "North town Ninnyhammers",
-        "canonical_name": "North Town Ninnyhammers",
-        "short_name": "Ninnyhammers",
-        "path": "/teams/north-town-ninnyhammers/",
-        "identity_image": "/assets/img/franchises/north-town-ninnyhammers/helmet-2026.png",
-        "identity_alt": "North Town Ninnyhammers commissioner-approved 3D football helmet",
-        "primary_color": "#dc2626",
-        "team_key": "470.l.26455.t.9",
-        "team_id": 9,
-        "record": "3-2-0",
+        "franchise_id": "turnbull-acs",
+        "display_name": "Turnbull AC’s",
+        "canonical_name": "Turnbull AC's",
+        "short_name": "Turnbull",
+        "path": "/teams/turnbull-acs/",
+        "identity_image": "/assets/img/franchises/turnbull-acs/helmet-2026.png",
+        "identity_alt": "Turnbull AC's commissioner-approved 3D football helmet",
+        "primary_color": "#7e22ce",
+        "team_key": "470.l.26455.t.11",
+        "team_id": 11,
+        "record": "2-3-0",
         "score": 0.0,
-        "projected_score": 110.28,
+        "projected_score": 111.06,
         "roster": [
           {
-            "player_key": "470.p.33389",
-            "player_name": "Trevor Lawrence",
+            "player_key": "470.p.34218",
+            "player_name": "Brock Purdy",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "QB",
             "status": null
           },
           {
-            "player_key": "470.p.40707",
-            "player_name": "Emanuel Wilson",
+            "player_key": "470.p.41791",
+            "player_name": "Ashton Jeanty",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "RB",
             "status": null
           },
           {
-            "player_key": "470.p.33996",
-            "player_name": "Kenneth Walker III",
+            "player_key": "470.p.32725",
+            "player_name": "J.K. Dobbins",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "RB",
             "status": null
           },
           {
-            "player_key": "470.p.41808",
-            "player_name": "Matthew Golden",
+            "player_key": "470.p.32687",
+            "player_name": "CeeDee Lamb",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "WR",
             "status": null
           },
           {
-            "player_key": "470.p.33394",
-            "player_name": "Jaylen Waddle",
+            "player_key": "470.p.41804",
+            "player_name": "Emeka Egbuka",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "WR",
             "status": null
           },
           {
-            "player_key": "470.p.34095",
-            "player_name": "Isaiah Likely",
+            "player_key": "470.p.40048",
+            "player_name": "Dalton Kincaid",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "TE",
             "status": null
           },
           {
-            "player_key": "470.p.40041",
-            "player_name": "Jaxon Smith-Njigba",
+            "player_key": "470.p.41824",
+            "player_name": "Luther Burden III",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "W/R/T",
             "status": null
           },
           {
-            "player_key": "470.p.40231",
-            "player_name": "Chris Rodriguez Jr.",
+            "player_key": "470.p.29369",
+            "player_name": "Dak Prescott",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.32703",
-            "player_name": "Tee Higgins",
+            "player_key": "470.p.28534",
+            "player_name": "Stefon Diggs",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.29235",
-            "player_name": "Jared Goff",
+            "player_key": "470.p.40641",
+            "player_name": "Keaton Mitchell",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.30259",
-            "player_name": "George Kittle",
+            "player_key": "470.p.33991",
+            "player_name": "Breece Hall",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.32671",
-            "player_name": "Joe Burrow",
+            "player_key": "470.p.40201",
+            "player_name": "Dontayvion Wicks",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.42642",
-            "player_name": "Makai Lemon",
+            "player_key": "470.p.31833",
+            "player_name": "Kyler Murray",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "BN",
             "status": null
           },
           {
-            "player_key": "470.p.42654",
-            "player_name": "Jadarian Price",
-            "nfl_team": null,
-            "primary_position": null,
-            "selected_position": "IR",
-            "status": null
-          },
-          {
-            "player_key": "470.p.41988",
-            "player_name": "Tyler Loop",
+            "player_key": "470.p.41062",
+            "player_name": "Cam Little",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "K",
@@ -2646,7 +2638,7 @@
           },
           {
             "player_key": null,
-            "player_name": "Vikings",
+            "player_name": "Steelers",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "DEF",
@@ -2656,46 +2648,46 @@
       }
     ],
     "historical_context": {
-      "series_path": "/head-to-head/?a=ayahuasca-rush&b=north-town-ninnyhammers",
-      "meetings": 3,
+      "series_path": "/head-to-head/?a=crazy-wazs-team&b=turnbull-acs",
+      "meetings": 10,
       "wins_a": 3,
-      "wins_b": 0,
+      "wins_b": 7,
       "ties": 0,
-      "franchise_a_id": "ayahuasca-rush",
+      "franchise_a_id": "crazy-wazs-team",
       "most_recent_meeting": {
-        "matchup_id": "2025-w10-03-08",
+        "matchup_id": "2025-w15-05-10",
         "season": 2025,
-        "week": 10,
-        "game_type": "regular_season",
+        "week": 15,
+        "game_type": "postseason_unclassified",
         "playoff_round": null,
         "tie": false,
         "team_a": {
-          "franchise_id": "ayahuasca-rush",
-          "display_name": "Ayahuasca Rush",
-          "path": "/teams/ayahuasca-rush/",
-          "score": 117.1
+          "franchise_id": "crazy-wazs-team",
+          "display_name": "Crazy Waz's Team",
+          "path": "/teams/crazy-wazs-team/",
+          "score": 83.2
         },
         "team_b": {
-          "franchise_id": "north-town-ninnyhammers",
-          "display_name": "North Town Ninnyhammers",
-          "path": "/teams/north-town-ninnyhammers/",
-          "score": 95.62
+          "franchise_id": "turnbull-acs",
+          "display_name": "Turnbull AC's",
+          "path": "/teams/turnbull-acs/",
+          "score": 83.0
         },
         "winner": {
-          "franchise_id": "ayahuasca-rush",
-          "display_name": "Ayahuasca Rush"
+          "franchise_id": "crazy-wazs-team",
+          "display_name": "Crazy Waz's Team"
         },
-        "margin": 21.48,
-        "combined_score": 212.72
+        "margin": 0.2,
+        "combined_score": 166.2
       },
       "current_series_streak": {
-        "franchise_id": "ayahuasca-rush",
-        "wins": 3,
-        "against_franchise_id": "north-town-ninnyhammers",
-        "start_season": 2023,
-        "start_week": 10,
+        "franchise_id": "crazy-wazs-team",
+        "wins": 1,
+        "against_franchise_id": "turnbull-acs",
+        "start_season": 2025,
+        "start_week": 15,
         "end_season": 2025,
-        "end_week": 10
+        "end_week": 15
       }
     }
   },
@@ -2706,7 +2698,7 @@
       "headline_id": "week-6:slate",
       "category": "League Wire",
       "headline": "Week 6 slate is set",
-      "detail": "Ayahuasca Rush meets North town Ninnyhammers in the featured matchup.",
+      "detail": "Chris's Crazy Team meets Turnbull AC’s in the featured matchup.",
       "week": 6,
       "source": "normalized_yahoo",
       "path": "/2026/week/6/"
@@ -2746,7 +2738,7 @@
           "team_id": 8,
           "record": "1-4-0",
           "score": 0.0,
-          "projected_score": 98.97,
+          "projected_score": 99.08,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -2915,7 +2907,7 @@
           "team_id": 9,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 110.28,
+          "projected_score": 110.27,
           "roster": [
             {
               "player_key": "470.p.33389",
@@ -3084,7 +3076,7 @@
           "team_id": 12,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 106.7,
+          "projected_score": 107.18,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -3245,7 +3237,7 @@
           "team_id": 7,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 110.36,
+          "projected_score": 110.19,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -3406,7 +3398,7 @@
           "team_id": 11,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 111.13,
+          "projected_score": 111.06,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -3567,7 +3559,7 @@
           "team_id": 1,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 106.9,
+          "projected_score": 106.85,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -3736,7 +3728,7 @@
           "team_id": 4,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 115.65,
+          "projected_score": 115.56,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -3905,7 +3897,7 @@
           "team_id": 2,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 119.1,
+          "projected_score": 119.07,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -4074,7 +4066,7 @@
           "team_id": 3,
           "record": "4-1-0",
           "score": 0.0,
-          "projected_score": 111.91,
+          "projected_score": 120.33,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -4101,16 +4093,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.33393",
-              "player_name": "Ja'Marr Chase",
+              "player_key": "470.p.30994",
+              "player_name": "DJ Moore",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.30994",
-              "player_name": "DJ Moore",
+              "player_key": "470.p.33998",
+              "player_name": "Wan'Dale Robinson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -4133,6 +4125,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.33393",
+              "player_name": "Ja'Marr Chase",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.40883",
               "player_name": "Brian Thomas Jr.",
               "nfl_team": null,
@@ -4151,14 +4151,6 @@
             {
               "player_key": "470.p.31056",
               "player_name": "Mark Andrews",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.33998",
-              "player_name": "Wan'Dale Robinson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -4235,7 +4227,7 @@
           "team_id": 5,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 108.97,
+          "projected_score": 108.91,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -4396,7 +4388,7 @@
           "team_id": 6,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 109.82,
+          "projected_score": 109.86,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -4565,7 +4557,7 @@
           "team_id": 10,
           "record": "1-4-0",
           "score": 0.0,
-          "projected_score": 102.82,
+          "projected_score": 102.93,
           "roster": [
             {
               "player_key": "470.p.40881",
