@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 6,
-  "generated_at": "2026-10-15T15:15:17Z",
+  "generated_at": "2026-10-15T19:14:36Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-15T15:15:17Z",
+    "source_updated_at": "2026-10-15T19:14:36Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 119.16,
+          "projected_score": 120.36,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -374,11 +374,19 @@
               "status": null
             },
             {
+              "player_key": "470.p.26686",
+              "player_name": "Travis Kelce",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
               "player_key": "470.p.30180",
               "player_name": "Alvin Kamara",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "W/R/T",
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -392,14 +400,6 @@
             {
               "player_key": "470.p.31905",
               "player_name": "David Montgomery",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.26686",
-              "player_name": "Travis Kelce",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -468,7 +468,7 @@
           "team_id": 8,
           "record": "1-4-0",
           "score": 0.0,
-          "projected_score": 99.62,
+          "projected_score": 100.85,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -668,7 +668,7 @@
           "team_id": 3,
           "record": "4-1-0",
           "score": 0.0,
-          "projected_score": 119.92,
+          "projected_score": 118.73,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -805,7 +805,7 @@
           "team_id": 9,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 110.56,
+          "projected_score": 110.96,
           "roster": [
             {
               "player_key": "470.p.33389",
@@ -1005,7 +1005,7 @@
           "team_id": 10,
           "record": "1-4-0",
           "score": 0.0,
-          "projected_score": 103.46,
+          "projected_score": 103.59,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1142,7 +1142,7 @@
           "team_id": 12,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 107.7,
+          "projected_score": 107.92,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1334,7 +1334,7 @@
           "team_id": 4,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 115.74,
+          "projected_score": 112.69,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1479,7 +1479,7 @@
           "team_id": 7,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 110.19,
+          "projected_score": 110.06,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1671,16 +1671,8 @@
           "team_id": 5,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 108.69,
+          "projected_score": 90.57,
           "roster": [
-            {
-              "player_key": "470.p.32723",
-              "player_name": "Jalen Hurts",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "QB",
-              "status": null
-            },
             {
               "player_key": "470.p.29279",
               "player_name": "Derrick Henry",
@@ -1778,6 +1770,22 @@
               "status": null
             },
             {
+              "player_key": "470.p.40889",
+              "player_name": "Michael Penix Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.32723",
+              "player_name": "Jalen Hurts",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "IR",
+              "status": null
+            },
+            {
               "player_key": "470.p.31482",
               "player_name": "Eddy Pineiro",
               "nfl_team": null,
@@ -1808,7 +1816,7 @@
           "team_id": 11,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 111.16,
+          "projected_score": 111.06,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2000,7 +2008,7 @@
           "team_id": 1,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 106.59,
+          "projected_score": 106.62,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2145,7 +2153,7 @@
           "team_id": 6,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 110.48,
+          "projected_score": 110.44,
           "roster": [
             {
               "player_key": "470.p.40896",

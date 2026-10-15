@@ -191,11 +191,19 @@
           "status": null
         },
         {
+          "player_key": "470.p.26686",
+          "player_name": "Travis Kelce",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "W/R/T",
+          "status": null
+        },
+        {
           "player_key": "470.p.30180",
           "player_name": "Alvin Kamara",
           "nfl_team": null,
           "primary_position": null,
-          "selected_position": "W/R/T",
+          "selected_position": "BN",
           "status": null
         },
         {
@@ -209,14 +217,6 @@
         {
           "player_key": "470.p.31905",
           "player_name": "David Montgomery",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.26686",
-          "player_name": "Travis Kelce",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -540,14 +540,6 @@
       "team_name": "Chris's Crazy Team",
       "players": [
         {
-          "player_key": "470.p.32723",
-          "player_name": "Jalen Hurts",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "QB",
-          "status": null
-        },
-        {
           "player_key": "470.p.29279",
           "player_name": "Derrick Henry",
           "nfl_team": null,
@@ -641,6 +633,22 @@
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.40889",
+          "player_name": "Michael Penix Jr.",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.32723",
+          "player_name": "Jalen Hurts",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "IR",
           "status": null
         },
         {
