@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-10-15T10:20:58Z",
+  "generated_at": "2026-10-15T15:15:17Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-15T10:20:58Z",
+    "source_updated_at": "2026-10-15T15:15:17Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-10-15T10:20:58Z"
+    "source_update_timestamp": "2026-10-15T15:15:17Z"
   },
   "standings": [
     {
@@ -362,7 +362,7 @@
           "team_id": 2,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 119.23,
+          "projected_score": 119.16,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -507,7 +507,7 @@
           "team_id": 8,
           "record": "1-4-0",
           "score": 0.0,
-          "projected_score": 99.64,
+          "projected_score": 99.62,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -707,7 +707,7 @@
           "team_id": 3,
           "record": "4-1-0",
           "score": 0.0,
-          "projected_score": 120.22,
+          "projected_score": 119.92,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -844,7 +844,7 @@
           "team_id": 9,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 110.38,
+          "projected_score": 110.56,
           "roster": [
             {
               "player_key": "470.p.33389",
@@ -968,7 +968,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Minnesota",
+              "player_name": "Vikings",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1044,7 +1044,7 @@
           "team_id": 10,
           "record": "1-4-0",
           "score": 0.0,
-          "projected_score": 103.16,
+          "projected_score": 103.46,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1181,7 +1181,7 @@
           "team_id": 12,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 107.6,
+          "projected_score": 107.7,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1373,7 +1373,7 @@
           "team_id": 4,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 115.79,
+          "projected_score": 115.74,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1518,7 +1518,7 @@
           "team_id": 7,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 110.08,
+          "projected_score": 110.19,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1710,7 +1710,7 @@
           "team_id": 5,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 108.99,
+          "projected_score": 108.69,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -1847,7 +1847,7 @@
           "team_id": 11,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 110.96,
+          "projected_score": 111.16,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2039,7 +2039,7 @@
           "team_id": 1,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 106.76,
+          "projected_score": 106.59,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2163,7 +2163,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Chicago",
+              "player_name": "Bears",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -2184,7 +2184,7 @@
           "team_id": 6,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 109.92,
+          "projected_score": 110.48,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -2385,7 +2385,7 @@
         "team_id": 5,
         "record": "3-2-0",
         "score": 0.0,
-        "projected_score": 108.99,
+        "projected_score": 108.69,
         "roster": [
           {
             "player_key": "470.p.32723",
@@ -2522,7 +2522,7 @@
         "team_id": 11,
         "record": "2-3-0",
         "score": 0.0,
-        "projected_score": 110.96,
+        "projected_score": 111.16,
         "roster": [
           {
             "player_key": "470.p.34218",
@@ -2738,7 +2738,7 @@
           "team_id": 8,
           "record": "1-4-0",
           "score": 0.0,
-          "projected_score": 99.64,
+          "projected_score": 99.62,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -2907,7 +2907,7 @@
           "team_id": 9,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 110.38,
+          "projected_score": 110.56,
           "roster": [
             {
               "player_key": "470.p.33389",
@@ -3031,7 +3031,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Minnesota",
+              "player_name": "Vikings",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -3076,7 +3076,7 @@
           "team_id": 12,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 107.6,
+          "projected_score": 107.7,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -3237,7 +3237,7 @@
           "team_id": 7,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 110.08,
+          "projected_score": 110.19,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -3398,7 +3398,7 @@
           "team_id": 11,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 110.96,
+          "projected_score": 111.16,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -3559,7 +3559,7 @@
           "team_id": 1,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 106.76,
+          "projected_score": 106.59,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -3683,7 +3683,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Chicago",
+              "player_name": "Bears",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -3728,7 +3728,7 @@
           "team_id": 4,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 115.79,
+          "projected_score": 115.74,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -3897,7 +3897,7 @@
           "team_id": 2,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 119.23,
+          "projected_score": 119.16,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -4066,7 +4066,7 @@
           "team_id": 3,
           "record": "4-1-0",
           "score": 0.0,
-          "projected_score": 120.22,
+          "projected_score": 119.92,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -4227,7 +4227,7 @@
           "team_id": 5,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 108.99,
+          "projected_score": 108.69,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -4388,7 +4388,7 @@
           "team_id": 6,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 109.92,
+          "projected_score": 110.48,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -4557,7 +4557,7 @@
           "team_id": 10,
           "record": "1-4-0",
           "score": 0.0,
-          "projected_score": 103.16,
+          "projected_score": 103.46,
           "roster": [
             {
               "player_key": "470.p.40881",
