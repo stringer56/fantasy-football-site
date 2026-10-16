@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 6,
-  "generated_at": "2026-10-16T00:39:30Z",
+  "generated_at": "2026-10-16T05:05:34Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-16T00:39:30Z",
+    "source_updated_at": "2026-10-16T05:05:34Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 120.24,
+          "projected_score": 120.27,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -467,8 +467,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "1-4-0",
-          "score": 0.32,
-          "projected_score": 98.41,
+          "score": 4.48,
+          "projected_score": 89.2,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -667,8 +667,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "4-1-0",
-          "score": 10.0,
-          "projected_score": 118.45,
+          "score": 6.0,
+          "projected_score": 113.15,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -804,8 +804,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "3-2-0",
-          "score": 4.7,
-          "projected_score": 109.31,
+          "score": 29.0,
+          "projected_score": 99.01,
           "roster": [
             {
               "player_key": "470.p.33389",
@@ -1004,8 +1004,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "1-4-0",
-          "score": 5.0,
-          "projected_score": 107.0,
+          "score": 8.0,
+          "projected_score": 103.22,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1142,7 +1142,7 @@
           "team_id": 12,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 107.97,
+          "projected_score": 107.9,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1333,8 +1333,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "2-3-0",
-          "score": 11.0,
-          "projected_score": 111.38,
+          "score": 17.0,
+          "projected_score": 116.08,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1479,7 +1479,7 @@
           "team_id": 7,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 110.77,
+          "projected_score": 110.53,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1671,7 +1671,7 @@
           "team_id": 5,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 106.26,
+          "projected_score": 106.25,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1815,8 +1815,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "2-3-0",
-          "score": 0.2,
-          "projected_score": 110.12,
+          "score": 12.1,
+          "projected_score": 115.14,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2008,7 +2008,7 @@
           "team_id": 1,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 106.31,
+          "projected_score": 106.27,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2132,7 +2132,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Chicago",
+              "player_name": "Bears",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -2152,8 +2152,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "3-2-0",
-          "score": 0.0,
-          "projected_score": 109.14,
+          "score": 13.1,
+          "projected_score": 115.26,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -2269,7 +2269,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Kansas City",
+              "player_name": "Chiefs",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -2277,7 +2277,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Los Angeles",
+              "player_name": "Rams",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2335,9 +2335,9 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 11.0,
-      "franchise_id": "buffalo-bravado",
-      "display_name": "Buffalo Bravados"
+      "value": 29.0,
+      "franchise_id": "north-town-ninnyhammers",
+      "display_name": "North town Ninnyhammers"
     },
     {
       "fact_id": "lowest-score",
@@ -2349,20 +2349,20 @@
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 14.7,
+      "value": 35.0,
       "matchup_id": "2026-w06-ayahuasca-rush--north-town-ninnyhammers"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 11.0,
-      "matchup_id": "2026-w06-buffalo-bravado--maine-moose"
+      "value": 23.0,
+      "matchup_id": "2026-w06-ayahuasca-rush--north-town-ninnyhammers"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 0.2,
-      "matchup_id": "2026-w06-crazy-wazs-team--turnbull-acs"
+      "value": 4.48,
+      "matchup_id": "2026-w06-albany-kneelers--new-jersey-giants"
     },
     {
       "fact_id": "longest-active-streak",
