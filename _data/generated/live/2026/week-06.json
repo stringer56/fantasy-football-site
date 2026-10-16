@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 6,
-  "generated_at": "2026-10-15T22:27:07Z",
+  "generated_at": "2026-10-16T00:39:30Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-15T22:27:07Z",
+    "source_updated_at": "2026-10-16T00:39:30Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 120.26,
+          "projected_score": 120.24,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -467,8 +467,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "1-4-0",
-          "score": 0.0,
-          "projected_score": 100.25,
+          "score": 0.32,
+          "projected_score": 98.41,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -667,8 +667,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "4-1-0",
-          "score": 0.0,
-          "projected_score": 118.99,
+          "score": 10.0,
+          "projected_score": 118.45,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -804,8 +804,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "3-2-0",
-          "score": 0.0,
-          "projected_score": 111.07,
+          "score": 4.7,
+          "projected_score": 109.31,
           "roster": [
             {
               "player_key": "470.p.33389",
@@ -1004,8 +1004,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "1-4-0",
-          "score": 0.0,
-          "projected_score": 103.39,
+          "score": 5.0,
+          "projected_score": 107.0,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1142,7 +1142,7 @@
           "team_id": 12,
           "record": "2-3-0",
           "score": 0.0,
-          "projected_score": 108.03,
+          "projected_score": 107.97,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1333,8 +1333,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "2-3-0",
-          "score": 0.0,
-          "projected_score": 111.64,
+          "score": 11.0,
+          "projected_score": 111.38,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1479,7 +1479,7 @@
           "team_id": 7,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 109.93,
+          "projected_score": 110.77,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1514,8 +1514,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.40121",
-              "player_name": "Michael Wilson",
+              "player_key": "470.p.40899",
+              "player_name": "Malik Nabers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -1538,6 +1538,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.40121",
+              "player_name": "Michael Wilson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.40030",
               "player_name": "C.J. Stroud",
               "nfl_team": null,
@@ -1548,14 +1556,6 @@
             {
               "player_key": "470.p.40059",
               "player_name": "Jahmyr Gibbs",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40899",
-              "player_name": "Malik Nabers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1671,8 +1671,16 @@
           "team_id": 5,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 90.47,
+          "projected_score": 106.26,
           "roster": [
+            {
+              "player_key": "470.p.40889",
+              "player_name": "Michael Penix Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "QB",
+              "status": null
+            },
             {
               "player_key": "470.p.29279",
               "player_name": "Derrick Henry",
@@ -1770,14 +1778,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.40889",
-              "player_name": "Michael Penix Jr.",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.32723",
               "player_name": "Jalen Hurts",
               "nfl_team": null,
@@ -1815,8 +1815,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "2-3-0",
-          "score": 0.0,
-          "projected_score": 111.03,
+          "score": 0.2,
+          "projected_score": 110.12,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2008,7 +2008,7 @@
           "team_id": 1,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 106.2,
+          "projected_score": 106.31,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2132,7 +2132,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Bears",
+              "player_name": "Chicago",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -2153,7 +2153,7 @@
           "team_id": 6,
           "record": "3-2-0",
           "score": 0.0,
-          "projected_score": 110.44,
+          "projected_score": 109.14,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -2269,7 +2269,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Chiefs",
+              "player_name": "Kansas City",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -2277,7 +2277,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Rams",
+              "player_name": "Los Angeles",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2331,7 +2331,48 @@
       }
     }
   ],
-  "weekly_facts": [],
+  "weekly_facts": [
+    {
+      "fact_id": "highest-score",
+      "label": "Highest score",
+      "value": 11.0,
+      "franchise_id": "buffalo-bravado",
+      "display_name": "Buffalo Bravados"
+    },
+    {
+      "fact_id": "lowest-score",
+      "label": "Lowest score",
+      "value": 0.0,
+      "franchise_id": "albany-kneelers",
+      "display_name": "Albany Redskins"
+    },
+    {
+      "fact_id": "highest-combined",
+      "label": "Highest combined score",
+      "value": 14.7,
+      "matchup_id": "2026-w06-ayahuasca-rush--north-town-ninnyhammers"
+    },
+    {
+      "fact_id": "biggest-win",
+      "label": "Biggest lead",
+      "value": 11.0,
+      "matchup_id": "2026-w06-buffalo-bravado--maine-moose"
+    },
+    {
+      "fact_id": "closest-game",
+      "label": "Closest game",
+      "value": 0.2,
+      "matchup_id": "2026-w06-crazy-wazs-team--turnbull-acs"
+    },
+    {
+      "fact_id": "longest-active-streak",
+      "label": "Longest active streak",
+      "value": 3,
+      "streak_type": "win",
+      "franchise_id": "ayahuasca-rush",
+      "display_name": "Ayahuasca Rush"
+    }
+  ],
   "record_watch": [],
   "power_rankings": {
     "status": "unavailable",

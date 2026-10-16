@@ -129,7 +129,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Bears",
+          "player_name": "Chicago",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -540,6 +540,14 @@
       "team_name": "Chris's Crazy Team",
       "players": [
         {
+          "player_key": "470.p.40889",
+          "player_name": "Michael Penix Jr.",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "QB",
+          "status": null
+        },
+        {
           "player_key": "470.p.29279",
           "player_name": "Derrick Henry",
           "nfl_team": null,
@@ -630,14 +638,6 @@
         {
           "player_key": "470.p.40877",
           "player_name": "Xavier Worthy",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.40889",
-          "player_name": "Michael Penix Jr.",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -788,7 +788,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Chiefs",
+          "player_name": "Kansas City",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -796,7 +796,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Rams",
+          "player_name": "Los Angeles",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -842,8 +842,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.40121",
-          "player_name": "Michael Wilson",
+          "player_key": "470.p.40899",
+          "player_name": "Malik Nabers",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "WR",
@@ -866,6 +866,14 @@
           "status": null
         },
         {
+          "player_key": "470.p.40121",
+          "player_name": "Michael Wilson",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
           "player_key": "470.p.40030",
           "player_name": "C.J. Stroud",
           "nfl_team": null,
@@ -876,14 +884,6 @@
         {
           "player_key": "470.p.40059",
           "player_name": "Jahmyr Gibbs",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.40899",
-          "player_name": "Malik Nabers",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
