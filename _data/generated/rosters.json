@@ -256,7 +256,7 @@
         },
         {
           "player_key": null,
-          "player_name": "New England",
+          "player_name": "Patriots",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -383,7 +383,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Seattle",
+          "player_name": "Seahawks",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -556,8 +556,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.40084",
-          "player_name": "Rashee Rice",
+          "player_key": "470.p.40877",
+          "player_name": "Xavier Worthy",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "WR",
@@ -577,6 +577,14 @@
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "W/R/T",
+          "status": null
+        },
+        {
+          "player_key": "470.p.40084",
+          "player_name": "Rashee Rice",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
           "status": null
         },
         {
@@ -614,14 +622,6 @@
         {
           "player_key": "470.p.34104",
           "player_name": "Khalil Shakir",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.40877",
-          "player_name": "Xavier Worthy",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -834,8 +834,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.41799",
-          "player_name": "Tyler Warren",
+          "player_key": "470.p.31019",
+          "player_name": "Dallas Goedert",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "TE",
@@ -847,6 +847,14 @@
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "W/R/T",
+          "status": null
+        },
+        {
+          "player_key": "470.p.41799",
+          "player_name": "Tyler Warren",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
           "status": null
         },
         {
@@ -907,7 +915,7 @@
         },
         {
           "player_key": null,
-          "player_name": "New York",
+          "player_name": "Jets",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -1042,7 +1050,7 @@
         },
         {
           "player_key": null,
-          "player_name": "New Orleans",
+          "player_name": "Saints",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
