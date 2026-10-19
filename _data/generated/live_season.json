@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-10-19T07:27:59Z",
+  "generated_at": "2026-10-19T14:55:18Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-19T07:27:59Z",
+    "source_updated_at": "2026-10-19T14:55:18Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-10-19T07:27:59Z"
+    "source_update_timestamp": "2026-10-19T14:55:18Z"
   },
   "standings": [
     {
@@ -499,7 +499,7 @@
           "team_id": 8,
           "record": "1-4-0",
           "score": 89.68,
-          "projected_score": 99.59,
+          "projected_score": 99.57,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1173,7 +1173,7 @@
           "team_id": 12,
           "record": "2-3-0",
           "score": 74.12,
-          "projected_score": 98.17,
+          "projected_score": 98.12,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1289,7 +1289,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Eagles",
+              "player_name": "Philadelphia",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1441,7 +1441,7 @@
             },
             {
               "player_key": "470.p.34054",
-              "player_name": "Brian Robinson",
+              "player_name": "Brian Robinson Jr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1702,7 +1702,7 @@
           "team_id": 5,
           "record": "3-2-0",
           "score": 62.6,
-          "projected_score": 71.56,
+          "projected_score": 71.55,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1847,7 +1847,7 @@
           "team_id": 11,
           "record": "2-3-0",
           "score": 103.5,
-          "projected_score": 125.48,
+          "projected_score": 125.35,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2039,7 +2039,7 @@
           "team_id": 1,
           "record": "3-2-0",
           "score": 82.08,
-          "projected_score": 100.68,
+          "projected_score": 100.58,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2184,7 +2184,7 @@
           "team_id": 6,
           "record": "3-2-0",
           "score": 110.6,
-          "projected_score": 130.39,
+          "projected_score": 130.41,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -2522,7 +2522,7 @@
         "team_id": 12,
         "record": "2-3-0",
         "score": 74.12,
-        "projected_score": 98.17,
+        "projected_score": 98.12,
         "roster": [
           {
             "player_key": "470.p.25812",
@@ -2638,7 +2638,7 @@
           },
           {
             "player_key": null,
-            "player_name": "Eagles",
+            "player_name": "Philadelphia",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "DEF",
@@ -2801,7 +2801,7 @@
           "team_id": 8,
           "record": "1-4-0",
           "score": 89.68,
-          "projected_score": 99.59,
+          "projected_score": 99.57,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -3139,7 +3139,7 @@
           "team_id": 12,
           "record": "2-3-0",
           "score": 74.12,
-          "projected_score": 98.17,
+          "projected_score": 98.12,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -3255,7 +3255,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Eagles",
+              "player_name": "Philadelphia",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -3469,7 +3469,7 @@
           "team_id": 11,
           "record": "2-3-0",
           "score": 103.5,
-          "projected_score": 125.48,
+          "projected_score": 125.35,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -3630,7 +3630,7 @@
           "team_id": 1,
           "record": "3-2-0",
           "score": 82.08,
-          "projected_score": 100.68,
+          "projected_score": 100.58,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -3875,7 +3875,7 @@
             },
             {
               "player_key": "470.p.34054",
-              "player_name": "Brian Robinson",
+              "player_name": "Brian Robinson Jr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -4282,7 +4282,7 @@
           "team_id": 5,
           "record": "3-2-0",
           "score": 62.6,
-          "projected_score": 71.56,
+          "projected_score": 71.55,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -4451,7 +4451,7 @@
           "team_id": 6,
           "record": "3-2-0",
           "score": 110.6,
-          "projected_score": 130.39,
+          "projected_score": 130.41,
           "roster": [
             {
               "player_key": "470.p.40896",
