@@ -1,27 +1,18 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "week": 6,
-  "generated_at": "2026-10-20T04:00:23Z",
+  "week": 7,
+  "generated_at": "2026-10-20T09:21:56Z",
   "coverage_status": "ready",
   "items": [
     {
-      "headline_id": "record:2026-w06-buffalo-bravado--maine-moose:buffalo-bravado:weekly-score:record-watch",
-      "category": "Record Watch",
-      "headline": "Record Watch",
-      "detail": "Buffalo Bravados is 16.50 points from the verified Top-25 cutoff.",
-      "week": 6,
-      "source": "normalized_yahoo_and_verified_history",
-      "path": "/records/"
-    },
-    {
-      "headline_id": "week-6:high-score",
-      "category": "Week in Review",
-      "headline": "Buffalo Bravados leads Week 6 scoring",
-      "detail": "The week's current high is 145.70 points.",
-      "week": 6,
+      "headline_id": "week-7:slate",
+      "category": "League Wire",
+      "headline": "Week 7 slate is set",
+      "detail": "Chris's Crazy Team meets Vegas Vandals in the featured matchup.",
+      "week": 7,
       "source": "normalized_yahoo",
-      "path": "/2026/week/6/"
+      "path": "/2026/week/7/"
     }
   ]
 }
