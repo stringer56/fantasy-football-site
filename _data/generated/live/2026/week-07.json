@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 7,
-  "generated_at": "2026-10-20T21:54:47Z",
+  "generated_at": "2026-10-21T00:26:09Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-20T21:54:47Z",
+    "source_updated_at": "2026-10-21T00:26:09Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,11 +323,11 @@
           "team_id": 2,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 116.7,
+          "projected_score": 117.72,
           "roster": [
             {
-              "player_key": "470.p.30123",
-              "player_name": "Patrick Mahomes",
+              "player_key": "470.p.41825",
+              "player_name": "Tyler Shough",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -382,6 +382,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.30123",
+              "player_name": "Patrick Mahomes",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.26686",
               "player_name": "Travis Kelce",
               "nfl_team": null,
@@ -392,14 +400,6 @@
             {
               "player_key": "470.p.41922",
               "player_name": "Cam Skattebo",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.41825",
-              "player_name": "Tyler Shough",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -460,7 +460,7 @@
           "team_id": 9,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 123.9,
+          "projected_score": 123.63,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -797,7 +797,7 @@
           "team_id": 10,
           "record": "2-4-0",
           "score": 0.0,
-          "projected_score": 102.11,
+          "projected_score": 102.57,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -989,7 +989,7 @@
           "team_id": 4,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 84.97,
+          "projected_score": 85.69,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1126,7 +1126,7 @@
           "team_id": 8,
           "record": "2-4-0",
           "score": 0.0,
-          "projected_score": 90.34,
+          "projected_score": 90.11,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1250,7 +1250,7 @@
             },
             {
               "player_key": null,
-              "player_name": "New Orleans",
+              "player_name": "Saints",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1326,7 +1326,7 @@
           "team_id": 5,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 103.09,
+          "projected_score": 102.93,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1471,7 +1471,7 @@
           "team_id": 12,
           "record": "2-4-0",
           "score": 0.0,
-          "projected_score": 82.12,
+          "projected_score": 81.26,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1663,7 +1663,7 @@
           "team_id": 6,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 80.65,
+          "projected_score": 80.51,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1808,7 +1808,7 @@
           "team_id": 11,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 92.22,
+          "projected_score": 92.21,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2000,7 +2000,7 @@
           "team_id": 1,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 103.08,
+          "projected_score": 103.23,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2055,7 +2055,7 @@
               "player_name": "Jakobi Meyers",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "W/R/T",
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -2137,7 +2137,7 @@
           "team_id": 7,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 94.31,
+          "projected_score": 94.32,
           "roster": [
             {
               "player_key": "470.p.40900",

@@ -60,7 +60,7 @@
           "player_name": "Jakobi Meyers",
           "nfl_team": null,
           "primary_position": null,
-          "selected_position": "W/R/T",
+          "selected_position": "BN",
           "status": null
         },
         {
@@ -135,8 +135,8 @@
       "team_name": "Albany Redskins",
       "players": [
         {
-          "player_key": "470.p.30123",
-          "player_name": "Patrick Mahomes",
+          "player_key": "470.p.41825",
+          "player_name": "Tyler Shough",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "QB",
@@ -191,6 +191,14 @@
           "status": null
         },
         {
+          "player_key": "470.p.30123",
+          "player_name": "Patrick Mahomes",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
           "player_key": "470.p.26686",
           "player_name": "Travis Kelce",
           "nfl_team": null,
@@ -201,14 +209,6 @@
         {
           "player_key": "470.p.41922",
           "player_name": "Cam Skattebo",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.41825",
-          "player_name": "Tyler Shough",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -1042,7 +1042,7 @@
         },
         {
           "player_key": null,
-          "player_name": "New Orleans",
+          "player_name": "Saints",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
