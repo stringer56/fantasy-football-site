@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 7,
-  "generated_at": "2026-10-21T00:26:09Z",
+  "generated_at": "2026-10-21T05:10:47Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-21T00:26:09Z",
+    "source_updated_at": "2026-10-21T05:10:47Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 117.72,
+          "projected_score": 118.15,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 90.25,
+          "projected_score": 114.34,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -687,16 +687,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.30994",
-              "player_name": "DJ Moore",
+              "player_key": "470.p.33998",
+              "player_name": "Wan'Dale Robinson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.33998",
-              "player_name": "Wan'Dale Robinson",
+              "player_key": "470.p.33393",
+              "player_name": "Ja'Marr Chase",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -711,16 +711,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.42010",
-              "player_name": "J. Croskey-Merritt",
+              "player_key": "470.p.33100",
+              "player_name": "Rico Dowdle",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
               "status": null
             },
             {
-              "player_key": "470.p.33393",
-              "player_name": "Ja'Marr Chase",
+              "player_key": "470.p.30994",
+              "player_name": "DJ Moore",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -759,11 +759,11 @@
               "status": null
             },
             {
-              "player_key": "470.p.33100",
-              "player_name": "Rico Dowdle",
+              "player_key": "470.p.42010",
+              "player_name": "J. Croskey-Merritt",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "BN",
+              "selected_position": "IR",
               "status": null
             },
             {
@@ -797,7 +797,7 @@
           "team_id": 10,
           "record": "2-4-0",
           "score": 0.0,
-          "projected_score": 102.57,
+          "projected_score": 102.78,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -913,7 +913,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Texans",
+              "player_name": "Houston",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -989,7 +989,7 @@
           "team_id": 4,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 85.69,
+          "projected_score": 85.89,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1126,7 +1126,7 @@
           "team_id": 8,
           "record": "2-4-0",
           "score": 0.0,
-          "projected_score": 90.11,
+          "projected_score": 100.31,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1177,11 +1177,19 @@
               "status": null
             },
             {
+              "player_key": "470.p.33967",
+              "player_name": "Jameson Williams",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
               "player_key": "470.p.34047",
               "player_name": "Rachaad White",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "W/R/T",
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -1195,14 +1203,6 @@
             {
               "player_key": "470.p.41823",
               "player_name": "TreVeyon Henderson",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.33967",
-              "player_name": "Jameson Williams",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1326,7 +1326,7 @@
           "team_id": 5,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 102.93,
+          "projected_score": 103.21,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1471,7 +1471,7 @@
           "team_id": 12,
           "record": "2-4-0",
           "score": 0.0,
-          "projected_score": 81.26,
+          "projected_score": 81.05,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1663,7 +1663,7 @@
           "team_id": 6,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 80.51,
+          "projected_score": 80.56,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1808,7 +1808,7 @@
           "team_id": 11,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 92.21,
+          "projected_score": 92.33,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2000,7 +2000,7 @@
           "team_id": 1,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 103.23,
+          "projected_score": 103.49,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2137,7 +2137,7 @@
           "team_id": 7,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 94.32,
+          "projected_score": 94.43,
           "roster": [
             {
               "player_key": "470.p.40900",
