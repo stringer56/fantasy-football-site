@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-10-21T15:18:42Z",
+  "generated_at": "2026-10-21T19:29:25Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-21T15:18:42Z",
+    "source_updated_at": "2026-10-21T19:29:25Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-10-21T15:18:42Z"
+    "source_update_timestamp": "2026-10-21T19:29:25Z"
   },
   "standings": [
     {
@@ -362,7 +362,7 @@
           "team_id": 2,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 116.71,
+          "projected_score": 116.82,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -507,7 +507,7 @@
           "team_id": 9,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 124.9,
+          "projected_score": 124.79,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -707,7 +707,7 @@
           "team_id": 3,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 114.37,
+          "projected_score": 114.61,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -844,7 +844,7 @@
           "team_id": 10,
           "record": "2-4-0",
           "score": 0.0,
-          "projected_score": 102.92,
+          "projected_score": 102.88,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1036,7 +1036,7 @@
           "team_id": 4,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 104.85,
+          "projected_score": 104.81,
           "roster": [
             {
               "player_key": "470.p.7200",
@@ -1173,7 +1173,7 @@
           "team_id": 8,
           "record": "2-4-0",
           "score": 0.0,
-          "projected_score": 100.47,
+          "projected_score": 110.82,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1280,19 +1280,11 @@
               "status": null
             },
             {
-              "player_key": "470.p.40296",
-              "player_name": "Blake Grupe",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "K",
-              "status": null
-            },
-            {
               "player_key": "470.p.41093",
               "player_name": "Will Reichard",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "BN",
+              "selected_position": "K",
               "status": null
             },
             {
@@ -1373,7 +1365,7 @@
           "team_id": 5,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 117.38,
+          "projected_score": 117.04,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1518,7 +1510,7 @@
           "team_id": 12,
           "record": "2-4-0",
           "score": 0.0,
-          "projected_score": 81.1,
+          "projected_score": 81.92,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1702,7 +1694,7 @@
           "team_id": 6,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 80.6,
+          "projected_score": 80.35,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1847,7 +1839,7 @@
           "team_id": 11,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 108.31,
+          "projected_score": 108.45,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2039,7 +2031,7 @@
           "team_id": 1,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 111.33,
+          "projected_score": 111.14,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2184,7 +2176,7 @@
           "team_id": 7,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 94.55,
+          "projected_score": 96.24,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -2385,7 +2377,7 @@
         "team_id": 4,
         "record": "3-3-0",
         "score": 0.0,
-        "projected_score": 104.85,
+        "projected_score": 104.81,
         "roster": [
           {
             "player_key": "470.p.7200",
@@ -2522,7 +2514,7 @@
         "team_id": 8,
         "record": "2-4-0",
         "score": 0.0,
-        "projected_score": 100.47,
+        "projected_score": 110.82,
         "roster": [
           {
             "player_key": "470.p.40875",
@@ -2629,19 +2621,11 @@
             "status": null
           },
           {
-            "player_key": "470.p.40296",
-            "player_name": "Blake Grupe",
-            "nfl_team": null,
-            "primary_position": null,
-            "selected_position": "K",
-            "status": null
-          },
-          {
             "player_key": "470.p.41093",
             "player_name": "Will Reichard",
             "nfl_team": null,
             "primary_position": null,
-            "selected_position": "BN",
+            "selected_position": "K",
             "status": null
           },
           {
@@ -2746,7 +2730,7 @@
           "team_id": 9,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 124.9,
+          "projected_score": 124.79,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2915,7 +2899,7 @@
           "team_id": 10,
           "record": "2-4-0",
           "score": 0.0,
-          "projected_score": 102.92,
+          "projected_score": 102.88,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -3076,7 +3060,7 @@
           "team_id": 3,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 114.37,
+          "projected_score": 114.61,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -3237,7 +3221,7 @@
           "team_id": 8,
           "record": "2-4-0",
           "score": 0.0,
-          "projected_score": 100.47,
+          "projected_score": 110.82,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -3344,19 +3328,11 @@
               "status": null
             },
             {
-              "player_key": "470.p.40296",
-              "player_name": "Blake Grupe",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "K",
-              "status": null
-            },
-            {
               "player_key": "470.p.41093",
               "player_name": "Will Reichard",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "BN",
+              "selected_position": "K",
               "status": null
             },
             {
@@ -3406,7 +3382,7 @@
           "team_id": 12,
           "record": "2-4-0",
           "score": 0.0,
-          "projected_score": 81.1,
+          "projected_score": 81.92,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -3559,7 +3535,7 @@
           "team_id": 11,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 108.31,
+          "projected_score": 108.45,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -3720,7 +3696,7 @@
           "team_id": 1,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 111.33,
+          "projected_score": 111.14,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -3889,7 +3865,7 @@
           "team_id": 4,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 104.85,
+          "projected_score": 104.81,
           "roster": [
             {
               "player_key": "470.p.7200",
@@ -4050,7 +4026,7 @@
           "team_id": 2,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 116.71,
+          "projected_score": 116.82,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -4219,7 +4195,7 @@
           "team_id": 6,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 80.6,
+          "projected_score": 80.35,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -4388,7 +4364,7 @@
           "team_id": 7,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 94.55,
+          "projected_score": 96.24,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -4557,7 +4533,7 @@
           "team_id": 5,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 117.38,
+          "projected_score": 117.04,
           "roster": [
             {
               "player_key": "470.p.40889",
