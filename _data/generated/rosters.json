@@ -143,8 +143,8 @@
       "team_name": "Albany Redskins",
       "players": [
         {
-          "player_key": "470.p.30123",
-          "player_name": "Patrick Mahomes",
+          "player_key": "470.p.41825",
+          "player_name": "Tyler Shough",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "QB",
@@ -167,8 +167,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.40168",
-          "player_name": "Puka Nacua",
+          "player_key": "470.p.31896",
+          "player_name": "DK Metcalf",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "WR",
@@ -191,16 +191,16 @@
           "status": null
         },
         {
-          "player_key": "470.p.31896",
-          "player_name": "DK Metcalf",
+          "player_key": "470.p.40168",
+          "player_name": "Puka Nacua",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "W/R/T",
           "status": null
         },
         {
-          "player_key": "470.p.41825",
-          "player_name": "Tyler Shough",
+          "player_key": "470.p.30123",
+          "player_name": "Patrick Mahomes",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -518,7 +518,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Denver",
+          "player_name": "Broncos",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -923,7 +923,7 @@
         },
         {
           "player_key": null,
-          "player_name": "New York",
+          "player_name": "Jets",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -1461,16 +1461,16 @@
           "status": null
         },
         {
-          "player_key": "470.p.40981",
-          "player_name": "Braelon Allen",
+          "player_key": "470.p.33514",
+          "player_name": "Chuba Hubbard",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "RB",
           "status": null
         },
         {
-          "player_key": "470.p.33514",
-          "player_name": "Chuba Hubbard",
+          "player_key": "470.p.30972",
+          "player_name": "Saquon Barkley",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "RB",
@@ -1485,19 +1485,35 @@
           "status": null
         },
         {
-          "player_key": "470.p.27535",
-          "player_name": "Mike Evans",
+          "player_key": "470.p.40901",
+          "player_name": "Rome Odunze",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "WR",
           "status": null
         },
         {
-          "player_key": "470.p.34085",
-          "player_name": "Jake Ferguson",
+          "player_key": "470.p.31840",
+          "player_name": "T.J. Hockenson",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "TE",
+          "status": null
+        },
+        {
+          "player_key": "470.p.40981",
+          "player_name": "Braelon Allen",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "W/R/T",
+          "status": null
+        },
+        {
+          "player_key": "470.p.27535",
+          "player_name": "Mike Evans",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
           "status": null
         },
         {
@@ -1511,14 +1527,6 @@
         {
           "player_key": "470.p.32676",
           "player_name": "Justin Herbert",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.40901",
-          "player_name": "Rome Odunze",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -1541,16 +1549,16 @@
           "status": null
         },
         {
-          "player_key": "470.p.30972",
-          "player_name": "Saquon Barkley",
+          "player_key": "470.p.42652",
+          "player_name": "Omar Cooper Jr.",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
           "status": null
         },
         {
-          "player_key": "470.p.30266",
-          "player_name": "Jake Elliott",
+          "player_key": "470.p.28188",
+          "player_name": "Chris Boswell",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "K",
@@ -1558,7 +1566,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Eagles",
+          "player_name": "49ers",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
