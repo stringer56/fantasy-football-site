@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 7,
-  "generated_at": "2026-10-22T15:58:44Z",
+  "generated_at": "2026-10-22T19:58:01Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-22T15:58:44Z",
+    "source_updated_at": "2026-10-22T19:58:01Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 116.58,
+          "projected_score": 120.36,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -447,7 +447,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Patriots",
+              "player_name": "Titans",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -468,7 +468,7 @@
           "team_id": 9,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 125.11,
+          "projected_score": 125.02,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -668,7 +668,7 @@
           "team_id": 3,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 114.5,
+          "projected_score": 114.18,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -805,7 +805,7 @@
           "team_id": 10,
           "record": "2-4-0",
           "score": 0.0,
-          "projected_score": 111.53,
+          "projected_score": 111.09,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -997,7 +997,7 @@
           "team_id": 4,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 105.09,
+          "projected_score": 105.51,
           "roster": [
             {
               "player_key": "470.p.7200",
@@ -1113,7 +1113,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Broncos",
+              "player_name": "Denver",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1134,7 +1134,7 @@
           "team_id": 8,
           "record": "2-4-0",
           "score": 0.0,
-          "projected_score": 110.28,
+          "projected_score": 106.58,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1326,7 +1326,7 @@
           "team_id": 5,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 117.01,
+          "projected_score": 116.76,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1471,7 +1471,7 @@
           "team_id": 12,
           "record": "2-4-0",
           "score": 0.0,
-          "projected_score": 81.65,
+          "projected_score": 81.64,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1655,7 +1655,7 @@
           "team_id": 6,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 80.1,
+          "projected_score": 80.42,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1800,7 +1800,7 @@
           "team_id": 11,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 108.88,
+          "projected_score": 104.92,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -1992,7 +1992,7 @@
           "team_id": 1,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 111.13,
+          "projected_score": 111.12,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2137,7 +2137,7 @@
           "team_id": 7,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 96.14,
+          "projected_score": 127.35,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -2148,16 +2148,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.41900",
-              "player_name": "Bhayshul Tuten",
+              "player_key": "470.p.41902",
+              "player_name": "Woody Marks",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
               "status": null
             },
             {
-              "player_key": "470.p.41902",
-              "player_name": "Woody Marks",
+              "player_key": "470.p.40059",
+              "player_name": "Jahmyr Gibbs",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
@@ -2196,6 +2196,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.41900",
+              "player_name": "Bhayshul Tuten",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.41799",
               "player_name": "Tyler Warren",
               "nfl_team": null,
@@ -2214,14 +2222,6 @@
             {
               "player_key": "470.p.40030",
               "player_name": "C.J. Stroud",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40059",
-              "player_name": "Jahmyr Gibbs",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2252,8 +2252,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.34344",
-              "player_name": "Cameron Dicker",
+              "player_key": "470.p.42838",
+              "player_name": "Trey Smack",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "K",
@@ -2261,7 +2261,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Jets",
+              "player_name": "New York",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
