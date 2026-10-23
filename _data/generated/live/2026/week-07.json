@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 7,
-  "generated_at": "2026-10-22T23:12:15Z",
+  "generated_at": "2026-10-23T01:33:57Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-22T23:12:15Z",
+    "source_updated_at": "2026-10-23T01:33:57Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 121.24,
+          "projected_score": 115.48,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -468,7 +468,7 @@
           "team_id": 9,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 125.02,
+          "projected_score": 125.26,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -592,7 +592,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Vikings",
+              "player_name": "Minnesota",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -667,8 +667,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "4-2-0",
-          "score": 0.0,
-          "projected_score": 114.18,
+          "score": 6.5,
+          "projected_score": 115.97,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -804,8 +804,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "2-4-0",
-          "score": 0.0,
-          "projected_score": 111.15,
+          "score": 11.32,
+          "projected_score": 112.69,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -996,8 +996,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "3-3-0",
-          "score": 0.0,
-          "projected_score": 105.56,
+          "score": 8.6,
+          "projected_score": 107.55,
           "roster": [
             {
               "player_key": "470.p.7200",
@@ -1133,8 +1133,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "2-4-0",
-          "score": 0.0,
-          "projected_score": 106.81,
+          "score": 1.6,
+          "projected_score": 104.49,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1250,7 +1250,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Saints",
+              "player_name": "New Orleans",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1326,7 +1326,7 @@
           "team_id": 5,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 116.76,
+          "projected_score": 117.05,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1470,8 +1470,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "2-4-0",
-          "score": 0.0,
-          "projected_score": 103.39,
+          "score": 1.1,
+          "projected_score": 100.36,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1663,7 +1663,7 @@
           "team_id": 6,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 80.42,
+          "projected_score": 80.44,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1779,7 +1779,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Chiefs",
+              "player_name": "Kansas City",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1787,7 +1787,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Rams",
+              "player_name": "Los Angeles",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1807,8 +1807,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "3-3-0",
-          "score": 0.0,
-          "projected_score": 105.0,
+          "score": 16.3,
+          "projected_score": 112.88,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -1924,7 +1924,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Steelers",
+              "player_name": "Pittsburgh",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1999,8 +1999,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "3-3-0",
-          "score": 0.0,
-          "projected_score": 111.16,
+          "score": 11.4,
+          "projected_score": 108.03,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2144,8 +2144,8 @@
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
           "record": "3-3-0",
-          "score": 0.0,
-          "projected_score": 128.21,
+          "score": 7.48,
+          "projected_score": 126.95,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -2323,7 +2323,48 @@
       }
     }
   ],
-  "weekly_facts": [],
+  "weekly_facts": [
+    {
+      "fact_id": "highest-score",
+      "label": "Highest score",
+      "value": 16.3,
+      "franchise_id": "turnbull-acs",
+      "display_name": "Turnbull AC’s"
+    },
+    {
+      "fact_id": "lowest-score",
+      "label": "Lowest score",
+      "value": 0.0,
+      "franchise_id": "crazy-wazs-team",
+      "display_name": "Chris's Crazy Team"
+    },
+    {
+      "fact_id": "highest-combined",
+      "label": "Highest combined score",
+      "value": 18.88,
+      "matchup_id": "2026-w07-maine-moose--van-cortlant-rangers"
+    },
+    {
+      "fact_id": "biggest-win",
+      "label": "Biggest lead",
+      "value": 16.3,
+      "matchup_id": "2026-w07-greendale-human-beings--turnbull-acs"
+    },
+    {
+      "fact_id": "closest-game",
+      "label": "Closest game",
+      "value": 1.1,
+      "matchup_id": "2026-w07-crazy-wazs-team--vegas-vandals"
+    },
+    {
+      "fact_id": "longest-active-streak",
+      "label": "Longest active streak",
+      "value": 3,
+      "streak_type": "win",
+      "franchise_id": "greendale-human-beings",
+      "display_name": "Greendale Human Beings"
+    }
+  ],
   "record_watch": [],
   "power_rankings": {
     "status": "unavailable",
