@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 7,
-  "generated_at": "2026-10-23T20:28:15Z",
+  "generated_at": "2026-10-23T23:24:36Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-23T20:28:15Z",
+    "source_updated_at": "2026-10-23T23:24:36Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -414,14 +414,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.31905",
-              "player_name": "David Montgomery",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.42669",
               "player_name": "Germie Bernard",
               "nfl_team": null,
@@ -432,6 +424,14 @@
             {
               "player_key": "470.p.34320",
               "player_name": "Jordan Mason",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31905",
+              "player_name": "David Montgomery",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "IR",
@@ -468,7 +468,7 @@
           "team_id": 9,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 126.15,
+          "projected_score": 127.28,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -668,7 +668,7 @@
           "team_id": 3,
           "record": "4-2-0",
           "score": 24.0,
-          "projected_score": 128.04,
+          "projected_score": 127.98,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -997,7 +997,7 @@
           "team_id": 4,
           "record": "3-3-0",
           "score": 17.0,
-          "projected_score": 109.5,
+          "projected_score": 109.48,
           "roster": [
             {
               "player_key": "470.p.7200",
@@ -1134,7 +1134,7 @@
           "team_id": 8,
           "record": "2-4-0",
           "score": 16.4,
-          "projected_score": 117.46,
+          "projected_score": 117.56,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1326,7 +1326,7 @@
           "team_id": 5,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 116.73,
+          "projected_score": 116.47,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1471,7 +1471,7 @@
           "team_id": 12,
           "record": "2-4-0",
           "score": 8.9,
-          "projected_score": 102.87,
+          "projected_score": 103.02,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1663,7 +1663,7 @@
           "team_id": 6,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 117.69,
+          "projected_score": 117.63,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -1808,7 +1808,7 @@
           "team_id": 11,
           "record": "3-3-0",
           "score": 34.3,
-          "projected_score": 114.21,
+          "projected_score": 123.97,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -1843,8 +1843,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.41804",
-              "player_name": "Emeka Egbuka",
+              "player_key": "470.p.30197",
+              "player_name": "Chris Godwin Jr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -1864,6 +1864,14 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41804",
+              "player_name": "Emeka Egbuka",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -1893,14 +1901,6 @@
             {
               "player_key": "470.p.33991",
               "player_name": "Breece Hall",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.31833",
-              "player_name": "Kyler Murray",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2000,7 +2000,7 @@
           "team_id": 1,
           "record": "3-3-0",
           "score": 12.8,
-          "projected_score": 104.25,
+          "projected_score": 104.42,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2145,7 +2145,7 @@
           "team_id": 7,
           "record": "3-3-0",
           "score": 24.12,
-          "projected_score": 132.82,
+          "projected_score": 132.73,
           "roster": [
             {
               "player_key": "470.p.40900",
