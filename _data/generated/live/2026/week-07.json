@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 7,
-  "generated_at": "2026-10-24T18:23:16Z",
+  "generated_at": "2026-10-24T21:05:23Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-24T18:23:16Z",
+    "source_updated_at": "2026-10-24T21:05:23Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-3-0",
           "score": 6.3,
-          "projected_score": 114.44,
+          "projected_score": 114.55,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -468,7 +468,7 @@
           "team_id": 9,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 128.45,
+          "projected_score": 128.23,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -668,7 +668,7 @@
           "team_id": 3,
           "record": "4-2-0",
           "score": 24.0,
-          "projected_score": 128.97,
+          "projected_score": 128.86,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -805,7 +805,7 @@
           "team_id": 10,
           "record": "2-4-0",
           "score": 32.44,
-          "projected_score": 122.79,
+          "projected_score": 122.83,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -997,7 +997,7 @@
           "team_id": 4,
           "record": "3-3-0",
           "score": 17.0,
-          "projected_score": 109.33,
+          "projected_score": 103.16,
           "roster": [
             {
               "player_key": "470.p.7200",
@@ -1032,8 +1032,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.33398",
-              "player_name": "DeVonta Smith",
+              "player_key": "470.p.41087",
+              "player_name": "Ryan Flournoy",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -1056,6 +1056,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.33398",
+              "player_name": "DeVonta Smith",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.30977",
               "player_name": "Josh Allen",
               "nfl_team": null,
@@ -1074,14 +1082,6 @@
             {
               "player_key": "470.p.34088",
               "player_name": "Romeo Doubs",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.34054",
-              "player_name": "Brian Robinson Jr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1134,7 +1134,7 @@
           "team_id": 8,
           "record": "2-4-0",
           "score": 16.4,
-          "projected_score": 117.55,
+          "projected_score": 117.68,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1326,7 +1326,7 @@
           "team_id": 5,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 116.39,
+          "projected_score": 120.77,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1471,7 +1471,7 @@
           "team_id": 12,
           "record": "2-4-0",
           "score": 8.9,
-          "projected_score": 102.58,
+          "projected_score": 102.75,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1663,7 +1663,7 @@
           "team_id": 6,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 117.66,
+          "projected_score": 119.92,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -1808,7 +1808,7 @@
           "team_id": 11,
           "record": "3-3-0",
           "score": 34.3,
-          "projected_score": 123.74,
+          "projected_score": 123.82,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2000,7 +2000,7 @@
           "team_id": 1,
           "record": "3-3-0",
           "score": 12.8,
-          "projected_score": 105.02,
+          "projected_score": 105.0,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2145,7 +2145,7 @@
           "team_id": 7,
           "record": "3-3-0",
           "score": 24.12,
-          "projected_score": 134.21,
+          "projected_score": 134.47,
           "roster": [
             {
               "player_key": "470.p.40900",
