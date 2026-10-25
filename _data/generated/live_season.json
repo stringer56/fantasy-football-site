@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-10-24T23:16:54Z",
+  "generated_at": "2026-10-25T01:27:12Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-24T23:16:54Z",
+    "source_updated_at": "2026-10-25T01:27:12Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-10-24T23:16:54Z"
+    "source_update_timestamp": "2026-10-25T01:27:12Z"
   },
   "standings": [
     {
@@ -362,7 +362,7 @@
           "team_id": 2,
           "record": "3-3-0",
           "score": 6.3,
-          "projected_score": 114.84,
+          "projected_score": 114.92,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -507,7 +507,7 @@
           "team_id": 9,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 128.35,
+          "projected_score": 128.16,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -707,7 +707,7 @@
           "team_id": 3,
           "record": "4-2-0",
           "score": 24.0,
-          "projected_score": 128.81,
+          "projected_score": 128.88,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -844,7 +844,7 @@
           "team_id": 10,
           "record": "2-4-0",
           "score": 32.44,
-          "projected_score": 122.83,
+          "projected_score": 122.94,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1036,7 +1036,7 @@
           "team_id": 4,
           "record": "3-3-0",
           "score": 17.0,
-          "projected_score": 103.17,
+          "projected_score": 102.92,
           "roster": [
             {
               "player_key": "470.p.7200",
@@ -1173,7 +1173,7 @@
           "team_id": 8,
           "record": "2-4-0",
           "score": 16.4,
-          "projected_score": 117.99,
+          "projected_score": 118.1,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1365,7 +1365,7 @@
           "team_id": 5,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 117.2,
+          "projected_score": 116.88,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1510,7 +1510,7 @@
           "team_id": 12,
           "record": "2-4-0",
           "score": 8.9,
-          "projected_score": 103.07,
+          "projected_score": 103.32,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1702,7 +1702,7 @@
           "team_id": 6,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 117.24,
+          "projected_score": 117.22,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -1801,6 +1801,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.42859",
+              "player_name": "Seth McGowan",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.32704",
               "player_name": "Michael Pittman Jr.",
               "nfl_team": null,
@@ -1823,14 +1831,6 @@
               "primary_position": null,
               "selected_position": "DEF",
               "status": null
-            },
-            {
-              "player_key": null,
-              "player_name": "Rams",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
             }
           ]
         },
@@ -1847,7 +1847,7 @@
           "team_id": 11,
           "record": "3-3-0",
           "score": 34.3,
-          "projected_score": 123.87,
+          "projected_score": 123.77,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2039,7 +2039,7 @@
           "team_id": 1,
           "record": "3-3-0",
           "score": 12.8,
-          "projected_score": 104.95,
+          "projected_score": 105.49,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2184,7 +2184,7 @@
           "team_id": 7,
           "record": "3-3-0",
           "score": 24.12,
-          "projected_score": 136.17,
+          "projected_score": 137.43,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -2385,7 +2385,7 @@
         "team_id": 3,
         "record": "4-2-0",
         "score": 24.0,
-        "projected_score": 128.81,
+        "projected_score": 128.88,
         "roster": [
           {
             "player_key": "470.p.32696",
@@ -2522,7 +2522,7 @@
         "team_id": 10,
         "record": "2-4-0",
         "score": 32.44,
-        "projected_score": 122.83,
+        "projected_score": 122.94,
         "roster": [
           {
             "player_key": "470.p.40881",
@@ -2779,7 +2779,7 @@
           "team_id": 9,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 128.35,
+          "projected_score": 128.16,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -2948,7 +2948,7 @@
           "team_id": 10,
           "record": "2-4-0",
           "score": 32.44,
-          "projected_score": 122.83,
+          "projected_score": 122.94,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -3109,7 +3109,7 @@
           "team_id": 3,
           "record": "4-2-0",
           "score": 24.0,
-          "projected_score": 128.81,
+          "projected_score": 128.88,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -3270,7 +3270,7 @@
           "team_id": 8,
           "record": "2-4-0",
           "score": 16.4,
-          "projected_score": 117.99,
+          "projected_score": 118.1,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -3431,7 +3431,7 @@
           "team_id": 12,
           "record": "2-4-0",
           "score": 8.9,
-          "projected_score": 103.07,
+          "projected_score": 103.32,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -3592,7 +3592,7 @@
           "team_id": 11,
           "record": "3-3-0",
           "score": 34.3,
-          "projected_score": 123.87,
+          "projected_score": 123.77,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -3753,7 +3753,7 @@
           "team_id": 1,
           "record": "3-3-0",
           "score": 12.8,
-          "projected_score": 104.95,
+          "projected_score": 105.49,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -3922,7 +3922,7 @@
           "team_id": 4,
           "record": "3-3-0",
           "score": 17.0,
-          "projected_score": 103.17,
+          "projected_score": 102.92,
           "roster": [
             {
               "player_key": "470.p.7200",
@@ -4083,7 +4083,7 @@
           "team_id": 2,
           "record": "3-3-0",
           "score": 6.3,
-          "projected_score": 114.84,
+          "projected_score": 114.92,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -4252,7 +4252,7 @@
           "team_id": 6,
           "record": "4-2-0",
           "score": 0.0,
-          "projected_score": 117.24,
+          "projected_score": 117.22,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -4351,6 +4351,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.42859",
+              "player_name": "Seth McGowan",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.32704",
               "player_name": "Michael Pittman Jr.",
               "nfl_team": null,
@@ -4372,14 +4380,6 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
-              "status": null
-            },
-            {
-              "player_key": null,
-              "player_name": "Rams",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
               "status": null
             }
           ]
@@ -4421,7 +4421,7 @@
           "team_id": 7,
           "record": "3-3-0",
           "score": 24.12,
-          "projected_score": 136.17,
+          "projected_score": 137.43,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -4590,7 +4590,7 @@
           "team_id": 5,
           "record": "3-3-0",
           "score": 0.0,
-          "projected_score": 117.2,
+          "projected_score": 116.88,
           "roster": [
             {
               "player_key": "470.p.40889",
