@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 7,
-  "generated_at": "2026-10-26T10:09:22Z",
+  "generated_at": "2026-10-26T16:48:06Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-26T10:09:22Z",
+    "source_updated_at": "2026-10-26T16:48:06Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-3-0",
           "score": 91.92,
-          "projected_score": 107.21,
+          "projected_score": 107.24,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -668,7 +668,7 @@
           "team_id": 3,
           "record": "4-2-0",
           "score": 112.36,
-          "projected_score": 121.05,
+          "projected_score": 121.07,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -997,7 +997,7 @@
           "team_id": 4,
           "record": "3-3-0",
           "score": 103.58,
-          "projected_score": 110.66,
+          "projected_score": 110.67,
           "roster": [
             {
               "player_key": "470.p.7200",
@@ -1134,7 +1134,7 @@
           "team_id": 8,
           "record": "2-4-0",
           "score": 119.98,
-          "projected_score": 125.43,
+          "projected_score": 125.42,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1250,7 +1250,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Saints",
+              "player_name": "New Orleans",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1808,7 +1808,7 @@
           "team_id": 11,
           "record": "3-3-0",
           "score": 101.92,
-          "projected_score": 117.12,
+          "projected_score": 117.15,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2145,7 +2145,7 @@
           "team_id": 7,
           "record": "3-3-0",
           "score": 83.32,
-          "projected_score": 106.56,
+          "projected_score": 106.59,
           "roster": [
             {
               "player_key": "470.p.40900",
