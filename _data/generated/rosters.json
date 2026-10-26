@@ -223,14 +223,6 @@
           "status": null
         },
         {
-          "player_key": "470.p.29399",
-          "player_name": "Tyreek Hill",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
           "player_key": "470.p.42669",
           "player_name": "Germie Bernard",
           "nfl_team": null,
@@ -268,6 +260,14 @@
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
+          "status": null
+        },
+        {
+          "player_key": null,
+          "player_name": "Jaguars",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
           "status": null
         }
       ]

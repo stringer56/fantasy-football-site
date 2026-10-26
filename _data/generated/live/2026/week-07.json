@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 7,
-  "generated_at": "2026-10-25T23:56:17Z",
+  "generated_at": "2026-10-26T04:07:15Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-25T23:56:17Z",
+    "source_updated_at": "2026-10-26T04:07:15Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -406,14 +406,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.29399",
-              "player_name": "Tyreek Hill",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.42669",
               "player_name": "Germie Bernard",
               "nfl_team": null,
@@ -452,6 +444,14 @@
               "primary_position": null,
               "selected_position": "DEF",
               "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Jaguars",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
             }
           ]
         },
@@ -467,8 +467,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "4-2-0",
-          "score": 89.52,
-          "projected_score": 137.01,
+          "score": 142.02,
+          "projected_score": 142.02,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -667,8 +667,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "4-2-0",
-          "score": 98.36,
-          "projected_score": 118.44,
+          "score": 112.36,
+          "projected_score": 121.07,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -804,8 +804,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "2-4-0",
-          "score": 105.94,
-          "projected_score": 114.44,
+          "score": 113.94,
+          "projected_score": 113.94,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -2327,9 +2327,9 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 119.88,
-      "franchise_id": "new-jersey-giants",
-      "display_name": "New Jersey Giants"
+      "value": 142.02,
+      "franchise_id": "north-town-ninnyhammers",
+      "display_name": "North town Ninnyhammers"
     },
     {
       "fact_id": "lowest-score",
@@ -2341,20 +2341,20 @@
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 223.46,
-      "matchup_id": "2026-w07-buffalo-bravado--new-jersey-giants"
+      "value": 233.94,
+      "matchup_id": "2026-w07-albany-kneelers--north-town-ninnyhammers"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 19.02,
-      "matchup_id": "2026-w07-crazy-wazs-team--vegas-vandals"
+      "value": 50.1,
+      "matchup_id": "2026-w07-albany-kneelers--north-town-ninnyhammers"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 2.4,
-      "matchup_id": "2026-w07-albany-kneelers--north-town-ninnyhammers"
+      "value": 1.58,
+      "matchup_id": "2026-w07-ayahuasca-rush--baseball-furies"
     },
     {
       "fact_id": "longest-active-streak",
