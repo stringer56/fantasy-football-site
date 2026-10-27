@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "week": 7,
+  "week": 8,
   "teams": [
     {
       "team_key": "470.l.26455.t.1",
@@ -143,8 +143,8 @@
       "team_name": "Albany Redskins",
       "players": [
         {
-          "player_key": "470.p.41825",
-          "player_name": "Tyler Shough",
+          "player_key": "470.p.30123",
+          "player_name": "Patrick Mahomes",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "QB",
@@ -199,8 +199,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.30123",
-          "player_name": "Patrick Mahomes",
+          "player_key": "470.p.41825",
+          "player_name": "Tyler Shough",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -256,7 +256,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Tennessee",
+          "player_name": "Jacksonville",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -264,7 +264,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Jacksonville",
+          "player_name": "Tennessee",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -391,7 +391,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Seattle",
+          "player_name": "Seahawks",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -405,24 +405,24 @@
       "team_name": "Buffalo Bravados",
       "players": [
         {
-          "player_key": "470.p.7200",
-          "player_name": "Aaron Rodgers",
+          "player_key": "470.p.30977",
+          "player_name": "Josh Allen",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "QB",
           "status": null
         },
         {
-          "player_key": "470.p.32705",
-          "player_name": "D'Andre Swift",
+          "player_key": "470.p.40993",
+          "player_name": "Bucky Irving",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "RB",
           "status": null
         },
         {
-          "player_key": "470.p.40993",
-          "player_name": "Bucky Irving",
+          "player_key": "470.p.34019",
+          "player_name": "James Cook III",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "RB",
@@ -453,32 +453,32 @@
           "status": null
         },
         {
-          "player_key": "470.p.30180",
-          "player_name": "Alvin Kamara",
+          "player_key": "470.p.32705",
+          "player_name": "D'Andre Swift",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "W/R/T",
           "status": null
         },
         {
+          "player_key": "470.p.30180",
+          "player_name": "Alvin Kamara",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.7200",
+          "player_name": "Aaron Rodgers",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
           "player_key": "470.p.33398",
           "player_name": "DeVonta Smith",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.30977",
-          "player_name": "Josh Allen",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.34019",
-          "player_name": "James Cook III",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -653,7 +653,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Cleveland",
+          "player_name": "Browns",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -1050,7 +1050,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Saints",
+          "player_name": "New Orleans",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
