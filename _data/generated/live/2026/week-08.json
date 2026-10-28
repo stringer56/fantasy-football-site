@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 8,
-  "generated_at": "2026-10-28T00:25:48Z",
+  "generated_at": "2026-10-28T06:06:07Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-28T00:25:48Z",
+    "source_updated_at": "2026-10-28T06:06:07Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-4-0",
           "score": 0.0,
-          "projected_score": 121.92,
+          "projected_score": 121.81,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -460,7 +460,7 @@
           "team_id": 3,
           "record": "5-2-0",
           "score": 0.0,
-          "projected_score": 114.65,
+          "projected_score": 114.58,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -652,7 +652,7 @@
           "team_id": 5,
           "record": "4-3-0",
           "score": 0.0,
-          "projected_score": 93.6,
+          "projected_score": 93.65,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -776,7 +776,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Cleveland",
+              "player_name": "Browns",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -797,7 +797,7 @@
           "team_id": 10,
           "record": "2-5-0",
           "score": 0.0,
-          "projected_score": 96.17,
+          "projected_score": 96.13,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -989,7 +989,7 @@
           "team_id": 4,
           "record": "3-4-0",
           "score": 0.0,
-          "projected_score": 101.63,
+          "projected_score": 101.64,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1072,14 +1072,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.34088",
-              "player_name": "Romeo Doubs",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.42712",
               "player_name": "Kaelon Black",
               "nfl_team": null,
@@ -1090,6 +1082,14 @@
             {
               "player_key": "470.p.31868",
               "player_name": "Deebo Samuel Sr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34088",
+              "player_name": "Romeo Doubs",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "IR",
@@ -1126,11 +1126,11 @@
           "team_id": 9,
           "record": "5-2-0",
           "score": 0.0,
-          "projected_score": 109.83,
+          "projected_score": 113.72,
           "roster": [
             {
-              "player_key": "470.p.29235",
-              "player_name": "Jared Goff",
+              "player_key": "470.p.32671",
+              "player_name": "Joe Burrow",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -1169,8 +1169,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.30259",
-              "player_name": "George Kittle",
+              "player_key": "470.p.34095",
+              "player_name": "Isaiah Likely",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "TE",
@@ -1185,16 +1185,24 @@
               "status": null
             },
             {
-              "player_key": "470.p.33394",
-              "player_name": "Jaylen Waddle",
+              "player_key": "470.p.29235",
+              "player_name": "Jared Goff",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
               "status": null
             },
             {
-              "player_key": "470.p.34095",
-              "player_name": "Isaiah Likely",
+              "player_key": "470.p.30259",
+              "player_name": "George Kittle",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33394",
+              "player_name": "Jaylen Waddle",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1211,14 +1219,6 @@
             {
               "player_key": "470.p.40231",
               "player_name": "Chris Rodriguez Jr.",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.32671",
-              "player_name": "Joe Burrow",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1326,7 +1326,7 @@
           "team_id": 6,
           "record": "4-3-0",
           "score": 0.0,
-          "projected_score": 118.6,
+          "projected_score": 118.54,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1587,7 +1587,7 @@
             },
             {
               "player_key": null,
-              "player_name": "San Francisco",
+              "player_name": "49ers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1663,7 +1663,7 @@
           "team_id": 7,
           "record": "4-3-0",
           "score": 0.0,
-          "projected_score": 121.44,
+          "projected_score": 121.49,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1808,7 +1808,7 @@
           "team_id": 11,
           "record": "4-3-0",
           "score": 0.0,
-          "projected_score": 111.35,
+          "projected_score": 111.37,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -2000,7 +2000,7 @@
           "team_id": 1,
           "record": "3-4-0",
           "score": 0.0,
-          "projected_score": 96.7,
+          "projected_score": 97.72,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2035,8 +2035,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.40222",
-              "player_name": "DeMario Douglas",
+              "player_key": "470.p.41058",
+              "player_name": "Malik Washington",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -2059,8 +2059,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.41058",
-              "player_name": "Malik Washington",
+              "player_key": "470.p.40908",
+              "player_name": "Ladd McConkey",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40222",
+              "player_name": "DeMario Douglas",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2069,14 +2077,6 @@
             {
               "player_key": "470.p.30121",
               "player_name": "Christian McCaffrey",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40908",
-              "player_name": "Ladd McConkey",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
