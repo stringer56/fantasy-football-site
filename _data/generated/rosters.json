@@ -383,7 +383,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Seattle",
+          "player_name": "Seahawks",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -645,7 +645,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Cleveland",
+          "player_name": "Browns",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -915,7 +915,7 @@
         },
         {
           "player_key": null,
-          "player_name": "New York",
+          "player_name": "Jets",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -1271,14 +1271,6 @@
           "status": null
         },
         {
-          "player_key": "470.p.40980",
-          "player_name": "Ray Davis",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
           "player_key": "470.p.33413",
           "player_name": "Travis Etienne Jr.",
           "nfl_team": null,
@@ -1296,10 +1288,18 @@
         },
         {
           "player_key": null,
-          "player_name": "Texans",
+          "player_name": "Patriots",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
+          "status": null
+        },
+        {
+          "player_key": null,
+          "player_name": "Texans",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
           "status": null
         }
       ]
