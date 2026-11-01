@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 8,
-  "generated_at": "2026-11-01T07:55:58Z",
+  "generated_at": "2026-11-01T14:51:31Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-01T07:55:58Z",
+    "source_updated_at": "2026-11-01T14:51:31Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-4-0",
           "score": 34.5,
-          "projected_score": 129.69,
+          "projected_score": 130.26,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -468,7 +468,7 @@
           "team_id": 3,
           "record": "5-2-0",
           "score": 24.52,
-          "projected_score": 126.36,
+          "projected_score": 126.57,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -660,7 +660,7 @@
           "team_id": 5,
           "record": "4-3-0",
           "score": 8.8,
-          "projected_score": 108.44,
+          "projected_score": 108.04,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -805,7 +805,7 @@
           "team_id": 10,
           "record": "2-5-0",
           "score": 8.6,
-          "projected_score": 105.9,
+          "projected_score": 105.18,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -997,7 +997,7 @@
           "team_id": 4,
           "record": "3-4-0",
           "score": 0.0,
-          "projected_score": 114.82,
+          "projected_score": 114.89,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1134,7 +1134,7 @@
           "team_id": 9,
           "record": "5-2-0",
           "score": 17.4,
-          "projected_score": 119.99,
+          "projected_score": 119.55,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -1334,7 +1334,7 @@
           "team_id": 6,
           "record": "4-3-0",
           "score": 8.0,
-          "projected_score": 118.43,
+          "projected_score": 118.72,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1479,7 +1479,7 @@
           "team_id": 12,
           "record": "2-5-0",
           "score": 21.4,
-          "projected_score": 108.47,
+          "projected_score": 112.93,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1671,7 +1671,7 @@
           "team_id": 7,
           "record": "4-3-0",
           "score": 18.3,
-          "projected_score": 119.05,
+          "projected_score": 119.27,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1795,7 +1795,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Jets",
+              "player_name": "New York",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1816,7 +1816,7 @@
           "team_id": 11,
           "record": "4-3-0",
           "score": 0.0,
-          "projected_score": 122.06,
+          "projected_score": 117.08,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1835,8 +1835,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.33991",
-              "player_name": "Breece Hall",
+              "player_key": "470.p.32725",
+              "player_name": "J.K. Dobbins",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
@@ -1875,8 +1875,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.32725",
-              "player_name": "J.K. Dobbins",
+              "player_key": "470.p.33991",
+              "player_name": "Breece Hall",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2008,7 +2008,7 @@
           "team_id": 1,
           "record": "3-4-0",
           "score": 0.0,
-          "projected_score": 97.84,
+          "projected_score": 98.14,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2153,7 +2153,7 @@
           "team_id": 8,
           "record": "3-4-0",
           "score": 0.0,
-          "projected_score": 97.23,
+          "projected_score": 97.39,
           "roster": [
             {
               "player_key": "470.p.40875",
