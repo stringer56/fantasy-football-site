@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 8,
-  "generated_at": "2026-11-01T19:25:00Z",
+  "generated_at": "2026-11-01T22:58:22Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-01T19:25:00Z",
+    "source_updated_at": "2026-11-01T22:58:22Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -322,8 +322,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "3-4-0",
-          "score": 56.7,
-          "projected_score": 118.84,
+          "score": 103.5,
+          "projected_score": 120.37,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -422,14 +422,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.42702",
-              "player_name": "Ja'Kobi Lane",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.31883",
               "player_name": "A.J. Brown",
               "nfl_team": null,
@@ -447,7 +439,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Jacksonville",
+              "player_name": "Jaguars",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -467,8 +459,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "5-2-0",
-          "score": 67.82,
-          "projected_score": 141.42,
+          "score": 123.02,
+          "projected_score": 148.67,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -659,8 +651,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "4-3-0",
-          "score": 68.76,
-          "projected_score": 115.51,
+          "score": 106.6,
+          "projected_score": 106.6,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -804,8 +796,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "2-5-0",
-          "score": 18.7,
-          "projected_score": 93.35,
+          "score": 73.02,
+          "projected_score": 97.15,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -996,8 +988,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "3-4-0",
-          "score": 39.34,
-          "projected_score": 111.86,
+          "score": 98.06,
+          "projected_score": 113.02,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1133,8 +1125,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "5-2-0",
-          "score": 56.7,
-          "projected_score": 127.11,
+          "score": 113.78,
+          "projected_score": 150.08,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -1333,8 +1325,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "4-3-0",
-          "score": 32.4,
-          "projected_score": 105.5,
+          "score": 66.5,
+          "projected_score": 92.82,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1478,8 +1470,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "2-5-0",
-          "score": 56.56,
-          "projected_score": 108.38,
+          "score": 106.68,
+          "projected_score": 125.5,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1595,7 +1587,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Cincinnati",
+              "player_name": "Bengals",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1670,8 +1662,8 @@
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
           "record": "4-3-0",
-          "score": 45.7,
-          "projected_score": 106.07,
+          "score": 100.6,
+          "projected_score": 127.69,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1815,8 +1807,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "4-3-0",
-          "score": 44.2,
-          "projected_score": 117.25,
+          "score": 85.7,
+          "projected_score": 115.39,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -2007,8 +1999,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "3-4-0",
-          "score": 14.6,
-          "projected_score": 90.5,
+          "score": 57.16,
+          "projected_score": 88.28,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2152,8 +2144,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "3-4-0",
-          "score": 17.2,
-          "projected_score": 91.05,
+          "score": 48.24,
+          "projected_score": 77.6,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -2319,34 +2311,34 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 68.76,
-      "franchise_id": "crazy-wazs-team",
-      "display_name": "Chris's Crazy Team"
+      "value": 123.02,
+      "franchise_id": "ayahuasca-rush",
+      "display_name": "Ayahuasca Rush"
     },
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 14.6,
-      "franchise_id": "van-cortlant-rangers",
-      "display_name": "Van Cortlant Rangers"
+      "value": 48.24,
+      "franchise_id": "new-jersey-giants",
+      "display_name": "New Jersey Giants"
     },
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 124.52,
+      "value": 226.52,
       "matchup_id": "2026-w08-albany-kneelers--ayahuasca-rush"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 50.06,
-      "matchup_id": "2026-w08-baseball-furies--crazy-wazs-team"
+      "value": 40.18,
+      "matchup_id": "2026-w08-greendale-human-beings--vegas-vandals"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 1.5,
-      "matchup_id": "2026-w08-maine-moose--turnbull-acs"
+      "value": 8.92,
+      "matchup_id": "2026-w08-new-jersey-giants--van-cortlant-rangers"
     },
     {
       "fact_id": "longest-active-streak",
