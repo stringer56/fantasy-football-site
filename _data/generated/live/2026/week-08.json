@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 8,
-  "generated_at": "2026-11-01T14:51:31Z",
+  "generated_at": "2026-11-01T19:25:00Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-01T14:51:31Z",
+    "source_updated_at": "2026-11-01T19:25:00Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -322,8 +322,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "3-4-0",
-          "score": 34.5,
-          "projected_score": 130.26,
+          "score": 56.7,
+          "projected_score": 118.84,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -382,14 +382,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.40222",
-              "player_name": "DeMario Douglas",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.41825",
               "player_name": "Tyler Shough",
               "nfl_team": null,
@@ -430,6 +422,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.42702",
+              "player_name": "Ja'Kobi Lane",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.31883",
               "player_name": "A.J. Brown",
               "nfl_team": null,
@@ -447,7 +447,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Jaguars",
+              "player_name": "Jacksonville",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -467,8 +467,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "5-2-0",
-          "score": 24.52,
-          "projected_score": 126.57,
+          "score": 67.82,
+          "projected_score": 141.42,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -659,8 +659,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "4-3-0",
-          "score": 8.8,
-          "projected_score": 108.04,
+          "score": 68.76,
+          "projected_score": 115.51,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -804,8 +804,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "2-5-0",
-          "score": 8.6,
-          "projected_score": 105.18,
+          "score": 18.7,
+          "projected_score": 93.35,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -996,8 +996,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "3-4-0",
-          "score": 0.0,
-          "projected_score": 114.89,
+          "score": 39.34,
+          "projected_score": 111.86,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1133,8 +1133,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "5-2-0",
-          "score": 17.4,
-          "projected_score": 119.55,
+          "score": 56.7,
+          "projected_score": 127.11,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -1333,8 +1333,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "4-3-0",
-          "score": 8.0,
-          "projected_score": 118.72,
+          "score": 32.4,
+          "projected_score": 105.5,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1478,8 +1478,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "2-5-0",
-          "score": 21.4,
-          "projected_score": 112.93,
+          "score": 56.56,
+          "projected_score": 108.38,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1595,7 +1595,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Bengals",
+              "player_name": "Cincinnati",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1670,8 +1670,8 @@
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
           "record": "4-3-0",
-          "score": 18.3,
-          "projected_score": 119.27,
+          "score": 45.7,
+          "projected_score": 106.07,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1795,7 +1795,7 @@
             },
             {
               "player_key": null,
-              "player_name": "New York",
+              "player_name": "Jets",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1815,8 +1815,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "4-3-0",
-          "score": 0.0,
-          "projected_score": 117.08,
+          "score": 44.2,
+          "projected_score": 117.25,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -2007,8 +2007,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "3-4-0",
-          "score": 0.0,
-          "projected_score": 98.14,
+          "score": 14.6,
+          "projected_score": 90.5,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2152,8 +2152,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "3-4-0",
-          "score": 0.0,
-          "projected_score": 97.39,
+          "score": 17.2,
+          "projected_score": 91.05,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -2319,34 +2319,34 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 34.5,
-      "franchise_id": "albany-kneelers",
-      "display_name": "Albany Redskins"
+      "value": 68.76,
+      "franchise_id": "crazy-wazs-team",
+      "display_name": "Chris's Crazy Team"
     },
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 0.0,
-      "franchise_id": "buffalo-bravado",
-      "display_name": "Buffalo Bravados"
+      "value": 14.6,
+      "franchise_id": "van-cortlant-rangers",
+      "display_name": "Van Cortlant Rangers"
     },
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 59.02,
+      "value": 124.52,
       "matchup_id": "2026-w08-albany-kneelers--ayahuasca-rush"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 18.3,
-      "matchup_id": "2026-w08-maine-moose--turnbull-acs"
+      "value": 50.06,
+      "matchup_id": "2026-w08-baseball-furies--crazy-wazs-team"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 0.2,
-      "matchup_id": "2026-w08-baseball-furies--crazy-wazs-team"
+      "value": 1.5,
+      "matchup_id": "2026-w08-maine-moose--turnbull-acs"
     },
     {
       "fact_id": "longest-active-streak",
