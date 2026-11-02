@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 8,
-  "generated_at": "2026-11-02T09:50:17Z",
+  "generated_at": "2026-11-02T20:02:45Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-02T09:50:17Z",
+    "source_updated_at": "2026-11-02T20:02:45Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -439,7 +439,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Jaguars",
+              "player_name": "Jacksonville",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -460,7 +460,7 @@
           "team_id": 3,
           "record": "5-2-0",
           "score": 135.02,
-          "projected_score": 146.52,
+          "projected_score": 146.5,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -905,7 +905,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Patriots",
+              "player_name": "New England",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -913,7 +913,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Texans",
+              "player_name": "Houston",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -989,7 +989,7 @@
           "team_id": 4,
           "record": "3-4-0",
           "score": 103.06,
-          "projected_score": 117.26,
+          "projected_score": 117.23,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1250,7 +1250,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Vikings",
+              "player_name": "Minnesota",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1450,7 +1450,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Panthers",
+              "player_name": "Carolina",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1471,7 +1471,7 @@
           "team_id": 12,
           "record": "2-5-0",
           "score": 118.58,
-          "projected_score": 126.56,
+          "projected_score": 126.54,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1587,7 +1587,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Bengals",
+              "player_name": "Cincinnati",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1663,7 +1663,7 @@
           "team_id": 7,
           "record": "4-3-0",
           "score": 105.8,
-          "projected_score": 123.61,
+          "projected_score": 123.5,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1808,7 +1808,7 @@
           "team_id": 11,
           "record": "4-3-0",
           "score": 97.0,
-          "projected_score": 107.69,
+          "projected_score": 107.59,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -2000,7 +2000,7 @@
           "team_id": 1,
           "record": "3-4-0",
           "score": 74.18,
-          "projected_score": 84.89,
+          "projected_score": 84.9,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2124,7 +2124,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Bears",
+              "player_name": "Chicago",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -2145,7 +2145,7 @@
           "team_id": 8,
           "record": "3-4-0",
           "score": 80.18,
-          "projected_score": 89.0,
+          "projected_score": 88.99,
           "roster": [
             {
               "player_key": "470.p.40875",
