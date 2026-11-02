@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 8,
-  "generated_at": "2026-11-01T22:58:22Z",
+  "generated_at": "2026-11-02T02:20:08Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-01T22:58:22Z",
+    "source_updated_at": "2026-11-02T02:20:08Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -322,8 +322,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "3-4-0",
-          "score": 103.5,
-          "projected_score": 120.37,
+          "score": 121.54,
+          "projected_score": 121.54,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -459,8 +459,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "5-2-0",
-          "score": 123.02,
-          "projected_score": 148.67,
+          "score": 135.02,
+          "projected_score": 146.52,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -796,8 +796,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "2-5-0",
-          "score": 73.02,
-          "projected_score": 97.15,
+          "score": 102.86,
+          "projected_score": 111.42,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -988,8 +988,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "3-4-0",
-          "score": 98.06,
-          "projected_score": 113.02,
+          "score": 103.06,
+          "projected_score": 117.24,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1125,8 +1125,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "5-2-0",
-          "score": 113.78,
-          "projected_score": 150.08,
+          "score": 120.78,
+          "projected_score": 147.41,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -1325,8 +1325,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "4-3-0",
-          "score": 66.5,
-          "projected_score": 92.82,
+          "score": 72.24,
+          "projected_score": 85.92,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1470,8 +1470,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "2-5-0",
-          "score": 106.68,
-          "projected_score": 125.5,
+          "score": 116.78,
+          "projected_score": 132.29,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1663,7 +1663,7 @@
           "team_id": 7,
           "record": "4-3-0",
           "score": 100.6,
-          "projected_score": 127.69,
+          "projected_score": 124.63,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1808,7 +1808,7 @@
           "team_id": 11,
           "record": "4-3-0",
           "score": 85.7,
-          "projected_score": 115.39,
+          "projected_score": 103.45,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -1999,8 +1999,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "3-4-0",
-          "score": 57.16,
-          "projected_score": 88.28,
+          "score": 67.18,
+          "projected_score": 82.64,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2144,8 +2144,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "3-4-0",
-          "score": 48.24,
-          "projected_score": 77.6,
+          "score": 69.38,
+          "projected_score": 85.56,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -2311,33 +2311,33 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 123.02,
+      "value": 135.02,
       "franchise_id": "ayahuasca-rush",
       "display_name": "Ayahuasca Rush"
     },
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 48.24,
-      "franchise_id": "new-jersey-giants",
-      "display_name": "New Jersey Giants"
+      "value": 67.18,
+      "franchise_id": "van-cortlant-rangers",
+      "display_name": "Van Cortlant Rangers"
     },
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 226.52,
+      "value": 256.56,
       "matchup_id": "2026-w08-albany-kneelers--ayahuasca-rush"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 40.18,
+      "value": 44.54,
       "matchup_id": "2026-w08-greendale-human-beings--vegas-vandals"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 8.92,
+      "value": 2.2,
       "matchup_id": "2026-w08-new-jersey-giants--van-cortlant-rangers"
     },
     {
