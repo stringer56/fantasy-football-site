@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-11-04T17:55:24Z",
+  "generated_at": "2026-11-04T23:23:10Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-04T17:55:24Z",
+    "source_updated_at": "2026-11-04T23:23:10Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-11-04T17:55:24Z"
+    "source_update_timestamp": "2026-11-04T23:23:10Z"
   },
   "standings": [
     {
@@ -356,7 +356,7 @@
           "team_id": 2,
           "record": "3-5-0",
           "score": 0.0,
-          "projected_score": 121.74,
+          "projected_score": 120.7,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -459,7 +459,7 @@
               "player_name": "David Montgomery",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "BN",
+              "selected_position": "IR",
               "status": null
             },
             {
@@ -493,7 +493,7 @@
           "team_id": 10,
           "record": "2-6-0",
           "score": 0.0,
-          "projected_score": 113.35,
+          "projected_score": 112.67,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -685,7 +685,7 @@
           "team_id": 3,
           "record": "6-2-0",
           "score": 0.0,
-          "projected_score": 100.88,
+          "projected_score": 100.2,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -822,7 +822,7 @@
           "team_id": 4,
           "record": "3-5-0",
           "score": 0.0,
-          "projected_score": 113.91,
+          "projected_score": 114.27,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -857,16 +857,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.42646",
-              "player_name": "KC Concepcion Jr.",
+              "player_key": "470.p.31868",
+              "player_name": "Deebo Samuel Sr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.33392",
-              "player_name": "Kyle Pitts Sr.",
+              "player_key": "470.p.31012",
+              "player_name": "Mike Gesicki",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "TE",
@@ -878,6 +878,22 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42646",
+              "player_name": "KC Concepcion Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33392",
+              "player_name": "Kyle Pitts Sr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -899,22 +915,6 @@
             {
               "player_key": "470.p.42712",
               "player_name": "Kaelon Black",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.31868",
-              "player_name": "Deebo Samuel Sr.",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.31012",
-              "player_name": "Mike Gesicki",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1014,7 +1014,7 @@
           "team_id": 5,
           "record": "5-3-0",
           "score": 0.0,
-          "projected_score": 111.12,
+          "projected_score": 111.2,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1159,7 +1159,7 @@
           "team_id": 6,
           "record": "4-4-0",
           "score": 0.0,
-          "projected_score": 107.47,
+          "projected_score": 112.24,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1283,7 +1283,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Panthers",
+              "player_name": "Saints",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1359,7 +1359,7 @@
           "team_id": 7,
           "record": "5-3-0",
           "score": 0.0,
-          "projected_score": 116.12,
+          "projected_score": 116.02,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1504,7 +1504,7 @@
           "team_id": 12,
           "record": "3-5-0",
           "score": 0.0,
-          "projected_score": 98.69,
+          "projected_score": 99.11,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1696,7 +1696,7 @@
           "team_id": 8,
           "record": "3-4-1",
           "score": 0.0,
-          "projected_score": 113.98,
+          "projected_score": 114.72,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1825,7 +1825,7 @@
           "team_id": 11,
           "record": "4-4-0",
           "score": 0.0,
-          "projected_score": 97.73,
+          "projected_score": 97.81,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2017,7 +2017,7 @@
           "team_id": 1,
           "record": "3-4-1",
           "score": 0.0,
-          "projected_score": 105.97,
+          "projected_score": 106.62,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2162,7 +2162,7 @@
           "team_id": 9,
           "record": "6-2-0",
           "score": 0.0,
-          "projected_score": 123.96,
+          "projected_score": 133.83,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2273,7 +2273,7 @@
               "player_name": "Eddy Pineiro",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "BN",
+              "selected_position": "K",
               "status": null
             },
             {
@@ -2355,7 +2355,7 @@
         "team_id": 5,
         "record": "5-3-0",
         "score": 0.0,
-        "projected_score": 111.12,
+        "projected_score": 111.2,
         "roster": [
           {
             "player_key": "470.p.40889",
@@ -2500,7 +2500,7 @@
         "team_id": 6,
         "record": "4-4-0",
         "score": 0.0,
-        "projected_score": 107.47,
+        "projected_score": 112.24,
         "roster": [
           {
             "player_key": "470.p.40896",
@@ -2624,7 +2624,7 @@
           },
           {
             "player_key": null,
-            "player_name": "Panthers",
+            "player_name": "Saints",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "DEF",
@@ -2724,7 +2724,7 @@
           "team_id": 10,
           "record": "2-6-0",
           "score": 0.0,
-          "projected_score": 113.35,
+          "projected_score": 112.67,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -2885,7 +2885,7 @@
           "team_id": 4,
           "record": "3-5-0",
           "score": 0.0,
-          "projected_score": 113.91,
+          "projected_score": 114.27,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -2920,16 +2920,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.42646",
-              "player_name": "KC Concepcion Jr.",
+              "player_key": "470.p.31868",
+              "player_name": "Deebo Samuel Sr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.33392",
-              "player_name": "Kyle Pitts Sr.",
+              "player_key": "470.p.31012",
+              "player_name": "Mike Gesicki",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "TE",
@@ -2941,6 +2941,22 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42646",
+              "player_name": "KC Concepcion Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33392",
+              "player_name": "Kyle Pitts Sr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -2962,22 +2978,6 @@
             {
               "player_key": "470.p.42712",
               "player_name": "Kaelon Black",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.31868",
-              "player_name": "Deebo Samuel Sr.",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.31012",
-              "player_name": "Mike Gesicki",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -3046,7 +3046,7 @@
           "team_id": 2,
           "record": "3-5-0",
           "score": 0.0,
-          "projected_score": 121.74,
+          "projected_score": 120.7,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -3149,7 +3149,7 @@
               "player_name": "David Montgomery",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "BN",
+              "selected_position": "IR",
               "status": null
             },
             {
@@ -3207,7 +3207,7 @@
           "team_id": 3,
           "record": "6-2-0",
           "score": 0.0,
-          "projected_score": 100.88,
+          "projected_score": 100.2,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -3368,7 +3368,7 @@
           "team_id": 6,
           "record": "4-4-0",
           "score": 0.0,
-          "projected_score": 107.47,
+          "projected_score": 112.24,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -3492,7 +3492,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Panthers",
+              "player_name": "Saints",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -3537,7 +3537,7 @@
           "team_id": 5,
           "record": "5-3-0",
           "score": 0.0,
-          "projected_score": 111.12,
+          "projected_score": 111.2,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -3706,7 +3706,7 @@
           "team_id": 12,
           "record": "3-5-0",
           "score": 0.0,
-          "projected_score": 98.69,
+          "projected_score": 99.11,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -3864,7 +3864,7 @@
           "team_id": 11,
           "record": "4-4-0",
           "score": 0.0,
-          "projected_score": 97.73,
+          "projected_score": 97.81,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -4025,7 +4025,7 @@
           "team_id": 1,
           "record": "3-4-1",
           "score": 0.0,
-          "projected_score": 105.97,
+          "projected_score": 106.62,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -4194,7 +4194,7 @@
           "team_id": 8,
           "record": "3-4-1",
           "score": 0.0,
-          "projected_score": 113.98,
+          "projected_score": 114.72,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -4344,7 +4344,7 @@
           "team_id": 9,
           "record": "6-2-0",
           "score": 0.0,
-          "projected_score": 123.96,
+          "projected_score": 133.83,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -4455,7 +4455,7 @@
               "player_name": "Eddy Pineiro",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "BN",
+              "selected_position": "K",
               "status": null
             },
             {
@@ -4505,7 +4505,7 @@
           "team_id": 7,
           "record": "5-3-0",
           "score": 0.0,
-          "projected_score": 116.12,
+          "projected_score": 116.02,
           "roster": [
             {
               "player_key": "470.p.40900",
