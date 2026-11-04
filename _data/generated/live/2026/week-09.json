@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 9,
-  "generated_at": "2026-11-03T22:33:14Z",
+  "generated_at": "2026-11-04T02:44:38Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-03T22:33:14Z",
+    "source_updated_at": "2026-11-04T02:44:38Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -317,7 +317,7 @@
           "team_id": 2,
           "record": "3-5-0",
           "score": 0.0,
-          "projected_score": 122.26,
+          "projected_score": 122.35,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -454,7 +454,7 @@
           "team_id": 10,
           "record": "2-6-0",
           "score": 0.0,
-          "projected_score": 111.36,
+          "projected_score": 111.54,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -562,7 +562,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Patriots",
+              "player_name": "New England",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -570,7 +570,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Texans",
+              "player_name": "Houston",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -646,7 +646,7 @@
           "team_id": 3,
           "record": "6-2-0",
           "score": 0.0,
-          "projected_score": 100.72,
+          "projected_score": 100.89,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -762,7 +762,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Seahawks",
+              "player_name": "Seattle",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -783,7 +783,7 @@
           "team_id": 4,
           "record": "3-5-0",
           "score": 0.0,
-          "projected_score": 113.86,
+          "projected_score": 113.96,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -975,7 +975,7 @@
           "team_id": 5,
           "record": "5-3-0",
           "score": 0.0,
-          "projected_score": 111.52,
+          "projected_score": 111.5,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1120,7 +1120,7 @@
           "team_id": 6,
           "record": "4-4-0",
           "score": 0.0,
-          "projected_score": 108.14,
+          "projected_score": 108.01,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1320,7 +1320,7 @@
           "team_id": 7,
           "record": "5-3-0",
           "score": 0.0,
-          "projected_score": 115.99,
+          "projected_score": 116.19,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1465,7 +1465,7 @@
           "team_id": 12,
           "record": "3-5-0",
           "score": 0.0,
-          "projected_score": 87.62,
+          "projected_score": 87.72,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1657,7 +1657,7 @@
           "team_id": 8,
           "record": "3-4-1",
           "score": 0.0,
-          "projected_score": 114.02,
+          "projected_score": 114.21,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1786,11 +1786,11 @@
           "team_id": 11,
           "record": "4-4-0",
           "score": 0.0,
-          "projected_score": 93.75,
+          "projected_score": 97.12,
           "roster": [
             {
-              "player_key": "470.p.29369",
-              "player_name": "Dak Prescott",
+              "player_key": "470.p.34218",
+              "player_name": "Brock Purdy",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -1805,8 +1805,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.32725",
-              "player_name": "J.K. Dobbins",
+              "player_key": "470.p.33991",
+              "player_name": "Breece Hall",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
@@ -1829,8 +1829,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.29269",
-              "player_name": "Hunter Henry",
+              "player_key": "470.p.40048",
+              "player_name": "Dalton Kincaid",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "TE",
@@ -1845,8 +1845,24 @@
               "status": null
             },
             {
-              "player_key": "470.p.33991",
-              "player_name": "Breece Hall",
+              "player_key": "470.p.29369",
+              "player_name": "Dak Prescott",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.32725",
+              "player_name": "J.K. Dobbins",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.29269",
+              "player_name": "Hunter Henry",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1861,24 +1877,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.34218",
-              "player_name": "Brock Purdy",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.41804",
               "player_name": "Emeka Egbuka",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40048",
-              "player_name": "Dalton Kincaid",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1902,7 +1902,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Steelers",
+              "player_name": "Pittsburgh",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1978,7 +1978,7 @@
           "team_id": 1,
           "record": "3-4-1",
           "score": 0.0,
-          "projected_score": 110.77,
+          "projected_score": 111.04,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2123,7 +2123,7 @@
           "team_id": 9,
           "record": "6-2-0",
           "score": 0.0,
-          "projected_score": 122.42,
+          "projected_score": 122.36,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2239,7 +2239,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Vikings",
+              "player_name": "Minnesota",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",

@@ -383,7 +383,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Seahawks",
+          "player_name": "Seattle",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -1161,7 +1161,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Vikings",
+          "player_name": "Minnesota",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -1280,7 +1280,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Patriots",
+          "player_name": "New England",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -1288,7 +1288,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Texans",
+          "player_name": "Houston",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -1302,8 +1302,8 @@
       "team_name": "Turnbull AC’s",
       "players": [
         {
-          "player_key": "470.p.29369",
-          "player_name": "Dak Prescott",
+          "player_key": "470.p.34218",
+          "player_name": "Brock Purdy",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "QB",
@@ -1318,8 +1318,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.32725",
-          "player_name": "J.K. Dobbins",
+          "player_key": "470.p.33991",
+          "player_name": "Breece Hall",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "RB",
@@ -1342,8 +1342,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.29269",
-          "player_name": "Hunter Henry",
+          "player_key": "470.p.40048",
+          "player_name": "Dalton Kincaid",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "TE",
@@ -1358,8 +1358,24 @@
           "status": null
         },
         {
-          "player_key": "470.p.33991",
-          "player_name": "Breece Hall",
+          "player_key": "470.p.29369",
+          "player_name": "Dak Prescott",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.32725",
+          "player_name": "J.K. Dobbins",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.29269",
+          "player_name": "Hunter Henry",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -1374,24 +1390,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.34218",
-          "player_name": "Brock Purdy",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
           "player_key": "470.p.41804",
           "player_name": "Emeka Egbuka",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.40048",
-          "player_name": "Dalton Kincaid",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -1415,7 +1415,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Steelers",
+          "player_name": "Pittsburgh",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
