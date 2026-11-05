@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 9,
-  "generated_at": "2026-11-04T23:23:10Z",
+  "generated_at": "2026-11-05T03:38:51Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-04T23:23:10Z",
+    "source_updated_at": "2026-11-05T03:38:51Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -317,7 +317,7 @@
           "team_id": 2,
           "record": "3-5-0",
           "score": 0.0,
-          "projected_score": 120.7,
+          "projected_score": 121.09,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -454,7 +454,7 @@
           "team_id": 10,
           "record": "2-6-0",
           "score": 0.0,
-          "projected_score": 112.67,
+          "projected_score": 112.22,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -562,7 +562,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Texans",
+              "player_name": "Houston",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -570,7 +570,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Patriots",
+              "player_name": "New England",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -646,7 +646,7 @@
           "team_id": 3,
           "record": "6-2-0",
           "score": 0.0,
-          "projected_score": 100.2,
+          "projected_score": 119.71,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -673,16 +673,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.33998",
-              "player_name": "Wan'Dale Robinson",
+              "player_key": "470.p.33393",
+              "player_name": "Ja'Marr Chase",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.33393",
-              "player_name": "Ja'Marr Chase",
+              "player_key": "470.p.30994",
+              "player_name": "DJ Moore",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -697,16 +697,24 @@
               "status": null
             },
             {
-              "player_key": "470.p.33100",
-              "player_name": "Rico Dowdle",
+              "player_key": "470.p.26699",
+              "player_name": "Keenan Allen",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
               "status": null
             },
             {
-              "player_key": "470.p.30994",
-              "player_name": "DJ Moore",
+              "player_key": "470.p.33998",
+              "player_name": "Wan'Dale Robinson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33100",
+              "player_name": "Rico Dowdle",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -731,14 +739,6 @@
             {
               "player_key": "470.p.31056",
               "player_name": "Mark Andrews",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40095",
-              "player_name": "Tank Bigsby",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -783,7 +783,7 @@
           "team_id": 4,
           "record": "3-5-0",
           "score": 0.0,
-          "projected_score": 114.27,
+          "projected_score": 114.2,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -975,7 +975,7 @@
           "team_id": 5,
           "record": "5-3-0",
           "score": 0.0,
-          "projected_score": 111.2,
+          "projected_score": 111.35,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1120,7 +1120,7 @@
           "team_id": 6,
           "record": "4-4-0",
           "score": 0.0,
-          "projected_score": 112.24,
+          "projected_score": 111.78,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1320,7 +1320,7 @@
           "team_id": 7,
           "record": "5-3-0",
           "score": 0.0,
-          "projected_score": 116.02,
+          "projected_score": 115.64,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1465,7 +1465,7 @@
           "team_id": 12,
           "record": "3-5-0",
           "score": 0.0,
-          "projected_score": 99.11,
+          "projected_score": 99.45,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1657,7 +1657,7 @@
           "team_id": 8,
           "record": "3-4-1",
           "score": 0.0,
-          "projected_score": 114.72,
+          "projected_score": 114.78,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1786,7 +1786,7 @@
           "team_id": 11,
           "record": "4-4-0",
           "score": 0.0,
-          "projected_score": 97.81,
+          "projected_score": 112.61,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -1894,7 +1894,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Steelers",
+              "player_name": "Chiefs",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1902,7 +1902,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Chiefs",
+              "player_name": "Steelers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1978,7 +1978,7 @@
           "team_id": 1,
           "record": "3-4-1",
           "score": 0.0,
-          "projected_score": 106.62,
+          "projected_score": 107.84,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2123,7 +2123,7 @@
           "team_id": 9,
           "record": "6-2-0",
           "score": 0.0,
-          "projected_score": 133.83,
+          "projected_score": 131.82,
           "roster": [
             {
               "player_key": "470.p.32671",
