@@ -129,7 +129,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Chicago",
+          "player_name": "Bears",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -175,11 +175,27 @@
           "status": null
         },
         {
-          "player_key": "470.p.31883",
-          "player_name": "A.J. Brown",
+          "player_key": "470.p.40222",
+          "player_name": "DeMario Douglas",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "WR",
+          "status": null
+        },
+        {
+          "player_key": "470.p.26686",
+          "player_name": "Travis Kelce",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "TE",
+          "status": null
+        },
+        {
+          "player_key": "470.p.31906",
+          "player_name": "Devin Singletary",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "W/R/T",
           "status": null
         },
         {
@@ -187,7 +203,15 @@
           "player_name": "Tucker Kraft",
           "nfl_team": null,
           "primary_position": null,
-          "selected_position": "TE",
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.31883",
+          "player_name": "A.J. Brown",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
           "status": null
         },
         {
@@ -195,7 +219,7 @@
           "player_name": "Cam Skattebo",
           "nfl_team": null,
           "primary_position": null,
-          "selected_position": "W/R/T",
+          "selected_position": "BN",
           "status": null
         },
         {
@@ -217,30 +241,6 @@
         {
           "player_key": "470.p.41825",
           "player_name": "Tyler Shough",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.26686",
-          "player_name": "Travis Kelce",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.42669",
-          "player_name": "Germie Bernard",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.31906",
-          "player_name": "Devin Singletary",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -518,7 +518,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Denver",
+          "player_name": "Broncos",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -1042,7 +1042,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Los Angeles",
+          "player_name": "Rams",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -1550,7 +1550,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Cincinnati",
+          "player_name": "Bengals",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
