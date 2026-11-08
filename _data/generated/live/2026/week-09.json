@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 9,
-  "generated_at": "2026-11-08T14:51:57Z",
+  "generated_at": "2026-11-08T19:24:18Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-08T14:51:57Z",
+    "source_updated_at": "2026-11-08T19:24:18Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -316,8 +316,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "3-5-0",
-          "score": 16.0,
-          "projected_score": 126.87,
+          "score": 45.82,
+          "projected_score": 117.83,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -360,8 +360,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.26686",
-              "player_name": "Travis Kelce",
+              "player_key": "470.p.40102",
+              "player_name": "Tucker Kraft",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "TE",
@@ -376,8 +376,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.40102",
-              "player_name": "Tucker Kraft",
+              "player_key": "470.p.26686",
+              "player_name": "Travis Kelce",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -461,8 +461,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "2-6-0",
-          "score": 0.0,
-          "projected_score": 110.83,
+          "score": 16.0,
+          "projected_score": 91.58,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -653,8 +653,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "6-2-0",
-          "score": 15.2,
-          "projected_score": 135.44,
+          "score": 38.9,
+          "projected_score": 126.71,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -790,8 +790,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "3-5-0",
-          "score": 1.3,
-          "projected_score": 113.99,
+          "score": 11.7,
+          "projected_score": 99.72,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -982,8 +982,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "5-3-0",
-          "score": 14.68,
-          "projected_score": 104.17,
+          "score": 58.46,
+          "projected_score": 94.45,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1127,8 +1127,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "4-4-0",
-          "score": 4.8,
-          "projected_score": 104.49,
+          "score": 42.8,
+          "projected_score": 106.31,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1327,8 +1327,8 @@
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
           "record": "5-3-0",
-          "score": 8.9,
-          "projected_score": 110.86,
+          "score": 26.4,
+          "projected_score": 92.35,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1472,8 +1472,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "3-5-0",
-          "score": 4.0,
-          "projected_score": 98.18,
+          "score": 32.8,
+          "projected_score": 97.76,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1664,8 +1664,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "3-4-1",
-          "score": 5.4,
-          "projected_score": 120.12,
+          "score": 49.66,
+          "projected_score": 108.73,
           "roster": [
             {
               "player_key": "470.p.34042",
@@ -1793,8 +1793,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "4-4-0",
-          "score": 0.0,
-          "projected_score": 111.68,
+          "score": 19.9,
+          "projected_score": 103.0,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -1985,8 +1985,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "3-4-1",
-          "score": 0.0,
-          "projected_score": 107.63,
+          "score": 15.06,
+          "projected_score": 88.38,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2130,8 +2130,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "6-2-0",
-          "score": 10.36,
-          "projected_score": 142.28,
+          "score": 72.64,
+          "projected_score": 160.75,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2305,33 +2305,33 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 16.0,
-      "franchise_id": "albany-kneelers",
-      "display_name": "Albany Redskins"
+      "value": 72.64,
+      "franchise_id": "north-town-ninnyhammers",
+      "display_name": "North town Ninnyhammers"
     },
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 0.0,
-      "franchise_id": "baseball-furies",
-      "display_name": "The Baseball Furies"
+      "value": 11.7,
+      "franchise_id": "buffalo-bravado",
+      "display_name": "Buffalo Bravados"
     },
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 19.48,
+      "value": 101.26,
       "matchup_id": "2026-w09-crazy-wazs-team--greendale-human-beings"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 16.0,
-      "matchup_id": "2026-w09-albany-kneelers--baseball-furies"
+      "value": 57.58,
+      "matchup_id": "2026-w09-north-town-ninnyhammers--van-cortlant-rangers"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 4.9,
+      "value": 6.4,
       "matchup_id": "2026-w09-maine-moose--vegas-vandals"
     },
     {
