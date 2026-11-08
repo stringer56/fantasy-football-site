@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-11-08T07:48:04Z",
+  "generated_at": "2026-11-08T14:51:57Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-08T07:48:04Z",
+    "source_updated_at": "2026-11-08T14:51:57Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-11-08T07:48:04Z"
+    "source_update_timestamp": "2026-11-08T14:51:57Z"
   },
   "standings": [
     {
@@ -356,7 +356,7 @@
           "team_id": 2,
           "record": "3-5-0",
           "score": 16.0,
-          "projected_score": 126.86,
+          "projected_score": 126.87,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -501,7 +501,7 @@
           "team_id": 10,
           "record": "2-6-0",
           "score": 0.0,
-          "projected_score": 112.39,
+          "projected_score": 110.83,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -692,8 +692,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "6-2-0",
-          "score": 0.0,
-          "projected_score": 122.16,
+          "score": 15.2,
+          "projected_score": 135.44,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -829,8 +829,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "3-5-0",
-          "score": 0.0,
-          "projected_score": 112.78,
+          "score": 1.3,
+          "projected_score": 113.99,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1021,8 +1021,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "5-3-0",
-          "score": 8.78,
-          "projected_score": 100.14,
+          "score": 14.68,
+          "projected_score": 104.17,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1166,8 +1166,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "4-4-0",
-          "score": 3.8,
-          "projected_score": 104.35,
+          "score": 4.8,
+          "projected_score": 104.49,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1367,7 +1367,7 @@
           "team_id": 7,
           "record": "5-3-0",
           "score": 8.9,
-          "projected_score": 110.62,
+          "projected_score": 110.86,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1511,8 +1511,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "3-5-0",
-          "score": 0.0,
-          "projected_score": 94.3,
+          "score": 4.0,
+          "projected_score": 98.18,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1547,8 +1547,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.27535",
-              "player_name": "Mike Evans",
+              "player_key": "470.p.42652",
+              "player_name": "Omar Cooper Jr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -1571,8 +1571,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.42652",
-              "player_name": "Omar Cooper Jr.",
+              "player_key": "470.p.27535",
+              "player_name": "Mike Evans",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1703,8 +1703,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "3-4-1",
-          "score": 0.0,
-          "projected_score": 116.91,
+          "score": 5.4,
+          "projected_score": 120.12,
           "roster": [
             {
               "player_key": "470.p.34042",
@@ -1833,7 +1833,7 @@
           "team_id": 11,
           "record": "4-4-0",
           "score": 0.0,
-          "projected_score": 111.55,
+          "projected_score": 111.68,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2025,7 +2025,7 @@
           "team_id": 1,
           "record": "3-4-1",
           "score": 0.0,
-          "projected_score": 109.26,
+          "projected_score": 107.63,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2169,8 +2169,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "6-2-0",
-          "score": 0.0,
-          "projected_score": 131.54,
+          "score": 10.36,
+          "projected_score": 142.28,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2213,8 +2213,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.34095",
-              "player_name": "Isaiah Likely",
+              "player_key": "470.p.30259",
+              "player_name": "George Kittle",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "TE",
@@ -2229,16 +2229,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.29235",
-              "player_name": "Jared Goff",
+              "player_key": "470.p.34095",
+              "player_name": "Isaiah Likely",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
               "status": null
             },
             {
-              "player_key": "470.p.30259",
-              "player_name": "George Kittle",
+              "player_key": "470.p.29235",
+              "player_name": "Jared Goff",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2362,8 +2362,8 @@
         "team_key": "470.l.26455.t.5",
         "team_id": 5,
         "record": "5-3-0",
-        "score": 8.78,
-        "projected_score": 100.14,
+        "score": 14.68,
+        "projected_score": 104.17,
         "roster": [
           {
             "player_key": "470.p.40889",
@@ -2507,8 +2507,8 @@
         "team_key": "470.l.26455.t.6",
         "team_id": 6,
         "record": "4-4-0",
-        "score": 3.8,
-        "projected_score": 104.35,
+        "score": 4.8,
+        "projected_score": 104.49,
         "roster": [
           {
             "player_key": "470.p.40896",
@@ -2703,8 +2703,8 @@
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 16.0,
-      "matchup_id": "2026-w09-albany-kneelers--baseball-furies"
+      "value": 19.48,
+      "matchup_id": "2026-w09-crazy-wazs-team--greendale-human-beings"
     },
     {
       "fact_id": "biggest-win",
@@ -2715,8 +2715,8 @@
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 4.98,
-      "matchup_id": "2026-w09-crazy-wazs-team--greendale-human-beings"
+      "value": 4.9,
+      "matchup_id": "2026-w09-maine-moose--vegas-vandals"
     },
     {
       "fact_id": "longest-active-streak",
@@ -2773,7 +2773,7 @@
           "team_id": 10,
           "record": "2-6-0",
           "score": 0.0,
-          "projected_score": 112.39,
+          "projected_score": 110.83,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -2933,8 +2933,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "3-5-0",
-          "score": 0.0,
-          "projected_score": 112.78,
+          "score": 1.3,
+          "projected_score": 113.99,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -3095,7 +3095,7 @@
           "team_id": 2,
           "record": "3-5-0",
           "score": 16.0,
-          "projected_score": 126.86,
+          "projected_score": 126.87,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -3263,8 +3263,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "6-2-0",
-          "score": 0.0,
-          "projected_score": 122.16,
+          "score": 15.2,
+          "projected_score": 135.44,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -3424,8 +3424,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "4-4-0",
-          "score": 3.8,
-          "projected_score": 104.35,
+          "score": 4.8,
+          "projected_score": 104.49,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -3593,8 +3593,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "5-3-0",
-          "score": 8.78,
-          "projected_score": 100.14,
+          "score": 14.68,
+          "projected_score": 104.17,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -3762,8 +3762,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "3-5-0",
-          "score": 0.0,
-          "projected_score": 94.3,
+          "score": 4.0,
+          "projected_score": 98.18,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -3798,8 +3798,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.27535",
-              "player_name": "Mike Evans",
+              "player_key": "470.p.42652",
+              "player_name": "Omar Cooper Jr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -3822,8 +3822,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.42652",
-              "player_name": "Omar Cooper Jr.",
+              "player_key": "470.p.27535",
+              "player_name": "Mike Evans",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -3921,7 +3921,7 @@
           "team_id": 11,
           "record": "4-4-0",
           "score": 0.0,
-          "projected_score": 111.55,
+          "projected_score": 111.68,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -4082,7 +4082,7 @@
           "team_id": 1,
           "record": "3-4-1",
           "score": 0.0,
-          "projected_score": 109.26,
+          "projected_score": 107.63,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -4250,8 +4250,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "3-4-1",
-          "score": 0.0,
-          "projected_score": 116.91,
+          "score": 5.4,
+          "projected_score": 120.12,
           "roster": [
             {
               "player_key": "470.p.34042",
@@ -4400,8 +4400,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "6-2-0",
-          "score": 0.0,
-          "projected_score": 131.54,
+          "score": 10.36,
+          "projected_score": 142.28,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -4444,8 +4444,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.34095",
-              "player_name": "Isaiah Likely",
+              "player_key": "470.p.30259",
+              "player_name": "George Kittle",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "TE",
@@ -4460,16 +4460,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.29235",
-              "player_name": "Jared Goff",
+              "player_key": "470.p.34095",
+              "player_name": "Isaiah Likely",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
               "status": null
             },
             {
-              "player_key": "470.p.30259",
-              "player_name": "George Kittle",
+              "player_key": "470.p.29235",
+              "player_name": "Jared Goff",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -4562,7 +4562,7 @@
           "team_id": 7,
           "record": "5-3-0",
           "score": 8.9,
-          "projected_score": 110.62,
+          "projected_score": 110.86,
           "roster": [
             {
               "player_key": "470.p.40900",
