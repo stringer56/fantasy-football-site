@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-11-09T02:40:48Z",
+  "generated_at": "2026-11-09T10:23:16Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-09T02:40:48Z",
+    "source_updated_at": "2026-11-09T10:23:16Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-11-09T02:40:48Z"
+    "source_update_timestamp": "2026-11-09T10:23:16Z"
   },
   "standings": [
     {
@@ -501,7 +501,7 @@
           "team_id": 10,
           "record": "2-6-0",
           "score": 97.06,
-          "projected_score": 106.1,
+          "projected_score": 106.11,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -693,7 +693,7 @@
           "team_id": 3,
           "record": "6-2-0",
           "score": 145.98,
-          "projected_score": 156.22,
+          "projected_score": 156.17,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -829,8 +829,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "3-5-0",
-          "score": 67.2,
-          "projected_score": 120.71,
+          "score": 90.8,
+          "projected_score": 127.14,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1022,7 +1022,7 @@
           "team_id": 5,
           "record": "5-3-0",
           "score": 77.86,
-          "projected_score": 86.16,
+          "projected_score": 86.14,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1146,7 +1146,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Browns",
+              "player_name": "Cleveland",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1167,7 +1167,7 @@
           "team_id": 6,
           "record": "4-4-0",
           "score": 82.76,
-          "projected_score": 97.71,
+          "projected_score": 97.66,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1291,7 +1291,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Saints",
+              "player_name": "New Orleans",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1366,8 +1366,8 @@
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
           "record": "5-3-0",
-          "score": 109.22,
-          "projected_score": 119.77,
+          "score": 111.16,
+          "projected_score": 111.16,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1491,7 +1491,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Jets",
+              "player_name": "New York",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1511,8 +1511,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "3-5-0",
-          "score": 71.94,
-          "projected_score": 85.36,
+          "score": 75.94,
+          "projected_score": 84.83,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1703,8 +1703,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "3-4-1",
-          "score": 92.22,
-          "projected_score": 105.82,
+          "score": 97.62,
+          "projected_score": 105.97,
           "roster": [
             {
               "player_key": "470.p.34042",
@@ -1832,8 +1832,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "4-4-0",
-          "score": 129.68,
-          "projected_score": 148.57,
+          "score": 138.28,
+          "projected_score": 146.69,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -1941,7 +1941,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Chiefs",
+              "player_name": "Kansas City",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1949,7 +1949,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Steelers",
+              "player_name": "Pittsburgh",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2024,8 +2024,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "3-4-1",
-          "score": 73.52,
-          "projected_score": 74.79,
+          "score": 83.52,
+          "projected_score": 83.52,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2170,7 +2170,7 @@
           "team_id": 9,
           "record": "6-2-0",
           "score": 153.14,
-          "projected_score": 163.83,
+          "projected_score": 163.78,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2508,7 +2508,7 @@
         "team_id": 10,
         "record": "2-6-0",
         "score": 97.06,
-        "projected_score": 106.1,
+        "projected_score": 106.11,
         "roster": [
           {
             "player_key": "470.p.40881",
@@ -2688,20 +2688,20 @@
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 67.2,
-      "franchise_id": "buffalo-bravado",
-      "display_name": "Buffalo Bravados"
+      "value": 75.94,
+      "franchise_id": "vegas-vandals",
+      "display_name": "Vegas Vandals"
     },
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 226.66,
-      "matchup_id": "2026-w09-north-town-ninnyhammers--van-cortlant-rangers"
+      "value": 236.78,
+      "matchup_id": "2026-w09-ayahuasca-rush--buffalo-bravado"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 79.62,
+      "value": 69.62,
       "matchup_id": "2026-w09-north-town-ninnyhammers--van-cortlant-rangers"
     },
     {
@@ -2808,7 +2808,7 @@
           "team_id": 10,
           "record": "2-6-0",
           "score": 97.06,
-          "projected_score": 106.1,
+          "projected_score": 106.11,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -2968,8 +2968,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "3-5-0",
-          "score": 67.2,
-          "projected_score": 120.71,
+          "score": 90.8,
+          "projected_score": 127.14,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -3299,7 +3299,7 @@
           "team_id": 3,
           "record": "6-2-0",
           "score": 145.98,
-          "projected_score": 156.22,
+          "projected_score": 156.17,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -3460,7 +3460,7 @@
           "team_id": 6,
           "record": "4-4-0",
           "score": 82.76,
-          "projected_score": 97.71,
+          "projected_score": 97.66,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -3584,7 +3584,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Saints",
+              "player_name": "New Orleans",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -3629,7 +3629,7 @@
           "team_id": 5,
           "record": "5-3-0",
           "score": 77.86,
-          "projected_score": 86.16,
+          "projected_score": 86.14,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -3753,7 +3753,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Browns",
+              "player_name": "Cleveland",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -3797,8 +3797,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "3-5-0",
-          "score": 71.94,
-          "projected_score": 85.36,
+          "score": 75.94,
+          "projected_score": 84.83,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -3955,8 +3955,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "4-4-0",
-          "score": 129.68,
-          "projected_score": 148.57,
+          "score": 138.28,
+          "projected_score": 146.69,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -4064,7 +4064,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Chiefs",
+              "player_name": "Kansas City",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -4072,7 +4072,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Steelers",
+              "player_name": "Pittsburgh",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -4116,8 +4116,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "3-4-1",
-          "score": 73.52,
-          "projected_score": 74.79,
+          "score": 83.52,
+          "projected_score": 83.52,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -4285,8 +4285,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "3-4-1",
-          "score": 92.22,
-          "projected_score": 105.82,
+          "score": 97.62,
+          "projected_score": 105.97,
           "roster": [
             {
               "player_key": "470.p.34042",
@@ -4436,7 +4436,7 @@
           "team_id": 9,
           "record": "6-2-0",
           "score": 153.14,
-          "projected_score": 163.83,
+          "projected_score": 163.78,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -4596,8 +4596,8 @@
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
           "record": "5-3-0",
-          "score": 109.22,
-          "projected_score": 119.77,
+          "score": 111.16,
+          "projected_score": 111.16,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -4721,7 +4721,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Jets",
+              "player_name": "New York",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
