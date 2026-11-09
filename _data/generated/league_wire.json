@@ -2,14 +2,32 @@
   "schema_version": 1,
   "season": 2026,
   "week": 9,
-  "generated_at": "2026-11-08T23:01:46Z",
+  "generated_at": "2026-11-09T02:40:48Z",
   "coverage_status": "ready",
   "items": [
+    {
+      "headline_id": "record:2026-w09-ayahuasca-rush--buffalo-bravado:ayahuasca-rush:weekly-score:record-watch",
+      "category": "Record Watch",
+      "headline": "Record Watch",
+      "detail": "Ayahuasca Rush is 16.22 points from the verified Top-25 cutoff.",
+      "week": 9,
+      "source": "normalized_yahoo_and_verified_history",
+      "path": "/records/"
+    },
+    {
+      "headline_id": "record:2026-w09-north-town-ninnyhammers--van-cortlant-rangers:north-town-ninnyhammers:weekly-score:record-watch",
+      "category": "Record Watch",
+      "headline": "Record Watch",
+      "detail": "North town Ninnyhammers is 9.06 points from the verified Top-25 cutoff.",
+      "week": 9,
+      "source": "normalized_yahoo_and_verified_history",
+      "path": "/records/"
+    },
     {
       "headline_id": "week-9:high-score",
       "category": "Week in Review",
       "headline": "North town Ninnyhammers leads Week 9 scoring",
-      "detail": "The week's current high is 140.34 points.",
+      "detail": "The week's current high is 153.14 points.",
       "week": 9,
       "source": "normalized_yahoo",
       "path": "/2026/week/9/"
