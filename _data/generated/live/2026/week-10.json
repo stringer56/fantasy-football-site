@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 10,
-  "generated_at": "2026-11-10T11:35:05Z",
+  "generated_at": "2026-11-10T18:51:21Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-10T11:35:05Z",
+    "source_updated_at": "2026-11-10T18:51:21Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "4-5-0",
           "score": 0.0,
-          "projected_score": 80.06,
+          "projected_score": 95.76,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -468,7 +468,7 @@
           "team_id": 4,
           "record": "3-6-0",
           "score": 0.0,
-          "projected_score": 73.0,
+          "projected_score": 74.1,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -660,7 +660,7 @@
           "team_id": 1,
           "record": "3-5-1",
           "score": 0.0,
-          "projected_score": 89.97,
+          "projected_score": 89.63,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -805,7 +805,7 @@
           "team_id": 3,
           "record": "7-2-0",
           "score": 0.0,
-          "projected_score": 111.56,
+          "projected_score": 111.88,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -824,8 +824,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.33508",
-              "player_name": "Rhamondre Stevenson",
+              "player_key": "470.p.33100",
+              "player_name": "Rico Dowdle",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
@@ -864,16 +864,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.33998",
-              "player_name": "Wan'Dale Robinson",
+              "player_key": "470.p.33508",
+              "player_name": "Rhamondre Stevenson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
               "status": null
             },
             {
-              "player_key": "470.p.33100",
-              "player_name": "Rico Dowdle",
+              "player_key": "470.p.33998",
+              "player_name": "Wan'Dale Robinson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -997,7 +997,7 @@
           "team_id": 6,
           "record": "4-5-0",
           "score": 0.0,
-          "projected_score": 108.19,
+          "projected_score": 109.77,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1142,7 +1142,7 @@
           "team_id": 10,
           "record": "2-7-0",
           "score": 0.0,
-          "projected_score": 109.74,
+          "projected_score": 110.14,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1334,7 +1334,7 @@
           "team_id": 5,
           "record": "6-3-0",
           "score": 0.0,
-          "projected_score": 111.26,
+          "projected_score": 113.18,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1353,8 +1353,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.41821",
-              "player_name": "Quinshon Judkins",
+              "player_key": "470.p.31960",
+              "player_name": "Tony Pollard",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
@@ -1393,8 +1393,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.31960",
-              "player_name": "Tony Pollard",
+              "player_key": "470.p.41821",
+              "player_name": "Quinshon Judkins",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1479,7 +1479,7 @@
           "team_id": 7,
           "record": "6-3-0",
           "score": 0.0,
-          "projected_score": 68.33,
+          "projected_score": 78.33,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1679,7 +1679,7 @@
           "team_id": 8,
           "record": "3-5-1",
           "score": 0.0,
-          "projected_score": 89.77,
+          "projected_score": 88.95,
           "roster": [
             {
               "player_key": "470.p.34042",
@@ -1787,7 +1787,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Los Angeles",
+              "player_name": "Rams",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1808,7 +1808,7 @@
           "team_id": 12,
           "record": "3-6-0",
           "score": 0.0,
-          "projected_score": 81.62,
+          "projected_score": 80.72,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -2000,7 +2000,7 @@
           "team_id": 9,
           "record": "7-2-0",
           "score": 0.0,
-          "projected_score": 130.11,
+          "projected_score": 128.87,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2137,7 +2137,7 @@
           "team_id": 11,
           "record": "5-4-0",
           "score": 0.0,
-          "projected_score": 89.6,
+          "projected_score": 91.12,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2245,7 +2245,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Chiefs",
+              "player_name": "Steelers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -2253,7 +2253,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Steelers",
+              "player_name": "Chiefs",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
