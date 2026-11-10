@@ -1,27 +1,18 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "week": 9,
-  "generated_at": "2026-11-10T03:24:04Z",
+  "week": 10,
+  "generated_at": "2026-11-10T11:35:05Z",
   "coverage_status": "ready",
   "items": [
     {
-      "headline_id": "record:2026-w09-ayahuasca-rush--buffalo-bravado:ayahuasca-rush:weekly-score:record-watch",
-      "category": "Record Watch",
-      "headline": "Record Watch",
-      "detail": "Ayahuasca Rush is 12.22 points from the verified Top-25 cutoff.",
-      "week": 9,
-      "source": "normalized_yahoo_and_verified_history",
-      "path": "/records/"
-    },
-    {
-      "headline_id": "week-9:high-score",
-      "category": "Week in Review",
-      "headline": "North town Ninnyhammers leads Week 9 scoring",
-      "detail": "The week's current high is 166.14 points.",
-      "week": 9,
+      "headline_id": "week-10:slate",
+      "category": "League Wire",
+      "headline": "Week 10 slate is set",
+      "detail": "Greendale Human Beings meets The Baseball Furies in the featured matchup.",
+      "week": 10,
       "source": "normalized_yahoo",
-      "path": "/2026/week/9/"
+      "path": "/2026/week/10/"
     }
   ]
 }

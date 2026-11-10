@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "week": 9,
+  "week": 10,
   "teams": [
     {
       "team_key": "470.l.26455.t.1",
@@ -191,11 +191,19 @@
           "status": null
         },
         {
+          "player_key": "470.p.41922",
+          "player_name": "Cam Skattebo",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "W/R/T",
+          "status": null
+        },
+        {
           "player_key": "470.p.31906",
           "player_name": "Devin Singletary",
           "nfl_team": null,
           "primary_position": null,
-          "selected_position": "W/R/T",
+          "selected_position": "BN",
           "status": null
         },
         {
@@ -209,14 +217,6 @@
         {
           "player_key": "470.p.31883",
           "player_name": "A.J. Brown",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.41922",
-          "player_name": "Cam Skattebo",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -1042,7 +1042,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Rams",
+          "player_name": "Los Angeles",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -1096,8 +1096,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.30259",
-          "player_name": "George Kittle",
+          "player_key": "470.p.34095",
+          "player_name": "Isaiah Likely",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "TE",
@@ -1112,8 +1112,16 @@
           "status": null
         },
         {
-          "player_key": "470.p.34095",
-          "player_name": "Isaiah Likely",
+          "player_key": "470.p.33389",
+          "player_name": "Trevor Lawrence",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.30259",
+          "player_name": "George Kittle",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -1130,14 +1138,6 @@
         {
           "player_key": "470.p.33394",
           "player_name": "Jaylen Waddle",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.33389",
-          "player_name": "Trevor Lawrence",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
