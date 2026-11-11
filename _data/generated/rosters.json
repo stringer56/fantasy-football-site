@@ -223,14 +223,6 @@
           "status": null
         },
         {
-          "player_key": "470.p.31906",
-          "player_name": "Devin Singletary",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
           "player_key": "470.p.34320",
           "player_name": "Jordan Mason",
           "nfl_team": null,
@@ -241,6 +233,14 @@
         {
           "player_key": "470.p.31896",
           "player_name": "DK Metcalf",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.32231",
+          "player_name": "Jakobi Meyers",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -264,7 +264,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Jacksonville",
+          "player_name": "Jaguars",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -391,7 +391,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Seattle",
+          "player_name": "Seahawks",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -493,16 +493,16 @@
           "status": null
         },
         {
-          "player_key": "470.p.33398",
-          "player_name": "DeVonta Smith",
+          "player_key": "470.p.28592",
+          "player_name": "Darren Waller",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
           "status": null
         },
         {
-          "player_key": "470.p.34088",
-          "player_name": "Romeo Doubs",
+          "player_key": "470.p.33398",
+          "player_name": "DeVonta Smith",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "IR",
@@ -518,10 +518,18 @@
         },
         {
           "player_key": null,
-          "player_name": "Broncos",
+          "player_name": "Bills",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
+          "status": null
+        },
+        {
+          "player_key": null,
+          "player_name": "Broncos",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
           "status": null
         }
       ]
@@ -653,7 +661,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Browns",
+          "player_name": "Cleveland",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -788,7 +796,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Saints",
+          "player_name": "New Orleans",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
