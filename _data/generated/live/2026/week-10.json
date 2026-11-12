@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 10,
-  "generated_at": "2026-11-11T20:03:28Z",
+  "generated_at": "2026-11-12T01:54:48Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-11T20:03:28Z",
+    "source_updated_at": "2026-11-12T01:54:48Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "4-5-0",
           "score": 0.0,
-          "projected_score": 107.61,
+          "projected_score": 106.22,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -468,7 +468,7 @@
           "team_id": 4,
           "record": "3-6-0",
           "score": 0.0,
-          "projected_score": 102.26,
+          "projected_score": 100.57,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -511,8 +511,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.31012",
-              "player_name": "Mike Gesicki",
+              "player_key": "470.p.28592",
+              "player_name": "Darren Waller",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "TE",
@@ -524,6 +524,14 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31012",
+              "player_name": "Mike Gesicki",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -553,14 +561,6 @@
             {
               "player_key": "470.p.30180",
               "player_name": "Alvin Kamara",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.28592",
-              "player_name": "Darren Waller",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -668,7 +668,7 @@
           "team_id": 1,
           "record": "3-5-1",
           "score": 0.0,
-          "projected_score": 92.83,
+          "projected_score": 93.26,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -813,7 +813,7 @@
           "team_id": 3,
           "record": "7-2-0",
           "score": 0.0,
-          "projected_score": 111.75,
+          "projected_score": 112.17,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -1005,7 +1005,7 @@
           "team_id": 6,
           "record": "4-5-0",
           "score": 0.0,
-          "projected_score": 126.68,
+          "projected_score": 126.2,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -1142,7 +1142,7 @@
           "team_id": 10,
           "record": "2-7-0",
           "score": 0.0,
-          "projected_score": 115.27,
+          "projected_score": 114.81,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1334,7 +1334,7 @@
           "team_id": 5,
           "record": "6-3-0",
           "score": 0.0,
-          "projected_score": 115.86,
+          "projected_score": 116.01,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1479,7 +1479,7 @@
           "team_id": 7,
           "record": "6-3-0",
           "score": 0.0,
-          "projected_score": 79.41,
+          "projected_score": 80.27,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1679,7 +1679,7 @@
           "team_id": 8,
           "record": "3-5-1",
           "score": 0.0,
-          "projected_score": 83.61,
+          "projected_score": 84.34,
           "roster": [
             {
               "player_key": "470.p.34042",
@@ -1808,7 +1808,7 @@
           "team_id": 12,
           "record": "3-6-0",
           "score": 0.0,
-          "projected_score": 82.8,
+          "projected_score": 81.51,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -2000,7 +2000,7 @@
           "team_id": 9,
           "record": "7-2-0",
           "score": 0.0,
-          "projected_score": 131.57,
+          "projected_score": 131.13,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2137,7 +2137,7 @@
           "team_id": 11,
           "record": "5-4-0",
           "score": 0.0,
-          "projected_score": 110.29,
+          "projected_score": 109.23,
           "roster": [
             {
               "player_key": "470.p.34218",
