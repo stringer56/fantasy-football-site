@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 10,
-  "generated_at": "2026-11-13T03:15:26Z",
+  "generated_at": "2026-11-13T11:25:18Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-13T03:15:26Z",
+    "source_updated_at": "2026-11-13T11:25:18Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -322,8 +322,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "4-5-0",
-          "score": 22.3,
-          "projected_score": 122.13,
+          "score": 25.7,
+          "projected_score": 121.53,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -468,7 +468,7 @@
           "team_id": 4,
           "record": "3-6-0",
           "score": 0.0,
-          "projected_score": 100.59,
+          "projected_score": 100.78,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -668,7 +668,7 @@
           "team_id": 1,
           "record": "3-5-1",
           "score": 0.0,
-          "projected_score": 111.08,
+          "projected_score": 110.93,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -813,7 +813,7 @@
           "team_id": 3,
           "record": "7-2-0",
           "score": 0.0,
-          "projected_score": 111.04,
+          "projected_score": 110.87,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -1005,7 +1005,7 @@
           "team_id": 6,
           "record": "4-5-0",
           "score": 0.0,
-          "projected_score": 125.1,
+          "projected_score": 125.11,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -1121,7 +1121,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Baltimore",
+              "player_name": "Ravens",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1142,7 +1142,7 @@
           "team_id": 10,
           "record": "2-7-0",
           "score": 0.0,
-          "projected_score": 114.15,
+          "projected_score": 114.29,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1250,7 +1250,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Texans",
+              "player_name": "Houston",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1258,7 +1258,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Patriots",
+              "player_name": "New England",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1334,7 +1334,7 @@
           "team_id": 5,
           "record": "6-3-0",
           "score": 0.0,
-          "projected_score": 115.92,
+          "projected_score": 115.79,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1479,7 +1479,7 @@
           "team_id": 7,
           "record": "6-3-0",
           "score": 0.0,
-          "projected_score": 78.84,
+          "projected_score": 78.78,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1678,8 +1678,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "3-5-1",
-          "score": 1.9,
-          "projected_score": 103.97,
+          "score": 5.7,
+          "projected_score": 104.53,
           "roster": [
             {
               "player_key": "470.p.30125",
@@ -1787,7 +1787,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Rams",
+              "player_name": "Los Angeles",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1808,7 +1808,7 @@
           "team_id": 12,
           "record": "3-6-0",
           "score": 0.0,
-          "projected_score": 97.63,
+          "projected_score": 97.64,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -2007,8 +2007,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "7-2-0",
-          "score": 7.9,
-          "projected_score": 131.59,
+          "score": 27.2,
+          "projected_score": 147.61,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2144,8 +2144,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "5-4-0",
-          "score": 5.4,
-          "projected_score": 107.87,
+          "score": 17.3,
+          "projected_score": 116.83,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2319,9 +2319,9 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 22.3,
-      "franchise_id": "albany-kneelers",
-      "display_name": "Albany Redskins"
+      "value": 27.2,
+      "franchise_id": "north-town-ninnyhammers",
+      "display_name": "North town Ninnyhammers"
     },
     {
       "fact_id": "lowest-score",
@@ -2333,19 +2333,19 @@
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 22.3,
-      "matchup_id": "2026-w10-albany-kneelers--buffalo-bravado"
+      "value": 44.5,
+      "matchup_id": "2026-w10-north-town-ninnyhammers--turnbull-acs"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 22.3,
+      "value": 25.7,
       "matchup_id": "2026-w10-albany-kneelers--buffalo-bravado"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 1.9,
+      "value": 5.7,
       "matchup_id": "2026-w10-new-jersey-giants--vegas-vandals"
     },
     {
