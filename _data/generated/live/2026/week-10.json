@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 10,
-  "generated_at": "2026-11-12T22:53:33Z",
+  "generated_at": "2026-11-13T03:15:26Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-12T22:53:33Z",
+    "source_updated_at": "2026-11-13T03:15:26Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -322,8 +322,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "4-5-0",
-          "score": 0.0,
-          "projected_score": 107.55,
+          "score": 22.3,
+          "projected_score": 122.13,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -468,7 +468,7 @@
           "team_id": 4,
           "record": "3-6-0",
           "score": 0.0,
-          "projected_score": 101.15,
+          "projected_score": 100.59,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -668,7 +668,7 @@
           "team_id": 1,
           "record": "3-5-1",
           "score": 0.0,
-          "projected_score": 111.05,
+          "projected_score": 111.08,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -813,7 +813,7 @@
           "team_id": 3,
           "record": "7-2-0",
           "score": 0.0,
-          "projected_score": 110.84,
+          "projected_score": 111.04,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -1005,7 +1005,7 @@
           "team_id": 6,
           "record": "4-5-0",
           "score": 0.0,
-          "projected_score": 125.17,
+          "projected_score": 125.1,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -1121,7 +1121,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Ravens",
+              "player_name": "Baltimore",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1142,7 +1142,7 @@
           "team_id": 10,
           "record": "2-7-0",
           "score": 0.0,
-          "projected_score": 114.37,
+          "projected_score": 114.15,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1334,7 +1334,7 @@
           "team_id": 5,
           "record": "6-3-0",
           "score": 0.0,
-          "projected_score": 115.76,
+          "projected_score": 115.92,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1479,7 +1479,7 @@
           "team_id": 7,
           "record": "6-3-0",
           "score": 0.0,
-          "projected_score": 78.93,
+          "projected_score": 78.84,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1678,12 +1678,12 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "3-5-1",
-          "score": 0.0,
-          "projected_score": 84.26,
+          "score": 1.9,
+          "projected_score": 103.97,
           "roster": [
             {
-              "player_key": "470.p.34042",
-              "player_name": "Malik Willis",
+              "player_key": "470.p.30125",
+              "player_name": "Deshaun Watson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -1722,8 +1722,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.41795",
-              "player_name": "Colston Loveland",
+              "player_key": "470.p.33443",
+              "player_name": "Pat Freiermuth",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "TE",
@@ -1735,6 +1735,14 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41795",
+              "player_name": "Colston Loveland",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -1756,14 +1764,6 @@
             {
               "player_key": "470.p.42625",
               "player_name": "Jeremiyah Love",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.34063",
-              "player_name": "Dameon Pierce",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1808,7 +1808,7 @@
           "team_id": 12,
           "record": "3-6-0",
           "score": 0.0,
-          "projected_score": 97.65,
+          "projected_score": 97.63,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -2007,8 +2007,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "7-2-0",
-          "score": 0.0,
-          "projected_score": 130.55,
+          "score": 7.9,
+          "projected_score": 131.59,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2144,8 +2144,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "5-4-0",
-          "score": 0.0,
-          "projected_score": 108.67,
+          "score": 5.4,
+          "projected_score": 107.87,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2315,7 +2315,48 @@
       }
     }
   ],
-  "weekly_facts": [],
+  "weekly_facts": [
+    {
+      "fact_id": "highest-score",
+      "label": "Highest score",
+      "value": 22.3,
+      "franchise_id": "albany-kneelers",
+      "display_name": "Albany Redskins"
+    },
+    {
+      "fact_id": "lowest-score",
+      "label": "Lowest score",
+      "value": 0.0,
+      "franchise_id": "buffalo-bravado",
+      "display_name": "Buffalo Bravados"
+    },
+    {
+      "fact_id": "highest-combined",
+      "label": "Highest combined score",
+      "value": 22.3,
+      "matchup_id": "2026-w10-albany-kneelers--buffalo-bravado"
+    },
+    {
+      "fact_id": "biggest-win",
+      "label": "Biggest lead",
+      "value": 22.3,
+      "matchup_id": "2026-w10-albany-kneelers--buffalo-bravado"
+    },
+    {
+      "fact_id": "closest-game",
+      "label": "Closest game",
+      "value": 1.9,
+      "matchup_id": "2026-w10-new-jersey-giants--vegas-vandals"
+    },
+    {
+      "fact_id": "longest-active-streak",
+      "label": "Longest active streak",
+      "value": 4,
+      "streak_type": "win",
+      "franchise_id": "north-town-ninnyhammers",
+      "display_name": "North town Ninnyhammers"
+    }
+  ],
   "record_watch": [],
   "power_rankings": {
     "status": "unavailable",

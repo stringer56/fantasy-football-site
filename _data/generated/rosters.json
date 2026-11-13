@@ -788,7 +788,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Ravens",
+          "player_name": "Baltimore",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -937,8 +937,8 @@
       "team_name": "New Jersey Giants",
       "players": [
         {
-          "player_key": "470.p.34042",
-          "player_name": "Malik Willis",
+          "player_key": "470.p.30125",
+          "player_name": "Deshaun Watson",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "QB",
@@ -977,8 +977,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.41795",
-          "player_name": "Colston Loveland",
+          "player_key": "470.p.33443",
+          "player_name": "Pat Freiermuth",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "TE",
@@ -990,6 +990,14 @@
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "W/R/T",
+          "status": null
+        },
+        {
+          "player_key": "470.p.41795",
+          "player_name": "Colston Loveland",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
           "status": null
         },
         {
@@ -1011,14 +1019,6 @@
         {
           "player_key": "470.p.42625",
           "player_name": "Jeremiyah Love",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.34063",
-          "player_name": "Dameon Pierce",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
