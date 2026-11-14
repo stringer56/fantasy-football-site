@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 10,
-  "generated_at": "2026-11-14T12:31:31Z",
+  "generated_at": "2026-11-14T18:30:28Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-14T12:31:31Z",
+    "source_updated_at": "2026-11-14T18:30:28Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "4-5-0",
           "score": 25.7,
-          "projected_score": 121.15,
+          "projected_score": 122.19,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -468,7 +468,7 @@
           "team_id": 4,
           "record": "3-6-0",
           "score": 0.0,
-          "projected_score": 100.71,
+          "projected_score": 100.66,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -668,7 +668,7 @@
           "team_id": 1,
           "record": "3-5-1",
           "score": 0.0,
-          "projected_score": 111.38,
+          "projected_score": 110.96,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -813,7 +813,7 @@
           "team_id": 3,
           "record": "7-2-0",
           "score": 0.0,
-          "projected_score": 111.14,
+          "projected_score": 110.85,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -1005,7 +1005,7 @@
           "team_id": 6,
           "record": "4-5-0",
           "score": 0.0,
-          "projected_score": 126.3,
+          "projected_score": 126.39,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -1142,7 +1142,7 @@
           "team_id": 10,
           "record": "2-7-0",
           "score": 0.0,
-          "projected_score": 113.97,
+          "projected_score": 113.95,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1334,7 +1334,7 @@
           "team_id": 5,
           "record": "6-3-0",
           "score": 0.0,
-          "projected_score": 115.63,
+          "projected_score": 116.77,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1479,11 +1479,11 @@
           "team_id": 7,
           "record": "6-3-0",
           "score": 0.0,
-          "projected_score": 78.95,
+          "projected_score": 119.99,
           "roster": [
             {
-              "player_key": "470.p.40900",
-              "player_name": "Caleb Williams",
+              "player_key": "470.p.40030",
+              "player_name": "C.J. Stroud",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -1514,11 +1514,27 @@
               "status": null
             },
             {
-              "player_key": "470.p.40121",
-              "player_name": "Michael Wilson",
+              "player_key": "470.p.33989",
+              "player_name": "Christian Watson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41799",
+              "player_name": "Tyler Warren",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "TE",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41902",
+              "player_name": "Woody Marks",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
               "status": null
             },
             {
@@ -1526,20 +1542,20 @@
               "player_name": "Dallas Goedert",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "TE",
+              "selected_position": "BN",
               "status": null
             },
             {
-              "player_key": "470.p.33989",
-              "player_name": "Christian Watson",
+              "player_key": "470.p.40121",
+              "player_name": "Michael Wilson",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "W/R/T",
+              "selected_position": "BN",
               "status": null
             },
             {
-              "player_key": "470.p.41902",
-              "player_name": "Woody Marks",
+              "player_key": "470.p.40900",
+              "player_name": "Caleb Williams",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1548,22 +1564,6 @@
             {
               "player_key": "470.p.40899",
               "player_name": "Malik Nabers",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.41799",
-              "player_name": "Tyler Warren",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40030",
-              "player_name": "C.J. Stroud",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1679,7 +1679,7 @@
           "team_id": 8,
           "record": "3-5-1",
           "score": 5.7,
-          "projected_score": 94.28,
+          "projected_score": 94.62,
           "roster": [
             {
               "player_key": "470.p.30125",
@@ -1808,7 +1808,7 @@
           "team_id": 12,
           "record": "3-6-0",
           "score": 0.0,
-          "projected_score": 90.17,
+          "projected_score": 90.12,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -2008,7 +2008,7 @@
           "team_id": 9,
           "record": "7-2-0",
           "score": 27.2,
-          "projected_score": 147.0,
+          "projected_score": 127.77,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2145,7 +2145,7 @@
           "team_id": 11,
           "record": "5-4-0",
           "score": 17.3,
-          "projected_score": 116.86,
+          "projected_score": 117.09,
           "roster": [
             {
               "player_key": "470.p.34218",
