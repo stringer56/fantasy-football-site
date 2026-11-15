@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 10,
-  "generated_at": "2026-11-15T09:28:43Z",
+  "generated_at": "2026-11-15T16:32:12Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-15T09:28:43Z",
+    "source_updated_at": "2026-11-15T16:32:12Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "4-5-0",
           "score": 25.7,
-          "projected_score": 121.36,
+          "projected_score": 117.93,
           "roster": [
             {
               "player_key": "470.p.41825",
@@ -350,16 +350,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.40222",
-              "player_name": "DeMario Douglas",
+              "player_key": "470.p.31883",
+              "player_name": "A.J. Brown",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.31883",
-              "player_name": "A.J. Brown",
+              "player_key": "470.p.31896",
+              "player_name": "DK Metcalf",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -406,14 +406,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.31896",
-              "player_name": "DK Metcalf",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.32231",
               "player_name": "Jakobi Meyers",
               "nfl_team": null,
@@ -424,6 +416,14 @@
             {
               "player_key": "470.p.31856",
               "player_name": "Josh Jacobs",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42697",
+              "player_name": "Caleb Douglas",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -468,7 +468,7 @@
           "team_id": 4,
           "record": "3-6-0",
           "score": 0.0,
-          "projected_score": 100.69,
+          "projected_score": 100.63,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -668,7 +668,7 @@
           "team_id": 1,
           "record": "3-5-1",
           "score": 0.0,
-          "projected_score": 116.96,
+          "projected_score": 111.3,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -813,7 +813,7 @@
           "team_id": 3,
           "record": "7-2-0",
           "score": 0.0,
-          "projected_score": 110.72,
+          "projected_score": 110.8,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -1005,7 +1005,7 @@
           "team_id": 6,
           "record": "4-5-0",
           "score": 0.0,
-          "projected_score": 126.12,
+          "projected_score": 126.08,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -1141,8 +1141,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "2-7-0",
-          "score": 0.0,
-          "projected_score": 113.74,
+          "score": 3.02,
+          "projected_score": 94.38,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1333,8 +1333,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "6-3-0",
-          "score": 0.0,
-          "projected_score": 115.71,
+          "score": 18.5,
+          "projected_score": 124.64,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1458,7 +1458,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Browns",
+              "player_name": "Cleveland",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1478,8 +1478,8 @@
           "team_key": "470.l.26455.t.7",
           "team_id": 7,
           "record": "6-3-0",
-          "score": 0.0,
-          "projected_score": 121.51,
+          "score": 28.0,
+          "projected_score": 137.03,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -1678,8 +1678,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "3-5-1",
-          "score": 5.7,
-          "projected_score": 94.68,
+          "score": 9.4,
+          "projected_score": 99.91,
           "roster": [
             {
               "player_key": "470.p.30125",
@@ -1730,11 +1730,19 @@
               "status": null
             },
             {
+              "player_key": "470.p.34357",
+              "player_name": "Bam Knight",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
               "player_key": "470.p.42626",
               "player_name": "Carnell Tate",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "W/R/T",
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -1762,19 +1770,19 @@
               "status": null
             },
             {
-              "player_key": "470.p.42625",
-              "player_name": "Jeremiyah Love",
+              "player_key": "470.p.41823",
+              "player_name": "TreVeyon Henderson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
               "status": null
             },
             {
-              "player_key": "470.p.41823",
-              "player_name": "TreVeyon Henderson",
+              "player_key": "470.p.42625",
+              "player_name": "Jeremiyah Love",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "BN",
+              "selected_position": "IR",
               "status": null
             },
             {
@@ -1787,7 +1795,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Rams",
+              "player_name": "Los Angeles",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1807,8 +1815,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "3-6-0",
-          "score": 0.0,
-          "projected_score": 90.5,
+          "score": 3.0,
+          "projected_score": 96.12,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1851,8 +1859,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.31840",
-              "player_name": "T.J. Hockenson",
+              "player_key": "470.p.33113",
+              "player_name": "Juwan Johnson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "TE",
@@ -1864,6 +1872,14 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31840",
+              "player_name": "T.J. Hockenson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -1885,14 +1901,6 @@
             {
               "player_key": "470.p.40901",
               "player_name": "Rome Odunze",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40911",
-              "player_name": "Keon Coleman",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2008,7 +2016,7 @@
           "team_id": 9,
           "record": "7-2-0",
           "score": 27.2,
-          "projected_score": 127.66,
+          "projected_score": 127.81,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2145,7 +2153,7 @@
           "team_id": 11,
           "record": "5-4-0",
           "score": 17.3,
-          "projected_score": 117.2,
+          "projected_score": 117.21,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2319,9 +2327,9 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 27.2,
-      "franchise_id": "north-town-ninnyhammers",
-      "display_name": "North town Ninnyhammers"
+      "value": 28.0,
+      "franchise_id": "maine-moose",
+      "display_name": "Maine Moose"
     },
     {
       "fact_id": "lowest-score",
@@ -2333,8 +2341,8 @@
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 44.5,
-      "matchup_id": "2026-w10-north-town-ninnyhammers--turnbull-acs"
+      "value": 46.5,
+      "matchup_id": "2026-w10-crazy-wazs-team--maine-moose"
     },
     {
       "fact_id": "biggest-win",
@@ -2345,8 +2353,8 @@
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 5.7,
-      "matchup_id": "2026-w10-new-jersey-giants--vegas-vandals"
+      "value": 3.02,
+      "matchup_id": "2026-w10-baseball-furies--greendale-human-beings"
     },
     {
       "fact_id": "longest-active-streak",
