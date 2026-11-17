@@ -2,12 +2,12 @@
   "schema_version": 1,
   "season": 2026,
   "week": 3,
-  "generated_at": "2026-09-29T01:59:02Z",
+  "generated_at": "2026-11-17T23:27:48Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-29T01:59:02Z",
-    "label": "Updated from Yahoo"
+    "source_updated_at": "2026-11-17T23:27:48Z",
+    "label": "Final scores verified from Yahoo public scoreboard"
   },
   "standings": [
     {
@@ -303,12 +303,12 @@
     {
       "matchup_id": "2026-w03-albany-kneelers--crazy-wazs-team",
       "week": 3,
-      "status": "live",
-      "status_label": "In Progress",
+      "status": "final",
+      "status_label": "Final",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_franchise_id": null,
+      "winner_franchise_id": "albany-kneelers",
       "teams": [
         {
           "franchise_id": "albany-kneelers",
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "2-0-0",
           "score": 117.44,
-          "projected_score": 117.44,
+          "projected_score": 113.51,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -467,8 +467,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "2-0-0",
-          "score": 110.06,
-          "projected_score": 119.31,
+          "score": 113.12,
+          "projected_score": 119.68,
           "roster": [
             {
               "player_key": "470.p.32723",
@@ -640,12 +640,12 @@
     {
       "matchup_id": "2026-w03-ayahuasca-rush--greendale-human-beings",
       "week": 3,
-      "status": "live",
-      "status_label": "In Progress",
+      "status": "final",
+      "status_label": "Final",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_franchise_id": null,
+      "winner_franchise_id": "ayahuasca-rush",
       "teams": [
         {
           "franchise_id": "ayahuasca-rush",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "1-1-0",
           "score": 97.74,
-          "projected_score": 97.74,
+          "projected_score": 111.73,
           "roster": [
             {
               "player_key": "470.p.31002",
@@ -797,7 +797,7 @@
           "team_id": 6,
           "record": "1-1-0",
           "score": 87.64,
-          "projected_score": 87.64,
+          "projected_score": 99.73,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -977,12 +977,12 @@
     {
       "matchup_id": "2026-w03-baseball-furies--new-jersey-giants",
       "week": 3,
-      "status": "live",
-      "status_label": "In Progress",
+      "status": "final",
+      "status_label": "Final",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_franchise_id": null,
+      "winner_franchise_id": "new-jersey-giants",
       "teams": [
         {
           "franchise_id": "new-jersey-giants",
@@ -996,8 +996,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "0-2-0",
-          "score": 123.84,
-          "projected_score": 127.46,
+          "score": 127.04,
+          "projected_score": 106.91,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1134,7 +1134,7 @@
           "team_id": 10,
           "record": "0-2-0",
           "score": 113.46,
-          "projected_score": 113.46,
+          "projected_score": 97.99,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1306,12 +1306,12 @@
     {
       "matchup_id": "2026-w03-buffalo-bravado--vegas-vandals",
       "week": 3,
-      "status": "live",
-      "status_label": "In Progress",
+      "status": "final",
+      "status_label": "Final",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_franchise_id": null,
+      "winner_franchise_id": "buffalo-bravado",
       "teams": [
         {
           "franchise_id": "buffalo-bravado",
@@ -1325,8 +1325,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "1-1-0",
-          "score": 95.06,
-          "projected_score": 106.89,
+          "score": 101.36,
+          "projected_score": 114.37,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1470,8 +1470,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "0-2-0",
-          "score": 90.34,
-          "projected_score": 101.91,
+          "score": 87.54,
+          "projected_score": 111.86,
           "roster": [
             {
               "player_key": "470.p.32676",
@@ -1643,12 +1643,12 @@
     {
       "matchup_id": "2026-w03-maine-moose--north-town-ninnyhammers",
       "week": 3,
-      "status": "live",
-      "status_label": "In Progress",
+      "status": "final",
+      "status_label": "Final",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_franchise_id": null,
+      "winner_franchise_id": "north-town-ninnyhammers",
       "teams": [
         {
           "franchise_id": "maine-moose",
@@ -1663,7 +1663,7 @@
           "team_id": 7,
           "record": "2-0-0",
           "score": 124.68,
-          "projected_score": 124.68,
+          "projected_score": 117.55,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -1800,7 +1800,7 @@
           "team_id": 9,
           "record": "1-1-0",
           "score": 171.42,
-          "projected_score": 171.42,
+          "projected_score": 120.63,
           "roster": [
             {
               "player_key": "470.p.29235",
@@ -1972,12 +1972,12 @@
     {
       "matchup_id": "2026-w03-turnbull-acs--van-cortlant-rangers",
       "week": 3,
-      "status": "live",
-      "status_label": "In Progress",
+      "status": "final",
+      "status_label": "Final",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_franchise_id": null,
+      "winner_franchise_id": "van-cortlant-rangers",
       "teams": [
         {
           "franchise_id": "van-cortlant-rangers",
@@ -1992,7 +1992,7 @@
           "team_id": 1,
           "record": "1-1-0",
           "score": 123.8,
-          "projected_score": 123.8,
+          "projected_score": 115.95,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2136,8 +2136,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "1-1-0",
-          "score": 98.08,
-          "projected_score": 101.74,
+          "score": 100.48,
+          "projected_score": 113.2,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -2318,9 +2318,9 @@
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 87.64,
-      "franchise_id": "greendale-human-beings",
-      "display_name": "Greendale Human Beings"
+      "value": 87.54,
+      "franchise_id": "vegas-vandals",
+      "display_name": "Vegas Vandals"
     },
     {
       "fact_id": "highest-combined",
@@ -2337,19 +2337,36 @@
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 4.72,
-      "matchup_id": "2026-w03-buffalo-bravado--vegas-vandals"
-    },
-    {
-      "fact_id": "longest-active-streak",
-      "label": "Longest active streak",
-      "value": 2,
-      "streak_type": "loss",
-      "franchise_id": "vegas-vandals",
-      "display_name": "Vegas Vandals"
+      "value": 4.32,
+      "matchup_id": "2026-w03-albany-kneelers--crazy-wazs-team"
     }
   ],
-  "record_watch": [],
+  "record_watch": [
+    {
+      "event_id": "2026-w03-maine-moose--north-town-ninnyhammers:north-town-ninnyhammers:franchise-high",
+      "type": "franchise_weekly_high",
+      "level": "New franchise high",
+      "final": true,
+      "franchise_id": "north-town-ninnyhammers",
+      "display_name": "North town Ninnyhammers",
+      "value": 171.42,
+      "threshold": 162.1,
+      "difference": null,
+      "message": "North town Ninnyhammers set a verified franchise weekly high at 171.42."
+    },
+    {
+      "event_id": "2026-w03-maine-moose--north-town-ninnyhammers:north-town-ninnyhammers:weekly-score:top-25-performance",
+      "type": "weekly_score",
+      "level": "Top-25 performance",
+      "final": true,
+      "franchise_id": "north-town-ninnyhammers",
+      "display_name": "North town Ninnyhammers",
+      "value": 171.42,
+      "threshold": 162.2,
+      "difference": null,
+      "message": "North town Ninnyhammers posted 171.42, clearing the verified 2021–2025 benchmark of 162.20."
+    }
+  ],
   "power_rankings": {
     "status": "unavailable",
     "voting_status": "unconfigured",

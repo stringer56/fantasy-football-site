@@ -160,7 +160,10 @@ def parse_live_matchups(
     if end:
         fragment = fragment[: end.start()]
 
-    header = clean_text(fragment[:3000]).casefold()
+    # Yahoo's week selector can be longer than 3,000 characters. Read the
+    # complete heading area, stopping before team names/scoreboard content.
+    first_game = re.search(r"<li\b[^>]*data-target\s*=\s*['\"][^'\"]*matchup\?", fragment, re.I)
+    header = clean_text(fragment[:first_game.start()] if first_game else fragment).casefold()
     if "final results" in header:
         status = "postevent"
     elif "not started" in header or "upcoming" in header:

@@ -5,6 +5,7 @@ on:
     - cron: "*/5 * * * *"
   workflow_dispatch:
   push:
+    branches: [main]
     paths:
       - ".github/workflows/live-yahoo-scores.yml"
       - ".github/workflows/update.yml"

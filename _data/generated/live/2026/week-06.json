@@ -2,12 +2,12 @@
   "schema_version": 1,
   "season": 2026,
   "week": 6,
-  "generated_at": "2026-10-20T04:00:23Z",
+  "generated_at": "2026-11-17T23:27:52Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-10-20T04:00:23Z",
-    "label": "Updated from Yahoo"
+    "source_updated_at": "2026-11-17T23:27:52Z",
+    "label": "Final scores verified from Yahoo public scoreboard"
   },
   "standings": [
     {
@@ -303,12 +303,12 @@
     {
       "matchup_id": "2026-w06-albany-kneelers--new-jersey-giants",
       "week": 6,
-      "status": "live",
-      "status_label": "In Progress",
+      "status": "final",
+      "status_label": "Final",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_franchise_id": null,
+      "winner_franchise_id": "new-jersey-giants",
       "teams": [
         {
           "franchise_id": "albany-kneelers",
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "3-2-0",
           "score": 76.18,
-          "projected_score": 76.18,
+          "projected_score": 118.98,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -460,7 +460,7 @@
           "team_id": 8,
           "record": "1-4-0",
           "score": 103.38,
-          "projected_score": 103.38,
+          "projected_score": 101.02,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -640,12 +640,12 @@
     {
       "matchup_id": "2026-w06-ayahuasca-rush--north-town-ninnyhammers",
       "week": 6,
-      "status": "live",
-      "status_label": "In Progress",
+      "status": "final",
+      "status_label": "Final",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_franchise_id": null,
+      "winner_franchise_id": "north-town-ninnyhammers",
       "teams": [
         {
           "franchise_id": "ayahuasca-rush",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "4-1-0",
           "score": 52.74,
-          "projected_score": 52.74,
+          "projected_score": 97.39,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -797,7 +797,7 @@
           "team_id": 9,
           "record": "3-2-0",
           "score": 128.54,
-          "projected_score": 128.54,
+          "projected_score": 111.64,
           "roster": [
             {
               "player_key": "470.p.33389",
@@ -977,12 +977,12 @@
     {
       "matchup_id": "2026-w06-baseball-furies--vegas-vandals",
       "week": 6,
-      "status": "live",
-      "status_label": "In Progress",
+      "status": "final",
+      "status_label": "Final",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_franchise_id": null,
+      "winner_franchise_id": "baseball-furies",
       "teams": [
         {
           "franchise_id": "baseball-furies",
@@ -997,7 +997,7 @@
           "team_id": 10,
           "record": "1-4-0",
           "score": 104.6,
-          "projected_score": 104.6,
+          "projected_score": 114.16,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1134,7 +1134,7 @@
           "team_id": 12,
           "record": "2-3-0",
           "score": 90.22,
-          "projected_score": 90.22,
+          "projected_score": 98.42,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1306,12 +1306,12 @@
     {
       "matchup_id": "2026-w06-buffalo-bravado--maine-moose",
       "week": 6,
-      "status": "live",
-      "status_label": "In Progress",
+      "status": "final",
+      "status_label": "Final",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_franchise_id": null,
+      "winner_franchise_id": "buffalo-bravado",
       "teams": [
         {
           "franchise_id": "buffalo-bravado",
@@ -1326,7 +1326,7 @@
           "team_id": 4,
           "record": "2-3-0",
           "score": 145.7,
-          "projected_score": 145.7,
+          "projected_score": 118.09,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1463,7 +1463,7 @@
           "team_id": 7,
           "record": "3-2-0",
           "score": 114.1,
-          "projected_score": 114.1,
+          "projected_score": 109.48,
           "roster": [
             {
               "player_key": "470.p.40900",
@@ -1643,12 +1643,12 @@
     {
       "matchup_id": "2026-w06-crazy-wazs-team--turnbull-acs",
       "week": 6,
-      "status": "live",
-      "status_label": "In Progress",
+      "status": "final",
+      "status_label": "Final",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_franchise_id": null,
+      "winner_franchise_id": "turnbull-acs",
       "teams": [
         {
           "franchise_id": "crazy-wazs-team",
@@ -1663,7 +1663,7 @@
           "team_id": 5,
           "record": "3-2-0",
           "score": 67.6,
-          "projected_score": 67.6,
+          "projected_score": 107.64,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1808,7 +1808,7 @@
           "team_id": 11,
           "record": "2-3-0",
           "score": 122.86,
-          "projected_score": 122.86,
+          "projected_score": 112.18,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -1980,12 +1980,12 @@
     {
       "matchup_id": "2026-w06-greendale-human-beings--van-cortlant-rangers",
       "week": 6,
-      "status": "live",
-      "status_label": "In Progress",
+      "status": "final",
+      "status_label": "Final",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_franchise_id": null,
+      "winner_franchise_id": "greendale-human-beings",
       "teams": [
         {
           "franchise_id": "van-cortlant-rangers",
@@ -2000,7 +2000,7 @@
           "team_id": 1,
           "record": "3-2-0",
           "score": 108.28,
-          "projected_score": 108.28,
+          "projected_score": 92.81,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -2145,7 +2145,7 @@
           "team_id": 6,
           "record": "3-2-0",
           "score": 131.6,
-          "projected_score": 131.6,
+          "projected_score": 110.57,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -2355,28 +2355,20 @@
       "label": "Closest game",
       "value": 14.38,
       "matchup_id": "2026-w06-baseball-furies--vegas-vandals"
-    },
-    {
-      "fact_id": "longest-active-streak",
-      "label": "Longest active streak",
-      "value": 3,
-      "streak_type": "win",
-      "franchise_id": "ayahuasca-rush",
-      "display_name": "Ayahuasca Rush"
     }
   ],
   "record_watch": [
     {
-      "event_id": "2026-w06-buffalo-bravado--maine-moose:buffalo-bravado:weekly-score:record-watch",
-      "type": "weekly_score",
-      "level": "Record Watch",
-      "final": false,
-      "franchise_id": "buffalo-bravado",
-      "display_name": "Buffalo Bravados",
-      "value": 145.7,
-      "threshold": 162.2,
-      "difference": 16.5,
-      "message": "Buffalo Bravados is 16.50 points from the verified Top-25 cutoff."
+      "event_id": "2026-w06-ayahuasca-rush--north-town-ninnyhammers:top-ten-margin",
+      "type": "victory_margin",
+      "level": "Top-10 margin",
+      "final": true,
+      "franchise_id": "north-town-ninnyhammers",
+      "display_name": "North town Ninnyhammers",
+      "value": 75.8,
+      "threshold": 74.5,
+      "difference": null,
+      "message": "North town Ninnyhammers's 75.80-point win reached the verified Top-10 margin range."
     }
   ],
   "power_rankings": {

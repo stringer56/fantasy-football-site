@@ -7,6 +7,7 @@ on:
     - cron: "*/15 * * * *"
   workflow_dispatch:
   push:
+    branches: [main]
     paths:
       - ".github/workflows/update.yml"
       - "scripts/pull_yahoo.py"
@@ -108,6 +109,11 @@ jobs:
       - name: Preserve last valid live snapshot as stale
         if: ${{ steps.yahoo_api.outcome == 'failure' && steps.yahoo_public.outcome == 'failure' }}
         run: python scripts/build_live_season.py --stale
+
+      - name: Refresh completed Yahoo scores
+        if: ${{ steps.yahoo_api.outcome == 'success' || steps.yahoo_public.outcome == 'success' }}
+        continue-on-error: true
+        run: python scripts/sync_completed_live_weeks.py
 
       - name: Synchronize verified weekly routes
         run: python scripts/sync_live_week_pages.py
