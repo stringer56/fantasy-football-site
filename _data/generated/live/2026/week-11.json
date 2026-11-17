@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 11,
-  "generated_at": "2026-11-17T10:59:28Z",
+  "generated_at": "2026-11-17T19:45:22Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-17T10:59:28Z",
+    "source_updated_at": "2026-11-17T19:45:22Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 1,
           "record": "4-5-1",
           "score": 0.0,
-          "projected_score": 72.81,
+          "projected_score": 76.15,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -468,7 +468,7 @@
           "team_id": 2,
           "record": "4-6-0",
           "score": 0.0,
-          "projected_score": 109.68,
+          "projected_score": 114.18,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -668,7 +668,7 @@
           "team_id": 3,
           "record": "7-3-0",
           "score": 0.0,
-          "projected_score": 64.37,
+          "projected_score": 67.99,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -719,11 +719,19 @@
               "status": null
             },
             {
+              "player_key": "470.p.33998",
+              "player_name": "Wan'Dale Robinson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
               "player_key": "470.p.26699",
               "player_name": "Keenan Allen",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "W/R/T",
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -735,24 +743,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.33998",
-              "player_name": "Wan'Dale Robinson",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.40883",
               "player_name": "Brian Thomas Jr.",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.31002",
-              "player_name": "Lamar Jackson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -769,6 +761,14 @@
             {
               "player_key": "470.p.42010",
               "player_name": "J. Croskey-Merritt",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31002",
+              "player_name": "Lamar Jackson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "IR",
@@ -805,7 +805,7 @@
           "team_id": 11,
           "record": "5-5-0",
           "score": 0.0,
-          "projected_score": 110.57,
+          "projected_score": 116.56,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -840,8 +840,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.42669",
-              "player_name": "Germie Bernard",
+              "player_key": "470.p.41824",
+              "player_name": "Luther Burden III",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -864,8 +864,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.41824",
-              "player_name": "Luther Burden III",
+              "player_key": "470.p.42669",
+              "player_name": "Germie Bernard",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -997,7 +997,7 @@
           "team_id": 4,
           "record": "4-6-0",
           "score": 0.0,
-          "projected_score": 94.34,
+          "projected_score": 120.12,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1016,8 +1016,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.42712",
-              "player_name": "Kaelon Black",
+              "player_key": "470.p.32705",
+              "player_name": "D'Andre Swift",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
@@ -1032,27 +1032,11 @@
               "status": null
             },
             {
-              "player_key": "470.p.42646",
-              "player_name": "KC Concepcion Jr.",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "WR",
-              "status": null
-            },
-            {
-              "player_key": "470.p.28592",
-              "player_name": "Darren Waller",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "TE",
-              "status": null
-            },
-            {
               "player_key": "470.p.31868",
               "player_name": "Deebo Samuel Sr.",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "W/R/T",
+              "selected_position": "WR",
               "status": null
             },
             {
@@ -1060,20 +1044,36 @@
               "player_name": "Mike Gesicki",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "BN",
+              "selected_position": "TE",
               "status": null
             },
             {
-              "player_key": "470.p.32705",
-              "player_name": "D'Andre Swift",
+              "player_key": "470.p.40993",
+              "player_name": "Bucky Irving",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.28592",
+              "player_name": "Darren Waller",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
               "status": null
             },
             {
-              "player_key": "470.p.40993",
-              "player_name": "Bucky Irving",
+              "player_key": "470.p.42646",
+              "player_name": "KC Concepcion Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42712",
+              "player_name": "Kaelon Black",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1142,7 +1142,7 @@
           "team_id": 10,
           "record": "2-8-0",
           "score": 0.0,
-          "projected_score": 38.22,
+          "projected_score": 37.1,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1334,7 +1334,7 @@
           "team_id": 5,
           "record": "6-4-0",
           "score": 0.0,
-          "projected_score": 85.46,
+          "projected_score": 86.18,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1479,11 +1479,11 @@
           "team_id": 8,
           "record": "4-5-1",
           "score": 0.0,
-          "projected_score": 67.75,
+          "projected_score": 95.99,
           "roster": [
             {
-              "player_key": "470.p.30125",
-              "player_name": "Deshaun Watson",
+              "player_key": "470.p.40875",
+              "player_name": "Bo Nix",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -1522,27 +1522,11 @@
               "status": null
             },
             {
-              "player_key": "470.p.33443",
-              "player_name": "Pat Freiermuth",
+              "player_key": "470.p.41795",
+              "player_name": "Colston Loveland",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "TE",
-              "status": null
-            },
-            {
-              "player_key": "470.p.34357",
-              "player_name": "Bam Knight",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "W/R/T",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40055",
-              "player_name": "Bijan Robinson",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
               "status": null
             },
             {
@@ -1550,20 +1534,36 @@
               "player_name": "Carnell Tate",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "BN",
+              "selected_position": "W/R/T",
               "status": null
             },
             {
-              "player_key": "470.p.41795",
-              "player_name": "Colston Loveland",
+              "player_key": "470.p.34357",
+              "player_name": "Bam Knight",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
               "status": null
             },
             {
-              "player_key": "470.p.40875",
-              "player_name": "Bo Nix",
+              "player_key": "470.p.33443",
+              "player_name": "Pat Freiermuth",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.30125",
+              "player_name": "Deshaun Watson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40055",
+              "player_name": "Bijan Robinson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1671,7 +1671,7 @@
           "team_id": 6,
           "record": "5-5-0",
           "score": 0.0,
-          "projected_score": 112.17,
+          "projected_score": 113.96,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1808,7 +1808,7 @@
           "team_id": 7,
           "record": "7-3-0",
           "score": 0.0,
-          "projected_score": 101.08,
+          "projected_score": 95.35,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -2008,7 +2008,7 @@
           "team_id": 9,
           "record": "8-2-0",
           "score": 0.0,
-          "projected_score": 94.22,
+          "projected_score": 115.33,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2145,7 +2145,7 @@
           "team_id": 12,
           "record": "3-7-0",
           "score": 0.0,
-          "projected_score": 90.37,
+          "projected_score": 97.86,
           "roster": [
             {
               "player_key": "470.p.25812",
