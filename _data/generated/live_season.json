@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-11-16T18:48:26Z",
+  "generated_at": "2026-11-17T02:22:08Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-16T18:48:26Z",
+    "source_updated_at": "2026-11-17T02:22:08Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-11-16T18:48:26Z"
+    "source_update_timestamp": "2026-11-17T02:22:08Z"
   },
   "standings": [
     {
@@ -486,7 +486,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Jacksonville",
+              "player_name": "Jaguars",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -831,7 +831,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Green Bay",
+              "player_name": "Packers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1043,8 +1043,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "4-5-0",
-          "score": 63.7,
-          "projected_score": 91.47,
+          "score": 74.9,
+          "projected_score": 85.04,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -1160,7 +1160,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Baltimore",
+              "player_name": "Ravens",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1372,8 +1372,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "6-3-0",
-          "score": 101.64,
-          "projected_score": 118.15,
+          "score": 108.24,
+          "projected_score": 117.82,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1854,8 +1854,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "3-6-0",
-          "score": 76.48,
-          "projected_score": 84.36,
+          "score": 79.38,
+          "projected_score": 83.87,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -2384,8 +2384,8 @@
         "team_key": "470.l.26455.t.6",
         "team_id": 6,
         "record": "4-5-0",
-        "score": 63.7,
-        "projected_score": 91.47,
+        "score": 74.9,
+        "projected_score": 85.04,
         "roster": [
           {
             "player_key": "470.p.40029",
@@ -2501,7 +2501,7 @@
           },
           {
             "player_key": null,
-            "player_name": "Baltimore",
+            "player_name": "Ravens",
             "nfl_team": null,
             "primary_position": null,
             "selected_position": "DEF",
@@ -2702,7 +2702,7 @@
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 63.7,
+      "value": 74.9,
       "franchise_id": "greendale-human-beings",
       "display_name": "Greendale Human Beings"
     },
@@ -2721,7 +2721,7 @@
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 11.82,
+      "value": 0.62,
       "matchup_id": "2026-w10-baseball-furies--greendale-human-beings"
     },
     {
@@ -3115,7 +3115,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Green Bay",
+              "player_name": "Packers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -3159,8 +3159,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "4-5-0",
-          "score": 63.7,
-          "projected_score": 91.47,
+          "score": 74.9,
+          "projected_score": 85.04,
           "roster": [
             {
               "player_key": "470.p.40029",
@@ -3276,7 +3276,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Baltimore",
+              "player_name": "Ravens",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -3445,7 +3445,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Jacksonville",
+              "player_name": "Jaguars",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -3819,8 +3819,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "6-3-0",
-          "score": 101.64,
-          "projected_score": 118.15,
+          "score": 108.24,
+          "projected_score": 117.82,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -3988,8 +3988,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "3-6-0",
-          "score": 76.48,
-          "projected_score": 84.36,
+          "score": 79.38,
+          "projected_score": 83.87,
           "roster": [
             {
               "player_key": "470.p.25812",
