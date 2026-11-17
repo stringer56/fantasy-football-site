@@ -2,12 +2,12 @@
   "schema_version": 1,
   "season": 2026,
   "week": 2,
-  "generated_at": "2026-09-22T06:18:02Z",
+  "generated_at": "2026-11-17T23:27:46Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-09-22T06:18:02Z",
-    "label": "Updated from Yahoo"
+    "source_updated_at": "2026-11-17T23:27:46Z",
+    "label": "Final scores verified from Yahoo public scoreboard"
   },
   "standings": [
     {
@@ -303,12 +303,12 @@
     {
       "matchup_id": "2026-w02-albany-kneelers--vegas-vandals",
       "week": 2,
-      "status": "live",
-      "status_label": "In Progress",
+      "status": "final",
+      "status_label": "Final",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_franchise_id": null,
+      "winner_franchise_id": "albany-kneelers",
       "teams": [
         {
           "franchise_id": "albany-kneelers",
@@ -648,12 +648,12 @@
     {
       "matchup_id": "2026-w02-ayahuasca-rush--crazy-wazs-team",
       "week": 2,
-      "status": "live",
-      "status_label": "In Progress",
+      "status": "final",
+      "status_label": "Final",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_franchise_id": null,
+      "winner_franchise_id": "crazy-wazs-team",
       "teams": [
         {
           "franchise_id": "ayahuasca-rush",
@@ -977,12 +977,12 @@
     {
       "matchup_id": "2026-w02-baseball-furies--van-cortlant-rangers",
       "week": 2,
-      "status": "live",
-      "status_label": "In Progress",
+      "status": "final",
+      "status_label": "Final",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_franchise_id": null,
+      "winner_franchise_id": "van-cortlant-rangers",
       "teams": [
         {
           "franchise_id": "van-cortlant-rangers",
@@ -1314,12 +1314,12 @@
     {
       "matchup_id": "2026-w02-buffalo-bravado--turnbull-acs",
       "week": 2,
-      "status": "live",
-      "status_label": "In Progress",
+      "status": "final",
+      "status_label": "Final",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_franchise_id": null,
+      "winner_franchise_id": "turnbull-acs",
       "teams": [
         {
           "franchise_id": "buffalo-bravado",
@@ -1651,12 +1651,12 @@
     {
       "matchup_id": "2026-w02-greendale-human-beings--north-town-ninnyhammers",
       "week": 2,
-      "status": "live",
-      "status_label": "In Progress",
+      "status": "final",
+      "status_label": "Final",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_franchise_id": null,
+      "winner_franchise_id": "north-town-ninnyhammers",
       "teams": [
         {
           "franchise_id": "greendale-human-beings",
@@ -1988,12 +1988,12 @@
     {
       "matchup_id": "2026-w02-maine-moose--new-jersey-giants",
       "week": 2,
-      "status": "live",
-      "status_label": "In Progress",
+      "status": "final",
+      "status_label": "Final",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_franchise_id": null,
+      "winner_franchise_id": "maine-moose",
       "teams": [
         {
           "franchise_id": "maine-moose",
@@ -2347,28 +2347,44 @@
       "label": "Closest game",
       "value": 0.94,
       "matchup_id": "2026-w02-buffalo-bravado--turnbull-acs"
-    },
-    {
-      "fact_id": "longest-active-streak",
-      "label": "Longest active streak",
-      "value": 2,
-      "streak_type": "loss",
-      "franchise_id": "vegas-vandals",
-      "display_name": "Vegas Vandals"
     }
   ],
   "record_watch": [
     {
-      "event_id": "2026-w02-greendale-human-beings--north-town-ninnyhammers:north-town-ninnyhammers:weekly-score:record-watch",
+      "event_id": "2026-w02-baseball-furies--van-cortlant-rangers:top-ten-margin",
+      "type": "victory_margin",
+      "level": "Top-10 margin",
+      "final": true,
+      "franchise_id": "van-cortlant-rangers",
+      "display_name": "Van Cortlant Rangers",
+      "value": 75.76,
+      "threshold": 74.5,
+      "difference": null,
+      "message": "Van Cortlant Rangers's 75.76-point win reached the verified Top-10 margin range."
+    },
+    {
+      "event_id": "2026-w02-baseball-furies--van-cortlant-rangers:van-cortlant-rangers:weekly-score:top-25-performance",
       "type": "weekly_score",
-      "level": "Record Watch",
-      "final": false,
+      "level": "Top-25 performance",
+      "final": true,
+      "franchise_id": "van-cortlant-rangers",
+      "display_name": "Van Cortlant Rangers",
+      "value": 169.18,
+      "threshold": 162.2,
+      "difference": null,
+      "message": "Van Cortlant Rangers posted 169.18, clearing the verified 2021–2025 benchmark of 162.20."
+    },
+    {
+      "event_id": "2026-w02-greendale-human-beings--north-town-ninnyhammers:top-ten-margin",
+      "type": "victory_margin",
+      "level": "Top-10 margin",
+      "final": true,
       "franchise_id": "north-town-ninnyhammers",
       "display_name": "North town Ninnyhammers",
-      "value": 151.68,
-      "threshold": 162.2,
-      "difference": 10.52,
-      "message": "North town Ninnyhammers is 10.52 points from the verified Top-25 cutoff."
+      "value": 76.54,
+      "threshold": 74.5,
+      "difference": null,
+      "message": "North town Ninnyhammers's 76.54-point win reached the verified Top-10 margin range."
     }
   ],
   "power_rankings": {

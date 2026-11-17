@@ -8,6 +8,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 import yaml
 from scripts import voting_common, validate_privacy, build_community_forms
@@ -189,7 +190,12 @@ class LaunchBoundaryTests(unittest.TestCase):
                 self.assertNotIn(content, str(errors))
 
     def test_forms_helper_has_canonical_questions_and_no_invented_poll(self):
-        config = build_community_forms.build_config()
+        load = build_community_forms.load_yaml
+        community = load('community.yml')
+        # Only configure the in-memory test fixture; real ballots stay closed.
+        community['pickem']['lock_week'] = json.loads((ROOT / '_data/generated/matchups.json').read_text())['week']
+        with patch.object(build_community_forms, 'load_yaml', side_effect=lambda name: community if name == 'community.yml' else load(name)):
+            config = build_community_forms.build_config()
         power, picks, votes = config['forms']
         self.assertEqual(len(power['questions']), 15)
         self.assertEqual(len(picks['questions']), 9)

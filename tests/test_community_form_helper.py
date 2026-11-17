@@ -1,5 +1,6 @@
 """Helper-only regression checks; no Forms or production responses are created."""
 import copy
+import json
 from pathlib import Path
 import shutil
 import subprocess
@@ -16,6 +17,9 @@ class CommunityFormHelperTests(unittest.TestCase):
     def config_with(self, **changes):
         load = forms.load_yaml
         community = copy.deepcopy(load('community.yml'))
+        # A test-only configured lock follows the fixture slate, not the live
+        # commissioner's deliberately unconfigured future-week ballots.
+        community['pickem']['lock_week'] = json.loads((ROOT / '_data/generated/matchups.json').read_text())['week']
         community['pickem'].update(changes)
         with patch.object(forms, 'load_yaml', side_effect=lambda name: community if name == 'community.yml' else load(name)):
             return forms.build_config()
@@ -30,7 +34,7 @@ class CommunityFormHelperTests(unittest.TestCase):
                 self.config_with(lock_at=value)
 
     def test_question_titles_follow_import_contract(self):
-        config = forms.build_config()
+        config = self.config_with()
         power, picks, votes = config['forms']
         self.assertEqual([q['title'] for q in power['questions']],
                          ['owner_id', 'season', 'week'] + [f'rank_{i}' for i in range(1, 13)])
