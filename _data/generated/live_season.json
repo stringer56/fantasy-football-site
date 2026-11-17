@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-11-17T23:28:21Z",
+  "generated_at": "2026-11-17T23:41:27Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-17T23:28:21Z",
+    "source_updated_at": "2026-11-17T23:41:27Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-11-17T23:28:21Z"
+    "source_update_timestamp": "2026-11-17T23:41:27Z"
   },
   "standings": [
     {
@@ -1373,7 +1373,7 @@
           "team_id": 5,
           "record": "6-4-0",
           "score": 0.0,
-          "projected_score": 86.49,
+          "projected_score": 86.5,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -2385,7 +2385,7 @@
         "team_id": 5,
         "record": "6-4-0",
         "score": 0.0,
-        "projected_score": 86.49,
+        "projected_score": 86.5,
         "roster": [
           {
             "player_key": "470.p.40889",
