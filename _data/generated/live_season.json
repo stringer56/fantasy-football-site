@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-11-18T18:43:32Z",
+  "generated_at": "2026-11-19T00:46:03Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-18T18:43:32Z",
+    "source_updated_at": "2026-11-19T00:46:03Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-11-18T18:43:32Z"
+    "source_update_timestamp": "2026-11-19T00:46:03Z"
   },
   "standings": [
     {
@@ -362,7 +362,7 @@
           "team_id": 1,
           "record": "4-5-1",
           "score": 0.0,
-          "projected_score": 116.43,
+          "projected_score": 117.45,
           "roster": [
             {
               "player_key": "470.p.7200",
@@ -507,7 +507,7 @@
           "team_id": 2,
           "record": "4-6-0",
           "score": 0.0,
-          "projected_score": 115.21,
+          "projected_score": 116.02,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -707,7 +707,7 @@
           "team_id": 3,
           "record": "7-3-0",
           "score": 0.0,
-          "projected_score": 60.5,
+          "projected_score": 60.41,
           "roster": [
             {
               "player_key": "470.p.32696",
@@ -844,7 +844,7 @@
           "team_id": 11,
           "record": "5-5-0",
           "score": 0.0,
-          "projected_score": 116.99,
+          "projected_score": 116.52,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -1181,7 +1181,7 @@
           "team_id": 10,
           "record": "2-8-0",
           "score": 0.0,
-          "projected_score": 37.01,
+          "projected_score": 36.97,
           "roster": [
             {
               "player_key": "470.p.40881",
@@ -1373,7 +1373,7 @@
           "team_id": 5,
           "record": "6-4-0",
           "score": 0.0,
-          "projected_score": 86.33,
+          "projected_score": 86.65,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1518,7 +1518,7 @@
           "team_id": 8,
           "record": "4-5-1",
           "score": 0.0,
-          "projected_score": 96.71,
+          "projected_score": 110.01,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1593,14 +1593,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.30125",
-              "player_name": "Deshaun Watson",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.40055",
               "player_name": "Bijan Robinson",
               "nfl_team": null,
@@ -1634,10 +1626,18 @@
             },
             {
               "player_key": null,
-              "player_name": "Rams",
+              "player_name": "Lions",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Rams",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
               "status": null
             }
           ]
@@ -1710,7 +1710,7 @@
           "team_id": 6,
           "record": "5-5-0",
           "score": 0.0,
-          "projected_score": 114.59,
+          "projected_score": 117.55,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1826,7 +1826,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Ravens",
+              "player_name": "Bears",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1847,7 +1847,7 @@
           "team_id": 7,
           "record": "7-3-0",
           "score": 0.0,
-          "projected_score": 125.73,
+          "projected_score": 124.75,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -2047,7 +2047,7 @@
           "team_id": 9,
           "record": "8-2-0",
           "score": 0.0,
-          "projected_score": 114.24,
+          "projected_score": 112.81,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2184,7 +2184,7 @@
           "team_id": 12,
           "record": "3-7-0",
           "score": 0.0,
-          "projected_score": 105.06,
+          "projected_score": 105.48,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -2377,7 +2377,7 @@
         "team_id": 1,
         "record": "4-5-1",
         "score": 0.0,
-        "projected_score": 116.43,
+        "projected_score": 117.45,
         "roster": [
           {
             "player_key": "470.p.7200",
@@ -2522,7 +2522,7 @@
         "team_id": 2,
         "record": "4-6-0",
         "score": 0.0,
-        "projected_score": 115.21,
+        "projected_score": 116.02,
         "roster": [
           {
             "player_key": "470.p.30123",
