@@ -278,24 +278,24 @@
       "team_name": "Ayahuasca Rush",
       "players": [
         {
-          "player_key": "470.p.32696",
-          "player_name": "Jordan Love",
+          "player_key": "470.p.41786",
+          "player_name": "Cam Ward",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "QB",
           "status": null
         },
         {
-          "player_key": "470.p.34120",
-          "player_name": "Kyren Williams",
+          "player_key": "470.p.33100",
+          "player_name": "Rico Dowdle",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "RB",
           "status": null
         },
         {
-          "player_key": "470.p.33100",
-          "player_name": "Rico Dowdle",
+          "player_key": "470.p.33538",
+          "player_name": "Kenny Gainwell",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "RB",
@@ -326,11 +326,35 @@
           "status": null
         },
         {
+          "player_key": "470.p.31056",
+          "player_name": "Mark Andrews",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "W/R/T",
+          "status": null
+        },
+        {
           "player_key": "470.p.33998",
           "player_name": "Wan'Dale Robinson",
           "nfl_team": null,
           "primary_position": null,
-          "selected_position": "W/R/T",
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.34120",
+          "player_name": "Kyren Williams",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.32696",
+          "player_name": "Jordan Love",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
           "status": null
         },
         {
@@ -344,30 +368,6 @@
         {
           "player_key": "470.p.33508",
           "player_name": "Rhamondre Stevenson",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.31056",
-          "player_name": "Mark Andrews",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.42010",
-          "player_name": "J. Croskey-Merritt",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.41786",
-          "player_name": "Cam Ward",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -391,10 +391,18 @@
         },
         {
           "player_key": null,
-          "player_name": "Seahawks",
+          "player_name": "Chargers",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
+          "status": null
+        },
+        {
+          "player_key": null,
+          "player_name": "Seahawks",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
           "status": null
         }
       ]
