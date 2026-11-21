@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-11-20T22:22:32Z",
+  "generated_at": "2026-11-21T03:22:57Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-20T22:22:32Z",
+    "source_updated_at": "2026-11-21T03:22:57Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-11-20T22:22:32Z"
+    "source_update_timestamp": "2026-11-21T03:22:57Z"
   },
   "standings": [
     {
@@ -362,7 +362,7 @@
           "team_id": 1,
           "record": "4-5-1",
           "score": 0.0,
-          "projected_score": 121.63,
+          "projected_score": 121.36,
           "roster": [
             {
               "player_key": "470.p.7200",
@@ -507,7 +507,7 @@
           "team_id": 2,
           "record": "4-6-0",
           "score": 16.9,
-          "projected_score": 114.55,
+          "projected_score": 114.31,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -699,7 +699,7 @@
           "team_id": 3,
           "record": "7-3-0",
           "score": 0.0,
-          "projected_score": 105.58,
+          "projected_score": 105.75,
           "roster": [
             {
               "player_key": "470.p.41786",
@@ -844,7 +844,7 @@
           "team_id": 11,
           "record": "5-5-0",
           "score": 0.0,
-          "projected_score": 113.17,
+          "projected_score": 113.07,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -1036,7 +1036,7 @@
           "team_id": 4,
           "record": "4-6-0",
           "score": 6.0,
-          "projected_score": 115.77,
+          "projected_score": 115.96,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1181,7 +1181,7 @@
           "team_id": 10,
           "record": "2-8-0",
           "score": 26.7,
-          "projected_score": 95.21,
+          "projected_score": 95.15,
           "roster": [
             {
               "player_key": "470.p.26662",
@@ -1373,7 +1373,7 @@
           "team_id": 5,
           "record": "6-4-0",
           "score": 0.0,
-          "projected_score": 87.41,
+          "projected_score": 87.51,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1518,7 +1518,7 @@
           "team_id": 8,
           "record": "4-5-1",
           "score": 17.3,
-          "projected_score": 113.09,
+          "projected_score": 113.08,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1710,7 +1710,7 @@
           "team_id": 6,
           "record": "5-5-0",
           "score": 0.0,
-          "projected_score": 117.76,
+          "projected_score": 118.83,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -1761,11 +1761,19 @@
               "status": null
             },
             {
+              "player_key": "470.p.41904",
+              "player_name": "Elic Ayomanor",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
               "player_key": "470.p.40114",
               "player_name": "Tre Tucker",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "W/R/T",
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -1847,7 +1855,7 @@
           "team_id": 7,
           "record": "7-3-0",
           "score": 28.16,
-          "projected_score": 121.4,
+          "projected_score": 121.89,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -2047,7 +2055,7 @@
           "team_id": 9,
           "record": "8-2-0",
           "score": 0.0,
-          "projected_score": 95.88,
+          "projected_score": 96.08,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2184,7 +2192,7 @@
           "team_id": 12,
           "record": "3-7-0",
           "score": 0.0,
-          "projected_score": 105.63,
+          "projected_score": 105.67,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -2377,7 +2385,7 @@
         "team_id": 6,
         "record": "5-5-0",
         "score": 0.0,
-        "projected_score": 117.76,
+        "projected_score": 118.83,
         "roster": [
           {
             "player_key": "470.p.40896",
@@ -2428,11 +2436,19 @@
             "status": null
           },
           {
+            "player_key": "470.p.41904",
+            "player_name": "Elic Ayomanor",
+            "nfl_team": null,
+            "primary_position": null,
+            "selected_position": "W/R/T",
+            "status": null
+          },
+          {
             "player_key": "470.p.40114",
             "player_name": "Tre Tucker",
             "nfl_team": null,
             "primary_position": null,
-            "selected_position": "W/R/T",
+            "selected_position": "BN",
             "status": null
           },
           {
@@ -2514,7 +2530,7 @@
         "team_id": 7,
         "record": "7-3-0",
         "score": 28.16,
-        "projected_score": 121.4,
+        "projected_score": 121.89,
         "roster": [
           {
             "player_key": "470.p.40030",
@@ -2779,7 +2795,7 @@
           "team_id": 1,
           "record": "4-5-1",
           "score": 0.0,
-          "projected_score": 121.63,
+          "projected_score": 121.36,
           "roster": [
             {
               "player_key": "470.p.7200",
@@ -2948,7 +2964,7 @@
           "team_id": 11,
           "record": "5-5-0",
           "score": 0.0,
-          "projected_score": 113.17,
+          "projected_score": 113.07,
           "roster": [
             {
               "player_key": "470.p.34218",
@@ -3109,7 +3125,7 @@
           "team_id": 4,
           "record": "4-6-0",
           "score": 6.0,
-          "projected_score": 115.77,
+          "projected_score": 115.96,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -3278,7 +3294,7 @@
           "team_id": 10,
           "record": "2-8-0",
           "score": 26.7,
-          "projected_score": 95.21,
+          "projected_score": 95.15,
           "roster": [
             {
               "player_key": "470.p.26662",
@@ -3439,7 +3455,7 @@
           "team_id": 8,
           "record": "4-5-1",
           "score": 17.3,
-          "projected_score": 113.09,
+          "projected_score": 113.08,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -3600,7 +3616,7 @@
           "team_id": 7,
           "record": "7-3-0",
           "score": 28.16,
-          "projected_score": 121.4,
+          "projected_score": 121.89,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -3769,7 +3785,7 @@
           "team_id": 6,
           "record": "5-5-0",
           "score": 0.0,
-          "projected_score": 117.76,
+          "projected_score": 118.83,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -3820,11 +3836,19 @@
               "status": null
             },
             {
+              "player_key": "470.p.41904",
+              "player_name": "Elic Ayomanor",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
               "player_key": "470.p.40114",
               "player_name": "Tre Tucker",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "W/R/T",
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -3930,7 +3954,7 @@
           "team_id": 5,
           "record": "6-4-0",
           "score": 0.0,
-          "projected_score": 87.41,
+          "projected_score": 87.51,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -4099,7 +4123,7 @@
           "team_id": 12,
           "record": "3-7-0",
           "score": 0.0,
-          "projected_score": 105.63,
+          "projected_score": 105.67,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -4260,7 +4284,7 @@
           "team_id": 3,
           "record": "7-3-0",
           "score": 0.0,
-          "projected_score": 105.58,
+          "projected_score": 105.75,
           "roster": [
             {
               "player_key": "470.p.41786",
@@ -4429,7 +4453,7 @@
           "team_id": 2,
           "record": "4-6-0",
           "score": 16.9,
-          "projected_score": 114.55,
+          "projected_score": 114.31,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -4590,7 +4614,7 @@
           "team_id": 9,
           "record": "8-2-0",
           "score": 0.0,
-          "projected_score": 95.88,
+          "projected_score": 96.08,
           "roster": [
             {
               "player_key": "470.p.32671",
