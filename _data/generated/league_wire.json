@@ -1,27 +1,18 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "week": 11,
-  "generated_at": "2026-11-24T04:55:10Z",
+  "week": 12,
+  "generated_at": "2026-11-24T15:36:46Z",
   "coverage_status": "ready",
   "items": [
     {
-      "headline_id": "record:2026-w11-ayahuasca-rush--turnbull-acs:turnbull-acs:weekly-score:record-watch",
-      "category": "Record Watch",
-      "headline": "Record Watch",
-      "detail": "Turnbull AC’s is 8.30 points from the verified Top-25 cutoff.",
-      "week": 11,
-      "source": "normalized_yahoo_and_verified_history",
-      "path": "/records/"
-    },
-    {
-      "headline_id": "week-11:high-score",
-      "category": "Week in Review",
-      "headline": "Turnbull AC’s leads Week 11 scoring",
-      "detail": "The week's current high is 153.90 points.",
-      "week": 11,
+      "headline_id": "week-12:slate",
+      "category": "League Wire",
+      "headline": "Week 12 slate is set",
+      "detail": "Ayahuasca Rush meets Vegas Vandals in the featured matchup.",
+      "week": 12,
       "source": "normalized_yahoo",
-      "path": "/2026/week/11/"
+      "path": "/2026/week/12/"
     }
   ]
 }

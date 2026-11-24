@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "week": 11,
+  "week": 12,
   "teams": [
     {
       "team_key": "470.l.26455.t.1",
@@ -8,8 +8,8 @@
       "team_name": "Van Cortlant Rangers",
       "players": [
         {
-          "player_key": "470.p.7200",
-          "player_name": "Aaron Rodgers",
+          "player_key": "470.p.9265",
+          "player_name": "Matthew Stafford",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "QB",
@@ -40,8 +40,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.42630",
-          "player_name": "Jordyn Tyson",
+          "player_key": "470.p.42693",
+          "player_name": "Antonio Williams",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "WR",
@@ -64,8 +64,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.9265",
-          "player_name": "Matthew Stafford",
+          "player_key": "470.p.42630",
+          "player_name": "Jordyn Tyson",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -82,14 +82,6 @@
         {
           "player_key": "470.p.40908",
           "player_name": "Ladd McConkey",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.42693",
-          "player_name": "Antonio Williams",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -167,16 +159,16 @@
           "status": null
         },
         {
-          "player_key": "470.p.31896",
-          "player_name": "DK Metcalf",
+          "player_key": "470.p.40915",
+          "player_name": "Adonai Mitchell",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "WR",
           "status": null
         },
         {
-          "player_key": "470.p.40915",
-          "player_name": "Adonai Mitchell",
+          "player_key": "470.p.42697",
+          "player_name": "Caleb Douglas",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "WR",
@@ -199,8 +191,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.42697",
-          "player_name": "Caleb Douglas",
+          "player_key": "470.p.31896",
+          "player_name": "DK Metcalf",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -437,8 +429,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.31868",
-          "player_name": "Deebo Samuel Sr.",
+          "player_key": "470.p.42646",
+          "player_name": "KC Concepcion Jr.",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "WR",
@@ -461,16 +453,16 @@
           "status": null
         },
         {
-          "player_key": "470.p.28592",
-          "player_name": "Darren Waller",
+          "player_key": "470.p.31868",
+          "player_name": "Deebo Samuel Sr.",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
           "status": null
         },
         {
-          "player_key": "470.p.42646",
-          "player_name": "KC Concepcion Jr.",
+          "player_key": "470.p.28592",
+          "player_name": "Darren Waller",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -518,7 +510,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Bills",
+          "player_name": "Broncos",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -526,7 +518,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Broncos",
+          "player_name": "Bills",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
