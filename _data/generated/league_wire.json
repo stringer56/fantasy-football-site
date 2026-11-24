@@ -2,14 +2,23 @@
   "schema_version": 1,
   "season": 2026,
   "week": 11,
-  "generated_at": "2026-11-23T20:15:47Z",
+  "generated_at": "2026-11-24T04:55:10Z",
   "coverage_status": "ready",
   "items": [
+    {
+      "headline_id": "record:2026-w11-ayahuasca-rush--turnbull-acs:turnbull-acs:weekly-score:record-watch",
+      "category": "Record Watch",
+      "headline": "Record Watch",
+      "detail": "Turnbull AC’s is 8.30 points from the verified Top-25 cutoff.",
+      "week": 11,
+      "source": "normalized_yahoo_and_verified_history",
+      "path": "/records/"
+    },
     {
       "headline_id": "week-11:high-score",
       "category": "Week in Review",
       "headline": "Turnbull AC’s leads Week 11 scoring",
-      "detail": "The week's current high is 138.80 points.",
+      "detail": "The week's current high is 153.90 points.",
       "week": 11,
       "source": "normalized_yahoo",
       "path": "/2026/week/11/"

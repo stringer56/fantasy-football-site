@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 11,
-  "generated_at": "2026-11-23T20:15:47Z",
+  "generated_at": "2026-11-24T04:55:10Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-23T20:15:47Z",
+    "source_updated_at": "2026-11-24T04:55:10Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -322,8 +322,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "4-5-1",
-          "score": 91.08,
-          "projected_score": 104.64,
+          "score": 97.18,
+          "projected_score": 97.18,
           "roster": [
             {
               "player_key": "470.p.7200",
@@ -659,8 +659,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "7-3-0",
-          "score": 73.02,
-          "projected_score": 92.13,
+          "score": 78.62,
+          "projected_score": 78.62,
           "roster": [
             {
               "player_key": "470.p.41786",
@@ -804,8 +804,8 @@
           "team_key": "470.l.26455.t.11",
           "team_id": 11,
           "record": "5-5-0",
-          "score": 138.8,
-          "projected_score": 158.04,
+          "score": 153.9,
+          "projected_score": 153.9,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -996,8 +996,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "4-6-0",
-          "score": 87.56,
-          "projected_score": 94.22,
+          "score": 97.76,
+          "projected_score": 97.76,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1479,7 +1479,7 @@
           "team_id": 8,
           "record": "4-5-1",
           "score": 127.2,
-          "projected_score": 134.56,
+          "projected_score": 127.2,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -1670,8 +1670,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "5-5-0",
-          "score": 75.7,
-          "projected_score": 107.42,
+          "score": 106.76,
+          "projected_score": 106.76,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -2015,8 +2015,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "8-2-0",
-          "score": 42.1,
-          "projected_score": 82.38,
+          "score": 75.3,
+          "projected_score": 75.3,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2152,8 +2152,8 @@
           "team_key": "470.l.26455.t.12",
           "team_id": 12,
           "record": "3-7-0",
-          "score": 109.8,
-          "projected_score": 121.33,
+          "score": 116.8,
+          "projected_score": 116.8,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -2327,34 +2327,34 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 138.8,
+      "value": 153.9,
       "franchise_id": "turnbull-acs",
       "display_name": "Turnbull AC’s"
     },
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 42.1,
+      "value": 75.3,
       "franchise_id": "north-town-ninnyhammers",
       "display_name": "North town Ninnyhammers"
     },
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 213.0,
-      "matchup_id": "2026-w11-crazy-wazs-team--new-jersey-giants"
+      "value": 232.52,
+      "matchup_id": "2026-w11-ayahuasca-rush--turnbull-acs"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 67.7,
-      "matchup_id": "2026-w11-north-town-ninnyhammers--vegas-vandals"
+      "value": 75.28,
+      "matchup_id": "2026-w11-ayahuasca-rush--turnbull-acs"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 11.78,
-      "matchup_id": "2026-w11-albany-kneelers--van-cortlant-rangers"
+      "value": 2.68,
+      "matchup_id": "2026-w11-baseball-furies--buffalo-bravado"
     },
     {
       "fact_id": "longest-active-streak",
@@ -2365,7 +2365,20 @@
       "display_name": "North town Ninnyhammers"
     }
   ],
-  "record_watch": [],
+  "record_watch": [
+    {
+      "event_id": "2026-w11-ayahuasca-rush--turnbull-acs:turnbull-acs:weekly-score:record-watch",
+      "type": "weekly_score",
+      "level": "Record Watch",
+      "final": false,
+      "franchise_id": "turnbull-acs",
+      "display_name": "Turnbull AC’s",
+      "value": 153.9,
+      "threshold": 162.2,
+      "difference": 8.3,
+      "message": "Turnbull AC’s is 8.30 points from the verified Top-25 cutoff."
+    }
+  ],
   "power_rankings": {
     "status": "unavailable",
     "voting_status": "unconfigured",
