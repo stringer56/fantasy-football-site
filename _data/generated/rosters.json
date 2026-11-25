@@ -191,6 +191,14 @@
           "status": null
         },
         {
+          "player_key": "470.p.31856",
+          "player_name": "Josh Jacobs",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
           "player_key": "470.p.31896",
           "player_name": "DK Metcalf",
           "nfl_team": null,
@@ -228,14 +236,6 @@
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
-          "status": null
-        },
-        {
-          "player_key": "470.p.31856",
-          "player_name": "Josh Jacobs",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "IR",
           "status": null
         },
         {
@@ -937,8 +937,8 @@
       "team_name": "New Jersey Giants",
       "players": [
         {
-          "player_key": "470.p.40875",
-          "player_name": "Bo Nix",
+          "player_key": "470.p.30125",
+          "player_name": "Deshaun Watson",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "QB",
@@ -993,16 +993,16 @@
           "status": null
         },
         {
-          "player_key": "470.p.34047",
-          "player_name": "Rachaad White",
+          "player_key": "470.p.40875",
+          "player_name": "Bo Nix",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
           "status": null
         },
         {
-          "player_key": "470.p.34357",
-          "player_name": "Bam Knight",
+          "player_key": "470.p.34047",
+          "player_name": "Rachaad White",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -1019,6 +1019,14 @@
         {
           "player_key": "470.p.41823",
           "player_name": "TreVeyon Henderson",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.41843",
+          "player_name": "Jack Bech",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -1042,7 +1050,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Rams",
+          "player_name": "Giants",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
@@ -1050,7 +1058,7 @@
         },
         {
           "player_key": null,
-          "player_name": "Lions",
+          "player_name": "Rams",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -1080,8 +1088,8 @@
           "status": null
         },
         {
-          "player_key": "470.p.33996",
-          "player_name": "Kenneth Walker III",
+          "player_key": "470.p.42654",
+          "player_name": "Jadarian Price",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "RB",
@@ -1096,19 +1104,11 @@
           "status": null
         },
         {
-          "player_key": "470.p.33394",
-          "player_name": "Jaylen Waddle",
+          "player_key": "470.p.40041",
+          "player_name": "Jaxon Smith-Njigba",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "WR",
-          "status": null
-        },
-        {
-          "player_key": "470.p.34095",
-          "player_name": "Isaiah Likely",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "TE",
           "status": null
         },
         {
@@ -1116,15 +1116,7 @@
           "player_name": "George Kittle",
           "nfl_team": null,
           "primary_position": null,
-          "selected_position": "W/R/T",
-          "status": null
-        },
-        {
-          "player_key": "470.p.40041",
-          "player_name": "Jaxon Smith-Njigba",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
+          "selected_position": "TE",
           "status": null
         },
         {
@@ -1132,12 +1124,28 @@
           "player_name": "Matthew Golden",
           "nfl_team": null,
           "primary_position": null,
+          "selected_position": "W/R/T",
+          "status": null
+        },
+        {
+          "player_key": "470.p.34095",
+          "player_name": "Isaiah Likely",
+          "nfl_team": null,
+          "primary_position": null,
           "selected_position": "BN",
           "status": null
         },
         {
-          "player_key": "470.p.42654",
-          "player_name": "Jadarian Price",
+          "player_key": "470.p.33394",
+          "player_name": "Jaylen Waddle",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
+          "status": null
+        },
+        {
+          "player_key": "470.p.33996",
+          "player_name": "Kenneth Walker III",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -1390,16 +1398,16 @@
           "status": null
         },
         {
-          "player_key": "470.p.32725",
-          "player_name": "J.K. Dobbins",
+          "player_key": "470.p.41804",
+          "player_name": "Emeka Egbuka",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
           "status": null
         },
         {
-          "player_key": "470.p.41804",
-          "player_name": "Emeka Egbuka",
+          "player_key": "470.p.42010",
+          "player_name": "Jacory Croskey-Merritt",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "BN",
@@ -1422,19 +1430,19 @@
           "status": null
         },
         {
-          "player_key": "470.p.32417",
-          "player_name": "Chase McLaughlin",
-          "nfl_team": null,
-          "primary_position": null,
-          "selected_position": "BN",
-          "status": null
-        },
-        {
           "player_key": null,
           "player_name": "Steelers",
           "nfl_team": null,
           "primary_position": null,
           "selected_position": "DEF",
+          "status": null
+        },
+        {
+          "player_key": null,
+          "player_name": "Buccaneers",
+          "nfl_team": null,
+          "primary_position": null,
+          "selected_position": "BN",
           "status": null
         }
       ]
