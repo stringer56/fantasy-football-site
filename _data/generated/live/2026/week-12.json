@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 12,
-  "generated_at": "2026-11-24T15:36:46Z",
+  "generated_at": "2026-11-25T00:08:39Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-24T15:36:46Z",
+    "source_updated_at": "2026-11-25T00:08:39Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "5-6-0",
           "score": 0.0,
-          "projected_score": 106.58,
+          "projected_score": 106.12,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -460,7 +460,7 @@
           "team_id": 11,
           "record": "6-5-0",
           "score": 0.0,
-          "projected_score": 114.39,
+          "projected_score": 118.45,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -652,7 +652,7 @@
           "team_id": 3,
           "record": "7-4-0",
           "score": 0.0,
-          "projected_score": 99.36,
+          "projected_score": 98.81,
           "roster": [
             {
               "player_key": "470.p.41786",
@@ -797,7 +797,7 @@
           "team_id": 12,
           "record": "4-7-0",
           "score": 0.0,
-          "projected_score": 104.92,
+          "projected_score": 108.86,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -989,7 +989,7 @@
           "team_id": 7,
           "record": "8-3-0",
           "score": 0.0,
-          "projected_score": 124.71,
+          "projected_score": 128.46,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -1134,7 +1134,7 @@
           "team_id": 10,
           "record": "3-8-0",
           "score": 0.0,
-          "projected_score": 95.01,
+          "projected_score": 97.84,
           "roster": [
             {
               "player_key": "470.p.26662",
@@ -1326,7 +1326,7 @@
           "team_id": 1,
           "record": "4-6-1",
           "score": 0.0,
-          "projected_score": 100.01,
+          "projected_score": 105.92,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1463,7 +1463,7 @@
           "team_id": 4,
           "record": "4-7-0",
           "score": 0.0,
-          "projected_score": 113.95,
+          "projected_score": 113.24,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1663,7 +1663,7 @@
           "team_id": 5,
           "record": "6-5-0",
           "score": 0.0,
-          "projected_score": 106.99,
+          "projected_score": 109.85,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1808,7 +1808,7 @@
           "team_id": 9,
           "record": "8-3-0",
           "score": 0.0,
-          "projected_score": 114.99,
+          "projected_score": 117.66,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2000,7 +2000,7 @@
           "team_id": 6,
           "record": "5-6-0",
           "score": 0.0,
-          "projected_score": 115.7,
+          "projected_score": 121.77,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -2051,24 +2051,24 @@
               "status": null
             },
             {
-              "player_key": "470.p.41904",
-              "player_name": "Elic Ayomanor",
+              "player_key": "470.p.40075",
+              "player_name": "Zach Charbonnet",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
               "status": null
             },
             {
-              "player_key": "470.p.40114",
-              "player_name": "Tre Tucker",
+              "player_key": "470.p.41904",
+              "player_name": "Elic Ayomanor",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
               "status": null
             },
             {
-              "player_key": "470.p.40075",
-              "player_name": "Zach Charbonnet",
+              "player_key": "470.p.40114",
+              "player_name": "Tre Tucker",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2145,7 +2145,7 @@
           "team_id": 8,
           "record": "5-5-1",
           "score": 0.0,
-          "projected_score": 101.03,
+          "projected_score": 114.68,
           "roster": [
             {
               "player_key": "470.p.40875",
@@ -2156,16 +2156,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.34047",
-              "player_name": "Rachaad White",
+              "player_key": "470.p.42730",
+              "player_name": "Jonah Coleman",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
               "status": null
             },
             {
-              "player_key": "470.p.42730",
-              "player_name": "Jonah Coleman",
+              "player_key": "470.p.40055",
+              "player_name": "Bijan Robinson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
@@ -2204,6 +2204,14 @@
               "status": null
             },
             {
+              "player_key": "470.p.34047",
+              "player_name": "Rachaad White",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
               "player_key": "470.p.34357",
               "player_name": "Bam Knight",
               "nfl_team": null,
@@ -2214,14 +2222,6 @@
             {
               "player_key": "470.p.33443",
               "player_name": "Pat Freiermuth",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40055",
-              "player_name": "Bijan Robinson",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -2253,7 +2253,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Lions",
+              "player_name": "Rams",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -2261,7 +2261,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Rams",
+              "player_name": "Lions",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
