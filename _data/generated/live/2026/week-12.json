@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 12,
-  "generated_at": "2026-11-26T02:05:48Z",
+  "generated_at": "2026-11-26T10:56:02Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-26T02:05:48Z",
+    "source_updated_at": "2026-11-26T10:56:02Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "5-6-0",
           "score": 0.0,
-          "projected_score": 106.76,
+          "projected_score": 106.75,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -468,7 +468,7 @@
           "team_id": 11,
           "record": "6-5-0",
           "score": 0.0,
-          "projected_score": 118.89,
+          "projected_score": 119.08,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "7-4-0",
           "score": 0.0,
-          "projected_score": 97.92,
+          "projected_score": 97.98,
           "roster": [
             {
               "player_key": "470.p.41786",
@@ -805,7 +805,7 @@
           "team_id": 12,
           "record": "4-7-0",
           "score": 0.0,
-          "projected_score": 110.43,
+          "projected_score": 110.31,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -997,7 +997,7 @@
           "team_id": 7,
           "record": "8-3-0",
           "score": 0.0,
-          "projected_score": 127.21,
+          "projected_score": 127.5,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -1141,8 +1141,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "3-8-0",
-          "score": 1.4,
-          "projected_score": 108.92,
+          "score": 27.5,
+          "projected_score": 126.91,
           "roster": [
             {
               "player_key": "470.p.30973",
@@ -1333,8 +1333,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "4-6-1",
-          "score": 3.48,
-          "projected_score": 111.43,
+          "score": 4.6,
+          "projected_score": 101.27,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1471,7 +1471,7 @@
           "team_id": 4,
           "record": "4-7-0",
           "score": 0.0,
-          "projected_score": 111.26,
+          "projected_score": 111.12,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1671,7 +1671,7 @@
           "team_id": 5,
           "record": "6-5-0",
           "score": 0.0,
-          "projected_score": 109.91,
+          "projected_score": 110.11,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1816,7 +1816,7 @@
           "team_id": 9,
           "record": "8-3-0",
           "score": 4.4,
-          "projected_score": 118.58,
+          "projected_score": 108.96,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2008,7 +2008,7 @@
           "team_id": 6,
           "record": "5-6-0",
           "score": 0.0,
-          "projected_score": 120.98,
+          "projected_score": 123.71,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -2067,14 +2067,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.41904",
-              "player_name": "Elic Ayomanor",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.40114",
               "player_name": "Tre Tucker",
               "nfl_team": null,
@@ -2107,16 +2099,24 @@
               "status": null
             },
             {
-              "player_key": "470.p.34008",
-              "player_name": "Alec Pierce",
+              "player_key": "470.p.32704",
+              "player_name": "Michael Pittman Jr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
               "status": null
             },
             {
-              "player_key": "470.p.32704",
-              "player_name": "Michael Pittman Jr.",
+              "player_key": "470.p.42706",
+              "player_name": "Ted Hurst III",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34008",
+              "player_name": "Alec Pierce",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "IR",
@@ -2132,7 +2132,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Bears",
+              "player_name": "Commanders",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -2153,7 +2153,7 @@
           "team_id": 8,
           "record": "5-5-1",
           "score": 0.0,
-          "projected_score": 120.9,
+          "projected_score": 120.91,
           "roster": [
             {
               "player_key": "470.p.30125",
@@ -2335,9 +2335,9 @@
     {
       "fact_id": "highest-score",
       "label": "Highest score",
-      "value": 4.4,
-      "franchise_id": "north-town-ninnyhammers",
-      "display_name": "North town Ninnyhammers"
+      "value": 27.5,
+      "franchise_id": "baseball-furies",
+      "display_name": "The Baseball Furies"
     },
     {
       "fact_id": "lowest-score",
@@ -2349,20 +2349,20 @@
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 4.4,
-      "matchup_id": "2026-w12-crazy-wazs-team--north-town-ninnyhammers"
+      "value": 27.5,
+      "matchup_id": "2026-w12-baseball-furies--maine-moose"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 4.4,
-      "matchup_id": "2026-w12-crazy-wazs-team--north-town-ninnyhammers"
+      "value": 27.5,
+      "matchup_id": "2026-w12-baseball-furies--maine-moose"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 1.4,
-      "matchup_id": "2026-w12-baseball-furies--maine-moose"
+      "value": 4.4,
+      "matchup_id": "2026-w12-crazy-wazs-team--north-town-ninnyhammers"
     },
     {
       "fact_id": "longest-active-streak",
