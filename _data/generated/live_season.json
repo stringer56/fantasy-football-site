@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "season": 2026,
-  "generated_at": "2026-11-25T18:51:23Z",
+  "generated_at": "2026-11-26T02:05:48Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-25T18:51:23Z",
+    "source_updated_at": "2026-11-26T02:05:48Z",
     "label": "Updated from Yahoo"
   },
   "source": {
@@ -46,7 +46,7 @@
     "end_date": null,
     "is_finished": false,
     "league_logo_url": null,
-    "source_update_timestamp": "2026-11-25T18:51:23Z"
+    "source_update_timestamp": "2026-11-26T02:05:48Z"
   },
   "standings": [
     {
@@ -342,8 +342,8 @@
     {
       "matchup_id": "2026-w12-albany-kneelers--turnbull-acs",
       "week": 12,
-      "status": "upcoming",
-      "status_label": "Upcoming",
+      "status": "live",
+      "status_label": "In Progress",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -362,7 +362,7 @@
           "team_id": 2,
           "record": "5-6-0",
           "score": 0.0,
-          "projected_score": 106.82,
+          "projected_score": 106.76,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -421,14 +421,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.31856",
-              "player_name": "Josh Jacobs",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.31896",
               "player_name": "DK Metcalf",
               "nfl_team": null,
@@ -469,6 +461,22 @@
               "status": null
             },
             {
+              "player_key": "470.p.42035",
+              "player_name": "Konata Mumpfield",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31856",
+              "player_name": "Josh Jacobs",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "IR",
+              "status": null
+            },
+            {
               "player_key": "470.p.41499",
               "player_name": "Spencer Shrader",
               "nfl_team": null,
@@ -499,7 +507,7 @@
           "team_id": 11,
           "record": "6-5-0",
           "score": 0.0,
-          "projected_score": 117.87,
+          "projected_score": 118.89,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -607,7 +615,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Steelers",
+              "player_name": "Buccaneers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -615,7 +623,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Buccaneers",
+              "player_name": "Steelers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -671,8 +679,8 @@
     {
       "matchup_id": "2026-w12-ayahuasca-rush--vegas-vandals",
       "week": 12,
-      "status": "upcoming",
-      "status_label": "Upcoming",
+      "status": "live",
+      "status_label": "In Progress",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -691,7 +699,7 @@
           "team_id": 3,
           "record": "7-4-0",
           "score": 0.0,
-          "projected_score": 98.47,
+          "projected_score": 97.92,
           "roster": [
             {
               "player_key": "470.p.41786",
@@ -836,7 +844,7 @@
           "team_id": 12,
           "record": "4-7-0",
           "score": 0.0,
-          "projected_score": 110.24,
+          "projected_score": 110.43,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -1008,8 +1016,8 @@
     {
       "matchup_id": "2026-w12-baseball-furies--maine-moose",
       "week": 12,
-      "status": "upcoming",
-      "status_label": "Upcoming",
+      "status": "live",
+      "status_label": "In Progress",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -1028,7 +1036,7 @@
           "team_id": 7,
           "record": "8-3-0",
           "score": 0.0,
-          "projected_score": 128.34,
+          "projected_score": 127.21,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -1172,12 +1180,12 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "3-8-0",
-          "score": 0.0,
-          "projected_score": 98.58,
+          "score": 1.4,
+          "projected_score": 108.92,
           "roster": [
             {
-              "player_key": "470.p.26662",
-              "player_name": "Geno Smith",
+              "player_key": "470.p.30973",
+              "player_name": "Sam Darnold",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -1208,19 +1216,27 @@
               "status": null
             },
             {
-              "player_key": "470.p.41293",
-              "player_name": "Jalen Coker",
+              "player_key": "470.p.33963",
+              "player_name": "Drake London",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.41371",
-              "player_name": "Brevyn Spann-Ford",
+              "player_key": "470.p.41877",
+              "player_name": "Harold Fannin Jr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "TE",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40962",
+              "player_name": "Blake Corum",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
               "status": null
             },
             {
@@ -1228,12 +1244,28 @@
               "player_name": "Mike Washington Jr.",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "W/R/T",
+              "selected_position": "BN",
               "status": null
             },
             {
-              "player_key": "470.p.41877",
-              "player_name": "Harold Fannin Jr.",
+              "player_key": "470.p.41293",
+              "player_name": "Jalen Coker",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41371",
+              "player_name": "Brevyn Spann-Ford",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.26662",
+              "player_name": "Geno Smith",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1242,30 +1274,6 @@
             {
               "player_key": "470.p.40881",
               "player_name": "Drake Maye",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40962",
-              "player_name": "Blake Corum",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.33963",
-              "player_name": "Drake London",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.30973",
-              "player_name": "Sam Darnold",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1345,8 +1353,8 @@
     {
       "matchup_id": "2026-w12-buffalo-bravado--van-cortlant-rangers",
       "week": 12,
-      "status": "upcoming",
-      "status_label": "Upcoming",
+      "status": "live",
+      "status_label": "In Progress",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -1364,8 +1372,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "4-6-1",
-          "score": 0.0,
-          "projected_score": 112.7,
+          "score": 3.48,
+          "projected_score": 111.43,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1502,7 +1510,7 @@
           "team_id": 4,
           "record": "4-7-0",
           "score": 0.0,
-          "projected_score": 111.5,
+          "projected_score": 111.26,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1682,8 +1690,8 @@
     {
       "matchup_id": "2026-w12-crazy-wazs-team--north-town-ninnyhammers",
       "week": 12,
-      "status": "upcoming",
-      "status_label": "Upcoming",
+      "status": "live",
+      "status_label": "In Progress",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -1702,7 +1710,7 @@
           "team_id": 5,
           "record": "6-5-0",
           "score": 0.0,
-          "projected_score": 110.29,
+          "projected_score": 109.91,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1846,8 +1854,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "8-3-0",
-          "score": 0.0,
-          "projected_score": 118.6,
+          "score": 4.4,
+          "projected_score": 118.58,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2019,8 +2027,8 @@
     {
       "matchup_id": "2026-w12-greendale-human-beings--new-jersey-giants",
       "week": 12,
-      "status": "upcoming",
-      "status_label": "Upcoming",
+      "status": "live",
+      "status_label": "In Progress",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -2039,7 +2047,7 @@
           "team_id": 6,
           "record": "5-6-0",
           "score": 0.0,
-          "projected_score": 121.25,
+          "projected_score": 120.98,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -2184,7 +2192,7 @@
           "team_id": 8,
           "record": "5-5-1",
           "score": 0.0,
-          "projected_score": 120.48,
+          "projected_score": 120.9,
           "roster": [
             {
               "player_key": "470.p.30125",
@@ -2365,8 +2373,8 @@
   "featured_matchup": {
     "matchup_id": "2026-w12-greendale-human-beings--new-jersey-giants",
     "week": 12,
-    "status": "upcoming",
-    "status_label": "Upcoming",
+    "status": "live",
+    "status_label": "In Progress",
     "is_playoffs": false,
     "is_consolation": false,
     "is_tied": false,
@@ -2385,7 +2393,7 @@
         "team_id": 6,
         "record": "5-6-0",
         "score": 0.0,
-        "projected_score": 121.25,
+        "projected_score": 120.98,
         "roster": [
           {
             "player_key": "470.p.40896",
@@ -2530,7 +2538,7 @@
         "team_id": 8,
         "record": "5-5-1",
         "score": 0.0,
-        "projected_score": 120.48,
+        "projected_score": 120.9,
         "roster": [
           {
             "player_key": "470.p.30125",
@@ -2707,14 +2715,55 @@
       }
     }
   },
-  "weekly_facts": [],
+  "weekly_facts": [
+    {
+      "fact_id": "highest-score",
+      "label": "Highest score",
+      "value": 4.4,
+      "franchise_id": "north-town-ninnyhammers",
+      "display_name": "North town Ninnyhammers"
+    },
+    {
+      "fact_id": "lowest-score",
+      "label": "Lowest score",
+      "value": 0.0,
+      "franchise_id": "buffalo-bravado",
+      "display_name": "Buffalo Bravados"
+    },
+    {
+      "fact_id": "highest-combined",
+      "label": "Highest combined score",
+      "value": 4.4,
+      "matchup_id": "2026-w12-crazy-wazs-team--north-town-ninnyhammers"
+    },
+    {
+      "fact_id": "biggest-win",
+      "label": "Biggest lead",
+      "value": 4.4,
+      "matchup_id": "2026-w12-crazy-wazs-team--north-town-ninnyhammers"
+    },
+    {
+      "fact_id": "closest-game",
+      "label": "Closest game",
+      "value": 1.4,
+      "matchup_id": "2026-w12-baseball-furies--maine-moose"
+    },
+    {
+      "fact_id": "longest-active-streak",
+      "label": "Longest active streak",
+      "value": 5,
+      "streak_type": "win",
+      "franchise_id": "maine-moose",
+      "display_name": "Maine Moose"
+    }
+  ],
   "record_watch": [],
   "league_wire": [
     {
-      "headline_id": "week-12:slate",
-      "category": "League Wire",
-      "headline": "Week 12 slate is set",
-      "detail": "Greendale Human Beings meets New Jersey Giants in the featured matchup.",
+      "headline_id": "week-12:high-score",
+      "category": "Week in Review",
+      "headline": "North town Ninnyhammers leads Week 12 scoring",
+      "detail": "The week's current high is 4.40 points.",
       "week": 12,
       "source": "normalized_yahoo",
       "path": "/2026/week/12/"
@@ -2738,13 +2787,149 @@
         "type": "win",
         "value": 1
       },
-      "current_matchup": null,
-      "next_opponent": {
-        "franchise_id": "turnbull-acs",
-        "display_name": "Turnbull AC’s",
-        "path": "/teams/turnbull-acs/",
+      "current_matchup": {
+        "matchup_id": "2026-w12-albany-kneelers--turnbull-acs",
+        "status": "live",
+        "opponent": {
+          "franchise_id": "turnbull-acs",
+          "display_name": "Turnbull AC’s",
+          "canonical_name": "Turnbull AC's",
+          "short_name": "Turnbull",
+          "path": "/teams/turnbull-acs/",
+          "identity_image": "/assets/img/franchises/turnbull-acs/helmet-2026.png",
+          "identity_alt": "Turnbull AC's commissioner-approved 3D football helmet",
+          "primary_color": "#7e22ce",
+          "team_key": "470.l.26455.t.11",
+          "team_id": 11,
+          "record": "6-5-0",
+          "score": 0.0,
+          "projected_score": 118.89,
+          "roster": [
+            {
+              "player_key": "470.p.29369",
+              "player_name": "Dak Prescott",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "QB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41791",
+              "player_name": "Ashton Jeanty",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33991",
+              "player_name": "Breece Hall",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.32687",
+              "player_name": "CeeDee Lamb",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41824",
+              "player_name": "Luther Burden III",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34099",
+              "player_name": "Chig Okonkwo",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "TE",
+              "status": null
+            },
+            {
+              "player_key": "470.p.28534",
+              "player_name": "Stefon Diggs",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34218",
+              "player_name": "Brock Purdy",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42669",
+              "player_name": "Germie Bernard",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41804",
+              "player_name": "Emeka Egbuka",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42010",
+              "player_name": "Jacory Croskey-Merritt",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40048",
+              "player_name": "Dalton Kincaid",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "IR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41062",
+              "player_name": "Cam Little",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "K",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Buccaneers",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "DEF",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Steelers",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            }
+          ]
+        },
         "week": 12
-      }
+      },
+      "next_opponent": null
     },
     {
       "franchise_id": "ayahuasca-rush",
@@ -2763,13 +2948,149 @@
         "type": "loss",
         "value": 2
       },
-      "current_matchup": null,
-      "next_opponent": {
-        "franchise_id": "vegas-vandals",
-        "display_name": "Vegas Vandals",
-        "path": "/teams/vegas-vandals/",
+      "current_matchup": {
+        "matchup_id": "2026-w12-ayahuasca-rush--vegas-vandals",
+        "status": "live",
+        "opponent": {
+          "franchise_id": "vegas-vandals",
+          "display_name": "Vegas Vandals",
+          "canonical_name": "Vegas Vandals",
+          "short_name": "Vandals",
+          "path": "/teams/vegas-vandals/",
+          "identity_image": "/assets/img/franchises/vegas-vandals/helmet-2026.png",
+          "identity_alt": "Vegas Vandals commissioner-approved 3D football helmet",
+          "primary_color": "#991b1b",
+          "team_key": "470.l.26455.t.12",
+          "team_id": 12,
+          "record": "4-7-0",
+          "score": 0.0,
+          "projected_score": 110.43,
+          "roster": [
+            {
+              "player_key": "470.p.25812",
+              "player_name": "Kirk Cousins",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "QB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33514",
+              "player_name": "Chuba Hubbard",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.30972",
+              "player_name": "Saquon Barkley",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33966",
+              "player_name": "Chris Olave",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.27535",
+              "player_name": "Mike Evans",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31840",
+              "player_name": "T.J. Hockenson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "TE",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41807",
+              "player_name": "Omarion Hampton",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40981",
+              "player_name": "Braelon Allen",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33113",
+              "player_name": "Juwan Johnson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42652",
+              "player_name": "Omar Cooper Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40901",
+              "player_name": "Rome Odunze",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.32676",
+              "player_name": "Justin Herbert",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42025",
+              "player_name": "Kyle Monangai",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40835",
+              "player_name": "Jake Bates",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "K",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Bengals",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "DEF",
+              "status": null
+            }
+          ]
+        },
         "week": 12
-      }
+      },
+      "next_opponent": null
     },
     {
       "franchise_id": "baseball-furies",
@@ -2788,13 +3109,157 @@
         "type": "win",
         "value": 1
       },
-      "current_matchup": null,
-      "next_opponent": {
-        "franchise_id": "maine-moose",
-        "display_name": "Maine Moose",
-        "path": "/teams/maine-moose/",
+      "current_matchup": {
+        "matchup_id": "2026-w12-baseball-furies--maine-moose",
+        "status": "live",
+        "opponent": {
+          "franchise_id": "maine-moose",
+          "display_name": "Maine Moose",
+          "canonical_name": "Maine Moose",
+          "short_name": "Moose",
+          "path": "/teams/maine-moose/",
+          "identity_image": "/assets/img/franchises/maine-moose/helmet-2026.png",
+          "identity_alt": "Maine Moose commissioner-approved 3D football helmet",
+          "primary_color": "#b45309",
+          "team_key": "470.l.26455.t.7",
+          "team_id": 7,
+          "record": "8-3-0",
+          "score": 0.0,
+          "projected_score": 127.21,
+          "roster": [
+            {
+              "player_key": "470.p.40030",
+              "player_name": "C.J. Stroud",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "QB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40059",
+              "player_name": "Jahmyr Gibbs",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41900",
+              "player_name": "Bhayshul Tuten",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34007",
+              "player_name": "George Pickens",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40899",
+              "player_name": "Malik Nabers",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41799",
+              "player_name": "Tyler Warren",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "TE",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31019",
+              "player_name": "Dallas Goedert",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41902",
+              "player_name": "Woody Marks",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33989",
+              "player_name": "Christian Watson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40121",
+              "player_name": "Michael Wilson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40900",
+              "player_name": "Caleb Williams",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40126",
+              "player_name": "Josh Downs",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34107",
+              "player_name": "Tyler Allgeier",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41810",
+              "player_name": "Jaxson Dart",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "IR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.28227",
+              "player_name": "Cairo Santos",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "K",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Jets",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "DEF",
+              "status": null
+            }
+          ]
+        },
         "week": 12
-      }
+      },
+      "next_opponent": null
     },
     {
       "franchise_id": "buffalo-bravado",
@@ -2813,13 +3278,149 @@
         "type": "loss",
         "value": 1
       },
-      "current_matchup": null,
-      "next_opponent": {
-        "franchise_id": "van-cortlant-rangers",
-        "display_name": "Van Cortlant Rangers",
-        "path": "/teams/van-cortlant-rangers/",
+      "current_matchup": {
+        "matchup_id": "2026-w12-buffalo-bravado--van-cortlant-rangers",
+        "status": "live",
+        "opponent": {
+          "franchise_id": "van-cortlant-rangers",
+          "display_name": "Van Cortlant Rangers",
+          "canonical_name": "Van Cortlant Rangers",
+          "short_name": "Rangers",
+          "path": "/teams/van-cortlant-rangers/",
+          "identity_image": "/assets/img/franchises/van-cortlant-rangers/helmet-2026.png",
+          "identity_alt": "Van Cortlant Rangers commissioner-approved 3D football helmet",
+          "primary_color": "#0f4c81",
+          "team_key": "470.l.26455.t.1",
+          "team_id": 1,
+          "record": "4-6-1",
+          "score": 3.48,
+          "projected_score": 111.43,
+          "roster": [
+            {
+              "player_key": "470.p.9265",
+              "player_name": "Matthew Stafford",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "QB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.30121",
+              "player_name": "Christian McCaffrey",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42796",
+              "player_name": "Emmett Johnson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33965",
+              "player_name": "Garrett Wilson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42693",
+              "player_name": "Antonio Williams",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40064",
+              "player_name": "Sam LaPorta",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "TE",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40196",
+              "player_name": "Chase Brown",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42630",
+              "player_name": "Jordyn Tyson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41058",
+              "player_name": "Malik Washington",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40908",
+              "player_name": "Ladd McConkey",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41907",
+              "player_name": "Dylan Sampson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40097",
+              "player_name": "Tank Dell",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.27581",
+              "player_name": "Davante Adams",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "IR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31199",
+              "player_name": "Jason Sanders",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "K",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Chiefs",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "DEF",
+              "status": null
+            }
+          ]
+        },
         "week": 12
-      }
+      },
+      "next_opponent": null
     },
     {
       "franchise_id": "crazy-wazs-team",
@@ -2838,13 +3439,149 @@
         "type": "loss",
         "value": 2
       },
-      "current_matchup": null,
-      "next_opponent": {
-        "franchise_id": "north-town-ninnyhammers",
-        "display_name": "North town Ninnyhammers",
-        "path": "/teams/north-town-ninnyhammers/",
+      "current_matchup": {
+        "matchup_id": "2026-w12-crazy-wazs-team--north-town-ninnyhammers",
+        "status": "live",
+        "opponent": {
+          "franchise_id": "north-town-ninnyhammers",
+          "display_name": "North town Ninnyhammers",
+          "canonical_name": "North Town Ninnyhammers",
+          "short_name": "Ninnyhammers",
+          "path": "/teams/north-town-ninnyhammers/",
+          "identity_image": "/assets/img/franchises/north-town-ninnyhammers/helmet-2026.png",
+          "identity_alt": "North Town Ninnyhammers commissioner-approved 3D football helmet",
+          "primary_color": "#dc2626",
+          "team_key": "470.l.26455.t.9",
+          "team_id": 9,
+          "record": "8-3-0",
+          "score": 4.4,
+          "projected_score": 118.58,
+          "roster": [
+            {
+              "player_key": "470.p.32671",
+              "player_name": "Joe Burrow",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "QB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40231",
+              "player_name": "Chris Rodriguez Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42654",
+              "player_name": "Jadarian Price",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.32703",
+              "player_name": "Tee Higgins",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40041",
+              "player_name": "Jaxon Smith-Njigba",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.30259",
+              "player_name": "George Kittle",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "TE",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41808",
+              "player_name": "Matthew Golden",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34095",
+              "player_name": "Isaiah Likely",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33394",
+              "player_name": "Jaylen Waddle",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33996",
+              "player_name": "Kenneth Walker III",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33389",
+              "player_name": "Trevor Lawrence",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.29235",
+              "player_name": "Jared Goff",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42642",
+              "player_name": "Makai Lemon",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31482",
+              "player_name": "Eddy Pineiro",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "K",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Vikings",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "DEF",
+              "status": null
+            }
+          ]
+        },
         "week": 12
-      }
+      },
+      "next_opponent": null
     },
     {
       "franchise_id": "greendale-human-beings",
@@ -2863,13 +3600,157 @@
         "type": "loss",
         "value": 1
       },
-      "current_matchup": null,
-      "next_opponent": {
-        "franchise_id": "new-jersey-giants",
-        "display_name": "New Jersey Giants",
-        "path": "/teams/new-jersey-giants/",
+      "current_matchup": {
+        "matchup_id": "2026-w12-greendale-human-beings--new-jersey-giants",
+        "status": "live",
+        "opponent": {
+          "franchise_id": "new-jersey-giants",
+          "display_name": "New Jersey Giants",
+          "canonical_name": "New Jersey Giants",
+          "short_name": "Giants",
+          "path": "/teams/new-jersey-giants/",
+          "identity_image": "/assets/img/franchises/new-jersey-giants/helmet-2026.png",
+          "identity_alt": "New Jersey Giants commissioner-approved 3D football helmet",
+          "primary_color": "#1d4ed8",
+          "team_key": "470.l.26455.t.8",
+          "team_id": 8,
+          "record": "5-5-1",
+          "score": 0.0,
+          "projected_score": 120.9,
+          "roster": [
+            {
+              "player_key": "470.p.30125",
+              "player_name": "Deshaun Watson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "QB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42730",
+              "player_name": "Jonah Coleman",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40055",
+              "player_name": "Bijan Robinson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33967",
+              "player_name": "Jameson Williams",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33477",
+              "player_name": "Nico Collins",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41795",
+              "player_name": "Colston Loveland",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "TE",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42626",
+              "player_name": "Carnell Tate",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40875",
+              "player_name": "Bo Nix",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34047",
+              "player_name": "Rachaad White",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33443",
+              "player_name": "Pat Freiermuth",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41823",
+              "player_name": "TreVeyon Henderson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41843",
+              "player_name": "Jack Bech",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42625",
+              "player_name": "Jeremiyah Love",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "IR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41093",
+              "player_name": "Will Reichard",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "K",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Giants",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "DEF",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Rams",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            }
+          ]
+        },
         "week": 12
-      }
+      },
+      "next_opponent": null
     },
     {
       "franchise_id": "maine-moose",
@@ -2888,13 +3769,149 @@
         "type": "win",
         "value": 5
       },
-      "current_matchup": null,
-      "next_opponent": {
-        "franchise_id": "baseball-furies",
-        "display_name": "The Baseball Furies",
-        "path": "/teams/baseball-furies/",
+      "current_matchup": {
+        "matchup_id": "2026-w12-baseball-furies--maine-moose",
+        "status": "live",
+        "opponent": {
+          "franchise_id": "baseball-furies",
+          "display_name": "The Baseball Furies",
+          "canonical_name": "The Baseball Furies",
+          "short_name": "Furies",
+          "path": "/teams/baseball-furies/",
+          "identity_image": "/assets/img/franchises/baseball-furies/helmet-2026.jpg",
+          "identity_alt": "Baseball Furies commissioner-approved 3D football helmet",
+          "primary_color": "#155e75",
+          "team_key": "470.l.26455.t.10",
+          "team_id": 10,
+          "record": "3-8-0",
+          "score": 1.4,
+          "projected_score": 108.92,
+          "roster": [
+            {
+              "player_key": "470.p.30973",
+              "player_name": "Sam Darnold",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "QB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.32711",
+              "player_name": "Jonathan Taylor",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33413",
+              "player_name": "Travis Etienne Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40234",
+              "player_name": "Parker Washington",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33963",
+              "player_name": "Drake London",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41877",
+              "player_name": "Harold Fannin Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "TE",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40962",
+              "player_name": "Blake Corum",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42744",
+              "player_name": "Mike Washington Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41293",
+              "player_name": "Jalen Coker",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41371",
+              "player_name": "Brevyn Spann-Ford",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.26662",
+              "player_name": "Geno Smith",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40881",
+              "player_name": "Drake Maye",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.30346",
+              "player_name": "Harrison Butker",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "K",
+              "status": null
+            },
+            {
+              "player_key": "470.p.28378",
+              "player_name": "Jason Myers",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Texans",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "DEF",
+              "status": null
+            }
+          ]
+        },
         "week": 12
-      }
+      },
+      "next_opponent": null
     },
     {
       "franchise_id": "new-jersey-giants",
@@ -2913,13 +3930,157 @@
         "type": "win",
         "value": 2
       },
-      "current_matchup": null,
-      "next_opponent": {
-        "franchise_id": "greendale-human-beings",
-        "display_name": "Greendale Human Beings",
-        "path": "/teams/greendale-human-beings/",
+      "current_matchup": {
+        "matchup_id": "2026-w12-greendale-human-beings--new-jersey-giants",
+        "status": "live",
+        "opponent": {
+          "franchise_id": "greendale-human-beings",
+          "display_name": "Greendale Human Beings",
+          "canonical_name": "Greendale Human Beings",
+          "short_name": "Human Beings",
+          "path": "/teams/greendale-human-beings/",
+          "identity_image": "/assets/img/franchises/greendale-human-beings/helmet-2026.png",
+          "identity_alt": "Greendale Human Beings blue 3D football helmet with the college emblem",
+          "primary_color": "#1e3a8a",
+          "team_key": "470.l.26455.t.6",
+          "team_id": 6,
+          "record": "5-6-0",
+          "score": 0.0,
+          "projected_score": 120.98,
+          "roster": [
+            {
+              "player_key": "470.p.40896",
+              "player_name": "Jayden Daniels",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "QB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41969",
+              "player_name": "Ollie Gordon II",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34447",
+              "player_name": "Jaylen Warren",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40039",
+              "player_name": "Zay Flowers",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.32692",
+              "player_name": "Justin Jefferson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34010",
+              "player_name": "Trey McBride",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "TE",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40075",
+              "player_name": "Zach Charbonnet",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41904",
+              "player_name": "Elic Ayomanor",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40114",
+              "player_name": "Tre Tucker",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40029",
+              "player_name": "Bryce Young",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42661",
+              "player_name": "Denzel Boston",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41845",
+              "player_name": "RJ Harvey",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34008",
+              "player_name": "Alec Pierce",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.32704",
+              "player_name": "Michael Pittman Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "IR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33537",
+              "player_name": "Evan McPherson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "K",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Bears",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "DEF",
+              "status": null
+            }
+          ]
+        },
         "week": 12
-      }
+      },
+      "next_opponent": null
     },
     {
       "franchise_id": "north-town-ninnyhammers",
@@ -2938,13 +4099,157 @@
         "type": "loss",
         "value": 1
       },
-      "current_matchup": null,
-      "next_opponent": {
-        "franchise_id": "crazy-wazs-team",
-        "display_name": "Chris's Crazy Team",
-        "path": "/teams/crazy-wazs-team/",
+      "current_matchup": {
+        "matchup_id": "2026-w12-crazy-wazs-team--north-town-ninnyhammers",
+        "status": "live",
+        "opponent": {
+          "franchise_id": "crazy-wazs-team",
+          "display_name": "Chris's Crazy Team",
+          "canonical_name": "Crazy Waz's Team",
+          "short_name": "Crazy Waz",
+          "path": "/teams/crazy-wazs-team/",
+          "identity_image": "/assets/img/franchises/crazy-wazs-team/helmet-2026.png",
+          "identity_alt": "Crazy Waz's Team commissioner-approved 3D football helmet",
+          "primary_color": "#15803d",
+          "team_key": "470.l.26455.t.5",
+          "team_id": 5,
+          "record": "6-5-0",
+          "score": 0.0,
+          "projected_score": 109.91,
+          "roster": [
+            {
+              "player_key": "470.p.40889",
+              "player_name": "Michael Penix Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "QB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.29279",
+              "player_name": "Derrick Henry",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31960",
+              "player_name": "Tony Pollard",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41793",
+              "player_name": "Tetairoa McMillan",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33500",
+              "player_name": "Amon-Ra St. Brown",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40078",
+              "player_name": "Brenton Strange",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "TE",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40084",
+              "player_name": "Rashee Rice",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41821",
+              "player_name": "Quinshon Judkins",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.30295",
+              "player_name": "Aaron Jones Sr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31010",
+              "player_name": "Courtland Sutton",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40877",
+              "player_name": "Xavier Worthy",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34104",
+              "player_name": "Khalil Shakir",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42623",
+              "player_name": "Fernando Mendoza",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.32723",
+              "player_name": "Jalen Hurts",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "IR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.32858",
+              "player_name": "Tyler Bass",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "K",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Browns",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "DEF",
+              "status": null
+            }
+          ]
+        },
         "week": 12
-      }
+      },
+      "next_opponent": null
     },
     {
       "franchise_id": "turnbull-acs",
@@ -2963,13 +4268,157 @@
         "type": "win",
         "value": 1
       },
-      "current_matchup": null,
-      "next_opponent": {
-        "franchise_id": "albany-kneelers",
-        "display_name": "Albany Redskins",
-        "path": "/teams/albany-kneelers/",
+      "current_matchup": {
+        "matchup_id": "2026-w12-albany-kneelers--turnbull-acs",
+        "status": "live",
+        "opponent": {
+          "franchise_id": "albany-kneelers",
+          "display_name": "Albany Redskins",
+          "canonical_name": "Albany Redskins",
+          "short_name": "Redskins",
+          "path": "/teams/albany-kneelers/",
+          "identity_image": "/assets/img/franchises/albany-kneelers/helmet-2026.png",
+          "identity_alt": "Albany Redskins black 3D football helmet with the approved team emblem",
+          "primary_color": "#111827",
+          "team_key": "470.l.26455.t.2",
+          "team_id": 2,
+          "record": "5-6-0",
+          "score": 0.0,
+          "projected_score": 106.76,
+          "roster": [
+            {
+              "player_key": "470.p.30123",
+              "player_name": "Patrick Mahomes",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "QB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33423",
+              "player_name": "Javonte Williams",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41922",
+              "player_name": "Cam Skattebo",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40915",
+              "player_name": "Adonai Mitchell",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42697",
+              "player_name": "Caleb Douglas",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.26686",
+              "player_name": "Travis Kelce",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "TE",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31905",
+              "player_name": "David Montgomery",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31896",
+              "player_name": "DK Metcalf",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34320",
+              "player_name": "Jordan Mason",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41825",
+              "player_name": "Tyler Shough",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31883",
+              "player_name": "A.J. Brown",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40102",
+              "player_name": "Tucker Kraft",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42035",
+              "player_name": "Konata Mumpfield",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31856",
+              "player_name": "Josh Jacobs",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "IR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41499",
+              "player_name": "Spencer Shrader",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "K",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Jaguars",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "DEF",
+              "status": null
+            }
+          ]
+        },
         "week": 12
-      }
+      },
+      "next_opponent": null
     },
     {
       "franchise_id": "van-cortlant-rangers",
@@ -2988,13 +4437,157 @@
         "type": "loss",
         "value": 1
       },
-      "current_matchup": null,
-      "next_opponent": {
-        "franchise_id": "buffalo-bravado",
-        "display_name": "Buffalo Bravados",
-        "path": "/teams/buffalo-bravado/",
+      "current_matchup": {
+        "matchup_id": "2026-w12-buffalo-bravado--van-cortlant-rangers",
+        "status": "live",
+        "opponent": {
+          "franchise_id": "buffalo-bravado",
+          "display_name": "Buffalo Bravados",
+          "canonical_name": "Buffalo Bravado",
+          "short_name": "Bravado",
+          "path": "/teams/buffalo-bravado/",
+          "identity_image": "/assets/img/franchises/buffalo-bravado/helmet-2026.jpg",
+          "identity_alt": "Buffalo Bravado light blue 3D football helmet with a heraldic crest",
+          "primary_color": "#2563eb",
+          "team_key": "470.l.26455.t.4",
+          "team_id": 4,
+          "record": "4-7-0",
+          "score": 0.0,
+          "projected_score": 111.26,
+          "roster": [
+            {
+              "player_key": "470.p.30977",
+              "player_name": "Josh Allen",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "QB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34019",
+              "player_name": "James Cook III",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.32705",
+              "player_name": "D'Andre Swift",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41087",
+              "player_name": "Ryan Flournoy",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42646",
+              "player_name": "KC Concepcion Jr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31012",
+              "player_name": "Mike Gesicki",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "TE",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40993",
+              "player_name": "Bucky Irving",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31868",
+              "player_name": "Deebo Samuel Sr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.28592",
+              "player_name": "Darren Waller",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.42712",
+              "player_name": "Kaelon Black",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33392",
+              "player_name": "Kyle Pitts Sr.",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.30180",
+              "player_name": "Alvin Kamara",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33398",
+              "player_name": "DeVonta Smith",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "IR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.29792",
+              "player_name": "Ka'imi Fairbairn",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "K",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Broncos",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "DEF",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Bills",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            }
+          ]
+        },
         "week": 12
-      }
+      },
+      "next_opponent": null
     },
     {
       "franchise_id": "vegas-vandals",
@@ -3013,13 +4606,157 @@
         "type": "win",
         "value": 1
       },
-      "current_matchup": null,
-      "next_opponent": {
-        "franchise_id": "ayahuasca-rush",
-        "display_name": "Ayahuasca Rush",
-        "path": "/teams/ayahuasca-rush/",
+      "current_matchup": {
+        "matchup_id": "2026-w12-ayahuasca-rush--vegas-vandals",
+        "status": "live",
+        "opponent": {
+          "franchise_id": "ayahuasca-rush",
+          "display_name": "Ayahuasca Rush",
+          "canonical_name": "Ayahuasca Rush",
+          "short_name": "Rush",
+          "path": "/teams/ayahuasca-rush/",
+          "identity_image": "/assets/img/franchises/ayahuasca-rush/helmet-2026.jpg",
+          "identity_alt": "Ayahuasca Rush green 3D football helmet with a leaf emblem",
+          "primary_color": "#2e7d32",
+          "team_key": "470.l.26455.t.3",
+          "team_id": 3,
+          "record": "7-4-0",
+          "score": 0.0,
+          "projected_score": 97.92,
+          "roster": [
+            {
+              "player_key": "470.p.41786",
+              "player_name": "Cam Ward",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "QB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33100",
+              "player_name": "Rico Dowdle",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33538",
+              "player_name": "Kenny Gainwell",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "RB",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33393",
+              "player_name": "Ja'Marr Chase",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.30994",
+              "player_name": "DJ Moore",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "WR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40878",
+              "player_name": "Brock Bowers",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "TE",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31056",
+              "player_name": "Mark Andrews",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33998",
+              "player_name": "Wan'Dale Robinson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.34120",
+              "player_name": "Kyren Williams",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.32696",
+              "player_name": "Jordan Love",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.26699",
+              "player_name": "Keenan Allen",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.33508",
+              "player_name": "Rhamondre Stevenson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31002",
+              "player_name": "Lamar Jackson",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "IR",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40819",
+              "player_name": "Brandon Aubrey",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "K",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Chargers",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "DEF",
+              "status": null
+            },
+            {
+              "player_key": null,
+              "player_name": "Seahawks",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            }
+          ]
+        },
         "week": 12
-      }
+      },
+      "next_opponent": null
     }
   ],
   "playoff_race": {
@@ -3048,7 +4785,7 @@
         "matchup_id": "2026-week-12-buffalo-bravado-vs-van-cortlant-rangers",
         "season": 2026,
         "week": 12,
-        "status": "preevent",
+        "status": "midevent",
         "participants": [
           {
             "franchise_id": "van-cortlant-rangers",
@@ -3072,7 +4809,7 @@
         "matchup_id": "2026-week-12-albany-kneelers-vs-turnbull-acs",
         "season": 2026,
         "week": 12,
-        "status": "preevent",
+        "status": "midevent",
         "participants": [
           {
             "franchise_id": "albany-kneelers",
@@ -3096,7 +4833,7 @@
         "matchup_id": "2026-week-12-ayahuasca-rush-vs-vegas-vandals",
         "season": 2026,
         "week": 12,
-        "status": "preevent",
+        "status": "midevent",
         "participants": [
           {
             "franchise_id": "ayahuasca-rush",
@@ -3120,7 +4857,7 @@
         "matchup_id": "2026-week-12-crazy-wazs-team-vs-north-town-ninnyhammers",
         "season": 2026,
         "week": 12,
-        "status": "preevent",
+        "status": "midevent",
         "participants": [
           {
             "franchise_id": "crazy-wazs-team",
@@ -3144,7 +4881,7 @@
         "matchup_id": "2026-week-12-greendale-human-beings-vs-new-jersey-giants",
         "season": 2026,
         "week": 12,
-        "status": "preevent",
+        "status": "midevent",
         "participants": [
           {
             "franchise_id": "greendale-human-beings",
@@ -3168,7 +4905,7 @@
         "matchup_id": "2026-week-12-baseball-furies-vs-maine-moose",
         "season": 2026,
         "week": 12,
-        "status": "preevent",
+        "status": "midevent",
         "participants": [
           {
             "franchise_id": "maine-moose",

@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 12,
-  "generated_at": "2026-11-25T18:51:23Z",
+  "generated_at": "2026-11-26T02:05:48Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-25T18:51:23Z",
+    "source_updated_at": "2026-11-26T02:05:48Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -303,8 +303,8 @@
     {
       "matchup_id": "2026-w12-albany-kneelers--turnbull-acs",
       "week": 12,
-      "status": "upcoming",
-      "status_label": "Upcoming",
+      "status": "live",
+      "status_label": "In Progress",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "5-6-0",
           "score": 0.0,
-          "projected_score": 106.82,
+          "projected_score": 106.76,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -382,14 +382,6 @@
               "status": null
             },
             {
-              "player_key": "470.p.31856",
-              "player_name": "Josh Jacobs",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
               "player_key": "470.p.31896",
               "player_name": "DK Metcalf",
               "nfl_team": null,
@@ -430,6 +422,22 @@
               "status": null
             },
             {
+              "player_key": "470.p.42035",
+              "player_name": "Konata Mumpfield",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.31856",
+              "player_name": "Josh Jacobs",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "IR",
+              "status": null
+            },
+            {
               "player_key": "470.p.41499",
               "player_name": "Spencer Shrader",
               "nfl_team": null,
@@ -460,7 +468,7 @@
           "team_id": 11,
           "record": "6-5-0",
           "score": 0.0,
-          "projected_score": 117.87,
+          "projected_score": 118.89,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -568,7 +576,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Steelers",
+              "player_name": "Buccaneers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -576,7 +584,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Buccaneers",
+              "player_name": "Steelers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -632,8 +640,8 @@
     {
       "matchup_id": "2026-w12-ayahuasca-rush--vegas-vandals",
       "week": 12,
-      "status": "upcoming",
-      "status_label": "Upcoming",
+      "status": "live",
+      "status_label": "In Progress",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -652,7 +660,7 @@
           "team_id": 3,
           "record": "7-4-0",
           "score": 0.0,
-          "projected_score": 98.47,
+          "projected_score": 97.92,
           "roster": [
             {
               "player_key": "470.p.41786",
@@ -797,7 +805,7 @@
           "team_id": 12,
           "record": "4-7-0",
           "score": 0.0,
-          "projected_score": 110.24,
+          "projected_score": 110.43,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -969,8 +977,8 @@
     {
       "matchup_id": "2026-w12-baseball-furies--maine-moose",
       "week": 12,
-      "status": "upcoming",
-      "status_label": "Upcoming",
+      "status": "live",
+      "status_label": "In Progress",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -989,7 +997,7 @@
           "team_id": 7,
           "record": "8-3-0",
           "score": 0.0,
-          "projected_score": 128.34,
+          "projected_score": 127.21,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -1133,12 +1141,12 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "3-8-0",
-          "score": 0.0,
-          "projected_score": 98.58,
+          "score": 1.4,
+          "projected_score": 108.92,
           "roster": [
             {
-              "player_key": "470.p.26662",
-              "player_name": "Geno Smith",
+              "player_key": "470.p.30973",
+              "player_name": "Sam Darnold",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "QB",
@@ -1169,19 +1177,27 @@
               "status": null
             },
             {
-              "player_key": "470.p.41293",
-              "player_name": "Jalen Coker",
+              "player_key": "470.p.33963",
+              "player_name": "Drake London",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.41371",
-              "player_name": "Brevyn Spann-Ford",
+              "player_key": "470.p.41877",
+              "player_name": "Harold Fannin Jr.",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "TE",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40962",
+              "player_name": "Blake Corum",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "W/R/T",
               "status": null
             },
             {
@@ -1189,12 +1205,28 @@
               "player_name": "Mike Washington Jr.",
               "nfl_team": null,
               "primary_position": null,
-              "selected_position": "W/R/T",
+              "selected_position": "BN",
               "status": null
             },
             {
-              "player_key": "470.p.41877",
-              "player_name": "Harold Fannin Jr.",
+              "player_key": "470.p.41293",
+              "player_name": "Jalen Coker",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.41371",
+              "player_name": "Brevyn Spann-Ford",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
+              "status": null
+            },
+            {
+              "player_key": "470.p.26662",
+              "player_name": "Geno Smith",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1203,30 +1235,6 @@
             {
               "player_key": "470.p.40881",
               "player_name": "Drake Maye",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.40962",
-              "player_name": "Blake Corum",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.33963",
-              "player_name": "Drake London",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.30973",
-              "player_name": "Sam Darnold",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1306,8 +1314,8 @@
     {
       "matchup_id": "2026-w12-buffalo-bravado--van-cortlant-rangers",
       "week": 12,
-      "status": "upcoming",
-      "status_label": "Upcoming",
+      "status": "live",
+      "status_label": "In Progress",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -1325,8 +1333,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "4-6-1",
-          "score": 0.0,
-          "projected_score": 112.7,
+          "score": 3.48,
+          "projected_score": 111.43,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1463,7 +1471,7 @@
           "team_id": 4,
           "record": "4-7-0",
           "score": 0.0,
-          "projected_score": 111.5,
+          "projected_score": 111.26,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1643,8 +1651,8 @@
     {
       "matchup_id": "2026-w12-crazy-wazs-team--north-town-ninnyhammers",
       "week": 12,
-      "status": "upcoming",
-      "status_label": "Upcoming",
+      "status": "live",
+      "status_label": "In Progress",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -1663,7 +1671,7 @@
           "team_id": 5,
           "record": "6-5-0",
           "score": 0.0,
-          "projected_score": 110.29,
+          "projected_score": 109.91,
           "roster": [
             {
               "player_key": "470.p.40889",
@@ -1807,8 +1815,8 @@
           "team_key": "470.l.26455.t.9",
           "team_id": 9,
           "record": "8-3-0",
-          "score": 0.0,
-          "projected_score": 118.6,
+          "score": 4.4,
+          "projected_score": 118.58,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -1980,8 +1988,8 @@
     {
       "matchup_id": "2026-w12-greendale-human-beings--new-jersey-giants",
       "week": 12,
-      "status": "upcoming",
-      "status_label": "Upcoming",
+      "status": "live",
+      "status_label": "In Progress",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -2000,7 +2008,7 @@
           "team_id": 6,
           "record": "5-6-0",
           "score": 0.0,
-          "projected_score": 121.25,
+          "projected_score": 120.98,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -2145,7 +2153,7 @@
           "team_id": 8,
           "record": "5-5-1",
           "score": 0.0,
-          "projected_score": 120.48,
+          "projected_score": 120.9,
           "roster": [
             {
               "player_key": "470.p.30125",
@@ -2323,7 +2331,48 @@
       }
     }
   ],
-  "weekly_facts": [],
+  "weekly_facts": [
+    {
+      "fact_id": "highest-score",
+      "label": "Highest score",
+      "value": 4.4,
+      "franchise_id": "north-town-ninnyhammers",
+      "display_name": "North town Ninnyhammers"
+    },
+    {
+      "fact_id": "lowest-score",
+      "label": "Lowest score",
+      "value": 0.0,
+      "franchise_id": "buffalo-bravado",
+      "display_name": "Buffalo Bravados"
+    },
+    {
+      "fact_id": "highest-combined",
+      "label": "Highest combined score",
+      "value": 4.4,
+      "matchup_id": "2026-w12-crazy-wazs-team--north-town-ninnyhammers"
+    },
+    {
+      "fact_id": "biggest-win",
+      "label": "Biggest lead",
+      "value": 4.4,
+      "matchup_id": "2026-w12-crazy-wazs-team--north-town-ninnyhammers"
+    },
+    {
+      "fact_id": "closest-game",
+      "label": "Closest game",
+      "value": 1.4,
+      "matchup_id": "2026-w12-baseball-furies--maine-moose"
+    },
+    {
+      "fact_id": "longest-active-streak",
+      "label": "Longest active streak",
+      "value": 5,
+      "streak_type": "win",
+      "franchise_id": "maine-moose",
+      "display_name": "Maine Moose"
+    }
+  ],
   "record_watch": [],
   "power_rankings": {
     "status": "unavailable",
@@ -2346,7 +2395,7 @@
         "matchup_id": "2026-week-12-buffalo-bravado-vs-van-cortlant-rangers",
         "season": 2026,
         "week": 12,
-        "status": "preevent",
+        "status": "midevent",
         "participants": [
           {
             "franchise_id": "van-cortlant-rangers",
@@ -2370,7 +2419,7 @@
         "matchup_id": "2026-week-12-albany-kneelers-vs-turnbull-acs",
         "season": 2026,
         "week": 12,
-        "status": "preevent",
+        "status": "midevent",
         "participants": [
           {
             "franchise_id": "albany-kneelers",
@@ -2394,7 +2443,7 @@
         "matchup_id": "2026-week-12-ayahuasca-rush-vs-vegas-vandals",
         "season": 2026,
         "week": 12,
-        "status": "preevent",
+        "status": "midevent",
         "participants": [
           {
             "franchise_id": "ayahuasca-rush",
@@ -2418,7 +2467,7 @@
         "matchup_id": "2026-week-12-crazy-wazs-team-vs-north-town-ninnyhammers",
         "season": 2026,
         "week": 12,
-        "status": "preevent",
+        "status": "midevent",
         "participants": [
           {
             "franchise_id": "crazy-wazs-team",
@@ -2442,7 +2491,7 @@
         "matchup_id": "2026-week-12-greendale-human-beings-vs-new-jersey-giants",
         "season": 2026,
         "week": 12,
-        "status": "preevent",
+        "status": "midevent",
         "participants": [
           {
             "franchise_id": "greendale-human-beings",
@@ -2466,7 +2515,7 @@
         "matchup_id": "2026-week-12-baseball-furies-vs-maine-moose",
         "season": 2026,
         "week": 12,
-        "status": "preevent",
+        "status": "midevent",
         "participants": [
           {
             "franchise_id": "maine-moose",
