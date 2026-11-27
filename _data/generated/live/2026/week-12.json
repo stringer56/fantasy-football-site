@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 12,
-  "generated_at": "2026-11-27T11:52:26Z",
+  "generated_at": "2026-11-27T20:50:16Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-27T11:52:26Z",
+    "source_updated_at": "2026-11-27T20:50:16Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "5-6-0",
           "score": 48.06,
-          "projected_score": 112.45,
+          "projected_score": 116.16,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -350,16 +350,16 @@
               "status": null
             },
             {
-              "player_key": "470.p.40915",
-              "player_name": "Adonai Mitchell",
+              "player_key": "470.p.42697",
+              "player_name": "Caleb Douglas",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
               "status": null
             },
             {
-              "player_key": "470.p.42697",
-              "player_name": "Caleb Douglas",
+              "player_key": "470.p.32231",
+              "player_name": "Jakobi Meyers",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "WR",
@@ -379,6 +379,14 @@
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "W/R/T",
+              "status": null
+            },
+            {
+              "player_key": "470.p.40915",
+              "player_name": "Adonai Mitchell",
+              "nfl_team": null,
+              "primary_position": null,
+              "selected_position": "BN",
               "status": null
             },
             {
@@ -416,14 +424,6 @@
             {
               "player_key": "470.p.40102",
               "player_name": "Tucker Kraft",
-              "nfl_team": null,
-              "primary_position": null,
-              "selected_position": "BN",
-              "status": null
-            },
-            {
-              "player_key": "470.p.42035",
-              "player_name": "Konata Mumpfield",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -468,7 +468,7 @@
           "team_id": 11,
           "record": "6-5-0",
           "score": 49.44,
-          "projected_score": 115.83,
+          "projected_score": 115.4,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -659,8 +659,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "7-4-0",
-          "score": 12.5,
-          "projected_score": 96.14,
+          "score": 14.1,
+          "projected_score": 95.07,
           "roster": [
             {
               "player_key": "470.p.41786",
@@ -805,7 +805,7 @@
           "team_id": 12,
           "record": "4-7-0",
           "score": 10.7,
-          "projected_score": 99.24,
+          "projected_score": 98.91,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -997,7 +997,7 @@
           "team_id": 7,
           "record": "8-3-0",
           "score": 68.3,
-          "projected_score": 141.51,
+          "projected_score": 141.44,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -1142,7 +1142,7 @@
           "team_id": 10,
           "record": "3-8-0",
           "score": 31.5,
-          "projected_score": 123.3,
+          "projected_score": 107.34,
           "roster": [
             {
               "player_key": "470.p.30973",
@@ -1334,7 +1334,7 @@
           "team_id": 1,
           "record": "4-6-1",
           "score": 46.6,
-          "projected_score": 105.14,
+          "projected_score": 105.9,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1470,8 +1470,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "4-7-0",
-          "score": 50.24,
-          "projected_score": 106.9,
+          "score": 56.24,
+          "projected_score": 101.43,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1671,7 +1671,7 @@
           "team_id": 5,
           "record": "6-5-0",
           "score": 29.1,
-          "projected_score": 117.22,
+          "projected_score": 117.8,
           "roster": [
             {
               "player_key": "470.p.42623",
@@ -1816,7 +1816,7 @@
           "team_id": 9,
           "record": "8-3-0",
           "score": 4.4,
-          "projected_score": 108.38,
+          "projected_score": 107.55,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2007,8 +2007,8 @@
           "team_key": "470.l.26455.t.6",
           "team_id": 6,
           "record": "5-6-0",
-          "score": 0.0,
-          "projected_score": 123.33,
+          "score": 2.1,
+          "projected_score": 121.03,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -2152,8 +2152,8 @@
           "team_key": "470.l.26455.t.8",
           "team_id": 8,
           "record": "5-5-1",
-          "score": 10.0,
-          "projected_score": 109.43,
+          "score": 12.3,
+          "projected_score": 106.54,
           "roster": [
             {
               "player_key": "470.p.30125",
@@ -2342,15 +2342,15 @@
     {
       "fact_id": "lowest-score",
       "label": "Lowest score",
-      "value": 0.0,
+      "value": 2.1,
       "franchise_id": "greendale-human-beings",
       "display_name": "Greendale Human Beings"
     },
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 99.8,
-      "matchup_id": "2026-w12-baseball-furies--maine-moose"
+      "value": 102.84,
+      "matchup_id": "2026-w12-buffalo-bravado--van-cortlant-rangers"
     },
     {
       "fact_id": "biggest-win",
