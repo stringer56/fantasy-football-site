@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 12,
-  "generated_at": "2026-11-27T02:52:00Z",
+  "generated_at": "2026-11-27T11:52:26Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-27T02:52:00Z",
+    "source_updated_at": "2026-11-27T11:52:26Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -322,8 +322,8 @@
           "team_key": "470.l.26455.t.2",
           "team_id": 2,
           "record": "5-6-0",
-          "score": 44.98,
-          "projected_score": 122.43,
+          "score": 48.06,
+          "projected_score": 112.45,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -659,8 +659,8 @@
           "team_key": "470.l.26455.t.3",
           "team_id": 3,
           "record": "7-4-0",
-          "score": 10.9,
-          "projected_score": 99.43,
+          "score": 12.5,
+          "projected_score": 96.14,
           "roster": [
             {
               "player_key": "470.p.41786",
@@ -805,7 +805,7 @@
           "team_id": 12,
           "record": "4-7-0",
           "score": 10.7,
-          "projected_score": 99.07,
+          "projected_score": 99.24,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -997,7 +997,7 @@
           "team_id": 7,
           "record": "8-3-0",
           "score": 68.3,
-          "projected_score": 141.42,
+          "projected_score": 141.51,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -1141,8 +1141,8 @@
           "team_key": "470.l.26455.t.10",
           "team_id": 10,
           "record": "3-8-0",
-          "score": 30.5,
-          "projected_score": 126.0,
+          "score": 31.5,
+          "projected_score": 123.3,
           "roster": [
             {
               "player_key": "470.p.30973",
@@ -1333,8 +1333,8 @@
           "team_key": "470.l.26455.t.1",
           "team_id": 1,
           "record": "4-6-1",
-          "score": 27.8,
-          "projected_score": 95.48,
+          "score": 46.6,
+          "projected_score": 105.14,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1470,8 +1470,8 @@
           "team_key": "470.l.26455.t.4",
           "team_id": 4,
           "record": "4-7-0",
-          "score": 41.74,
-          "projected_score": 116.08,
+          "score": 50.24,
+          "projected_score": 106.9,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1670,8 +1670,8 @@
           "team_key": "470.l.26455.t.5",
           "team_id": 5,
           "record": "6-5-0",
-          "score": 19.1,
-          "projected_score": 111.25,
+          "score": 29.1,
+          "projected_score": 117.22,
           "roster": [
             {
               "player_key": "470.p.42623",
@@ -1816,7 +1816,7 @@
           "team_id": 9,
           "record": "8-3-0",
           "score": 4.4,
-          "projected_score": 108.37,
+          "projected_score": 108.38,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2008,7 +2008,7 @@
           "team_id": 6,
           "record": "5-6-0",
           "score": 0.0,
-          "projected_score": 123.26,
+          "projected_score": 123.33,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -2153,7 +2153,7 @@
           "team_id": 8,
           "record": "5-5-1",
           "score": 10.0,
-          "projected_score": 109.52,
+          "projected_score": 109.43,
           "roster": [
             {
               "player_key": "470.p.30125",
@@ -2349,20 +2349,20 @@
     {
       "fact_id": "highest-combined",
       "label": "Highest combined score",
-      "value": 98.8,
+      "value": 99.8,
       "matchup_id": "2026-w12-baseball-furies--maine-moose"
     },
     {
       "fact_id": "biggest-win",
       "label": "Biggest lead",
-      "value": 37.8,
+      "value": 36.8,
       "matchup_id": "2026-w12-baseball-furies--maine-moose"
     },
     {
       "fact_id": "closest-game",
       "label": "Closest game",
-      "value": 0.2,
-      "matchup_id": "2026-w12-ayahuasca-rush--vegas-vandals"
+      "value": 1.38,
+      "matchup_id": "2026-w12-albany-kneelers--turnbull-acs"
     },
     {
       "fact_id": "longest-active-streak",
