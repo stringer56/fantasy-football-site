@@ -2,11 +2,11 @@
   "schema_version": 1,
   "season": 2026,
   "week": 12,
-  "generated_at": "2026-11-28T03:09:23Z",
+  "generated_at": "2026-11-28T11:48:01Z",
   "data_status": "ready",
   "freshness": {
     "status": "current",
-    "source_updated_at": "2026-11-28T03:09:23Z",
+    "source_updated_at": "2026-11-28T11:48:01Z",
     "label": "Updated from Yahoo"
   },
   "standings": [
@@ -323,7 +323,7 @@
           "team_id": 2,
           "record": "5-6-0",
           "score": 48.06,
-          "projected_score": 115.86,
+          "projected_score": 115.8,
           "roster": [
             {
               "player_key": "470.p.30123",
@@ -468,7 +468,7 @@
           "team_id": 11,
           "record": "6-5-0",
           "score": 49.44,
-          "projected_score": 115.44,
+          "projected_score": 115.67,
           "roster": [
             {
               "player_key": "470.p.29369",
@@ -660,7 +660,7 @@
           "team_id": 3,
           "record": "7-4-0",
           "score": 18.4,
-          "projected_score": 93.88,
+          "projected_score": 93.79,
           "roster": [
             {
               "player_key": "470.p.41786",
@@ -805,7 +805,7 @@
           "team_id": 12,
           "record": "4-7-0",
           "score": 10.7,
-          "projected_score": 99.98,
+          "projected_score": 99.58,
           "roster": [
             {
               "player_key": "470.p.25812",
@@ -997,7 +997,7 @@
           "team_id": 7,
           "record": "8-3-0",
           "score": 68.3,
-          "projected_score": 126.29,
+          "projected_score": 134.38,
           "roster": [
             {
               "player_key": "470.p.40030",
@@ -1016,8 +1016,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.41900",
-              "player_name": "Bhayshul Tuten",
+              "player_key": "470.p.41902",
+              "player_name": "Woody Marks",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "RB",
@@ -1056,8 +1056,8 @@
               "status": null
             },
             {
-              "player_key": "470.p.41902",
-              "player_name": "Woody Marks",
+              "player_key": "470.p.41900",
+              "player_name": "Bhayshul Tuten",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "BN",
@@ -1142,7 +1142,7 @@
           "team_id": 10,
           "record": "3-8-0",
           "score": 31.5,
-          "projected_score": 107.85,
+          "projected_score": 108.02,
           "roster": [
             {
               "player_key": "470.p.30973",
@@ -1258,7 +1258,7 @@
             },
             {
               "player_key": null,
-              "player_name": "Texans",
+              "player_name": "Houston",
               "nfl_team": null,
               "primary_position": null,
               "selected_position": "DEF",
@@ -1334,7 +1334,7 @@
           "team_id": 1,
           "record": "4-6-1",
           "score": 46.6,
-          "projected_score": 105.6,
+          "projected_score": 105.63,
           "roster": [
             {
               "player_key": "470.p.9265",
@@ -1471,7 +1471,7 @@
           "team_id": 4,
           "record": "4-7-0",
           "score": 59.24,
-          "projected_score": 102.11,
+          "projected_score": 102.13,
           "roster": [
             {
               "player_key": "470.p.30977",
@@ -1671,7 +1671,7 @@
           "team_id": 5,
           "record": "6-5-0",
           "score": 29.1,
-          "projected_score": 117.46,
+          "projected_score": 117.41,
           "roster": [
             {
               "player_key": "470.p.42623",
@@ -1816,7 +1816,7 @@
           "team_id": 9,
           "record": "8-3-0",
           "score": 4.4,
-          "projected_score": 114.02,
+          "projected_score": 114.57,
           "roster": [
             {
               "player_key": "470.p.32671",
@@ -2008,7 +2008,7 @@
           "team_id": 6,
           "record": "5-6-0",
           "score": 5.1,
-          "projected_score": 115.56,
+          "projected_score": 115.82,
           "roster": [
             {
               "player_key": "470.p.40896",
@@ -2153,7 +2153,7 @@
           "team_id": 8,
           "record": "5-5-1",
           "score": 21.2,
-          "projected_score": 104.11,
+          "projected_score": 104.19,
           "roster": [
             {
               "player_key": "470.p.30125",
